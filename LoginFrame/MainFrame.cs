@@ -117,5 +117,10 @@ namespace LoginFrame
         {
             panel5.Show();
         }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

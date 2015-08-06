@@ -112,6 +112,8 @@ namespace LoginFrame
 
             //跳转代码
             MainFrame mainFrame = MainFrame.createForm();
+
+
             //加载菜单栏
             mainFrame.panel1.Controls.Clear();
             TitleMain titleMain = TitleMain.createForm();
@@ -120,6 +122,7 @@ namespace LoginFrame
             titleMain.Dock = System.Windows.Forms.DockStyle.Fill;
             mainFrame.panel1.Controls.Add(titleMain);
             titleMain.Show();
+            
 
             //加载主体栏
             mainFrame.panel6.Controls.Clear();
@@ -132,6 +135,11 @@ namespace LoginFrame
             mainFrame.Show();
             this.Visible = false;
             checkCode = "";
+
+            //互相访问控件
+            titleMain.bodyMain = bodyMain;
+            bodyMain.titleMain = titleMain;
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
