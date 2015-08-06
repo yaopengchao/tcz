@@ -44,7 +44,9 @@
     <Compile Include="dalBook.cs" />
     <Compile Include="dalBookType.cs" />
     <Compile Include="dalUser.cs" />
+    <Compile Include="MySqlHelper.cs" />
     <Compile Include="DP_Provience.cs" />
+    <Compile Include="DAOUser.cs" />
     <Compile Include="DU_UserInfo.cs" />
     <Compile Include="DBHelp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

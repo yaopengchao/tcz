@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
 
 namespace LoginFrame
 {
@@ -15,6 +16,10 @@ namespace LoginFrame
         public LoginForm()
         {
             InitializeComponent();
+
+            this.textBox1.Text = "manager";
+            this.textBox2.Text = "manager";
+
         }
 
         public static string checkCode = "";
@@ -106,9 +111,87 @@ namespace LoginFrame
             pictureBox2.Image = image;
         }
 
+
+
+        private bool login()
+        {
+            bool flag = false;
+            string username = this.textBox1.Text;
+
+            string password = this.textBox2.Text;
+
+            if (username == "")
+            {
+                MessageBox.Show("用户名不能为空!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else if (password == "")
+            {
+                MessageBox.Show("密码不能为空!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+
+            else if (this.textBox3.Text.Trim() == "")
+            {
+                MessageBox.Show("验证码不能为空!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else
+            {
+                if (checkCode.ToLower() != this.textBox3.Text.Trim().ToLower())
+                {
+                    MessageBox.Show("验证码输入错误!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                else
+                {
+                    ImplUser Bll = new ImplUser();
+
+                    int a = Bll.ExistsName(username);
+
+                    if (a != 0)
+                    {
+                        DataSet ds = Bll.ExistsPwd(username, password);
+
+                        if (ds.Tables[0].Rows.Count > 0)
+                        {
+                            LoginRoler.username = Convert.ToString(ds.Tables[0].Rows[0][0].ToString());
+                            LoginRoler.truename = Convert.ToString(ds.Tables[0].Rows[0][1].ToString());
+                            LoginRoler.roleid = Convert.ToString(ds.Tables[0].Rows[0][2].ToString());
+                            
+                            checkCode = "";
+                            flag = true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("密码输入错误,请重新输入密码", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            this.textBox1.Text = "";
+                            this.textBox2.Text = "";
+                            this.textBox3.Text = "";
+                            pictureBox2_Click(null, null);//调用刷新验证码方法
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("用户名不存在,请重新输入用户名", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        this.textBox1.Text = "";
+                        this.textBox2.Text = "";
+                        this.textBox3.Text = "";
+                        pictureBox2_Click(null, null);//调用刷新验证码方法
+                    }
+                }
+            }
+            return flag;
+        }
+
+
+       
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             //登录代码
+            bool isLogined = login();
+            if (!isLogined)
+            {
+                return;
+            }
 
             //跳转代码
             MainFrame mainFrame = MainFrame.createForm();
@@ -134,7 +217,6 @@ namespace LoginFrame
             bodyMain.Show();
             mainFrame.Show();
             this.Visible = false;
-            checkCode = "";
 
             //互相访问控件
             titleMain.bodyMain = bodyMain;

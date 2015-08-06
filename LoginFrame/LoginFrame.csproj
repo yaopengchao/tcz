@@ -126,12 +126,6 @@
     <Compile Include="Frm个人信息.Designer.cs">
       <DependentUpon>Frm个人信息.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm主面.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm主面.designer.cs">
-      <DependentUpon>Frm主面.cs</DependentUpon>
-    </Compile>
     <Compile Include="Frm人员管理.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,12 +161,6 @@
     </Compile>
     <Compile Include="Frm离开挂起.designer.cs">
       <DependentUpon>Frm离开挂起.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Landing.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Landing.Designer.cs">
-      <DependentUpon>Landing.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm登陆成功显示进度.cs">
       <SubType>Form</SubType>
@@ -251,9 +239,6 @@
     <EmbeddedResource Include="Frm个人信息.resx">
       <DependentUpon>Frm个人信息.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm主面.resx">
-      <DependentUpon>Frm主面.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Frm人员管理.resx">
       <DependentUpon>Frm人员管理.cs</DependentUpon>
     </EmbeddedResource>
@@ -271,9 +256,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm离开挂起.resx">
       <DependentUpon>Frm离开挂起.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Landing.resx">
-      <DependentUpon>Landing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm登陆成功显示进度.resx">
       <DependentUpon>Frm登陆成功显示进度.cs</DependentUpon>

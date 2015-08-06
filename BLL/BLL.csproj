@@ -45,6 +45,7 @@
     <Compile Include="bllBook.cs" />
     <Compile Include="bllBookType.cs" />
     <Compile Include="BP_Provience.cs" />
+    <Compile Include="ImplUser.cs" />
     <Compile Include="BU_UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
