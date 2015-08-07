@@ -16,7 +16,7 @@ namespace BLL
         /// <summary>
         /// 查询用户名是否存在
         /// </summary>
-        /// <param name="U_Id"></param>
+        /// <param name="username"></param>
         /// <returns></returns>
         public int ExistsName(string username)
         {

@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LoginFrame</RootNamespace>
     <AssemblyName>LoginFrame</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -210,6 +210,7 @@
     <Compile Include="TitleTea.Designer.cs">
       <DependentUpon>TitleTea.cs</DependentUpon>
     </Compile>
+    <Compile Include="UdpState.cs" />
     <EmbeddedResource Include="BodyMain.resx">
       <DependentUpon>BodyMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -378,6 +379,7 @@
     <Content Include="pic\界面背景3.jpg" />
     <Content Include="swf\test1.swf" />
     <Content Include="swf\test2.swf" />
+    <Content Include="swf\乐队.swf" />
     <Content Include="swf\萝卜.swf" />
   </ItemGroup>
   <ItemGroup>

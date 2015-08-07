@@ -176,6 +176,7 @@
             this.Text = "TitleMain";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.TitleMain_Load);
 
         }
 
