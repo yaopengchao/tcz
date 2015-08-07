@@ -162,12 +162,6 @@
     <Compile Include="Frm离开挂起.designer.cs">
       <DependentUpon>Frm离开挂起.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm登陆成功显示进度.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm登陆成功显示进度.designer.cs">
-      <DependentUpon>Frm登陆成功显示进度.cs</DependentUpon>
-    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,9 +250,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm离开挂起.resx">
       <DependentUpon>Frm离开挂起.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm登陆成功显示进度.resx">
-      <DependentUpon>Frm登陆成功显示进度.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
