@@ -22,6 +22,12 @@ namespace LoginFrame
         
         public bool isBroadcasting=false;//是否广播中
 
+        //UDP
+        UdpClient client;
+        IPEndPoint multicast;
+
+
+
         public TitleMain()
         {
             InitializeComponent();
@@ -60,21 +66,24 @@ namespace LoginFrame
             IPEndPoint multicast = new IPEndPoint(IPAddress.Parse("234.5.6.7"), 5566);
             while (true)
             {
-                Console.WriteLine("学生端监听中......");
+//Console.WriteLine("学生端监听中......");
                 byte[] buf = client.Receive(ref multicast);
                 string msg = Encoding.Default.GetString(buf);
-                MessageBox.Show("接收到..." + msg + "...的指令");
+                //MessageBox.Show("接收到..." + msg + "...的指令");
                 string[] splitString = msg.Split('^');
                 switch (splitString[0])
                 {
                     case "PlayFlash"://播放Flash指令
                         
                         string swfName = splitString[1];
-                        MessageBox.Show("接收到播放Flash:" + swfName + "的指令");
+                        //MessageBox.Show("接收到播放Flash:" + swfName + "的指令");
                         //初始化播放器并且进行播放
                         string filpath = Application.StartupPath + @"/../../swf/" + swfName;
                         FlashPlayerInit();
                         playFlash(filpath);
+                        break;
+                    case "StopFlash"://停止播放Flash指令
+                        stopFlash();
                         break;
 
                     default: break;
@@ -137,16 +146,35 @@ namespace LoginFrame
             //之前无效是因为 控件默认 true了
             if (bodyMain.axShockwaveFlashPlayer.IsPlaying())
             {
+                if (isBroadcasting)
+                {
+
+                    string swfName = bodyMain.listView1.SelectedItems[0].Text;
+                    Broadcast("StopFlash^" + swfName + "^##");
+                    
+                }
                 bodyMain.axShockwaveFlashPlayer.Stop();
                 this.button6.Text = "播放";
             }
             else
             {
+                if (isBroadcasting)
+                {
+                    string swfName = bodyMain.listView1.SelectedItems[0].Text;
+                    Broadcast("PlayFlash^" + swfName + "^##");
+                }
+
                 string filpath = Application.StartupPath + @"/../../swf/" + bodyMain.listView1.SelectedItems[0].Text;
                 playFlash(filpath);
                 this.button6.Text = "暂停";
             }
                        
+        }
+
+        public delegate void button6_changeText(string text);
+        public void button6changeText(string text)
+        {
+            this.button6.Text = text;
         }
 
         /// <summary>
@@ -158,6 +186,20 @@ namespace LoginFrame
             bodyMain.axShockwaveFlashPlayer.Loop = false;//不循环播放
             bodyMain.axShockwaveFlashPlayer.Movie = filpath;
             bodyMain.axShockwaveFlashPlayer.Play();
+
+            button6_changeText outdelegate = new button6_changeText(button6changeText);
+            this.BeginInvoke(outdelegate, new object[] { "暂停" });
+        }
+
+        /// <summary>
+        /// 停止或者叫暂停播放Flash
+        /// </summary>
+        private void stopFlash()
+        {
+            bodyMain.axShockwaveFlashPlayer.Stop();
+
+            button6_changeText outdelegate = new button6_changeText(button6changeText);
+            this.BeginInvoke(outdelegate, new object[] { "播放" });
         }
 
         /// <summary>
@@ -196,52 +238,40 @@ namespace LoginFrame
         //同步教学按钮
         private void button4_Click(object sender, EventArgs e)
         {
-            if (!isBroadcasting)
+            //该按钮只是告诉 非 学生机 处于何种状态   
+            //  一种是同步状态   另外一种是非同步状态
+            //同步状态下  几个按钮触发点击事件的时候发送指令到学生机
+            if (isBroadcasting)
             {
-                //只有在播放的时候才可以点击同步教学按钮
-                if (bodyMain.axShockwaveFlashPlayer.IsPlaying())
-                {
-                    //与此同时 限制学生端 按钮等控件无法使用
-                    Unabletooperate();
+                isBroadcasting = false;
+                this.button4.Text = "同步教学";
 
-                    isBroadcasting = true;
-                    //是否处于同步状态   且  为教师登录(不为学生)   是则发送指令
-                    if (isBroadcasting && LoginRoler.roleid != Constant.RoleStudent)
-                    {
-                        Broadcast();
-                    }
-                    this.button4.Text = "同步教学中";
-                    
-                }
-                else
-                {
-                    MessageBox.Show("请先播放Flash才能同步教学哦!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                }
+                client = null;
+                multicast = null;
             }
             else
             {
-                isBroadcasting = false;
-                if (bodyMain.axShockwaveFlashPlayer.IsPlaying())
-                {
-                    bodyMain.axShockwaveFlashPlayer.Stop();
-                    this.button6.Text = "播放";
-                }
-                this.button4.Text = "同步教学";
-                
 
+                client = new UdpClient(5566);
+                client.JoinMulticastGroup(IPAddress.Parse("234.5.6.7"));
+                multicast = new IPEndPoint(IPAddress.Parse("234.5.6.7"), 7788);
+
+
+                isBroadcasting = true;
+                this.button4.Text = "同步教学中";
             }
             
         }
 
-        //发送同步指令公共方法
-        public void Broadcast()
+        /// <summary>
+        /// 发送同步指令公共方法
+        /// </summary>
+        /// <param name="code">指令</param>
+        public void Broadcast(string code)
         {
-            UdpClient client = new UdpClient(5566);
-            client.JoinMulticastGroup(IPAddress.Parse("234.5.6.7"));
-            IPEndPoint multicast = new IPEndPoint(IPAddress.Parse("234.5.6.7"), 7788);
-            string swfName =bodyMain.listView1.SelectedItems[0].Text;
-            byte[] buf = Encoding.Default.GetBytes("PlayFlash^" + swfName + "^##");
-            MessageBox.Show("同步指令发送......"+ "PlayFlash^" + swfName + "^##");
+            
+            byte[] buf = Encoding.Default.GetBytes(code);
+            //MessageBox.Show("同步指令发送......"+ "PlayFlash^" + swfName + "^##");
             client.Send(buf, buf.Length, multicast);
         }
     }
