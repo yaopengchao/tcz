@@ -60,7 +60,7 @@ namespace LoginFrame
         }
         private void Frm离开挂起_Load(object sender, EventArgs e)
         {
-            this.lbuser.Text = LoginRoler.U_Name;
+            //this.lbuser.Text = LoginRoler.U_Name;
         }
     }
 }

@@ -42,20 +42,20 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.panel2.Controls.Add(this.listView1);
-            this.panel2.Location = new System.Drawing.Point(3, 1);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(2, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(267, 750);
+            this.panel2.Size = new System.Drawing.Size(200, 600);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // listView1
             // 
             this.listView1.BackColor = System.Drawing.Color.DarkGray;
-            this.listView1.Location = new System.Drawing.Point(3, 3);
+            this.listView1.Location = new System.Drawing.Point(2, 2);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(261, 744);
+            this.listView1.Size = new System.Drawing.Size(197, 596);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.List;
@@ -66,32 +66,31 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.panel1.Controls.Add(this.axShockwaveFlashPlayer);
-            this.panel1.Location = new System.Drawing.Point(277, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(208, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1067, 750);
+            this.panel1.Size = new System.Drawing.Size(800, 600);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // axShockwaveFlashPlayer
             // 
             this.axShockwaveFlashPlayer.Enabled = true;
-            this.axShockwaveFlashPlayer.Location = new System.Drawing.Point(3, 3);
+            this.axShockwaveFlashPlayer.Location = new System.Drawing.Point(2, 2);
+            this.axShockwaveFlashPlayer.Margin = new System.Windows.Forms.Padding(2);
             this.axShockwaveFlashPlayer.Name = "axShockwaveFlashPlayer";
             this.axShockwaveFlashPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axShockwaveFlashPlayer.OcxState")));
-            this.axShockwaveFlashPlayer.Size = new System.Drawing.Size(1061, 744);
+            this.axShockwaveFlashPlayer.Size = new System.Drawing.Size(796, 596);
             this.axShockwaveFlashPlayer.TabIndex = 0;
             // 
             // BodyMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1347, 755);
+            this.ClientSize = new System.Drawing.Size(1010, 604);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BodyMain";
             this.Text = "BodyMain";
             this.Load += new System.EventHandler(this.BodyMain_Load);

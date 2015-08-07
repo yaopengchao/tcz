@@ -84,7 +84,7 @@ namespace LoginFrame
         {
             CreateOutlookList();
 
-            this.tool_UserName.Text = LoginRoler.U_Name;
+           // this.tool_UserName.Text = LoginRoler.U_Name;
         }
 
         //信息管理

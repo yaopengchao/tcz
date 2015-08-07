@@ -95,6 +95,7 @@
       <DependentUpon>BodyTea.cs</DependentUpon>
     </Compile>
     <Compile Include="Common.cs" />
+    <Compile Include="Constant.cs" />
     <Compile Include="DataGridViewCellPrint.cs" />
     <Compile Include="FrmAddBook.cs">
       <SubType>Form</SubType>

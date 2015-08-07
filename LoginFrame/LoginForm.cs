@@ -154,7 +154,7 @@ namespace LoginFrame
                             LoginRoler.username = Convert.ToString(ds.Tables[0].Rows[0][0].ToString());
                             LoginRoler.truename = Convert.ToString(ds.Tables[0].Rows[0][1].ToString());
                             LoginRoler.roleid = Convert.ToString(ds.Tables[0].Rows[0][2].ToString());
-                            
+
                             checkCode = "";
                             flag = true;
                         }

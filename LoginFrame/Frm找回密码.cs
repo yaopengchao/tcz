@@ -43,7 +43,7 @@ namespace LoginFrame
                 }
                 else
                 {
-                    bool flag = Bll.UpdateU_PsdAnswer(Convert.ToInt32(select), password, LoginRoler.U_Id);
+                    bool flag = Bll.UpdateU_PsdAnswer(Convert.ToInt32(select), password, 0);
 
                     if (flag)
                     {

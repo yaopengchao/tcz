@@ -112,7 +112,7 @@ namespace LoginFrame
             }
             else
             {
-                if (LoginRoler.U_Name == "admin")
+                if ("" == "admin")
                 {
                     MessageBox.Show("无法删除终极管理员", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     return;
@@ -120,7 +120,7 @@ namespace LoginFrame
                 else
                 {
                     string UserName = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                    if (LoginRoler.U_Name == UserName)
+                    if (""== UserName)
                     {
                         MessageBox.Show("系统无法对自己进行删除操作", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         return;

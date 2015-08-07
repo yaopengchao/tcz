@@ -209,7 +209,7 @@ namespace LoginFrame
 
             if (flag)
             {
-                if (LoginRoler.U_ROlesType == 2)
+                if (2 == 2)
                 {
                     //getName("随便传的值");
                 }

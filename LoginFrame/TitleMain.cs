@@ -45,7 +45,7 @@ namespace LoginFrame
             //MessageBox.Show(bodyMain.listView1.SelectedItems[0].Text);
 
             //是否处于同步状态   且  为教师登录   是则发送指令
-            if (isBroadcasting  &&  1==1 )
+            if (isBroadcasting  && LoginRoler.roleid!=Constant.RoleStudent)
             {
                 Broadcast();
             }
