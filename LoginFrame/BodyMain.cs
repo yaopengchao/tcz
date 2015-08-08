@@ -13,7 +13,7 @@ namespace LoginFrame
 
     public partial class BodyMain : Form
     {
-        public TitleMain titleMain;  
+        public MainFrame mainFrame;  
 
         public BodyMain()
         {
@@ -26,13 +26,13 @@ namespace LoginFrame
             //添加表头，设置该项需要将listView属性View设置为Details否则不会显示
             this.listView1.Columns.Add("Flash课件列表", 190, HorizontalAlignment.Center); 
             //加载列表
-            ListViewItem item = new ListViewItem(new string[] { "test2.swf" });
+            ListViewItem item = new ListViewItem(new string[] { "YouAreMySunshine" });
             this.listView1.Items.Insert(0, item);
-            ListViewItem item1 = new ListViewItem(new string[] { "乐队.swf" });
+            ListViewItem item1 = new ListViewItem(new string[] { "感觉自己萌萌哒" });
             this.listView1.Items.Insert(1, item1);
-            ListViewItem item2 = new ListViewItem(new string[] { "test1.swf" });
+            ListViewItem item2 = new ListViewItem(new string[] { "去大理" });
             this.listView1.Items.Insert(2, item2);
-            ListViewItem item3 = new ListViewItem(new string[] { "萝卜.swf" });
+            ListViewItem item3 = new ListViewItem(new string[] { "跟我约会吧" });
             this.listView1.Items.Insert(3, item3);
         }
 
@@ -42,14 +42,14 @@ namespace LoginFrame
         {
             //重置按钮状态或者说flash播放状态    每次双击时候都需要 flash播放器处于停止未播放的状态
             initFlashState();
-            titleMain.button6_Click(null,null);
+            mainFrame.titleMain.button6_Click(null,null);
         }
 
         //flash播放器处于停止未播放的状态
         public void initFlashState()
         {
             this.axShockwaveFlashPlayer.Stop();
-            titleMain.button6.Text = "播放";
+            mainFrame.titleMain.button6.Text = "播放";
         }
 
         private static BodyMain instance;

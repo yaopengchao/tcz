@@ -106,7 +106,7 @@
             this.toolStripMenuItem8});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(73, 177);
+            this.menuStrip1.Size = new System.Drawing.Size(74, 177);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -114,7 +114,7 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(60, 19);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(61, 21);
             this.toolStripMenuItem1.Text = "自我测试";
             this.toolStripMenuItem1.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
@@ -122,46 +122,46 @@
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(60, 19);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(61, 21);
             this.toolStripMenuItem2.Text = "考试";
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(60, 19);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(61, 21);
             this.toolStripMenuItem3.Text = "个人资料";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(60, 19);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(61, 21);
             this.toolStripMenuItem4.Text = "学员管理";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(60, 19);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(61, 21);
             this.toolStripMenuItem5.Text = "教师管理";
             this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(60, 19);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(61, 21);
             this.toolStripMenuItem6.Text = "硬件配置";
             // 
             // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(60, 19);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(61, 21);
             this.toolStripMenuItem7.Text = "云服务";
             // 
             // toolStripMenuItem8
             // 
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(60, 19);
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(61, 21);
             this.toolStripMenuItem8.Text = "退出";
             this.toolStripMenuItem8.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
             // 
@@ -250,6 +250,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainFrame";
+            this.Load += new System.EventHandler(this.MainFrame_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
