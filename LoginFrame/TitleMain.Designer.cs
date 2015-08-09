@@ -126,6 +126,7 @@
             this.button9.TabIndex = 8;
             this.button9.Text = "对话";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -135,6 +136,7 @@
             this.button10.TabIndex = 9;
             this.button10.Text = "下一个";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // panel1
             // 

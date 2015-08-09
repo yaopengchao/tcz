@@ -76,6 +76,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TalkMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalkMain.Designer.cs">
+      <DependentUpon>TalkMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="BodyMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +217,9 @@
       <DependentUpon>TitleTea.cs</DependentUpon>
     </Compile>
     <Compile Include="UdpState.cs" />
+    <EmbeddedResource Include="TalkMain.resx">
+      <DependentUpon>TalkMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BodyMain.resx">
       <DependentUpon>BodyMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -385,7 +394,6 @@
     <Content Include="lessons\YouAreMySunshine.swf" />
     <Content Include="lessons\去大理.swf" />
     <Content Include="lessons\跟我约会吧.swf" />
-    <None Include="Resources\YouAreMySunshine.swf" />
     <None Include="Resources\YouAreMySunshine.wav" />
   </ItemGroup>
   <ItemGroup>

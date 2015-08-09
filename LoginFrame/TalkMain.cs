@@ -11,11 +11,11 @@ using System.Windows.Forms;
 namespace LoginFrame
 {
 
-    public partial class BodyMain : Form
+    public partial class TalkMain : Form
     {
         public MainFrame mainFrame;  
 
-        public BodyMain()
+        public TalkMain()
         {
             InitializeComponent();
         }
@@ -23,7 +23,7 @@ namespace LoginFrame
         public void BodyMain_Load(object sender, EventArgs e)
         {
             //添加表头，设置该项需要将listView属性View设置为Details否则不会显示
-            this.listView1.Columns.Add("Flash课件列表", 190, HorizontalAlignment.Center); 
+            this.listView1.Columns.Add("局域网机器列表", 190, HorizontalAlignment.Center); 
             //加载列表
             ListViewItem item = new ListViewItem(new string[] { "YouAreMySunshine" });
             this.listView1.Items.Insert(0, item);
@@ -39,25 +39,16 @@ namespace LoginFrame
         //listview双击事件
         public void BodyMain_listView_MouseDoubleClick(object sender, EventArgs e)
         {
-            //重置按钮状态或者说flash播放状态    每次双击时候都需要 flash播放器处于停止未播放的状态
-            initFlashState();
-            mainFrame.titleMain.button6_Click(null,null);
+
         }
 
-        //flash播放器处于停止未播放的状态
-        public void initFlashState()
-        {
-            this.axShockwaveFlashPlayer.Stop();
-            mainFrame.titleMain.button6.Text = "播放";
-        }
+        private static TalkMain instance;
 
-        private static BodyMain instance;
-
-        public static BodyMain createForm()
+        public static TalkMain createForm()
         {
             if (instance == null || instance.IsDisposed)
             {
-                instance = new BodyMain();
+                instance = new TalkMain();
             }
             return instance;
         }

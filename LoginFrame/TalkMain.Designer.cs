@@ -1,6 +1,6 @@
 ﻿namespace LoginFrame
 {
-    partial class BodyMain
+    partial class TalkMain
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BodyMain));
             this.panel2 = new System.Windows.Forms.Panel();
             this.listView1 = new System.Windows.Forms.ListView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.axShockwaveFlashPlayer = new AxShockwaveFlashObjects.AxShockwaveFlash();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axShockwaveFlashPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -63,24 +59,13 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel1.Controls.Add(this.axShockwaveFlashPlayer);
+            this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Location = new System.Drawing.Point(208, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 600);
             this.panel1.TabIndex = 2;
             // 
-            // axShockwaveFlashPlayer
-            // 
-            this.axShockwaveFlashPlayer.Enabled = true;
-            this.axShockwaveFlashPlayer.Location = new System.Drawing.Point(2, 2);
-            this.axShockwaveFlashPlayer.Margin = new System.Windows.Forms.Padding(2);
-            this.axShockwaveFlashPlayer.Name = "axShockwaveFlashPlayer";
-            this.axShockwaveFlashPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axShockwaveFlashPlayer.OcxState")));
-            this.axShockwaveFlashPlayer.Size = new System.Drawing.Size(796, 596);
-            this.axShockwaveFlashPlayer.TabIndex = 0;
-            // 
-            // BodyMain
+            // DialogMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -89,12 +74,10 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "BodyMain";
+            this.Name = "DialogMain";
             this.Text = "BodyMain";
             this.Load += new System.EventHandler(this.BodyMain_Load);
             this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.axShockwaveFlashPlayer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -103,7 +86,6 @@
 
         public System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Panel panel1;
-        public AxShockwaveFlashObjects.AxShockwaveFlash axShockwaveFlashPlayer;
         public System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColorDialog colorDialog1;
     }

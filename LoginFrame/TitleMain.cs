@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
+using System.Media;
 
 
 namespace LoginFrame
@@ -21,6 +22,10 @@ namespace LoginFrame
         public MainFrame mainFrame;
 
         public bool isBroadcasting=false;//是否广播中
+
+        public bool isAudioPlaying = false;//是否扩音中
+
+        public bool isTalking = false;//是否对话中
 
         /// <summary>
         /// UDP客户端
@@ -167,6 +172,13 @@ namespace LoginFrame
             mainFrame.bodyMain.listView1.Items[preIndex].Selected = true;
             //模拟双击事件执行播放
             mainFrame.bodyMain.BodyMain_listView_MouseDoubleClick(null,null);
+
+            //播放选中的文件
+            if (isBroadcasting)
+            {
+                Broadcast("PlayFlash^" + mainFrame.bodyMain.listView1.SelectedItems[0].Text + "^##");
+            }
+
         }
 
         /// <summary>
@@ -222,23 +234,131 @@ namespace LoginFrame
         {
             if (mainFrame.bodyMain.listView1.SelectedItems.Count == 0)
             {
-                MessageBox.Show("请先选择课件再点击播放!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("请先选择课件播放后再扩音操作!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 return;
             }
-            //播放与 Falsh配对的音频文件
-            string audioFilpath = Application.StartupPath + @"/../../lessons/" + mainFrame.bodyMain.listView1.SelectedItems[0].Text+".mp3";
+            //播放与 Falsh配对的音频文件名 不包括拓展名
+            string audioFilename = mainFrame.bodyMain.listView1.SelectedItems[0].Text;
             //获取列表选中项，组装音频文件路径传给播放器
-            audioPlayer(audioFilpath);
+
+            if (this.isAudioPlaying)
+            {
+
+                if (isBroadcasting)
+                {
+                    Broadcast("StopAudio^NoFileName^##");
+                }
+
+                this.isAudioPlaying = false;
+                this.mainFrame.stopPlayer();
+                this.button3.Text = "扩音";
+
+                if (!this.mainFrame.bodyMain.axShockwaveFlashPlayer.IsPlaying())
+                {
+                    this.mainFrame.titleMain.button6_Click(null, null);
+                }
+
+            }
+            else
+            {
+                if (isBroadcasting)
+                {
+                    Broadcast("PlayAudio^"+ audioFilename + "^##");
+                }
+
+                this.isAudioPlaying = true;
+                this.mainFrame.audioPlayer(audioFilename);
+                this.button3.Text = "扩音中";
+
+                //暂停播放Flash
+                if (this.mainFrame.bodyMain.axShockwaveFlashPlayer.IsPlaying())
+                {
+                    this.mainFrame.titleMain.button6_Click(null, null);
+                }
+            }
+
+
+
+            
         }
 
         /// <summary>
-        /// 音频播放
+        /// 下一个
         /// </summary>
-        /// <param name="filepath">播放 音频文件路径</param>
-        public void audioPlayer(string filepath)
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void button10_Click(object sender, EventArgs e)
         {
-            
+            //列表没有被选择过则无法上一个 下一个
+            if (mainFrame.bodyMain.listView1.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("当前没有选择课件，本操作无法执行!!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
+            //获取listview当前位置
+            int index = mainFrame.bodyMain.listView1.SelectedItems[0].Index;
+            //选择上一个item位置   listview越往上越小  
+            int sufIndex = index+1;
+            //判断 该preIndex是否已经小于0了  小于0了则已经到列表顶部了无法再上一个课件了
+            if (sufIndex > mainFrame.bodyMain.listView1.Items.Count-1)
+            {
+                MessageBox.Show("已经到达列表开头，本操作无法执行!!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
+            mainFrame.bodyMain.listView1.Items[sufIndex].Selected = true;
+            //模拟双击事件执行播放
+            mainFrame.bodyMain.BodyMain_listView_MouseDoubleClick(null, null);
 
+            //播放选中的文件
+            if (isBroadcasting)
+            {
+                Broadcast("PlayFlash^" + mainFrame.bodyMain.listView1.SelectedItems[0].Text + "^##");
+            }
+        }
+
+        //对话按钮
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (isTalking)
+            {
+                //切换到 非对话状态
+                isTalking = false;
+
+                this.mainFrame.panel6.Controls.Clear();
+                BodyMain bodyMain = BodyMain.createForm();
+                bodyMain.TopLevel = false;
+                bodyMain.FormBorderStyle = FormBorderStyle.None;
+                bodyMain.Dock = System.Windows.Forms.DockStyle.Fill;
+                this.mainFrame.panel6.Controls.Add(bodyMain);
+                bodyMain.Show();
+
+                //互相访问控件
+                this.mainFrame.bodyMain = bodyMain;
+
+                this.button9.Text = "对话";
+
+            }
+            else
+            {
+                //切换到  对话状态
+
+                isTalking = true;
+
+                this.mainFrame.panel6.Controls.Clear();
+                TalkMain talkMain = TalkMain.createForm();
+                talkMain.TopLevel = false;
+                talkMain.FormBorderStyle = FormBorderStyle.None;
+                talkMain.Dock = System.Windows.Forms.DockStyle.Fill;
+                this.mainFrame.panel6.Controls.Add(talkMain);
+                talkMain.Show();
+
+                //互相访问控件
+
+                this.mainFrame.talkMain = talkMain;
+
+                this.button9.Text = "对话中";
+
+            }
         }
     }
 }

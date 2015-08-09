@@ -10,6 +10,7 @@ using System.Threading;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
+using System.Media;
 
 
 namespace LoginFrame
@@ -19,6 +20,10 @@ namespace LoginFrame
 
         public BodyMain bodyMain;
         public TitleMain titleMain;
+        public TalkMain talkMain;
+
+        public SoundPlayer splayer;
+
 
         public MainFrame()
         {
@@ -38,7 +43,7 @@ namespace LoginFrame
 
             if (LoginRoler.roleid == Constant.RoleStudent)
             {
-                MessageBox.Show("开启自动监听....");
+                //MessageBox.Show("开启自动监听....");
 
                 Thread t = new Thread(new ThreadStart(RecvThread));
                 t.IsBackground = true;
@@ -62,16 +67,16 @@ namespace LoginFrame
                 string msg = Encoding.Default.GetString(buf);
                 //MessageBox.Show("接收到..." + msg + "...的指令");
                 string[] splitString = msg.Split('^');
+                string swfName = splitString[1];
                 switch (splitString[0])
                 {
                     case "PlayFlash"://播放Flash指令
                         if (isTitleFrmAndMainFrm())
                         {
-                            string swfName = splitString[1];
                             //MessageBox.Show("接收到播放Flash:" + swfName + "的指令");
                             //初始化播放器并且进行播放
                             string filpath = Application.StartupPath + @"/../../lessons/" + swfName + ".swf";
-                            //FlashPlayerInit();
+                            FlashPlayerInit();
                             playFlash(filpath);
                         }
                         break;
@@ -80,9 +85,13 @@ namespace LoginFrame
                         {
                             stopFlash();
                         }
-
                         break;
-
+                    case "PlayAudio"://开始扩音
+                        audioPlayer(swfName);
+                        break;
+                    case "StopAudio"://停止扩音
+                        stopPlayer();
+                        break;
                     default: break;
                 }
 
@@ -99,6 +108,15 @@ namespace LoginFrame
             this.titleMain.button6.Text = text;
         }
 
+
+        public delegate void button3_changeText(string text);
+        public void button3changeText(string text)
+        {
+            this.titleMain.button3.Text = text;
+        }
+
+
+
         /// <summary>
         /// 停止或者叫暂停播放Flash
         /// </summary>
@@ -106,8 +124,8 @@ namespace LoginFrame
         {
             this.bodyMain.axShockwaveFlashPlayer.Stop();
 
-            button6_changeText outdelegate = new button6_changeText(button6changeText);
-            this.BeginInvoke(outdelegate, new object[] { "播放" });
+            button6_changeText button6outdelegate = new button6_changeText(button6changeText);
+            this.BeginInvoke(button6outdelegate, new object[] { "播放" });
         }
 
         /// <summary>
@@ -119,9 +137,9 @@ namespace LoginFrame
             this.bodyMain.axShockwaveFlashPlayer.Loop = false;//不循环播放
             this.bodyMain.axShockwaveFlashPlayer.Movie = filpath;
             this.bodyMain.axShockwaveFlashPlayer.Play();
-            Console.WriteLine("地址:" + filpath);
-            button6_changeText outdelegate = new button6_changeText(button6changeText);
-            this.BeginInvoke(outdelegate, new object[] { "暂停" });
+            //Console.WriteLine("地址:" + filpath);
+            button6_changeText button6outdelegate = new button6_changeText(button6changeText);
+            this.BeginInvoke(button6outdelegate, new object[] { "暂停" });
         }
 
         /// <summary>
@@ -293,6 +311,31 @@ namespace LoginFrame
             titleMain.mainFrame = this;
 
         }
+
+        /// <summary>
+        /// 音频播放
+        /// </summary>
+        /// <param name="filepath">播放 音频文件路径</param>
+        public void audioPlayer(string filename)
+        {
+            this.splayer = new SoundPlayer(LoginFrame.Properties.Resources.YouAreMySunshine);
+            this.splayer.Play();
+
+            button3_changeText button3outdelegate = new button3_changeText(button3changeText);
+            this.BeginInvoke(button3outdelegate, new object[] { "扩音中" });
+
+        }
+
+        public void stopPlayer()
+        {
+            this.splayer.Stop();
+
+            button3_changeText button3outdelegate = new button3_changeText(button3changeText);
+            this.BeginInvoke(button3outdelegate, new object[] { "扩音" });
+        }
+
+
+
 
         private void label6_Click(object sender, EventArgs e)
         {
