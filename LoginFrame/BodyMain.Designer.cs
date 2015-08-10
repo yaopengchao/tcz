@@ -32,8 +32,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.listView1 = new System.Windows.Forms.ListView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.axShockwaveFlashPlayer = new AxShockwaveFlashObjects.AxShockwaveFlash();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.axShockwaveFlashPlayer = new AxShockwaveFlashObjects.AxShockwaveFlash();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axShockwaveFlashPlayer)).BeginInit();
@@ -73,11 +73,10 @@
             // axShockwaveFlashPlayer
             // 
             this.axShockwaveFlashPlayer.Enabled = true;
-            this.axShockwaveFlashPlayer.Location = new System.Drawing.Point(2, 2);
-            this.axShockwaveFlashPlayer.Margin = new System.Windows.Forms.Padding(2);
+            this.axShockwaveFlashPlayer.Location = new System.Drawing.Point(3, 3);
             this.axShockwaveFlashPlayer.Name = "axShockwaveFlashPlayer";
             this.axShockwaveFlashPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axShockwaveFlashPlayer.OcxState")));
-            this.axShockwaveFlashPlayer.Size = new System.Drawing.Size(796, 596);
+            this.axShockwaveFlashPlayer.Size = new System.Drawing.Size(794, 595);
             this.axShockwaveFlashPlayer.TabIndex = 0;
             // 
             // BodyMain
@@ -103,8 +102,8 @@
 
         public System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Panel panel1;
-        public AxShockwaveFlashObjects.AxShockwaveFlash axShockwaveFlashPlayer;
         public System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColorDialog colorDialog1;
+        public System.Windows.Forms.ColorDialog colorDialog1;
+        public AxShockwaveFlashObjects.AxShockwaveFlash axShockwaveFlashPlayer;
     }
 }
