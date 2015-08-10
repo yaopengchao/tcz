@@ -24,8 +24,15 @@ namespace LoginFrame
             comboBox1.Items.Add("English");
             comboBox1.SelectedIndex = 0;
 
-            this.textBox1.Text = "manager";
-            this.textBox2.Text = "manager";
+            //this.textBox1.Text = "manager";
+            //this.textBox2.Text = "manager";
+
+
+            this.comboBox2.Items.Add("admin");
+            this.comboBox2.Items.Add("student");
+            this.comboBox2.Items.Add("teacher");
+
+            comboBox2.SelectedIndex = 0;
 
         }
 
@@ -123,7 +130,8 @@ namespace LoginFrame
         private bool login()
         {
             bool flag = false;
-            string username = this.textBox1.Text;
+            //string username = this.textBox1.Text;
+            string username = comboBox2.SelectedItem.ToString();
 
             string password = this.textBox2.Text;
 
@@ -273,6 +281,11 @@ namespace LoginFrame
 
             //Caption
             res.ApplyResources(this, "$this");
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.textBox2.Text = comboBox2.SelectedItem.ToString();
         }
     }
 }
