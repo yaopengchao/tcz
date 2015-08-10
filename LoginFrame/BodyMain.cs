@@ -22,8 +22,18 @@ namespace LoginFrame
 
         public void BodyMain_Load(object sender, EventArgs e)
         {
-            //添加表头，设置该项需要将listView属性View设置为Details否则不会显示
-            this.listView1.Columns.Add("Flash课件列表", 190, HorizontalAlignment.Center); 
+            if (LoginRoler.language == 0)
+            {
+                //添加表头，设置该项需要将listView属性View设置为Details否则不会显示
+                this.listView1.Columns.Add("Flash课件列表", 190, HorizontalAlignment.Center);
+            }
+            else if (LoginRoler.language == 1)
+            {
+                //添加表头，设置该项需要将listView属性View设置为Details否则不会显示
+                this.listView1.Columns.Add("FlashLists", 190, HorizontalAlignment.Center);
+            }
+
+            
             //加载列表
             ListViewItem item = new ListViewItem(new string[] { "YouAreMySunshine" });
             this.listView1.Items.Insert(0, item);

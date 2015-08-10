@@ -217,6 +217,24 @@
       <DependentUpon>TitleTea.cs</DependentUpon>
     </Compile>
     <Compile Include="UdpState.cs" />
+    <EmbeddedResource Include="BodyMain.jv-Latn.resx">
+      <DependentUpon>BodyMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BodyMain.zh-CN.resx">
+      <DependentUpon>BodyMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.en.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.zh-CN.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFrame.en.resx">
+      <DependentUpon>MainFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFrame.zh-CN.resx">
+      <DependentUpon>MainFrame.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TalkMain.resx">
       <DependentUpon>TalkMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -284,7 +302,13 @@
     <EmbeddedResource Include="Frm管理员管理.resx">
       <DependentUpon>Frm管理员管理.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TitleMain.en.resx">
+      <DependentUpon>TitleMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TitleMain.resx">
+      <DependentUpon>TitleMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TitleMain.zh-CN.resx">
       <DependentUpon>TitleMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TitleStu.resx">

@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 
+using System.Threading;
+using System.Globalization;
+
 namespace LoginFrame
 {
     public partial class LoginForm : Form
@@ -16,6 +19,10 @@ namespace LoginFrame
         public LoginForm()
         {
             InitializeComponent();
+
+            comboBox1.Items.Add("中文简体");
+            comboBox1.Items.Add("English");
+            comboBox1.SelectedIndex = 0;
 
             this.textBox1.Text = "manager";
             this.textBox2.Text = "manager";
@@ -154,6 +161,7 @@ namespace LoginFrame
                             LoginRoler.username = Convert.ToString(ds.Tables[0].Rows[0][0].ToString());
                             LoginRoler.truename = Convert.ToString(ds.Tables[0].Rows[0][1].ToString());
                             LoginRoler.roleid = Convert.ToString(ds.Tables[0].Rows[0][2].ToString());
+                            LoginRoler.language = comboBox1.SelectedIndex;
 
                             checkCode = "";
                             flag = true;
@@ -230,6 +238,41 @@ namespace LoginFrame
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //MessageBox.Show(comboBox1.SelectedItem.ToString()+"/"+comboBox1.SelectedIndex);
+            if (comboBox1.SelectedIndex==0)
+            {
+                //更改当前线程的 CultureInfo
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("zh-CN");
+            }else if (comboBox1.SelectedIndex == 1)
+            { //更改当前线程的 CultureInfo
+                //en 为英文，更多的关于 Culture 的字符串请查 MSDN
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
+
+            }
+            
+            //对当前窗体应用更改后的资源
+            ApplyResource();
+        }
+
+        /// <summary>
+        /// 应用资源
+        /// ApplyResources 的第一个参数为要设置的控件
+        ///                  第二个参数为在资源文件中的ID，默认为控件的名称
+        /// </summary>
+        private void ApplyResource()
+        {
+            System.ComponentModel.ComponentResourceManager res = new ComponentResourceManager(typeof(LoginForm));
+            foreach (Control ctl in Controls)
+            {
+                res.ApplyResources(ctl, ctl.Name);
+            }
+
+            //Caption
+            res.ApplyResources(this, "$this");
         }
     }
 }

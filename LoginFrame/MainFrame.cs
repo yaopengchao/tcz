@@ -12,6 +12,8 @@ using System.Net;
 using System.Net.Sockets;
 using System.Media;
 
+using System.Threading;
+using System.Globalization;
 
 namespace LoginFrame
 {
@@ -28,6 +30,37 @@ namespace LoginFrame
         public MainFrame()
         {
             InitializeComponent();
+
+            this.label7.Text = LoginRoler.username;
+
+            if (LoginRoler.language==0)
+            {
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("zh-CN");
+            }
+            else if (LoginRoler.language == 1)
+            {
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
+            }
+
+            //对当前窗体应用更改后的资源
+            ApplyResource();
+        }
+
+        /// <summary>
+        /// 应用资源
+        /// ApplyResources 的第一个参数为要设置的控件
+        ///                  第二个参数为在资源文件中的ID，默认为控件的名称
+        /// </summary>
+        private void ApplyResource()
+        {
+            System.ComponentModel.ComponentResourceManager res = new ComponentResourceManager(typeof(MainFrame));
+            foreach (Control ctl in Controls)
+            {
+                res.ApplyResources(ctl, ctl.Name);
+            }
+
+            //Caption
+            res.ApplyResources(this, "$this");
         }
 
         private static MainFrame instance;
@@ -339,7 +372,14 @@ namespace LoginFrame
 
         private void label6_Click(object sender, EventArgs e)
         {
-            panel5.Show();
+            if (panel5.Visible)
+            {
+                panel5.Hide();
+            }
+            else
+            {
+                panel5.Show();
+            }
         }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
