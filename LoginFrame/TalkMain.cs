@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-
-
+using System.Threading;
+using System.Collections;
 namespace LoginFrame
 {
 
@@ -18,23 +12,52 @@ namespace LoginFrame
         public TalkMain()
         {
             InitializeComponent();
-        }
 
+            Control.CheckForIllegalCrossThreadCalls = false;
+        }
+        private Thread threadListUsers;
         public void BodyMain_Load(object sender, EventArgs e)
         {
             //添加表头，设置该项需要将listView属性View设置为Details否则不会显示
-            this.listView1.Columns.Add("局域网机器列表", 190, HorizontalAlignment.Center); 
+            this.listView1.Columns.Add("局域网机器列表", 190, HorizontalAlignment.Center);
             //加载列表
-            ListViewItem item = new ListViewItem(new string[] { "YouAreMySunshine" });
-            this.listView1.Items.Insert(0, item);
-            ListViewItem item1 = new ListViewItem(new string[] { "感觉自己萌萌哒" });
-            this.listView1.Items.Insert(1, item1);
-            ListViewItem item2 = new ListViewItem(new string[] { "去大理" });
-            this.listView1.Items.Insert(2, item2);
-            ListViewItem item3 = new ListViewItem(new string[] { "跟我约会吧" });
-            this.listView1.Items.Insert(3, item3);
+
+            threadListUsers = new Thread(new ThreadStart(ListUsersOnline));
+            threadListUsers.IsBackground = true;
+            threadListUsers.Start();
+         
         }
 
+        private void ListUsersOnline()
+        {
+            ArrayList alUsers = ListUsers.GetComputerList();
+
+            if (alUsers.Count > 0)
+            {
+                for (int i = 0; i < alUsers.Count; i++)
+                {
+                    string[] strTreeNodeText=(string[])alUsers[i];
+                    ListViewItem item = new ListViewItem(new string[] {strTreeNodeText[2] });
+                    this.listView1.Items.Insert(i, item);
+                }
+            }
+            PicVisible(false);
+        }
+
+        private delegate void PicVisibleHandle(bool b);
+
+        private void PicVisible(bool bVisible)
+        {
+            PicVisibleHandle handle = new PicVisibleHandle(PicVisible);
+            if (InvokeRequired)
+            {
+                this.Invoke(handle, new object[] { bVisible });
+            }
+            else
+            {
+                picLoading.Visible = bVisible;
+            }
+        }
 
         //listview双击事件
         public void BodyMain_listView_MouseDoubleClick(object sender, EventArgs e)
