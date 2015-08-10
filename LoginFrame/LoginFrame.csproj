@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LoginFrame</RootNamespace>
     <AssemblyName>LoginFrame</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -224,10 +224,12 @@
     <Content Include="bin\Debug\LoginFrame.pdb" />
     <Content Include="bin\Debug\LoginFrame.vshost.exe" />
     <Content Include="icon\favicon.ico" />
-    <Content Include="lessons\YouAreMySunshine.mp3" />
-    <Content Include="lessons\去大理.mp3" />
-    <Content Include="lessons\感觉自己萌萌哒.mp3" />
-    <Content Include="lessons\跟我约会吧.mp3" />
+    <Content Include="lessons\1.swf" />
+    <Content Include="lessons\2.swf" />
+    <Content Include="lessons\3.swf" />
+    <Content Include="lessons\1.mp3" />
+    <Content Include="lessons\3.mp3" />
+    <Content Include="lessons\2.mp3" />
     <Content Include="pic\001.png" />
     <Content Include="pic\01.jpg" />
     <Content Include="pic\combobox.png" />
@@ -256,10 +258,6 @@
     <Content Include="bin\Debug\Regedit.txt" />
     <Content Include="bin\Debug\RolesType.xml" />
     <Content Include="pic\界面背景3.jpg" />
-    <Content Include="lessons\感觉自己萌萌哒.swf" />
-    <Content Include="lessons\YouAreMySunshine.swf" />
-    <Content Include="lessons\去大理.swf" />
-    <Content Include="lessons\跟我约会吧.swf" />
     <None Include="Resources\YouAreMySunshine.wav" />
   </ItemGroup>
   <ItemGroup>
