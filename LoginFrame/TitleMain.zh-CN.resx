@@ -117,29 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAABMLAAATCwAAAAAAAAAA
-        AAAAAAACAAAABAAAAAgAAAANAAAAEQAAABUAAAAYAAAAGRg4ADcfUQCpFj4AUwAAABoAAAAaAAAAFwAA
-        ABAAAAAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIlwCUB9WAP8dTwBgAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACVoEkAjYQj/H1YA/x1R
-        AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACt/QBAodi3PJmsZ/yNh
-        CP8gWAG/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALphnEC2RXYAtiU7vK4BA/yl2
-        Lf8mbBr/I2IJ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQpz4gEJYinxaYI/8UnCP/FaI1/xan
-        PP8boTz/II4u/yVwG/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQtWBgErBN7xKiOf8Upz//FqxH/xew
-        T/8XtFP/GLdQ/xe4Rv8XsTT/AAAAAAAAAAAAAAAAAAAAAAAAAAARwXowE8Bu/xW7Yv8Vr1j/F7Rg/xi3
-        Zf8Zu2j/Gb5p/xm/Y/8Zvln/GLxLnwAAAAAAAAAAAAAAAAAAAAAAAAAAFMmBrxjMgv8Ywnj/F7hv/xi8
-        dv8ZwHn/GcJ7/xnEef8ZxHT/GcJo7xnAXSAAAAAAAAAAAAAAAAAAAAAAAAAAACHSm/8j1aL/HMmO/xi8
-        ff8ZwYP/GcSG/xnGhv8Zx4T/GcZ+7xnFdTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA91sX/PdXD/zXE
-        qf8guof/GcOK/xrGjf8ayIzvGsiJgBnIhRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPdfH/z3W
-        xf86zrn/Lq+L/xzBje8axo+AGsiPEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD3X
-        x88918f/PdbF/zK2ms8vrosQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAA918dQPdfH/z3Xx/891sUwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAD3Xx58918f/PdfHMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAPdfHUD3Xx68918cQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAD19f+P9vX/h/YA/wf19fwHAADwBwAA4AcAAMAHAP/AB///wA///8Af///Af///wf8AAMP/
-        AADj/wAA8f8AAA==
-</value>
+  <data name="button1.Text" xml:space="preserve">
+    <value>多媒体课件分类</value>
+  </data>
+  <data name="button10.Text" xml:space="preserve">
+    <value>下一个</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>条目</value>
+  </data>
+  <data name="button3.Text" xml:space="preserve">
+    <value>扩音</value>
+  </data>
+  <data name="button4.Text" xml:space="preserve">
+    <value>同步教学</value>
+  </data>
+  <data name="button6.Text" xml:space="preserve">
+    <value>播放</value>
+  </data>
+  <data name="button7.Text" xml:space="preserve">
+    <value>上一个</value>
+  </data>
+  <data name="button8.Text" xml:space="preserve">
+    <value>收藏</value>
+  </data>
+  <data name="button9.Text1" xml:space="preserve">
+    <value>对话</value>
   </data>
 </root>

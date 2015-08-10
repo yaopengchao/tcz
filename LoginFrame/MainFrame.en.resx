@@ -117,29 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAABMLAAATCwAAAAAAAAAA
-        AAAAAAACAAAABAAAAAgAAAANAAAAEQAAABUAAAAYAAAAGRg4ADcfUQCpFj4AUwAAABoAAAAaAAAAFwAA
-        ABAAAAAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIlwCUB9WAP8dTwBgAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACVoEkAjYQj/H1YA/x1R
-        AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACt/QBAodi3PJmsZ/yNh
-        CP8gWAG/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALphnEC2RXYAtiU7vK4BA/yl2
-        Lf8mbBr/I2IJ/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQpz4gEJYinxaYI/8UnCP/FaI1/xan
-        PP8boTz/II4u/yVwG/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQtWBgErBN7xKiOf8Upz//FqxH/xew
-        T/8XtFP/GLdQ/xe4Rv8XsTT/AAAAAAAAAAAAAAAAAAAAAAAAAAARwXowE8Bu/xW7Yv8Vr1j/F7Rg/xi3
-        Zf8Zu2j/Gb5p/xm/Y/8Zvln/GLxLnwAAAAAAAAAAAAAAAAAAAAAAAAAAFMmBrxjMgv8Ywnj/F7hv/xi8
-        dv8ZwHn/GcJ7/xnEef8ZxHT/GcJo7xnAXSAAAAAAAAAAAAAAAAAAAAAAAAAAACHSm/8j1aL/HMmO/xi8
-        ff8ZwYP/GcSG/xnGhv8Zx4T/GcZ+7xnFdTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA91sX/PdXD/zXE
-        qf8guof/GcOK/xrGjf8ayIzvGsiJgBnIhRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPdfH/z3W
-        xf86zrn/Lq+L/xzBje8axo+AGsiPEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD3X
-        x88918f/PdbF/zK2ms8vrosQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAA918dQPdfH/z3Xx/891sUwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAD3Xx58918f/PdfHMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAPdfHUD3Xx68918cQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAD19f+P9vX/h/YA/wf19fwHAADwBwAA4AcAAMAHAP/AB///wA///8Af///Af///wf8AAMP/
-        AADj/wAA8f8AAA==
-</value>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Listen to palpation physical examination teaching system</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Company name, software, etc.</value>
+  </data>
+  <data name="toolStripMenuItem1.Text" xml:space="preserve">
+    <value>Selftest</value>
+  </data>
+  <data name="toolStripMenuItem2.Text" xml:space="preserve">
+    <value>Examination</value>
+  </data>
+  <data name="toolStripMenuItem3.Text" xml:space="preserve">
+    <value>Perdata</value>
+  </data>
+  <data name="toolStripMenuItem4.Text" xml:space="preserve">
+    <value>Stumanage</value>
+  </data>
+  <data name="toolStripMenuItem5.Text" xml:space="preserve">
+    <value>Teamanage</value>
+  </data>
+  <data name="toolStripMenuItem6.Text" xml:space="preserve">
+    <value>Simulation</value>
+  </data>
+  <data name="toolStripMenuItem7.Text" xml:space="preserve">
+    <value>CloudService</value>
+  </data>
+  <data name="toolStripMenuItem8.Text" xml:space="preserve">
+    <value>Exit</value>
   </data>
 </root>
