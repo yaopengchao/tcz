@@ -16,14 +16,13 @@ namespace LoginFrame
             {
                 DirectoryEntries computers = domain.Children;
                 computers.SchemaFilter.Add("computer");
-
                 foreach (DirectoryEntry computer in computers)
                 {
                     string[] arr = new string[3];
                     IPHostEntry iphe = null;
                     try
                     {
-                        iphe = Dns.GetHostEntry(computer.Name);
+                        iphe = Dns.GetHostByName(computer.Name);
                     }
                     catch
                     {
@@ -33,13 +32,7 @@ namespace LoginFrame
                     arr[1] = computer.Name;
                     if (iphe != null && iphe.AddressList.Length > 0)
                     {
-                        foreach (IPAddress _IPAddress in Dns.GetHostEntry(computer.Name).AddressList)
-                        {//这个For循环出是否为IPV4的IP地址
-                            if (_IPAddress.AddressFamily.ToString() == "InterNetwork")
-                            {
-                                arr[2] += _IPAddress.ToString();
-                            }
-                        }
+                        arr[2] += iphe.AddressList[0].ToString();
                     }
                     else
                         arr[2] = "";

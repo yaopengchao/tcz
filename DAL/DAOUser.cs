@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using MySql.Data.MySqlClient;
+using System.Linq;
 using System.Text;
+using Model;
 
 namespace DAL
 {
@@ -47,41 +50,6 @@ namespace DAL
             DataSet ds = MySqlHelper.DateSet(strSql.ToString(), parameters);
 
             return ds;
-        }
-
-        /// <summary>
-        /// 记录登录用户日志
-        /// </summary>
-        /// <param name="username"></param>
-        /// <param name="ip"></param>
-        /// <returns></returns>
-
-        public bool logLogin(string username, string loginip)
-        {
-            StringBuilder strSql = new StringBuilder();
-            strSql.Append(" insert into online (username,logintime,loginip) values ( ");
-            strSql.Append(" username = ?username, ");
-            strSql.Append(" sysdate(), ");
-            strSql.Append(" loginip = ?loginip ) ");
-
-            MySqlParameter[] parameters = {
-                    new MySqlParameter("?username", MySqlDbType.VarChar),
-                    new MySqlParameter("?loginip", MySqlDbType.VarChar)};
-
-            parameters[0].Value = username;
-            parameters[1].Value = loginip;
-
-            int rows = MySqlHelper.ExecuteNonQuery(strSql.ToString(), parameters);
-
-            if (rows > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-
         }
     }
 }

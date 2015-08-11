@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LoginFrame</RootNamespace>
     <AssemblyName>LoginFrame</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -55,36 +55,27 @@
     <StartupObject>LoginFrame.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.Cells">
-      <HintPath>..\DAL\Aspose.Cells.dll</HintPath>
-    </Reference>
-    <Reference Include="IrisSkin4">
-      <HintPath>E:\学习事例\WinForm\CarSystem\CarSystem\bin\Debug\IrisSkin4.dll</HintPath>
-    </Reference>
-    <Reference Include="Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Library.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="WHC.Pager.Entity">
-      <HintPath>..\DAL\WHC.Pager.Entity.dll</HintPath>
-    </Reference>
-    <Reference Include="WHC.Pager.WinControl">
-      <HintPath>..\DAL\WHC.Pager.WinControl.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ListUsers.cs" />
+    <Compile Include="TalkMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TalkMain.Designer.cs">
+      <DependentUpon>TalkMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="BodyMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,57 +94,7 @@
     <Compile Include="BodyTea.Designer.cs">
       <DependentUpon>BodyTea.cs</DependentUpon>
     </Compile>
-    <Compile Include="Common.cs" />
     <Compile Include="Constant.cs" />
-    <Compile Include="DataGridViewCellPrint.cs" />
-    <Compile Include="FrmAddBook.cs" />
-    <Compile Include="FrmAddBook.Designer.cs">
-      <DependentUpon>FrmAddBook.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmAddBookType.cs" />
-    <Compile Include="FrmAddBookType.Designer.cs">
-      <DependentUpon>FrmAddBookType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmEditBook.cs" />
-    <Compile Include="FrmEditBook.Designer.cs">
-      <DependentUpon>FrmEditBook.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm用户管理.cs" />
-    <Compile Include="Frm用户管理.Designer.cs">
-      <DependentUpon>Frm用户管理.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm个人信息.cs" />
-    <Compile Include="Frm个人信息.Designer.cs">
-      <DependentUpon>Frm个人信息.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm人员管理.cs" />
-    <Compile Include="Frm人员管理.designer.cs">
-      <DependentUpon>Frm人员管理.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm管理员.cs" />
-    <Compile Include="Frm管理员.designer.cs">
-      <DependentUpon>Frm管理员.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm关于.cs" />
-    <Compile Include="Frm关于.designer.cs">
-      <DependentUpon>Frm关于.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm密码修改.cs" />
-    <Compile Include="Frm密码修改.designer.cs">
-      <DependentUpon>Frm密码修改.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm找回密码.cs" />
-    <Compile Include="Frm找回密码.Designer.cs">
-      <DependentUpon>Frm找回密码.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm离开挂起.cs" />
-    <Compile Include="Frm离开挂起.designer.cs">
-      <DependentUpon>Frm离开挂起.cs</DependentUpon>
-    </Compile>
-    <Compile Include="login.cs" />
-    <Compile Include="login.designer.cs">
-      <DependentUpon>login.cs</DependentUpon>
-    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,25 +108,13 @@
     <Compile Include="MainFrame.Designer.cs">
       <DependentUpon>MainFrame.cs</DependentUpon>
     </Compile>
-    <Compile Include="PageControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="PageControl.Designer.cs">
-      <DependentUpon>PageControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PageData.cs" />
-    <Compile Include="Print.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Frm管理员管理.cs" />
-    <Compile Include="Frm管理员管理.designer.cs">
-      <DependentUpon>Frm管理员管理.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Test.cs">
+    <Compile Include="TestFlash.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Test.Designer.cs">
-      <DependentUpon>Test.cs</DependentUpon>
+    <Compile Include="TestFlash.Designer.cs">
+      <DependentUpon>TestFlash.cs</DependentUpon>
     </Compile>
     <Compile Include="TitleMain.cs">
       <SubType>Form</SubType>
@@ -205,7 +134,27 @@
     <Compile Include="TitleTea.Designer.cs">
       <DependentUpon>TitleTea.cs</DependentUpon>
     </Compile>
-    <Compile Include="UdpState.cs" />
+    <EmbeddedResource Include="BodyMain.jv-Latn.resx">
+      <DependentUpon>BodyMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BodyMain.zh-CN.resx">
+      <DependentUpon>BodyMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.en.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.zh-CN.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFrame.en.resx">
+      <DependentUpon>MainFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFrame.zh-CN.resx">
+      <DependentUpon>MainFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TalkMain.resx">
+      <DependentUpon>TalkMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BodyMain.resx">
       <DependentUpon>BodyMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,56 +164,11 @@
     <EmbeddedResource Include="BodyTea.resx">
       <DependentUpon>BodyTea.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAddBook.resx">
-      <DependentUpon>FrmAddBook.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmAddBookType.resx">
-      <DependentUpon>FrmAddBookType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmEditBook.resx">
-      <DependentUpon>FrmEditBook.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm用户管理.resx">
-      <DependentUpon>Frm用户管理.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm个人信息.resx">
-      <DependentUpon>Frm个人信息.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm人员管理.resx">
-      <DependentUpon>Frm人员管理.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm管理员.resx">
-      <DependentUpon>Frm管理员.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm关于.resx">
-      <DependentUpon>Frm关于.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm密码修改.resx">
-      <DependentUpon>Frm密码修改.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm找回密码.resx">
-      <DependentUpon>Frm找回密码.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm离开挂起.resx">
-      <DependentUpon>Frm离开挂起.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="login.resx">
-      <DependentUpon>login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.en.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.zh-Hans.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainFrame.resx">
       <DependentUpon>MainFrame.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PageControl.resx">
-      <DependentUpon>PageControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -276,13 +180,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Frm管理员管理.resx">
-      <DependentUpon>Frm管理员管理.cs</DependentUpon>
+    <EmbeddedResource Include="TestFlash.resx">
+      <DependentUpon>TestFlash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Test.resx">
-      <DependentUpon>Test.cs</DependentUpon>
+    <EmbeddedResource Include="TitleMain.en.resx">
+      <DependentUpon>TitleMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TitleMain.resx">
+      <DependentUpon>TitleMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TitleMain.zh-CN.resx">
       <DependentUpon>TitleMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TitleStu.resx">
@@ -291,6 +198,7 @@
     <EmbeddedResource Include="TitleTea.resx">
       <DependentUpon>TitleTea.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="bin\Debug\LoginFrame.exe.config" />
     <None Include="bin\Debug\LoginFrame.vshost.exe.config" />
     <None Include="bin\Debug\LoginFrame.vshost.exe.manifest" />
@@ -304,45 +212,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Skins\Calmness.ssk" />
-    <None Include="Skins\CalmnessColor1.ssk" />
-    <None Include="Skins\CalmnessColor2.ssk" />
-    <None Include="Skins\DeepCyan.ssk" />
-    <None Include="Skins\DeepGreen.ssk" />
-    <None Include="Skins\DeepOrange.ssk" />
-    <None Include="Skins\Emerald.ssk" />
-    <None Include="Skins\EmeraldColor1.ssk" />
-    <None Include="Skins\EmeraldColor2.ssk" />
-    <None Include="Skins\EmeraldColor3.ssk" />
-    <None Include="Skins\MSN.ssk" />
-    <None Include="Skins\office2007.ssk" />
-    <None Include="Skins\Page.ssk" />
-    <None Include="Skins\PageColor1.ssk" />
-    <None Include="Skins\PageColor2.ssk" />
-    <None Include="Skins\RealOne.ssk" />
-    <None Include="Skins\Silver.ssk" />
-    <None Include="Skins\SilverColor1.ssk" />
-    <None Include="Skins\SilverColor2.ssk" />
-    <None Include="Skins\vista1.ssk" />
-    <None Include="Skins\vista1_green.ssk" />
-    <None Include="Skins\Vista2_color1.ssk" />
-    <None Include="Skins\Vista2_color2.ssk" />
-    <None Include="Skins\Vista2_color3.ssk" />
-    <None Include="Skins\Vista2_color4.ssk" />
-    <None Include="Skins\Vista2_color5.ssk" />
-    <None Include="Skins\Vista2_color6.ssk" />
-    <None Include="Skins\Vista2_color7.ssk" />
-    <None Include="Skins\Warm.ssk" />
-    <None Include="Skins\WarmColor1.ssk" />
-    <None Include="Skins\WarmColor2.ssk" />
-    <None Include="Skins\WarmColor3.ssk" />
-    <None Include="Skins\Wave.ssk" />
-    <None Include="Skins\WaveColor1.ssk" />
-    <None Include="Skins\WaveColor2.ssk" />
-    <None Include="Skins\XPBlue.ssk" />
-    <None Include="Skins\XPGreen.ssk" />
-    <None Include="Skins\XPOrange.ssk" />
-    <None Include="Skins\XPSilver.ssk" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
@@ -355,10 +224,12 @@
     <Content Include="bin\Debug\LoginFrame.pdb" />
     <Content Include="bin\Debug\LoginFrame.vshost.exe" />
     <Content Include="icon\favicon.ico" />
-    <Content Include="lessons\YouAreMySunshine.mp3" />
-    <Content Include="lessons\去大理.mp3" />
-    <Content Include="lessons\感觉自己萌萌哒.mp3" />
-    <Content Include="lessons\跟我约会吧.mp3" />
+    <Content Include="lessons\1.swf" />
+    <Content Include="lessons\2.swf" />
+    <Content Include="lessons\3.swf" />
+    <Content Include="lessons\1.mp3" />
+    <Content Include="lessons\3.mp3" />
+    <Content Include="lessons\2.mp3" />
     <Content Include="pic\001.png" />
     <Content Include="pic\01.jpg" />
     <Content Include="pic\combobox.png" />
@@ -387,11 +258,6 @@
     <Content Include="bin\Debug\Regedit.txt" />
     <Content Include="bin\Debug\RolesType.xml" />
     <Content Include="pic\界面背景3.jpg" />
-    <Content Include="lessons\感觉自己萌萌哒.swf" />
-    <Content Include="lessons\YouAreMySunshine.swf" />
-    <Content Include="lessons\去大理.swf" />
-    <Content Include="lessons\跟我约会吧.swf" />
-    <None Include="Resources\YouAreMySunshine.swf" />
     <None Include="Resources\YouAreMySunshine.wav" />
   </ItemGroup>
   <ItemGroup>
@@ -424,25 +290,8 @@
       <WrapperTool>aximp</WrapperTool>
       <Isolated>False</Isolated>
     </COMReference>
-    <COMReference Include="AxWMPLib">
-      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>aximp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
     <COMReference Include="ShockwaveFlashObjects">
       <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="WMPLib">
-      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
       <VersionMajor>1</VersionMajor>
       <VersionMinor>0</VersionMinor>
       <Lcid>0</Lcid>

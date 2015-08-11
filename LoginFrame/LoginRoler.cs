@@ -10,7 +10,7 @@ namespace LoginFrame
         public static string username;
         public static string truename;
         public static string roleid;
-        public static string ip;
+
         public static int language;
     }
 }

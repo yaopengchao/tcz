@@ -1,10 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 using System.Net;
 using System.Net.Sockets;
-using BLL;
+using System.Media;
 
 
 using System.Threading;
@@ -25,8 +30,6 @@ namespace LoginFrame
 
         public bool isTalking = false;//是否对话中
 
-        ImplCourses Bll = new ImplCourses();
-
         /// <summary>
         /// UDP客户端
         /// </summary>
@@ -39,7 +42,17 @@ namespace LoginFrame
         {
             InitializeComponent();
 
-            
+            if (LoginRoler.language == 0)
+            {
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("zh-CN");
+            }
+            else if (LoginRoler.language == 1)
+            {
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
+            }
+
+            //对当前窗体应用更改后的资源
+            ApplyResource();
 
         }
 
@@ -78,38 +91,8 @@ namespace LoginFrame
         /// <param name="e"></param>
         private void TitleMain_Load(object sender, EventArgs e)
         {
+
             
-
-            if (LoginRoler.language == 0)
-            {
-                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("zh-CN");
-
-                this.comboBox1.Text = "多媒体课件分类";
-                this.comboBox2.Text = "条目";
-
-                this.comboBox1.Items.Clear();
-                this.comboBox1.DataSource = Bll.getAllCourses().Tables[0];
-                this.comboBox1.DisplayMember = "name";
-                this.comboBox1.ValueMember = "id";
-
-            }
-            else if (LoginRoler.language == 1)
-            {
-                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
-
-                this.comboBox1.Text = "multimedia";
-                this.comboBox2.Text = "Entry";
-
-                this.comboBox1.Items.Clear();
-                this.comboBox1.DataSource = Bll.getAllCourses().Tables[0];
-                this.comboBox1.DisplayMember = "enname";
-                this.comboBox1.ValueMember = "id";
-
-            }
-
-            //对当前窗体应用更改后的资源
-            ApplyResource();
-
         }
 
         
@@ -409,28 +392,6 @@ namespace LoginFrame
                 this.button9.Text = "对话中";
 
             }
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string comboBox1Value = this.comboBox1.SelectedValue.ToString();
-            this.comboBox2.Enabled = true;
-
-
-            if (LoginRoler.language == 0)
-            {
-                this.comboBox1.DataSource = Bll.getCourses(comboBox1Value).Tables[0];
-                this.comboBox1.DisplayMember = "name";
-                this.comboBox1.ValueMember = "id";
-            }
-            else if (LoginRoler.language == 1)
-            {
-                this.comboBox1.Items.Clear();
-                this.comboBox1.DataSource = Bll.getCourses(comboBox1Value).Tables[0];
-                this.comboBox1.DisplayMember = "enname";
-                this.comboBox1.ValueMember = "id";
-            }
-
         }
     }
 }

@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ImplCourses.cs" />
     <Compile Include="ImplUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

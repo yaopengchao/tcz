@@ -24,6 +24,8 @@ namespace LoginFrame
         {
             InitializeComponent();
 
+            this.label7.Text = LoginRoler.username;
+
             if (LoginRoler.language==0)
             {
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("zh-CN");
