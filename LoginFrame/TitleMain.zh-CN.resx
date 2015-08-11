@@ -117,14 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="登录框" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\pic\登录框.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button1.Text" xml:space="preserve">
+    <value>多媒体课件分类</value>
   </data>
-  <data name="combobox" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\pic\combobox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button10.Text" xml:space="preserve">
+    <value>下一个</value>
   </data>
-  <data name="YouAreMySunshine" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\YouAreMySunshine.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="button2.Text" xml:space="preserve">
+    <value>条目</value>
+  </data>
+  <data name="button3.Text" xml:space="preserve">
+    <value>扩音</value>
+  </data>
+  <data name="button4.Text" xml:space="preserve">
+    <value>同步教学</value>
+  </data>
+  <data name="button6.Text" xml:space="preserve">
+    <value>播放</value>
+  </data>
+  <data name="button7.Text" xml:space="preserve">
+    <value>上一个</value>
+  </data>
+  <data name="button8.Text" xml:space="preserve">
+    <value>收藏</value>
+  </data>
+  <data name="button9.Text1" xml:space="preserve">
+    <value>对话</value>
   </data>
 </root>

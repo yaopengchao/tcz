@@ -1,23 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
+﻿using System.Data;
 using MySql.Data.MySqlClient;
-using System.Linq;
-using System.Text;
+using System.Configuration;
+
+
 
 namespace DAL
 {
     public class MySqlHelper
     {
-
         private static MySqlConnection mysqlconnection;
 
         public static MySqlConnection GetMysqlConnection
         {
             get
             {
-                string strConn = ConfigurationSettings.AppSettings["strConn"].ToString();
+                string strConn = System.Configuration.ConfigurationSettings.AppSettings["strConn"].ToString();
                 if (mysqlconnection == null)
                 {
                     mysqlconnection = new MySqlConnection(strConn);

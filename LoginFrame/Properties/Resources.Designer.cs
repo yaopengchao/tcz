@@ -71,12 +71,11 @@ namespace LoginFrame.Properties {
         }
         
         /// <summary>
-        ///   查找 System.Byte[] 类型的本地化资源。
+        ///   查找类似于 System.IO.MemoryStream 的 System.IO.UnmanagedMemoryStream 类型的本地化资源。
         /// </summary>
-        internal static byte[] YouAreMySunshine {
+        internal static System.IO.UnmanagedMemoryStream YouAreMySunshine {
             get {
-                object obj = ResourceManager.GetObject("YouAreMySunshine", resourceCulture);
-                return ((byte[])(obj));
+                return ResourceManager.GetStream("YouAreMySunshine", resourceCulture);
             }
         }
         

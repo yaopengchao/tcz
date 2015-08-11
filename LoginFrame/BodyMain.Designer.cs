@@ -41,56 +41,43 @@
             // 
             // panel2
             // 
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.panel2.Controls.Add(this.listView1);
-            this.panel2.Location = new System.Drawing.Point(2, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 600);
-            this.panel2.TabIndex = 1;
             // 
             // listView1
             // 
-            this.listView1.BackColor = System.Drawing.Color.DarkGray;
-            this.listView1.Location = new System.Drawing.Point(2, 2);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2);
+            resources.ApplyResources(this.listView1, "listView1");
+            this.listView1.BackColor = System.Drawing.Color.Silver;
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(197, 596);
-            this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.DoubleClick += new System.EventHandler(this.BodyMain_listView_MouseDoubleClick);
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.panel1.Controls.Add(this.axShockwaveFlashPlayer);
-            this.panel1.Location = new System.Drawing.Point(208, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 600);
-            this.panel1.TabIndex = 2;
             // 
             // axShockwaveFlashPlayer
             // 
-            this.axShockwaveFlashPlayer.Enabled = true;
-            this.axShockwaveFlashPlayer.Location = new System.Drawing.Point(2, 2);
-            this.axShockwaveFlashPlayer.Margin = new System.Windows.Forms.Padding(2);
+            resources.ApplyResources(this.axShockwaveFlashPlayer, "axShockwaveFlashPlayer");
             this.axShockwaveFlashPlayer.Name = "axShockwaveFlashPlayer";
             this.axShockwaveFlashPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axShockwaveFlashPlayer.OcxState")));
-            this.axShockwaveFlashPlayer.Size = new System.Drawing.Size(796, 596);
-            this.axShockwaveFlashPlayer.TabIndex = 0;
             // 
             // BodyMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1010, 604);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BodyMain";
-            this.Text = "BodyMain";
             this.Load += new System.EventHandler(this.BodyMain_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -103,8 +90,8 @@
 
         public System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Panel panel1;
-        public AxShockwaveFlashObjects.AxShockwaveFlash axShockwaveFlashPlayer;
         public System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColorDialog colorDialog1;
+        public System.Windows.Forms.ColorDialog colorDialog1;
+        public AxShockwaveFlashObjects.AxShockwaveFlash axShockwaveFlashPlayer;
     }
 }

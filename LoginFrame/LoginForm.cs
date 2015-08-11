@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Net;
 using System.Windows.Forms;
 using BLL;
+
+using System.Threading;
+using System.Globalization;
 
 namespace LoginFrame
 {
@@ -17,8 +17,19 @@ namespace LoginFrame
         {
             InitializeComponent();
 
-            this.textBox1.Text = "manager";
-            this.textBox2.Text = "manager";
+            comboBox1.Items.Add("中文简体");
+            comboBox1.Items.Add("English");
+            comboBox1.SelectedIndex = 0;
+
+            //this.textBox1.Text = "manager";
+            //this.textBox2.Text = "manager";
+
+
+            this.comboBox2.Items.Add("admin");
+            this.comboBox2.Items.Add("student");
+            this.comboBox2.Items.Add("teacher");
+
+            comboBox2.SelectedIndex = 0;
 
         }
 
@@ -116,7 +127,8 @@ namespace LoginFrame
         private bool login()
         {
             bool flag = false;
-            string username = this.textBox1.Text;
+            //string username = this.textBox1.Text;
+            string username = comboBox2.SelectedItem.ToString();
 
             string password = this.textBox2.Text;
 
@@ -147,6 +159,7 @@ namespace LoginFrame
 
                     if (a != 0)
                     {
+
                         DataSet ds = Bll.ExistsPwd(username, password);
 
                         if (ds.Tables[0].Rows.Count > 0)
@@ -154,6 +167,16 @@ namespace LoginFrame
                             LoginRoler.username = Convert.ToString(ds.Tables[0].Rows[0][0].ToString());
                             LoginRoler.truename = Convert.ToString(ds.Tables[0].Rows[0][1].ToString());
                             LoginRoler.roleid = Convert.ToString(ds.Tables[0].Rows[0][2].ToString());
+                            LoginRoler.language = comboBox1.SelectedIndex;
+                            LoginRoler.ip = GetAddressIP();
+
+
+                            //检查是否还有其他老师在同一个局域网登录
+
+
+                            //记录登录信息
+                            //bool islogedin = Bll.logLogin(LoginRoler.username, LoginRoler.ip);
+
 
                             checkCode = "";
                             flag = true;
@@ -180,8 +203,24 @@ namespace LoginFrame
             return flag;
         }
 
+        /// <summary>
+        /// 获取本地IP地址信息
+        /// </summary>
+        string GetAddressIP()
+        {
+            ///获取本地的IP地址
+            string AddressIP = string.Empty;
+            foreach (IPAddress _IPAddress in Dns.GetHostEntry(Dns.GetHostName()).AddressList)
+            {
+                if (_IPAddress.AddressFamily.ToString() == "InterNetwork")
+                {
+                    AddressIP = _IPAddress.ToString();
+                }
+            }
 
-       
+            return AddressIP;
+        }
+
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -232,9 +271,44 @@ namespace LoginFrame
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //MessageBox.Show(comboBox1.SelectedItem.ToString()+"/"+comboBox1.SelectedIndex);
+            if (comboBox1.SelectedIndex==0)
+            {
+                //更改当前线程的 CultureInfo
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("zh-CN");
+            }else if (comboBox1.SelectedIndex == 1)
+            { //更改当前线程的 CultureInfo
+                //en 为英文，更多的关于 Culture 的字符串请查 MSDN
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
 
+            }
+            
+            //对当前窗体应用更改后的资源
+            ApplyResource();
+        }
+
+        /// <summary>
+        /// 应用资源
+        /// ApplyResources 的第一个参数为要设置的控件
+        ///                  第二个参数为在资源文件中的ID，默认为控件的名称
+        /// </summary>
+        private void ApplyResource()
+        {
+            System.ComponentModel.ComponentResourceManager res = new ComponentResourceManager(typeof(LoginForm));
+            foreach (Control ctl in Controls)
+            {
+                res.ApplyResources(ctl, ctl.Name);
+            }
+
+            //Caption
+            res.ApplyResources(this, "$this");
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.textBox2.Text = comboBox2.SelectedItem.ToString();
         }
     }
 }

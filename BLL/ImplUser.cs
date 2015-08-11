@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
+﻿using System.Data;
 using DAL;
-using Model;
 
 
 namespace BLL
@@ -33,9 +28,10 @@ namespace BLL
             return daoUser.ExistsPwd(username, pwd);
         }
 
-        public DataSet ListUser(SYS_USER user)
+        public bool logLogin(string username, string loginip)
         {
-            throw new NotImplementedException();
+            return daoUser.logLogin(username, loginip);
         }
+        
     }
 }

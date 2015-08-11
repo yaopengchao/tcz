@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 using System.Net;
 using System.Net.Sockets;
+using BLL;
+
+
+using System.Threading;
+using System.Globalization;
 
 
 namespace LoginFrame
@@ -22,6 +21,12 @@ namespace LoginFrame
 
         public bool isBroadcasting=false;//是否广播中
 
+        public bool isAudioPlaying = false;//是否扩音中
+
+        public bool isTalking = false;//是否对话中
+
+        ImplCourses Bll = new ImplCourses();
+
         /// <summary>
         /// UDP客户端
         /// </summary>
@@ -33,6 +38,26 @@ namespace LoginFrame
         public TitleMain()
         {
             InitializeComponent();
+
+            
+
+        }
+
+        /// <summary>
+        /// 应用资源
+        /// ApplyResources 的第一个参数为要设置的控件
+        ///                  第二个参数为在资源文件中的ID，默认为控件的名称
+        /// </summary>
+        private void ApplyResource()
+        {
+            System.ComponentModel.ComponentResourceManager res = new ComponentResourceManager(typeof(TitleMain));
+            foreach (Control ctl in Controls)
+            {
+                res.ApplyResources(ctl, ctl.Name);
+            }
+
+            //Caption
+            res.ApplyResources(this, "$this");
         }
 
         private static TitleMain instance;
@@ -53,8 +78,38 @@ namespace LoginFrame
         /// <param name="e"></param>
         private void TitleMain_Load(object sender, EventArgs e)
         {
-
             
+
+            if (LoginRoler.language == 0)
+            {
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("zh-CN");
+
+                this.comboBox1.Text = "多媒体课件分类";
+                this.comboBox2.Text = "条目";
+
+                this.comboBox1.Items.Clear();
+                this.comboBox1.DataSource = Bll.getAllCourses().Tables[0];
+                this.comboBox1.DisplayMember = "name";
+                this.comboBox1.ValueMember = "id";
+
+            }
+            else if (LoginRoler.language == 1)
+            {
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
+
+                this.comboBox1.Text = "multimedia";
+                this.comboBox2.Text = "Entry";
+
+                this.comboBox1.Items.Clear();
+                this.comboBox1.DataSource = Bll.getAllCourses().Tables[0];
+                this.comboBox1.DisplayMember = "enname";
+                this.comboBox1.ValueMember = "id";
+
+            }
+
+            //对当前窗体应用更改后的资源
+            ApplyResource();
+
         }
 
         
@@ -167,6 +222,13 @@ namespace LoginFrame
             mainFrame.bodyMain.listView1.Items[preIndex].Selected = true;
             //模拟双击事件执行播放
             mainFrame.bodyMain.BodyMain_listView_MouseDoubleClick(null,null);
+
+            //播放选中的文件
+            if (isBroadcasting)
+            {
+                Broadcast("PlayFlash^" + mainFrame.bodyMain.listView1.SelectedItems[0].Text + "^##");
+            }
+
         }
 
         /// <summary>
@@ -222,22 +284,152 @@ namespace LoginFrame
         {
             if (mainFrame.bodyMain.listView1.SelectedItems.Count == 0)
             {
-                MessageBox.Show("请先选择课件再点击播放!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("请先选择课件播放后再扩音操作!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 return;
             }
-            //播放与 Falsh配对的音频文件
-            string audioFilpath = Application.StartupPath + @"/../../lessons/" + mainFrame.bodyMain.listView1.SelectedItems[0].Text+".mp3";
+            //播放与 Falsh配对的音频文件名 不包括拓展名
+            string audioFilename = mainFrame.bodyMain.listView1.SelectedItems[0].Text;
             //获取列表选中项，组装音频文件路径传给播放器
-            audioPlayer(audioFilpath);
+
+            if (this.isAudioPlaying)
+            {
+
+                if (isBroadcasting)
+                {
+                    Broadcast("StopAudio^NoFileName^##");
+                }
+
+                this.isAudioPlaying = false;
+                this.mainFrame.stopPlayer();
+                this.button3.Text = "扩音";
+
+                if (!this.mainFrame.bodyMain.axShockwaveFlashPlayer.IsPlaying())
+                {
+                    this.mainFrame.titleMain.button6_Click(null, null);
+                }
+
+            }
+            else
+            {
+                if (isBroadcasting)
+                {
+                    Broadcast("PlayAudio^"+ audioFilename + "^##");
+                }
+
+                this.isAudioPlaying = true;
+                this.mainFrame.audioPlayer(audioFilename);
+                this.button3.Text = "扩音中";
+
+                //暂停播放Flash
+                if (this.mainFrame.bodyMain.axShockwaveFlashPlayer.IsPlaying())
+                {
+                    this.mainFrame.titleMain.button6_Click(null, null);
+                }
+            }
+
+
+
+            
         }
 
         /// <summary>
-        /// 音频播放
+        /// 下一个
         /// </summary>
-        /// <param name="filepath">播放 音频文件路径</param>
-        public void audioPlayer(string filepath)
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void button10_Click(object sender, EventArgs e)
         {
-            
+            //列表没有被选择过则无法上一个 下一个
+            if (mainFrame.bodyMain.listView1.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("当前没有选择课件，本操作无法执行!!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
+            //获取listview当前位置
+            int index = mainFrame.bodyMain.listView1.SelectedItems[0].Index;
+            //选择上一个item位置   listview越往上越小  
+            int sufIndex = index+1;
+            //判断 该preIndex是否已经小于0了  小于0了则已经到列表顶部了无法再上一个课件了
+            if (sufIndex > mainFrame.bodyMain.listView1.Items.Count-1)
+            {
+                MessageBox.Show("已经到达列表开头，本操作无法执行!!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
+            mainFrame.bodyMain.listView1.Items[sufIndex].Selected = true;
+            //模拟双击事件执行播放
+            mainFrame.bodyMain.BodyMain_listView_MouseDoubleClick(null, null);
+
+            //播放选中的文件
+            if (isBroadcasting)
+            {
+                Broadcast("PlayFlash^" + mainFrame.bodyMain.listView1.SelectedItems[0].Text + "^##");
+            }
+        }
+
+        //对话按钮
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (isTalking)
+            {
+                //切换到 非对话状态
+                isTalking = false;
+
+                this.mainFrame.panel6.Controls.Clear();
+                BodyMain bodyMain = BodyMain.createForm();
+                bodyMain.TopLevel = false;
+                bodyMain.FormBorderStyle = FormBorderStyle.None;
+                bodyMain.Dock = System.Windows.Forms.DockStyle.Fill;
+                this.mainFrame.panel6.Controls.Add(bodyMain);
+                bodyMain.Show();
+
+                //互相访问控件
+                this.mainFrame.bodyMain = bodyMain;
+
+                this.button9.Text = "对话";
+
+            }
+            else
+            {
+                //切换到  对话状态
+
+                isTalking = true;
+
+                this.mainFrame.panel6.Controls.Clear();
+                TalkMain talkMain = TalkMain.createForm();
+                talkMain.TopLevel = false;
+                talkMain.FormBorderStyle = FormBorderStyle.None;
+                talkMain.Dock = System.Windows.Forms.DockStyle.Fill;
+                this.mainFrame.panel6.Controls.Add(talkMain);
+                talkMain.Show();
+
+                //互相访问控件
+
+                this.mainFrame.talkMain = talkMain;
+
+                this.button9.Text = "对话中";
+
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string comboBox1Value = this.comboBox1.SelectedValue.ToString();
+            this.comboBox2.Enabled = true;
+
+
+            if (LoginRoler.language == 0)
+            {
+                this.comboBox1.DataSource = Bll.getCourses(comboBox1Value).Tables[0];
+                this.comboBox1.DisplayMember = "name";
+                this.comboBox1.ValueMember = "id";
+            }
+            else if (LoginRoler.language == 1)
+            {
+                this.comboBox1.Items.Clear();
+                this.comboBox1.DataSource = Bll.getCourses(comboBox1Value).Tables[0];
+                this.comboBox1.DisplayMember = "enname";
+                this.comboBox1.ValueMember = "id";
+            }
 
         }
     }
