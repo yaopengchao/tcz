@@ -74,18 +74,12 @@ namespace DAL
         }
 
 
+      
+      
+       
+       
+       
 
-
-
-
-
-        public static DataSet DateSet(string strSql)
-        {
-            DataSet ds = new DataSet();
-            MySqlDataAdapter adapter = new MySqlDataAdapter(strSql, GetMysqlConnection);
-            adapter.Fill(ds);
-            return ds;
-        }
 
         public static DataSet DateSet(string strSql, MySqlParameter[] param)
         {
