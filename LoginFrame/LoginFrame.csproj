@@ -55,6 +55,9 @@
     <StartupObject>LoginFrame.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Aspose.Cells">
+      <HintPath>..\DAL\Aspose.Cells.dll</HintPath>
+    </Reference>
     <Reference Include="IrisSkin4">
       <HintPath>E:\学习事例\WinForm\CarSystem\CarSystem\bin\Debug\IrisSkin4.dll</HintPath>
     </Reference>
@@ -74,6 +77,12 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WHC.Pager.Entity">
+      <HintPath>..\DAL\WHC.Pager.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="WHC.Pager.WinControl">
+      <HintPath>..\DAL\WHC.Pager.WinControl.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BodyMain.cs">
@@ -182,6 +191,12 @@
     <Compile Include="MainFrame.Designer.cs">
       <DependentUpon>MainFrame.cs</DependentUpon>
     </Compile>
+    <Compile Include="PageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PageControl.Designer.cs">
+      <DependentUpon>PageControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="PageData.cs" />
     <Compile Include="Print.cs" />
     <Compile Include="Program.cs" />
@@ -191,6 +206,12 @@
     </Compile>
     <Compile Include="Frm管理员管理.designer.cs">
       <DependentUpon>Frm管理员管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
     </Compile>
     <Compile Include="TitleMain.cs">
       <SubType>Form</SubType>
@@ -256,11 +277,20 @@
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.en.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.zh-Hans.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainFrame.resx">
       <DependentUpon>MainFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageControl.resx">
+      <DependentUpon>PageControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -275,6 +305,9 @@
     <EmbeddedResource Include="Frm管理员管理.resx">
       <DependentUpon>Frm管理员管理.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TitleMain.resx">
       <DependentUpon>TitleMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -284,7 +317,6 @@
     <EmbeddedResource Include="TitleTea.resx">
       <DependentUpon>TitleTea.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="app.config" />
     <None Include="bin\Debug\LoginFrame.exe.config" />
     <None Include="bin\Debug\LoginFrame.vshost.exe.config" />
     <None Include="bin\Debug\LoginFrame.vshost.exe.manifest" />
