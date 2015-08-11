@@ -33,5 +33,9 @@ namespace BLL
             return daoUser.ExistsPwd(username, pwd);
         }
 
+        public DataSet ListUser(SYS_USER user)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
