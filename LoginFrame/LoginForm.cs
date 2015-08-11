@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
+using System.Net;
 using System.Windows.Forms;
 using BLL;
 
@@ -161,6 +159,7 @@ namespace LoginFrame
 
                     if (a != 0)
                     {
+
                         DataSet ds = Bll.ExistsPwd(username, password);
 
                         if (ds.Tables[0].Rows.Count > 0)
@@ -169,6 +168,15 @@ namespace LoginFrame
                             LoginRoler.truename = Convert.ToString(ds.Tables[0].Rows[0][1].ToString());
                             LoginRoler.roleid = Convert.ToString(ds.Tables[0].Rows[0][2].ToString());
                             LoginRoler.language = comboBox1.SelectedIndex;
+                            LoginRoler.ip = GetAddressIP();
+
+
+                            //检查是否还有其他老师在同一个局域网登录
+
+
+                            //记录登录信息
+                            //bool islogedin = Bll.logLogin(LoginRoler.username, LoginRoler.ip);
+
 
                             checkCode = "";
                             flag = true;
@@ -195,8 +203,24 @@ namespace LoginFrame
             return flag;
         }
 
+        /// <summary>
+        /// 获取本地IP地址信息
+        /// </summary>
+        string GetAddressIP()
+        {
+            ///获取本地的IP地址
+            string AddressIP = string.Empty;
+            foreach (IPAddress _IPAddress in Dns.GetHostEntry(Dns.GetHostName()).AddressList)
+            {
+                if (_IPAddress.AddressFamily.ToString() == "InterNetwork")
+                {
+                    AddressIP = _IPAddress.ToString();
+                }
+            }
 
-       
+            return AddressIP;
+        }
+
 
 
         private void button1_Click(object sender, EventArgs e)

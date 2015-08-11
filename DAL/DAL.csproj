@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAOCourses.cs" />
     <Compile Include="MySqlHelper.cs" />
     <Compile Include="DAOUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

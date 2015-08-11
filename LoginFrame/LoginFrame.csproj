@@ -134,7 +134,7 @@
     <Compile Include="TitleTea.Designer.cs">
       <DependentUpon>TitleTea.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BodyMain.jv-Latn.resx">
+    <EmbeddedResource Include="BodyMain.en.resx">
       <DependentUpon>BodyMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BodyMain.zh-CN.resx">
@@ -202,7 +202,6 @@
     <None Include="bin\Debug\LoginFrame.exe.config" />
     <None Include="bin\Debug\LoginFrame.vshost.exe.config" />
     <None Include="bin\Debug\LoginFrame.vshost.exe.manifest" />
-    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
