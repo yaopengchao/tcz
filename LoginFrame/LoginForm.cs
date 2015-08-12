@@ -255,15 +255,12 @@ namespace LoginFrame
             mainFrame.panel6.Controls.Add(bodyMain);
             bodyMain.Show();
             mainFrame.Show();
-
-            this.Visible = false;//登录框消失
+            this.Visible = false;
 
             //互相访问控件
-            mainFrame.bodyMain = bodyMain;
-            mainFrame.titleMain = titleMain;
+            titleMain.bodyMain = bodyMain;
+            bodyMain.titleMain = titleMain;
 
-            bodyMain.mainFrame = mainFrame;
-            titleMain.mainFrame = mainFrame;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
