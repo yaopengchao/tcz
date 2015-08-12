@@ -57,6 +57,13 @@ namespace LoginFrame
             pageCtrl.Cols = cols;
             int[] widths = new int[] {100, 150, 150, 200 };
             pageCtrl.Widths = widths;
+
+            pageCtrl.loadData = new PageControl.loadDataEventHandler(loadData);
+        }
+
+        private void loadData()
+        {
+
         }
     }
 }
