@@ -50,8 +50,6 @@ namespace DAL
             if (values != null) cmd.Parameters.AddRange(values);
             return cmd;
         }
-        
-       
       
         
         //返回第一行第一列的值 sql语句带参数(查询)

@@ -244,7 +244,7 @@ namespace LoginFrame
             titleMain.Dock = System.Windows.Forms.DockStyle.Fill;
             mainFrame.panel1.Controls.Add(titleMain);
             titleMain.Show();
-            
+
 
             //加载主体栏
             mainFrame.panel6.Controls.Clear();
@@ -255,12 +255,15 @@ namespace LoginFrame
             mainFrame.panel6.Controls.Add(bodyMain);
             bodyMain.Show();
             mainFrame.Show();
-            this.Visible = false;
+
+            this.Visible = false;//登录框消失
 
             //互相访问控件
-            titleMain.bodyMain = bodyMain;
-            bodyMain.titleMain = titleMain;
+            mainFrame.bodyMain = bodyMain;
+            mainFrame.titleMain = titleMain;
 
+            bodyMain.mainFrame = mainFrame;
+            titleMain.mainFrame = mainFrame;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -271,17 +274,18 @@ namespace LoginFrame
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             //MessageBox.Show(comboBox1.SelectedItem.ToString()+"/"+comboBox1.SelectedIndex);
-            if (comboBox1.SelectedIndex==0)
+            if (comboBox1.SelectedIndex == 0)
             {
                 //更改当前线程的 CultureInfo
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("zh-CN");
-            }else if (comboBox1.SelectedIndex == 1)
+            }
+            else if (comboBox1.SelectedIndex == 1)
             { //更改当前线程的 CultureInfo
                 //en 为英文，更多的关于 Culture 的字符串请查 MSDN
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
 
             }
-            
+
             //对当前窗体应用更改后的资源
             ApplyResource();
         }

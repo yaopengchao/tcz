@@ -41,5 +41,24 @@ namespace DAL
             return ds;
         }
 
+
+        public DataSet getLessons(string parentid)
+        {
+            StringBuilder strSql = new StringBuilder();
+
+            strSql.Append(" select id,name,ename,filename from  lessons   ");
+            strSql.Append(" where ");
+            strSql.Append(" parentid=?parentid ");
+
+            MySqlParameter[] parameters = {
+                    new MySqlParameter("?parentid", MySqlDbType.VarChar)};
+
+            parameters[0].Value = parentid;
+
+            DataSet ds = MySqlHelper.DateSet(strSql.ToString(), parameters);
+
+            return ds;
+        }
+
     }
 }

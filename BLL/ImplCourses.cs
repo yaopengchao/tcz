@@ -19,5 +19,11 @@ namespace BLL
             return daoCourses.getCourses(parentid);
         }
 
+
+        public DataSet getLessons(string parentid)
+        {
+            return daoCourses.getLessons(parentid);
+        }
+
     }
 }
