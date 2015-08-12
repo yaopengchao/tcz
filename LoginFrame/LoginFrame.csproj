@@ -55,15 +55,14 @@
     <StartupObject>LoginFrame.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.Cells">
-      <HintPath>..\DAL\Aspose.Cells.dll</HintPath>
+    <Reference Include="ESBasic">
+      <HintPath>..\Dlls\ESBasic.dll</HintPath>
     </Reference>
-    <Reference Include="IrisSkin4">
-      <HintPath>E:\学习事例\WinForm\CarSystem\CarSystem\bin\Debug\IrisSkin4.dll</HintPath>
+    <Reference Include="Oraycn.MCapture">
+      <HintPath>..\Dlls\Oraycn.MCapture.dll</HintPath>
     </Reference>
-    <Reference Include="Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Library.dll</HintPath>
+    <Reference Include="Oraycn.MPlayer">
+      <HintPath>..\Dlls\Oraycn.MPlayer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -118,14 +117,6 @@
     <Compile Include="MainFrame.Designer.cs">
       <DependentUpon>MainFrame.cs</DependentUpon>
     </Compile>
-    <Compile Include="PageControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="PageControl.Designer.cs">
-      <DependentUpon>PageControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PageData.cs" />
-    <Compile Include="Print.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestFlash.cs">
@@ -152,7 +143,7 @@
     <Compile Include="TitleTea.Designer.cs">
       <DependentUpon>TitleTea.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BodyMain.jv-Latn.resx">
+    <EmbeddedResource Include="BodyMain.en.resx">
       <DependentUpon>BodyMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BodyMain.zh-CN.resx">
@@ -179,8 +170,8 @@
     <EmbeddedResource Include="BodyStu.resx">
       <DependentUpon>BodyStu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.en.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <EmbeddedResource Include="BodyTea.resx">
+      <DependentUpon>BodyTea.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -201,8 +192,8 @@
     <EmbeddedResource Include="TestFlash.resx">
       <DependentUpon>TestFlash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Test.resx">
-      <DependentUpon>Test.cs</DependentUpon>
+    <EmbeddedResource Include="TitleMain.en.resx">
+      <DependentUpon>TitleMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TitleMain.resx">
       <DependentUpon>TitleMain.cs</DependentUpon>
@@ -220,7 +211,6 @@
     <None Include="bin\Debug\LoginFrame.exe.config" />
     <None Include="bin\Debug\LoginFrame.vshost.exe.config" />
     <None Include="bin\Debug\LoginFrame.vshost.exe.manifest" />
-    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
