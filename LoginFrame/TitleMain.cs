@@ -369,10 +369,14 @@ namespace LoginFrame
         //对话按钮
         private void button9_Click(object sender, EventArgs e)
         {
+            ImplUser Bll = new ImplUser();
             if (isTalking)
             {
                 //切换到 非对话状态
                 isTalking = false;
+
+                //离开聊天室
+                bool outChatroom = Bll.outChatroom(LoginRoler.username);
 
                 this.mainFrame.panel6.Controls.Clear();
                 BodyMain bodyMain = BodyMain.createForm();
@@ -393,6 +397,10 @@ namespace LoginFrame
                 //切换到  对话状态
 
                 isTalking = true;
+
+                //登录聊天室
+
+                bool inChatroom= Bll.inChatroom(LoginRoler.username,LoginRoler.truename,LoginRoler.ip);
 
                 this.mainFrame.panel6.Controls.Clear();
                 TalkMain talkMain = TalkMain.createForm();
