@@ -21,10 +21,10 @@ namespace LoginFrame
 
         public void initPage()
         {
-            pageSize = 10;
+            pageSize = 2;
             TotalRecord = 0;
             CurPage = 1;
-            menuStatus();
+            dropPageSize.SelectedIndex = 0;
         }
 
         private int startIndex;
@@ -41,6 +41,7 @@ namespace LoginFrame
             set
             {
                 curPage = value;
+                txtCurPage.Text = Convert.ToString(curPage);
                 StartIndex = (curPage - 1) * pageSize;
                 menuStatus();
             }
@@ -52,35 +53,70 @@ namespace LoginFrame
             set { pageSize = value; }
         }
 
+        private string[] cols;
+        public string[] Cols
+        {
+            get { return cols; }
+            set
+            {
+                cols = value;
+                if (cols != null)
+                {
+                    int colsCount = cols.Length;
+                    for (int i = 0; i < colsCount; i++)
+                    {
+                        dg.Columns[i].HeaderText = cols[i];
+                    }
+                }
+            }
+        }
+
+        private int[] widths;
+        public int[] Widths
+        {
+            get { return widths; }
+            set
+            {
+                widths = value;
+                int widthCount = widths.Length;
+                for (int i = 0; i < widthCount; i++)
+                {
+                    dg.Columns[i].Width = widths[i];
+                }
+            }
+        }
+
         private int totalPage;
+        public int TotalPage
+        {
+            get { return totalPage; }
+            set
+            {
+                totalPage = value;
+                labTotalPage.Text = Convert.ToString(totalPage);
+            }
+        }
+
         private int totalRecord;
         public int TotalRecord
         {
             get { return totalRecord; }
             set
             {
-                if (pageSize == 0)
+                totalRecord = value;
+                labTotalRecord.Text = Convert.ToString(totalRecord);              
+                if (pageSize == 0 || totalRecord == 0)
                 {
-                    totalPage = 1;
+                    TotalPage = 1;
                 } else
                 {
                     if (totalRecord % pageSize == 0)
-                        totalPage = totalRecord / pageSize;
+                        TotalPage = totalRecord / pageSize;
                     else
-                        totalPage = totalRecord / pageSize + 1;
-                }  
+                        TotalPage = totalRecord / pageSize + 1;
+                }
+                CurPage = 1;
             }
-        }
-
-
-        private void bindingNavigatorMoveFirstItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bn_RefreshItems(object sender, EventArgs e)
-        {
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -90,38 +126,31 @@ namespace LoginFrame
 
         private void PageControl_Load(object sender, EventArgs e)
         {
-            bs.DataSource = new BindingSource();
-            dg.DataSource = bs;
-            bn.BindingSource = bs;
-            menuStatus();
+            initPage();
         }
 
         private void btnFirstPage_Click(object sender, EventArgs e)
         {
-            CurPage = 1;
             loadData();
-            menuStatus();
+            CurPage = 1;
         }
 
         private void btnPrePage_Click(object sender, EventArgs e)
         {
-            CurPage = Convert.ToInt32(txtCurPage.Text) - 1;
             loadData();
-            menuStatus();
+            CurPage = Convert.ToInt32(txtCurPage.Text) - 1;          
         }
 
         private void btnNextPage_Click(object sender, EventArgs e)
         {
-            CurPage = Convert.ToInt32(txtCurPage.Text) + 1;
             loadData();
-            menuStatus();
+            CurPage = Convert.ToInt32(txtCurPage.Text) + 1;            
         }
 
         private void btnLastPage_Click(object sender, EventArgs e)
         {
-            CurPage = totalPage;
             loadData();
-            menuStatus();
+            CurPage = totalPage;            
         }
 
         private void menuStatus()
@@ -156,6 +185,9 @@ namespace LoginFrame
             }
         }
 
-        
+        private void dropPageSize_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

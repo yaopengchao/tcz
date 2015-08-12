@@ -94,7 +94,6 @@
             this.bn.Size = new System.Drawing.Size(420, 25);
             this.bn.TabIndex = 0;
             this.bn.Text = "bindingNavigator1";
-            this.bn.RefreshItems += new System.EventHandler(this.bn_RefreshItems);
             // 
             // btnFirstPage
             // 
@@ -214,24 +213,32 @@
             "10",
             "20",
             "50"});
+            this.dropPageSize.Items.AddRange(new object[] {
+            "10",
+            "20",
+            "50"});
             this.dropPageSize.Name = "dropPageSize";
             this.dropPageSize.Size = new System.Drawing.Size(75, 25);
+            this.dropPageSize.Click += new System.EventHandler(this.dropPageSize_Click);
             // 
             // toolStripLabel5
             // 
             this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(20, 17);
+            this.toolStripLabel5.Size = new System.Drawing.Size(20, 22);
             this.toolStripLabel5.Text = "条";
             // 
             // dg
             // 
             this.dg.AllowUserToAddRows = false;
             this.dg.AllowUserToDeleteRows = false;
+            this.dg.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dg.Location = new System.Drawing.Point(0, 0);
+            this.dg.MinimumSize = new System.Drawing.Size(0, 30);
             this.dg.Name = "dg";
             this.dg.ReadOnly = true;
+            this.dg.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dg.RowTemplate.Height = 23;
             this.dg.Size = new System.Drawing.Size(420, 275);
             this.dg.TabIndex = 1;
@@ -258,9 +265,9 @@
 
         #endregion
 
-        private System.Windows.Forms.BindingNavigator bn;
-        private System.Windows.Forms.DataGridView dg;
-        private System.Windows.Forms.BindingSource bs;
+        public System.Windows.Forms.BindingNavigator bn;
+        public System.Windows.Forms.DataGridView dg;
+        public System.Windows.Forms.BindingSource bs;
         private System.Windows.Forms.ToolStripButton btnFirstPage;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btnPrePage;

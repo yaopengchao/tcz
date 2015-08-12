@@ -58,13 +58,18 @@ namespace DAL
             MySqlCommand cmd = MysqlCommand(strSql, values);
             return cmd.ExecuteScalar();
         }
-        
-       
-               
 
-       
+        //返回第一行第一列的值 sql语句不带参数(查询)
+        public static object ExecuteScalar(string strSql)
+        {
+            MySqlCommand cmd = MysqlCommand(strSql);
+            return cmd.ExecuteScalar();
+        }
 
-        
+
+
+
+
         public static int ExecuteNonQuery(string strSql, params MySqlParameter[] values)
         {
             MySqlCommand cmd = MysqlCommand(strSql, values);
@@ -72,12 +77,18 @@ namespace DAL
         }
 
 
-      
-      
-       
-       
-       
 
+
+
+
+
+        public static DataSet DateSet(string strSql)
+        {
+            DataSet ds = new DataSet();
+            MySqlDataAdapter adapter = new MySqlDataAdapter(strSql, GetMysqlConnection);
+            adapter.Fill(ds);
+            return ds;
+        }
 
         public static DataSet DateSet(string strSql, MySqlParameter[] param)
         {
