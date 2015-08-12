@@ -1,37 +1,11 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Collections;
 using System.DirectoryServices;
-using System.Linq;
 using System.Net;
-using BLL;
 
 namespace LoginFrame
 {
     class ListUsers
     {
-        ImplUser Bll = new ImplUser();
-
-        public ArrayList GetComputerListFromChatRoom()
-        {
-            DataTable dt = (Bll.getUsersFromChatroom()).Tables[0];
-
-            ArrayList list = new ArrayList();
-
-            foreach (DataRow r in dt.Rows)
-            {
-                int colCount = r.ItemArray.Count();
-                string[] items = new string[colCount];
-                for (int i = 0; i < colCount; i++)
-                {
-                    items[i] = Convert.ToString(r.ItemArray[2]);
-                }
-                list.Add(items);
-            }
-            return list;
-        }
-
         public static ArrayList GetComputerList()
         {
             ArrayList list = new ArrayList();

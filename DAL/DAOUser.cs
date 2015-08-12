@@ -49,21 +49,6 @@ namespace DAL
             return ds;
         }
 
-
-        public DataSet getUsersFromChatroom()
-        {
-            StringBuilder strSql = new StringBuilder();
-            strSql.Append(" select username,truename,ip from chatroom ");
-            MySqlParameter[] parameters = {
-            };
-
-            DataSet ds = MySqlHelper.DateSet(strSql.ToString(), parameters);
-
-            return ds;
-        }
-
-
-
         /// <summary>
         /// 记录登录用户日志
         /// </summary>
@@ -96,110 +81,7 @@ namespace DAL
             {
                 return false;
             }
+
         }
-
-
-
-        public bool inChatroom(string username, string truename, string ip)
-        {
-            StringBuilder strSql = new StringBuilder();
-            //先检查是否有旧记录没有正确退出
-            strSql.Append(" select count(1) from chatroom ");
-            strSql.Append(" where ");
-            strSql.Append(" username=?username ");
-            MySqlParameter[] parameters0 = {
-                    new MySqlParameter("?username", MySqlDbType.VarChar)
-            };
-
-            parameters0[0].Value = username;
-
-            int row0= Convert.ToInt32(MySqlHelper.ExecuteScalar(strSql.ToString(), parameters0));
-
-            if (row0 > 0)
-            {
-                //更新数据
-                strSql = new StringBuilder();
-                strSql.Append(" update chatroom set truename=?truename,ip=?ip ");
-                strSql.Append(" where ");
-                strSql.Append(" username=?username ");
-                MySqlParameter[] parameters1 = {
-                    new MySqlParameter("?truename", MySqlDbType.VarChar),
-                    new MySqlParameter("?ip", MySqlDbType.VarChar),
-                    new MySqlParameter("?username", MySqlDbType.VarChar)
-                };
-
-                parameters1[0].Value = username;
-                parameters1[1].Value = truename;
-                parameters1[2].Value = ip;
-
-
-                int rows1 = MySqlHelper.ExecuteNonQuery(strSql.ToString(), parameters1);
-                if (rows1 > 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {//inert into
-                strSql = new StringBuilder();
-                strSql.Append(" insert into chatroom (username,truename,ip) values ( ");
-                strSql.Append(" ?username, ");
-                strSql.Append(" ?truename, ");
-                strSql.Append(" ?ip  ) ");
-
-                MySqlParameter[] parameters = {
-                    new MySqlParameter("?username", MySqlDbType.VarChar),
-                    new MySqlParameter("?truename", MySqlDbType.VarChar),
-                    new MySqlParameter("?ip", MySqlDbType.VarChar)
-            };
-
-                parameters[0].Value = username;
-                parameters[1].Value = truename;
-                parameters[2].Value = ip;
-
-                int rows = MySqlHelper.ExecuteNonQuery(strSql.ToString(), parameters);
-
-                if (rows > 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-        }
-
-
-
-        public bool outChatroom(string username)
-        {
-            StringBuilder strSql = new StringBuilder();
-            strSql.Append("  delete from chatroom where ");
-            strSql.Append(" username = ?username ");
-
-            MySqlParameter[] parameters = {
-                    new MySqlParameter("?username", MySqlDbType.VarChar),
-            };
-
-            parameters[0].Value = username;
-
-            int rows = MySqlHelper.ExecuteNonQuery(strSql.ToString(), parameters);
-
-            if (rows > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-
     }
 }

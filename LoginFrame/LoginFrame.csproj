@@ -55,15 +55,6 @@
     <StartupObject>LoginFrame.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ESBasic">
-      <HintPath>..\Dlls\ESBasic.dll</HintPath>
-    </Reference>
-    <Reference Include="Oraycn.MCapture">
-      <HintPath>..\Dlls\Oraycn.MCapture.dll</HintPath>
-    </Reference>
-    <Reference Include="Oraycn.MPlayer">
-      <HintPath>..\Dlls\Oraycn.MPlayer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />

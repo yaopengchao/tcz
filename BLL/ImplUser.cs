@@ -28,31 +28,10 @@ namespace BLL
             return daoUser.ExistsPwd(username, pwd);
         }
 
-        public DataSet getUsersFromChatroom()
-        {
-            return daoUser.getUsersFromChatroom();
-        }
-
-
         public bool logLogin(string username, string loginip)
         {
             return daoUser.logLogin(username, loginip);
         }
-
-
-        public bool inChatroom(string username, string truename, string loginip)
-        {
-            return daoUser.inChatroom(username,truename, loginip);
-        }
-
-
-        public bool outChatroom(string username)
-        {
-            return daoUser.outChatroom(username);
-        }
-
-
-
-
+        
     }
 }

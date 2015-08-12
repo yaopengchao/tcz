@@ -30,12 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TalkMain));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.picLoading = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button1 = new System.Windows.Forms.Button();
+            this.picLoading = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLoading)).BeginInit();
             this.SuspendLayout();
@@ -51,34 +50,10 @@
             this.panel2.Size = new System.Drawing.Size(200, 600);
             this.panel2.TabIndex = 1;
             // 
-            // picLoading
-            // 
-            this.picLoading.BackColor = System.Drawing.Color.Transparent;
-            this.picLoading.ErrorImage = null;
-            this.picLoading.Image = ((System.Drawing.Image)(resources.GetObject("picLoading.Image")));
-            this.picLoading.InitialImage = null;
-            this.picLoading.Location = new System.Drawing.Point(67, 226);
-            this.picLoading.Name = "picLoading";
-            this.picLoading.Size = new System.Drawing.Size(67, 67);
-            this.picLoading.TabIndex = 2;
-            this.picLoading.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(3, 543);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 54);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "开启语音";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // listView1
             // 
             this.listView1.BackColor = System.Drawing.Color.Silver;
             this.listView1.CheckBoxes = true;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1});
             this.listView1.Location = new System.Drawing.Point(2, 2);
             this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.MultiSelect = false;
@@ -97,10 +72,26 @@
             this.panel1.Size = new System.Drawing.Size(800, 600);
             this.panel1.TabIndex = 2;
             // 
-            // columnHeader1
+            // button1
             // 
-            this.columnHeader1.Text = "局域网机器列表";
-            this.columnHeader1.Width = 193;
+            this.button1.Location = new System.Drawing.Point(3, 543);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(194, 54);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "开启语音";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // picLoading
+            // 
+            this.picLoading.BackColor = System.Drawing.Color.Transparent;
+            this.picLoading.ErrorImage = null;
+            this.picLoading.Image = ((System.Drawing.Image)(resources.GetObject("picLoading.Image")));
+            this.picLoading.InitialImage = null;
+            this.picLoading.Location = new System.Drawing.Point(67, 226);
+            this.picLoading.Name = "picLoading";
+            this.picLoading.Size = new System.Drawing.Size(67, 67);
+            this.picLoading.TabIndex = 2;
+            this.picLoading.TabStop = false;
             // 
             // TalkMain
             // 
@@ -128,6 +119,5 @@
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox picLoading;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }
