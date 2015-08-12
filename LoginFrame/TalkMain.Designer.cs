@@ -28,40 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TalkMain));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.picLoading = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLoading)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel2.Controls.Add(this.picLoading);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.listView1);
             this.panel2.Location = new System.Drawing.Point(2, 1);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 600);
             this.panel2.TabIndex = 1;
-            // 
-            // picLoading
-            // 
-            this.picLoading.BackColor = System.Drawing.Color.Transparent;
-            this.picLoading.ErrorImage = null;
-            this.picLoading.Image = ((System.Drawing.Image)(resources.GetObject("picLoading.Image")));
-            this.picLoading.InitialImage = null;
-            this.picLoading.Location = new System.Drawing.Point(67, 226);
-            this.picLoading.Name = "picLoading";
-            this.picLoading.Size = new System.Drawing.Size(67, 67);
-            this.picLoading.TabIndex = 2;
-            this.picLoading.TabStop = false;
             // 
             // button1
             // 
@@ -89,6 +73,11 @@
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.DoubleClick += new System.EventHandler(this.BodyMain_listView_MouseDoubleClick);
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "聊天室在线列表";
+            this.columnHeader1.Width = 193;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
@@ -96,11 +85,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 600);
             this.panel1.TabIndex = 2;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "局域网机器列表";
-            this.columnHeader1.Width = 193;
             // 
             // TalkMain
             // 
@@ -115,7 +99,6 @@
             this.Text = "BodyMain";
             this.Load += new System.EventHandler(this.BodyMain_Load);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picLoading)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -127,7 +110,6 @@
         public System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox picLoading;
         private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }
