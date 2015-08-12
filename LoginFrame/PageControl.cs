@@ -59,10 +59,16 @@ namespace LoginFrame
             get { return totalRecord; }
             set
             {
-                if (totalRecord % pageSize == 0)
-                    totalPage = totalRecord / pageSize;
-                else
-                    totalPage = totalRecord / pageSize + 1;
+                if (pageSize == 0)
+                {
+                    totalPage = 1;
+                } else
+                {
+                    if (totalRecord % pageSize == 0)
+                        totalPage = totalRecord / pageSize;
+                    else
+                        totalPage = totalRecord / pageSize + 1;
+                }  
             }
         }
 

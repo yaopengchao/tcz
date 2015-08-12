@@ -36,5 +36,15 @@ namespace LoginFrame
         {
 
         }
+
+        private void BodyStu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pageCtrl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
