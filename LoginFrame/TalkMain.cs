@@ -2,11 +2,8 @@
 using System.Windows.Forms;
 using System.Threading;
 using System.Collections;
-
 using Oraycn.MCapture;
 using Oraycn.MPlayer;
-
-using System.IO;
 using System.Net;
 using System.Net.Sockets;
 
@@ -27,68 +24,67 @@ namespace LoginFrame
         }
         private Thread threadListUsers;
         private Thread threadChatroom;
+        private Thread threadChatroomListener;
+        Socket socketServer;
+        Socket sk;
         public void BodyMain_Load(object sender, EventArgs e)
         {
-            //添加表头，设置该项需要将listView属性View设置为Details否则不会显示
-            //this.listView1.Columns.Add("局域网机器列表", 190, HorizontalAlignment.Center);
             //加载列表
 
             threadListUsers = new Thread(new ThreadStart(ListUsersOnline));
             threadListUsers.IsBackground = true;
             threadListUsers.Start();
 
-            //如果是老师则创建聊天服务器
+            //如果是老师则创建聊天服务
             if (LoginRoler.roleid==Constant.RoleTeacher)
             {
-                threadChatroom = new Thread(new ThreadStart(createChatroom));
-                threadChatroom.IsBackground = true;
-                threadChatroom.Start();
+                //开启聊天室服务器监听
+                //首先建立一个套接字(服务器端)
+                socketServer = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                //将套接字绑定到本地的IP和端口
+                IPEndPoint endPoint = new IPEndPoint(IPAddress.Any, 10021);
+                //绑定套接字
+                socketServer.Bind(endPoint);
+                //输出语句 服务已经启动
+                Console.WriteLine("=====TCP Server Is OK======\r\n ===IP:" + endPoint.Address + "  Port:" + endPoint.Port + "===");
+                //开始监听
+                socketServer.Listen(10);
+
+                //threadChatroomListener = new Thread(new ThreadStart(createChatroomListener));
+                //threadChatroomListener.IsBackground = true;
+                //threadChatroomListener.Start();
             }
-            
 
         }
 
-        private void createChatroom()
+
+        private void createChatroomListener()
         {
-            //开启聊天室服务器监听
-            //首先建立一个套接字(服务器端)
-            Socket socketServer = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            //将套接字绑定到本地的IP和端口
-            IPEndPoint endPoint = new IPEndPoint(IPAddress.Any, 9999);
-            //绑定套接字
-            socketServer.Bind(endPoint);
-            //输出语句 服务已经启动
-            Console.WriteLine("=====TCP Server Is OK======\r\n ===IP:" + endPoint.Address + "  Port:" + endPoint.Port + "===");
-            //开始监听
-            socketServer.Listen(10);
             //接受消息并返回的新的套接字对象
-            Socket sk = socketServer.Accept();
-
-
+            sk = socketServer.Accept();
             //接受数据
             //新建一个字节数组
             byte[] recveMsg = new byte[1024 * 1024];
-
                 //使用receive方法接受发送到服务器端的数据
                 int bytes = sk.Receive(recveMsg, SocketFlags.None);
-                //将数据进行编码
-                string receive = System.Text.Encoding.UTF8.GetString(recveMsg, 0, bytes);
-                //将信息打印到控制台
-                Console.WriteLine("服务器接收到的消息" + receive);
+            Console.WriteLine("服务器接收到的消息");
+            //将数据进行编码
+            //string receive = System.Text.Encoding.UTF8.GetString(recveMsg, 0, bytes);
+            //将信息打印到控制台
+            //Console.WriteLine("服务器接收到的消息" + receive);
 
-                // 发送数据
+            // 发送数据
 
-                //实例化发送的信息
-                string message = receive;
-                //将字符串转换成字节数组
-                byte[] sendMsg = System.Text.Encoding.UTF8.GetBytes(message);
-                //发送数据
-                int sendBytes = sk.Send(sendMsg, SocketFlags.None);
+            //实例化发送的信息
+            //string message = receive;
+            //将字符串转换成字节数组
+            //byte[] sendMsg = System.Text.Encoding.UTF8.GetBytes(message);
+            //发送数据
+            //int sendBytes = sk.Send(sendMsg, SocketFlags.None);
 
             //关闭套接字
             //socketServer.Close();
         }
-
         private void ListUsersOnline()
         {
             //ArrayList alUsers = ListUsers.GetComputerList();
@@ -161,7 +157,7 @@ namespace LoginFrame
                 //新建一个套接字(老师客户端)
                 socketClient = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
                 //设置与远程主机连接的网络节点
-                endPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 9999);
+                endPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 10021);
                 //与远程主机建立连接
                 socketClient.Connect(endPoint);
 
@@ -182,10 +178,14 @@ namespace LoginFrame
         
         void AudioCaptured(byte[] audioData) //采集到的声音数据
         {
-
             //发送数据
-        
-            int bytes = socketClient.Send(audioData, SocketFlags.None);
+            if (this.audioPlayer != null)
+            {
+                this.audioPlayer.Play(audioData);
+                int bytes = socketClient.Send(audioData, SocketFlags.None);
+                Console.WriteLine("发送中");
+            }
+            
 
 
 
