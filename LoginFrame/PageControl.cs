@@ -6,65 +6,117 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using DAL;
 
 namespace LoginFrame
 {
     public partial class PageControl : UserControl
     {
-        public delegate void loadDataEventHandle();
-        public loadDataEventHandle loadData;
-
-        public string[] cols;
-        public string[] Cols
-        {
-            get { return cols; }
-            set
-            {
-                cols = value;
-                int colLength = cols.Length;
-                if (colLength > 0)
-                {
-                    string str = "";
-                    for (int i = 0; i < colLength; i++)
-                    {
-                        dataGridView1.Columns[i].HeaderText = cols[i];
-                        str += cols[i];
-                    }
-                    Console.WriteLine(str);
-                }
-            }
-        }
-
-        public int[] widths;
-        public int[] Widths
-        {
-            get { return widths; }
-            set
-            {
-                widths = value;
-                int widLength = widths.Length;
-                if (widLength > 0)
-                {
-                    for (int i = 0; i < widLength; i++)
-                    {
-                        dataGridView1.Columns[i].Width = widths[i];
-                    }
-                }
-                
-            }
-        }
-
-        public Page page = new Page();
+        public delegate void loadDataEventHandler();
+        public loadDataEventHandler loadData;
 
         public PageControl()
         {
             InitializeComponent();
         }
 
-        private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
+        public void initPage()
         {
+            pageSize = 2;
+            TotalRecord = 0;
+            CurPage = 1;
+            dropPageSize.SelectedIndex = 0;
+        }
 
+        private int startIndex;
+        public int StartIndex
+        {
+            get { return startIndex; }
+            set { startIndex = value; }
+        }
+
+        private int curPage;
+        public int CurPage
+        {
+            get { return curPage; }
+            set
+            {
+                curPage = value;
+                txtCurPage.Text = Convert.ToString(curPage);
+                StartIndex = (curPage - 1) * pageSize;
+                menuStatus();
+            }
+        }
+        private int pageSize;
+        public int PageSize
+        {
+            get { return pageSize; }
+            set { pageSize = value; }
+        }
+
+        private string[] cols;
+        public string[] Cols
+        {
+            get { return cols; }
+            set
+            {
+                cols = value;
+                if (cols != null)
+                {
+                    int colsCount = cols.Length;
+                    for (int i = 0; i < colsCount; i++)
+                    {
+                        dg.Columns[i].HeaderText = cols[i];
+                    }
+                }
+            }
+        }
+
+        private int[] widths;
+        public int[] Widths
+        {
+            get { return widths; }
+            set
+            {
+                widths = value;
+                int widthCount = widths.Length;
+                for (int i = 0; i < widthCount; i++)
+                {
+                    dg.Columns[i].Width = widths[i];
+                }
+            }
+        }
+
+        private int totalPage;
+        public int TotalPage
+        {
+            get { return totalPage; }
+            set
+            {
+                totalPage = value;
+                labTotalPage.Text = Convert.ToString(totalPage);
+            }
+        }
+
+        private int totalRecord;
+        public int TotalRecord
+        {
+            get { return totalRecord; }
+            set
+            {
+                totalRecord = value;
+                labTotalRecord.Text = Convert.ToString(totalRecord);              
+                if (pageSize == 0 || totalRecord == 0)
+                {
+                    TotalPage = 1;
+                } else
+                {
+                    if (totalRecord % pageSize == 0)
+                        TotalPage = totalRecord / pageSize;
+                    else
+                        TotalPage = totalRecord / pageSize + 1;
+                }
+                CurPage = 1;
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -72,76 +124,58 @@ namespace LoginFrame
 
         }
 
+        private void PageControl_Load(object sender, EventArgs e)
+        {
+            initPage();
+        }
+
         private void btnFirstPage_Click(object sender, EventArgs e)
         {
-            page.goToFirstPage();
-            txtCurPage.Text = Convert.ToString(page.CurPage);
             loadData();
-            menuStatus();
+            CurPage = 1;
         }
 
         private void btnPrePage_Click(object sender, EventArgs e)
         {
-            page.goToPrePage();
-            txtCurPage.Text = Convert.ToString(page.CurPage);
             loadData();
-            menuStatus();
+            CurPage = Convert.ToInt32(txtCurPage.Text) - 1;          
         }
 
         private void btnNextPage_Click(object sender, EventArgs e)
         {
-            page.goToNextPage();
-            txtCurPage.Text = Convert.ToString(page.CurPage);
             loadData();
-            menuStatus();
+            CurPage = Convert.ToInt32(txtCurPage.Text) + 1;            
         }
 
         private void btnLastPage_Click(object sender, EventArgs e)
         {
-            page.goToLastPage();
-            txtCurPage.Text = Convert.ToString(page.CurPage);
             loadData();
-            menuStatus();
+            CurPage = totalPage;            
         }
 
-        private void PageControl_Load(object sender, EventArgs e)
+        private void menuStatus()
         {
-            loadInit();
-        }
-
-        public void loadInit()
-        {
-            bs = new BindingSource();
-            dataGridView1.DataSource = bs;
-            bn.BindingSource = bs;
-
-            txtCurPage.Text = Convert.ToString(page.CurPage);
-            DropPageSize.SelectedIndex = 0;
-        }
-
-        public void menuStatus()
-        {
-            if (page.TotalPage == 1)
+            if (totalPage == 1)
             {
                 btnFirstPage.Enabled = false;
                 btnPrePage.Enabled = false;
                 btnNextPage.Enabled = false;
                 btnLastPage.Enabled = false;
-            } else if (page.TotalPage > 1)
+            } else
             {
-                if (page.CurPage == 1)
+                if (curPage == 1)
                 {
                     btnFirstPage.Enabled = false;
                     btnPrePage.Enabled = false;
                     btnNextPage.Enabled = true;
                     btnLastPage.Enabled = true;
-                } else if (page.CurPage > 1 && page.CurPage < page.TotalPage)
+                } else if (curPage > 1 && curPage < totalPage)
                 {
                     btnFirstPage.Enabled = true;
                     btnPrePage.Enabled = true;
                     btnNextPage.Enabled = true;
                     btnLastPage.Enabled = true;
-                } else if (page.CurPage == page.TotalPage)
+                } else
                 {
                     btnFirstPage.Enabled = true;
                     btnPrePage.Enabled = true;
@@ -149,6 +183,11 @@ namespace LoginFrame
                     btnLastPage.Enabled = false;
                 }
             }
+        }
+
+        private void dropPageSize_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DAL;
 
 namespace LoginFrame
 {
@@ -33,6 +34,34 @@ namespace LoginFrame
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BodyStu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pageCtrl_Load(object sender, EventArgs e)
+        {
+            UserDao userDao = new UserDao();
+            int userCount = userDao.countUsers();
+            pageCtrl.TotalRecord = userCount;
+            DataSet ds = userDao.listUsers();
+            pageCtrl.bs.DataSource = ds.Tables[0];
+            pageCtrl.dg.DataSource = pageCtrl.bs;
+            pageCtrl.bn.BindingSource = pageCtrl.bs;
+
+            string[] cols = new string[] {"学员名称", "登录名", "密码", "创建时间"};
+            pageCtrl.Cols = cols;
+            int[] widths = new int[] {100, 150, 150, 200 };
+            pageCtrl.Widths = widths;
+
+            pageCtrl.loadData = new PageControl.loadDataEventHandler(loadData);
+        }
+
+        private void loadData()
         {
 
         }

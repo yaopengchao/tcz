@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -36,16 +35,8 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.pageCtrl = new LoginFrame.PageControl();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel1.Location = new System.Drawing.Point(208, 38);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 563);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -110,12 +101,25 @@
             this.button6.Text = "添加";
             this.button6.UseVisualStyleBackColor = true;
             // 
+            // pageCtrl
+            // 
+            this.pageCtrl.CurPage = 0;
+            this.pageCtrl.Location = new System.Drawing.Point(238, 101);
+            this.pageCtrl.Name = "pageCtrl";
+            this.pageCtrl.PageSize = 0;
+            this.pageCtrl.Size = new System.Drawing.Size(760, 500);
+            this.pageCtrl.StartIndex = 0;
+            this.pageCtrl.TabIndex = 6;
+            this.pageCtrl.TotalRecord = 0;
+            this.pageCtrl.Load += new System.EventHandler(this.pageCtrl_Load);
+            // 
             // BodyStu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1010, 604);
+            this.Controls.Add(this.pageCtrl);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button6);
@@ -123,17 +127,15 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BodyStu";
             this.Text = "BodyStu";
+            this.Load += new System.EventHandler(this.BodyStu_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -141,5 +143,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private PageControl pageCtrl;
     }
 }
