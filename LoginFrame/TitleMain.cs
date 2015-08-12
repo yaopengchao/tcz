@@ -4,6 +4,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
+using System.Data;
 using BLL;
 
 
@@ -182,7 +183,7 @@ namespace LoginFrame
                     MessageBox.Show("请先选择课件再点击播放!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     return;
                 }
-                string swfName = mainFrame.bodyMain.listView1.SelectedItems[0].Text;
+                string swfName = mainFrame.bodyMain.listView1.SelectedItems[0].SubItems[0].Text;
                 if (isBroadcasting)
                 {
                     Broadcast("PlayFlash^" + swfName + "^##");
@@ -416,21 +417,60 @@ namespace LoginFrame
             string comboBox1Value = this.comboBox1.SelectedValue.ToString();
             this.comboBox2.Enabled = true;
 
-
-            if (LoginRoler.language == 0)
+            if (LoginRoler.language == Constant.zhCN)
             {
-                this.comboBox1.DataSource = Bll.getCourses(comboBox1Value).Tables[0];
-                this.comboBox1.DisplayMember = "name";
-                this.comboBox1.ValueMember = "id";
+                
+                this.comboBox2.DataSource = Bll.getCourses(comboBox1Value).Tables[0];
+                this.comboBox2.DisplayMember = "name";
+                this.comboBox2.ValueMember = "id";
             }
-            else if (LoginRoler.language == 1)
+            else if (LoginRoler.language == Constant.En)
             {
-                this.comboBox1.Items.Clear();
-                this.comboBox1.DataSource = Bll.getCourses(comboBox1Value).Tables[0];
-                this.comboBox1.DisplayMember = "enname";
-                this.comboBox1.ValueMember = "id";
+                this.comboBox2.DataSource = Bll.getCourses(comboBox1Value).Tables[0];
+                this.comboBox2.DisplayMember = "enname";
+                this.comboBox2.ValueMember = "id";
             }
+        }
 
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string comboBox2Value = this.comboBox2.SelectedValue.ToString();
+
+            DataSet ds = Bll.getLessons(comboBox2Value);
+
+            if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+                this.mainFrame.bodyMain.listView1.BeginUpdate();
+                if (LoginRoler.language == Constant.zhCN)
+                {
+                    int i = 0;
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        string name = dr["name"].ToString();
+                        string filename = dr["filename"].ToString();
+                        ListViewItem lvItem = new ListViewItem();
+                        lvItem.Text = name.ToString();
+                        lvItem.SubItems.Add(filename.ToString());
+                        this.mainFrame.bodyMain.listView1.Items.Insert(i, lvItem);
+                        i++;
+                    }
+                }
+                else if (LoginRoler.language == Constant.En)
+                {
+                    int i = 0;
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        string name = dr["ename"].ToString();
+                        string filename = dr["filename"].ToString();
+                        ListViewItem lvItem = new ListViewItem();
+                        lvItem.Text = name.ToString();
+                        lvItem.SubItems.Add(filename.ToString());
+                        this.mainFrame.bodyMain.listView1.Items.Insert(i, lvItem);
+                        i++;
+                    }
+                }
+                this.mainFrame.bodyMain.listView1.EndUpdate();
+            }
         }
     }
 }

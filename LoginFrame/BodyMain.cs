@@ -29,13 +29,13 @@ namespace LoginFrame
 
             
             //加载列表
-            ListViewItem item = new ListViewItem(new string[] { "1" });
-            this.listView1.Items.Insert(0, item);
+            //ListViewItem item = new ListViewItem(new string[] { "1" });
+            //this.listView1.Items.Insert(0, item);
           
-            ListViewItem item2 = new ListViewItem(new string[] { "2" });
-            this.listView1.Items.Insert(1, item2);
-            ListViewItem item3 = new ListViewItem(new string[] { "3" });
-            this.listView1.Items.Insert(2, item3);
+            //ListViewItem item2 = new ListViewItem(new string[] { "2" });
+            //this.listView1.Items.Insert(1, item2);
+            //ListViewItem item3 = new ListViewItem(new string[] { "3" });
+            //this.listView1.Items.Insert(2, item3);
         }
 
 

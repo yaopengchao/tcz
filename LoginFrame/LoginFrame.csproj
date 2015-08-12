@@ -214,8 +214,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
-    <Folder Include="Courses\Class1\" />
-    <Folder Include="Courses\Class2\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\Library.dll" />
@@ -230,9 +228,7 @@
     <Content Include="lessons\3.mp3" />
     <Content Include="lessons\2.mp3" />
     <Content Include="pic\001.png" />
-    <Content Include="pic\01.jpg" />
     <Content Include="pic\combobox.png" />
-    <Content Include="pic\MainBackGround.jpeg" />
     <Content Include="pic\NoImage.jpg" />
     <Content Include="pic\png-0048.png" />
     <Content Include="pic\png-0067.png" />

@@ -12,5 +12,7 @@ namespace LoginFrame
         public static string RoleManager = "manager";//管理员角色
         public static string RoleStudent = "student";//学生角色
 
+        public static int zhCN= 0;//简体中文
+        public static int En= 1;//英文
     }
 }
