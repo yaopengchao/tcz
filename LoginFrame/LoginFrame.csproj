@@ -57,6 +57,7 @@
   <ItemGroup>
     <Reference Include="ESBasic">
       <HintPath>..\Dlls\ESBasic.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Oraycn.MCapture">
       <HintPath>..\Dlls\Oraycn.MCapture.dll</HintPath>
@@ -229,6 +230,14 @@
     <Content Include="bin\Debug\LoginFrame.exe" />
     <Content Include="bin\Debug\LoginFrame.pdb" />
     <Content Include="bin\Debug\LoginFrame.vshost.exe" />
+    <Content Include="DLLS\ESBasic.dll" />
+    <Content Include="DLLS\ESBasic.xml" />
+    <Content Include="DLLS\ESFramework.dll" />
+    <Content Include="DLLS\ESFramework.xml" />
+    <Content Include="DLLS\Oraycn.MCapture.dll" />
+    <Content Include="DLLS\Oraycn.MCapture.xml" />
+    <Content Include="DLLS\Oraycn.MPlayer.dll" />
+    <Content Include="DLLS\Oraycn.MPlayer.xml" />
     <Content Include="icon\favicon.ico" />
     <Content Include="lessons\1.swf" />
     <Content Include="lessons\2.swf" />
