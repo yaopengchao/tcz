@@ -13,21 +13,26 @@ namespace DAL
         public DataSet listUsers()
         {
             string strSql = "select user_name, login_id, pwd, create_date from sys_user where 1 = 1 ";
-            return listUsers(-1, 0);
+            return listUsers(null, -1, 0);
         }
 
-        public DataSet listUsers(int startIndex, int pageSize)
+        public DataSet listUsers(string strWhere, int startIndex, int pageSize)
         {
             string strSql = "select user_name, login_id, pwd, create_date from sys_user where 1 = 1 ";
+            if (strWhere != null && !strWhere.Equals(""))
+                strSql += strWhere;
             if (startIndex > -1 && pageSize > 0)
                 strSql += " limit " + startIndex + ", " + pageSize;
             return MySqlHelper.DateSet(strSql);
         }
 
-        public int countUsers()
+        public int countUsers(string strWhere)
         {
-            string strSql = "select count(1) from sys_user where 1 = 1";
-            return Convert.ToInt32(MySqlHelper.ExecuteScalar(strSql));
+            string strSql = "select count(1) from sys_user where 1 = 1 ";
+            if (strWhere != null && !strWhere.Equals(""))
+                strSql += strWhere;
+            int count = Convert.ToInt32(MySqlHelper.ExecuteScalar(strSql));
+            return count;
         }
 
     }

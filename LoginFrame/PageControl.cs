@@ -11,8 +11,9 @@ namespace LoginFrame
 {
     public partial class PageControl : UserControl
     {
-        public delegate void loadDataEventHandler();
+        public delegate void loadDataEventHandler(string strWhere);
         public loadDataEventHandler loadData;
+        public string strWhere;
 
         public PageControl()
         {
@@ -21,10 +22,13 @@ namespace LoginFrame
 
         public void initPage()
         {
-            pageSize = 10;
+            widths = new int[] { };
+            cols = new string[] { };
+            dropPageSize.SelectedIndex = 0;
+            pageSize = Convert.ToInt32(dropPageSize.SelectedItem);
             TotalRecord = 0;
             CurPage = 1;
-            dropPageSize.SelectedIndex = 0;
+            
         }
 
         private int startIndex;
@@ -134,25 +138,25 @@ namespace LoginFrame
         private void btnFirstPage_Click(object sender, EventArgs e)
         {
             CurPage = 1;
-            loadData();
+            loadData(strWhere);
         }
 
         private void btnPrePage_Click(object sender, EventArgs e)
         {
             CurPage = Convert.ToInt32(txtCurPage.Text) - 1;
-            loadData();
+            loadData(strWhere);
         }
 
         private void btnNextPage_Click(object sender, EventArgs e)
         {            
             CurPage = Convert.ToInt32(txtCurPage.Text) + 1;
-            loadData();
+            loadData(strWhere);
         }
 
         private void btnLastPage_Click(object sender, EventArgs e)
         {           
             CurPage = totalPage;
-            loadData();
+            loadData(strWhere);
         }
 
         private void menuStatus()
@@ -190,6 +194,48 @@ namespace LoginFrame
         private void dropPageSize_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dg_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+            //e.Row.HeaderCell.Value = string.Format("{0}", e.Row.Index + 1);
+        }
+
+        private void dg_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+
+        }
+
+        private void dg_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+
+        }
+
+        private void dg_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            Rectangle rowHeaderBounds = new Rectangle
+            (
+                 2, e.RowBounds.Top,
+                 this.dg.RowHeadersWidth - 2, e.RowBounds.Height - 1
+            );
+
+            using (Brush backbrush =
+                new SolidBrush(SystemColors.Control))
+            {
+                e.Graphics.FillRectangle(backbrush, rowHeaderBounds);
+            }
+
+            if (e.RowIndex >= dg.FirstDisplayedScrollingRowIndex)
+            {
+                using (SolidBrush b = new SolidBrush(dg.RowHeadersDefaultCellStyle.ForeColor))
+                {
+                    int linen = 0;
+                    linen = e.RowIndex + 1;
+                    string line = linen.ToString();
+                    e.Graphics.DrawString(line, e.InheritedRowStyle.Font, b, e.RowBounds.Location.X, e.RowBounds.Location.Y + 5);
+                    SolidBrush B = new SolidBrush(Color.Red);
+                }
+            }
         }
     }
 }

@@ -210,7 +210,7 @@
             "20",
             "50"});
             this.dropPageSize.Items.AddRange(new object[] {
-            "10",
+            "15",
             "20",
             "50"});
             this.dropPageSize.Name = "dropPageSize";
@@ -220,15 +220,18 @@
             // toolStripLabel5
             // 
             this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(20, 17);
+            this.toolStripLabel5.Size = new System.Drawing.Size(20, 22);
             this.toolStripLabel5.Text = "条";
             // 
             // dg
             // 
             this.dg.AllowUserToAddRows = false;
             this.dg.AllowUserToDeleteRows = false;
+            this.dg.AllowUserToResizeRows = false;
             this.dg.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dg.ColumnHeadersHeight = 30;
+            this.dg.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dg.ColumnHeadersHeight = 36;
             this.dg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dg.Location = new System.Drawing.Point(0, 0);
             this.dg.MinimumSize = new System.Drawing.Size(0, 30);
@@ -236,10 +239,14 @@
             this.dg.ReadOnly = true;
             this.dg.RowHeadersWidth = 30;
             this.dg.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dg.RowTemplate.Height = 30;
+            this.dg.RowTemplate.Height = 28;
             this.dg.Size = new System.Drawing.Size(420, 275);
             this.dg.TabIndex = 1;
             this.dg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dg.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dg_RowPostPaint);
+            this.dg.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dg_RowsAdded);
+            this.dg.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dg_RowsRemoved);
+            this.dg.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dg_RowStateChanged);
             // 
             // PageControl
             // 
