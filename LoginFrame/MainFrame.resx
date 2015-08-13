@@ -154,55 +154,55 @@
     <value>Left</value>
   </data>
   <data name="主页ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 21</value>
+    <value>85, 21</value>
   </data>
   <data name="主页ToolStripMenuItem.Text" xml:space="preserve">
     <value>主页</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 21</value>
+    <value>85, 21</value>
   </data>
   <data name="toolStripMenuItem1.Text" xml:space="preserve">
     <value>自我测试</value>
   </data>
   <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 21</value>
+    <value>85, 21</value>
   </data>
   <data name="toolStripMenuItem2.Text" xml:space="preserve">
     <value>考试</value>
   </data>
   <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 21</value>
+    <value>85, 21</value>
   </data>
   <data name="toolStripMenuItem3.Text" xml:space="preserve">
     <value>个人资料</value>
   </data>
   <data name="toolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 21</value>
+    <value>85, 21</value>
   </data>
   <data name="toolStripMenuItem4.Text" xml:space="preserve">
     <value>学员管理</value>
   </data>
   <data name="toolStripMenuItem5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 21</value>
+    <value>85, 21</value>
   </data>
   <data name="toolStripMenuItem5.Text" xml:space="preserve">
     <value>教师管理</value>
   </data>
   <data name="toolStripMenuItem6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 21</value>
+    <value>85, 21</value>
   </data>
   <data name="toolStripMenuItem6.Text" xml:space="preserve">
     <value>设置模拟人</value>
   </data>
   <data name="toolStripMenuItem7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 21</value>
+    <value>85, 21</value>
   </data>
   <data name="toolStripMenuItem7.Text" xml:space="preserve">
     <value>云服务</value>
   </data>
   <data name="toolStripMenuItem8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 21</value>
+    <value>85, 21</value>
   </data>
   <data name="toolStripMenuItem8.Text" xml:space="preserve">
     <value>退出</value>
@@ -211,7 +211,7 @@
     <value>0, 0</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 184</value>
+    <value>86, 202</value>
   </data>
   <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -235,7 +235,7 @@
     <value>907, 40</value>
   </data>
   <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 186</value>
+    <value>94, 204</value>
   </data>
   <data name="panel5.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -487,7 +487,7 @@
     <value>6, 12</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1024, 768</value>
+    <value>1024, 750</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
