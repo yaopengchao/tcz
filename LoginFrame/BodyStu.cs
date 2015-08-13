@@ -6,12 +6,15 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using DAL;
+using BLL;
 
 namespace LoginFrame
 {
     public partial class BodyStu : Form
     {
+
+        private static UserService userService;
+        private static Dictionary<string, string> strWheres;
 
         public BodyStu()
         {
@@ -25,6 +28,10 @@ namespace LoginFrame
             if (instance == null || instance.IsDisposed)
             {
                 instance = new BodyStu();
+                if (userService == null)
+                    userService = UserService.getInstance();
+                if (strWheres == null)
+                    strWheres = new Dictionary<string, string>();
             }
             return instance;
         }
@@ -41,7 +48,7 @@ namespace LoginFrame
 
         private void BodyStu_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void pageCtrl_Load(object sender, EventArgs e)
@@ -56,29 +63,29 @@ namespace LoginFrame
             pageCtrl.loadData = new PageControl.loadDataEventHandler(loadData);
         }
 
-        private void loadData(string strWhere)
+        private void loadData(Dictionary<string, string> strWheres)
         {
-            UserDao userDao = new UserDao();
             int startIndex = pageCtrl.StartIndex;
             int pageSize = pageCtrl.PageSize;
-            DataSet ds = userDao.listUsers(strWhere, startIndex, pageSize);
+            DataSet ds = userService.listUsers(strWheres, startIndex, pageSize);
             pageCtrl.bs.DataSource = ds.Tables[0];
         }
 
         private void btnQuery_Click(object sender, EventArgs e)
         {
-            string strWhere = "";
+            strWheres.Clear();
             string userName = txtUserName.Text;
             if (userName != null && !userName.Equals(""))
-                strWhere = string.Format(" and user_name like '%{0}%'", userName);
-            loadCount(strWhere);
-            loadData(strWhere);
+            {
+                strWheres.Add("user_name", " like '%" + userName + "%'");
+            }
+            loadCount(strWheres);
+            loadData(strWheres);
         }
 
-        private void loadCount(string strWhere)
+        private void loadCount(Dictionary<string, string> strWheres)
         {
-            UserDao userDao = new UserDao();
-            int userCount = userDao.countUsers(strWhere);
+            int userCount = userService.countUsers(strWheres);
             pageCtrl.TotalRecord = userCount;
         }
 
@@ -86,6 +93,14 @@ namespace LoginFrame
         {
             txtUserName.Text = "";
             btnQuery_Click(sender, e);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            AddUser addUser = new AddUser();
+
+            addUser.ShowDialog();
+
         }
     }
 }

@@ -84,14 +84,14 @@
             this.toolStripLabel4,
             this.dropPageSize,
             this.toolStripLabel5});
-            this.bn.Location = new System.Drawing.Point(0, 275);
+            this.bn.Location = new System.Drawing.Point(0, 273);
             this.bn.MoveFirstItem = null;
             this.bn.MoveLastItem = null;
             this.bn.MoveNextItem = null;
             this.bn.MovePreviousItem = null;
             this.bn.Name = "bn";
             this.bn.PositionItem = null;
-            this.bn.Size = new System.Drawing.Size(420, 25);
+            this.bn.Size = new System.Drawing.Size(418, 25);
             this.bn.TabIndex = 0;
             this.bn.Text = "bindingNavigator1";
             // 
@@ -209,6 +209,8 @@
             "10",
             "20",
             "50"});
+            this.dropPageSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dropPageSize.DropDownWidth = 40;
             this.dropPageSize.Items.AddRange(new object[] {
             "15",
             "20",
@@ -240,7 +242,7 @@
             this.dg.RowHeadersWidth = 30;
             this.dg.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dg.RowTemplate.Height = 28;
-            this.dg.Size = new System.Drawing.Size(420, 275);
+            this.dg.Size = new System.Drawing.Size(418, 273);
             this.dg.TabIndex = 1;
             this.dg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dg.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dg_RowPostPaint);
@@ -252,10 +254,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.dg);
             this.Controls.Add(this.bn);
             this.Name = "PageControl";
-            this.Size = new System.Drawing.Size(420, 300);
+            this.Size = new System.Drawing.Size(418, 298);
             this.Load += new System.EventHandler(this.PageControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bn)).EndInit();
             this.bn.ResumeLayout(false);

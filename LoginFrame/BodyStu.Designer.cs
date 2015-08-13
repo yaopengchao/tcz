@@ -36,10 +36,10 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.查询条件 = new System.Windows.Forms.GroupBox();
+            this.btnClear = new System.Windows.Forms.Button();
             this.btnQuery = new System.Windows.Forms.Button();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnClear = new System.Windows.Forms.Button();
             this.pageCtrl = new LoginFrame.PageControl();
             this.查询条件.SuspendLayout();
             this.SuspendLayout();
@@ -106,6 +106,7 @@
             this.button6.TabIndex = 3;
             this.button6.Text = "添加";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // 查询条件
             // 
@@ -119,6 +120,16 @@
             this.查询条件.TabIndex = 7;
             this.查询条件.TabStop = false;
             this.查询条件.Text = "查询条件";
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(278, 25);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 3;
+            this.btnClear.Text = "清空";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnQuery
             // 
@@ -146,18 +157,9 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "学员名称";
             // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(278, 25);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 23);
-            this.btnClear.TabIndex = 3;
-            this.btnClear.Text = "清空";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
             // pageCtrl
             // 
+            this.pageCtrl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pageCtrl.Cols = new string[0];
             this.pageCtrl.CurPage = 1;
             this.pageCtrl.Location = new System.Drawing.Point(238, 101);

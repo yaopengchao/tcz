@@ -11,9 +11,9 @@ namespace LoginFrame
 {
     public partial class PageControl : UserControl
     {
-        public delegate void loadDataEventHandler(string strWhere);
+        public delegate void loadDataEventHandler(Dictionary<string, string> strWheres);
         public loadDataEventHandler loadData;
-        public string strWhere;
+        public Dictionary<string, string> strWheres;
 
         public PageControl()
         {
@@ -138,25 +138,25 @@ namespace LoginFrame
         private void btnFirstPage_Click(object sender, EventArgs e)
         {
             CurPage = 1;
-            loadData(strWhere);
+            loadData(strWheres);
         }
 
         private void btnPrePage_Click(object sender, EventArgs e)
         {
             CurPage = Convert.ToInt32(txtCurPage.Text) - 1;
-            loadData(strWhere);
+            loadData(strWheres);
         }
 
         private void btnNextPage_Click(object sender, EventArgs e)
         {            
             CurPage = Convert.ToInt32(txtCurPage.Text) + 1;
-            loadData(strWhere);
+            loadData(strWheres);
         }
 
         private void btnLastPage_Click(object sender, EventArgs e)
         {           
             CurPage = totalPage;
-            loadData(strWhere);
+            loadData(strWheres);
         }
 
         private void menuStatus()
