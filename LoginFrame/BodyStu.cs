@@ -87,7 +87,7 @@ namespace LoginFrame
             btnQueryClick();
         }
 
-        private void loadClass(Dictionary<string, string> strWheres)
+        public void loadClass(Dictionary<string, string> strWheres)
         {
             DataSet ds = classService.listClass(strWheres);
             pageCtrl2.bs.DataSource = ds.Tables[0];
@@ -105,11 +105,6 @@ namespace LoginFrame
         {
             classId = Convert.ToInt32(pageCtrl2.dg.CurrentRow.Cells[0].Value);
             btnQueryClick();
-
-            string[] cols = new string[] { "学员名称", "登录名", "密码", "创建时间" };
-            pageCtrl.Cols = cols;
-            int[] widths = new int[] { 100, 150, 150, 200 };
-            pageCtrl.Widths = widths;
         }
 
         private void btnQueryClick()
@@ -128,6 +123,11 @@ namespace LoginFrame
             }
             loadCount(strWheres);
             loadData(strWheres);
+
+            string[] cols = new string[] { "学员名称", "登录名", "密码", "创建时间" };
+            pageCtrl.Cols = cols;
+            int[] widths = new int[] { 100, 150, 150, 200 };
+            pageCtrl.Widths = widths;
         }
 
         private void loadCount(Dictionary<string, string> strWheres)
@@ -155,5 +155,11 @@ namespace LoginFrame
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddClass addClass = AddClass.getInstance();
+            addClass.bodyStu = this;
+            addClass.ShowDialog();
+        }
     }
 }

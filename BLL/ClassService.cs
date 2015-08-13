@@ -33,5 +33,10 @@ namespace BLL
             return classDao.listClass(strWheres);
         }
 
+        public int addClass(ClassInfo classInfo)
+        {
+            return classDao.addClass(classInfo);
+        }
+
     }
 }

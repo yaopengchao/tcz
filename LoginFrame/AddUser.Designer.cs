@@ -46,8 +46,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.Location = new System.Drawing.Point(85, 90);
+            this.label1.MinimumSize = new System.Drawing.Size(0, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 19);
+            this.label1.Size = new System.Drawing.Size(85, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "学生名称";
             // 
@@ -56,8 +57,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.Location = new System.Drawing.Point(85, 157);
+            this.label2.MinimumSize = new System.Drawing.Size(0, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 19);
+            this.label2.Size = new System.Drawing.Size(66, 30);
             this.label2.TabIndex = 1;
             this.label2.Text = "登录名";
             // 
@@ -66,8 +68,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label3.Location = new System.Drawing.Point(85, 221);
+            this.label3.MinimumSize = new System.Drawing.Size(0, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 19);
+            this.label3.Size = new System.Drawing.Size(47, 30);
             this.label3.TabIndex = 2;
             this.label3.Text = "密码";
             // 
@@ -83,6 +86,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox1.Location = new System.Drawing.Point(227, 86);
             this.textBox1.MaximumSize = new System.Drawing.Size(300, 30);
             this.textBox1.MinimumSize = new System.Drawing.Size(300, 30);
@@ -92,6 +96,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox2.Location = new System.Drawing.Point(227, 153);
             this.textBox2.MaximumSize = new System.Drawing.Size(300, 30);
             this.textBox2.MinimumSize = new System.Drawing.Size(300, 30);
@@ -101,6 +106,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox3.Location = new System.Drawing.Point(227, 216);
             this.textBox3.MaximumSize = new System.Drawing.Size(300, 30);
             this.textBox3.MinimumSize = new System.Drawing.Size(300, 30);
@@ -122,8 +128,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label5.Location = new System.Drawing.Point(85, 282);
+            this.label5.MinimumSize = new System.Drawing.Size(0, 30);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 19);
+            this.label5.Size = new System.Drawing.Size(47, 30);
             this.label5.TabIndex = 8;
             this.label5.Text = "班级";
             // 
