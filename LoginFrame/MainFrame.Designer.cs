@@ -33,6 +33,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.主页ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,7 +49,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.主页ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -102,6 +102,11 @@
             this.toolStripMenuItem8});
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            // 
+            // 主页ToolStripMenuItem
+            // 
+            this.主页ToolStripMenuItem.Name = "主页ToolStripMenuItem";
+            resources.ApplyResources(this.主页ToolStripMenuItem, "主页ToolStripMenuItem");
             // 
             // toolStripMenuItem1
             // 
@@ -186,11 +191,6 @@
             // 
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            // 
-            // 主页ToolStripMenuItem
-            // 
-            this.主页ToolStripMenuItem.Name = "主页ToolStripMenuItem";
-            resources.ApplyResources(this.主页ToolStripMenuItem, "主页ToolStripMenuItem");
             // 
             // MainFrame
             // 
