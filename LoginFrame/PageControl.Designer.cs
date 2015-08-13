@@ -227,6 +227,7 @@
             // 
             // dg
             // 
+            this.dg.AccessibleRole = System.Windows.Forms.AccessibleRole.RowHeader;
             this.dg.AllowUserToAddRows = false;
             this.dg.AllowUserToDeleteRows = false;
             this.dg.AllowUserToResizeRows = false;
@@ -249,6 +250,7 @@
             this.dg.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dg_RowsAdded);
             this.dg.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dg_RowsRemoved);
             this.dg.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dg_RowStateChanged);
+            this.dg.Click += new System.EventHandler(this.dg_Click);
             // 
             // PageControl
             // 

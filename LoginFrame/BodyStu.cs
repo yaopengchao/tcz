@@ -16,6 +16,10 @@ namespace LoginFrame
         private static UserService userService;
         private static Dictionary<string, string> strWheres;
 
+        private static ClassService classService;
+
+        private int classId;
+
         public BodyStu()
         {
             InitializeComponent();
@@ -30,6 +34,10 @@ namespace LoginFrame
                 instance = new BodyStu();
                 if (userService == null)
                     userService = UserService.getInstance();
+
+                if (classService == null)
+                    classService = ClassService.getInstance();
+
                 if (strWheres == null)
                     strWheres = new Dictionary<string, string>();
             }
@@ -49,18 +57,40 @@ namespace LoginFrame
         private void BodyStu_Load(object sender, EventArgs e)
         {
             
+
         }
 
         private void pageCtrl_Load(object sender, EventArgs e)
         {
-            btnQuery_Click(sender, e);            
-
-            string[] cols = new string[] {"学员名称", "登录名", "密码", "创建时间"};
-            pageCtrl.Cols = cols;
-            int[] widths = new int[] {100, 150, 150, 200 };
-            pageCtrl.Widths = widths;
-
             pageCtrl.loadData = new PageControl.loadDataEventHandler(loadData);
+        }
+
+        private void pageCtrl2_Load(object sender, EventArgs e)
+        {
+            //隐藏班级分页栏
+            pageCtrl2.pageShow = false;
+            //pageCtrl2.firstCellShow = false;
+            pageCtrl2.initPage();
+
+            loadClass(null);
+
+            string[] cols = new string[] {"班级编号", "班级名称"};
+            pageCtrl2.Cols = cols;
+            pageCtrl2.dg.Columns[0].Visible = false;
+            pageCtrl2.cellClick = new PageControl.cellClickEventHandler(cellClick);
+            
+        }
+
+        private void cellClick()
+        {
+            classId = Convert.ToInt32(pageCtrl2.dg.CurrentRow.Cells[0].Value);
+            btnQueryClick();
+        }
+
+        private void loadClass(Dictionary<string, string> strWheres)
+        {
+            DataSet ds = classService.listClass(strWheres);
+            pageCtrl2.bs.DataSource = ds.Tables[0];
         }
 
         private void loadData(Dictionary<string, string> strWheres)
@@ -73,11 +103,28 @@ namespace LoginFrame
 
         private void btnQuery_Click(object sender, EventArgs e)
         {
+            classId = Convert.ToInt32(pageCtrl2.dg.CurrentRow.Cells[0].Value);
+            btnQueryClick();
+
+            string[] cols = new string[] { "学员名称", "登录名", "密码", "创建时间" };
+            pageCtrl.Cols = cols;
+            int[] widths = new int[] { 100, 150, 150, 200 };
+            pageCtrl.Widths = widths;
+        }
+
+        private void btnQueryClick()
+        {
             strWheres.Clear();
+            strWheres.Add("a.user_type", " = '3' ");
+
+            //班级编号
+            strWheres.Add("b.class_id", " = '" + classId + "' ");
+
+            pageCtrl.strWheres = strWheres;
             string userName = txtUserName.Text;
             if (userName != null && !userName.Equals(""))
             {
-                strWheres.Add("user_name", " like '%" + userName + "%'");
+                strWheres.Add("a.user_name", " like '%" + userName + "%' ");
             }
             loadCount(strWheres);
             loadData(strWheres);
@@ -102,5 +149,11 @@ namespace LoginFrame
             addUser.ShowDialog();
 
         }
+
+        private void 查询条件_Enter(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

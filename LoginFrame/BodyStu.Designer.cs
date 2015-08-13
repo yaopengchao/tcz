@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -40,18 +39,10 @@
             this.btnQuery = new System.Windows.Forms.Button();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pageCtrl2 = new LoginFrame.PageControl();
             this.pageCtrl = new LoginFrame.PageControl();
             this.查询条件.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel2.Location = new System.Drawing.Point(2, 38);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 563);
-            this.panel2.TabIndex = 0;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // button1
             // 
@@ -120,6 +111,7 @@
             this.查询条件.TabIndex = 7;
             this.查询条件.TabStop = false;
             this.查询条件.Text = "查询条件";
+            this.查询条件.Enter += new System.EventHandler(this.查询条件_Enter);
             // 
             // btnClear
             // 
@@ -157,6 +149,22 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "学员名称";
             // 
+            // pageCtrl2
+            // 
+            this.pageCtrl2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pageCtrl2.Cols = new string[0];
+            this.pageCtrl2.CurPage = 1;
+            this.pageCtrl2.Location = new System.Drawing.Point(7, 38);
+            this.pageCtrl2.Name = "pageCtrl2";
+            this.pageCtrl2.PageSize = 15;
+            this.pageCtrl2.Size = new System.Drawing.Size(200, 546);
+            this.pageCtrl2.StartIndex = 0;
+            this.pageCtrl2.TabIndex = 8;
+            this.pageCtrl2.TotalPage = 1;
+            this.pageCtrl2.TotalRecord = 0;
+            this.pageCtrl2.Widths = new int[0];
+            this.pageCtrl2.Load += new System.EventHandler(this.pageCtrl2_Load);
+            // 
             // pageCtrl
             // 
             this.pageCtrl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -179,6 +187,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1010, 604);
+            this.Controls.Add(this.pageCtrl2);
             this.Controls.Add(this.查询条件);
             this.Controls.Add(this.pageCtrl);
             this.Controls.Add(this.button4);
@@ -187,7 +196,6 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BodyStu";
             this.Text = "BodyStu";
@@ -199,7 +207,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -212,5 +219,6 @@
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnClear;
+        private PageControl pageCtrl2;
     }
 }

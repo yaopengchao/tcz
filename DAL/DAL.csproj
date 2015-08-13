@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassDao.cs" />
+    <Compile Include="CommonDao.cs" />
     <Compile Include="DAOCourses.cs" />
     <Compile Include="MySqlHelper.cs" />
     <Compile Include="DAOUser.cs" />

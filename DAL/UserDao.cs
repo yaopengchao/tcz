@@ -8,43 +8,21 @@ using MySql.Data.MySqlClient;
 
 namespace DAL
 {
-    public class UserDao
+    public class UserDao : CommonDao
     {
 
-        public DataSet listUsers()
-        {
-            string strSql = "select user_name, login_id, pwd, create_date from sys_user where 1 = 1 ";
-            return listUsers(null, -1, 0);
-        }
-
+        //根据条件进行分页查询
         public DataSet listUsers(Dictionary<string, string> strWheres, int startIndex, int pageSize)
         {
-            string strSql = "select user_name, login_id, pwd, create_date from sys_user where 1 = 1 ";
-            strSql = getSql(strSql, strWheres);
-            if (startIndex > -1 && pageSize > 0)
-                strSql += " limit " + startIndex + ", " + pageSize;
-            return MySqlHelper.DateSet(strSql);
+            string strSql = "select a.user_name, a.login_id, a.pwd, a.create_date from sys_user a, sys_user_class b where a.USER_ID = b.USER_ID ";
+            return listEntity(strSql, strWheres, startIndex, pageSize);
         }
 
+        //根据条件查询数量
         public int countUsers(Dictionary<string, string> strWheres)
         {
-            string strSql = "select count(1) from sys_user where 1 = 1 ";
-            strSql = getSql(strSql, strWheres);
-            int count = Convert.ToInt32(MySqlHelper.ExecuteScalar(strSql));
-            return count;
+            string strSql = "select count(1) from sys_user a, sys_user_class b where a.USER_ID = b.USER_ID ";
+            return countEntity(strSql, strWheres);
         }
-
-        public string getSql(string strSql, Dictionary<string, string> strWheres)
-        {
-            if (strWheres != null && strWheres.Count > 0)
-            {
-                foreach (string key in strWheres.Keys)
-                {
-                    strSql += " and " + key + strWheres[key];
-                }
-            }
-            return strSql;
-        }
-
     }
 }

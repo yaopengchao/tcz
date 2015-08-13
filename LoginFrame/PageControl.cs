@@ -12,8 +12,14 @@ namespace LoginFrame
     public partial class PageControl : UserControl
     {
         public delegate void loadDataEventHandler(Dictionary<string, string> strWheres);
+        public delegate void cellClickEventHandler();
+
         public loadDataEventHandler loadData;
+        public cellClickEventHandler cellClick;
+
         public Dictionary<string, string> strWheres;
+        public Boolean pageShow = true;
+        public Boolean firstCellShow = true;
 
         public PageControl()
         {
@@ -28,7 +34,34 @@ namespace LoginFrame
             pageSize = Convert.ToInt32(dropPageSize.SelectedItem);
             TotalRecord = 0;
             CurPage = 1;
-            
+            if (pageShow)
+            {
+                bn.Show();
+            } else
+            {
+                bn.Hide();
+            }
+
+            loadData = new loadDataEventHandler(loadDataNull);
+            cellClick = new cellClickEventHandler(cellClickNull);
+
+            if (firstCellShow)
+            {
+                dg.RowHeadersVisible = true;
+            } else
+            {
+                dg.RowHeadersVisible = false;
+            }
+        }
+
+        private void loadDataNull(Dictionary<string, string> strWheres)
+        {
+
+        }
+
+        private void cellClickNull()
+        {
+
         }
 
         private int startIndex;
@@ -236,6 +269,11 @@ namespace LoginFrame
                     SolidBrush B = new SolidBrush(Color.Red);
                 }
             }
+        }
+
+        private void dg_Click(object sender, EventArgs e)
+        {
+            cellClick();
         }
     }
 }
