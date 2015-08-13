@@ -64,6 +64,6 @@ namespace LoginFrame
             }
             return instance;
         }
-
+       
     }
 }

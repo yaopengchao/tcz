@@ -10,7 +10,8 @@ using BLL;
 
 using System.Threading;
 using System.Globalization;
-
+using System.Drawing;
+using System.IO;
 
 namespace LoginFrame
 {
@@ -81,7 +82,7 @@ namespace LoginFrame
         {
             
 
-            if (LoginRoler.language == 0)
+            if (LoginRoler.language == Constant.zhCN)
             {
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("zh-CN");
 
@@ -94,7 +95,7 @@ namespace LoginFrame
                 this.comboBox1.ValueMember = "id";
 
             }
-            else if (LoginRoler.language == 1)
+            else if (LoginRoler.language == Constant.En)
             {
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
 
@@ -107,7 +108,7 @@ namespace LoginFrame
                 this.comboBox1.ValueMember = "id";
 
             }
-
+            AdjustComboBoxDropDownListWidth(comboBox1);
             //对当前窗体应用更改后的资源
             ApplyResource();
 
@@ -165,7 +166,7 @@ namespace LoginFrame
         {
             //bodyMain.axShockwaveFlashPlayer.IsPlaying() 这个方法无效只能用以下替代方法this.button6.Text.Replace(" ", "").Trim().Equals("暂停")
             //之前无效是因为 控件默认 true了
-            
+
             if (mainFrame.bodyMain.axShockwaveFlashPlayer.IsPlaying())
             {
                 if (isBroadcasting)
@@ -183,13 +184,22 @@ namespace LoginFrame
                     MessageBox.Show("请先选择课件再点击播放!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     return;
                 }
-                string swfName = mainFrame.bodyMain.listView1.SelectedItems[0].SubItems[0].Text;
+                //string swfName = mainFrame.bodyMain.listView1.SelectedItems[0].SubItems[0].Text;
+                string swfName = mainFrame.bodyMain.listView1.SelectedItems[0].SubItems[1].Text;
+                string filpath = Application.StartupPath + @"/../../lessons/" + swfName + ".swf";
+                //检测文件是否存在
+                if (!File.Exists(filpath))
+                {
+                    MessageBox.Show("课件对应的Flash文件不存在!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    return;
+                }
+
                 if (isBroadcasting)
                 {
                     Broadcast("PlayFlash^" + swfName + "^##");
                 }
 
-                string filpath = Application.StartupPath + @"/../../lessons/" + swfName+ ".swf";
+                
                 //Console.WriteLine("地址:"+ filpath);
                 this.mainFrame.playFlash(filpath);
                 this.button6.Text = "暂停";
@@ -289,7 +299,9 @@ namespace LoginFrame
                 return;
             }
             //播放与 Falsh配对的音频文件名 不包括拓展名
-            string audioFilename = mainFrame.bodyMain.listView1.SelectedItems[0].Text;
+            string audioFilename = mainFrame.bodyMain.listView1.SelectedItems[1].Text;
+           
+
             //获取列表选中项，组装音频文件路径传给播放器
 
             if (this.isAudioPlaying)
@@ -427,27 +439,36 @@ namespace LoginFrame
 
             if (LoginRoler.language == Constant.zhCN)
             {
-                
+                this.comboBox2.DataSource = null;
+                this.comboBox2.Items.Clear();
                 this.comboBox2.DataSource = Bll.getCourses(comboBox1Value).Tables[0];
                 this.comboBox2.DisplayMember = "name";
                 this.comboBox2.ValueMember = "id";
             }
             else if (LoginRoler.language == Constant.En)
             {
+                this.comboBox2.DataSource = null;
+                this.comboBox2.Items.Clear();
                 this.comboBox2.DataSource = Bll.getCourses(comboBox1Value).Tables[0];
                 this.comboBox2.DisplayMember = "enname";
                 this.comboBox2.ValueMember = "id";
             }
+
+            AdjustComboBoxDropDownListWidth(comboBox2);
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (this.comboBox2.DataSource == null) return;
+
             string comboBox2Value = this.comboBox2.SelectedValue.ToString();
 
             DataSet ds = Bll.getLessons(comboBox2Value);
 
             if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
-            {
+            { 
+                this.mainFrame.bodyMain.listView1.Items.Clear();
+
                 this.mainFrame.bodyMain.listView1.BeginUpdate();
                 if (LoginRoler.language == Constant.zhCN)
                 {
@@ -478,6 +499,53 @@ namespace LoginFrame
                     }
                 }
                 this.mainFrame.bodyMain.listView1.EndUpdate();
+            }
+        }
+
+
+        public void AdjustComboBoxDropDownListWidth(object comboBox)
+        {
+            Graphics g = null;
+            Font font = null;
+            try
+            {
+                ComboBox senderComboBox = null;
+                if (comboBox is ComboBox)
+                    senderComboBox = (ComboBox)comboBox;
+                else if (comboBox is ToolStripComboBox)
+                    senderComboBox = ((ToolStripComboBox)comboBox).ComboBox;
+                else
+                    return;
+
+                int width = senderComboBox.Width;
+                g = senderComboBox.CreateGraphics();
+                font = senderComboBox.Font;
+
+                //checks if a scrollbar will be displayed.
+                //If yes, then get its width to adjust the size of the drop down list.
+                int vertScrollBarWidth =
+                    (senderComboBox.Items.Count > senderComboBox.MaxDropDownItems)
+                    ? SystemInformation.VerticalScrollBarWidth : 0;
+
+                int newWidth;
+                foreach (object s in senderComboBox.Items)  //Loop through list items and check size of each items.
+                {
+                    if (s != null)
+                    {
+                        newWidth = (int)g.MeasureString(s.ToString().Trim(), font).Width
+                            + vertScrollBarWidth;
+                        if (width < newWidth)
+                            width = newWidth;   //set the width of the drop down list to the width of the largest item.
+                    }
+                }
+                senderComboBox.DropDownWidth = width;
+            }
+            catch
+            { }
+            finally
+            {
+                if (g != null)
+                    g.Dispose();
             }
         }
     }
