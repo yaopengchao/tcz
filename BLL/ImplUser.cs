@@ -8,6 +8,11 @@ namespace BLL
     {
         DAOUser daoUser = new DAOUser();
 
+
+        public string getServerIp()
+        {
+            return daoUser.getServerIp();
+        }
         /// <summary>
         /// 查询用户名是否存在
         /// </summary>

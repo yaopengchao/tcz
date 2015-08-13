@@ -11,7 +11,7 @@ namespace DAL
         {
             StringBuilder strSql = new StringBuilder();
 
-            strSql.Append("select id,name,enname from  classify ");
+            strSql.Append(" select '' as id , '' as name , '' as enname   union select id,name,enname from  classify ");
 
             MySqlParameter[] parameters = {};
 

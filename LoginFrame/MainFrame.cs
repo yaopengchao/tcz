@@ -35,6 +35,9 @@ namespace LoginFrame
 
             //对当前窗体应用更改后的资源
             ApplyResource();
+
+            this.label6.Text = LoginRoler.username;
+
         }
 
         /// <summary>
