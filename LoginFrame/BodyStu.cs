@@ -50,8 +50,7 @@ namespace LoginFrame
             pageCtrl.TotalRecord = userCount;
             DataSet ds = userDao.listUsers();
             pageCtrl.bs.DataSource = ds.Tables[0];
-            pageCtrl.dg.DataSource = pageCtrl.bs;
-            pageCtrl.bn.BindingSource = pageCtrl.bs;
+            
 
             string[] cols = new string[] {"学员名称", "登录名", "密码", "创建时间"};
             pageCtrl.Cols = cols;
@@ -63,7 +62,11 @@ namespace LoginFrame
 
         private void loadData()
         {
-
+            UserDao userDao = new UserDao();
+            int startIndex = pageCtrl.StartIndex;
+            int pageSize = pageCtrl.PageSize;
+            DataSet ds = userDao.listUsers(startIndex, pageSize);
+            pageCtrl.bs.DataSource = ds.Tables[0];
         }
     }
 }

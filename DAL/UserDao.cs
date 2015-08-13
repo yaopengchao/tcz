@@ -12,7 +12,15 @@ namespace DAL
 
         public DataSet listUsers()
         {
-            string strSql = "select user_name, login_id, pwd, create_date from sys_user where 1 = 1";
+            string strSql = "select user_name, login_id, pwd, create_date from sys_user where 1 = 1 ";
+            return listUsers(-1, 0);
+        }
+
+        public DataSet listUsers(int startIndex, int pageSize)
+        {
+            string strSql = "select user_name, login_id, pwd, create_date from sys_user where 1 = 1 ";
+            if (startIndex > -1 && pageSize > 0)
+                strSql += " limit " + startIndex + ", " + pageSize;
             return MySqlHelper.DateSet(strSql);
         }
 

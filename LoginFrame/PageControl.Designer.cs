@@ -102,7 +102,6 @@
             this.btnFirstPage.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnFirstPage.Name = "btnFirstPage";
             this.btnFirstPage.Size = new System.Drawing.Size(23, 22);
-            this.btnFirstPage.Text = "第一页";
             this.btnFirstPage.Click += new System.EventHandler(this.btnFirstPage_Click);
             // 
             // toolStripSeparator1
@@ -117,7 +116,6 @@
             this.btnPrePage.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnPrePage.Name = "btnPrePage";
             this.btnPrePage.Size = new System.Drawing.Size(23, 22);
-            this.btnPrePage.Text = "上一页";
             this.btnPrePage.Click += new System.EventHandler(this.btnPrePage_Click);
             // 
             // toolStripSeparator3
@@ -155,7 +153,6 @@
             this.btnNextPage.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNextPage.Name = "btnNextPage";
             this.btnNextPage.Size = new System.Drawing.Size(23, 22);
-            this.btnNextPage.Text = "下一页";
             this.btnNextPage.Click += new System.EventHandler(this.btnNextPage_Click);
             // 
             // toolStripSeparator5
@@ -170,7 +167,6 @@
             this.btnLastPage.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLastPage.Name = "btnLastPage";
             this.btnLastPage.Size = new System.Drawing.Size(23, 22);
-            this.btnLastPage.Text = "最后一页";
             this.btnLastPage.Click += new System.EventHandler(this.btnLastPage_Click);
             // 
             // toolStripSeparator6
@@ -224,7 +220,7 @@
             // toolStripLabel5
             // 
             this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(20, 22);
+            this.toolStripLabel5.Size = new System.Drawing.Size(20, 17);
             this.toolStripLabel5.Text = "条";
             // 
             // dg

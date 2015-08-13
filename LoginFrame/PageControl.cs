@@ -21,7 +21,7 @@ namespace LoginFrame
 
         public void initPage()
         {
-            pageSize = 2;
+            pageSize = 10;
             TotalRecord = 0;
             CurPage = 1;
             dropPageSize.SelectedIndex = 0;
@@ -127,30 +127,32 @@ namespace LoginFrame
         private void PageControl_Load(object sender, EventArgs e)
         {
             initPage();
+            dg.DataSource = bs;
+            bn.BindingSource = bs;
         }
 
         private void btnFirstPage_Click(object sender, EventArgs e)
         {
-            loadData();
             CurPage = 1;
+            loadData();
         }
 
         private void btnPrePage_Click(object sender, EventArgs e)
         {
+            CurPage = Convert.ToInt32(txtCurPage.Text) - 1;
             loadData();
-            CurPage = Convert.ToInt32(txtCurPage.Text) - 1;          
         }
 
         private void btnNextPage_Click(object sender, EventArgs e)
-        {
+        {            
+            CurPage = Convert.ToInt32(txtCurPage.Text) + 1;
             loadData();
-            CurPage = Convert.ToInt32(txtCurPage.Text) + 1;            
         }
 
         private void btnLastPage_Click(object sender, EventArgs e)
-        {
+        {           
+            CurPage = totalPage;
             loadData();
-            CurPage = totalPage;            
         }
 
         private void menuStatus()
