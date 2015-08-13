@@ -4,36 +4,25 @@ using System.Linq;
 using System.Text;
 using Model;
 using System.Data;
+using MySql.Data.MySqlClient;
 
 namespace DAL
 {
-    public class UserDao
+    public class UserDao : CommonDao
     {
 
-        public DataSet listUsers()
+        //根据条件进行分页查询
+        public DataSet listUsers(Dictionary<string, string> strWheres, int startIndex, int pageSize)
         {
-            string strSql = "select user_name, login_id, pwd, create_date from sys_user where 1 = 1 ";
-            return listUsers(null, -1, 0);
+            string strSql = "select a.user_name, a.login_id, a.pwd, a.create_date from sys_user a, sys_user_class b where a.USER_ID = b.USER_ID ";
+            return listEntity(strSql, strWheres, startIndex, pageSize);
         }
 
-        public DataSet listUsers(string strWhere, int startIndex, int pageSize)
+        //根据条件查询数量
+        public int countUsers(Dictionary<string, string> strWheres)
         {
-            string strSql = "select user_name, login_id, pwd, create_date from sys_user where 1 = 1 ";
-            if (strWhere != null && !strWhere.Equals(""))
-                strSql += strWhere;
-            if (startIndex > -1 && pageSize > 0)
-                strSql += " limit " + startIndex + ", " + pageSize;
-            return MySqlHelper.DateSet(strSql);
+            string strSql = "select count(1) from sys_user a, sys_user_class b where a.USER_ID = b.USER_ID ";
+            return countEntity(strSql, strWheres);
         }
-
-        public int countUsers(string strWhere)
-        {
-            string strSql = "select count(1) from sys_user where 1 = 1 ";
-            if (strWhere != null && !strWhere.Equals(""))
-                strSql += strWhere;
-            int count = Convert.ToInt32(MySqlHelper.ExecuteScalar(strSql));
-            return count;
-        }
-
     }
 }

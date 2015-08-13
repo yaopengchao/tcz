@@ -11,9 +11,15 @@ namespace LoginFrame
 {
     public partial class PageControl : UserControl
     {
-        public delegate void loadDataEventHandler(string strWhere);
+        public delegate void loadDataEventHandler(Dictionary<string, string> strWheres);
+        public delegate void cellClickEventHandler();
+
         public loadDataEventHandler loadData;
-        public string strWhere;
+        public cellClickEventHandler cellClick;
+
+        public Dictionary<string, string> strWheres;
+        public Boolean pageShow = true;
+        public Boolean firstCellShow = true;
 
         public PageControl()
         {
@@ -28,7 +34,34 @@ namespace LoginFrame
             pageSize = Convert.ToInt32(dropPageSize.SelectedItem);
             TotalRecord = 0;
             CurPage = 1;
-            
+            if (pageShow)
+            {
+                bn.Show();
+            } else
+            {
+                bn.Hide();
+            }
+
+            loadData = new loadDataEventHandler(loadDataNull);
+            cellClick = new cellClickEventHandler(cellClickNull);
+
+            if (firstCellShow)
+            {
+                dg.RowHeadersVisible = true;
+            } else
+            {
+                dg.RowHeadersVisible = false;
+            }
+        }
+
+        private void loadDataNull(Dictionary<string, string> strWheres)
+        {
+
+        }
+
+        private void cellClickNull()
+        {
+
         }
 
         private int startIndex;
@@ -138,25 +171,25 @@ namespace LoginFrame
         private void btnFirstPage_Click(object sender, EventArgs e)
         {
             CurPage = 1;
-            loadData(strWhere);
+            loadData(strWheres);
         }
 
         private void btnPrePage_Click(object sender, EventArgs e)
         {
             CurPage = Convert.ToInt32(txtCurPage.Text) - 1;
-            loadData(strWhere);
+            loadData(strWheres);
         }
 
         private void btnNextPage_Click(object sender, EventArgs e)
         {            
             CurPage = Convert.ToInt32(txtCurPage.Text) + 1;
-            loadData(strWhere);
+            loadData(strWheres);
         }
 
         private void btnLastPage_Click(object sender, EventArgs e)
         {           
             CurPage = totalPage;
-            loadData(strWhere);
+            loadData(strWheres);
         }
 
         private void menuStatus()
@@ -236,6 +269,11 @@ namespace LoginFrame
                     SolidBrush B = new SolidBrush(Color.Red);
                 }
             }
+        }
+
+        private void dg_Click(object sender, EventArgs e)
+        {
+            cellClick();
         }
     }
 }
