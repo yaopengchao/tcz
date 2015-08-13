@@ -28,22 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label4 = new System.Windows.Forms.Label();
+            this.labTitle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtClassName = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.labClassId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label4
+            // labTitle
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("宋体", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(30, 27);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 27);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "添加班级";
+            this.labTitle.AutoSize = true;
+            this.labTitle.Font = new System.Drawing.Font("宋体", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labTitle.Location = new System.Drawing.Point(30, 27);
+            this.labTitle.Name = "labTitle";
+            this.labTitle.Size = new System.Drawing.Size(124, 27);
+            this.labTitle.TabIndex = 4;
+            this.labTitle.Text = "添加班级";
             // 
             // label1
             // 
@@ -86,16 +87,27 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // labClassId
+            // 
+            this.labClassId.AutoSize = true;
+            this.labClassId.Location = new System.Drawing.Point(171, 258);
+            this.labClassId.Name = "labClassId";
+            this.labClassId.Size = new System.Drawing.Size(11, 12);
+            this.labClassId.TabIndex = 13;
+            this.labClassId.Text = "0";
+            this.labClassId.Visible = false;
+            // 
             // AddClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 320);
+            this.Controls.Add(this.labClassId);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtClassName);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddClass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -108,10 +120,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label labTitle;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtClassName;
+        public System.Windows.Forms.TextBox txtClassName;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Label labClassId;
     }
 }

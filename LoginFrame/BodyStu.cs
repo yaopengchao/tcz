@@ -158,8 +158,34 @@ namespace LoginFrame
         private void button1_Click(object sender, EventArgs e)
         {
             AddClass addClass = AddClass.getInstance();
+            addClass.labTitle.Text = "添加班级";
             addClass.bodyStu = this;
             addClass.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AddClass addClass = AddClass.getInstance();
+            addClass.bodyStu = this;
+            addClass.labTitle.Text = "修改班级";
+            addClass.txtClassName.Text = Convert.ToString(pageCtrl2.dg.CurrentRow.Cells[1].Value);
+            classId = Convert.ToInt32(pageCtrl2.dg.CurrentRow.Cells[0].Value);
+            addClass.labClassId.Text = Convert.ToString(classId);
+            addClass.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            classId = Convert.ToInt32(pageCtrl2.dg.CurrentRow.Cells[0].Value);
+            if (classId > 0)
+            {
+                DialogResult dr = MessageBox.Show("确定要删除'" + pageCtrl2.dg.CurrentRow.Cells[1].Value + "'吗？", "确认删除", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (dr == DialogResult.OK)
+                {
+                    classService.deleteClass(classId);
+                    loadClass(null);
+                }
+            }
         }
     }
 }

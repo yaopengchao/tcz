@@ -28,14 +28,28 @@ namespace BLL
             return instance;
         }
 
+        //查询班级列表
         public DataSet listClass(Dictionary<string, string> strWheres)
         {
             return classDao.listClass(strWheres);
         }
 
+        //添加班级
         public int addClass(ClassInfo classInfo)
         {
             return classDao.addClass(classInfo);
+        }
+
+        //修改班级
+        public int updateClass(ClassInfo classInfo)
+        {
+            return classDao.updateClass(classInfo);
+        }
+
+        //删除班级
+        public int deleteClass(int classId)
+        {
+            return classDao.deleteClass(classId);
         }
 
     }

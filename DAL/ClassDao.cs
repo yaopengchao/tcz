@@ -24,7 +24,29 @@ namespace DAL
                 new MySqlParameter("?className", MySqlDbType.VarChar)
             };
             parames[0].Value = classInfo.ClassName;
-           return MySqlHelper.ExecuteNonQuery(strSql, parames);
+            return MySqlHelper.ExecuteNonQuery(strSql, parames);
+        }
+
+        public int updateClass(ClassInfo classInfo)
+        {
+            string strSql = "update sys_class set class_name = ?className where class_id = ?classId";
+            MySqlParameter[] parames = new MySqlParameter[] {
+                new MySqlParameter("?className", MySqlDbType.VarChar),
+                new MySqlParameter("?classId", MySqlDbType.Int32)
+            };
+            parames[0].Value = classInfo.ClassName;
+            parames[1].Value = classInfo.ClassId;
+            return MySqlHelper.ExecuteNonQuery(strSql, parames);
+        }
+
+        public int deleteClass(int classId)
+        {
+            string strSql = "delete from sys_class where class_id = ?classId";
+            MySqlParameter[] parames = new MySqlParameter[] {
+                new MySqlParameter("?classId", MySqlDbType.Int32)
+            };
+            parames[0].Value = classId;
+            return MySqlHelper.ExecuteNonQuery(strSql, parames);
         }
 
     }

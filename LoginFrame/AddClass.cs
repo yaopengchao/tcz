@@ -43,9 +43,20 @@ namespace LoginFrame
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int result = 0;
             ClassInfo classInfo = new ClassInfo();
             classInfo.className = txtClassName.Text;
-            int result = classService.addClass(classInfo);
+
+            int classId = Convert.ToInt32(labClassId.Text);
+            if (classId > 0)                //修改操作
+            {
+                classInfo.ClassId = classId;
+                result = classService.updateClass(classInfo);
+            } else                          //新增操作
+            {
+                result = classService.addClass(classInfo);
+            }
+             
             if (result > 0)
             {
                 MessageBox.Show("保存成功");
