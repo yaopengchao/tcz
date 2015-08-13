@@ -126,7 +126,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="listView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 596</value>
+    <value>196, 596</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="listView1.TabIndex" type="System.Int32, mscorlib">
