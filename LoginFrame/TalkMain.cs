@@ -41,7 +41,7 @@ namespace LoginFrame
         public void BodyMain_Load(object sender, EventArgs e)
         {
             //加载列表
-
+            this.listView1.Items.Clear();
             //threadListUsers = new Thread(new ThreadStart(ListUsersOnline));
             //threadListUsers.IsBackground = true;
             //threadListUsers.Start();
@@ -252,8 +252,20 @@ Console.WriteLine("客户端连接成功:" + sokConnection.RemoteEndPoint.ToStri
             if (LoginRoler.roleid==Constant.RoleTeacher)
             {
                 //发送数据
-                socketDic[listView1.SelectedItems[0].Text].Send(audioData, SocketFlags.None);
-                Console.WriteLine("发送中...");
+
+                //循环出checkBox选择的数据项
+
+
+                //socketDic[listView1.SelectedItems[0].Text].Send(audioData, SocketFlags.None);
+
+                //获取发送信息
+                string Message = "服务器发送消息啦";
+                //将字符串转换成字节数组
+                byte[] data = System.Text.Encoding.UTF8.GetBytes(Message);
+                //找到对应的客户端 并发送数据
+                socketDic[listView1.SelectedItems[0].Text].Send(data, SocketFlags.None);
+                //打印输出
+                Console.WriteLine("发送中..."+ Message);
             }
             else if (LoginRoler.roleid == Constant.RoleStudent)
             {
@@ -301,6 +313,54 @@ Console.WriteLine("客户端连接成功:" + sokConnection.RemoteEndPoint.ToStri
             else
             {
                 Console.WriteLine("接收语音数据大小KB:"+ totalLen.ToString());
+            }
+        }
+
+        private void listView1_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            if (!listView1.Items[e.Index].Checked)//如果点击的CheckBoxes没有选中  
+            {
+                foreach (ListViewItem lv in listView1.Items)
+                {
+                    if (lv.Checked)//取消所有已选中的CheckBoxes  
+                    {
+                        lv.Checked = false;
+                        lv.Selected = false;
+                        // lv.BackColor = Color.White;  
+                    }
+                }
+                listView1.Items[e.Index].Selected = true;
+                // lv.Checked = false;  
+            }
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (ListViewItem lv in listView1.Items)
+            {
+
+                if (lv.Selected)
+                {
+                    //if (lv.Checked)  
+                    //{  
+                    //    //lv.Checked = false;  
+                    //}  
+                    //else  
+                    //{  
+                    lv.Checked = true;
+                    //}  
+                }
+                else
+                {
+                    if (listView1.SelectedIndices.Count > 0)
+                    {
+                        if (lv.Checked)
+                        {
+                            lv.Checked = false;
+                        }
+                    }
+
+                }
             }
         }
     }

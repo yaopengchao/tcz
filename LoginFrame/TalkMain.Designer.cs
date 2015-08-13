@@ -65,12 +65,13 @@
             this.columnHeader1});
             this.listView1.Location = new System.Drawing.Point(2, 2);
             this.listView1.Margin = new System.Windows.Forms.Padding(2);
-            this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(197, 536);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.listView1_ItemCheck);
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             this.listView1.DoubleClick += new System.EventHandler(this.BodyMain_listView_MouseDoubleClick);
             // 
             // columnHeader1

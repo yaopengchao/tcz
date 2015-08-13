@@ -302,8 +302,10 @@ namespace LoginFrame
                 MessageBox.Show("请先选择课件播放后再扩音操作!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 return;
             }
+
+
             //播放与 Falsh配对的音频文件名 不包括拓展名
-            string audioFilename = mainFrame.bodyMain.listView1.SelectedItems[1].Text;
+            string audioFilename = mainFrame.bodyMain.listView1.SelectedItems[0].SubItems[1].Text;
            
 
             //获取列表选中项，组装音频文件路径传给播放器
@@ -318,7 +320,9 @@ namespace LoginFrame
 
                 this.isAudioPlaying = false;
                 this.mainFrame.stopPlayer();
-                this.button3.Text = "扩音";
+
+                this.button6.BackgroundImage = LoginFrame.Properties.Resources.volume;
+
 
                 if (!this.mainFrame.bodyMain.axShockwaveFlashPlayer.IsPlaying())
                 {
@@ -335,7 +339,7 @@ namespace LoginFrame
 
                 this.isAudioPlaying = true;
                 this.mainFrame.audioPlayer(audioFilename);
-                this.button3.Text = "扩音中";
+                this.button6.BackgroundImage = LoginFrame.Properties.Resources.volume_up;
 
                 //暂停播放Flash
                 if (this.mainFrame.bodyMain.axShockwaveFlashPlayer.IsPlaying())
@@ -343,9 +347,6 @@ namespace LoginFrame
                     this.mainFrame.titleMain.button6_Click(null, null);
                 }
             }
-
-
-
             
         }
 
@@ -487,6 +488,7 @@ namespace LoginFrame
                     talkMain.FormBorderStyle = FormBorderStyle.None;
                     talkMain.Dock = System.Windows.Forms.DockStyle.Fill;
                     this.mainFrame.panel6.Controls.Add(talkMain);
+                    
                     talkMain.Show();
 
                     //互相访问控件
@@ -617,6 +619,11 @@ namespace LoginFrame
                 if (g != null)
                     g.Dispose();
             }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

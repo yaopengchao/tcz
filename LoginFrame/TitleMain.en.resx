@@ -123,9 +123,6 @@
   <data name="button2.Text" xml:space="preserve">
     <value>Entry</value>
   </data>
-  <data name="button3.Text" xml:space="preserve">
-    <value>Sound</value>
-  </data>
   <data name="button8.Text" xml:space="preserve">
     <value>Collection</value>
   </data>

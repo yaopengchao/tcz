@@ -348,8 +348,10 @@ namespace LoginFrame
             this.splayer = new SoundPlayer(LoginFrame.Properties.Resources.YouAreMySunshine);
             this.splayer.Play();
 
-            button3_changeText button3outdelegate = new button3_changeText(button3changeText);
-            this.BeginInvoke(button3outdelegate, new object[] { "扩音中" });
+            this.titleMain.button6.BackgroundImage = LoginFrame.Properties.Resources.volume;
+
+            //button3_changeText button3outdelegate = new button3_changeText(button3changeText);
+            //this.BeginInvoke(button3outdelegate, new object[] { "扩音中" });
 
         }
 
@@ -357,8 +359,11 @@ namespace LoginFrame
         {
             this.splayer.Stop();
 
-            button3_changeText button3outdelegate = new button3_changeText(button3changeText);
-            this.BeginInvoke(button3outdelegate, new object[] { "扩音" });
+            this.titleMain.button6.BackgroundImage = LoginFrame.Properties.Resources.volume_up;
+
+
+            //button3_changeText button3outdelegate = new button3_changeText(button3changeText);
+            //this.BeginInvoke(button3outdelegate, new object[] { "扩音" });
         }
 
 

@@ -258,6 +258,8 @@
     <Content Include="bin\Debug\Regedit.txt" />
     <Content Include="bin\Debug\RolesType.xml" />
     <Content Include="pic\界面背景3.jpg" />
+    <None Include="Resources\volume.gif" />
+    <None Include="Resources\volume_up.gif" />
     <None Include="Resources\combobox.png" />
     <None Include="Resources\comboboxend.png" />
     <None Include="Resources\cobegmbobox.png" />
