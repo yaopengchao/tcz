@@ -254,24 +254,12 @@
     <Content Include="lessons\1.mp3" />
     <Content Include="lessons\3.mp3" />
     <Content Include="lessons\2.mp3" />
-    <Content Include="pic\001.png" />
     <Content Include="pic\combobox.png" />
+    <Content Include="pic\next.png" />
     <Content Include="pic\NoImage.jpg" />
-    <Content Include="pic\png-0048.png" />
-    <Content Include="pic\png-0067.png" />
-    <Content Include="pic\png-0090.png" />
-    <Content Include="pic\png-0098.png" />
-    <Content Include="pic\png-0673.png" />
-    <Content Include="pic\png-1659.png" />
-    <Content Include="pic\png-1712.png" />
-    <Content Include="pic\png-1718.png" />
-    <Content Include="pic\png-1719.png" />
-    <Content Include="pic\png-1732.png" />
-    <Content Include="pic\png-1767.png" />
-    <Content Include="pic\png-1855.png" />
-    <Content Include="pic\png-1944.png" />
-    <Content Include="pic\png-1954.png" />
-    <Content Include="pic\png-1981.png" />
+    <Content Include="pic\play.png" />
+    <Content Include="pic\priview.png" />
+    <Content Include="pic\stop.png" />
     <Content Include="pic\界面背景.png" />
     <Content Include="pic\界面背景2.jpg" />
     <Content Include="pic\登录按钮.png" />
@@ -279,6 +267,15 @@
     <Content Include="bin\Debug\Regedit.txt" />
     <Content Include="bin\Debug\RolesType.xml" />
     <Content Include="pic\界面背景3.jpg" />
+    <None Include="Resources\combobox.png" />
+    <None Include="Resources\comboboxend.png" />
+    <None Include="Resources\cobegmbobox.png" />
+    <None Include="Resources\sysnc.png" />
+    <None Include="Resources\stopsysnc.png" />
+    <None Include="Resources\stop.png" />
+    <None Include="Resources\priview.png" />
+    <None Include="Resources\next.png" />
+    <None Include="Resources\play.png" />
     <None Include="Resources\YouAreMySunshine.wav" />
   </ItemGroup>
   <ItemGroup>

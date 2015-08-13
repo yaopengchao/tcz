@@ -174,6 +174,24 @@ namespace DAL
             }
         }
 
+        public string getServerIp()
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("  select r.ip as ip ,r.username as username,u.truename as truename from chatroom r,users u where r.username=u.username and u.roleid=?roleid ");
+
+            MySqlParameter[] parameters = {
+                    new MySqlParameter("?roleid", MySqlDbType.VarChar)
+            };
+
+            parameters[0].Value = "teacher";
+
+            DataSet ds = MySqlHelper.DateSet(strSql.ToString(), parameters);
+            if (ds.Tables.Count>0 && ds.Tables[0].Rows.Count>0)
+            {
+                return (string)ds.Tables[0].Rows[0]["ip"];
+            }
+            return "";
+        }
 
 
         public bool outChatroom(string username)

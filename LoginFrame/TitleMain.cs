@@ -174,7 +174,8 @@ namespace LoginFrame
                     Broadcast("StopFlash^NoFileName^##");
                 }
                 mainFrame.bodyMain.axShockwaveFlashPlayer.Stop();
-                this.button6.Text = "播放";
+                //this.button6.Text = "播放";
+                this.button6.BackgroundImage = LoginFrame.Properties.Resources.play;
             }
             else
             {
@@ -198,11 +199,11 @@ namespace LoginFrame
                 {
                     Broadcast("PlayFlash^" + swfName + "^##");
                 }
-
                 
                 //Console.WriteLine("地址:"+ filpath);
                 this.mainFrame.playFlash(filpath);
-                this.button6.Text = "暂停";
+                this.button6.BackgroundImage = LoginFrame.Properties.Resources.stop;
+                //this.button6.Text = "暂停";
             }
         }
 
@@ -255,7 +256,10 @@ namespace LoginFrame
             if (isBroadcasting)
             {
                 isBroadcasting = false;
-                this.button4.Text = "同步教学";
+                //this.button4.Text = "同步教学";
+                this.button4.BackgroundImage= LoginFrame.Properties.Resources.sysnc;
+
+
 
                 client = null;
                 multicast = null;
@@ -267,9 +271,9 @@ namespace LoginFrame
                 client.JoinMulticastGroup(IPAddress.Parse("234.5.6.7"));
                 multicast = new IPEndPoint(IPAddress.Parse("234.5.6.7"), 7788);
 
-
                 isBroadcasting = true;
-                this.button4.Text = "同步教学中";
+                //this.button4.Text = "同步教学中";
+                this.button4.BackgroundImage = LoginFrame.Properties.Resources.stopsysnc;
             }
             
         }
@@ -383,53 +387,119 @@ namespace LoginFrame
         private void button9_Click(object sender, EventArgs e)
         {
             ImplUser Bll = new ImplUser();
-            if (isTalking)
+            if (LoginRoler.roleid==Constant.RoleStudent)
             {
-                //切换到 非对话状态
-                isTalking = false;
+                //检查是否存在老师聊天的IP，不存在就不跳转
+                string serverIp = Bll.getServerIp();
+                if (serverIp=="" || serverIp==null)
+                {
+                    MessageBox.Show("请等待老师先进入对话再尝试!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    return;
+                }else
+                {
+                    if (isTalking)
+                    {
+                        //切换到 非对话状态
+                        isTalking = false;
 
-                //离开聊天室
-                bool outChatroom = Bll.outChatroom(LoginRoler.username);
+                        //离开聊天室
+                        bool outChatroom = Bll.outChatroom(LoginRoler.username);
 
-                this.mainFrame.panel6.Controls.Clear();
-                BodyMain bodyMain = BodyMain.createForm();
-                bodyMain.TopLevel = false;
-                bodyMain.FormBorderStyle = FormBorderStyle.None;
-                bodyMain.Dock = System.Windows.Forms.DockStyle.Fill;
-                this.mainFrame.panel6.Controls.Add(bodyMain);
-                bodyMain.Show();
+                        this.mainFrame.panel6.Controls.Clear();
+                        BodyMain bodyMain = BodyMain.createForm();
+                        bodyMain.TopLevel = false;
+                        bodyMain.FormBorderStyle = FormBorderStyle.None;
+                        bodyMain.Dock = System.Windows.Forms.DockStyle.Fill;
+                        this.mainFrame.panel6.Controls.Add(bodyMain);
+                        bodyMain.Show();
 
-                //互相访问控件
-                this.mainFrame.bodyMain = bodyMain;
+                        //互相访问控件
+                        this.mainFrame.bodyMain = bodyMain;
 
-                this.button9.Text = "对话";
+                        this.button9.Text = "对话";
 
+                    }
+                    else
+                    {
+                        //切换到  对话状态
+
+                        isTalking = true;
+
+                        //登录聊天室
+
+                        bool inChatroom = Bll.inChatroom(LoginRoler.username, LoginRoler.truename, LoginRoler.ip);
+
+                        this.mainFrame.panel6.Controls.Clear();
+                        TalkMain talkMain = TalkMain.createForm();
+                        talkMain.TopLevel = false;
+                        talkMain.FormBorderStyle = FormBorderStyle.None;
+                        talkMain.Dock = System.Windows.Forms.DockStyle.Fill;
+                        this.mainFrame.panel6.Controls.Add(talkMain);
+                        talkMain.Show();
+
+                        //互相访问控件
+
+                        this.mainFrame.talkMain = talkMain;
+
+                        this.button9.Text = "对话中";
+
+                    }
+                }
             }
             else
             {
-                //切换到  对话状态
+                
+                if (isTalking)
+                {
+                    //切换到 非对话状态
+                    isTalking = false;
 
-                isTalking = true;
+                    //离开聊天室
+                    bool outChatroom = Bll.outChatroom(LoginRoler.username);
 
-                //登录聊天室
+                    this.mainFrame.panel6.Controls.Clear();
+                    BodyMain bodyMain = BodyMain.createForm();
+                    bodyMain.TopLevel = false;
+                    bodyMain.FormBorderStyle = FormBorderStyle.None;
+                    bodyMain.Dock = System.Windows.Forms.DockStyle.Fill;
+                    this.mainFrame.panel6.Controls.Add(bodyMain);
+                    bodyMain.Show();
 
-                bool inChatroom= Bll.inChatroom(LoginRoler.username,LoginRoler.truename,LoginRoler.ip);
+                    //互相访问控件
+                    this.mainFrame.bodyMain = bodyMain;
 
-                this.mainFrame.panel6.Controls.Clear();
-                TalkMain talkMain = TalkMain.createForm();
-                talkMain.TopLevel = false;
-                talkMain.FormBorderStyle = FormBorderStyle.None;
-                talkMain.Dock = System.Windows.Forms.DockStyle.Fill;
-                this.mainFrame.panel6.Controls.Add(talkMain);
-                talkMain.Show();
+                    this.button9.Text = "对话";
 
-                //互相访问控件
+                }
+                else
+                {
+                    //切换到  对话状态
 
-                this.mainFrame.talkMain = talkMain;
+                    isTalking = true;
 
-                this.button9.Text = "对话中";
+                    //登录聊天室
 
+                    bool inChatroom = Bll.inChatroom(LoginRoler.username, LoginRoler.truename, LoginRoler.ip);
+
+                    this.mainFrame.panel6.Controls.Clear();
+                    TalkMain talkMain = TalkMain.createForm();
+                    talkMain.TopLevel = false;
+                    talkMain.FormBorderStyle = FormBorderStyle.None;
+                    talkMain.Dock = System.Windows.Forms.DockStyle.Fill;
+                    this.mainFrame.panel6.Controls.Add(talkMain);
+                    talkMain.Show();
+
+                    //互相访问控件
+
+                    this.mainFrame.talkMain = talkMain;
+
+                    this.button9.Text = "对话中";
+
+                }
             }
+
+
+            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

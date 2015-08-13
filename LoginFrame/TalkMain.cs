@@ -8,6 +8,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Collections.Generic;
 using System.Text;
+using BLL;
 
 namespace LoginFrame
 {
@@ -17,6 +18,8 @@ namespace LoginFrame
         public MainFrame mainFrame;
 
         public bool isSpeaking = false;
+
+        ImplUser implUser = new ImplUser();
 
         public TalkMain()
         {
@@ -50,7 +53,7 @@ namespace LoginFrame
                 socketServer = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
                 //获取IP地址
-                IPAddress ip = IPAddress.Parse("192.168.1.161");
+                IPAddress ip = IPAddress.Parse(LoginRoler.ip);
 
                 //创建 包含IP和Port的网络节点对象
                 IPEndPoint endPoint = new IPEndPoint(ip, int.Parse("10021"));
@@ -72,9 +75,18 @@ namespace LoginFrame
             }
             else if (LoginRoler.roleid == Constant.RoleStudent)
             {
+                //获取老师服务IP
+                string serverIp = implUser.getServerIp();
+
+                //if (serverIp=="" || serverIp==null )
+                //{
+                //    MessageBox.Show("请等待老师先进入对话再尝试!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                //    return;
+               // }
+
                 //学生则创建连接客户端的操作
                 //获取IP
-                IPAddress ip = IPAddress.Parse("192.168.1.161");
+                IPAddress ip = IPAddress.Parse(serverIp);
                 //新建一个网络节点
                 IPEndPoint endPoint = new IPEndPoint(ip, int.Parse("10021"));
                 //新建一个Socket 负责 监听服务器的通信
@@ -209,8 +221,6 @@ Console.WriteLine("客户端连接成功:" + sokConnection.RemoteEndPoint.ToStri
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-
             if (isSpeaking)
             {
                 isSpeaking = false;

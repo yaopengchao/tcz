@@ -48,6 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.主页ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -71,13 +72,15 @@
             // 
             // label6
             // 
+            this.label6.BackColor = System.Drawing.Color.Gainsboro;
+            this.label6.Image = global::LoginFrame.Properties.Resources.combobox1;
             resources.ApplyResources(this.label6, "label6");
-            this.label6.Image = global::LoginFrame.Properties.Resources.combobox;
             this.label6.Name = "label6";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // panel5
             // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.menuStrip1);
             resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
@@ -88,6 +91,7 @@
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.主页ToolStripMenuItem,
             this.toolStripMenuItem1,
             this.toolStripMenuItem2,
             this.toolStripMenuItem3,
@@ -183,6 +187,11 @@
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
+            // 主页ToolStripMenuItem
+            // 
+            this.主页ToolStripMenuItem.Name = "主页ToolStripMenuItem";
+            resources.ApplyResources(this.主页ToolStripMenuItem, "主页ToolStripMenuItem");
+            // 
             // MainFrame
             // 
             resources.ApplyResources(this, "$this");
@@ -226,5 +235,6 @@
         public System.Windows.Forms.Panel panel6;
         public System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ToolStripMenuItem 主页ToolStripMenuItem;
     }
 }
