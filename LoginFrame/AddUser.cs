@@ -22,10 +22,9 @@ namespace LoginFrame
 
         public static AddUser getInstance()
         {
-            if (instance == null)
-            {
-                instance = new AddUser();
-            }
+
+            instance = new AddUser();
+
             if (userService == null)
             {
                 userService = new UserService();
@@ -63,7 +62,6 @@ namespace LoginFrame
             if (result > 0)
             {
                 MessageBox.Show("保存成功");
-                bodyStu.loadClass(null);
                 this.Close();
                 bodyStu.btnQueryClick();
             }

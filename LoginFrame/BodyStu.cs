@@ -93,7 +93,8 @@ namespace LoginFrame
         {
             DataSet ds = classService.listClass(strWheres);
             pageCtrl2.bs.DataSource = ds.Tables[0];
-            pageCtrl2.dg.Rows[0].Selected = true;
+            if (pageCtrl2.dg.SelectedRows.Count == 0)
+                pageCtrl2.dg.Rows[0].Selected = true;
         }
 
         private void loadData(Dictionary<string, string> strWheres)
