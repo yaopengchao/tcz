@@ -51,14 +51,23 @@ namespace LoginFrame
         private void button1_Click(object sender, EventArgs e)
         {
             int result = 0;
+            int userId = Convert.ToInt32(labUserId.Text);
             User user = new User();
             user.LoginId = txtLoginId.Text;
             user.UserName = txtUserName.Text;
             user.UserType = "3";
             user.Pwd = txtPwd.Text;
             DateTime dt = DateTime.Now;
-            user.CreateDate = dt.ToString("yyyy-MM-dd HH: mm:ss");
-            result = userService.addUser(user, bodyStu.classId);
+            if (userId > 0)            //修改
+            {
+                user.UserId = userId;
+                result = userService.updateUser(user);
+            } else
+            {
+                user.CreateDate = dt.ToString("yyyy-MM-dd HH: mm:ss");
+                result = userService.addUser(user, bodyStu.classId);
+            }
+
             if (result > 0)
             {
                 MessageBox.Show("保存成功");
@@ -69,6 +78,11 @@ namespace LoginFrame
             {
                 MessageBox.Show("保存失败，请联系管理员");
             }
+        }
+
+        private void labUserId_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
