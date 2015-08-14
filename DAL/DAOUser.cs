@@ -12,15 +12,15 @@ namespace DAL
         /// </summary>
         /// <param name="username"></param>
         /// <returns></returns>
-        public int ExistsName(string user_name)
+        public int ExistsName(string loginId)
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("select count(1) from sys_user");
             strSql.Append(" where ");
-            strSql.Append(" user_name = ?user_name  ");
+            strSql.Append(" login_id = ?loginId  ");
             MySqlParameter[] parameters = {
-					new MySqlParameter("?user_name", MySqlDbType.VarChar)};
-            parameters[0].Value = user_name;
+					new MySqlParameter("?loginId", MySqlDbType.VarChar)};
+            parameters[0].Value = loginId;
 
             return Convert.ToInt32(MySqlHelper.ExecuteScalar(strSql.ToString(), parameters));
         }
@@ -32,16 +32,16 @@ namespace DAL
         /// <param name="username"></param>
         /// <param name="pwd"></param>
         /// <returns></returns>
-        public DataSet ExistsPwd(string user_name, string pwd)
+        public DataSet ExistsPwd(string loginId, string pwd)
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("select user_name,user_type from sys_user");
             strSql.Append(" where ");
-            strSql.Append(" user_name = ?user_name and pwd=?pwd ");
+            strSql.Append(" login_id = ?loginId and pwd=?pwd ");
             MySqlParameter[] parameters = {
-                    new MySqlParameter("?user_name", MySqlDbType.VarChar),
+                    new MySqlParameter("?loginId", MySqlDbType.VarChar),
                     new MySqlParameter("?pwd", MySqlDbType.VarChar)};
-            parameters[0].Value = user_name;
+            parameters[0].Value = loginId;
             parameters[1].Value = pwd;
 
             DataSet ds = MySqlHelper.DateSet(strSql.ToString(), parameters);

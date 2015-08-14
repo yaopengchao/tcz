@@ -24,5 +24,25 @@ namespace DAL
             string strSql = "select count(1) from sys_user a, sys_user_class b where a.USER_ID = b.USER_ID ";
             return countEntity(strSql, strWheres);
         }
+
+        public int addUser(User user)
+        {
+            string strSql = "insert into sys_user(login_id, user_name, user_type, pwd, create_date) values(?loginId, ?userName, ?userType, ?pwd, ?createDate); select last_insert_id();";
+            MySqlParameter[] parames = new MySqlParameter[] {
+                new MySqlParameter("?loginId", MySqlDbType.VarChar),
+                new MySqlParameter("?userName", MySqlDbType.VarChar),
+                new MySqlParameter("?userType", MySqlDbType.VarChar),
+                new MySqlParameter("?pwd", MySqlDbType.VarChar),
+                new MySqlParameter("?createDate", MySqlDbType.VarChar)
+            };
+            parames[0].Value = user.LoginId;
+            parames[1].Value = user.UserName;
+            parames[2].Value = user.UserType;
+            parames[3].Value = user.Pwd;
+            parames[4].Value = user.CreateDate;
+            int userId = Convert.ToInt32(MySqlHelper.ExecuteScalar(strSql, parames));
+            user.UserId = userId;
+            return userId;
+        }
     }
 }
