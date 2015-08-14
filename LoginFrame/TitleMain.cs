@@ -29,6 +29,8 @@ namespace LoginFrame
 
         ImplCourses Bll = new ImplCourses();
 
+        ImplUser IUser = new ImplUser();
+
         /// <summary>
         /// UDP客户端
         /// </summary>
@@ -112,11 +114,59 @@ namespace LoginFrame
             //对当前窗体应用更改后的资源
             ApplyResource();
 
+            addFavorites();
+
+
         }
 
-        
+        /// <summary>
+        /// 添加当前登录用户的收藏夹内容
+        /// </summary>
+        private void addFavorites()
+        {
+            DataSet ds=IUser.getFavorites(LoginRoler.username);
+            ToolStripMenuItem subItem= AddContextMenu("出库", menuStrip1.Items, null);
+            subItem.Click += new EventHandler(subItemClick1);//绑定方法
+            toolStripMenuItem1.DropDownItems.Add(subItem);
+        }
 
-        
+        private void subItemClick1(object sender, EventArgs e)
+        {
+            MessageBox.Show("对了，就是我");
+        }
+
+
+        /// <summary>
+        /// 添加子菜单
+        /// </summary>
+        /// <param name="text">要显示的文字，如果为 - 则显示为分割线</param>
+        /// <param name="cms">要添加到的子菜单集合</param>
+        /// <param name="callback">点击时触发的事件</param>
+        /// <returns>生成的子菜单，如果为分隔条则返回null</returns>
+
+        ToolStripMenuItem AddContextMenu(string text, ToolStripItemCollection cms, EventHandler callback)
+        {
+            if (text == "-")
+            {
+                ToolStripSeparator tsp = new ToolStripSeparator();
+                cms.Add(tsp);
+                return null;
+            }
+            else if (!string.IsNullOrEmpty(text))
+            {
+                ToolStripMenuItem tsmi = new ToolStripMenuItem(text);
+                tsmi.Tag = text + "TAG";
+                if (callback != null) tsmi.Click += callback;
+                cms.Add(tsmi);
+
+                return tsmi;
+            }
+
+            return null;
+        }
+
+
+
 
         /// <summary>
         /// 解除禁止操作方法
@@ -624,6 +674,27 @@ namespace LoginFrame
         private void button8_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            //收藏当前课件到数据库
+            //获取当前课件的文件名  文件名
+            if (mainFrame.bodyMain.listView1.Items.Count<=0)
+            {
+                MessageBox.Show("请先选择课件再点击收藏!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
+            else
+            {
+                string filename = mainFrame.bodyMain.listView1.SelectedItems[0].SubItems[1].Text;
+                bool isAdd=IUser.addFavorite(LoginRoler.username, filename);
+                if (isAdd)
+                {
+                    //重新刷新收藏夹数据
+                    
+                }
+            }
         }
     }
 }

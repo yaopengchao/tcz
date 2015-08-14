@@ -172,13 +172,13 @@ namespace DAL
         public string getServerIp()
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("  select r.ip as ip ,r.username as username,u.truename as truename from chatroom r,users u where r.username=u.username and u.roleid=?roleid ");
+            strSql.Append("  select r.user_ip as ip ,r.user_name as username from chatroom r,users u where r.use_rname=u.use_rname and u.user_type=?user_type ");
 
             MySqlParameter[] parameters = {
-                    new MySqlParameter("?roleid", MySqlDbType.VarChar)
+                    new MySqlParameter("?user_type", MySqlDbType.VarChar)
             };
 
-            parameters[0].Value = "teacher";
+            parameters[0].Value = "2";
 
             DataSet ds = MySqlHelper.DateSet(strSql.ToString(), parameters);
             if (ds.Tables.Count>0 && ds.Tables[0].Rows.Count>0)
@@ -210,6 +210,90 @@ namespace DAL
             else
             {
                 return false;
+            }
+        }
+
+
+        /// <summary>
+        /// 检索某个用户所有收藏
+        /// </summary>
+        /// <param name="user_name"></param>
+        /// <returns></returns>
+        public DataSet getFavorites(string user_name)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append(" select f.user_name as user_name,l.name as name,l.ename as ename,f.filename as filename from favorites f,lessons l where f.filename=l.filename ");
+            strSql.Append(" and ");
+            strSql.Append(" user_name=?user_name ");
+            MySqlParameter[] parameters = {
+                new MySqlParameter("?user_name", MySqlDbType.VarChar)
+            };
+
+            parameters[0].Value = user_name;
+
+            DataSet ds = MySqlHelper.DateSet(strSql.ToString(), parameters);
+
+            return ds;
+        }
+
+
+        /// <summary>
+        /// 添加收藏夹文件
+        /// </summary>
+        /// <param name="user_name"></param>
+        /// <param name="user_ip"></param>
+        /// <returns></returns>
+        public bool addFavorite(string user_name,string filename)
+        {
+            StringBuilder strSql = new StringBuilder();
+            //先检查是否有旧记录没有正确退出
+            strSql.Append(" select count(1) from favorites  ");
+            strSql.Append(" where ");
+            strSql.Append(" user_name=?user_name ");
+            strSql.Append(" and ");
+            strSql.Append(" filename=?filename ");
+            MySqlParameter[] parameters0 = {
+                    new MySqlParameter("?user_name", MySqlDbType.VarChar),
+                    new MySqlParameter("?filename", MySqlDbType.VarChar)
+            };
+
+            parameters0[0].Value = user_name;
+            parameters0[1].Value = filename;
+
+            int row0 = Convert.ToInt32(MySqlHelper.ExecuteScalar(strSql.ToString(), parameters0));
+
+            if (row0 > 0)
+            {
+                return true;
+            }
+            else
+            {//inert into
+                strSql = new StringBuilder();
+                strSql.Append(" insert into favorites (user_name,filename) values ( ");
+                strSql.Append(" ?user_name, ");
+              
+                strSql.Append(" ?filename  ) ");
+
+                MySqlParameter[] parameters = {
+                    new MySqlParameter("?user_name", MySqlDbType.VarChar),
+               
+                    new MySqlParameter("?filename", MySqlDbType.VarChar)
+                };
+
+                parameters[0].Value = user_name;
+             
+                parameters[1].Value = filename;
+
+                int rows = MySqlHelper.ExecuteNonQuery(strSql.ToString(), parameters);
+
+                if (rows > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
         }
 
