@@ -59,5 +59,17 @@ namespace BLL
             return result;
         }
 
+        //修改用户
+        public int updateUser(User user)
+        {
+            return userDao.updateUser(user);
+        }
+
+        public int deleteUser(int userId)
+        {
+            userClassDao.deleteUserClassByUserId(userId);
+            return userDao.deleteUser(userId);
+        }
+
     }
 }

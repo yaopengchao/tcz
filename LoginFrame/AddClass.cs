@@ -21,13 +21,12 @@ namespace LoginFrame
 
         public static AddClass getInstance()
         {
-            if (instance == null)
-            {
-                instance = new AddClass();
 
-                if (classService == null)
-                    classService = new ClassService();
-            }
+            instance = new AddClass();
+
+            if (classService == null)
+                classService = new ClassService();
+
             return instance;
         }
 

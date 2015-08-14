@@ -93,7 +93,8 @@ namespace LoginFrame
         {
             DataSet ds = classService.listClass(strWheres);
             pageCtrl2.bs.DataSource = ds.Tables[0];
-            pageCtrl2.dg.Rows[0].Selected = true;
+            if (pageCtrl2.dg.SelectedRows.Count == 0)
+                pageCtrl2.dg.Rows[0].Selected = true;
         }
 
         private void loadData(Dictionary<string, string> strWheres)
@@ -133,8 +134,9 @@ namespace LoginFrame
             loadCount(strWheres);
             loadData(strWheres);
 
-            string[] cols = new string[] { "学员名称", "登录名", "密码", "创建时间" };
+            string[] cols = new string[] { "学员编号", "学员名称", "登录名", "密码", "创建时间" };
             pageCtrl.Cols = cols;
+            pageCtrl.dg.Columns[0].Visible = false;
             int[] widths = new int[] { 100, 150, 150, 200 };
             pageCtrl.Widths = widths;
         }
@@ -190,11 +192,45 @@ namespace LoginFrame
             classId = Convert.ToInt32(pageCtrl2.dg.CurrentRow.Cells[0].Value);
             if (classId > 0)
             {
-                DialogResult dr = MessageBox.Show("确定要删除'" + pageCtrl2.dg.CurrentRow.Cells[1].Value + "'吗？", "确认删除", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                int userCount = classService.getUserCount(classId);
+                if (userCount > 0)                      //班级底下有学员，不能删除
+                {
+                    MessageBox.Show("请先删除班级底下的学员再删班级");
+                } else
+                {
+                    DialogResult dr = MessageBox.Show("确定要删除'" + pageCtrl2.dg.CurrentRow.Cells[1].Value + "'吗？", "确认删除", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (dr == DialogResult.OK)
+                    {
+                        classService.deleteClass(classId);
+                        loadClass(null);
+                    }
+                }
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            classId = Convert.ToInt32(pageCtrl2.dg.CurrentRow.Cells[0].Value);
+            AddUser addUser = AddUser.getInstance();
+            addUser.bodyStu = this;
+            addUser.labTitle.Text = "修改学生";
+            addUser.labUserId.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[0].Value);
+            addUser.txtLoginId.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[2].Value);
+            addUser.txtUserName.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[1].Value);
+            addUser.txtPwd.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[3].Value);
+            addUser.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int userId = Convert.ToInt32(pageCtrl.dg.CurrentRow.Cells[0].Value);
+            if (userId > 0)
+            {
+                DialogResult dr = MessageBox.Show("确定要删除'" + pageCtrl.dg.CurrentRow.Cells[1].Value + "'吗？", "确认删除", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (dr == DialogResult.OK)
                 {
-                    classService.deleteClass(classId);
-                    loadClass(null);
+                    userService.deleteUser(userId);
+                    btnQueryClick();
                 }
             }
         }

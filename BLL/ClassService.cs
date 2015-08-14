@@ -13,6 +13,8 @@ namespace BLL
 
         private static ClassDao classDao;
 
+        private static UserClassDao userClassDao;
+
         private static ClassService instance;
 
         public static ClassService getInstance()
@@ -25,6 +27,8 @@ namespace BLL
             {
                 classDao = new ClassDao();
             }
+            if (userClassDao == null)
+                userClassDao = new UserClassDao();
             return instance;
         }
 
@@ -50,6 +54,11 @@ namespace BLL
         public int deleteClass(int classId)
         {
             return classDao.deleteClass(classId);
+        }
+
+        public int getUserCount(int classId)
+        {
+            return userClassDao.getUsersCountByClassId(classId);
         }
 
     }
