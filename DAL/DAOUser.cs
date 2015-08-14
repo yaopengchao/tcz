@@ -172,7 +172,7 @@ namespace DAL
         public string getServerIp()
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("  select r.user_ip as ip ,r.user_name as username from chatroom r,users u where r.use_rname=u.use_rname and u.user_type=?user_type ");
+            strSql.Append("  select r.user_ip as ip ,r.user_name as username from chatroom r,sys_user u where r.user_name=u.user_name and u.user_type=?user_type ");
 
             MySqlParameter[] parameters = {
                     new MySqlParameter("?user_type", MySqlDbType.VarChar)

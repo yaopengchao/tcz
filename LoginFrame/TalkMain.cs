@@ -78,12 +78,6 @@ namespace LoginFrame
                 //获取老师服务IP
                 string serverIp = implUser.getServerIp();
 
-                //if (serverIp=="" || serverIp==null )
-                //{
-                //    MessageBox.Show("请等待老师先进入对话再尝试!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                //    return;
-               // }
-
                 //学生则创建连接客户端的操作
                 //获取IP
                 IPAddress ip = IPAddress.Parse(serverIp);
@@ -135,16 +129,25 @@ Console.WriteLine("客户端连接成功:" + sokConnection.RemoteEndPoint.ToStri
 
         void ClientRecMsg()
         {
-            while (true && isSpeaking)
+            while (true)
             {
                 //初始化一个 1M的 缓存区(字节数组)
                 byte[] data = new byte[1024 * 1024];
                 //将接受到的数据 存放到data数组中 返回接受到的数据的实际长度
                 int receiveBytes = socketClient.Receive(data);
+
+                Console.WriteLine("学生接收数据：" + receiveBytes);
+
+                if (this.audioPlayer != null)
+                {
+                    this.audioPlayer.Play(data);
+                }
+
+
                 //将字符串转换成字节数组
-                string strMsg = Encoding.UTF8.GetString(data, 0, receiveBytes);
+                //string strMsg = Encoding.UTF8.GetString(data, 0, receiveBytes);
                 //打印输出
-                Console.WriteLine("接受数据：" + strMsg);
+                
             }
         }
 
@@ -259,13 +262,13 @@ Console.WriteLine("客户端连接成功:" + sokConnection.RemoteEndPoint.ToStri
                 //socketDic[listView1.SelectedItems[0].Text].Send(audioData, SocketFlags.None);
 
                 //获取发送信息
-                string Message = "服务器发送消息啦";
+                //string Message = "服务器发送消息啦";
                 //将字符串转换成字节数组
-                byte[] data = System.Text.Encoding.UTF8.GetBytes(Message);
+                //byte[] data = System.Text.Encoding.UTF8.GetBytes(Message);
                 //找到对应的客户端 并发送数据
-                socketDic[listView1.SelectedItems[0].Text].Send(data, SocketFlags.None);
+                socketDic[listView1.SelectedItems[0].Text].Send(audioData, SocketFlags.None);
                 //打印输出
-                Console.WriteLine("发送中..."+ Message);
+                Console.WriteLine("发送中...");
             }
             else if (LoginRoler.roleid == Constant.RoleStudent)
             {
