@@ -107,6 +107,7 @@
             // 
             this.主页ToolStripMenuItem.Name = "主页ToolStripMenuItem";
             resources.ApplyResources(this.主页ToolStripMenuItem, "主页ToolStripMenuItem");
+            this.主页ToolStripMenuItem.Click += new System.EventHandler(this.主页ToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 

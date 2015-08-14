@@ -45,9 +45,9 @@ namespace BLL
         }
 
 
-        public bool inChatroom(string username, string truename, string loginip)
+        public bool inChatroom(string username, string loginip)
         {
-            return daoUser.inChatroom(username,truename, loginip);
+            return daoUser.inChatroom(username, loginip);
         }
 
 

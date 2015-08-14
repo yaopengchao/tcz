@@ -12,15 +12,15 @@ namespace DAL
         /// </summary>
         /// <param name="username"></param>
         /// <returns></returns>
-        public int ExistsName(string username)
+        public int ExistsName(string user_name)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select count(1) from users");
+            strSql.Append("select count(1) from sys_user");
             strSql.Append(" where ");
-            strSql.Append(" username = ?username  ");
+            strSql.Append(" user_name = ?user_name  ");
             MySqlParameter[] parameters = {
-					new MySqlParameter("?username", MySqlDbType.VarChar)};
-            parameters[0].Value = username;
+					new MySqlParameter("?user_name", MySqlDbType.VarChar)};
+            parameters[0].Value = user_name;
 
             return Convert.ToInt32(MySqlHelper.ExecuteScalar(strSql.ToString(), parameters));
         }
@@ -32,16 +32,16 @@ namespace DAL
         /// <param name="username"></param>
         /// <param name="pwd"></param>
         /// <returns></returns>
-        public DataSet ExistsPwd(string username, string pwd)
+        public DataSet ExistsPwd(string user_name, string pwd)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select username,truename,roleid from users");
+            strSql.Append("select user_name,user_type from sys_user");
             strSql.Append(" where ");
-            strSql.Append(" username = ?username and password=?password ");
+            strSql.Append(" user_name = ?user_name and pwd=?pwd ");
             MySqlParameter[] parameters = {
-                    new MySqlParameter("?username", MySqlDbType.VarChar),
-                    new MySqlParameter("?password", MySqlDbType.VarChar)};
-            parameters[0].Value = username;
+                    new MySqlParameter("?user_name", MySqlDbType.VarChar),
+                    new MySqlParameter("?pwd", MySqlDbType.VarChar)};
+            parameters[0].Value = user_name;
             parameters[1].Value = pwd;
 
             DataSet ds = MySqlHelper.DateSet(strSql.ToString(), parameters);
@@ -100,18 +100,18 @@ namespace DAL
 
 
 
-        public bool inChatroom(string username, string truename, string ip)
+        public bool inChatroom(string user_name, string user_ip)
         {
             StringBuilder strSql = new StringBuilder();
             //先检查是否有旧记录没有正确退出
             strSql.Append(" select count(1) from chatroom ");
             strSql.Append(" where ");
-            strSql.Append(" username=?username ");
+            strSql.Append(" user_name=?user_name ");
             MySqlParameter[] parameters0 = {
-                    new MySqlParameter("?username", MySqlDbType.VarChar)
+                    new MySqlParameter("?user_name", MySqlDbType.VarChar)
             };
 
-            parameters0[0].Value = username;
+            parameters0[0].Value = user_name;
 
             int row0= Convert.ToInt32(MySqlHelper.ExecuteScalar(strSql.ToString(), parameters0));
 
@@ -119,18 +119,16 @@ namespace DAL
             {
                 //更新数据
                 strSql = new StringBuilder();
-                strSql.Append(" update chatroom set truename=?truename,ip=?ip ");
+                strSql.Append(" update chatroom set user_ip=?user_ip ");
                 strSql.Append(" where ");
-                strSql.Append(" username=?username ");
+                strSql.Append(" user_name=?user_name ");
                 MySqlParameter[] parameters1 = {
-                    new MySqlParameter("?truename", MySqlDbType.VarChar),
-                    new MySqlParameter("?ip", MySqlDbType.VarChar),
-                    new MySqlParameter("?username", MySqlDbType.VarChar)
+                    new MySqlParameter("?user_ip", MySqlDbType.VarChar),
+                    new MySqlParameter("?user_name", MySqlDbType.VarChar)
                 };
 
-                parameters1[0].Value = username;
-                parameters1[1].Value = truename;
-                parameters1[2].Value = ip;
+                parameters1[0].Value = user_ip;
+                parameters1[1].Value = user_name;
 
 
                 int rows1 = MySqlHelper.ExecuteNonQuery(strSql.ToString(), parameters1);
@@ -146,20 +144,17 @@ namespace DAL
             else
             {//inert into
                 strSql = new StringBuilder();
-                strSql.Append(" insert into chatroom (username,truename,ip) values ( ");
-                strSql.Append(" ?username, ");
-                strSql.Append(" ?truename, ");
-                strSql.Append(" ?ip  ) ");
+                strSql.Append(" insert into chatroom (user_name,user_ip) values ( ");
+                strSql.Append(" ?user_name, ");
+                strSql.Append(" ?user_ip  ) ");
 
                 MySqlParameter[] parameters = {
-                    new MySqlParameter("?username", MySqlDbType.VarChar),
-                    new MySqlParameter("?truename", MySqlDbType.VarChar),
-                    new MySqlParameter("?ip", MySqlDbType.VarChar)
-            };
+                    new MySqlParameter("?user_name", MySqlDbType.VarChar),
+                    new MySqlParameter("?user_ip", MySqlDbType.VarChar)
+                };
 
-                parameters[0].Value = username;
-                parameters[1].Value = truename;
-                parameters[2].Value = ip;
+                parameters[0].Value = user_name;
+                parameters[1].Value = user_ip;
 
                 int rows = MySqlHelper.ExecuteNonQuery(strSql.ToString(), parameters);
 
@@ -194,17 +189,17 @@ namespace DAL
         }
 
 
-        public bool outChatroom(string username)
+        public bool outChatroom(string user_name)
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("  delete from chatroom where ");
-            strSql.Append(" username = ?username ");
+            strSql.Append(" user_name = ?user_name ");
 
             MySqlParameter[] parameters = {
-                    new MySqlParameter("?username", MySqlDbType.VarChar),
+                    new MySqlParameter("?user_name", MySqlDbType.VarChar),
             };
 
-            parameters[0].Value = username;
+            parameters[0].Value = user_name;
 
             int rows = MySqlHelper.ExecuteNonQuery(strSql.ToString(), parameters);
 

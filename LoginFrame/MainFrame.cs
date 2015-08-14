@@ -385,5 +385,43 @@ namespace LoginFrame
         {
 
         }
+
+        private void 主页ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel5.Hide();
+
+
+            //跳转代码
+            MainFrame mainFrame = MainFrame.createForm();
+
+
+            //加载菜单栏
+            mainFrame.panel1.Controls.Clear();
+            TitleMain titleMain = TitleMain.createForm();
+            titleMain.TopLevel = false;
+            titleMain.FormBorderStyle = FormBorderStyle.None;
+            titleMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            mainFrame.panel1.Controls.Add(titleMain);
+            titleMain.Show();
+
+
+            //加载主体栏
+            mainFrame.panel6.Controls.Clear();
+            BodyMain bodyMain = BodyMain.createForm();
+            bodyMain.TopLevel = false;
+            bodyMain.FormBorderStyle = FormBorderStyle.None;
+            bodyMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            mainFrame.panel6.Controls.Add(bodyMain);
+            bodyMain.Show();
+            mainFrame.Show();
+
+
+            //互相访问控件
+            mainFrame.bodyMain = bodyMain;
+            mainFrame.titleMain = titleMain;
+
+            bodyMain.mainFrame = mainFrame;
+            titleMain.mainFrame = mainFrame;
+        }
     }
 }

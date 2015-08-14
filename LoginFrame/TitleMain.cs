@@ -428,7 +428,7 @@ namespace LoginFrame
 
                         //登录聊天室
 
-                        bool inChatroom = Bll.inChatroom(LoginRoler.username, LoginRoler.truename, LoginRoler.ip);
+                        bool inChatroom = Bll.inChatroom(LoginRoler.username, LoginRoler.ip);
 
                         this.mainFrame.panel6.Controls.Clear();
                         TalkMain talkMain = TalkMain.createForm();
@@ -480,7 +480,7 @@ namespace LoginFrame
 
                     //登录聊天室
 
-                    bool inChatroom = Bll.inChatroom(LoginRoler.username, LoginRoler.truename, LoginRoler.ip);
+                    bool inChatroom = Bll.inChatroom(LoginRoler.username, LoginRoler.ip);
 
                     this.mainFrame.panel6.Controls.Clear();
                     TalkMain talkMain = TalkMain.createForm();
