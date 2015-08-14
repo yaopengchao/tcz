@@ -56,8 +56,14 @@ namespace BLL
             return daoUser.outChatroom(username);
         }
 
+        public DataSet getFavorites(string user_name)
+        {
+            return daoUser.getFavorites(user_name);
+        }
 
-
-
+        public bool addFavorite(string user_name,  string filename)
+        {
+            return daoUser.addFavorite(user_name,  filename);
+        }
     }
 }
