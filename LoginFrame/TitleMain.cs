@@ -125,7 +125,7 @@ namespace LoginFrame
         private void addFavorites()
         {
             DataSet ds=IUser.getFavorites(LoginRoler.username);
-            ToolStripMenuItem subItem= AddContextMenu("出库", menuStrip1.Items, null);
+            ToolStripMenuItem subItem= AddContextMenu("测试", menuStrip1.Items, null);
             subItem.Click += new EventHandler(subItemClick1);//绑定方法
             toolStripMenuItem1.DropDownItems.Add(subItem);
         }
