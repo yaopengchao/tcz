@@ -14,6 +14,7 @@ namespace DAL
         {
             get
             {
+                //string s = ConfigurationManager.AppSettings["Port"];
                 string strConn = System.Configuration.ConfigurationSettings.AppSettings["strConn"].ToString();
                 if (mysqlconnection == null)
                 {

@@ -49,6 +49,7 @@ namespace LoginFrame
             //如果是老师则创建聊天服务
             if (LoginRoler.roleid==Constant.RoleTeacher)
             {
+
                 //创建 服务器 负责监听的套接字 参数(使用IP4寻址协议，使用流式连接，使用TCP传输协议)
                 socketServer = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
@@ -98,6 +99,9 @@ namespace LoginFrame
                 //开启线程
                 threadReceive.Start();
             }
+            this.audioPlayer = PlayerFactory.CreateAudioPlayer(int.Parse("0"), 16000, 1, 16, 2);
+
+
         }
 
         Dictionary<string, Socket> socketDic = new Dictionary<string, Socket>();
@@ -120,7 +124,7 @@ namespace LoginFrame
 Console.WriteLine("客户端连接成功:" + sokConnection.RemoteEndPoint.ToString());
 
                     //为该通信Socket 创建一个线程 用来监听接收数据
-                    //threadRec = new Thread(RecMsg);
+                    //threadRec = new Thread(ServerRecMsg);
                     //threadRec.IsBackground = true;
                     //threadRec.Start(sokConnection);
 
@@ -131,23 +135,34 @@ Console.WriteLine("客户端连接成功:" + sokConnection.RemoteEndPoint.ToStri
         {
             while (true)
             {
-                //初始化一个 1M的 缓存区(字节数组)
-                byte[] data = new byte[1024 * 1024];
-                //将接受到的数据 存放到data数组中 返回接受到的数据的实际长度
-                int receiveBytes = socketClient.Receive(data);
 
-                Console.WriteLine("学生接收数据：" + receiveBytes);
+                //初始化一个 缓存区(字节数组)
+                byte[] data = new byte[512];
+                //将接受到的数据 存放到data数组中 返回接受到的数据的实际长度
+
+                int receiveBytes = socketClient.Receive(data);
 
                 if (this.audioPlayer != null)
                 {
+                    //Console.WriteLine(data.Length);
                     this.audioPlayer.Play(data);
                 }
+
+                //Console.WriteLine("学生接收数据：" + receiveBytes);
+                //Console.WriteLine(this.audioPlayer == null);
+
+                //if (this.audioPlayer != null)
+                //{
+                //Console.WriteLine(data);
+
+                //this.audioPlayer.Play(data);
+                //}
 
 
                 //将字符串转换成字节数组
                 //string strMsg = Encoding.UTF8.GetString(data, 0, receiveBytes);
                 //打印输出
-                
+
             }
         }
 
@@ -156,14 +171,21 @@ Console.WriteLine("客户端连接成功:" + sokConnection.RemoteEndPoint.ToStri
             //持续监听接收数据
             while (true)
             {
-                //实例化一个字符数组
-                byte[] data = new byte[1024 * 1024];
-                //接受消息数据
-                int receiveBytes = ((Socket)socket).Receive(data);
-                //转换成字符串
-                string recMsg = Encoding.UTF8.GetString(data, 0, receiveBytes);
-                //打印接收到的数据
-                Console.WriteLine(((Socket)socket).RemoteEndPoint.ToString() + ":" + recMsg);
+
+                while (true)
+                {
+                    //初始化一个 缓存区(字节数组)
+                    byte[] data = new byte[512];
+                    //将接受到的数据 存放到data数组中 返回接受到的数据的实际长度
+
+                    int receiveBytes = socketServer.Receive(data);
+
+                    if (this.audioPlayer != null)
+                    {
+                        this.audioPlayer.Play(data);
+                    }
+                }
+                   
             }
         }
 
@@ -238,7 +260,6 @@ Console.WriteLine("客户端连接成功:" + sokConnection.RemoteEndPoint.ToStri
                 //获取本机麦克风数据
                 this.capturer = CapturerFactory.CreateMicrophoneCapturer(0);
                 ((IMicrophoneCapturer)this.capturer).AudioCaptured += new ESBasic.CbGeneric<byte[]>(AudioCaptured);
-                this.audioPlayer = PlayerFactory.CreateAudioPlayer(int.Parse("0"), 16000, 1, 16, 2);
 
                 //开始采集
                 this.capturer.Start();
@@ -266,9 +287,12 @@ Console.WriteLine("客户端连接成功:" + sokConnection.RemoteEndPoint.ToStri
                 //将字符串转换成字节数组
                 //byte[] data = System.Text.Encoding.UTF8.GetBytes(Message);
                 //找到对应的客户端 并发送数据
+
+                Console.WriteLine("发送中...数据大小为" + audioData.Length);
+
                 socketDic[listView1.SelectedItems[0].Text].Send(audioData, SocketFlags.None);
                 //打印输出
-                Console.WriteLine("发送中...");
+                
             }
             else if (LoginRoler.roleid == Constant.RoleStudent)
             {
