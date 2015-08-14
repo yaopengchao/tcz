@@ -222,9 +222,14 @@ namespace DAL
         public DataSet getFavorites(string user_name)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append(" select user_name,name,ename,filename from favorites  ");
+            strSql.Append(" select f.user_name as user_name,l.name as name,l.ename as ename,f.filename as filename from favorites f,lessons l where f.filename=l.filename ");
+            strSql.Append(" and ");
+            strSql.Append(" user_name=?user_name ");
             MySqlParameter[] parameters = {
+                new MySqlParameter("?user_name", MySqlDbType.VarChar)
             };
+
+            parameters[0].Value = user_name;
 
             DataSet ds = MySqlHelper.DateSet(strSql.ToString(), parameters);
 
