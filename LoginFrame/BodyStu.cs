@@ -14,11 +14,12 @@ namespace LoginFrame
     {
 
         private static UserService userService;
+
         private static Dictionary<string, string> strWheres;
 
         private static ClassService classService;
 
-        private int classId;
+        public int classId;
 
         public BodyStu()
         {
@@ -63,6 +64,7 @@ namespace LoginFrame
         private void pageCtrl_Load(object sender, EventArgs e)
         {
             pageCtrl.loadData = new PageControl.loadDataEventHandler(loadData);
+            btnQuery_Click(sender, e);
         }
 
         private void pageCtrl2_Load(object sender, EventArgs e)
@@ -78,7 +80,7 @@ namespace LoginFrame
             pageCtrl2.Cols = cols;
             pageCtrl2.dg.Columns[0].Visible = false;
             pageCtrl2.cellClick = new PageControl.cellClickEventHandler(cellClick);
-            
+
         }
 
         private void cellClick()
@@ -91,6 +93,7 @@ namespace LoginFrame
         {
             DataSet ds = classService.listClass(strWheres);
             pageCtrl2.bs.DataSource = ds.Tables[0];
+            pageCtrl2.dg.Rows[0].Selected = true;
         }
 
         private void loadData(Dictionary<string, string> strWheres)
@@ -103,11 +106,17 @@ namespace LoginFrame
 
         private void btnQuery_Click(object sender, EventArgs e)
         {
-            classId = Convert.ToInt32(pageCtrl2.dg.CurrentRow.Cells[0].Value);
+            if (pageCtrl2.dg.SelectedRows.Count > 0)
+            {
+                classId = Convert.ToInt32(pageCtrl2.dg.SelectedRows[0].Cells[0].Value);
+            } else
+            {
+                classId = Convert.ToInt32(pageCtrl2.dg.CurrentRow.Cells[0].Value);
+            }
             btnQueryClick();
         }
 
-        private void btnQueryClick()
+        public void btnQueryClick()
         {
             strWheres.Clear();
             strWheres.Add("a.user_type", " = '3' ");
@@ -144,8 +153,10 @@ namespace LoginFrame
 
         private void button6_Click(object sender, EventArgs e)
         {
-            AddUser addUser = new AddUser();
-
+            classId = Convert.ToInt32(pageCtrl2.dg.CurrentRow.Cells[0].Value);
+            AddUser addUser = AddUser.getInstance();
+            addUser.bodyStu = this;
+            addUser.labTitle.Text = "添加学生";
             addUser.ShowDialog();
 
         }

@@ -12,6 +12,7 @@ namespace BLL
     {
 
         private static UserDao userDao;
+        private static UserClassDao userClassDao;
 
         private static UserService instance;
 
@@ -25,6 +26,10 @@ namespace BLL
             {
                 userDao = new UserDao();
             }
+            if (userClassDao == null)
+            {
+                userClassDao = new UserClassDao();
+            }
             return instance;
         }
 
@@ -36,6 +41,22 @@ namespace BLL
         public int countUsers(Dictionary<string, string> strWheres)
         {
             return userDao.countUsers(strWheres);
+        }
+
+        //添加用户
+        public int addUser(User user, int classId)
+        {
+            int result = 0;
+            result = userDao.addUser(user);
+            string userType = user.UserType;
+            if ("3".Equals(userType))               //如果是学生的话
+            {
+                UserClass userClass = new UserClass();
+                userClass.UserId = user.UserId;
+                userClass.ClassId = classId;
+                userClassDao.addUserClass(userClass);
+            }
+            return result;
         }
 
     }

@@ -47,6 +47,7 @@
     <Compile Include="MySqlHelper.cs" />
     <Compile Include="DAOUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserClassDao.cs" />
     <Compile Include="UserDao.cs" />
   </ItemGroup>
   <ItemGroup>
