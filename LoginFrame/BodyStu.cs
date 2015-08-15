@@ -234,5 +234,14 @@ namespace LoginFrame
                 }
             }
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            classId = Convert.ToInt32(pageCtrl2.dg.CurrentRow.Cells[0].Value);
+            AddUsers addUsers = AddUsers.getInstance();
+            addUsers.bodyStu = this;
+            addUsers.labTitle.Text = "批量添加学生";
+            addUsers.ShowDialog();
+        }
     }
 }

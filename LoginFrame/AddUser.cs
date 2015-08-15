@@ -64,7 +64,7 @@ namespace LoginFrame
                 result = userService.updateUser(user);
             } else
             {
-                user.CreateDate = dt.ToString("yyyy-MM-dd HH: mm:ss");
+                user.CreateDate = dt.ToString("yyyy-MM-dd HH:mm:ss");
                 result = userService.addUser(user, bodyStu.classId);
             }
 
