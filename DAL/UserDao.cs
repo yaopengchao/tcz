@@ -25,6 +25,20 @@ namespace DAL
             return countEntity(strSql, strWheres);
         }
 
+        //根据条件进行分页查询教师
+        public DataSet listTeachers(Dictionary<string, string> strWheres, int startIndex, int pageSize)
+        {
+            string strSql = "select a.user_id, a.user_name, a.login_id, a.pwd, a.create_date from sys_user a where 1 = 1 ";
+            return listEntity(strSql, strWheres, startIndex, pageSize);
+        }
+
+        //根据条件查询教师数量
+        public int countTeachers(Dictionary<string, string> strWheres)
+        {
+            string strSql = "select count(1) from sys_user a where 1 = 1 ";
+            return countEntity(strSql, strWheres);
+        }
+
         public int addUser(User user)
         {
             string strSql = "insert into sys_user(login_id, user_name, user_type, pwd, create_date) values(?loginId, ?userName, ?userType, ?pwd, ?createDate); select last_insert_id();";
