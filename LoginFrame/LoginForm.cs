@@ -169,6 +169,8 @@ namespace LoginFrame
                             LoginRoler.roleid = Convert.ToString(ds.Tables[0].Rows[0][1].ToString());
                             LoginRoler.language = comboBox1.SelectedIndex;
                             LoginRoler.ip = GetAddressIP();
+                            LoginRoler.userId = Convert.ToInt32(ds.Tables[0].Rows[0][2].ToString());
+                            LoginRoler.pwd = password;
 
 
                             //检查是否还有其他老师在同一个局域网登录

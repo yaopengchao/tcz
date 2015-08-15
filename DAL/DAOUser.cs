@@ -35,7 +35,7 @@ namespace DAL
         public DataSet ExistsPwd(string loginId, string pwd)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select user_name,user_type from sys_user");
+            strSql.Append("select user_name,user_type, user_id from sys_user");
             strSql.Append(" where ");
             strSql.Append(" login_id = ?loginId and pwd=?pwd ");
             MySqlParameter[] parameters = {

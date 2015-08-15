@@ -79,6 +79,12 @@ namespace BLL
             return userDao.updateUser(user);
         }
 
+        //修改密码
+        public int modifyPwd(int userId, string pwd)
+        {
+            return userDao.modifyPwd(userId, pwd);
+        }
+
         public int deleteUser(int userId)
         {
             userClassDao.deleteUserClassByUserId(userId);

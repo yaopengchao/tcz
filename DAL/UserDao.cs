@@ -76,6 +76,18 @@ namespace DAL
             return MySqlHelper.ExecuteNonQuery(strSql, parames);
         }
 
+        public int modifyPwd(int userId, string pwd)
+        {
+            string strSql = "update sys_user set pwd = ?pwd where user_id = ?userId";
+            MySqlParameter[] parames = new MySqlParameter[] {
+                new MySqlParameter("?pwd", MySqlDbType.VarChar),
+                new MySqlParameter("?userId", MySqlDbType.Int32)
+            };
+            parames[0].Value = pwd;
+            parames[1].Value = userId;
+            return MySqlHelper.ExecuteNonQuery(strSql, parames);
+        }
+
         public int deleteUser(int userId)
         {
             string strSql = "delete from sys_user where user_id = ?userId";
