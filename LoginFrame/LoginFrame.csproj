@@ -103,6 +103,12 @@
     </Compile>
     <Compile Include="ExcelRW.cs" />
     <Compile Include="ListUsers.cs" />
+    <Compile Include="ModifyPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyPassword.Designer.cs">
+      <DependentUpon>ModifyPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="PageControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainFrame.zh-CN.resx">
       <DependentUpon>MainFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyPassword.resx">
+      <DependentUpon>ModifyPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PageControl.resx">
       <DependentUpon>PageControl.cs</DependentUpon>

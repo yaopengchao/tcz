@@ -383,7 +383,11 @@ namespace LoginFrame
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
+            panel5.Hide();
 
+            ModifyPassword modifyPassword = new ModifyPassword();
+            modifyPassword.mainFram = this;
+            modifyPassword.ShowDialog();
         }
 
         private void 主页ToolStripMenuItem_Click(object sender, EventArgs e)

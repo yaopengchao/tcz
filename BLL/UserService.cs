@@ -33,14 +33,28 @@ namespace BLL
             return instance;
         }
 
+        //分页查询学生
         public DataSet listUsers(Dictionary<string, string> strWheres, int startIndex, int pageSize)
         {
             return userDao.listUsers(strWheres, startIndex, pageSize);
         }
 
+        //查询学生数量
         public int countUsers(Dictionary<string, string> strWheres)
         {
             return userDao.countUsers(strWheres);
+        }
+
+        //分页查询教师
+        public DataSet listTeachers(Dictionary<string, string> strWheres, int startIndex, int pageSize)
+        {
+            return userDao.listTeachers(strWheres, startIndex, pageSize);
+        }
+
+        //根据条件查询教师数量
+        public int countTeachers(Dictionary<string, string> strWheres)
+        {
+            return userDao.countTeachers(strWheres);
         }
 
         //添加用户
@@ -63,6 +77,12 @@ namespace BLL
         public int updateUser(User user)
         {
             return userDao.updateUser(user);
+        }
+
+        //修改密码
+        public int modifyPwd(int userId, string pwd)
+        {
+            return userDao.modifyPwd(userId, pwd);
         }
 
         public int deleteUser(int userId)

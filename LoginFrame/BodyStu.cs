@@ -158,6 +158,7 @@ namespace LoginFrame
             classId = Convert.ToInt32(pageCtrl2.dg.CurrentRow.Cells[0].Value);
             AddUser addUser = AddUser.getInstance();
             addUser.bodyStu = this;
+            addUser.user.UserType = "3";
             addUser.labTitle.Text = "添加学生";
             addUser.ShowDialog();
 
@@ -214,6 +215,7 @@ namespace LoginFrame
             AddUser addUser = AddUser.getInstance();
             addUser.bodyStu = this;
             addUser.labTitle.Text = "修改学生";
+            addUser.user.UserType = "3";
             addUser.labUserId.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[0].Value);
             addUser.txtLoginId.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[2].Value);
             addUser.txtUserName.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[1].Value);
