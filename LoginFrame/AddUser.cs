@@ -57,14 +57,12 @@ namespace LoginFrame
             user.UserName = txtUserName.Text;
             user.UserType = "3";
             user.Pwd = txtPwd.Text;
-            DateTime dt = DateTime.Now;
             if (userId > 0)            //修改
             {
                 user.UserId = userId;
                 result = userService.updateUser(user);
             } else
-            {
-                user.CreateDate = dt.ToString("yyyy-MM-dd HH:mm:ss");
+            {                
                 result = userService.addUser(user, bodyStu.classId);
             }
 
