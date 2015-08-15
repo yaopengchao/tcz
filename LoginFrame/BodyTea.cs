@@ -103,5 +103,43 @@ namespace LoginFrame
             txtUserName.Text = "";
             btnQuery_Click(sender, e);
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            AddUser addUser = AddUser.getInstance();
+            addUser.bodyTea = this;
+            addUser.user.UserType = "2";
+            addUser.labTitle.Text = "添加教师";
+            addUser.labUname.Text = "教师名称";
+            addUser.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AddUser addUser = AddUser.getInstance();
+            addUser.bodyTea = this;
+            addUser.user.UserType = "2";
+            addUser.labTitle.Text = "修改教师";
+            addUser.labUname.Text = "教师名称";
+            addUser.labUserId.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[0].Value);
+            addUser.txtLoginId.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[2].Value);
+            addUser.txtUserName.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[1].Value);
+            addUser.txtPwd.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[3].Value);
+            addUser.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int userId = Convert.ToInt32(pageCtrl.dg.CurrentRow.Cells[0].Value);
+            if (userId > 0)
+            {
+                DialogResult dr = MessageBox.Show("确定要删除'" + pageCtrl.dg.CurrentRow.Cells[1].Value + "'吗？", "确认删除", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (dr == DialogResult.OK)
+                {
+                    userService.deleteUser(userId);
+                    btnQueryClick();
+                }
+            }
+        }
     }
 }

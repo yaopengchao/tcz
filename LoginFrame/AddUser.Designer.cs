@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.labUname = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.labTitle = new System.Windows.Forms.Label();
@@ -40,16 +40,16 @@
             this.labUserId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // labUname
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(85, 90);
-            this.label1.MinimumSize = new System.Drawing.Size(0, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 30);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "学生名称";
+            this.labUname.AutoSize = true;
+            this.labUname.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labUname.Location = new System.Drawing.Point(85, 90);
+            this.labUname.MinimumSize = new System.Drawing.Size(0, 30);
+            this.labUname.Name = "labUname";
+            this.labUname.Size = new System.Drawing.Size(85, 30);
+            this.labUname.TabIndex = 0;
+            this.labUname.Text = "学生名称";
             // 
             // label2
             // 
@@ -158,7 +158,7 @@
             this.Controls.Add(this.labTitle);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labUname);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -171,7 +171,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label labUname;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label labTitle;
