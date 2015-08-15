@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using BLL;
-using Model;
 using System.IO;
 using Excel2007ReadWrite;
 using System.Collections;
@@ -60,6 +54,7 @@ namespace LoginFrame
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+            bodyStu.btnQueryClick();
         }
 
         private void AddUser_Load(object sender, EventArgs e)
@@ -88,7 +83,7 @@ namespace LoginFrame
             fs = new FileStream(AddUsers.tempDir + @"\xl\worksheets\sheet1.xml",
                 FileMode.Open, FileAccess.Read);
             // ..and call helper method that parses that XML and fills DataTable with values.
-            ExcelRW.ReadWorksheet(fs, stringTable, this.data, bodyStu.classId);
+            ExcelRW.ReadWorksheet(fs, stringTable, this.data, bodyStu.classId,Constant.RoleStudent);
         }
 
         private void labUserId_Click(object sender, EventArgs e)
@@ -111,8 +106,7 @@ namespace LoginFrame
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //Application.StartupPath + @"/批量导入学生.xlsx";
-            MessageBox.Show("还没加");
+            System.Diagnostics.Process.Start(Application.StartupPath + @"/../../批量导入学生.xlsx");
         }
     }
 }

@@ -114,20 +114,31 @@ namespace LoginFrame
             //对当前窗体应用更改后的资源
             ApplyResource();
 
-            addFavorites();
+            refreshFavorites();
 
 
         }
 
         /// <summary>
-        /// 添加当前登录用户的收藏夹内容
+        /// 刷新当前登录用户的收藏夹内容
         /// </summary>
-        private void addFavorites()
+        private void refreshFavorites()
         {
-            DataSet ds=IUser.getFavorites(LoginRoler.username);
-            ToolStripMenuItem subItem= AddContextMenu("测试", menuStrip1.Items, null);
-            subItem.Click += new EventHandler(subItemClick1);//绑定方法
-            toolStripMenuItem1.DropDownItems.Add(subItem);
+            //清空当前收藏列表保留第一项
+                for(int a= toolStripMenuItem1.DropDownItems.Count-1; a>=2; a--)
+            {
+                toolStripMenuItem1.DropDownItems.RemoveAt(a);
+            }
+
+        //再从数据库获取该用户最新列表
+        DataSet dataSet = IUser.getFavorites(LoginRoler.username);
+
+            foreach (DataRow row in dataSet.Tables[0].Rows)
+            {
+                ToolStripMenuItem subItem = AddContextMenu(row["name"].ToString(), menuStrip1.Items, null);
+                subItem.Click += new EventHandler(subItemClick1);//绑定方法
+                toolStripMenuItem1.DropDownItems.Add(subItem);
+            }
         }
 
         private void subItemClick1(object sender, EventArgs e)
@@ -235,7 +246,6 @@ namespace LoginFrame
                     MessageBox.Show("请先选择课件再点击播放!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     return;
                 }
-                //string swfName = mainFrame.bodyMain.listView1.SelectedItems[0].SubItems[0].Text;
                 string swfName = mainFrame.bodyMain.listView1.SelectedItems[0].SubItems[1].Text;
                 string filpath = Application.StartupPath + @"/../../lessons/" + swfName + ".swf";
                 //检测文件是否存在
@@ -680,19 +690,28 @@ namespace LoginFrame
         {
             //收藏当前课件到数据库
             //获取当前课件的文件名  文件名
-            if (mainFrame.bodyMain.listView1.Items.Count<=0)
+            if (mainFrame.bodyMain.listView1.Items.Count <= 0)
             {
                 MessageBox.Show("请先选择课件再点击收藏!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 return;
             }
             else
             {
-                string filename = mainFrame.bodyMain.listView1.SelectedItems[0].SubItems[1].Text;
-                bool isAdd=IUser.addFavorite(LoginRoler.username, filename);
-                if (isAdd)
+                bool flag = true;
+                if (mainFrame.bodyMain.listView1.Items.Count > 0) { 
+                    //循环选中列表
+                    foreach (ListViewItem lt in mainFrame.bodyMain.listView1.Items)
+                    {
+                        string filename = mainFrame.bodyMain.listView1.SelectedItems[0].SubItems[1].Text;
+                        bool isAdd = IUser.addFavorite(LoginRoler.username, filename);
+                        flag = flag && isAdd;
+                    }
+                if (!flag)
                 {
+                        MessageBox.Show("有课件收藏失败!请核对");
+                    }
                     //重新刷新收藏夹数据
-                    
+                    refreshFavorites();
                 }
             }
         }

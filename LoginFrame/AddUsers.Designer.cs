@@ -73,7 +73,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(244, 172);
+            this.button1.Location = new System.Drawing.Point(236, 172);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 30);
             this.button1.TabIndex = 7;
@@ -83,7 +83,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(414, 172);
+            this.button2.Location = new System.Drawing.Point(385, 172);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 30);
             this.button2.TabIndex = 10;
@@ -118,12 +118,13 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(87, 181);
+            this.linkLabel1.Location = new System.Drawing.Point(126, 181);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(107, 12);
+            this.linkLabel1.Size = new System.Drawing.Size(53, 12);
             this.linkLabel1.TabIndex = 13;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "点击下载 导入模板";
+            this.linkLabel1.Text = "导入模板";
+            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // AddUsers

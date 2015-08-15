@@ -5,14 +5,13 @@
 using System;
 using System.IO;
 using System.Collections;
-using System.Collections.Generic;
 using System.Text;
 using System.Data;
 using System.Xml;
-
 using ICSharpCode.SharpZipLib.Zip;
 using Model;
 using BLL;
+using LoginFrame;
 
 namespace Excel2007ReadWrite
 {
@@ -55,7 +54,7 @@ namespace Excel2007ReadWrite
             return stringTable;
         }
 
-        public static void ReadWorksheet(Stream input, ArrayList stringTable, DataTable data, int classid)
+        public static void ReadWorksheet(Stream input, ArrayList stringTable, DataTable data, int classid,string user_type)
         {
             using (XmlTextReader reader = new XmlTextReader(input))
             {
@@ -94,14 +93,17 @@ namespace Excel2007ReadWrite
 
                                 if (colIndex==3)
                                 {
-                                    //加入数据库中
-                                    if (addUser(dr, classid))
+                                    if (user_type== Constant.RoleStudent)
                                     {
-                                        dr[3] = "导入成功";
-                                    }
-                                    else
-                                    {
-                                        dr[3] = "导入失败";
+                                        //加入数据库中
+                                        if (addUser(dr, classid))
+                                        {
+                                            dr[3] = "导入成功";
+                                        }
+                                        else
+                                        {
+                                            dr[3] = "导入失败";
+                                        }
                                     }
                                 }
                                 break;
