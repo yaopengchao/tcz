@@ -24,13 +24,6 @@ namespace LoginFrame
             //this.textBox1.Text = "manager";
             //this.textBox2.Text = "manager";
 
-
-            this.comboBox2.Items.Add("admin");
-            this.comboBox2.Items.Add("student");
-            this.comboBox2.Items.Add("teacher");
-
-            comboBox2.SelectedIndex = 0;
-
         }
 
         public static string checkCode = "";
@@ -128,11 +121,11 @@ namespace LoginFrame
         {
             bool flag = false;
             //string username = this.textBox1.Text;
-            string username = comboBox2.SelectedItem.ToString();
+            string loginId = txtLoginId.Text;
 
             string password = this.textBox2.Text;
 
-            if (username == "")
+            if (loginId == "")
             {
                 MessageBox.Show("用户名不能为空!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
@@ -155,12 +148,12 @@ namespace LoginFrame
                 {
                     ImplUser Bll = new ImplUser();
 
-                    int a = Bll.ExistsName(username);
+                    int a = Bll.ExistsName(loginId);
 
                     if (a != 0)
                     {
 
-                        DataSet ds = Bll.ExistsPwd(username, password);
+                        DataSet ds = Bll.ExistsPwd(loginId, password);
 
                         if (ds.Tables[0].Rows.Count > 0)
                         {
@@ -311,7 +304,7 @@ namespace LoginFrame
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.textBox2.Text = comboBox2.SelectedItem.ToString();
+
         }
     }
 }
