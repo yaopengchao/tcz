@@ -239,11 +239,13 @@ namespace LoginFrame
             return AddressIP;
         }
 
+       
+
+
         int comboBox3selectIndex;
         private void button1_Click(object sender, EventArgs e)
         {
-            this.label6.Text = "搜寻局域网数据库IP";
-
+          
             //重置默认
             RunDoWhile = true;
 
@@ -432,6 +434,7 @@ Console.WriteLine("====开始搜寻局域网数据库IP====");
         {
             while (true)
             {
+                Thread.Sleep(1000);
                 byte[] buf = Encoding.Default.GetBytes("ServerIp^"+LoginRoler.serverIp+"^"+ LoginRoler.serverType+"^");
                 send("224.5.6.7", "5000", "10", buf);
             }

@@ -65,5 +65,10 @@ namespace BLL
         {
             return daoUser.addFavorite(user_name,  filename);
         }
+
+        public bool deleteFavorite(string user_name, string filename)
+        {
+            return daoUser.deleteFavorite(user_name, filename);
+        }
     }
 }

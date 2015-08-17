@@ -240,6 +240,40 @@ namespace DAL
             return ds;
         }
 
+        /// <summary>
+        /// 删除某个收藏
+        /// </summary>
+        /// <param name="user_name"></param>
+        /// <param name="filename"></param>
+        /// <returns></returns>
+        public bool deleteFavorite(string user_name, string filename)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append(" delete from favorites  ");
+            strSql.Append(" where ");
+            strSql.Append(" user_name=?user_name ");
+            strSql.Append(" and ");
+            strSql.Append(" filename=?filename ");
+
+            MySqlParameter[] parameters0 = {
+                    new MySqlParameter("?user_name", MySqlDbType.VarChar),
+                    new MySqlParameter("?filename", MySqlDbType.VarChar)
+            };
+
+            parameters0[0].Value = user_name;
+            parameters0[1].Value = filename;
+
+            int row0 = Convert.ToInt32(MySqlHelper.ExecuteScalar(strSql.ToString(), parameters0));
+
+            if (row0 > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         /// <summary>
         /// 添加收藏夹文件
@@ -250,7 +284,7 @@ namespace DAL
         public bool addFavorite(string user_name,string filename)
         {
             StringBuilder strSql = new StringBuilder();
-            //先检查是否有旧记录没有正确退出
+            //先检查是否有旧记录
             strSql.Append(" select count(1) from favorites  ");
             strSql.Append(" where ");
             strSql.Append(" user_name=?user_name ");
