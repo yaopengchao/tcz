@@ -28,9 +28,9 @@ namespace BLL
         /// </summary>
         /// <param name="U_Id"></param>
         /// <returns></returns>
-        public DataSet ExistsPwd(string loginId, string pwd)
+        public DataSet ExistsPwd(string loginId, string pwd,string user_type)
         {
-            return daoUser.ExistsPwd(loginId, pwd);
+            return daoUser.ExistsPwd(loginId, pwd, user_type);
         }
 
         public DataSet getUsersFromChatroom()

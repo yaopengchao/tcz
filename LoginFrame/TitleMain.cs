@@ -6,7 +6,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Data;
 using BLL;
-
+using Model;
 
 using System.Threading;
 using System.Globalization;

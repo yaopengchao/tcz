@@ -7,7 +7,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Media;
 using System.Globalization;
-
+using Model;
 namespace LoginFrame
 {
     public partial class MainFrame : Form
@@ -70,12 +70,9 @@ namespace LoginFrame
 
             if (LoginRoler.roleid == Constant.RoleStudent)
             {
-                //MessageBox.Show("开启自动监听....");
-
                 Thread t = new Thread(new ThreadStart(RecvThread));
                 t.IsBackground = true;
                 t.Start();
-
             }
         }
 

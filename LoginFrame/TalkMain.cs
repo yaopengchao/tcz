@@ -9,6 +9,7 @@ using System.Net.Sockets;
 using System.Collections.Generic;
 using System.Text;
 using BLL;
+using Model;
 
 namespace LoginFrame
 {
@@ -27,7 +28,6 @@ namespace LoginFrame
             Oraycn.MCapture.GlobalUtil.SetAuthorizedUser("FreeUser", "");
             Control.CheckForIllegalCrossThreadCalls = false;
         }
-        private Thread threadListUsers;
 
         Thread threadWatch = null;
         //负责监听的套接字
@@ -106,7 +106,7 @@ namespace LoginFrame
 
         Dictionary<string, Socket> socketDic = new Dictionary<string, Socket>();
             //用来接收数据的线程
-            Thread threadRec = null;
+           
             //监听方法
             void WatchConnection()
         {
@@ -268,8 +268,7 @@ Console.WriteLine("客户端连接成功:" + sokConnection.RemoteEndPoint.ToStri
         
 
 
-        private int autioDataTotalLen = 0;
-        private int captureAudioCount = 0;
+     
         
         void AudioCaptured(byte[] audioData) //采集到的声音数据
         {

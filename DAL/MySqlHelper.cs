@@ -1,7 +1,7 @@
 ﻿using System.Data;
 using MySql.Data.MySqlClient;
 using System.Configuration;
-
+using Model;
 
 
 namespace DAL
@@ -14,8 +14,7 @@ namespace DAL
         {
             get
             {
-                //string s = ConfigurationManager.AppSettings["Port"];
-                string strConn = System.Configuration.ConfigurationSettings.AppSettings["strConn"].ToString();
+                string strConn = "server="+ LoginRoler.serverIp + "; user id="+ ConfigurationManager.AppSettings["username"].ToString() + "; password="+ ConfigurationManager.AppSettings["password"].ToString() + "; database="+ ConfigurationManager.AppSettings["database"].ToString() + "; pooling=false;charset=utf8";
                 if (mysqlconnection == null)
                 {
                     mysqlconnection = new MySqlConnection(strConn);

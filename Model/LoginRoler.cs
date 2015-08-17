@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace LoginFrame
+namespace Model
 {
     public class LoginRoler
     {
@@ -14,5 +14,6 @@ namespace LoginFrame
         public static int language;
         public static int userId;
         public static string pwd;
+        public static string serverIp;
     }
 }
