@@ -38,6 +38,23 @@ namespace LoginFrame
 
             this.label6.Text = LoginRoler.username;
 
+            string roleId = LoginRoler.roleid;
+            if (roleId.Equals("1"))                 //管理员
+            {
+                menuStrip1.Items[2].Visible = false;             //考试
+                panel5.Height = 180;                          
+            } else if (roleId.Equals("2"))          //教师
+            {
+                menuStrip1.Items[1].Visible = false;            //自我测试
+                menuStrip1.Items[2].Visible = false;            //考试
+                menuStrip1.Items[5].Visible = false;            //教师管理
+                panel5.Height = 140;
+            } else if (roleId.Equals("3"))          //学生
+            {
+                menuStrip1.Items[7].Visible = false;            //云服务
+                panel5.Height = 180;
+            }
+
         }
 
         /// <summary>

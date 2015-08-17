@@ -43,7 +43,29 @@ namespace LoginFrame
         {
             InitializeComponent();
 
-            
+            string roleId = LoginRoler.roleid;
+            if (roleId.Equals("1"))                 //管理员
+            {
+                button4.Visible = false;            //同步
+                button9.Visible = false;            //对话
+                button6.Location = new System.Drawing.Point(355, 10);
+                button7.Location = new System.Drawing.Point(436, 10);
+                button10.Location = new System.Drawing.Point(517, 10);
+                menuStrip1.Location = new Point(598, 19);
+            }
+            else if (roleId.Equals("2"))          //教师
+            {
+
+            }
+            else if (roleId.Equals("3"))          //学生
+            {
+                button4.Visible = false;            //同步
+                button9.Visible = false;            //对话
+                button6.Location = new System.Drawing.Point(355, 10);
+                button7.Location = new System.Drawing.Point(436, 10);
+                button10.Location = new System.Drawing.Point(517, 10);
+                menuStrip1.Location = new Point(598, 19);
+            }
 
         }
 
