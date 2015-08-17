@@ -15,5 +15,6 @@ namespace Model
         public static int userId;
         public static string pwd;
         public static string serverIp;
+        public static string serverType;
     }
 }

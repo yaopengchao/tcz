@@ -265,7 +265,7 @@ namespace LoginFrame
 
             if (LoginRoler.serverIp == "" || LoginRoler.serverIp==null)//不存在IP  只有学生先登录才会不存在
             {
-                    MessageBox.Show("请等待老师先进入系统!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("请等待老师或者管理员先进入系统!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     return;    
             }
             else//获取到IP了   且   isLocalIp  为true 就要给大家发消息了
@@ -279,6 +279,15 @@ Console.WriteLine(">>>>>>>>>>>>>.往局域网中发送数据库IP的消息");
                     t.Start();
                 }
             }
+
+            //判断下是否局域网中已经有老师存在
+            string user_type = ((ComboxItem)this.comboBox3.Items[comboBox3selectIndex]).Value;
+            if (user_type == Constant.RoleTeacher  && Constant.RoleTeacher==LoginRoler.serverType  && !isLocalIp)
+            {
+                MessageBox.Show("局域网中已经有教师登录!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
+
 
             Console.WriteLine("开启数据库操作.......");
             this.label6.Text = "开启数据库操作";
@@ -359,13 +368,15 @@ Console.WriteLine(">>>>>>>>>>>>>.往局域网中发送数据库IP的消息");
         {
             //创建搜索需要的UDP
             createReceUDPClient();
+            
 
             //创建定时器控制搜索异步进程的时间
-            timer=createTimer(5000);
+            timer =createTimer(5000);
             timer.Start();
 
 Console.WriteLine("====开始搜寻局域网数据库IP====");
             
+
             do
             {
                 if ((searchServerIpthr == null))
@@ -376,116 +387,150 @@ Console.WriteLine("====开始搜寻局域网数据库IP====");
                         searchServerIpthr.IsBackground = true;
                         Console.WriteLine("==执行搜索任务");
                         searchServerIpthr.Start();
-                   
                 }
             } while (RunDoWhile);
  Console.WriteLine("====结束搜寻局域网数据库IP====");
             
         }
 
+        Socket s;
+        private void recv(string mcastGroup, string port)
+        {
+            if (s==null)
+            {
+                s = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+                IPEndPoint ipep = new IPEndPoint(IPAddress.Any, int.Parse(port));
+                s.Bind(ipep);
+
+                IPAddress ip = IPAddress.Parse(mcastGroup);
+
+                s.SetSocketOption(SocketOptionLevel.IP, SocketOptionName.AddMembership, new MulticastOption(ip, IPAddress.Any));
+            }
+        }
+
         private System.Timers.Timer createTimer(int time)
         {
             System.Timers.Timer timer = new System.Timers.Timer(time);
             timer.Elapsed += new System.Timers.ElapsedEventHandler(theout);
-            timer.AutoReset = true;
-            timer.Enabled = true;
+            timer.AutoReset = false;//设置是执行一次（false）还是一直执行(true)；
+            timer.Enabled = true;//是否执行System.Timers.Timer.Elapsed事件；
             return timer;
             
         }
-     
-        UdpClient sendClient;
-        IPEndPoint sendMulticast;
 
         private void createSendUDPClient()
         {
-            if (sendClient == null)
-            {
-                sendClient = new UdpClient(6000);
-            }
-            if (sendMulticast == null)
-            {
-                sendMulticast = new IPEndPoint(IPAddress.Parse("224.0.0.101"), 6005);
-            }
+           
         }
-
-        UdpClient receClient;
-        IPEndPoint receMulticast;
 
         private void createReceUDPClient()
         {
-            if (receClient==null)
-            {
-                receClient = new UdpClient(6005);
-            }
-            if (receMulticast == null)
-            {
-                IPEndPoint remoteEp = new IPEndPoint(IPAddress.Any, 0);
-            }
-            receClient.JoinMulticastGroup(IPAddress.Parse("224.0.0.101"));
+            recv("224.5.6.7", "5000");
         }
 
         private void sendThread()
         {
             while (true)
             {
-                byte[] buf = Encoding.Default.GetBytes("ServerIp^"+LoginRoler.serverIp+"^");
-//Console.WriteLine("****发送消息"+ "ServerIp^" + LoginRoler.serverIp + "^");
-                sendClient.Send(buf, buf.Length, sendMulticast);
+                byte[] buf = Encoding.Default.GetBytes("ServerIp^"+LoginRoler.serverIp+"^"+ LoginRoler.serverType+"^");
+                send("224.5.6.7", "5000", "10", buf);
             }
+        }
+
+        private void send(string mcastGroup, string port, string ttl, byte[] data)
+        {
+
+            IPAddress ip;
+            try
+            {
+                //Console.WriteLine("MCAST Send on Group: {0} Port: {1} TTL: {2}", mcastGroup, port, ttl);
+                ip = IPAddress.Parse(mcastGroup);
+
+                Socket s = new Socket(AddressFamily.InterNetwork,
+                                SocketType.Dgram, ProtocolType.Udp);
+
+                s.SetSocketOption(SocketOptionLevel.IP,
+                    SocketOptionName.AddMembership, new MulticastOption(ip));
+
+                s.SetSocketOption(SocketOptionLevel.IP,
+                    SocketOptionName.MulticastTimeToLive, int.Parse(ttl));
+
+                IPEndPoint ipep = new IPEndPoint(IPAddress.Parse(mcastGroup), int.Parse(port));
+
+                //Console.WriteLine("Connecting...");
+
+                s.Connect(ipep);
+                  
+                s.Send(data, data.Length, SocketFlags.None);
+             
+
+                //Console.WriteLine("Closing Connection...");
+                s.Close();
+            }
+            catch (System.Exception e) { Console.Error.WriteLine(e.Message); }
         }
 
         Thread searchServerIpthr;
 
         private void theout(object sender, ElapsedEventArgs e)
         {
-            //超时之后假如是老师或者管理员(非学生登录)则将Ip设定为该机器IP
-            
-            string user_type = ((ComboxItem)this.comboBox3.Items[comboBox3selectIndex]).Value;
-            if (user_type!=Constant.RoleStudent)//管理员和老师
+            if (RunDoWhile)
             {
-                LoginRoler.serverIp = GetAddressIP();
-                isLocalIp = true;
-            }
-            else
-            {
-                LoginRoler.serverIp = "";
-            }
-Console.WriteLine("搜索线程终止且终止定时器,IP:"+ LoginRoler.serverIp);
-                searchServerIpthr.Abort();
-                timer.Stop();
+                //超时之后假如是老师或者管理员(非学生登录)则将Ip设定为该机器IP
+
+                string user_type = ((ComboxItem)this.comboBox3.Items[comboBox3selectIndex]).Value;
+                if (user_type == Constant.RoleManager)//管理员
+                {
+                    LoginRoler.serverIp = GetAddressIP();
+                    LoginRoler.serverType = Constant.RoleManager;
+                    isLocalIp = true;
+                }else
+                if (user_type ==Constant.RoleTeacher)//老师
+                {
+                    LoginRoler.serverIp = GetAddressIP();
+                    LoginRoler.serverType = Constant.RoleTeacher;
+                    isLocalIp = true;
+                }
+                else
+                {
+                    LoginRoler.serverIp = "";
+                    LoginRoler.serverType = Constant.RoleStudent;
+                }
+
+                //Console.WriteLine("搜索线程终止且终止定时器,IP:" + LoginRoler.serverIp);
                 RunDoWhile = false;
-                //receClient = null;
-                //receMulticast = null;
+                searchServerIpthr.Abort();
+                
+            }
         }
 
         void RecvThread()
         {
-                while (true)
-                {
-                    byte[] buf = receClient.Receive(ref receMulticast);
-                    string msg = Encoding.Default.GetString(buf);
+
+            while (true)
+            {
+                byte[] b = new byte[1024];
+                s.Receive(b);
+                string msg = System.Text.Encoding.ASCII.GetString(b, 0, b.Length);
                 string[] splitString = msg.Split('^');
-                    string swfName = splitString[1];
-                    switch (splitString[0])
-                    {
-                        case "ServerIp"://服务器IP指令
-                            Console.WriteLine("接收到局域网中某台机器传送来的IP:" + splitString[1]);
-                            LoginRoler.serverIp = splitString[1];
-                            //搜索进程结束 且将定时器取消
-                            searchServerIpthr.Abort();
-                            timer.Stop();
-                            RunDoWhile = false;
-
-                            //receClient = null;
-                            //receMulticast = null;
-
-                            break;
-                        default:
-                            //Console.WriteLine("进入默认了...");
+                switch (splitString[0])
+                {
+                    case "ServerIp"://服务器IP指令
+                        Console.WriteLine("接收到局域网中某台机器传送来的IP:" + splitString[1]);
+                        LoginRoler.serverIp = splitString[1];
+                        LoginRoler.serverType = splitString[2];
+                        //Console.WriteLine("^^^^^^^^^^^^^^^^" + LoginRoler.serverIp);
+                        //搜索进程结束 且将定时器取消
+                        RunDoWhile = false;
+                        searchServerIpthr.Abort();
                         break;
-                    }
+                    default:
+                        //Console.WriteLine("进入默认了...");
+                        break;
                 }
-           
+
+            }
+            //s.Close();
         }
 
 
