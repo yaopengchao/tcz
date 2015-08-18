@@ -2,8 +2,6 @@
 using System.Windows.Forms;
 using System.Threading;
 using System.Collections;
-using Oraycn.MCapture;
-using Oraycn.MPlayer;
 using System.Net;
 using System.Net.Sockets;
 using System.Collections.Generic;
@@ -28,11 +26,8 @@ namespace LoginFrame
         public TalkMain()
         {
             InitializeComponent();
-            //Oraycn.MCapture.GlobalUtil.SetAuthorizedUser("FreeUser", "");
             Control.CheckForIllegalCrossThreadCalls = false;
-
             Initialize();
-
         }
 
 
@@ -436,14 +431,8 @@ namespace LoginFrame
                 //打印输出
                 Console.WriteLine("=====================服 务 器 连 接 成 功======================");
 
-                //创建线程 监听服务器 发来的消息
-                threadReceive = new Thread(ClientRecMsg);
-                //设置为后台线程
-                threadReceive.IsBackground = true;
-                //开启线程
-                threadReceive.Start();
+               
             }
-            this.audioPlayer = PlayerFactory.CreateAudioPlayer(int.Parse("0"), 16000, 1, 16, 2);
 
 
         }
@@ -475,83 +464,6 @@ Console.WriteLine("客户端连接成功:" + sokConnection.RemoteEndPoint.ToStri
                 }
         }
 
-        void ClientRecMsg()
-        {
-            while (true)
-            {
-
-                //初始化一个 缓存区(字节数组)
-                byte[] data = new byte[512];
-                //将接受到的数据 存放到data数组中 返回接受到的数据的实际长度
-
-                int receiveBytes = socketClient.Receive(data);
-
-                if (this.audioPlayer != null)
-                {
-                    //Console.WriteLine(data.Length);
-                    this.audioPlayer.Play(data);
-                }
-
-                //Console.WriteLine("学生接收数据：" + receiveBytes);
-                //Console.WriteLine(this.audioPlayer == null);
-
-                //if (this.audioPlayer != null)
-                //{
-                //Console.WriteLine(data);
-
-                //this.audioPlayer.Play(data);
-                //}
-
-
-                //将字符串转换成字节数组
-                //string strMsg = Encoding.UTF8.GetString(data, 0, receiveBytes);
-                //打印输出
-
-            }
-        }
-
-        void ServerRecMsg(object socket)
-        {
-            //持续监听接收数据
-            while (true)
-            {
-
-                while (true)
-                {
-                    //初始化一个 缓存区(字节数组)
-                    byte[] data = new byte[512];
-                    //将接受到的数据 存放到data数组中 返回接受到的数据的实际长度
-
-                    int receiveBytes = socketServer.Receive(data);
-
-                    if (this.audioPlayer != null)
-                    {
-                        this.audioPlayer.Play(data);
-                    }
-                }
-                   
-            }
-        }
-
-        
-        private void ListUsersOnline()
-        {
-            //ArrayList alUsers = ListUsers.GetComputerList();
-
-            ListUsers listUsers = new ListUsers();
-            ArrayList alUsers = listUsers.GetComputerListFromChatRoom();
-
-            if (alUsers.Count > 0)
-            {
-                for (int i = 0; i < alUsers.Count; i++)
-                {
-                    string[] strTreeNodeText=(string[])alUsers[i];
-                    ListViewItem item = new ListViewItem(new string[] {strTreeNodeText[2] });
-                    this.listView1.Items.Insert(i, item);
-                }
-            }
-            PicVisible(false);
-        }
 
         private delegate void PicVisibleHandle(bool b);
 
@@ -585,28 +497,19 @@ Console.WriteLine("客户端连接成功:" + sokConnection.RemoteEndPoint.ToStri
             return instance;
         }
 
-        private ICapturer capturer;
-        private IAudioPlayer audioPlayer;
+     
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (isSpeaking)
             {
                 isSpeaking = false;
-                this.button1.Text = "开启语音";
-                this.capturer.Stop();
+                this.btnEndCall.Text = "开启语音";
             }
             else
             {
                 isSpeaking = true;
-                this.button1.Text = "关闭语音";
-                
-                //获取本机麦克风数据
-                //this.capturer = CapturerFactory.CreateMicrophoneCapturer(0);
-                //((IMicrophoneCapturer)this.capturer).AudioCaptured += new ESBasic.CbGeneric<byte[]>(AudioCaptured);
-
-                //开始采集
-                //this.capturer.Start();
+                this.btnEndCall.Text = "关闭语音";
             }
         }
 
@@ -651,7 +554,7 @@ Console.WriteLine("客户端连接成功:" + sokConnection.RemoteEndPoint.ToStri
             try
             {
                 //Get the IP we want to call.
-                otherPartyIP = new IPEndPoint(IPAddress.Parse("从列表中获取"), 1450);
+                otherPartyIP = new IPEndPoint(IPAddress.Parse("192.168.0.104"), 1450);
                 otherPartyEP = (EndPoint)otherPartyIP;
 
                 //Get the vocoder to be used.
@@ -664,6 +567,10 @@ Console.WriteLine("客户端连接成功:" + sokConnection.RemoteEndPoint.ToStri
                     vocoder = Vocoder.uLaw;
                 }
                 else if (cmbCodecs.SelectedText == "None")
+                {
+                    vocoder = Vocoder.None;
+                }
+                else
                 {
                     vocoder = Vocoder.None;
                 }
@@ -684,7 +591,7 @@ Console.WriteLine("客户端连接成功:" + sokConnection.RemoteEndPoint.ToStri
                 //Create the message to send.
                 Data msgToSend = new Data();
 
-                msgToSend.strName = "发送者姓名";   //Name of the user.
+                msgToSend.strName = LoginRoler.username;   //Name of the user.
                 msgToSend.cmdCommand = cmd;         //Message to send.
                 msgToSend.vocoder = vocoder;        //Vocoder to be used.
 
@@ -884,20 +791,33 @@ Console.WriteLine("客户端连接成功:" + sokConnection.RemoteEndPoint.ToStri
             }
         }
 
-
-        /// <summary>
-        /// 邀请
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             Call();
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEndCall_Click(object sender, EventArgs e)
+        {
+            DropCall();
+        }
+
+        private void DropCall()
+        {
+            try
+            {
+                //Send a Bye message to the user to end the call.
+                SendMessage(Command.Bye, otherPartyEP);
+                UninitializeCall();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "VoiceChat-DropCall ()", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

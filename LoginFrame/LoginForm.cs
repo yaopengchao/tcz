@@ -434,7 +434,6 @@ Console.WriteLine("====开始搜寻局域网数据库IP====");
         {
             while (true)
             {
-                Thread.Sleep(1000);
                 byte[] buf = Encoding.Default.GetBytes("ServerIp^"+LoginRoler.serverIp+"^"+ LoginRoler.serverType+"^");
                 send("224.5.6.7", "5000", "10", buf);
             }

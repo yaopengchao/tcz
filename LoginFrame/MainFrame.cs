@@ -93,9 +93,6 @@ namespace LoginFrame
             if (LoginRoler.roleid != Constant.RoleTeacher)
             {
                 Initialize();
-                //Thread t = new Thread(new ThreadStart(RecvThread));
-                //t.IsBackground = true;
-                //t.Start();
             }
         }
 

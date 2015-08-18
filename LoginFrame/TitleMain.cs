@@ -61,7 +61,7 @@ namespace LoginFrame
             {
                 button4.Visible = false;            //同步
                 button9.Visible = false;            //对话
-               // button9.Location = new System.Drawing.Point(, 10);
+               //button9.Location = new System.Drawing.Point(, 10);
                 button6.Location = new System.Drawing.Point(355, 10);
                 button7.Location = new System.Drawing.Point(436, 10);
                 button10.Location = new System.Drawing.Point(517, 10);
@@ -487,16 +487,10 @@ namespace LoginFrame
                         //离开聊天室
                         bool outChatroom = Bll.outChatroom(LoginRoler.username);
 
-                        this.mainFrame.panel6.Controls.Clear();
-                        BodyMain bodyMain = BodyMain.createForm();
-                        bodyMain.TopLevel = false;
-                        bodyMain.FormBorderStyle = FormBorderStyle.None;
-                        bodyMain.Dock = System.Windows.Forms.DockStyle.Fill;
-                        this.mainFrame.panel6.Controls.Add(bodyMain);
-                        bodyMain.Show();
 
-                        //互相访问控件
-                        this.mainFrame.bodyMain = bodyMain;
+                        //TalkMain talkMain = TalkMain.createForm();
+                        //talkMain.Close();
+                        closeVoiceChat();
 
                         this.button9.Text = "对话";
 
@@ -511,18 +505,10 @@ namespace LoginFrame
 
                         bool inChatroom = Bll.inChatroom(LoginRoler.username, LoginRoler.ip);
 
-                        this.mainFrame.panel6.Controls.Clear();
-                        TalkMain talkMain = TalkMain.createForm();
-                        talkMain.TopLevel = false;
-                        talkMain.FormBorderStyle = FormBorderStyle.None;
-                        talkMain.Dock = System.Windows.Forms.DockStyle.Fill;
-                        this.mainFrame.panel6.Controls.Add(talkMain);
-                        talkMain.Show();
 
-                        //互相访问控件
-
-                        this.mainFrame.talkMain = talkMain;
-
+                        // TalkMain talkMain = TalkMain.createForm();
+                        //talkMain.ShowDialog();
+                        openVoiceChat();
                         this.button9.Text = "对话中";
 
                     }
@@ -539,16 +525,10 @@ namespace LoginFrame
                     //离开聊天室
                     bool outChatroom = Bll.outChatroom(LoginRoler.username);
 
-                    this.mainFrame.panel6.Controls.Clear();
-                    BodyMain bodyMain = BodyMain.createForm();
-                    bodyMain.TopLevel = false;
-                    bodyMain.FormBorderStyle = FormBorderStyle.None;
-                    bodyMain.Dock = System.Windows.Forms.DockStyle.Fill;
-                    this.mainFrame.panel6.Controls.Add(bodyMain);
-                    bodyMain.Show();
 
-                    //互相访问控件
-                    this.mainFrame.bodyMain = bodyMain;
+                    //TalkMain talkMain = TalkMain.createForm();
+                    //talkMain.Close();
+                    closeVoiceChat();
 
                     this.button9.Text = "对话";
 
@@ -563,27 +543,32 @@ namespace LoginFrame
 
                     bool inChatroom = Bll.inChatroom(LoginRoler.username, LoginRoler.ip);
 
-                    this.mainFrame.panel6.Controls.Clear();
-                    TalkMain talkMain = TalkMain.createForm();
-                    talkMain.TopLevel = false;
-                    talkMain.FormBorderStyle = FormBorderStyle.None;
-                    talkMain.Dock = System.Windows.Forms.DockStyle.Fill;
-                    this.mainFrame.panel6.Controls.Add(talkMain);
-                    
-                    talkMain.Show();
 
-                    //互相访问控件
+                    //TalkMain talkMain = TalkMain.createForm();
+                    //talkMain.Show();
+                    openVoiceChat();
 
-                    this.mainFrame.talkMain = talkMain;
 
                     this.button9.Text = "对话中";
 
                 }
             }
-
-
             
         }
+
+        VoiceChat vc;
+        void openVoiceChat()
+        {
+            vc = new VoiceChat();
+            vc.Show();
+        }
+
+        void closeVoiceChat()
+        {
+
+            vc.Close();
+        }
+
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {

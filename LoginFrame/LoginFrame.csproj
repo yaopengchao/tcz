@@ -188,7 +188,7 @@
     <Compile Include="VoiceChat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VoiceChat.Designer.cs">
+    <Compile Include="VoiceChat.designer.cs">
       <DependentUpon>VoiceChat.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddClass.resx">
