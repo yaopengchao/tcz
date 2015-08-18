@@ -60,12 +60,12 @@ namespace LoginFrame
             else if (roleId.Equals(Constant.RoleStudent))          //学生
             {
                 button4.Visible = false;            //同步
-                button9.Visible = true;            //对话
-                button9.Location = new System.Drawing.Point(355, 10);
-                button6.Location = new System.Drawing.Point(436, 10);
-                button7.Location = new System.Drawing.Point(517, 10);
-                button10.Location = new System.Drawing.Point(598, 10);
-                menuStrip1.Location = new Point(679, 19);
+                button9.Visible = false;            //对话
+               // button9.Location = new System.Drawing.Point(, 10);
+                button6.Location = new System.Drawing.Point(355, 10);
+                button7.Location = new System.Drawing.Point(436, 10);
+                button10.Location = new System.Drawing.Point(517, 10);
+                menuStrip1.Location = new Point(598, 19);
             }
 
         }
@@ -105,8 +105,6 @@ namespace LoginFrame
         /// <param name="e"></param>
         private void TitleMain_Load(object sender, EventArgs e)
         {
-            
-
             if (LoginRoler.language == Constant.zhCN)
             {
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("zh-CN");

@@ -63,6 +63,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DLLS\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2902.0\Microsoft.DirectX.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.DirectSound, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\DirectX for Managed Code\1.0.2902.0\Microsoft.DirectX.DirectSound.dll</HintPath>
+    </Reference>
     <Reference Include="Oraycn.MCapture">
       <HintPath>..\Dlls\Oraycn.MCapture.dll</HintPath>
     </Reference>
@@ -101,6 +109,8 @@
     <Compile Include="AddUsers.Designer.cs">
       <DependentUpon>AddUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="ALawDecoder.cs" />
+    <Compile Include="ALawEncoder.cs" />
     <Compile Include="ComboxItem.cs" />
     <Compile Include="ExcelRW.cs" />
     <Compile Include="ListUsers.cs" />
@@ -110,6 +120,8 @@
     <Compile Include="ModifyPassword.Designer.cs">
       <DependentUpon>ModifyPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="MuLawDecoder.cs" />
+    <Compile Include="MuLawEncoder.cs" />
     <Compile Include="PageControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -172,6 +184,12 @@
     </Compile>
     <Compile Include="TitleTea.Designer.cs">
       <DependentUpon>TitleTea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoiceChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VoiceChat.Designer.cs">
+      <DependentUpon>VoiceChat.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddClass.resx">
       <DependentUpon>AddClass.cs</DependentUpon>
@@ -248,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TitleTea.resx">
       <DependentUpon>TitleTea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoiceChat.resx">
+      <DependentUpon>VoiceChat.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config">
       <SubType>Designer</SubType>
