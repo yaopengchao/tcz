@@ -301,6 +301,8 @@
     <Content Include="DLLS\ESFramework.dll" />
     <Content Include="DLLS\ESFramework.xml" />
     <Content Include="DLLS\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="DLLS\Microsoft.DirectX.DirectSound.dll" />
+    <Content Include="DLLS\Microsoft.DirectX.dll" />
     <Content Include="DLLS\Oraycn.MCapture.dll" />
     <Content Include="DLLS\Oraycn.MCapture.xml" />
     <Content Include="DLLS\Oraycn.MPlayer.dll" />
