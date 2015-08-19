@@ -47,6 +47,7 @@ namespace LoginFrame
 
         private void VoiceChat_Load(object sender, EventArgs e)
         {
+            this.cmbCodecs.SelectedIndex = 0;
             loadOnlineUses();
         }
 
@@ -361,13 +362,13 @@ namespace LoginFrame
                     for (int a = 0; a < chatroomusers.Items.Count; a++)
                     {
 
-                        Console.WriteLine("ip=" + chatroomusers.Items[a].Text.ToString() + "进入聊天");
+                        //Console.WriteLine("ip=" + chatroomusers.Items[a].Text.ToString() + "进入聊天");
 
                         string ip = chatroomusers.Items[a].Text.ToString();
 
                         if (ip.Equals(LoginRoler.ip)) continue;
-                        
 
+                        Console.WriteLine("发送音频数据到:"+ip);
                         if (vocoder == Vocoder.ALaw)
                         {
                             byte[] dataToWrite = ALawEncoder.ALawEncode(memStream.GetBuffer());
@@ -586,19 +587,21 @@ namespace LoginFrame
         {
             //Call("192.168.0.104");
             //这里有个问题  勾选 不代表 选中 
-           
-            if (this.onlineuses.SelectedItems.Count > 0)
+            if (1==1)
             {
-                //循环处理 在线用户列表
-                selectedUsers = this.onlineuses.SelectedItems;
-                for (int a = 0; a < selectedUsers.Count; a++)
+                if (this.onlineuses.SelectedItems.Count > 0)
                 {
-                    Call(selectedUsers[a].Text);
+                    //循环处理 在线用户列表
+                    selectedUsers = this.onlineuses.SelectedItems;
+                    for (int a = 0; a < selectedUsers.Count; a++)
+                    {
+                        Call(selectedUsers[a].Text);
+                    }
                 }
-            }
-            else
-            {
-                MessageBox.Show("请选择需要聊天的用户");
+                else
+                {
+                    MessageBox.Show("请选择需要聊天的用户");
+                }
             }
           
         }
@@ -616,21 +619,19 @@ namespace LoginFrame
                 otherPartyEP = (EndPoint)otherPartyIP;
 
                 //Get the vocoder to be used.
-                //if (cmbCodecs.SelectedText == "A-Law")
-                //{
-                //    vocoder = Vocoder.ALaw;
-                //}
-                //else if (cmbCodecs.SelectedText == "u-Law")
-                //{
-                //    vocoder = Vocoder.uLaw;
-                //}
-                //else if (cmbCodecs.SelectedText == "None")
-                //{
-                //    vocoder = Vocoder.None;
-                //}
-                vocoder = Vocoder.uLaw;
-                //vocoder = Vocoder.ALaw;
-                //vocoder = Vocoder.None;
+                if (cmbCodecs.SelectedText == "A-Law")
+                {
+                    vocoder = Vocoder.ALaw;
+                }
+                else if (cmbCodecs.SelectedText == "u-Law")
+                {
+                    vocoder = Vocoder.uLaw;
+                }
+                else if (cmbCodecs.SelectedText == "None")
+                {
+                    vocoder = Vocoder.None;
+                }
+               
                 //Send an invite message.
                 SendMessage(Command.Invite, otherPartyEP);
 

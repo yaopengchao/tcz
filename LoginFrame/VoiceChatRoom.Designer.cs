@@ -37,6 +37,8 @@
             this.btnEndCall = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.cmbCodecs = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -106,7 +108,7 @@
             // 
             this.label1.Location = new System.Drawing.Point(234, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 99);
+            this.label1.Size = new System.Drawing.Size(167, 79);
             this.label1.TabIndex = 4;
             this.label1.Text = "语音聊天室";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -121,11 +123,34 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // cmbCodecs
+            // 
+            this.cmbCodecs.FormattingEnabled = true;
+            this.cmbCodecs.Location = new System.Drawing.Point(306, 95);
+            this.cmbCodecs.Name = "cmbCodecs";
+            this.cmbCodecs.Size = new System.Drawing.Size(95, 20);
+            this.cmbCodecs.TabIndex = 6;
+            this.cmbCodecs.Items.AddRange(new object[] {
+            "None",
+            "A-Law",
+            "u-Law"});
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(232, 98);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 12);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "语音编码：";
+            // 
             // VoiceChatRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(640, 317);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cmbCodecs);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEndCall);
@@ -140,6 +165,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -154,5 +180,7 @@
         private System.Windows.Forms.Button btnEndCall;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cmbCodecs;
+        private System.Windows.Forms.Label label2;
     }
 }

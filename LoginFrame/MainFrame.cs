@@ -476,27 +476,36 @@ namespace LoginFrame
 
                     List<ChatUser> chatUserlist=LoginRoler.chatUserlist;
 
-
                     //chatroomusers
                     for (int a = 0; a < chatUserlist.Count; a++)
                     {
+
+                        //Console.WriteLine("ip=" + chatroomusers.Items[a].Text.ToString() + "进入聊天");
+
+                        string ip = (((ChatUser)chatUserlist[a]).ChatIp).ToString();
+
+                        if (ip.Equals(LoginRoler.ip)) continue;
+
+                        Console.WriteLine("发送音频数据到:" + ip);
+
                         if (vocoder == Vocoder.ALaw)
                         {
                             byte[] dataToWrite = ALawEncoder.ALawEncode(memStream.GetBuffer());
                             //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
-                            udpClient.Send(dataToWrite, dataToWrite.Length, (((ChatUser)chatUserlist[a]).ChatIp).ToString(), 1550);
+                            udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
                         }
                         else if (vocoder == Vocoder.uLaw)
                         {
                             byte[] dataToWrite = MuLawEncoder.MuLawEncode(memStream.GetBuffer());
                             //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
-                            udpClient.Send(dataToWrite, dataToWrite.Length, (((ChatUser)chatUserlist[a]).ChatIp).ToString(), 1550);
+                            udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
+                            //udpClient.Send(dataToWrite, dataToWrite.Length, "192.168.0.104", 1550);
                         }
                         else
                         {
                             byte[] dataToWrite = memStream.GetBuffer();
                             //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
-                            udpClient.Send(dataToWrite, dataToWrite.Length, (((ChatUser)chatUserlist[a]).ChatIp).ToString(), 1550);
+                            udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
                         }
                     }
                 }

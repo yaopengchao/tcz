@@ -486,7 +486,6 @@ Console.WriteLine("====开始搜寻局域网数据库IP====");
 
         void RecvThread()
         {
-
             while (true)
             {
                 byte[] b = new byte[1024];
