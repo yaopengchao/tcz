@@ -10,8 +10,7 @@ using g711audio;
 using Model;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
-using Oraycn.MPlayer;
-using Oraycn.MCapture;
+
 
 namespace LoginFrame
 {
@@ -288,20 +287,20 @@ namespace LoginFrame
             Dictionary<string, OnlineUser> onlineUserDic = LoginRoler.OnlineUserDic;
             //循环添加到onlineusers列表控件
 
-
-            foreach (var dic in onlineUserDic)
-            {
-                if (dic.Key.Equals(ip) == true)
+           
+                foreach (var dic in onlineUserDic)
                 {
-                    //Console.WriteLine("Output Key : {0}, Value : {1} ", dic.Key, dic.Value);
-                    OnlineUser onlineUser = (OnlineUser)dic.Value;
-                    onlineUser.isChating = true;
-                    //onlineUserDic.Remove(ip);
-                    //onlineUserDic.Add(ip, onlineUser);
+                    if (dic.Key.Equals(ip) == true)
+                    {
+                        //Console.WriteLine("Output Key : {0}, Value : {1} ", dic.Key, dic.Value);
+                        OnlineUser onlineUser = (OnlineUser)dic.Value;
+                        onlineUser.isChating = true;
+                        //onlineUserDic.Remove(ip);
+                        //onlineUserDic.Add(ip, onlineUser);
+                    }
                 }
-            }
-
-
+           
+            
         }
 
 
@@ -421,87 +420,7 @@ namespace LoginFrame
             }
         }
 
-
-        private IAudioPlayer audioPlayer;
-        private IMicrophoneCapturer microphoneCapturer;
-
-
-        /// <summary>
-        /// 用Oraycn.MCapture采集声音
-        /// </summary>
-        private void Send2()
-        {
-
-            try
-            {
-                //The following lines get audio from microphone and then send them 
-                //across network.
-
-                this.microphoneCapturer = CapturerFactory.CreateMicrophoneCapturer(int.Parse("0"));
-                this.microphoneCapturer.AudioCaptured += new ESBasic.CbGeneric<byte[]>(microphoneCapturer_AudioCaptured);
-                this.microphoneCapturer.Start();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "VoiceChat-Send ()", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                this.microphoneCapturer.Stop(); ;
-
-                //Increment flag by one.
-                nUdpClientFlag += 1;
-
-                //When flag is two then it means we have got out of loops in Send and Receive.
-                while (nUdpClientFlag != 2)
-                { }
-
-                //Clear the flag.
-                nUdpClientFlag = 0;
-
-                //Close the socket.
-                udpClient.Close();
-            }
-
-        }
-
-        void microphoneCapturer_AudioCaptured(byte[] audioData)
-        {
-
-            //循环聊天室里面的用户发送语音数据
-            Console.WriteLine("发送语音数据..." + audioData.Length);
-            //chatroomusers
-            for (int a = 0; a < chatroomusers.Items.Count; a++)
-            {
-
-                //Console.WriteLine("ip=" + chatroomusers.Items[a].Text.ToString() + "进入聊天");
-
-                string ip = chatroomusers.Items[a].Text.ToString();
-
-                if (ip.Equals(LoginRoler.ip)) continue;
-
-                //Console.WriteLine("发送音频数据到:"+ip);
-                if (vocoder == Vocoder.ALaw)
-                {
-                    byte[] dataToWrite = ALawEncoder.ALawEncode(audioData);
-                    //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
-                    udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
-                }
-                else if (vocoder == Vocoder.uLaw)
-                {
-                    byte[] dataToWrite = MuLawEncoder.MuLawEncode(audioData);
-                    //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
-                    udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
-                    //udpClient.Send(dataToWrite, dataToWrite.Length, "192.168.0.104", 1550);
-                }
-                else
-                {
-                    byte[] dataToWrite = audioData;
-                    //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
-                    udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
-                }
-            }
-        }
+        
 
 
         /*
@@ -555,74 +474,24 @@ namespace LoginFrame
             }
         }
 
-
-
-        private void Receive2()
-        {
-            try
-            {
-                bStop = false;
-                IPEndPoint remoteEP = new IPEndPoint(IPAddress.Any, 0);
-
-                while (!bStop)
-                {
-                    //Receive data.
-                    byte[] byteData = udpClient.Receive(ref remoteEP);
-
-                    //G711 compresses the data by 50%, so we allocate a buffer of double
-                    //the size to store the decompressed data.
-                    byte[] byteDecodedData = new byte[byteData.Length * 2];
-
-                    //Decompress data using the proper vocoder.
-                    if (vocoder == Vocoder.ALaw)
-                    {
-                        ALawDecoder.ALawDecode(byteData, out byteDecodedData);
-                    }
-                    else if (vocoder == Vocoder.uLaw)
-                    {
-                        MuLawDecoder.MuLawDecode(byteData, out byteDecodedData);
-                    }
-                    else
-                    {
-                        byteDecodedData = new byte[byteData.Length];
-                        byteDecodedData = byteData;
-                    }
-
-                    //Play the data received to the user.
-                    if (this.audioPlayer != null)
-                    {
-                        this.audioPlayer.Play(byteDecodedData);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "VoiceChat-Receive ()", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                nUdpClientFlag += 1;
-            }
-        }
-
         private void InitializeCall()
         {
             try
             {
                 udpClient = new UdpClient(1550);
 
+              
+                    Thread senderThread = new Thread(new ThreadStart(Send));
+                    Thread receiverThread = new Thread(new ThreadStart(Receive));
+                    bIsCallActive = true;
 
-                Thread senderThread = new Thread(new ThreadStart(Send));
-                Thread receiverThread = new Thread(new ThreadStart(Receive));
-                bIsCallActive = true;
-
-                //Start the receiver and sender thread.
-                receiverThread.Start();
-                senderThread.Start();
-                //btnCall.Enabled = false;
-                //btnEndCall.Enabled = true;
-
-
+                    //Start the receiver and sender thread.
+                    receiverThread.Start();
+                    senderThread.Start();
+                    //btnCall.Enabled = false;
+                    //btnEndCall.Enabled = true;
+               
+               
 
 
 
@@ -652,7 +521,7 @@ namespace LoginFrame
             List<ChatUser> chatUserslist = LoginRoler.chatUserlist;
 
             ChatUser chatUser;
-            if (chatUserslist.Count <= 0)
+            if (chatUserslist.Count<=0)
             {
                 chatUser = new ChatUser();
                 chatUser.ChatIp = LoginRoler.ip;
@@ -734,7 +603,7 @@ namespace LoginFrame
         {
             //Call("192.168.0.104");
             //这里有个问题  勾选 不代表 选中 
-            if (1 == 1)
+            if (1==1)
             {
                 if (this.onlineuses.SelectedItems.Count > 0)
                 {
@@ -750,7 +619,7 @@ namespace LoginFrame
                     MessageBox.Show("请选择需要聊天的用户");
                 }
             }
-
+          
         }
 
 
@@ -778,7 +647,7 @@ namespace LoginFrame
                 {
                     vocoder = Vocoder.None;
                 }
-
+               
                 //Send an invite message.
                 SendMessage(Command.Invite, otherPartyEP);
 
