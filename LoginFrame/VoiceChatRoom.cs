@@ -10,6 +10,8 @@ using g711audio;
 using Model;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
+using Oraycn.MPlayer;
+using Oraycn.MCapture;
 
 namespace LoginFrame
 {
@@ -63,13 +65,16 @@ namespace LoginFrame
             foreach (var dic in onlineUserDic)
             {
                 OnlineUser onlineUser = (OnlineUser)dic.Value;
-                Console.WriteLine("加入在线列表 Ip : {0}", onlineUser.ChatIp.ToString());
 
+                bool isChating = onlineUser.IsChating;
 
-                ListViewItem lvItem = new ListViewItem();
-                lvItem.Text = onlineUser.ChatIp.ToString();
-                this.onlineuses.Items.Add(lvItem);
-
+                if (!isChating)
+                {
+                    Console.WriteLine("加入在线列表 Ip : {0}", onlineUser.ChatIp.ToString());
+                    ListViewItem lvItem = new ListViewItem();
+                    lvItem.Text = onlineUser.ChatIp.ToString();
+                    this.onlineuses.Items.Add(lvItem);
+                }
             }
 
             this.onlineuses.EndUpdate();  //结束数据处理，UI界面一次性绘制。 
@@ -204,6 +209,7 @@ namespace LoginFrame
                             updateOnlineUser(ip);
                             //同时需要通知其他学生机更新目前最新的聊天室用户IP列表  而这个操作需要由一开始登录的Socket来做
                             updateNetNewChatRoomUsersToStudent();
+                            loadOnlineUses();
                             InitializeCall();
                             break;
                         }
@@ -321,6 +327,7 @@ namespace LoginFrame
         }
 
         /*
+        用Direct x 来采集声音
          * Send synchronously sends data captured from microphone across the network on port 1550.
          */
         private void Send()
@@ -415,6 +422,87 @@ namespace LoginFrame
         }
 
 
+        private IAudioPlayer audioPlayer;
+        private IMicrophoneCapturer microphoneCapturer;
+
+
+        /// <summary>
+        /// 用Oraycn.MCapture采集声音
+        /// </summary>
+        private void Send2()
+        {
+            try
+            {
+                //The following lines get audio from microphone and then send them 
+                //across network.
+
+                this.microphoneCapturer = CapturerFactory.CreateMicrophoneCapturer(int.Parse("0"));
+                this.microphoneCapturer.AudioCaptured += new ESBasic.CbGeneric<byte[]>(microphoneCapturer_AudioCaptured);
+                this.microphoneCapturer.Start();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "VoiceChat-Send ()", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                this.microphoneCapturer.Stop(); ;
+
+                //Increment flag by one.
+                nUdpClientFlag += 1;
+
+                //When flag is two then it means we have got out of loops in Send and Receive.
+                while (nUdpClientFlag != 2)
+                { }
+
+                //Clear the flag.
+                nUdpClientFlag = 0;
+
+                //Close the socket.
+                udpClient.Close();
+            }
+        }
+
+        void microphoneCapturer_AudioCaptured(byte[] audioData)
+        {
+
+            //循环聊天室里面的用户发送语音数据
+
+            //chatroomusers
+            for (int a = 0; a < chatroomusers.Items.Count; a++)
+            {
+
+                //Console.WriteLine("ip=" + chatroomusers.Items[a].Text.ToString() + "进入聊天");
+
+                string ip = chatroomusers.Items[a].Text.ToString();
+
+                if (ip.Equals(LoginRoler.ip)) continue;
+
+                //Console.WriteLine("发送音频数据到:"+ip);
+                if (vocoder == Vocoder.ALaw)
+                {
+                    byte[] dataToWrite = ALawEncoder.ALawEncode(audioData);
+                    //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
+                    udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
+                }
+                else if (vocoder == Vocoder.uLaw)
+                {
+                    byte[] dataToWrite = MuLawEncoder.MuLawEncode(audioData);
+                    //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
+                    udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
+                    //udpClient.Send(dataToWrite, dataToWrite.Length, "192.168.0.104", 1550);
+                }
+                else
+                {
+                    byte[] dataToWrite = audioData;
+                    //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
+                    udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
+                }
+            }
+        }
+
+
         /*
          * Receive audio data coming on port 1550 and feed it to the speakers to be played.
          */
@@ -466,21 +554,96 @@ namespace LoginFrame
             }
         }
 
+
+
+        private void Receive2()
+        {
+            try
+            {
+                bStop = false;
+                IPEndPoint remoteEP = new IPEndPoint(IPAddress.Any, 0);
+
+                while (!bStop)
+                {
+                    //Receive data.
+                    byte[] byteData = udpClient.Receive(ref remoteEP);
+
+                    //G711 compresses the data by 50%, so we allocate a buffer of double
+                    //the size to store the decompressed data.
+                    byte[] byteDecodedData = new byte[byteData.Length * 2];
+
+                    //Decompress data using the proper vocoder.
+                    if (vocoder == Vocoder.ALaw)
+                    {
+                        ALawDecoder.ALawDecode(byteData, out byteDecodedData);
+                    }
+                    else if (vocoder == Vocoder.uLaw)
+                    {
+                        MuLawDecoder.MuLawDecode(byteData, out byteDecodedData);
+                    }
+                    else
+                    {
+                        byteDecodedData = new byte[byteData.Length];
+                        byteDecodedData = byteData;
+                    }
+
+                    //Play the data received to the user.
+                    if (this.audioPlayer != null)
+                    {
+                        this.audioPlayer.Play(byteDecodedData);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "VoiceChat-Receive ()", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                nUdpClientFlag += 1;
+            }
+        }
+
         private void InitializeCall()
         {
             try
             {
                 udpClient = new UdpClient(1550);
 
-                Thread senderThread = new Thread(new ThreadStart(Send));
-                Thread receiverThread = new Thread(new ThreadStart(Receive));
-                bIsCallActive = true;
+                if (1==2)
+                {
+                    Thread senderThread = new Thread(new ThreadStart(Send));
+                    Thread receiverThread = new Thread(new ThreadStart(Receive));
+                    bIsCallActive = true;
 
-                //Start the receiver and sender thread.
-                receiverThread.Start();
-                senderThread.Start();
-                //btnCall.Enabled = false;
-                //btnEndCall.Enabled = true;
+                    //Start the receiver and sender thread.
+                    receiverThread.Start();
+                    senderThread.Start();
+                    //btnCall.Enabled = false;
+                    //btnEndCall.Enabled = true;
+                }
+                else
+                {
+
+                    Thread senderThread = new Thread(new ThreadStart(Send2));
+                    this.audioPlayer = PlayerFactory.CreateAudioPlayer(int.Parse("0"), 16000, 1, 16, 2);
+                    Thread receiverThread = new Thread(new ThreadStart(Receive2));
+                    bIsCallActive = true;
+
+                    //Start the receiver and sender thread.
+                    receiverThread.Start();
+                    senderThread.Start();
+                    //btnCall.Enabled = false;
+                    //btnEndCall.Enabled = true;
+
+                    
+                }
+
+                
+
+                
+
+                
             }
             catch (Exception ex)
             {

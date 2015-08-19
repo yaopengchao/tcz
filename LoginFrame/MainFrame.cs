@@ -13,6 +13,8 @@ using System.IO;
 using g711audio;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
+using Oraycn.MPlayer;
+using Oraycn.MCapture;
 
 namespace LoginFrame
 {
@@ -437,6 +439,90 @@ namespace LoginFrame
             }
         }
 
+        private IAudioPlayer audioPlayer2;
+        private IMicrophoneCapturer microphoneCapturer;
+
+
+        /// <summary>
+        /// 用Oraycn.MCapture采集声音
+        /// </summary>
+        private void Send2()
+        {
+            try
+            {
+                //The following lines get audio from microphone and then send them 
+                //across network.
+
+                this.microphoneCapturer = CapturerFactory.CreateMicrophoneCapturer(int.Parse("0"));
+                this.microphoneCapturer.AudioCaptured += new ESBasic.CbGeneric<byte[]>(microphoneCapturer_AudioCaptured);
+                this.microphoneCapturer.Start();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "VoiceChat-Send ()", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                this.microphoneCapturer.Stop(); ;
+
+                //Increment flag by one.
+                nUdpClientFlag += 1;
+
+                //When flag is two then it means we have got out of loops in Send and Receive.
+                while (nUdpClientFlag != 2)
+                { }
+
+                //Clear the flag.
+                nUdpClientFlag = 0;
+
+                //Close the socket.
+                udpClient.Close();
+            }
+        }
+
+        void microphoneCapturer_AudioCaptured(byte[] audioData)
+        {
+
+            //循环聊天室里面的用户发送语音数据
+
+            List<ChatUser> chatUserlist = LoginRoler.chatUserlist;
+
+            //chatroomusers
+            for (int a = 0; a < chatUserlist.Count; a++)
+            {
+
+                //Console.WriteLine("ip=" + chatroomusers.Items[a].Text.ToString() + "进入聊天");
+
+                string ip = (((ChatUser)chatUserlist[a]).ChatIp).ToString();
+
+                if (ip.Equals(LoginRoler.ip)) continue;
+
+                //Console.WriteLine("发送音频数据到:" + ip);
+
+                if (vocoder == Vocoder.ALaw)
+                {
+                    byte[] dataToWrite = ALawEncoder.ALawEncode(audioData);
+                    //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
+                    udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
+                }
+                else if (vocoder == Vocoder.uLaw)
+                {
+                    byte[] dataToWrite = MuLawEncoder.MuLawEncode(audioData);
+                    //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
+                    udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
+                    //udpClient.Send(dataToWrite, dataToWrite.Length, "192.168.0.104", 1550);
+                }
+                else
+                {
+                    byte[] dataToWrite = audioData;
+                    //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
+                    udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
+                }
+            }
+        }
+
+
         /*
          * Send synchronously sends data captured from microphone across the network on port 1550.
          */
@@ -533,6 +619,55 @@ namespace LoginFrame
             }
         }
 
+
+        private void Receive2()
+        {
+            try
+            {
+                bStop = false;
+                IPEndPoint remoteEP = new IPEndPoint(IPAddress.Any, 0);
+
+                while (!bStop)
+                {
+                    //Receive data.
+                    byte[] byteData = udpClient.Receive(ref remoteEP);
+
+                    //G711 compresses the data by 50%, so we allocate a buffer of double
+                    //the size to store the decompressed data.
+                    byte[] byteDecodedData = new byte[byteData.Length * 2];
+
+                    //Decompress data using the proper vocoder.
+                    if (vocoder == Vocoder.ALaw)
+                    {
+                        ALawDecoder.ALawDecode(byteData, out byteDecodedData);
+                    }
+                    else if (vocoder == Vocoder.uLaw)
+                    {
+                        MuLawDecoder.MuLawDecode(byteData, out byteDecodedData);
+                    }
+                    else
+                    {
+                        byteDecodedData = new byte[byteData.Length];
+                        byteDecodedData = byteData;
+                    }
+
+                    //Play the data received to the user.
+                    if (this.audioPlayer2 != null)
+                    {
+                        this.audioPlayer2.Play(byteDecodedData);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "VoiceChat-Receive ()", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                nUdpClientFlag += 1;
+            }
+        }
+
         /*
          * Receive audio data coming on port 1550 and feed it to the speakers to be played.
          */
@@ -587,18 +722,34 @@ namespace LoginFrame
         {
             try
             {
-                //Start listening on port 1500.
-                udpClient = new UdpClient(1550);
+                if (1 == 2)
+                {
+                    Thread senderThread = new Thread(new ThreadStart(Send));
+                    Thread receiverThread = new Thread(new ThreadStart(Receive));
+                    bIsCallActive = true;
 
-                Thread senderThread = new Thread(new ThreadStart(Send));
-                Thread receiverThread = new Thread(new ThreadStart(Receive));
-                bIsCallActive = true;
+                    //Start the receiver and sender thread.
+                    receiverThread.Start();
+                    senderThread.Start();
+                    //btnCall.Enabled = false;
+                    //btnEndCall.Enabled = true;
+                }
+                else
+                {
 
-                //Start the receiver and sender thread.
-                receiverThread.Start();
-                senderThread.Start();
-                //btnCall.Enabled = false;
-                //btnEndCall.Enabled = true;
+                    Thread senderThread = new Thread(new ThreadStart(Send2));
+                    this.audioPlayer2 = PlayerFactory.CreateAudioPlayer(int.Parse("0"), 16000, 1, 16, 2);
+                    Thread receiverThread = new Thread(new ThreadStart(Receive2));
+                    bIsCallActive = true;
+
+                    //Start the receiver and sender thread.
+                    receiverThread.Start();
+                    senderThread.Start();
+                    //btnCall.Enabled = false;
+                    //btnEndCall.Enabled = true;
+
+
+                }
             }
             catch (Exception ex)
             {

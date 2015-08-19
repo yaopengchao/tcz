@@ -51,7 +51,7 @@
             this.groupBox1.Size = new System.Drawing.Size(199, 293);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "局域网在线用户";
+            this.groupBox1.Text = "可邀请在线用户";
             // 
             // onlineuses
             // 
@@ -126,14 +126,14 @@
             // cmbCodecs
             // 
             this.cmbCodecs.FormattingEnabled = true;
-            this.cmbCodecs.Location = new System.Drawing.Point(306, 95);
-            this.cmbCodecs.Name = "cmbCodecs";
-            this.cmbCodecs.Size = new System.Drawing.Size(95, 20);
-            this.cmbCodecs.TabIndex = 6;
             this.cmbCodecs.Items.AddRange(new object[] {
             "None",
             "A-Law",
             "u-Law"});
+            this.cmbCodecs.Location = new System.Drawing.Point(306, 95);
+            this.cmbCodecs.Name = "cmbCodecs";
+            this.cmbCodecs.Size = new System.Drawing.Size(95, 20);
+            this.cmbCodecs.TabIndex = 6;
             // 
             // label2
             // 
