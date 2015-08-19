@@ -288,20 +288,20 @@ namespace LoginFrame
             Dictionary<string, OnlineUser> onlineUserDic = LoginRoler.OnlineUserDic;
             //循环添加到onlineusers列表控件
 
-           
-                foreach (var dic in onlineUserDic)
+
+            foreach (var dic in onlineUserDic)
+            {
+                if (dic.Key.Equals(ip) == true)
                 {
-                    if (dic.Key.Equals(ip) == true)
-                    {
-                        //Console.WriteLine("Output Key : {0}, Value : {1} ", dic.Key, dic.Value);
-                        OnlineUser onlineUser = (OnlineUser)dic.Value;
-                        onlineUser.isChating = true;
-                        //onlineUserDic.Remove(ip);
-                        //onlineUserDic.Add(ip, onlineUser);
-                    }
+                    //Console.WriteLine("Output Key : {0}, Value : {1} ", dic.Key, dic.Value);
+                    OnlineUser onlineUser = (OnlineUser)dic.Value;
+                    onlineUser.isChating = true;
+                    //onlineUserDic.Remove(ip);
+                    //onlineUserDic.Add(ip, onlineUser);
                 }
-           
-            
+            }
+
+
         }
 
 
@@ -431,6 +431,7 @@ namespace LoginFrame
         /// </summary>
         private void Send2()
         {
+
             try
             {
                 //The following lines get audio from microphone and then send them 
@@ -439,7 +440,6 @@ namespace LoginFrame
                 this.microphoneCapturer = CapturerFactory.CreateMicrophoneCapturer(int.Parse("0"));
                 this.microphoneCapturer.AudioCaptured += new ESBasic.CbGeneric<byte[]>(microphoneCapturer_AudioCaptured);
                 this.microphoneCapturer.Start();
-
             }
             catch (Exception ex)
             {
@@ -462,13 +462,14 @@ namespace LoginFrame
                 //Close the socket.
                 udpClient.Close();
             }
+
         }
 
         void microphoneCapturer_AudioCaptured(byte[] audioData)
         {
 
             //循环聊天室里面的用户发送语音数据
-
+            Console.WriteLine("发送语音数据..." + audioData.Length);
             //chatroomusers
             for (int a = 0; a < chatroomusers.Items.Count; a++)
             {
@@ -610,40 +611,24 @@ namespace LoginFrame
             {
                 udpClient = new UdpClient(1550);
 
-                if (1==2)
-                {
-                    Thread senderThread = new Thread(new ThreadStart(Send));
-                    Thread receiverThread = new Thread(new ThreadStart(Receive));
-                    bIsCallActive = true;
 
-                    //Start the receiver and sender thread.
-                    receiverThread.Start();
-                    senderThread.Start();
-                    //btnCall.Enabled = false;
-                    //btnEndCall.Enabled = true;
-                }
-                else
-                {
+                Thread senderThread = new Thread(new ThreadStart(Send));
+                Thread receiverThread = new Thread(new ThreadStart(Receive));
+                bIsCallActive = true;
 
-                    Thread senderThread = new Thread(new ThreadStart(Send2));
-                    this.audioPlayer = PlayerFactory.CreateAudioPlayer(int.Parse("0"), 16000, 1, 16, 2);
-                    Thread receiverThread = new Thread(new ThreadStart(Receive2));
-                    bIsCallActive = true;
+                //Start the receiver and sender thread.
+                receiverThread.Start();
+                senderThread.Start();
+                //btnCall.Enabled = false;
+                //btnEndCall.Enabled = true;
 
-                    //Start the receiver and sender thread.
-                    receiverThread.Start();
-                    senderThread.Start();
-                    //btnCall.Enabled = false;
-                    //btnEndCall.Enabled = true;
 
-                    
-                }
 
-                
 
-                
 
-                
+
+
+
             }
             catch (Exception ex)
             {
@@ -667,7 +652,7 @@ namespace LoginFrame
             List<ChatUser> chatUserslist = LoginRoler.chatUserlist;
 
             ChatUser chatUser;
-            if (chatUserslist.Count<=0)
+            if (chatUserslist.Count <= 0)
             {
                 chatUser = new ChatUser();
                 chatUser.ChatIp = LoginRoler.ip;
@@ -749,7 +734,7 @@ namespace LoginFrame
         {
             //Call("192.168.0.104");
             //这里有个问题  勾选 不代表 选中 
-            if (1==1)
+            if (1 == 1)
             {
                 if (this.onlineuses.SelectedItems.Count > 0)
                 {
@@ -765,7 +750,7 @@ namespace LoginFrame
                     MessageBox.Show("请选择需要聊天的用户");
                 }
             }
-          
+
         }
 
 
@@ -793,7 +778,7 @@ namespace LoginFrame
                 {
                     vocoder = Vocoder.None;
                 }
-               
+
                 //Send an invite message.
                 SendMessage(Command.Invite, otherPartyEP);
 

@@ -32,7 +32,7 @@ namespace LoginFrame
         {
             InitializeComponent();
 
-            if (LoginRoler.language==0)
+            if (LoginRoler.language == 0)
             {
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("zh-CN");
             }
@@ -50,14 +50,16 @@ namespace LoginFrame
             if (roleId.Equals("1"))                 //管理员
             {
                 menuStrip1.Items[2].Visible = false;             //考试
-                panel5.Height = 180;                          
-            } else if (roleId.Equals("2"))          //教师
+                panel5.Height = 180;
+            }
+            else if (roleId.Equals("2"))          //教师
             {
                 menuStrip1.Items[1].Visible = false;            //自我测试
                 menuStrip1.Items[2].Visible = false;            //考试
                 menuStrip1.Items[5].Visible = false;            //教师管理
                 panel5.Height = 140;
-            } else if (roleId.Equals("3"))          //学生
+            }
+            else if (roleId.Equals("3"))          //学生
             {
                 menuStrip1.Items[7].Visible = false;            //云服务
                 panel5.Height = 180;
@@ -108,30 +110,30 @@ namespace LoginFrame
             }
 
             if (LoginRoler.roleid == Constant.RoleTeacher)
-                {
-                    //创建 服务器 负责监听的套接字 参数(使用IP4寻址协议，使用流式连接，使用TCP传输协议)
-                    socketServer = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            {
+                //创建 服务器 负责监听的套接字 参数(使用IP4寻址协议，使用流式连接，使用TCP传输协议)
+                socketServer = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
-                    //获取IP地址
-                    IPAddress ip = IPAddress.Parse(LoginRoler.ip);
+                //获取IP地址
+                IPAddress ip = IPAddress.Parse(LoginRoler.ip);
 
-                    //创建 包含IP和Port的网络节点对象
-                    IPEndPoint endPoint = new IPEndPoint(ip, int.Parse("10021"));
+                //创建 包含IP和Port的网络节点对象
+                IPEndPoint endPoint = new IPEndPoint(ip, int.Parse("10021"));
 
-                    //将负责监听 的套接字 绑定到 唯一的IP和端口上
-                    socketServer.Bind(endPoint);
+                //将负责监听 的套接字 绑定到 唯一的IP和端口上
+                socketServer.Bind(endPoint);
 
-                    //设置监听队列 一次可以处理的最大数量
-                    socketServer.Listen(10);
+                //设置监听队列 一次可以处理的最大数量
+                socketServer.Listen(10);
 
-                    //创建线程 负责监听
-                    threadWatch = new Thread(WatchConnection);
-                    //设置为后台线程
-                    threadWatch.IsBackground = true;
-                    //开启线程
-                    threadWatch.Start();
+                //创建线程 负责监听
+                threadWatch = new Thread(WatchConnection);
+                //设置为后台线程
+                threadWatch.IsBackground = true;
+                //开启线程
+                threadWatch.Start();
 
-                    //Console.WriteLine("=====================服 务 器 启 动 成 功该Socekt用来通信聊天室用户的信息更新======================");
+                //Console.WriteLine("=====================服 务 器 启 动 成 功该Socekt用来通信聊天室用户的信息更新======================");
             }
             else
             {
@@ -164,7 +166,7 @@ namespace LoginFrame
 
         public Dictionary<string, Socket> SocketDic
         {
-            
+
             get { return socketDic; }
             set { socketDic = value; }
         }
@@ -196,7 +198,7 @@ namespace LoginFrame
                 BinaryFormatter bFormatter = new BinaryFormatter();
                 if (mStream.Capacity > 0)
                 {
-                    List<ChatUser> chatUserslist=(List<ChatUser>)bFormatter.Deserialize(mStream);//将接收到的内存流反序列化为对象  
+                    List<ChatUser> chatUserslist = (List<ChatUser>)bFormatter.Deserialize(mStream);//将接收到的内存流反序列化为对象  
 
                     LoginRoler.chatUserlist = chatUserslist;
 
@@ -206,7 +208,7 @@ namespace LoginFrame
                 {
                     //Console.WriteLine("接收到的数据为空。");
                 }
-                
+
             }
         }
 
@@ -448,6 +450,7 @@ namespace LoginFrame
         /// </summary>
         private void Send2()
         {
+
             try
             {
                 //The following lines get audio from microphone and then send them 
@@ -456,7 +459,6 @@ namespace LoginFrame
                 this.microphoneCapturer = CapturerFactory.CreateMicrophoneCapturer(int.Parse("0"));
                 this.microphoneCapturer.AudioCaptured += new ESBasic.CbGeneric<byte[]>(microphoneCapturer_AudioCaptured);
                 this.microphoneCapturer.Start();
-
             }
             catch (Exception ex)
             {
@@ -479,10 +481,14 @@ namespace LoginFrame
                 //Close the socket.
                 udpClient.Close();
             }
+
         }
+
+
 
         void microphoneCapturer_AudioCaptured(byte[] audioData)
         {
+            Console.WriteLine("学生机发送语音中..." + audioData.Length);
 
             //循环聊天室里面的用户发送语音数据
 
@@ -520,7 +526,15 @@ namespace LoginFrame
                     udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
                 }
             }
+
+
+
+
+
         }
+
+
+
 
 
         /*
@@ -560,7 +574,7 @@ namespace LoginFrame
 
                     //循环聊天室里面的用户发送语音数据
 
-                    List<ChatUser> chatUserlist=LoginRoler.chatUserlist;
+                    List<ChatUser> chatUserlist = LoginRoler.chatUserlist;
 
                     //chatroomusers
                     for (int a = 0; a < chatUserlist.Count; a++)
@@ -722,34 +736,18 @@ namespace LoginFrame
         {
             try
             {
-                if (1 == 2)
-                {
-                    Thread senderThread = new Thread(new ThreadStart(Send));
-                    Thread receiverThread = new Thread(new ThreadStart(Receive));
-                    bIsCallActive = true;
+                udpClient = new UdpClient(1550);
 
-                    //Start the receiver and sender thread.
-                    receiverThread.Start();
-                    senderThread.Start();
-                    //btnCall.Enabled = false;
-                    //btnEndCall.Enabled = true;
-                }
-                else
-                {
+                Thread senderThread = new Thread(new ThreadStart(Send));
+                Thread receiverThread = new Thread(new ThreadStart(Receive));
+                bIsCallActive = true;
 
-                    Thread senderThread = new Thread(new ThreadStart(Send2));
-                    this.audioPlayer2 = PlayerFactory.CreateAudioPlayer(int.Parse("0"), 16000, 1, 16, 2);
-                    Thread receiverThread = new Thread(new ThreadStart(Receive2));
-                    bIsCallActive = true;
+                //Start the receiver and sender thread.
+                receiverThread.Start();
+                senderThread.Start();
+                //btnCall.Enabled = false;
+                //btnEndCall.Enabled = true;
 
-                    //Start the receiver and sender thread.
-                    receiverThread.Start();
-                    senderThread.Start();
-                    //btnCall.Enabled = false;
-                    //btnEndCall.Enabled = true;
-
-
-                }
             }
             catch (Exception ex)
             {
@@ -778,7 +776,7 @@ namespace LoginFrame
             bStop = true;
 
             bIsCallActive = false;
-           // btnCall.Enabled = true;
+            // btnCall.Enabled = true;
             //btnEndCall.Enabled = false;
         }
 
