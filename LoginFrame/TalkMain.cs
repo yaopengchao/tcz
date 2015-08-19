@@ -730,17 +730,7 @@ Console.WriteLine("客户端连接成功:" + sokConnection.RemoteEndPoint.ToStri
             //}
         }
 
-        private void ShowAudioDataTotalLen(int totalLen)
-        {
-            if (this.InvokeRequired)
-            {
-                this.BeginInvoke(new ESBasic.CbGeneric<int>(this.ShowAudioDataTotalLen), totalLen);
-            }
-            else
-            {
-                Console.WriteLine("接收语音数据大小KB:"+ totalLen.ToString());
-            }
-        }
+        
 
         private void listView1_ItemCheck(object sender, ItemCheckEventArgs e)
         {

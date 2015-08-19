@@ -484,7 +484,6 @@ namespace LoginFrame
             }
         }
 
-        VoiceChat vc;
         VoiceChatRoom vcr;
         void openVoiceChat()
         {

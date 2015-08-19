@@ -55,10 +55,6 @@
     <StartupObject>LoginFrame.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ESBasic">
-      <HintPath>..\Dlls\ESBasic.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.84.0.0, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DLLS\ICSharpCode.SharpZipLib.dll</HintPath>
@@ -70,12 +66,6 @@
     <Reference Include="Microsoft.DirectX.DirectSound, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DLLS\Microsoft.DirectX.DirectSound.dll</HintPath>
-    </Reference>
-    <Reference Include="Oraycn.MCapture">
-      <HintPath>..\Dlls\Oraycn.MCapture.dll</HintPath>
-    </Reference>
-    <Reference Include="Oraycn.MPlayer">
-      <HintPath>..\Dlls\Oraycn.MPlayer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -185,12 +175,6 @@
     <Compile Include="TitleTea.Designer.cs">
       <DependentUpon>TitleTea.cs</DependentUpon>
     </Compile>
-    <Compile Include="VoiceChat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VoiceChat.designer.cs">
-      <DependentUpon>VoiceChat.cs</DependentUpon>
-    </Compile>
     <Compile Include="VoiceChatRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -273,9 +257,6 @@
     <EmbeddedResource Include="TitleTea.resx">
       <DependentUpon>TitleTea.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VoiceChat.resx">
-      <DependentUpon>VoiceChat.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="VoiceChatRoom.resx">
       <DependentUpon>VoiceChatRoom.cs</DependentUpon>
     </EmbeddedResource>
@@ -305,17 +286,9 @@
     <Content Include="bin\Debug\LoginFrame.exe" />
     <Content Include="bin\Debug\LoginFrame.pdb" />
     <Content Include="bin\Debug\LoginFrame.vshost.exe" />
-    <Content Include="DLLS\ESBasic.dll" />
-    <Content Include="DLLS\ESBasic.xml" />
-    <Content Include="DLLS\ESFramework.dll" />
-    <Content Include="DLLS\ESFramework.xml" />
     <Content Include="DLLS\ICSharpCode.SharpZipLib.dll" />
     <Content Include="DLLS\Microsoft.DirectX.DirectSound.dll" />
     <Content Include="DLLS\Microsoft.DirectX.dll" />
-    <Content Include="DLLS\Oraycn.MCapture.dll" />
-    <Content Include="DLLS\Oraycn.MCapture.xml" />
-    <Content Include="DLLS\Oraycn.MPlayer.dll" />
-    <Content Include="DLLS\Oraycn.MPlayer.xml" />
     <Content Include="icon\favicon.ico" />
     <Content Include="lessons\1.swf" />
     <Content Include="lessons\2.swf" />
