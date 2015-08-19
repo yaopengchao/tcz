@@ -372,7 +372,6 @@ namespace LoginFrame
         //负责监听的套接字
         Socket socketServer = null;
 
-        Thread threadReceive = null;
 
         //客户端套接字
         Socket socketClient = null;

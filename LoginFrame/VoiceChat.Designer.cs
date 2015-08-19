@@ -30,25 +30,21 @@ namespace LoginFrame
         {
             this.btnCall = new System.Windows.Forms.Button();
             this.btnEndCall = new System.Windows.Forms.Button();
-            this.txtCallToIP = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.lblCallTo = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
             this.cmbCodecs = new System.Windows.Forms.ComboBox();
             this.lblCodec = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.chatroomusers = new System.Windows.Forms.ListView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.listView2 = new System.Windows.Forms.ListView();
+            this.onlineuses = new System.Windows.Forms.ListView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCall
             // 
-            this.btnCall.Location = new System.Drawing.Point(41, 253);
+            this.btnCall.Location = new System.Drawing.Point(19, 230);
             this.btnCall.Name = "btnCall";
-            this.btnCall.Size = new System.Drawing.Size(75, 21);
+            this.btnCall.Size = new System.Drawing.Size(243, 21);
             this.btnCall.TabIndex = 0;
             this.btnCall.Text = "邀请通话";
             this.btnCall.UseVisualStyleBackColor = true;
@@ -56,47 +52,14 @@ namespace LoginFrame
             // 
             // btnEndCall
             // 
-            this.btnEndCall.Enabled = false;
-            this.btnEndCall.Location = new System.Drawing.Point(170, 253);
+            //this.btnEndCall.Enabled = false;
+            this.btnEndCall.Location = new System.Drawing.Point(6, 208);
             this.btnEndCall.Name = "btnEndCall";
-            this.btnEndCall.Size = new System.Drawing.Size(75, 21);
+            this.btnEndCall.Size = new System.Drawing.Size(240, 21);
             this.btnEndCall.TabIndex = 1;
-            this.btnEndCall.Text = "结束通话";
+            this.btnEndCall.Text = "关闭聊天室";
             this.btnEndCall.UseVisualStyleBackColor = true;
             this.btnEndCall.Click += new System.EventHandler(this.btnEndCall_Click);
-            // 
-            // txtCallToIP
-            // 
-            this.txtCallToIP.Location = new System.Drawing.Point(82, 168);
-            this.txtCallToIP.Name = "txtCallToIP";
-            this.txtCallToIP.Size = new System.Drawing.Size(189, 21);
-            this.txtCallToIP.TabIndex = 3;
-            this.txtCallToIP.Text = "192.168.0.104";
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(82, 197);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(189, 21);
-            this.txtName.TabIndex = 4;
-            // 
-            // lblCallTo
-            // 
-            this.lblCallTo.AutoSize = true;
-            this.lblCallTo.Location = new System.Drawing.Point(17, 171);
-            this.lblCallTo.Name = "lblCallTo";
-            this.lblCallTo.Size = new System.Drawing.Size(53, 12);
-            this.lblCallTo.TabIndex = 5;
-            this.lblCallTo.Text = "Call &To:";
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(17, 200);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(47, 12);
-            this.lblName.TabIndex = 6;
-            this.lblName.Text = "发起人:";
             // 
             // cmbCodecs
             // 
@@ -106,55 +69,58 @@ namespace LoginFrame
             "None",
             "A-Law",
             "u-Law"});
-            this.cmbCodecs.Location = new System.Drawing.Point(82, 225);
+            this.cmbCodecs.Location = new System.Drawing.Point(109, 203);
             this.cmbCodecs.Name = "cmbCodecs";
-            this.cmbCodecs.Size = new System.Drawing.Size(189, 20);
+            this.cmbCodecs.Size = new System.Drawing.Size(153, 20);
             this.cmbCodecs.TabIndex = 7;
             // 
             // lblCodec
             // 
             this.lblCodec.AutoSize = true;
-            this.lblCodec.Location = new System.Drawing.Point(17, 228);
+            this.lblCodec.Location = new System.Drawing.Point(20, 206);
             this.lblCodec.Name = "lblCodec";
-            this.lblCodec.Size = new System.Drawing.Size(59, 12);
+            this.lblCodec.Size = new System.Drawing.Size(83, 12);
             this.lblCodec.TabIndex = 8;
-            this.lblCodec.Text = "语音编码:";
+            this.lblCodec.Text = "传送语音编码:";
             // 
-            // listView1
+            // chatroomusers
             // 
-            this.listView1.Location = new System.Drawing.Point(3, 20);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(243, 182);
-            this.listView1.TabIndex = 9;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.chatroomusers.Location = new System.Drawing.Point(3, 20);
+            this.chatroomusers.Name = "chatroomusers";
+            this.chatroomusers.Size = new System.Drawing.Size(243, 182);
+            this.chatroomusers.TabIndex = 9;
+            this.chatroomusers.UseCompatibleStateImageBehavior = false;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.listView1);
-            this.groupBox1.Location = new System.Drawing.Point(16, 280);
+            this.groupBox1.Controls.Add(this.chatroomusers);
+            this.groupBox1.Controls.Add(this.btnEndCall);
+            this.groupBox1.Location = new System.Drawing.Point(16, 257);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(252, 208);
+            this.groupBox1.Size = new System.Drawing.Size(252, 231);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "聊天组";
+            this.groupBox1.Text = "聊天室用户";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.listView2);
+            this.groupBox2.Controls.Add(this.onlineuses);
             this.groupBox2.Location = new System.Drawing.Point(16, 13);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(252, 149);
+            this.groupBox2.Size = new System.Drawing.Size(252, 184);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "局域网在线用户";
             // 
-            // listView2
+            // onlineuses
             // 
-            this.listView2.Location = new System.Drawing.Point(3, 20);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(243, 123);
-            this.listView2.TabIndex = 0;
-            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.onlineuses.CheckBoxes = true;
+            this.onlineuses.Location = new System.Drawing.Point(3, 20);
+            this.onlineuses.Name = "onlineuses";
+            this.onlineuses.Size = new System.Drawing.Size(243, 156);
+            this.onlineuses.TabIndex = 0;
+            this.onlineuses.UseCompatibleStateImageBehavior = false;
+            this.onlineuses.View = System.Windows.Forms.View.Details;
             // 
             // VoiceChat
             // 
@@ -165,18 +131,14 @@ namespace LoginFrame
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblCodec);
             this.Controls.Add(this.cmbCodecs);
-            this.Controls.Add(this.lblName);
-            this.Controls.Add(this.lblCallTo);
-            this.Controls.Add(this.txtName);
-            this.Controls.Add(this.txtCallToIP);
-            this.Controls.Add(this.btnEndCall);
             this.Controls.Add(this.btnCall);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "VoiceChat";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "语音聊天";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "VoiceChat";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.VoiceChat_FormClosing);
+            this.Load += new System.EventHandler(this.VoiceChat_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -188,16 +150,12 @@ namespace LoginFrame
 
         private System.Windows.Forms.Button btnCall;
         private System.Windows.Forms.Button btnEndCall;
-        private System.Windows.Forms.TextBox txtCallToIP;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label lblCallTo;
-        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.ComboBox cmbCodecs;
         private System.Windows.Forms.Label lblCodec;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView chatroomusers;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView onlineuses;
     }
 }
 

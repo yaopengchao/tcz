@@ -468,99 +468,27 @@ namespace LoginFrame
         //对话按钮
         private void button9_Click(object sender, EventArgs e)
         {
-            ImplUser Bll = new ImplUser();
-            if (LoginRoler.roleid==Constant.RoleStudent)
+            if (LoginRoler.roleid == Constant.RoleTeacher)
             {
-                //检查是否存在老师聊天的IP，不存在就不跳转
-                string serverIp = Bll.getServerIp();
-                if (serverIp=="" || serverIp==null)
-                {
-                    MessageBox.Show("请等待老师先进入对话再尝试!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    return;
-                }else
-                {
-                    if (isTalking)
-                    {
-                        //切换到 非对话状态
-                        isTalking = false;
-
-                        //离开聊天室
-                        bool outChatroom = Bll.outChatroom(LoginRoler.username);
-
-
-                        //TalkMain talkMain = TalkMain.createForm();
-                        //talkMain.Close();
-                        closeVoiceChat();
-
-                        this.button9.Text = "对话";
-
-                    }
-                    else
-                    {
-                        //切换到  对话状态
-
-                        isTalking = true;
-
-                        //登录聊天室
-
-                        bool inChatroom = Bll.inChatroom(LoginRoler.username, LoginRoler.ip);
-
-
-                        // TalkMain talkMain = TalkMain.createForm();
-                        //talkMain.ShowDialog();
-                        openVoiceChat();
-                        this.button9.Text = "对话中";
-
-                    }
-                }
-            }
-            else
-            {
-                
                 if (isTalking)
                 {
-                    //切换到 非对话状态
                     isTalking = false;
-
-                    //离开聊天室
-                    bool outChatroom = Bll.outChatroom(LoginRoler.username);
-
-
-                    //TalkMain talkMain = TalkMain.createForm();
-                    //talkMain.Close();
                     closeVoiceChat();
-
-                    this.button9.Text = "对话";
-
                 }
                 else
                 {
-                    //切换到  对话状态
-
                     isTalking = true;
-
-                    //登录聊天室
-
-                    bool inChatroom = Bll.inChatroom(LoginRoler.username, LoginRoler.ip);
-
-
-                    //TalkMain talkMain = TalkMain.createForm();
-                    //talkMain.Show();
+                    // 老师打开聊天室界面
                     openVoiceChat();
-
-
-                    this.button9.Text = "对话中";
-
                 }
             }
-            
         }
 
         VoiceChat vc;
         void openVoiceChat()
         {
             vc = new VoiceChat();
-            vc.Show();
+            vc.ShowDialog();
         }
 
         void closeVoiceChat()

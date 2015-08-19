@@ -85,7 +85,6 @@ namespace LoginFrame
         //负责监听的套接字
         Socket socketServer = null;
 
-        Thread threadReceive = null;
         //客户端套接字
         Socket socketClient = null;
 
@@ -100,7 +99,6 @@ namespace LoginFrame
             if (LoginRoler.roleid != Constant.RoleTeacher)
             {
                 Initialize();
-
             }
 
             if (LoginRoler.roleid == Constant.RoleTeacher)
@@ -150,9 +148,6 @@ namespace LoginFrame
             }
         }
 
-        Dictionary<string, Socket> socketDic = new Dictionary<string, Socket>();
-        //用来接收数据的线程
-
         //监听方法
         void WatchConnection()
         {
@@ -163,26 +158,20 @@ namespace LoginFrame
                 //开始监听 客户端 连接请求 【注意】Accept方法会阻断当前的线程--未接受到请求 程序卡在那里
                 Socket sokConnection = socketServer.Accept();//返回一个 负责和该客户端通信的 套接字
                                                              //将返回的新的套接字 存储到 字典序列中
-                socketDic.Add(sokConnection.RemoteEndPoint.ToString(), sokConnection);
 
                 ChatUser chatUser = new ChatUser();
 
                 List<ChatUser> chatUserlist = LoginRoler.ChatUserlist;
 
-                chatUser.ChatIp = sokConnection.RemoteEndPoint.ToString();
+                string ip = sokConnection.RemoteEndPoint.ToString().Split(':')[0];
+
+                chatUser.ChatIp = ip;
                 chatUser.chatName = "测试";
 
                 chatUserlist.Add(chatUser);
-
-                //向在线列表中 添加一个 客户端的ip端口字符串 作为客户端的唯一标识
-                //listView1.Items.Add(sokConnection.RemoteEndPoint.ToString());
+              
                 //打印输出
                 Console.WriteLine("客户端连接成功:" + sokConnection.RemoteEndPoint.ToString());
-
-                //为该通信Socket 创建一个线程 用来监听接收数据
-                //threadRec = new Thread(ServerRecMsg);
-                //threadRec.IsBackground = true;
-                //threadRec.Start(sokConnection);
 
             }
         }

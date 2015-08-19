@@ -13,6 +13,7 @@ using System.Text;
 using System.Timers;
 using System.Reflection;
 using System.Configuration;
+using System.Collections.Generic;
 
 namespace LoginFrame
 {
@@ -239,13 +240,12 @@ namespace LoginFrame
             return AddressIP;
         }
 
-       
 
+     
 
         int comboBox3selectIndex;
         private void button1_Click(object sender, EventArgs e)
         {
-          
             //重置默认
             RunDoWhile = true;
 
@@ -279,6 +279,8 @@ Console.WriteLine(">>>>>>>>>>>>>.往局域网中发送数据库IP的消息");
                     Thread t = new Thread(new ThreadStart(sendThread));
                     t.IsBackground = true;
                     t.Start();
+
+                    
                 }
             }
 
@@ -338,32 +340,8 @@ Console.WriteLine(">>>>>>>>>>>>>.往局域网中发送数据库IP的消息");
             titleMain.mainFrame = mainFrame;
         }
 
-        /// <summary>
-        /// 是否已经修改app.config
-        /// </summary>
-        /// <param name="serverIp"></param>
-        /// <returns></returns>
-        private bool modifiyAppConfig(string serverIp)
-        {
-            //读取程序集的配置文件
-            string assemblyConfigFile = Assembly.GetEntryAssembly().Location;
-            string appDomainConfigFile = AppDomain.CurrentDomain.SetupInformation.ConfigurationFile;
-
-            Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-
-            //获取appSettings节点
-            AppSettingsSection appSettings = (AppSettingsSection)config.GetSection("appSettings");
-
-
-            //删除name，然后添加新值
-            appSettings.Settings.Remove("mysqlIp");
-            appSettings.Settings.Add("mysqlIp", serverIp);
-
-            //保存配置文件
-            config.Save();
-            ConfigurationManager.RefreshSection("appSettings");
-            return true;
-        }
+       
+        
 
         System.Timers.Timer timer;
         private void searchIp()

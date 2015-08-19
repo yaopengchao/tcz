@@ -7,6 +7,7 @@ namespace Model
 {
     public class LoginRoler
     {
+
         public static string username;
         public static string truename;
         public static string roleid;
@@ -16,5 +17,15 @@ namespace Model
         public static string pwd;
         public static string serverIp;
         public static string serverType;
+
+        public static List<ChatUser>  chatUserlist=new List<ChatUser>();
+
+        public static List<ChatUser> ChatUserlist
+        {
+            get { return chatUserlist; }
+            set { chatUserlist = value; }
+        }
+
+
     }
 }

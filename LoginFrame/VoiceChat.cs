@@ -37,19 +37,35 @@ namespace LoginFrame
         private Vocoder vocoder;
         private byte[] byteData = new byte[1024];   //Buffer to store the data received.
         private volatile int nUdpClientFlag;                 //Flag used to close the udpClient socket.
+        
 
         public VoiceChat()
         {
             InitializeComponent();
             // 加入这行
             Control.CheckForIllegalCrossThreadCalls = false;
-            txtName.Text = LoginRoler.truename;
             Initialize();
+        }
+
+
+        private void VoiceChat_Load(object sender, EventArgs e)
+        {
+            
+            this.cmbCodecs.SelectedIndex = 1;
+            //加载在线用户列表  数据从LoginRoler获取
+            List<ChatUser> chatUserlist = LoginRoler.ChatUserlist;
+            //循环添加到onlineusers列表控件
+            this.onlineuses.Items.Clear();
+            for (int i=0;i< chatUserlist.Count;i++)
+            {
+                ChatUser ChatUser = (ChatUser)chatUserlist[i];
+                onlineuses.Items.Add(ChatUser.chatIp);
+            }
         }
 
         /*
          * Initializes all the data members.
-         */        
+         */
         private void Initialize()
         {
             try
@@ -116,18 +132,49 @@ namespace LoginFrame
             }        
         }
 
+        private ListView.SelectedListViewItemCollection selectedUsers;
+
+
         private void btnCall_Click(object sender, EventArgs e)
         {
-            Call();
+            if (this.onlineuses.SelectedItems.Count>0)
+            {
+                string ip = this.onlineuses.SelectedItems[0].Text;
+
+                //循环处理 在线用户列表
+                 selectedUsers = this.onlineuses.SelectedItems;
+                 for (int a=0;a<selectedUsers.Count;a++)
+                {
+                    Call(selectedUsers[a].Text);
+                 }
+
+                //Call("192.168.10.100");
+            }
+            else
+            {
+                MessageBox.Show("请选择需要聊天的用户");
+            }
+
+
+
+            
         }
 
-        private void Call()
+        private void Call(string ip)
         {
             try
             {
                 //Get the IP we want to call.
-                otherPartyIP = new IPEndPoint(IPAddress.Parse(txtCallToIP.Text), 1450);
-                otherPartyEP = (EndPoint)otherPartyIP;
+                if (otherPartyIP==null)
+                {
+                    otherPartyIP = new IPEndPoint(IPAddress.Parse(ip), 1450);
+                }
+                if (otherPartyEP == null)
+                {
+                    otherPartyEP = (EndPoint)otherPartyIP;
+                }
+
+               
 
                 //Get the vocoder to be used.
                 if (cmbCodecs.SelectedText == "A-Law")
@@ -218,8 +265,9 @@ namespace LoginFrame
 
                     //OK is received in response to an Invite.
                     case Command.OK:
-                        {                            
+                        {
                             //Start a call.
+                            addChatRoom("测试IP","测试用户名");
                             InitializeCall();                                
                             break;
                         }
@@ -255,6 +303,11 @@ namespace LoginFrame
             }
         }
 
+
+        public void addChatRoom(string ip,string name)
+        {
+            chatroomusers.Items.Add(ip);
+        }
         /*
          * Send synchronously sends data captured from microphone across the network on port 1550.
          */
@@ -404,7 +457,12 @@ namespace LoginFrame
 
         private void btnEndCall_Click(object sender, EventArgs e)
         {
-            DropCall();
+            if (bIsCallActive)
+            {
+                DropCall();
+            }
+            
+            this.Close();
         }
 
         private void UninitializeCall()
@@ -464,7 +522,7 @@ namespace LoginFrame
                 //Create the message to send.
                 Data msgToSend = new Data();
 
-                msgToSend.strName = txtName.Text;   //Name of the user.
+                msgToSend.strName = LoginRoler.username;   //Name of the user.
                 msgToSend.cmdCommand = cmd;         //Message to send.
                 msgToSend.vocoder = vocoder;        //Vocoder to be used.
                 
