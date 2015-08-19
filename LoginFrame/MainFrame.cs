@@ -81,6 +81,13 @@ namespace LoginFrame
 
         private static MainFrame instance;
 
+        Thread threadWatch = null;
+        //负责监听的套接字
+        Socket socketServer = null;
+
+        Thread threadReceive = null;
+        //客户端套接字
+        Socket socketClient = null;
 
         /// <summary>
         /// 窗体控件加载完毕后  处理一些事务
@@ -93,6 +100,90 @@ namespace LoginFrame
             if (LoginRoler.roleid != Constant.RoleTeacher)
             {
                 Initialize();
+
+            }
+
+            if (LoginRoler.roleid == Constant.RoleTeacher)
+                {
+                    //创建 服务器 负责监听的套接字 参数(使用IP4寻址协议，使用流式连接，使用TCP传输协议)
+                    socketServer = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+
+                    //获取IP地址
+                    IPAddress ip = IPAddress.Parse(LoginRoler.ip);
+
+                    //创建 包含IP和Port的网络节点对象
+                    IPEndPoint endPoint = new IPEndPoint(ip, int.Parse("10021"));
+
+                    //将负责监听 的套接字 绑定到 唯一的IP和端口上
+                    socketServer.Bind(endPoint);
+
+                    //设置监听队列 一次可以处理的最大数量
+                    socketServer.Listen(10);
+
+                    //创建线程 负责监听
+                    threadWatch = new Thread(WatchConnection);
+                    //设置为后台线程
+                    threadWatch.IsBackground = true;
+                    //开启线程
+                    threadWatch.Start();
+
+                    Console.WriteLine("=====================服 务 器 启 动 成 功======================");
+            }
+            else
+            {
+                //获取老师服务IP
+                string serverIp = LoginRoler.serverIp;
+
+                //学生则创建连接客户端的操作
+                //获取IP
+                IPAddress ip = IPAddress.Parse(serverIp);
+                //新建一个网络节点
+                IPEndPoint endPoint = new IPEndPoint(ip, int.Parse("10021"));
+                //新建一个Socket 负责 监听服务器的通信
+                socketClient = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                //连接远程主机
+                socketClient.Connect(endPoint);
+
+                //打印输出
+                Console.WriteLine("=====================服 务 器 连 接 成 功======================");
+                socketClient.Close();
+            }
+        }
+
+        Dictionary<string, Socket> socketDic = new Dictionary<string, Socket>();
+        //用来接收数据的线程
+
+        //监听方法
+        void WatchConnection()
+        {
+            //持续不断的监听
+            while (true)
+            {
+
+                //开始监听 客户端 连接请求 【注意】Accept方法会阻断当前的线程--未接受到请求 程序卡在那里
+                Socket sokConnection = socketServer.Accept();//返回一个 负责和该客户端通信的 套接字
+                                                             //将返回的新的套接字 存储到 字典序列中
+                socketDic.Add(sokConnection.RemoteEndPoint.ToString(), sokConnection);
+
+                ChatUser chatUser = new ChatUser();
+
+                List<ChatUser> chatUserlist = LoginRoler.ChatUserlist;
+
+                chatUser.ChatIp = sokConnection.RemoteEndPoint.ToString();
+                chatUser.chatName = "测试";
+
+                chatUserlist.Add(chatUser);
+
+                //向在线列表中 添加一个 客户端的ip端口字符串 作为客户端的唯一标识
+                //listView1.Items.Add(sokConnection.RemoteEndPoint.ToString());
+                //打印输出
+                Console.WriteLine("客户端连接成功:" + sokConnection.RemoteEndPoint.ToString());
+
+                //为该通信Socket 创建一个线程 用来监听接收数据
+                //threadRec = new Thread(ServerRecMsg);
+                //threadRec.IsBackground = true;
+                //threadRec.Start(sokConnection);
+
             }
         }
 
