@@ -36,6 +36,7 @@ namespace LoginFrame
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.onlineuses = new System.Windows.Forms.ListView();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -44,7 +45,7 @@ namespace LoginFrame
             // 
             this.btnCall.Location = new System.Drawing.Point(19, 230);
             this.btnCall.Name = "btnCall";
-            this.btnCall.Size = new System.Drawing.Size(243, 21);
+            this.btnCall.Size = new System.Drawing.Size(109, 21);
             this.btnCall.TabIndex = 0;
             this.btnCall.Text = "邀请通话";
             this.btnCall.UseVisualStyleBackColor = true;
@@ -52,7 +53,6 @@ namespace LoginFrame
             // 
             // btnEndCall
             // 
-            //this.btnEndCall.Enabled = false;
             this.btnEndCall.Location = new System.Drawing.Point(6, 208);
             this.btnEndCall.Name = "btnEndCall";
             this.btnEndCall.Size = new System.Drawing.Size(240, 21);
@@ -122,11 +122,22 @@ namespace LoginFrame
             this.onlineuses.UseCompatibleStateImageBehavior = false;
             this.onlineuses.View = System.Windows.Forms.View.Details;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(134, 230);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "刷新局域网在线用户";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // VoiceChat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(283, 500);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblCodec);
@@ -156,6 +167,7 @@ namespace LoginFrame
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ListView onlineuses;
+        private System.Windows.Forms.Button button1;
     }
 }
 

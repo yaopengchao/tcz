@@ -12,6 +12,7 @@ using Microsoft.DirectX.DirectSound;
 using System.IO;
 using g711audio;
 using System.Collections.Generic;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace LoginFrame
 {
@@ -82,6 +83,9 @@ namespace LoginFrame
         private static MainFrame instance;
 
         Thread threadWatch = null;
+
+        Thread recvthreadWatch = null;
+
         //负责监听的套接字
         Socket socketServer = null;
 
@@ -125,7 +129,7 @@ namespace LoginFrame
                     //开启线程
                     threadWatch.Start();
 
-                    Console.WriteLine("=====================服 务 器 启 动 成 功======================");
+                    Console.WriteLine("=====================服 务 器 启 动 成 功该Socekt用来通信聊天室用户的信息更新======================");
             }
             else
             {
@@ -142,11 +146,68 @@ namespace LoginFrame
                 //连接远程主机
                 socketClient.Connect(endPoint);
 
+
+                recvthreadWatch = new Thread(new ThreadStart(recvWatchConnection));
+                recvthreadWatch.IsBackground = true;
+                recvthreadWatch.Start();//可能有并发请求，所以消息的接收也需要在子线程中处理  
+
+
                 //打印输出
-                Console.WriteLine("=====================服 务 器 连 接 成 功======================");
+                Console.WriteLine("=====================服 务 器 连 接 成 功Socekt用来通信聊天室用户的信息更新======================");
+            }
+        }
+
+        Dictionary<string, Socket> socketDic = new Dictionary<string, Socket>();
+        //用来接收数据的线程
+
+        public Dictionary<string, Socket> SocketDic
+        {
+            
+            get { return socketDic; }
+            set { socketDic = value; }
+        }
+
+        void recvWatchConnection()
+        {
+            //持续不断的监听   更新聊天室用户信息
+            while (true)
+            {
+                //socketClient
+                byte[] buffer = new byte[1024];
+                MemoryStream mStream = new MemoryStream();
+                mStream.Position = 0;
+                while (true)
+                {
+                    int ReceiveCount = socketClient.Receive(buffer, 1024, 0);
+                    if (ReceiveCount == 0)
+                    {
+                        break;//接收到的字节数为0时break  
+                    }
+                    else
+                    {
+                        Console.WriteLine("成功获取到数据");
+                        mStream.Write(buffer, 0, ReceiveCount); //将接收到的数据写入内存流  
+                    }
+                }
+                mStream.Flush();
+                mStream.Position = 0;
+                BinaryFormatter bFormatter = new BinaryFormatter();
+                if (mStream.Capacity > 0)
+                {
+                    List<ChatUser> chatUserslist=(List<ChatUser>)bFormatter.Deserialize(mStream);//将接收到的内存流反序列化为对象  
+
+                    LoginRoler.chatUserlist = chatUserslist;
+
+                    Console.WriteLine("接收到来" + chatUserslist.Count + "的信息内容：" );
+                }
+                else
+                {
+                    Console.WriteLine("接收到的数据为空。");
+                }
                 socketClient.Close();
             }
         }
+
 
         //监听方法
         void WatchConnection()
@@ -159,17 +220,21 @@ namespace LoginFrame
                 Socket sokConnection = socketServer.Accept();//返回一个 负责和该客户端通信的 套接字
                                                              //将返回的新的套接字 存储到 字典序列中
 
-                ChatUser chatUser = new ChatUser();
-
-                List<ChatUser> chatUserlist = LoginRoler.ChatUserlist;
-
                 string ip = sokConnection.RemoteEndPoint.ToString().Split(':')[0];
 
-                chatUser.ChatIp = ip;
-                chatUser.chatName = "测试";
+                socketDic.Add(ip, sokConnection);
 
-                chatUserlist.Add(chatUser);
-              
+                //将在线用户加入到LoginRoler  onlineUserDic
+
+                OnlineUser onlineUser = new OnlineUser();
+
+                Dictionary<string, OnlineUser> onlineUserDic = LoginRoler.OnlineUserDic;
+
+                onlineUser.ChatIp = ip;
+                onlineUser.chatName = "测试";
+
+                onlineUserDic.Add(ip, onlineUser);
+
                 //打印输出
                 Console.WriteLine("客户端连接成功:" + sokConnection.RemoteEndPoint.ToString());
 
@@ -407,20 +472,32 @@ namespace LoginFrame
 
                     //Choose the vocoder. And then send the data to other party at port 1550.
 
-                    if (vocoder == Vocoder.ALaw)
+                    //循环聊天室里面的用户发送语音数据
+
+                    List<ChatUser> chatUserlist=LoginRoler.chatUserlist;
+
+
+                    //chatroomusers
+                    for (int a = 0; a < chatUserlist.Count; a++)
                     {
-                        byte[] dataToWrite = ALawEncoder.ALawEncode(memStream.GetBuffer());
-                        udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
-                    }
-                    else if (vocoder == Vocoder.uLaw)
-                    {
-                        byte[] dataToWrite = MuLawEncoder.MuLawEncode(memStream.GetBuffer());
-                        udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
-                    }
-                    else
-                    {
-                        byte[] dataToWrite = memStream.GetBuffer();
-                        udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
+                        if (vocoder == Vocoder.ALaw)
+                        {
+                            byte[] dataToWrite = ALawEncoder.ALawEncode(memStream.GetBuffer());
+                            //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
+                            udpClient.Send(dataToWrite, dataToWrite.Length, (((ChatUser)chatUserlist[a]).ChatIp).ToString(), 1550);
+                        }
+                        else if (vocoder == Vocoder.uLaw)
+                        {
+                            byte[] dataToWrite = MuLawEncoder.MuLawEncode(memStream.GetBuffer());
+                            //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
+                            udpClient.Send(dataToWrite, dataToWrite.Length, (((ChatUser)chatUserlist[a]).ChatIp).ToString(), 1550);
+                        }
+                        else
+                        {
+                            byte[] dataToWrite = memStream.GetBuffer();
+                            //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
+                            udpClient.Send(dataToWrite, dataToWrite.Length, (((ChatUser)chatUserlist[a]).ChatIp).ToString(), 1550);
+                        }
                     }
                 }
             }
@@ -936,9 +1013,6 @@ namespace LoginFrame
 
             this.titleMain.button6.BackgroundImage = LoginFrame.Properties.Resources.volume_up;
 
-
-            //button3_changeText button3outdelegate = new button3_changeText(button3changeText);
-            //this.BeginInvoke(button3outdelegate, new object[] { "扩音" });
         }
 
 

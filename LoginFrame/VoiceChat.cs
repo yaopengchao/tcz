@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using Microsoft.DirectX.DirectSound; 
+using Microsoft.DirectX.DirectSound;
 using System.IO;
 using System.Threading;
 using System.Net.Sockets;
@@ -13,6 +13,7 @@ using System.Net;
 using g711audio;
 
 using Model;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace LoginFrame
 {
@@ -52,14 +53,23 @@ namespace LoginFrame
         {
             
             this.cmbCodecs.SelectedIndex = 1;
+
+            loadOnlineUses();
+            
+        }
+
+        private void loadOnlineUses()
+        {
             //加载在线用户列表  数据从LoginRoler获取
-            List<ChatUser> chatUserlist = LoginRoler.ChatUserlist;
+            Dictionary<string, OnlineUser> onlineUserDic = LoginRoler.OnlineUserDic;
             //循环添加到onlineusers列表控件
             this.onlineuses.Items.Clear();
-            for (int i=0;i< chatUserlist.Count;i++)
+
+            foreach (var dic in onlineUserDic)
             {
-                ChatUser ChatUser = (ChatUser)chatUserlist[i];
-                onlineuses.Items.Add(ChatUser.chatIp);
+                //Console.WriteLine("Output Key : {0}, Value : {1} ", dic.Key, dic.Value);
+                OnlineUser onlineUser = (OnlineUser)dic.Value;
+                onlineuses.Items.Add(onlineUser.chatIp);
             }
         }
 
@@ -147,17 +157,11 @@ namespace LoginFrame
                 {
                     Call(selectedUsers[a].Text);
                  }
-
-                //Call("192.168.10.100");
             }
             else
             {
                 MessageBox.Show("请选择需要聊天的用户");
             }
-
-
-
-            
         }
 
         private void Call(string ip)
@@ -165,14 +169,14 @@ namespace LoginFrame
             try
             {
                 //Get the IP we want to call.
-                if (otherPartyIP==null)
-                {
+               
+               
                     otherPartyIP = new IPEndPoint(IPAddress.Parse(ip), 1450);
-                }
-                if (otherPartyEP == null)
-                {
+             
+              
+            
                     otherPartyEP = (EndPoint)otherPartyIP;
-                }
+              
 
                
 
@@ -267,7 +271,13 @@ namespace LoginFrame
                     case Command.OK:
                         {
                             //Start a call.
-                            addChatRoom("测试IP","测试用户名");
+                            string ip = receivedFromEP.ToString().Split(':')[0];
+                            //将远程同意邀请的用户IP写到教师机的  聊天室列表中
+                            addChatRoom(ip, "测试用户名");
+                            //更新在线用户的  isChating 值改成true
+                            updateOnlineUser(ip);
+                            //同时需要通知其他学生机更新目前最新的聊天室用户IP列表  而这个操作需要由一开始登录的Socket来做
+                            updateNetNewChatRoomUsersToStudent();
                             InitializeCall();                                
                             break;
                         }
@@ -303,10 +313,63 @@ namespace LoginFrame
             }
         }
 
+        private void updateOnlineUser(string ip)
+        {
+            Dictionary<string, OnlineUser> onlineUserDic = LoginRoler.OnlineUserDic;
+            //循环添加到onlineusers列表控件
+
+            foreach (var dic in onlineUserDic)
+            {
+                if (dic.Key.Equals(ip)==true)
+                {
+                    //Console.WriteLine("Output Key : {0}, Value : {1} ", dic.Key, dic.Value);
+                    OnlineUser onlineUser = (OnlineUser)dic.Value;
+                    onlineUser.isChating = true;
+                    onlineUserDic.Add(ip, onlineUser);
+                }
+            }
+        }
+
+
+        /// <summary>
+        /// 更新局域网中聊天室用户 推送到学生机其上面
+        /// </summary>
+        private void updateNetNewChatRoomUsersToStudent()
+        {
+            //循环  发送  局域网 聊天用户
+            MainFrame mFrame = MainFrame.createForm();
+            Dictionary<string, Socket> socketDic = mFrame.SocketDic;
+
+            foreach (var dic in socketDic)
+            {
+                //Console.WriteLine("Output Key : {0}, Value : {1} ", dic.Key, dic.Value);
+                string ip = dic.Key;
+                Socket socketSend = dic.Value;
+                List<ChatUser> chatUserslist = LoginRoler.chatUserlist;
+                MemoryStream mStream = new MemoryStream();
+                BinaryFormatter bformatter = new BinaryFormatter();  //二进制序列化类  
+                bformatter.Serialize(mStream, chatUserslist); //将消息类转换为内存流  
+                mStream.Flush();
+                byte[] buffer = new byte[1024];
+                mStream.Position = 0;  //将流的当前位置重新归0，否则Read方法将读取不到任何数据
+                while (mStream.Read(buffer, 0, buffer.Length) > 0)
+                {
+                    socketSend.Send(buffer); //从内存中读取二进制流，并发送  
+                }
+                socketSend.Close();
+            }
+        }
 
         public void addChatRoom(string ip,string name)
         {
             chatroomusers.Items.Add(ip);
+
+            //将用户加入LoginRole.chatUserslist里面
+            List<ChatUser> chatUserslist=LoginRoler.chatUserlist;
+            ChatUser chatUser = new ChatUser();
+            chatUser.ChatIp = ip;
+            chatUser.ChatName = name;
+            chatUserslist.Add(chatUser);
         }
         /*
          * Send synchronously sends data captured from microphone across the network on port 1550.
@@ -343,21 +406,31 @@ namespace LoginFrame
 
                     //Choose the vocoder. And then send the data to other party at port 1550.
 
-                    if (vocoder == Vocoder.ALaw)
-                    {                        
-                        byte[] dataToWrite = ALawEncoder.ALawEncode(memStream.GetBuffer());
-                        udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString (), 1550);                        
-                    }
-                    else if (vocoder == Vocoder.uLaw)
+                    //循环聊天室里面的用户发送语音数据
+
+                    //chatroomusers
+                    for (int a=0;a< chatroomusers.Items.Count;a++)
                     {
-                        byte[] dataToWrite = MuLawEncoder.MuLawEncode(memStream.GetBuffer());
-                        udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
+                        if (vocoder == Vocoder.ALaw)
+                        {
+                            byte[] dataToWrite = ALawEncoder.ALawEncode(memStream.GetBuffer());
+                            //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
+                            udpClient.Send(dataToWrite, dataToWrite.Length, chatroomusers.Items[a].ToString(), 1550);
+                        }
+                        else if (vocoder == Vocoder.uLaw)
+                        {
+                            byte[] dataToWrite = MuLawEncoder.MuLawEncode(memStream.GetBuffer());
+                            //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
+                            udpClient.Send(dataToWrite, dataToWrite.Length, chatroomusers.Items[a].ToString(), 1550);
+                        }
+                        else
+                        {
+                            byte[] dataToWrite = memStream.GetBuffer();
+                            //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
+                            udpClient.Send(dataToWrite, dataToWrite.Length, chatroomusers.Items[a].ToString(), 1550);
+                        }
                     }
-                    else
-                    {
-                        byte[] dataToWrite = memStream.GetBuffer();
-                        udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
-                    }
+                    
                 }
             }
             catch (Exception ex)
@@ -493,7 +566,6 @@ namespace LoginFrame
         {
             try
             {
-                //Start listening on port 1500.
                 udpClient = new UdpClient(1550);
 
                 Thread senderThread = new Thread(new ThreadStart(Send));
@@ -545,6 +617,17 @@ namespace LoginFrame
                 UninitializeCall();
                 DropCall();
             }
+        }
+
+
+        /// <summary>
+        /// 加载聊天室用户
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button1_Click(object sender, EventArgs e)
+        {
+            loadOnlineUses();
         }
     }
 

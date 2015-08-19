@@ -43,6 +43,7 @@
     <Compile Include="ChatUser.cs" />
     <Compile Include="ClassInfo.cs" />
     <Compile Include="LoginRoler.cs" />
+    <Compile Include="OnlineUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="User.cs" />

@@ -18,7 +18,19 @@ namespace Model
         public static string serverIp;
         public static string serverType;
 
+        public static List<OnlineUser> onlineUserlist = new List<OnlineUser>();
+
+
+        public static Dictionary<string, OnlineUser> onlineUserDic = new Dictionary<string, OnlineUser>();
+
+
         public static List<ChatUser>  chatUserlist=new List<ChatUser>();
+
+        public static Dictionary<string, OnlineUser> OnlineUserDic
+        {
+            get { return onlineUserDic; }
+            set { onlineUserDic = value; }
+        }
 
         public static List<ChatUser> ChatUserlist
         {
@@ -26,6 +38,10 @@ namespace Model
             set { chatUserlist = value; }
         }
 
-
+        public static List<OnlineUser> OnlineUserlist
+        {
+            get { return onlineUserlist; }
+            set { onlineUserlist = value; }
+        }
     }
 }
