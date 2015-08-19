@@ -191,6 +191,12 @@
     <Compile Include="VoiceChat.designer.cs">
       <DependentUpon>VoiceChat.cs</DependentUpon>
     </Compile>
+    <Compile Include="VoiceChatRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VoiceChatRoom.Designer.cs">
+      <DependentUpon>VoiceChatRoom.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddClass.resx">
       <DependentUpon>AddClass.cs</DependentUpon>
     </EmbeddedResource>
@@ -269,6 +275,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VoiceChat.resx">
       <DependentUpon>VoiceChat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoiceChatRoom.resx">
+      <DependentUpon>VoiceChatRoom.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config">
       <SubType>Designer</SubType>
