@@ -47,7 +47,7 @@ namespace LoginFrame
 
         private void VoiceChat_Load(object sender, EventArgs e)
         {
-            this.cmbCodecs.SelectedIndex = 0;
+            this.cmbCodecs.SelectedIndex = 1;
             loadOnlineUses();
         }
 
@@ -170,8 +170,8 @@ namespace LoginFrame
                                 //We have no active call.
 
                                 //Ask the user to accept the call or not.
-                                if (MessageBox.Show("Call coming from " + msgReceived.strName + ".\r\n\r\nAccept it?",
-                                    "VoiceChat", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                                if (MessageBox.Show(msgReceived.strName + "邀请你进行语音通话.\r\n\r\n接受吗?",
+                                    "通话邀请", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                                 {
                                     SendMessage(Command.OK, receivedFromEP);
                                     vocoder = msgReceived.vocoder;
@@ -282,8 +282,7 @@ namespace LoginFrame
             Dictionary<string, OnlineUser> onlineUserDic = LoginRoler.OnlineUserDic;
             //循环添加到onlineusers列表控件
 
-            if (1==2)
-            {
+           
                 foreach (var dic in onlineUserDic)
                 {
                     if (dic.Key.Equals(ip) == true)
@@ -291,11 +290,11 @@ namespace LoginFrame
                         //Console.WriteLine("Output Key : {0}, Value : {1} ", dic.Key, dic.Value);
                         OnlineUser onlineUser = (OnlineUser)dic.Value;
                         onlineUser.isChating = true;
-                        onlineUserDic.Remove(ip);
-                        onlineUserDic.Add(ip, onlineUser);
+                        //onlineUserDic.Remove(ip);
+                        //onlineUserDic.Add(ip, onlineUser);
                     }
                 }
-            }
+           
             
         }
 
@@ -368,7 +367,7 @@ namespace LoginFrame
 
                         if (ip.Equals(LoginRoler.ip)) continue;
 
-                        Console.WriteLine("发送音频数据到:"+ip);
+                        //Console.WriteLine("发送音频数据到:"+ip);
                         if (vocoder == Vocoder.ALaw)
                         {
                             byte[] dataToWrite = ALawEncoder.ALawEncode(memStream.GetBuffer());
@@ -585,9 +584,9 @@ namespace LoginFrame
 
         private void btnCall_Click(object sender, EventArgs e)
         {
-            Call("192.168.0.104");
+            //Call("192.168.0.104");
             //这里有个问题  勾选 不代表 选中 
-            if (1==2)
+            if (1==1)
             {
                 if (this.onlineuses.SelectedItems.Count > 0)
                 {

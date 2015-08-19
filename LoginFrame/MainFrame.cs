@@ -129,7 +129,7 @@ namespace LoginFrame
                     //开启线程
                     threadWatch.Start();
 
-                    Console.WriteLine("=====================服 务 器 启 动 成 功该Socekt用来通信聊天室用户的信息更新======================");
+                    //Console.WriteLine("=====================服 务 器 启 动 成 功该Socekt用来通信聊天室用户的信息更新======================");
             }
             else
             {
@@ -153,7 +153,7 @@ namespace LoginFrame
 
 
                 //打印输出
-                Console.WriteLine("=====================服 务 器 连 接 成 功Socekt用来通信聊天室用户的信息更新======================");
+                //Console.WriteLine("=====================服 务 器 连 接 成 功Socekt用来通信聊天室用户的信息更新======================");
             }
         }
 
@@ -185,7 +185,7 @@ namespace LoginFrame
                     }
                     else
                     {
-                        Console.WriteLine("成功获取到数据");
+                        //Console.WriteLine("成功获取到数据");
                         mStream.Write(buffer, 0, ReceiveCount); //将接收到的数据写入内存流  
                     }
                 }
@@ -198,11 +198,11 @@ namespace LoginFrame
 
                     LoginRoler.chatUserlist = chatUserslist;
 
-                    Console.WriteLine("接收到来" + chatUserslist.Count + "的信息内容：" );
+                    //Console.WriteLine("接收到来" + chatUserslist.Count + "的信息内容：" );
                 }
                 else
                 {
-                    Console.WriteLine("接收到的数据为空。");
+                    //Console.WriteLine("接收到的数据为空。");
                 }
                 
             }
@@ -236,7 +236,7 @@ namespace LoginFrame
                 onlineUserDic.Add(ip, onlineUser);
 
                 //打印输出
-                Console.WriteLine("客户端连接成功:" + sokConnection.RemoteEndPoint.ToString());
+                //Console.WriteLine("客户端连接成功:" + sokConnection.RemoteEndPoint.ToString());
 
             }
         }
@@ -354,8 +354,8 @@ namespace LoginFrame
                                 //We have no active call.
 
                                 //Ask the user to accept the call or not.
-                                if (MessageBox.Show("Call coming from " + msgReceived.strName + ".\r\n\r\nAccept it?",
-                                    "VoiceChat", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                                if (MessageBox.Show(msgReceived.strName + "邀请你进行语音通话.\r\n\r\n接受吗?",
+                                    "通话邀请", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                                 {
                                     SendMessage(Command.OK, receivedFromEP);
                                     vocoder = msgReceived.vocoder;
@@ -486,7 +486,7 @@ namespace LoginFrame
 
                         if (ip.Equals(LoginRoler.ip)) continue;
 
-                        Console.WriteLine("发送音频数据到:" + ip);
+                        //Console.WriteLine("发送音频数据到:" + ip);
 
                         if (vocoder == Vocoder.ALaw)
                         {
