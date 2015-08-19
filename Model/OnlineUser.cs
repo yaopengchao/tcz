@@ -19,8 +19,8 @@ namespace Model
 
         public string ChatName
         {
-            get { return ChatName; }
-            set { ChatName = value; }
+            get { return chatName; }
+            set { chatName = value; }
         }
 
         //是否在聊天

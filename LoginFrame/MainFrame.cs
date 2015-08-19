@@ -204,7 +204,7 @@ namespace LoginFrame
                 {
                     Console.WriteLine("接收到的数据为空。");
                 }
-                socketClient.Close();
+                
             }
         }
 
@@ -231,7 +231,7 @@ namespace LoginFrame
                 Dictionary<string, OnlineUser> onlineUserDic = LoginRoler.OnlineUserDic;
 
                 onlineUser.ChatIp = ip;
-                onlineUser.chatName = "测试";
+                onlineUser.ChatName = "测试";
 
                 onlineUserDic.Add(ip, onlineUser);
 

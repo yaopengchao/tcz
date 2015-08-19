@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+
 namespace Model
 {
+    [Serializable]
     public class ChatUser
     {
         public string chatIp;
@@ -19,8 +21,8 @@ namespace Model
 
         public string ChatName
         {
-            get { return ChatName; }
-            set { ChatName = value; }
+            get { return chatName; }
+            set { chatName = value; }
         }
     }
 }
