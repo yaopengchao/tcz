@@ -485,16 +485,20 @@ namespace LoginFrame
         }
 
         VoiceChat vc;
+        VoiceChatRoom vcr;
         void openVoiceChat()
         {
-            vc = new VoiceChat();
-            vc.ShowDialog();
+            //vc = new VoiceChat();
+            vcr = new VoiceChatRoom();
+            vcr.ShowDialog();
+            //vc.ShowDialog();
         }
 
         void closeVoiceChat()
         {
 
-            vc.Close();
+            vcr.Close();
+            //vc.Close();
         }
 
 

@@ -1,8 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Microsoft.DirectX.DirectSound;
@@ -11,7 +8,6 @@ using System.Threading;
 using System.Net.Sockets;
 using System.Net;
 using g711audio;
-
 using Model;
 using System.Runtime.Serialization.Formatters.Binary;
 
@@ -60,6 +56,9 @@ namespace LoginFrame
 
         private void loadOnlineUses()
         {
+
+            this.onlineuses.BeginUpdate();
+
             //加载在线用户列表  数据从LoginRoler获取
             Dictionary<string, OnlineUser> onlineUserDic = LoginRoler.OnlineUserDic;
             //循环添加到onlineusers列表控件
@@ -67,10 +66,17 @@ namespace LoginFrame
 
             foreach (var dic in onlineUserDic)
             {
-                //Console.WriteLine("Output Key : {0}, Value : {1} ", dic.Key, dic.Value);
                 OnlineUser onlineUser = (OnlineUser)dic.Value;
-                onlineuses.Items.Add(onlineUser.chatIp);
+                Console.WriteLine("加入在线列表 Ip : {0}", onlineUser.ChatIp);
+
+
+                ListViewItem lvItem = new ListViewItem();
+                lvItem.Text = onlineUser.ChatIp;
+                this.onlineuses.Items.Add(lvItem);
+
             }
+
+            this.onlineuses.EndUpdate();  //结束数据处理，UI界面一次性绘制。 
         }
 
         /*
@@ -147,20 +153,25 @@ namespace LoginFrame
 
         private void btnCall_Click(object sender, EventArgs e)
         {
-            if (this.onlineuses.SelectedItems.Count>0)
-            {
-                string ip = this.onlineuses.SelectedItems[0].Text;
+            Call("192.168.0.104");
 
-                //循环处理 在线用户列表
-                 selectedUsers = this.onlineuses.SelectedItems;
-                 for (int a=0;a<selectedUsers.Count;a++)
-                {
-                    Call(selectedUsers[a].Text);
-                 }
-            }
-            else
+            if (1 == 2)
             {
-                MessageBox.Show("请选择需要聊天的用户");
+
+
+                if (this.onlineuses.SelectedItems.Count > 0)
+                {
+                    //循环处理 在线用户列表
+                    selectedUsers = this.onlineuses.SelectedItems;
+                    for (int a = 0; a < selectedUsers.Count; a++)
+                    {
+                        Call(selectedUsers[a].Text);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("请选择需要聊天的用户");
+                }
             }
         }
 
