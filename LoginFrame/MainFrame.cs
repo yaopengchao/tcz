@@ -24,6 +24,8 @@ namespace LoginFrame
         public TitleMain titleMain;
         public TalkMain talkMain;
 
+        public VoiceChatRoom voiceChatRoom;
+
         public SoundPlayer splayer;
 
 

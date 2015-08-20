@@ -472,11 +472,16 @@ namespace LoginFrame
             {
                 if (isTalking)
                 {
+                    
+
                     isTalking = false;
                     closeVoiceChat();
                 }
                 else
                 {
+
+                    this.button9.BackgroundImage = LoginFrame.Properties.Resources.voice_48px_1075894_easyicon_net;
+
                     isTalking = true;
                     // 老师打开聊天室界面
                     openVoiceChat();
@@ -487,16 +492,59 @@ namespace LoginFrame
         VoiceChatRoom vcr;
         void openVoiceChat()
         {
+            MainFrame mainFrame = MainFrame.createForm();
+
+
+            this.mainFrame.panel6.Controls.Clear();
+
+            VoiceChatRoom voiceChatRoom = VoiceChatRoom.createForm();
+            voiceChatRoom.TopLevel = false;
+            voiceChatRoom.FormBorderStyle = FormBorderStyle.None;
+            voiceChatRoom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainFrame.panel6.Controls.Add(voiceChatRoom);
+            voiceChatRoom.Show();
+
+            //互相访问控件
+            mainFrame.voiceChatRoom = voiceChatRoom;
+
+            voiceChatRoom.mainFrame = mainFrame;
+           
+
             //vc = new VoiceChat();
-            vcr = new VoiceChatRoom();
-            vcr.ShowDialog();
+            //vcr = new VoiceChatRoom();
+            //vcr.ShowDialog();
             //vc.ShowDialog();
         }
 
         void closeVoiceChat()
         {
 
-            vcr.Close();
+
+            this.button9.BackgroundImage = LoginFrame.Properties.Resources.voice_forbidden_48px_1075895_easyicon_net;
+            MainFrame mainFrame = MainFrame.createForm();
+
+
+            
+
+
+            //加载主体栏
+            mainFrame.panel6.Controls.Clear();
+            BodyMain bodyMain = BodyMain.createForm();
+            bodyMain.TopLevel = false;
+            bodyMain.FormBorderStyle = FormBorderStyle.None;
+            bodyMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            mainFrame.panel6.Controls.Add(bodyMain);
+            bodyMain.Show();
+            mainFrame.Show();
+
+
+            //互相访问控件
+            mainFrame.bodyMain = bodyMain;
+           
+
+            bodyMain.mainFrame = mainFrame;
+           
+            //vcr.Close();
             //vc.Close();
         }
 

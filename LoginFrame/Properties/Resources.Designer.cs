@@ -63,6 +63,16 @@ namespace LoginFrame.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap _7 {
+            get {
+                object obj = ResourceManager.GetObject("_7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap cobegmbobox {
             get {
                 object obj = ResourceManager.GetObject("cobegmbobox", resourceCulture);
@@ -166,6 +176,26 @@ namespace LoginFrame.Properties {
         internal static System.Drawing.Bitmap sysnc {
             get {
                 object obj = ResourceManager.GetObject("sysnc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap voice_48px_1075894_easyicon_net {
+            get {
+                object obj = ResourceManager.GetObject("voice_48px_1075894_easyicon_net", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap voice_forbidden_48px_1075895_easyicon_net {
+            get {
+                object obj = ResourceManager.GetObject("voice_forbidden_48px_1075895_easyicon_net", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

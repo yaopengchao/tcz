@@ -36,7 +36,10 @@ namespace LoginFrame
         private Vocoder vocoder;
         private byte[] byteData = new byte[1024];   //Buffer to store the data received.
         private volatile int nUdpClientFlag;                 //Flag used to close the udpClient socket.
+        EndPoint ourEP;
+        EndPoint remoteEP;
 
+        public MainFrame mainFrame;
 
         public VoiceChatRoom()
         {
@@ -130,13 +133,26 @@ namespace LoginFrame
                 nUdpClientFlag = 0;
 
                 //Using UDP sockets
-                clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-                EndPoint ourEP = new IPEndPoint(IPAddress.Any, 1450);
+
+                if (clientSocket==null)
+                {
+                    clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+                }
+                if (ourEP == null)
+                {
+                    ourEP = new IPEndPoint(IPAddress.Any, 1450);
+                }
+                
+                
                 //Listen asynchronously on port 1450 for coming messages (Invite, Bye, etc).
                 clientSocket.Bind(ourEP);
 
                 //Receive data from any IP.
-                EndPoint remoteEP = (EndPoint)(new IPEndPoint(IPAddress.Any, 0));
+                if (remoteEP==null)
+                {
+                    remoteEP = (EndPoint)(new IPEndPoint(IPAddress.Any, 0));
+                }
+                 
 
                 byteData = new byte[1024];
 
@@ -155,6 +171,7 @@ namespace LoginFrame
             }
         }
 
+        EndPoint receivedFromEP;
         /*
          * Commands are received asynchronously. OnReceive is the handler for them.
          */
@@ -162,7 +179,10 @@ namespace LoginFrame
         {
             try
             {
-                EndPoint receivedFromEP = new IPEndPoint(IPAddress.Any, 0);
+                if (receivedFromEP==null)
+                {
+                    receivedFromEP = new IPEndPoint(IPAddress.Any, 0);
+                }
 
                 //Get the IP from where we got a message.
                 clientSocket.EndReceiveFrom(ar, ref receivedFromEP);
@@ -427,7 +447,17 @@ namespace LoginFrame
             }
         }
 
-        
+        private static VoiceChatRoom instance;
+
+        public static VoiceChatRoom createForm()
+        {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new VoiceChatRoom();
+            }
+            return instance;
+        }
+
 
 
         /*
@@ -587,6 +617,9 @@ namespace LoginFrame
             }
 
             this.Close();
+
+
+
         }
 
 
