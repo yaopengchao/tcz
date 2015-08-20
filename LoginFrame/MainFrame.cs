@@ -83,6 +83,8 @@ namespace LoginFrame
 
         private static MainFrame instance;
 
+        Thread threadWatchInfo = null;
+
         Thread threadWatch = null;
 
         Thread recvthreadWatch = null;
@@ -123,8 +125,17 @@ namespace LoginFrame
                     //设置监听队列 一次可以处理的最大数量
                     socketServer.Listen(10);
 
-                    //创建线程 负责监听
-                    threadWatch = new Thread(WatchConnection);
+
+                //创建线程 负责监听
+                threadWatchInfo = new Thread(WatchConnectionInfo);
+                //设置为后台线程
+                threadWatchInfo.IsBackground = true;
+                //开启线程
+                threadWatchInfo.Start();
+
+
+                //创建线程 负责监听
+                threadWatch = new Thread(WatchConnection);
                     //设置为后台线程
                     threadWatch.IsBackground = true;
                     //开启线程
@@ -148,6 +159,14 @@ namespace LoginFrame
                 socketClient.Connect(endPoint);
 
 
+                //主动发送学生的IP和姓名 发一次
+                OnlineUser onlineUser = new OnlineUser();
+                onlineUser.ChatIp = LoginRoler.ip;
+                onlineUser.ChatName = LoginRoler.username;
+                sendLoaclInfo(socketClient, onlineUser);
+
+
+                //该线程用来接收教师机发送过来的最新聊天室名单IP
                 recvthreadWatch = new Thread(new ThreadStart(recvWatchConnection));
                 recvthreadWatch.IsBackground = true;
                 recvthreadWatch.Start();//可能有并发请求，所以消息的接收也需要在子线程中处理  
@@ -155,6 +174,25 @@ namespace LoginFrame
 
                 //打印输出
                 //Console.WriteLine("=====================服 务 器 连 接 成 功Socekt用来通信聊天室用户的信息更新======================");
+            }
+        }
+
+        /// <summary>
+        ///  //主动发送学生的IP和姓名 发一次
+        /// </summary>
+        /// <param name="serverIp"></param>
+        /// <param name="onlineUser"></param>
+        private void sendLoaclInfo(Socket socketSend,OnlineUser onlineUser)
+        {
+            MemoryStream mStream = new MemoryStream();
+            BinaryFormatter bformatter = new BinaryFormatter();  //二进制序列化类  
+            bformatter.Serialize(mStream, onlineUser); //将消息类转换为内存流  
+            mStream.Flush();
+            byte[] buffer = new byte[1024];
+            mStream.Position = 0;  //将流的当前位置重新归0，否则Read方法将读取不到任何数据
+            while (mStream.Read(buffer, 0, buffer.Length) > 0)
+            {
+                socketSend.Send(buffer); //从内存中读取二进制流，并发送  
             }
         }
 
@@ -209,6 +247,48 @@ namespace LoginFrame
             }
         }
 
+        //监听学生发来的信息
+        void WatchConnectionInfo()
+        {
+            //持续不断的监听   更新聊天室用户信息
+          
+                //socketClient
+                byte[] buffer = new byte[1024];
+                MemoryStream mStream = new MemoryStream();
+                mStream.Position = 0;
+                while (true)
+                {
+                    Socket sokConnection = socketServer.Accept();
+                    int ReceiveCount = sokConnection.Receive(buffer, 1024, 0);
+                    if (ReceiveCount == 0)
+                    {
+                        break;//接收到的字节数为0时break  
+                    }
+                    else
+                    {
+                        //Console.WriteLine("成功获取到数据");
+                        mStream.Write(buffer, 0, ReceiveCount); //将接收到的数据写入内存流  
+                    }
+                }
+                mStream.Flush();
+                mStream.Position = 0;
+                BinaryFormatter bFormatter = new BinaryFormatter();
+                if (mStream.Capacity > 0)
+                {
+                    OnlineUser onlineUser  = (OnlineUser)bFormatter.Deserialize(mStream);//将接收到的内存流反序列化为对象  
+
+                    Dictionary<string, OnlineUser> onlineUserDic = LoginRoler.OnlineUserDic;
+
+                    onlineUserDic.Add(onlineUser.ChatIp.ToString(), onlineUser);
+
+                }
+                else
+                {
+                    //Console.WriteLine("接收到的数据为空。");
+                }
+
+          
+        }
 
         //监听方法
         void WatchConnection()
@@ -216,6 +296,8 @@ namespace LoginFrame
             //持续不断的监听
             while (true)
             {
+
+                //此处不仅仅需要学生机IP还需要学生的姓名
 
                 //开始监听 客户端 连接请求 【注意】Accept方法会阻断当前的线程--未接受到请求 程序卡在那里
                 Socket sokConnection = socketServer.Accept();//返回一个 负责和该客户端通信的 套接字
@@ -227,14 +309,14 @@ namespace LoginFrame
 
                 //将在线用户加入到LoginRoler  onlineUserDic
 
-                OnlineUser onlineUser = new OnlineUser();
+                //OnlineUser onlineUser = new OnlineUser();
 
-                Dictionary<string, OnlineUser> onlineUserDic = LoginRoler.OnlineUserDic;
+               // Dictionary<string, OnlineUser> onlineUserDic = LoginRoler.OnlineUserDic;
 
-                onlineUser.ChatIp = ip;
-                onlineUser.ChatName = "测试";
+                //onlineUser.ChatIp = ip;
+                //onlineUser.ChatName = "测试";
 
-                onlineUserDic.Add(ip, onlineUser);
+                //onlineUserDic.Add(ip, onlineUser);
 
                 //打印输出
                 //Console.WriteLine("客户端连接成功:" + sokConnection.RemoteEndPoint.ToString());

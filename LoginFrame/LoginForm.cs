@@ -246,6 +246,7 @@ namespace LoginFrame
         int comboBox3selectIndex;
         private void button1_Click(object sender, EventArgs e)
         {
+            this.label6.Text = "搜索数据库IP......";
             //重置默认
             RunDoWhile = true;
 
@@ -274,13 +275,11 @@ namespace LoginFrame
             {
                 if (isLocalIp)
                 {
-                    createSendUDPClient();
+                    //createSendUDPClient();
 Console.WriteLine(">>>>>>>>>>>>>.往局域网中发送数据库IP的消息");
                     Thread t = new Thread(new ThreadStart(sendThread));
                     t.IsBackground = true;
                     t.Start();
-
-                    
                 }
             }
 
@@ -362,10 +361,11 @@ Console.WriteLine("====开始搜寻局域网数据库IP====");
                 if ((searchServerIpthr == null))
                 {
                         //搜索异步线程
-                        Console.WriteLine("==创建搜索任务");
+                        //Console.WriteLine("==创建搜索任务");
                         searchServerIpthr = new Thread(new ThreadStart(RecvThread));
-                        searchServerIpthr.IsBackground = true;
-                        Console.WriteLine("==执行搜索任务");
+                    //searchServerIpthr = new Thread(new ThreadStart(RecvThread广播));
+                    searchServerIpthr.IsBackground = true;
+                        //Console.WriteLine("==执行搜索任务");
                         searchServerIpthr.Start();
                 }
             } while (RunDoWhile);
@@ -398,15 +398,41 @@ Console.WriteLine("====开始搜寻局域网数据库IP====");
             
         }
 
+        UdpClient sendclient;
+        IPEndPoint sendendpoint;
         private void createSendUDPClient()
         {
-           
+            if (sendclient==null)
+            {
+                sendclient = new UdpClient(new IPEndPoint(IPAddress.Any, 0));
+            }
+            if (sendendpoint == null)
+            {
+                sendendpoint = new IPEndPoint(IPAddress.Parse("255.255.255.255"), 5000);
+            }
         }
 
         private void createReceUDPClient()
         {
             recv("224.5.6.7", "5000");
+            //recv("224.224.224.224", "5000");
+            //recv广播("5000");
         }
+
+        UdpClient recvclient;
+        IPEndPoint recvendpoint;
+        private void recv广播(string port)
+        {
+            if (recvclient == null)
+            {
+                recvclient = new UdpClient(new IPEndPoint(IPAddress.Any, 5000));
+            }
+            if (recvendpoint == null)
+            {
+                recvendpoint = new IPEndPoint(IPAddress.Any, 0);
+            }
+        }
+
 
         private void sendThread()
         {
@@ -414,7 +440,14 @@ Console.WriteLine("====开始搜寻局域网数据库IP====");
             {
                 byte[] buf = Encoding.Default.GetBytes("ServerIp^"+LoginRoler.serverIp+"^"+ LoginRoler.serverType+"^");
                 send("224.5.6.7", "5000", "10", buf);
+                //send("224.224.224.224", "5000", "10", buf);
+                //send广播(buf);
             }
+        }
+
+        private void send广播(byte[] buf)
+        {
+                      sendclient.Send(buf, buf.Length, sendendpoint);
         }
 
         private void send(string mcastGroup, string port, string ttl, byte[] data)
@@ -510,6 +543,33 @@ Console.WriteLine("====开始搜寻局域网数据库IP====");
 
             }
             //s.Close();
+        }
+
+
+
+        void RecvThread广播()
+        {
+            while (true)
+            {
+                byte[] buf = recvclient.Receive(ref recvendpoint);
+                string msg = Encoding.Default.GetString(buf);
+                string[] splitString = msg.Split('^');
+                switch (splitString[0])
+                {
+                    case "ServerIp"://服务器IP指令
+                        Console.WriteLine("接收到局域网中某台机器传送来的IP:" + splitString[1]);
+                        LoginRoler.serverIp = splitString[1];
+                        LoginRoler.serverType = splitString[2];
+                        //Console.WriteLine("^^^^^^^^^^^^^^^^" + LoginRoler.serverIp);
+                        //搜索进程结束 且将定时器取消
+                        RunDoWhile = false;
+                        searchServerIpthr.Abort();
+                        break;
+                    default:
+                        //Console.WriteLine("进入默认了...");
+                        break;
+                }
+            }
         }
 
 

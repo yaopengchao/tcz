@@ -52,6 +52,10 @@ namespace LoginFrame
             loadOnlineUses();
         }
 
+        
+        
+
+
         private void loadOnlineUses()
         {
             this.onlineuses.BeginUpdate();
@@ -72,6 +76,9 @@ namespace LoginFrame
                     Console.WriteLine("加入在线列表 Ip : {0}", onlineUser.ChatIp.ToString());
                     ListViewItem lvItem = new ListViewItem();
                     lvItem.Text = onlineUser.ChatIp.ToString();
+
+                    lvItem.SubItems[0].Text = "测试";
+
                     this.onlineuses.Items.Add(lvItem);
                 }
             }
@@ -279,7 +286,7 @@ namespace LoginFrame
                 {
                     socketSend.Send(buffer); //从内存中读取二进制流，并发送  
                 }
-                socketSend.Close();
+                //socketSend.Close();
             }
         }
         private void updateOnlineUser(string ip)
@@ -601,9 +608,10 @@ namespace LoginFrame
 
         private void btnCall_Click(object sender, EventArgs e)
         {
-            //Call("192.168.0.104");
-            //这里有个问题  勾选 不代表 选中 
-            if (1==1)
+
+                //Call("192.168.0.104");
+                
+                if (1==1)
             {
                 if (this.onlineuses.SelectedItems.Count > 0)
                 {
@@ -734,6 +742,16 @@ namespace LoginFrame
             public string strName;      //Name by which the client logs into the room.
             public Command cmdCommand;  //Command type (login, logout, send message, etc).
             public Vocoder vocoder;
+        }
+
+        /// <summary>
+        /// 给LISTVIEW复选框添加事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void onlineuses_ItemChecked(object sender, ItemCheckedEventArgs e)
+        {
+            e.Item.Selected = e.Item.Checked;
         }
     }
 }
