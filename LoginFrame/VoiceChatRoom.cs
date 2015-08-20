@@ -68,6 +68,10 @@ namespace LoginFrame
             //循环添加到onlineusers列表控件
             this.onlineuses.Items.Clear();
 
+             
+            //this.onlineuses.Columns.Add("姓名", 70, HorizontalAlignment.Left); //一步添加 
+            //this.onlineuses.Columns.Add("IP地址", 116, HorizontalAlignment.Left); //一步添加
+
             foreach (var dic in onlineUserDic)
             {
                 OnlineUser onlineUser = (OnlineUser)dic.Value;
@@ -78,9 +82,9 @@ namespace LoginFrame
                 {
                     Console.WriteLine("加入在线列表 Ip : {0}", onlineUser.ChatIp.ToString());
                     ListViewItem lvItem = new ListViewItem();
-                    lvItem.Text = onlineUser.ChatIp.ToString();
+                    lvItem.Text = onlineUser.ChatName.ToString();
 
-                    lvItem.SubItems[0].Text = "测试";
+                    lvItem.SubItems.Add(onlineUser.ChatIp.ToString());
 
                     this.onlineuses.Items.Add(lvItem);
                 }
@@ -230,7 +234,7 @@ namespace LoginFrame
                             //Start a call.
                             string ip = receivedFromEP.ToString().Split(':')[0];
                             //将远程同意邀请的用户IP写到教师机的  聊天室列表中
-                            addChatRoom(ip, "测试用户名");
+                            addChatRoom(ip, ((OnlineUser)(LoginRoler.OnlineUserDic[ip])).ChatName);
                             //更新在线用户的  isChating 值改成true
                             updateOnlineUser(ip);
                             //同时需要通知其他学生机更新目前最新的聊天室用户IP列表  而这个操作需要由一开始登录的Socket来做
@@ -396,7 +400,11 @@ namespace LoginFrame
 
                         //Console.WriteLine("ip=" + chatroomusers.Items[a].Text.ToString() + "进入聊天");
 
-                        string ip = chatroomusers.Items[a].Text.ToString();
+                        string ip = chatroomusers.Items[a].SubItems[1].Text.ToString();
+
+
+                        //Console.WriteLine("发送聊天数据:"+ip);
+
 
                         if (ip.Equals(LoginRoler.ip)) continue;
 
@@ -527,12 +535,6 @@ namespace LoginFrame
                     senderThread.Start();
                     //btnCall.Enabled = false;
                     //btnEndCall.Enabled = true;
-               
-               
-
-
-
-
 
 
             }
@@ -548,8 +550,15 @@ namespace LoginFrame
 
             this.chatroomusers.BeginUpdate();
 
+            //this.chatroomusers.Columns.Add("姓名", 70, HorizontalAlignment.Left); //一步添加 
+            //this.chatroomusers.Columns.Add("IP地址", 116, HorizontalAlignment.Left); //一步添加
+
             ListViewItem lvItem = new ListViewItem();
-            lvItem.Text = ip;
+
+            lvItem.Text = name;
+
+            lvItem.SubItems.Add(ip);
+
             this.chatroomusers.Items.Add(lvItem);
 
             this.chatroomusers.EndUpdate();  //结束数据处理，UI界面一次性绘制。 
@@ -652,7 +661,8 @@ namespace LoginFrame
                     selectedUsers = this.onlineuses.SelectedItems;
                     for (int a = 0; a < selectedUsers.Count; a++)
                     {
-                        Call(selectedUsers[a].Text);
+                        Call(selectedUsers[a].SubItems[1].Text);
+                        //Console.WriteLine(selectedUsers[a].SubItems[1].Text);
                     }
                 }
                 else

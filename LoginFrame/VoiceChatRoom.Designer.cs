@@ -41,6 +41,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.姓名 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.IP地址 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.姓名2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.IP地址2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -60,12 +64,15 @@
             // 
             this.onlineuses.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.onlineuses.CheckBoxes = true;
+            this.onlineuses.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.姓名,
+            this.IP地址});
             this.onlineuses.Location = new System.Drawing.Point(6, 20);
             this.onlineuses.Name = "onlineuses";
             this.onlineuses.Size = new System.Drawing.Size(187, 267);
             this.onlineuses.TabIndex = 0;
             this.onlineuses.UseCompatibleStateImageBehavior = false;
-            this.onlineuses.View = System.Windows.Forms.View.List;
+            this.onlineuses.View = System.Windows.Forms.View.Details;
             this.onlineuses.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.onlineuses_ItemChecked);
             // 
             // groupBox2
@@ -81,12 +88,16 @@
             // chatroomusers
             // 
             this.chatroomusers.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.chatroomusers.CheckBoxes = true;
+            this.chatroomusers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.姓名2,
+            this.IP地址2});
             this.chatroomusers.Location = new System.Drawing.Point(6, 20);
             this.chatroomusers.Name = "chatroomusers";
             this.chatroomusers.Size = new System.Drawing.Size(187, 267);
             this.chatroomusers.TabIndex = 0;
             this.chatroomusers.UseCompatibleStateImageBehavior = false;
-            this.chatroomusers.View = System.Windows.Forms.View.List;
+            this.chatroomusers.View = System.Windows.Forms.View.Details;
             // 
             // btnCall
             // 
@@ -173,6 +184,26 @@
             this.panel1.Size = new System.Drawing.Size(730, 364);
             this.panel1.TabIndex = 9;
             // 
+            // 姓名
+            // 
+            this.姓名.Text = "姓名";
+            this.姓名.Width = 70;
+            // 
+            // IP地址
+            // 
+            this.IP地址.Text = "IP地址";
+            this.IP地址.Width = 116;
+            // 
+            // 姓名2
+            // 
+            this.姓名2.Text = "姓名";
+            this.姓名2.Width = 70;
+            // 
+            // IP地址2
+            // 
+            this.IP地址2.Text = "IP地址";
+            this.IP地址2.Width = 116;
+            // 
             // VoiceChatRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -207,5 +238,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ColumnHeader 姓名;
+        private System.Windows.Forms.ColumnHeader IP地址;
+        private System.Windows.Forms.ColumnHeader 姓名2;
+        private System.Windows.Forms.ColumnHeader IP地址2;
     }
 }
