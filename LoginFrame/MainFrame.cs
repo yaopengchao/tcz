@@ -211,8 +211,7 @@ namespace LoginFrame
         void recvWatchConnection()
         {
             //持续不断的监听   更新聊天室用户信息
-            while (true)
-            {
+           
                 //socketClient
                 byte[] buffer = new byte[1024];
                 MemoryStream mStream = new MemoryStream();
@@ -229,24 +228,24 @@ namespace LoginFrame
                         //Console.WriteLine("成功获取到数据");
                         mStream.Write(buffer, 0, ReceiveCount); //将接收到的数据写入内存流  
                     }
-                }
-                mStream.Flush();
-                mStream.Position = 0;
-                BinaryFormatter bFormatter = new BinaryFormatter();
-                if (mStream.Capacity > 0)
-                {
-                    List<ChatUser> chatUserslist=(List<ChatUser>)bFormatter.Deserialize(mStream);//将接收到的内存流反序列化为对象  
 
-                    LoginRoler.chatUserlist = chatUserslist;
+                    mStream.Flush();
+                    mStream.Position = 0;
+                    BinaryFormatter bFormatter = new BinaryFormatter();
+                    if (mStream.Capacity > 0)
+                    {
+                        List<ChatUser> chatUserslist = (List<ChatUser>)bFormatter.Deserialize(mStream);//将接收到的内存流反序列化为对象  
 
-                    Console.WriteLine("接收到来教师发来最新聊天室用户数量:" + chatUserslist.Count + "的信息内容：" );
+                        LoginRoler.chatUserlist = chatUserslist;
+
+                        Console.WriteLine("接收到来教师发来最新聊天室用户数量:" + chatUserslist.Count + "的信息内容：");
+                    }
+                    else
+                    {
+                        //Console.WriteLine("接收到的数据为空。");
+                    }
+
                 }
-                else
-                {
-                    //Console.WriteLine("接收到的数据为空。");
-                }
-                
-            }
         }
 
         //监听学生发来的信息
