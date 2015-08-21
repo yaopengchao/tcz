@@ -136,6 +136,37 @@
             this.radioButton28 = new System.Windows.Forms.RadioButton();
             this.label30 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -182,6 +213,11 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.textBox8);
+            this.tabPage1.Controls.Add(this.textBox7);
+            this.tabPage1.Controls.Add(this.textBox6);
+            this.tabPage1.Controls.Add(this.textBox4);
+            this.tabPage1.Controls.Add(this.textBox5);
             this.tabPage1.Controls.Add(this.label50);
             this.tabPage1.Controls.Add(this.label49);
             this.tabPage1.Controls.Add(this.label48);
@@ -271,7 +307,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.label29.Location = new System.Drawing.Point(689, 464);
+            this.label29.Location = new System.Drawing.Point(685, 463);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(241, 14);
             this.label29.TabIndex = 48;
@@ -281,9 +317,10 @@
             // label28
             // 
             this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
             this.label28.Location = new System.Drawing.Point(685, 414);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(47, 12);
+            this.label28.Size = new System.Drawing.Size(60, 14);
             this.label28.TabIndex = 47;
             this.label28.Text = "舒张压:";
             // 
@@ -327,7 +364,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.label25.Location = new System.Drawing.Point(75, 3);
+            this.label25.Location = new System.Drawing.Point(65, 4);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(45, 14);
             this.label25.TabIndex = 4;
@@ -1056,6 +1093,32 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button16);
+            this.tabPage2.Controls.Add(this.button15);
+            this.tabPage2.Controls.Add(this.button14);
+            this.tabPage2.Controls.Add(this.button13);
+            this.tabPage2.Controls.Add(this.button12);
+            this.tabPage2.Controls.Add(this.button11);
+            this.tabPage2.Controls.Add(this.button10);
+            this.tabPage2.Controls.Add(this.button9);
+            this.tabPage2.Controls.Add(this.button8);
+            this.tabPage2.Controls.Add(this.button7);
+            this.tabPage2.Controls.Add(this.button6);
+            this.tabPage2.Controls.Add(this.textBox16);
+            this.tabPage2.Controls.Add(this.button5);
+            this.tabPage2.Controls.Add(this.textBox20);
+            this.tabPage2.Controls.Add(this.textBox19);
+            this.tabPage2.Controls.Add(this.textBox18);
+            this.tabPage2.Controls.Add(this.textBox17);
+            this.tabPage2.Controls.Add(this.textBox15);
+            this.tabPage2.Controls.Add(this.textBox14);
+            this.tabPage2.Controls.Add(this.textBox13);
+            this.tabPage2.Controls.Add(this.textBox12);
+            this.tabPage2.Controls.Add(this.textBox11);
+            this.tabPage2.Controls.Add(this.textBox10);
+            this.tabPage2.Controls.Add(this.textBox9);
+            this.tabPage2.Controls.Add(this.button4);
+            this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Controls.Add(this.label44);
             this.tabPage2.Controls.Add(this.label45);
             this.tabPage2.Controls.Add(this.label46);
@@ -1088,7 +1151,7 @@
             // 
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.label44.Location = new System.Drawing.Point(445, 478);
+            this.label44.Location = new System.Drawing.Point(512, 478);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(22, 14);
             this.label44.TabIndex = 28;
@@ -1098,7 +1161,7 @@
             // 
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.label45.Location = new System.Drawing.Point(445, 438);
+            this.label45.Location = new System.Drawing.Point(512, 438);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(22, 14);
             this.label45.TabIndex = 27;
@@ -1108,7 +1171,7 @@
             // 
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.label46.Location = new System.Drawing.Point(445, 401);
+            this.label46.Location = new System.Drawing.Point(512, 401);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(22, 14);
             this.label46.TabIndex = 26;
@@ -1118,7 +1181,7 @@
             // 
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.label47.Location = new System.Drawing.Point(431, 369);
+            this.label47.Location = new System.Drawing.Point(498, 369);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(37, 14);
             this.label47.TabIndex = 25;
@@ -1339,6 +1402,265 @@
             this.tabPage3.Text = "硬件设备连接状态";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(263, 421);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(113, 21);
+            this.textBox4.TabIndex = 5;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(263, 463);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(113, 21);
+            this.textBox5.TabIndex = 53;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(263, 503);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(113, 21);
+            this.textBox6.TabIndex = 54;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button3.Location = new System.Drawing.Point(720, 527);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 42;
+            this.button3.Text = "确定";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button4.Location = new System.Drawing.Point(832, 527);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 43;
+            this.button4.Text = "取消";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(788, 366);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(113, 21);
+            this.textBox7.TabIndex = 55;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(788, 407);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(113, 21);
+            this.textBox8.TabIndex = 56;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(338, 112);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(129, 21);
+            this.textBox9.TabIndex = 44;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(250, 394);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(129, 21);
+            this.textBox10.TabIndex = 45;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(338, 308);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(129, 21);
+            this.textBox11.TabIndex = 46;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(338, 264);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(129, 21);
+            this.textBox12.TabIndex = 47;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(338, 224);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(129, 21);
+            this.textBox13.TabIndex = 48;
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(338, 186);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(130, 21);
+            this.textBox14.TabIndex = 49;
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(338, 151);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(129, 21);
+            this.textBox15.TabIndex = 50;
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(571, 437);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(129, 21);
+            this.textBox17.TabIndex = 52;
+            // 
+            // textBox18
+            // 
+            this.textBox18.Location = new System.Drawing.Point(250, 471);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(129, 21);
+            this.textBox18.TabIndex = 53;
+            // 
+            // textBox19
+            // 
+            this.textBox19.Location = new System.Drawing.Point(250, 431);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(129, 21);
+            this.textBox19.TabIndex = 54;
+            // 
+            // textBox20
+            // 
+            this.textBox20.Location = new System.Drawing.Point(571, 478);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(129, 21);
+            this.textBox20.TabIndex = 55;
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button5.Location = new System.Drawing.Point(475, 110);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 56;
+            this.button5.Text = "选择声音";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(571, 394);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(129, 21);
+            this.textBox16.TabIndex = 57;
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button6.Location = new System.Drawing.Point(385, 394);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 58;
+            this.button6.Text = "选择声音";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button7.Location = new System.Drawing.Point(475, 151);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 59;
+            this.button7.Text = "选择声音";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button8.Location = new System.Drawing.Point(385, 429);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 60;
+            this.button8.Text = "选择声音";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button9.Location = new System.Drawing.Point(385, 468);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 61;
+            this.button9.Text = "选择声音";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button10.Location = new System.Drawing.Point(475, 184);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(75, 23);
+            this.button10.TabIndex = 62;
+            this.button10.Text = "选择声音";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button11.Location = new System.Drawing.Point(706, 478);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(75, 23);
+            this.button11.TabIndex = 63;
+            this.button11.Text = "选择声音";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button12.Location = new System.Drawing.Point(706, 435);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(75, 23);
+            this.button12.TabIndex = 64;
+            this.button12.Text = "选择声音";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            this.button13.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button13.Location = new System.Drawing.Point(706, 391);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(75, 23);
+            this.button13.TabIndex = 65;
+            this.button13.Text = "选择声音";
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // button14
+            // 
+            this.button14.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button14.Location = new System.Drawing.Point(475, 264);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(75, 23);
+            this.button14.TabIndex = 66;
+            this.button14.Text = "选择声音";
+            this.button14.UseVisualStyleBackColor = true;
+            // 
+            // button15
+            // 
+            this.button15.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button15.Location = new System.Drawing.Point(475, 308);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(75, 23);
+            this.button15.TabIndex = 67;
+            this.button15.Text = "选择声音";
+            this.button15.UseVisualStyleBackColor = true;
+            // 
+            // button16
+            // 
+            this.button16.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button16.Location = new System.Drawing.Point(475, 222);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(75, 23);
+            this.button16.TabIndex = 68;
+            this.button16.Text = "选择声音";
+            this.button16.UseVisualStyleBackColor = true;
+            // 
             // BodySimulation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1504,5 +1826,36 @@
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
     }
 }
