@@ -11,7 +11,7 @@ namespace Model
     /// </summary>
     public class 听诊模拟人
     {
-        private string _心前区震颤;
+        private string _心前区震颤="";
 
         public string 心前区震颤
         {
@@ -19,7 +19,7 @@ namespace Model
             set { _心前区震颤 = value; }
         }
 
-        private string _心尖搏动;
+        private string _心尖搏动 = "";
 
         public string 心尖搏动
         {
@@ -27,7 +27,7 @@ namespace Model
             set { _心尖搏动 = value; }
         }
 
-        private string _二尖瓣听诊区;
+        private string _二尖瓣听诊区 = "";
 
         public string 二尖瓣听诊区
         {
@@ -36,7 +36,7 @@ namespace Model
         }
 
 
-        private string _肺动脉瓣听诊区;
+        private string _肺动脉瓣听诊区 = "";
 
         public string 肺动脉瓣听诊区
         {
@@ -45,7 +45,7 @@ namespace Model
         }
 
 
-        private string _主动脉瓣区;
+        private string _主动脉瓣区 = "";
 
         public string 主动脉瓣区
         {
@@ -54,7 +54,7 @@ namespace Model
         }
 
 
-        private string _主动脉瓣第二听诊区;
+        private string _主动脉瓣第二听诊区 = "";
 
         public string 主动脉瓣第二听诊区
         {
@@ -63,7 +63,7 @@ namespace Model
         }
 
 
-        private string _三尖瓣区;
+        private string _三尖瓣区 = "";
 
         public string 三尖瓣区
         {
@@ -71,7 +71,7 @@ namespace Model
             set { _三尖瓣区 = value; }
         }
 
-        private string _气管;
+        private string _气管 = "";
 
         public string 气管
         {
@@ -80,7 +80,7 @@ namespace Model
         }
 
 
-        private string _左肺上;
+        private string _左肺上 = "";
 
         public string 左肺上
         {
@@ -89,7 +89,7 @@ namespace Model
         }
 
 
-        private string _左肺中;
+        private string _左肺中 = "";
 
         public string 左肺中
         {
@@ -98,7 +98,7 @@ namespace Model
         }
 
 
-        private string _左肺下;
+        private string _左肺下 = "";
 
         public string 左肺下
         {
@@ -107,7 +107,7 @@ namespace Model
         }
 
 
-        private string _右肺上;
+        private string _右肺上 = "";
 
         public string 右肺上
         {
@@ -116,7 +116,7 @@ namespace Model
         }
 
 
-        private string _右肺中;
+        private string _右肺中 = "";
 
         public string 右肺中
         {
@@ -125,7 +125,7 @@ namespace Model
         }
 
 
-        private string _右肺下;
+        private string _右肺下 = "";
 
         public string 右肺下
         {
@@ -140,7 +140,7 @@ namespace Model
     /// </summary>
     public class 触诊模拟人
     {
-        private string _肝脏肿大;
+        private string _肝脏肿大 = "";
 
         public string 肝脏肿大
         {
@@ -148,7 +148,7 @@ namespace Model
             set { _肝脏肿大 = value; }
         }
 
-        private string _肝脏质地;
+        private string _肝脏质地 = "";
 
         public string 肝脏质地
         {
@@ -156,7 +156,7 @@ namespace Model
             set { _肝脏质地 = value; }
         }
 
-        private string _脾脏肿大;
+        private string _脾脏肿大 = "";
 
         public string 脾脏肿大
         {
@@ -164,7 +164,7 @@ namespace Model
             set { _脾脏肿大 = value; }
         }
 
-        private string _胆囊触痛;
+        private string _胆囊触痛 = "";
 
         public string 胆囊触痛
         {
@@ -172,7 +172,7 @@ namespace Model
             set { _胆囊触痛 = value; }
         }
 
-        private string _胆囊肿大;
+        private string _胆囊肿大 = "";
 
         public string 胆囊肿大
         {
@@ -180,7 +180,7 @@ namespace Model
             set { _胆囊肿大 = value; }
         }
 
-        private string _胆囊墨菲氏征;
+        private string _胆囊墨菲氏征 = "";
 
         public string 胆囊墨菲氏征
         {
@@ -188,7 +188,7 @@ namespace Model
             set { _胆囊墨菲氏征 = value; }
         }
 
-        private string _压痛胃溃疡;
+        private string _压痛胃溃疡 = "";
 
         public string 压痛胃溃疡
         {
@@ -196,7 +196,7 @@ namespace Model
             set { _压痛胃溃疡 = value; }
         }
 
-        private string _压痛十二指肠;
+        private string _压痛十二指肠 = "";
 
         public string 压痛十二指肠
         {
@@ -204,7 +204,7 @@ namespace Model
             set { _压痛十二指肠 = value; }
         }
 
-        private string _压痛胰腺;
+        private string _压痛胰腺 = "";
 
         public string 压痛胰腺
         {
@@ -212,7 +212,7 @@ namespace Model
             set { _压痛胰腺 = value; }
         }
 
-        private string _压痛阑尾;
+        private string _压痛阑尾 = "";
 
         public string 压痛阑尾
         {
@@ -220,7 +220,7 @@ namespace Model
             set { _压痛阑尾 = value; }
         }
 
-        private string _压痛小肠;
+        private string _压痛小肠 = "";
 
         public string 压痛小肠
         {
@@ -228,7 +228,7 @@ namespace Model
             set { _压痛小肠 = value; }
         }
 
-        private string _乙状结肠;
+        private string _乙状结肠 = "";
 
         public string 乙状结肠
         {
@@ -236,7 +236,7 @@ namespace Model
             set { _乙状结肠 = value; }
         }
 
-        private string _反跳痛胰腺;
+        private string _反跳痛胰腺 = "";
 
         public string 反跳痛胰腺
         {
@@ -244,7 +244,7 @@ namespace Model
             set { _反跳痛胰腺 = value; }
         }
 
-        private string _反跳痛阑尾;
+        private string _反跳痛阑尾 = "";
 
         public string 反跳痛阑尾
         {
@@ -252,7 +252,7 @@ namespace Model
             set { _反跳痛阑尾 = value; }
         }
 
-        private string _反跳痛小肠;
+        private string _反跳痛小肠 = "";
 
         public string 反跳痛小肠
         {
@@ -261,7 +261,7 @@ namespace Model
         }
 
 
-        private string _肠鸣音;
+        private string _肠鸣音 = "";
 
         public string 肠鸣音
         {
@@ -270,7 +270,7 @@ namespace Model
         }
 
 
-        private string _肾动脉听诊音;
+        private string _肾动脉听诊音 = "";
 
         public string 肾动脉听诊音
         {
@@ -279,7 +279,7 @@ namespace Model
         }
 
 
-        private string _股动脉听诊音;
+        private string _股动脉听诊音 = "";
 
         public string 股动脉听诊音
         {
@@ -288,7 +288,7 @@ namespace Model
         }
 
 
-        private string _脉搏;
+        private string _脉搏 = "";
 
         public string 脉搏
         {
@@ -297,7 +297,7 @@ namespace Model
         }
 
 
-        private string _血压收缩压;
+        private string _血压收缩压 = "";
 
         public string 血压收缩压
         {
@@ -306,7 +306,7 @@ namespace Model
         }
 
 
-        private string _血压舒张压;
+        private string _血压舒张压 = "";
 
         public string 血压舒张压
         {

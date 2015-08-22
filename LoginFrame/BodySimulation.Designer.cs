@@ -31,6 +31,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.血压舒张压 = new System.Windows.Forms.TextBox();
+            this.血压收缩压 = new System.Windows.Forms.TextBox();
+            this.股动脉听诊音 = new System.Windows.Forms.TextBox();
+            this.肠鸣音 = new System.Windows.Forms.TextBox();
+            this.肾动脉听诊音 = new System.Windows.Forms.TextBox();
             this.label50 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
@@ -39,20 +44,20 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.脉搏 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label24 = new System.Windows.Forms.Label();
+            this.label223 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.radioButton23 = new System.Windows.Forms.RadioButton();
-            this.radioButton24 = new System.Windows.Forms.RadioButton();
+            this.反跳痛阑尾无 = new System.Windows.Forms.RadioButton();
+            this.反跳痛阑尾有 = new System.Windows.Forms.RadioButton();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.radioButton25 = new System.Windows.Forms.RadioButton();
-            this.radioButton26 = new System.Windows.Forms.RadioButton();
+            this.反跳痛胰腺无 = new System.Windows.Forms.RadioButton();
+            this.反跳痛胰腺有 = new System.Windows.Forms.RadioButton();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.radioButton21 = new System.Windows.Forms.RadioButton();
-            this.radioButton22 = new System.Windows.Forms.RadioButton();
+            this.反跳痛小肠无 = new System.Windows.Forms.RadioButton();
+            this.反跳痛小肠有 = new System.Windows.Forms.RadioButton();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -61,25 +66,25 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.radioButton17 = new System.Windows.Forms.RadioButton();
-            this.radioButton18 = new System.Windows.Forms.RadioButton();
+            this.压痛阑尾无 = new System.Windows.Forms.RadioButton();
+            this.压痛阑尾有 = new System.Windows.Forms.RadioButton();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.radioButton13 = new System.Windows.Forms.RadioButton();
-            this.radioButton14 = new System.Windows.Forms.RadioButton();
+            this.压痛乙状结肠无 = new System.Windows.Forms.RadioButton();
+            this.压痛乙状结肠有 = new System.Windows.Forms.RadioButton();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.radioButton15 = new System.Windows.Forms.RadioButton();
-            this.radioButton16 = new System.Windows.Forms.RadioButton();
+            this.压痛胰腺无 = new System.Windows.Forms.RadioButton();
+            this.压痛胰腺有 = new System.Windows.Forms.RadioButton();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.radioButton19 = new System.Windows.Forms.RadioButton();
-            this.radioButton20 = new System.Windows.Forms.RadioButton();
+            this.压痛十二指肠无 = new System.Windows.Forms.RadioButton();
+            this.压痛十二指肠有 = new System.Windows.Forms.RadioButton();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
-            this.radioButton12 = new System.Windows.Forms.RadioButton();
+            this.压痛小肠无 = new System.Windows.Forms.RadioButton();
+            this.压痛小肠有 = new System.Windows.Forms.RadioButton();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.脾脏肿大 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.肝脏肿大 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -88,29 +93,55 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
+            this.压痛胃溃疡无 = new System.Windows.Forms.RadioButton();
+            this.压痛胃溃疡有 = new System.Windows.Forms.RadioButton();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.胆囊墨菲氏征阴性 = new System.Windows.Forms.RadioButton();
+            this.胆囊墨菲氏征阳性 = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.胆囊肿大无 = new System.Windows.Forms.RadioButton();
+            this.胆囊肿大有 = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.肝脏质地软 = new System.Windows.Forms.RadioButton();
+            this.肝脏质地硬 = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.胆囊触痛无 = new System.Windows.Forms.RadioButton();
+            this.胆囊触痛有 = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.右肺上 = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.右肺下 = new System.Windows.Forms.TextBox();
+            this.左肺中 = new System.Windows.Forms.TextBox();
+            this.左肺下 = new System.Windows.Forms.TextBox();
+            this.右肺中 = new System.Windows.Forms.TextBox();
+            this.肺动脉瓣听诊区 = new System.Windows.Forms.TextBox();
+            this.主动脉瓣区 = new System.Windows.Forms.TextBox();
+            this.主动脉瓣第二听诊区 = new System.Windows.Forms.TextBox();
+            this.三尖瓣区 = new System.Windows.Forms.TextBox();
+            this.气管 = new System.Windows.Forms.TextBox();
+            this.左肺上 = new System.Windows.Forms.TextBox();
+            this.二尖瓣听诊区 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
@@ -128,45 +159,14 @@
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
-            this.radioButton29 = new System.Windows.Forms.RadioButton();
-            this.radioButton30 = new System.Windows.Forms.RadioButton();
+            this.心尖搏动无 = new System.Windows.Forms.RadioButton();
+            this.心尖搏动有 = new System.Windows.Forms.RadioButton();
             this.label31 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
-            this.radioButton27 = new System.Windows.Forms.RadioButton();
-            this.radioButton28 = new System.Windows.Forms.RadioButton();
+            this.心前区震颤无 = new System.Windows.Forms.RadioButton();
+            this.心前区震颤有 = new System.Windows.Forms.RadioButton();
             this.label30 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -213,11 +213,11 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.textBox8);
-            this.tabPage1.Controls.Add(this.textBox7);
-            this.tabPage1.Controls.Add(this.textBox6);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.textBox5);
+            this.tabPage1.Controls.Add(this.血压舒张压);
+            this.tabPage1.Controls.Add(this.血压收缩压);
+            this.tabPage1.Controls.Add(this.股动脉听诊音);
+            this.tabPage1.Controls.Add(this.肠鸣音);
+            this.tabPage1.Controls.Add(this.肾动脉听诊音);
             this.tabPage1.Controls.Add(this.label50);
             this.tabPage1.Controls.Add(this.label49);
             this.tabPage1.Controls.Add(this.label48);
@@ -228,7 +228,7 @@
             this.tabPage1.Controls.Add(this.panel18);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.label24);
+            this.tabPage1.Controls.Add(this.label223);
             this.tabPage1.Controls.Add(this.panel15);
             this.tabPage1.Controls.Add(this.panel16);
             this.tabPage1.Controls.Add(this.panel14);
@@ -272,6 +272,41 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "触诊模拟人设置";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // 血压舒张压
+            // 
+            this.血压舒张压.Location = new System.Drawing.Point(788, 407);
+            this.血压舒张压.Name = "血压舒张压";
+            this.血压舒张压.Size = new System.Drawing.Size(113, 21);
+            this.血压舒张压.TabIndex = 56;
+            // 
+            // 血压收缩压
+            // 
+            this.血压收缩压.Location = new System.Drawing.Point(788, 366);
+            this.血压收缩压.Name = "血压收缩压";
+            this.血压收缩压.Size = new System.Drawing.Size(113, 21);
+            this.血压收缩压.TabIndex = 55;
+            // 
+            // 股动脉听诊音
+            // 
+            this.股动脉听诊音.Location = new System.Drawing.Point(263, 503);
+            this.股动脉听诊音.Name = "股动脉听诊音";
+            this.股动脉听诊音.Size = new System.Drawing.Size(113, 21);
+            this.股动脉听诊音.TabIndex = 54;
+            // 
+            // 肠鸣音
+            // 
+            this.肠鸣音.Location = new System.Drawing.Point(263, 421);
+            this.肠鸣音.Name = "肠鸣音";
+            this.肠鸣音.Size = new System.Drawing.Size(113, 21);
+            this.肠鸣音.TabIndex = 5;
+            // 
+            // 肾动脉听诊音
+            // 
+            this.肾动脉听诊音.Location = new System.Drawing.Point(263, 463);
+            this.肾动脉听诊音.Name = "肾动脉听诊音";
+            this.肾动脉听诊音.Size = new System.Drawing.Size(113, 21);
+            this.肾动脉听诊音.TabIndex = 53;
             // 
             // label50
             // 
@@ -346,19 +381,19 @@
             // 
             // panel18
             // 
-            this.panel18.Controls.Add(this.textBox3);
+            this.panel18.Controls.Add(this.脉搏);
             this.panel18.Controls.Add(this.label25);
             this.panel18.Location = new System.Drawing.Point(788, 331);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(113, 22);
             this.panel18.TabIndex = 44;
             // 
-            // textBox3
+            // 脉搏
             // 
-            this.textBox3.Location = new System.Drawing.Point(0, 0);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(62, 21);
-            this.textBox3.TabIndex = 5;
+            this.脉搏.Location = new System.Drawing.Point(0, 0);
+            this.脉搏.Name = "脉搏";
+            this.脉搏.Size = new System.Drawing.Size(62, 21);
+            this.脉搏.TabIndex = 5;
             // 
             // label25
             // 
@@ -389,115 +424,116 @@
             this.button1.TabIndex = 41;
             this.button1.Text = "确定";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label24
+            // label223
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.label24.Location = new System.Drawing.Point(685, 331);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(45, 14);
-            this.label24.TabIndex = 40;
-            this.label24.Text = "脉搏:";
+            this.label223.AutoSize = true;
+            this.label223.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.label223.Location = new System.Drawing.Point(685, 331);
+            this.label223.Name = "label223";
+            this.label223.Size = new System.Drawing.Size(45, 14);
+            this.label223.TabIndex = 40;
+            this.label223.Text = "脉搏:";
             // 
             // panel15
             // 
-            this.panel15.Controls.Add(this.radioButton23);
-            this.panel15.Controls.Add(this.radioButton24);
+            this.panel15.Controls.Add(this.反跳痛阑尾无);
+            this.panel15.Controls.Add(this.反跳痛阑尾有);
             this.panel15.Location = new System.Drawing.Point(788, 233);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(113, 22);
             this.panel15.TabIndex = 18;
             // 
-            // radioButton23
+            // 反跳痛阑尾无
             // 
-            this.radioButton23.AutoSize = true;
-            this.radioButton23.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton23.Location = new System.Drawing.Point(57, 3);
-            this.radioButton23.Name = "radioButton23";
-            this.radioButton23.Size = new System.Drawing.Size(40, 18);
-            this.radioButton23.TabIndex = 1;
-            this.radioButton23.TabStop = true;
-            this.radioButton23.Text = "无";
-            this.radioButton23.UseVisualStyleBackColor = true;
+            this.反跳痛阑尾无.AutoSize = true;
+            this.反跳痛阑尾无.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.反跳痛阑尾无.Location = new System.Drawing.Point(57, 3);
+            this.反跳痛阑尾无.Name = "反跳痛阑尾无";
+            this.反跳痛阑尾无.Size = new System.Drawing.Size(40, 18);
+            this.反跳痛阑尾无.TabIndex = 1;
+            this.反跳痛阑尾无.TabStop = true;
+            this.反跳痛阑尾无.Text = "无";
+            this.反跳痛阑尾无.UseVisualStyleBackColor = true;
             // 
-            // radioButton24
+            // 反跳痛阑尾有
             // 
-            this.radioButton24.AutoSize = true;
-            this.radioButton24.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton24.Location = new System.Drawing.Point(16, 3);
-            this.radioButton24.Name = "radioButton24";
-            this.radioButton24.Size = new System.Drawing.Size(40, 18);
-            this.radioButton24.TabIndex = 0;
-            this.radioButton24.TabStop = true;
-            this.radioButton24.Text = "有";
-            this.radioButton24.UseVisualStyleBackColor = true;
+            this.反跳痛阑尾有.AutoSize = true;
+            this.反跳痛阑尾有.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.反跳痛阑尾有.Location = new System.Drawing.Point(16, 3);
+            this.反跳痛阑尾有.Name = "反跳痛阑尾有";
+            this.反跳痛阑尾有.Size = new System.Drawing.Size(40, 18);
+            this.反跳痛阑尾有.TabIndex = 0;
+            this.反跳痛阑尾有.TabStop = true;
+            this.反跳痛阑尾有.Text = "有";
+            this.反跳痛阑尾有.UseVisualStyleBackColor = true;
             // 
             // panel16
             // 
-            this.panel16.Controls.Add(this.radioButton25);
-            this.panel16.Controls.Add(this.radioButton26);
+            this.panel16.Controls.Add(this.反跳痛胰腺无);
+            this.panel16.Controls.Add(this.反跳痛胰腺有);
             this.panel16.Location = new System.Drawing.Point(788, 193);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(113, 22);
             this.panel16.TabIndex = 18;
             // 
-            // radioButton25
+            // 反跳痛胰腺无
             // 
-            this.radioButton25.AutoSize = true;
-            this.radioButton25.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton25.Location = new System.Drawing.Point(57, 3);
-            this.radioButton25.Name = "radioButton25";
-            this.radioButton25.Size = new System.Drawing.Size(40, 18);
-            this.radioButton25.TabIndex = 1;
-            this.radioButton25.TabStop = true;
-            this.radioButton25.Text = "无";
-            this.radioButton25.UseVisualStyleBackColor = true;
+            this.反跳痛胰腺无.AutoSize = true;
+            this.反跳痛胰腺无.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.反跳痛胰腺无.Location = new System.Drawing.Point(57, 3);
+            this.反跳痛胰腺无.Name = "反跳痛胰腺无";
+            this.反跳痛胰腺无.Size = new System.Drawing.Size(40, 18);
+            this.反跳痛胰腺无.TabIndex = 1;
+            this.反跳痛胰腺无.TabStop = true;
+            this.反跳痛胰腺无.Text = "无";
+            this.反跳痛胰腺无.UseVisualStyleBackColor = true;
             // 
-            // radioButton26
+            // 反跳痛胰腺有
             // 
-            this.radioButton26.AutoSize = true;
-            this.radioButton26.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton26.Location = new System.Drawing.Point(16, 3);
-            this.radioButton26.Name = "radioButton26";
-            this.radioButton26.Size = new System.Drawing.Size(40, 18);
-            this.radioButton26.TabIndex = 0;
-            this.radioButton26.TabStop = true;
-            this.radioButton26.Text = "有";
-            this.radioButton26.UseVisualStyleBackColor = true;
+            this.反跳痛胰腺有.AutoSize = true;
+            this.反跳痛胰腺有.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.反跳痛胰腺有.Location = new System.Drawing.Point(16, 3);
+            this.反跳痛胰腺有.Name = "反跳痛胰腺有";
+            this.反跳痛胰腺有.Size = new System.Drawing.Size(40, 18);
+            this.反跳痛胰腺有.TabIndex = 0;
+            this.反跳痛胰腺有.TabStop = true;
+            this.反跳痛胰腺有.Text = "有";
+            this.反跳痛胰腺有.UseVisualStyleBackColor = true;
             // 
             // panel14
             // 
-            this.panel14.Controls.Add(this.radioButton21);
-            this.panel14.Controls.Add(this.radioButton22);
+            this.panel14.Controls.Add(this.反跳痛小肠无);
+            this.panel14.Controls.Add(this.反跳痛小肠有);
             this.panel14.Location = new System.Drawing.Point(788, 268);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(113, 22);
             this.panel14.TabIndex = 39;
             // 
-            // radioButton21
+            // 反跳痛小肠无
             // 
-            this.radioButton21.AutoSize = true;
-            this.radioButton21.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton21.Location = new System.Drawing.Point(57, 3);
-            this.radioButton21.Name = "radioButton21";
-            this.radioButton21.Size = new System.Drawing.Size(40, 18);
-            this.radioButton21.TabIndex = 1;
-            this.radioButton21.TabStop = true;
-            this.radioButton21.Text = "无";
-            this.radioButton21.UseVisualStyleBackColor = true;
+            this.反跳痛小肠无.AutoSize = true;
+            this.反跳痛小肠无.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.反跳痛小肠无.Location = new System.Drawing.Point(57, 3);
+            this.反跳痛小肠无.Name = "反跳痛小肠无";
+            this.反跳痛小肠无.Size = new System.Drawing.Size(40, 18);
+            this.反跳痛小肠无.TabIndex = 1;
+            this.反跳痛小肠无.TabStop = true;
+            this.反跳痛小肠无.Text = "无";
+            this.反跳痛小肠无.UseVisualStyleBackColor = true;
             // 
-            // radioButton22
+            // 反跳痛小肠有
             // 
-            this.radioButton22.AutoSize = true;
-            this.radioButton22.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton22.Location = new System.Drawing.Point(16, 3);
-            this.radioButton22.Name = "radioButton22";
-            this.radioButton22.Size = new System.Drawing.Size(40, 18);
-            this.radioButton22.TabIndex = 0;
-            this.radioButton22.TabStop = true;
-            this.radioButton22.Text = "有";
-            this.radioButton22.UseVisualStyleBackColor = true;
+            this.反跳痛小肠有.AutoSize = true;
+            this.反跳痛小肠有.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.反跳痛小肠有.Location = new System.Drawing.Point(16, 3);
+            this.反跳痛小肠有.Name = "反跳痛小肠有";
+            this.反跳痛小肠有.Size = new System.Drawing.Size(40, 18);
+            this.反跳痛小肠有.TabIndex = 0;
+            this.反跳痛小肠有.TabStop = true;
+            this.反跳痛小肠有.Text = "有";
+            this.反跳痛小肠有.UseVisualStyleBackColor = true;
             // 
             // label23
             // 
@@ -571,184 +607,184 @@
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.radioButton17);
-            this.panel10.Controls.Add(this.radioButton18);
+            this.panel10.Controls.Add(this.压痛阑尾无);
+            this.panel10.Controls.Add(this.压痛阑尾有);
             this.panel10.Location = new System.Drawing.Point(217, 292);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(113, 22);
             this.panel10.TabIndex = 18;
             // 
-            // radioButton17
+            // 压痛阑尾无
             // 
-            this.radioButton17.AutoSize = true;
-            this.radioButton17.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton17.Location = new System.Drawing.Point(57, 3);
-            this.radioButton17.Name = "radioButton17";
-            this.radioButton17.Size = new System.Drawing.Size(40, 18);
-            this.radioButton17.TabIndex = 1;
-            this.radioButton17.TabStop = true;
-            this.radioButton17.Text = "无";
-            this.radioButton17.UseVisualStyleBackColor = true;
+            this.压痛阑尾无.AutoSize = true;
+            this.压痛阑尾无.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.压痛阑尾无.Location = new System.Drawing.Point(57, 3);
+            this.压痛阑尾无.Name = "压痛阑尾无";
+            this.压痛阑尾无.Size = new System.Drawing.Size(40, 18);
+            this.压痛阑尾无.TabIndex = 1;
+            this.压痛阑尾无.TabStop = true;
+            this.压痛阑尾无.Text = "无";
+            this.压痛阑尾无.UseVisualStyleBackColor = true;
             // 
-            // radioButton18
+            // 压痛阑尾有
             // 
-            this.radioButton18.AutoSize = true;
-            this.radioButton18.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton18.Location = new System.Drawing.Point(16, 3);
-            this.radioButton18.Name = "radioButton18";
-            this.radioButton18.Size = new System.Drawing.Size(40, 18);
-            this.radioButton18.TabIndex = 0;
-            this.radioButton18.TabStop = true;
-            this.radioButton18.Text = "有";
-            this.radioButton18.UseVisualStyleBackColor = true;
+            this.压痛阑尾有.AutoSize = true;
+            this.压痛阑尾有.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.压痛阑尾有.Location = new System.Drawing.Point(16, 3);
+            this.压痛阑尾有.Name = "压痛阑尾有";
+            this.压痛阑尾有.Size = new System.Drawing.Size(40, 18);
+            this.压痛阑尾有.TabIndex = 0;
+            this.压痛阑尾有.TabStop = true;
+            this.压痛阑尾有.Text = "有";
+            this.压痛阑尾有.UseVisualStyleBackColor = true;
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.radioButton13);
-            this.panel8.Controls.Add(this.radioButton14);
+            this.panel8.Controls.Add(this.压痛乙状结肠无);
+            this.panel8.Controls.Add(this.压痛乙状结肠有);
             this.panel8.Location = new System.Drawing.Point(217, 361);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(113, 22);
             this.panel8.TabIndex = 18;
             // 
-            // radioButton13
+            // 压痛乙状结肠无
             // 
-            this.radioButton13.AutoSize = true;
-            this.radioButton13.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton13.Location = new System.Drawing.Point(57, 3);
-            this.radioButton13.Name = "radioButton13";
-            this.radioButton13.Size = new System.Drawing.Size(40, 18);
-            this.radioButton13.TabIndex = 1;
-            this.radioButton13.TabStop = true;
-            this.radioButton13.Text = "无";
-            this.radioButton13.UseVisualStyleBackColor = true;
+            this.压痛乙状结肠无.AutoSize = true;
+            this.压痛乙状结肠无.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.压痛乙状结肠无.Location = new System.Drawing.Point(57, 3);
+            this.压痛乙状结肠无.Name = "压痛乙状结肠无";
+            this.压痛乙状结肠无.Size = new System.Drawing.Size(40, 18);
+            this.压痛乙状结肠无.TabIndex = 1;
+            this.压痛乙状结肠无.TabStop = true;
+            this.压痛乙状结肠无.Text = "无";
+            this.压痛乙状结肠无.UseVisualStyleBackColor = true;
             // 
-            // radioButton14
+            // 压痛乙状结肠有
             // 
-            this.radioButton14.AutoSize = true;
-            this.radioButton14.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton14.Location = new System.Drawing.Point(16, 3);
-            this.radioButton14.Name = "radioButton14";
-            this.radioButton14.Size = new System.Drawing.Size(40, 18);
-            this.radioButton14.TabIndex = 0;
-            this.radioButton14.TabStop = true;
-            this.radioButton14.Text = "有";
-            this.radioButton14.UseVisualStyleBackColor = true;
+            this.压痛乙状结肠有.AutoSize = true;
+            this.压痛乙状结肠有.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.压痛乙状结肠有.Location = new System.Drawing.Point(16, 3);
+            this.压痛乙状结肠有.Name = "压痛乙状结肠有";
+            this.压痛乙状结肠有.Size = new System.Drawing.Size(40, 18);
+            this.压痛乙状结肠有.TabIndex = 0;
+            this.压痛乙状结肠有.TabStop = true;
+            this.压痛乙状结肠有.Text = "有";
+            this.压痛乙状结肠有.UseVisualStyleBackColor = true;
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.radioButton15);
-            this.panel9.Controls.Add(this.radioButton16);
+            this.panel9.Controls.Add(this.压痛胰腺无);
+            this.panel9.Controls.Add(this.压痛胰腺有);
             this.panel9.Location = new System.Drawing.Point(217, 259);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(113, 22);
             this.panel9.TabIndex = 18;
             // 
-            // radioButton15
+            // 压痛胰腺无
             // 
-            this.radioButton15.AutoSize = true;
-            this.radioButton15.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton15.Location = new System.Drawing.Point(57, 3);
-            this.radioButton15.Name = "radioButton15";
-            this.radioButton15.Size = new System.Drawing.Size(40, 18);
-            this.radioButton15.TabIndex = 1;
-            this.radioButton15.TabStop = true;
-            this.radioButton15.Text = "无";
-            this.radioButton15.UseVisualStyleBackColor = true;
+            this.压痛胰腺无.AutoSize = true;
+            this.压痛胰腺无.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.压痛胰腺无.Location = new System.Drawing.Point(57, 3);
+            this.压痛胰腺无.Name = "压痛胰腺无";
+            this.压痛胰腺无.Size = new System.Drawing.Size(40, 18);
+            this.压痛胰腺无.TabIndex = 1;
+            this.压痛胰腺无.TabStop = true;
+            this.压痛胰腺无.Text = "无";
+            this.压痛胰腺无.UseVisualStyleBackColor = true;
             // 
-            // radioButton16
+            // 压痛胰腺有
             // 
-            this.radioButton16.AutoSize = true;
-            this.radioButton16.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton16.Location = new System.Drawing.Point(16, 3);
-            this.radioButton16.Name = "radioButton16";
-            this.radioButton16.Size = new System.Drawing.Size(40, 18);
-            this.radioButton16.TabIndex = 0;
-            this.radioButton16.TabStop = true;
-            this.radioButton16.Text = "有";
-            this.radioButton16.UseVisualStyleBackColor = true;
+            this.压痛胰腺有.AutoSize = true;
+            this.压痛胰腺有.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.压痛胰腺有.Location = new System.Drawing.Point(16, 3);
+            this.压痛胰腺有.Name = "压痛胰腺有";
+            this.压痛胰腺有.Size = new System.Drawing.Size(40, 18);
+            this.压痛胰腺有.TabIndex = 0;
+            this.压痛胰腺有.TabStop = true;
+            this.压痛胰腺有.Text = "有";
+            this.压痛胰腺有.UseVisualStyleBackColor = true;
             // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.radioButton19);
-            this.panel11.Controls.Add(this.radioButton20);
+            this.panel11.Controls.Add(this.压痛十二指肠无);
+            this.panel11.Controls.Add(this.压痛十二指肠有);
             this.panel11.Location = new System.Drawing.Point(217, 227);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(113, 22);
             this.panel11.TabIndex = 18;
             // 
-            // radioButton19
+            // 压痛十二指肠无
             // 
-            this.radioButton19.AutoSize = true;
-            this.radioButton19.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton19.Location = new System.Drawing.Point(57, 3);
-            this.radioButton19.Name = "radioButton19";
-            this.radioButton19.Size = new System.Drawing.Size(40, 18);
-            this.radioButton19.TabIndex = 1;
-            this.radioButton19.TabStop = true;
-            this.radioButton19.Text = "无";
-            this.radioButton19.UseVisualStyleBackColor = true;
+            this.压痛十二指肠无.AutoSize = true;
+            this.压痛十二指肠无.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.压痛十二指肠无.Location = new System.Drawing.Point(57, 3);
+            this.压痛十二指肠无.Name = "压痛十二指肠无";
+            this.压痛十二指肠无.Size = new System.Drawing.Size(40, 18);
+            this.压痛十二指肠无.TabIndex = 1;
+            this.压痛十二指肠无.TabStop = true;
+            this.压痛十二指肠无.Text = "无";
+            this.压痛十二指肠无.UseVisualStyleBackColor = true;
             // 
-            // radioButton20
+            // 压痛十二指肠有
             // 
-            this.radioButton20.AutoSize = true;
-            this.radioButton20.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton20.Location = new System.Drawing.Point(16, 3);
-            this.radioButton20.Name = "radioButton20";
-            this.radioButton20.Size = new System.Drawing.Size(40, 18);
-            this.radioButton20.TabIndex = 0;
-            this.radioButton20.TabStop = true;
-            this.radioButton20.Text = "有";
-            this.radioButton20.UseVisualStyleBackColor = true;
+            this.压痛十二指肠有.AutoSize = true;
+            this.压痛十二指肠有.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.压痛十二指肠有.Location = new System.Drawing.Point(16, 3);
+            this.压痛十二指肠有.Name = "压痛十二指肠有";
+            this.压痛十二指肠有.Size = new System.Drawing.Size(40, 18);
+            this.压痛十二指肠有.TabIndex = 0;
+            this.压痛十二指肠有.TabStop = true;
+            this.压痛十二指肠有.Text = "有";
+            this.压痛十二指肠有.UseVisualStyleBackColor = true;
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.radioButton11);
-            this.panel7.Controls.Add(this.radioButton12);
+            this.panel7.Controls.Add(this.压痛小肠无);
+            this.panel7.Controls.Add(this.压痛小肠有);
             this.panel7.Location = new System.Drawing.Point(217, 328);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(113, 22);
             this.panel7.TabIndex = 31;
             // 
-            // radioButton11
+            // 压痛小肠无
             // 
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton11.Location = new System.Drawing.Point(57, 3);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(40, 18);
-            this.radioButton11.TabIndex = 1;
-            this.radioButton11.TabStop = true;
-            this.radioButton11.Text = "无";
-            this.radioButton11.UseVisualStyleBackColor = true;
+            this.压痛小肠无.AutoSize = true;
+            this.压痛小肠无.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.压痛小肠无.Location = new System.Drawing.Point(57, 3);
+            this.压痛小肠无.Name = "压痛小肠无";
+            this.压痛小肠无.Size = new System.Drawing.Size(40, 18);
+            this.压痛小肠无.TabIndex = 1;
+            this.压痛小肠无.TabStop = true;
+            this.压痛小肠无.Text = "无";
+            this.压痛小肠无.UseVisualStyleBackColor = true;
             // 
-            // radioButton12
+            // 压痛小肠有
             // 
-            this.radioButton12.AutoSize = true;
-            this.radioButton12.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton12.Location = new System.Drawing.Point(16, 3);
-            this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(40, 18);
-            this.radioButton12.TabIndex = 0;
-            this.radioButton12.TabStop = true;
-            this.radioButton12.Text = "有";
-            this.radioButton12.UseVisualStyleBackColor = true;
+            this.压痛小肠有.AutoSize = true;
+            this.压痛小肠有.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.压痛小肠有.Location = new System.Drawing.Point(16, 3);
+            this.压痛小肠有.Name = "压痛小肠有";
+            this.压痛小肠有.Size = new System.Drawing.Size(40, 18);
+            this.压痛小肠有.TabIndex = 0;
+            this.压痛小肠有.TabStop = true;
+            this.压痛小肠有.Text = "有";
+            this.压痛小肠有.UseVisualStyleBackColor = true;
             // 
             // panel13
             // 
-            this.panel13.Controls.Add(this.textBox2);
+            this.panel13.Controls.Add(this.脾脏肿大);
             this.panel13.Controls.Add(this.label5);
             this.panel13.Location = new System.Drawing.Point(217, 84);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(113, 22);
             this.panel13.TabIndex = 30;
             // 
-            // textBox2
+            // 脾脏肿大
             // 
-            this.textBox2.Location = new System.Drawing.Point(0, 0);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(62, 21);
-            this.textBox2.TabIndex = 5;
+            this.脾脏肿大.Location = new System.Drawing.Point(0, 0);
+            this.脾脏肿大.Name = "脾脏肿大";
+            this.脾脏肿大.Size = new System.Drawing.Size(62, 21);
+            this.脾脏肿大.TabIndex = 5;
             // 
             // label5
             // 
@@ -762,19 +798,19 @@
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.textBox1);
+            this.panel12.Controls.Add(this.肝脏肿大);
             this.panel12.Controls.Add(this.label4);
             this.panel12.Location = new System.Drawing.Point(217, 45);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(113, 22);
             this.panel12.TabIndex = 29;
             // 
-            // textBox1
+            // 肝脏肿大
             // 
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(62, 21);
-            this.textBox1.TabIndex = 5;
+            this.肝脏肿大.Location = new System.Drawing.Point(0, 0);
+            this.肝脏肿大.Name = "肝脏肿大";
+            this.肝脏肿大.Size = new System.Drawing.Size(62, 21);
+            this.肝脏肿大.TabIndex = 5;
             // 
             // label4
             // 
@@ -848,36 +884,36 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.radioButton9);
-            this.panel6.Controls.Add(this.radioButton10);
+            this.panel6.Controls.Add(this.压痛胃溃疡无);
+            this.panel6.Controls.Add(this.压痛胃溃疡有);
             this.panel6.Location = new System.Drawing.Point(217, 193);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(113, 22);
             this.panel6.TabIndex = 17;
             // 
-            // radioButton9
+            // 压痛胃溃疡无
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton9.Location = new System.Drawing.Point(57, 3);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(40, 18);
-            this.radioButton9.TabIndex = 1;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "无";
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.压痛胃溃疡无.AutoSize = true;
+            this.压痛胃溃疡无.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.压痛胃溃疡无.Location = new System.Drawing.Point(57, 3);
+            this.压痛胃溃疡无.Name = "压痛胃溃疡无";
+            this.压痛胃溃疡无.Size = new System.Drawing.Size(40, 18);
+            this.压痛胃溃疡无.TabIndex = 1;
+            this.压痛胃溃疡无.TabStop = true;
+            this.压痛胃溃疡无.Text = "无";
+            this.压痛胃溃疡无.UseVisualStyleBackColor = true;
             // 
-            // radioButton10
+            // 压痛胃溃疡有
             // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton10.Location = new System.Drawing.Point(16, 3);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(40, 18);
-            this.radioButton10.TabIndex = 0;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "有";
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.压痛胃溃疡有.AutoSize = true;
+            this.压痛胃溃疡有.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.压痛胃溃疡有.Location = new System.Drawing.Point(16, 3);
+            this.压痛胃溃疡有.Name = "压痛胃溃疡有";
+            this.压痛胃溃疡有.Size = new System.Drawing.Size(40, 18);
+            this.压痛胃溃疡有.TabIndex = 0;
+            this.压痛胃溃疡有.TabStop = true;
+            this.压痛胃溃疡有.Text = "有";
+            this.压痛胃溃疡有.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
@@ -901,36 +937,36 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.radioButton8);
-            this.panel5.Controls.Add(this.radioButton7);
+            this.panel5.Controls.Add(this.胆囊墨菲氏征阴性);
+            this.panel5.Controls.Add(this.胆囊墨菲氏征阳性);
             this.panel5.Location = new System.Drawing.Point(788, 125);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(113, 22);
             this.panel5.TabIndex = 14;
             // 
-            // radioButton8
+            // 胆囊墨菲氏征阴性
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton8.Location = new System.Drawing.Point(63, 2);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(55, 18);
-            this.radioButton8.TabIndex = 1;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "阴性";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.胆囊墨菲氏征阴性.AutoSize = true;
+            this.胆囊墨菲氏征阴性.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.胆囊墨菲氏征阴性.Location = new System.Drawing.Point(63, 2);
+            this.胆囊墨菲氏征阴性.Name = "胆囊墨菲氏征阴性";
+            this.胆囊墨菲氏征阴性.Size = new System.Drawing.Size(55, 18);
+            this.胆囊墨菲氏征阴性.TabIndex = 1;
+            this.胆囊墨菲氏征阴性.TabStop = true;
+            this.胆囊墨菲氏征阴性.Text = "阴性";
+            this.胆囊墨菲氏征阴性.UseVisualStyleBackColor = true;
             // 
-            // radioButton7
+            // 胆囊墨菲氏征阳性
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton7.Location = new System.Drawing.Point(15, 2);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(55, 18);
-            this.radioButton7.TabIndex = 0;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "阳性";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.胆囊墨菲氏征阳性.AutoSize = true;
+            this.胆囊墨菲氏征阳性.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.胆囊墨菲氏征阳性.Location = new System.Drawing.Point(15, 2);
+            this.胆囊墨菲氏征阳性.Name = "胆囊墨菲氏征阳性";
+            this.胆囊墨菲氏征阳性.Size = new System.Drawing.Size(55, 18);
+            this.胆囊墨菲氏征阳性.TabIndex = 0;
+            this.胆囊墨菲氏征阳性.TabStop = true;
+            this.胆囊墨菲氏征阳性.Text = "阳性";
+            this.胆囊墨菲氏征阳性.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -944,36 +980,36 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.radioButton6);
-            this.panel4.Controls.Add(this.radioButton5);
+            this.panel4.Controls.Add(this.胆囊肿大无);
+            this.panel4.Controls.Add(this.胆囊肿大有);
             this.panel4.Location = new System.Drawing.Point(461, 125);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(113, 22);
             this.panel4.TabIndex = 12;
             // 
-            // radioButton6
+            // 胆囊肿大无
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton6.Location = new System.Drawing.Point(57, 3);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(40, 18);
-            this.radioButton6.TabIndex = 1;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "无";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.胆囊肿大无.AutoSize = true;
+            this.胆囊肿大无.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.胆囊肿大无.Location = new System.Drawing.Point(57, 3);
+            this.胆囊肿大无.Name = "胆囊肿大无";
+            this.胆囊肿大无.Size = new System.Drawing.Size(40, 18);
+            this.胆囊肿大无.TabIndex = 1;
+            this.胆囊肿大无.TabStop = true;
+            this.胆囊肿大无.Text = "无";
+            this.胆囊肿大无.UseVisualStyleBackColor = true;
             // 
-            // radioButton5
+            // 胆囊肿大有
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton5.Location = new System.Drawing.Point(16, 3);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(40, 18);
-            this.radioButton5.TabIndex = 0;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "有";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.胆囊肿大有.AutoSize = true;
+            this.胆囊肿大有.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.胆囊肿大有.Location = new System.Drawing.Point(16, 3);
+            this.胆囊肿大有.Name = "胆囊肿大有";
+            this.胆囊肿大有.Size = new System.Drawing.Size(40, 18);
+            this.胆囊肿大有.TabIndex = 0;
+            this.胆囊肿大有.TabStop = true;
+            this.胆囊肿大有.Text = "有";
+            this.胆囊肿大有.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -987,69 +1023,69 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.radioButton4);
-            this.panel3.Controls.Add(this.radioButton3);
+            this.panel3.Controls.Add(this.肝脏质地软);
+            this.panel3.Controls.Add(this.肝脏质地硬);
             this.panel3.Location = new System.Drawing.Point(461, 45);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(113, 22);
             this.panel3.TabIndex = 10;
             // 
-            // radioButton4
+            // 肝脏质地软
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton4.Location = new System.Drawing.Point(57, 3);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(40, 18);
-            this.radioButton4.TabIndex = 1;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "软";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.肝脏质地软.AutoSize = true;
+            this.肝脏质地软.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.肝脏质地软.Location = new System.Drawing.Point(57, 3);
+            this.肝脏质地软.Name = "肝脏质地软";
+            this.肝脏质地软.Size = new System.Drawing.Size(40, 18);
+            this.肝脏质地软.TabIndex = 1;
+            this.肝脏质地软.TabStop = true;
+            this.肝脏质地软.Text = "软";
+            this.肝脏质地软.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // 肝脏质地硬
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton3.Location = new System.Drawing.Point(16, 3);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(40, 18);
-            this.radioButton3.TabIndex = 0;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "硬";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.肝脏质地硬.AutoSize = true;
+            this.肝脏质地硬.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.肝脏质地硬.Location = new System.Drawing.Point(16, 3);
+            this.肝脏质地硬.Name = "肝脏质地硬";
+            this.肝脏质地硬.Size = new System.Drawing.Size(40, 18);
+            this.肝脏质地硬.TabIndex = 0;
+            this.肝脏质地硬.TabStop = true;
+            this.肝脏质地硬.Text = "硬";
+            this.肝脏质地硬.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.radioButton2);
-            this.panel2.Controls.Add(this.radioButton1);
+            this.panel2.Controls.Add(this.胆囊触痛无);
+            this.panel2.Controls.Add(this.胆囊触痛有);
             this.panel2.Location = new System.Drawing.Point(217, 130);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(113, 22);
             this.panel2.TabIndex = 9;
             // 
-            // radioButton2
+            // 胆囊触痛无
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton2.Location = new System.Drawing.Point(57, 3);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(40, 18);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "无";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.胆囊触痛无.AutoSize = true;
+            this.胆囊触痛无.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.胆囊触痛无.Location = new System.Drawing.Point(57, 3);
+            this.胆囊触痛无.Name = "胆囊触痛无";
+            this.胆囊触痛无.Size = new System.Drawing.Size(40, 18);
+            this.胆囊触痛无.TabIndex = 1;
+            this.胆囊触痛无.TabStop = true;
+            this.胆囊触痛无.Text = "无";
+            this.胆囊触痛无.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // 胆囊触痛有
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton1.Location = new System.Drawing.Point(16, 3);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(40, 18);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "有";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.胆囊触痛有.AutoSize = true;
+            this.胆囊触痛有.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.胆囊触痛有.Location = new System.Drawing.Point(16, 3);
+            this.胆囊触痛有.Name = "胆囊触痛有";
+            this.胆囊触痛有.Size = new System.Drawing.Size(40, 18);
+            this.胆囊触痛有.TabIndex = 0;
+            this.胆囊触痛有.TabStop = true;
+            this.胆囊触痛有.Text = "有";
+            this.胆囊触痛有.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -1104,19 +1140,19 @@
             this.tabPage2.Controls.Add(this.button8);
             this.tabPage2.Controls.Add(this.button7);
             this.tabPage2.Controls.Add(this.button6);
-            this.tabPage2.Controls.Add(this.textBox16);
+            this.tabPage2.Controls.Add(this.右肺上);
             this.tabPage2.Controls.Add(this.button5);
-            this.tabPage2.Controls.Add(this.textBox20);
-            this.tabPage2.Controls.Add(this.textBox19);
-            this.tabPage2.Controls.Add(this.textBox18);
-            this.tabPage2.Controls.Add(this.textBox17);
-            this.tabPage2.Controls.Add(this.textBox15);
-            this.tabPage2.Controls.Add(this.textBox14);
-            this.tabPage2.Controls.Add(this.textBox13);
-            this.tabPage2.Controls.Add(this.textBox12);
-            this.tabPage2.Controls.Add(this.textBox11);
-            this.tabPage2.Controls.Add(this.textBox10);
-            this.tabPage2.Controls.Add(this.textBox9);
+            this.tabPage2.Controls.Add(this.右肺下);
+            this.tabPage2.Controls.Add(this.左肺中);
+            this.tabPage2.Controls.Add(this.左肺下);
+            this.tabPage2.Controls.Add(this.右肺中);
+            this.tabPage2.Controls.Add(this.肺动脉瓣听诊区);
+            this.tabPage2.Controls.Add(this.主动脉瓣区);
+            this.tabPage2.Controls.Add(this.主动脉瓣第二听诊区);
+            this.tabPage2.Controls.Add(this.三尖瓣区);
+            this.tabPage2.Controls.Add(this.气管);
+            this.tabPage2.Controls.Add(this.左肺上);
+            this.tabPage2.Controls.Add(this.二尖瓣听诊区);
             this.tabPage2.Controls.Add(this.button4);
             this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Controls.Add(this.label44);
@@ -1146,6 +1182,231 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "听诊模拟人设置";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button16
+            // 
+            this.button16.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button16.Location = new System.Drawing.Point(475, 222);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(75, 23);
+            this.button16.TabIndex = 68;
+            this.button16.Text = "选择声音";
+            this.button16.UseVisualStyleBackColor = true;
+            // 
+            // button15
+            // 
+            this.button15.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button15.Location = new System.Drawing.Point(475, 308);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(75, 23);
+            this.button15.TabIndex = 67;
+            this.button15.Text = "选择声音";
+            this.button15.UseVisualStyleBackColor = true;
+            // 
+            // button14
+            // 
+            this.button14.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button14.Location = new System.Drawing.Point(475, 264);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(75, 23);
+            this.button14.TabIndex = 66;
+            this.button14.Text = "选择声音";
+            this.button14.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            this.button13.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button13.Location = new System.Drawing.Point(706, 391);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(75, 23);
+            this.button13.TabIndex = 65;
+            this.button13.Text = "选择声音";
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button12.Location = new System.Drawing.Point(706, 435);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(75, 23);
+            this.button12.TabIndex = 64;
+            this.button12.Text = "选择声音";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button11.Location = new System.Drawing.Point(706, 478);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(75, 23);
+            this.button11.TabIndex = 63;
+            this.button11.Text = "选择声音";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button10.Location = new System.Drawing.Point(475, 184);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(75, 23);
+            this.button10.TabIndex = 62;
+            this.button10.Text = "选择声音";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button9.Location = new System.Drawing.Point(385, 468);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 61;
+            this.button9.Text = "选择声音";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button8.Location = new System.Drawing.Point(385, 429);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 60;
+            this.button8.Text = "选择声音";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button7.Location = new System.Drawing.Point(475, 151);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 59;
+            this.button7.Text = "选择声音";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button6.Location = new System.Drawing.Point(385, 394);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 58;
+            this.button6.Text = "选择声音";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // 右肺上
+            // 
+            this.右肺上.Location = new System.Drawing.Point(571, 394);
+            this.右肺上.Name = "右肺上";
+            this.右肺上.Size = new System.Drawing.Size(129, 21);
+            this.右肺上.TabIndex = 57;
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button5.Location = new System.Drawing.Point(475, 110);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 56;
+            this.button5.Text = "选择声音";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // 右肺下
+            // 
+            this.右肺下.Location = new System.Drawing.Point(571, 478);
+            this.右肺下.Name = "右肺下";
+            this.右肺下.Size = new System.Drawing.Size(129, 21);
+            this.右肺下.TabIndex = 55;
+            // 
+            // 左肺中
+            // 
+            this.左肺中.Location = new System.Drawing.Point(250, 431);
+            this.左肺中.Name = "左肺中";
+            this.左肺中.Size = new System.Drawing.Size(129, 21);
+            this.左肺中.TabIndex = 54;
+            // 
+            // 左肺下
+            // 
+            this.左肺下.Location = new System.Drawing.Point(250, 471);
+            this.左肺下.Name = "左肺下";
+            this.左肺下.Size = new System.Drawing.Size(129, 21);
+            this.左肺下.TabIndex = 53;
+            // 
+            // 右肺中
+            // 
+            this.右肺中.Location = new System.Drawing.Point(571, 437);
+            this.右肺中.Name = "右肺中";
+            this.右肺中.Size = new System.Drawing.Size(129, 21);
+            this.右肺中.TabIndex = 52;
+            // 
+            // 肺动脉瓣听诊区
+            // 
+            this.肺动脉瓣听诊区.Location = new System.Drawing.Point(338, 151);
+            this.肺动脉瓣听诊区.Name = "肺动脉瓣听诊区";
+            this.肺动脉瓣听诊区.Size = new System.Drawing.Size(129, 21);
+            this.肺动脉瓣听诊区.TabIndex = 50;
+            // 
+            // 主动脉瓣区
+            // 
+            this.主动脉瓣区.Location = new System.Drawing.Point(338, 186);
+            this.主动脉瓣区.Name = "主动脉瓣区";
+            this.主动脉瓣区.Size = new System.Drawing.Size(130, 21);
+            this.主动脉瓣区.TabIndex = 49;
+            // 
+            // 主动脉瓣第二听诊区
+            // 
+            this.主动脉瓣第二听诊区.Location = new System.Drawing.Point(338, 224);
+            this.主动脉瓣第二听诊区.Name = "主动脉瓣第二听诊区";
+            this.主动脉瓣第二听诊区.Size = new System.Drawing.Size(129, 21);
+            this.主动脉瓣第二听诊区.TabIndex = 48;
+            // 
+            // 三尖瓣区
+            // 
+            this.三尖瓣区.Location = new System.Drawing.Point(338, 264);
+            this.三尖瓣区.Name = "三尖瓣区";
+            this.三尖瓣区.Size = new System.Drawing.Size(129, 21);
+            this.三尖瓣区.TabIndex = 47;
+            // 
+            // 气管
+            // 
+            this.气管.Location = new System.Drawing.Point(338, 308);
+            this.气管.Name = "气管";
+            this.气管.Size = new System.Drawing.Size(129, 21);
+            this.气管.TabIndex = 46;
+            // 
+            // 左肺上
+            // 
+            this.左肺上.Location = new System.Drawing.Point(250, 394);
+            this.左肺上.Name = "左肺上";
+            this.左肺上.Size = new System.Drawing.Size(129, 21);
+            this.左肺上.TabIndex = 45;
+            // 
+            // 二尖瓣听诊区
+            // 
+            this.二尖瓣听诊区.Location = new System.Drawing.Point(338, 112);
+            this.二尖瓣听诊区.Name = "二尖瓣听诊区";
+            this.二尖瓣听诊区.Size = new System.Drawing.Size(129, 21);
+            this.二尖瓣听诊区.TabIndex = 44;
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button4.Location = new System.Drawing.Point(832, 527);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 43;
+            this.button4.Text = "取消";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.button3.Location = new System.Drawing.Point(720, 527);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 42;
+            this.button3.Text = "确定";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label44
             // 
@@ -1245,7 +1506,7 @@
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(75, 14);
             this.label38.TabIndex = 19;
-            this.label38.Text = "二尖瓣区:";
+            this.label38.Text = "三尖瓣区:";
             // 
             // label37
             // 
@@ -1309,36 +1570,36 @@
             // 
             // panel19
             // 
-            this.panel19.Controls.Add(this.radioButton29);
-            this.panel19.Controls.Add(this.radioButton30);
+            this.panel19.Controls.Add(this.心尖搏动无);
+            this.panel19.Controls.Add(this.心尖搏动有);
             this.panel19.Location = new System.Drawing.Point(520, 38);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(113, 22);
             this.panel19.TabIndex = 12;
             // 
-            // radioButton29
+            // 心尖搏动无
             // 
-            this.radioButton29.AutoSize = true;
-            this.radioButton29.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton29.Location = new System.Drawing.Point(57, 3);
-            this.radioButton29.Name = "radioButton29";
-            this.radioButton29.Size = new System.Drawing.Size(40, 18);
-            this.radioButton29.TabIndex = 1;
-            this.radioButton29.TabStop = true;
-            this.radioButton29.Text = "无";
-            this.radioButton29.UseVisualStyleBackColor = true;
+            this.心尖搏动无.AutoSize = true;
+            this.心尖搏动无.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.心尖搏动无.Location = new System.Drawing.Point(57, 3);
+            this.心尖搏动无.Name = "心尖搏动无";
+            this.心尖搏动无.Size = new System.Drawing.Size(40, 18);
+            this.心尖搏动无.TabIndex = 1;
+            this.心尖搏动无.TabStop = true;
+            this.心尖搏动无.Text = "无";
+            this.心尖搏动无.UseVisualStyleBackColor = true;
             // 
-            // radioButton30
+            // 心尖搏动有
             // 
-            this.radioButton30.AutoSize = true;
-            this.radioButton30.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton30.Location = new System.Drawing.Point(16, 3);
-            this.radioButton30.Name = "radioButton30";
-            this.radioButton30.Size = new System.Drawing.Size(40, 18);
-            this.radioButton30.TabIndex = 0;
-            this.radioButton30.TabStop = true;
-            this.radioButton30.Text = "有";
-            this.radioButton30.UseVisualStyleBackColor = true;
+            this.心尖搏动有.AutoSize = true;
+            this.心尖搏动有.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.心尖搏动有.Location = new System.Drawing.Point(16, 3);
+            this.心尖搏动有.Name = "心尖搏动有";
+            this.心尖搏动有.Size = new System.Drawing.Size(40, 18);
+            this.心尖搏动有.TabIndex = 0;
+            this.心尖搏动有.TabStop = true;
+            this.心尖搏动有.Text = "有";
+            this.心尖搏动有.UseVisualStyleBackColor = true;
             // 
             // label31
             // 
@@ -1352,36 +1613,36 @@
             // 
             // panel17
             // 
-            this.panel17.Controls.Add(this.radioButton27);
-            this.panel17.Controls.Add(this.radioButton28);
+            this.panel17.Controls.Add(this.心前区震颤无);
+            this.panel17.Controls.Add(this.心前区震颤有);
             this.panel17.Location = new System.Drawing.Point(162, 38);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(113, 22);
             this.panel17.TabIndex = 10;
             // 
-            // radioButton27
+            // 心前区震颤无
             // 
-            this.radioButton27.AutoSize = true;
-            this.radioButton27.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton27.Location = new System.Drawing.Point(57, 3);
-            this.radioButton27.Name = "radioButton27";
-            this.radioButton27.Size = new System.Drawing.Size(40, 18);
-            this.radioButton27.TabIndex = 1;
-            this.radioButton27.TabStop = true;
-            this.radioButton27.Text = "无";
-            this.radioButton27.UseVisualStyleBackColor = true;
+            this.心前区震颤无.AutoSize = true;
+            this.心前区震颤无.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.心前区震颤无.Location = new System.Drawing.Point(57, 3);
+            this.心前区震颤无.Name = "心前区震颤无";
+            this.心前区震颤无.Size = new System.Drawing.Size(40, 18);
+            this.心前区震颤无.TabIndex = 1;
+            this.心前区震颤无.TabStop = true;
+            this.心前区震颤无.Text = "无";
+            this.心前区震颤无.UseVisualStyleBackColor = true;
             // 
-            // radioButton28
+            // 心前区震颤有
             // 
-            this.radioButton28.AutoSize = true;
-            this.radioButton28.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.radioButton28.Location = new System.Drawing.Point(16, 3);
-            this.radioButton28.Name = "radioButton28";
-            this.radioButton28.Size = new System.Drawing.Size(40, 18);
-            this.radioButton28.TabIndex = 0;
-            this.radioButton28.TabStop = true;
-            this.radioButton28.Text = "有";
-            this.radioButton28.UseVisualStyleBackColor = true;
+            this.心前区震颤有.AutoSize = true;
+            this.心前区震颤有.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
+            this.心前区震颤有.Location = new System.Drawing.Point(16, 3);
+            this.心前区震颤有.Name = "心前区震颤有";
+            this.心前区震颤有.Size = new System.Drawing.Size(40, 18);
+            this.心前区震颤有.TabIndex = 0;
+            this.心前区震颤有.TabStop = true;
+            this.心前区震颤有.Text = "有";
+            this.心前区震颤有.UseVisualStyleBackColor = true;
             // 
             // label30
             // 
@@ -1402,265 +1663,6 @@
             this.tabPage3.Text = "硬件设备连接状态";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(263, 421);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(113, 21);
-            this.textBox4.TabIndex = 5;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(263, 463);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(113, 21);
-            this.textBox5.TabIndex = 53;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(263, 503);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(113, 21);
-            this.textBox6.TabIndex = 54;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.button3.Location = new System.Drawing.Point(720, 527);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 42;
-            this.button3.Text = "确定";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.button4.Location = new System.Drawing.Point(832, 527);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 43;
-            this.button4.Text = "取消";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(788, 366);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(113, 21);
-            this.textBox7.TabIndex = 55;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(788, 407);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(113, 21);
-            this.textBox8.TabIndex = 56;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(338, 112);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(129, 21);
-            this.textBox9.TabIndex = 44;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(250, 394);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(129, 21);
-            this.textBox10.TabIndex = 45;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(338, 308);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(129, 21);
-            this.textBox11.TabIndex = 46;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(338, 264);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(129, 21);
-            this.textBox12.TabIndex = 47;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(338, 224);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(129, 21);
-            this.textBox13.TabIndex = 48;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(338, 186);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(130, 21);
-            this.textBox14.TabIndex = 49;
-            // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(338, 151);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(129, 21);
-            this.textBox15.TabIndex = 50;
-            // 
-            // textBox17
-            // 
-            this.textBox17.Location = new System.Drawing.Point(571, 437);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(129, 21);
-            this.textBox17.TabIndex = 52;
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(250, 471);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(129, 21);
-            this.textBox18.TabIndex = 53;
-            // 
-            // textBox19
-            // 
-            this.textBox19.Location = new System.Drawing.Point(250, 431);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(129, 21);
-            this.textBox19.TabIndex = 54;
-            // 
-            // textBox20
-            // 
-            this.textBox20.Location = new System.Drawing.Point(571, 478);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(129, 21);
-            this.textBox20.TabIndex = 55;
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.button5.Location = new System.Drawing.Point(475, 110);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 56;
-            this.button5.Text = "选择声音";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // textBox16
-            // 
-            this.textBox16.Location = new System.Drawing.Point(571, 394);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(129, 21);
-            this.textBox16.TabIndex = 57;
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.button6.Location = new System.Drawing.Point(385, 394);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 58;
-            this.button6.Text = "选择声音";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.button7.Location = new System.Drawing.Point(475, 151);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 59;
-            this.button7.Text = "选择声音";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.button8.Location = new System.Drawing.Point(385, 429);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 60;
-            this.button8.Text = "选择声音";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.button9.Location = new System.Drawing.Point(385, 468);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 61;
-            this.button9.Text = "选择声音";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.button10.Location = new System.Drawing.Point(475, 184);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 62;
-            this.button10.Text = "选择声音";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.button11.Location = new System.Drawing.Point(706, 478);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 63;
-            this.button11.Text = "选择声音";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.button12.Location = new System.Drawing.Point(706, 435);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
-            this.button12.TabIndex = 64;
-            this.button12.Text = "选择声音";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            this.button13.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.button13.Location = new System.Drawing.Point(706, 391);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(75, 23);
-            this.button13.TabIndex = 65;
-            this.button13.Text = "选择声音";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            this.button14.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.button14.Location = new System.Drawing.Point(475, 264);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(75, 23);
-            this.button14.TabIndex = 66;
-            this.button14.Text = "选择声音";
-            this.button14.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            this.button15.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.button15.Location = new System.Drawing.Point(475, 308);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(75, 23);
-            this.button15.TabIndex = 67;
-            this.button15.Text = "选择声音";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.button16.Location = new System.Drawing.Point(475, 222);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(75, 23);
-            this.button16.TabIndex = 68;
-            this.button16.Text = "选择声音";
-            this.button16.UseVisualStyleBackColor = true;
-            // 
             // BodySimulation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1670,6 +1672,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BodySimulation";
             this.Text = "SimulationFrame";
+            this.Load += new System.EventHandler(this.BodySimulation_Load);
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -1729,61 +1732,61 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton 胆囊触痛有;
+        private System.Windows.Forms.RadioButton 胆囊触痛无;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton 肝脏质地软;
+        private System.Windows.Forms.RadioButton 肝脏质地硬;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton 胆囊肿大有;
+        private System.Windows.Forms.RadioButton 胆囊肿大无;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.RadioButton radioButton7;
+        private System.Windows.Forms.RadioButton 胆囊墨菲氏征阴性;
+        private System.Windows.Forms.RadioButton 胆囊墨菲氏征阳性;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton10;
+        private System.Windows.Forms.RadioButton 压痛胃溃疡无;
+        private System.Windows.Forms.RadioButton 压痛胃溃疡有;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox 肝脏肿大;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox 脾脏肿大;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.RadioButton radioButton17;
-        private System.Windows.Forms.RadioButton radioButton18;
+        private System.Windows.Forms.RadioButton 压痛阑尾无;
+        private System.Windows.Forms.RadioButton 压痛阑尾有;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.RadioButton radioButton13;
-        private System.Windows.Forms.RadioButton radioButton14;
+        private System.Windows.Forms.RadioButton 压痛乙状结肠无;
+        private System.Windows.Forms.RadioButton 压痛乙状结肠有;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.RadioButton radioButton15;
-        private System.Windows.Forms.RadioButton radioButton16;
+        private System.Windows.Forms.RadioButton 压痛胰腺无;
+        private System.Windows.Forms.RadioButton 压痛胰腺有;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.RadioButton radioButton19;
-        private System.Windows.Forms.RadioButton radioButton20;
+        private System.Windows.Forms.RadioButton 压痛十二指肠无;
+        private System.Windows.Forms.RadioButton 压痛十二指肠有;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.RadioButton radioButton11;
-        private System.Windows.Forms.RadioButton radioButton12;
+        private System.Windows.Forms.RadioButton 压痛小肠无;
+        private System.Windows.Forms.RadioButton 压痛小肠有;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.RadioButton radioButton23;
-        private System.Windows.Forms.RadioButton radioButton24;
+        private System.Windows.Forms.RadioButton 反跳痛阑尾无;
+        private System.Windows.Forms.RadioButton 反跳痛阑尾有;
         private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.RadioButton radioButton25;
-        private System.Windows.Forms.RadioButton radioButton26;
+        private System.Windows.Forms.RadioButton 反跳痛胰腺无;
+        private System.Windows.Forms.RadioButton 反跳痛胰腺有;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.RadioButton radioButton21;
-        private System.Windows.Forms.RadioButton radioButton22;
+        private System.Windows.Forms.RadioButton 反跳痛小肠无;
+        private System.Windows.Forms.RadioButton 反跳痛小肠有;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
@@ -1791,9 +1794,9 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label223;
         private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox 脉搏;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
@@ -1801,12 +1804,12 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.RadioButton radioButton27;
-        private System.Windows.Forms.RadioButton radioButton28;
+        private System.Windows.Forms.RadioButton 心前区震颤无;
+        private System.Windows.Forms.RadioButton 心前区震颤有;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Panel panel19;
-        private System.Windows.Forms.RadioButton radioButton29;
-        private System.Windows.Forms.RadioButton radioButton30;
+        private System.Windows.Forms.RadioButton 心尖搏动无;
+        private System.Windows.Forms.RadioButton 心尖搏动有;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
@@ -1826,25 +1829,25 @@
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox 股动脉听诊音;
+        private System.Windows.Forms.TextBox 肠鸣音;
+        private System.Windows.Forms.TextBox 肾动脉听诊音;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox 血压舒张压;
+        private System.Windows.Forms.TextBox 血压收缩压;
+        private System.Windows.Forms.TextBox 肺动脉瓣听诊区;
+        private System.Windows.Forms.TextBox 主动脉瓣区;
+        private System.Windows.Forms.TextBox 主动脉瓣第二听诊区;
+        private System.Windows.Forms.TextBox 三尖瓣区;
+        private System.Windows.Forms.TextBox 气管;
+        private System.Windows.Forms.TextBox 左肺上;
+        private System.Windows.Forms.TextBox 二尖瓣听诊区;
+        private System.Windows.Forms.TextBox 右肺下;
+        private System.Windows.Forms.TextBox 左肺中;
+        private System.Windows.Forms.TextBox 左肺下;
+        private System.Windows.Forms.TextBox 右肺中;
+        private System.Windows.Forms.TextBox 右肺上;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button15;
