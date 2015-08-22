@@ -1248,5 +1248,32 @@ namespace LoginFrame
             bodyMain.mainFrame = mainFrame;
             titleMain.mainFrame = mainFrame;
         }
+
+        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            panel5.Hide();
+
+            panel1.Controls.Clear();
+            TitleSimulation titleSimulate = TitleSimulation.createForm();
+            titleSimulate.TopLevel = false;
+            titleSimulate.FormBorderStyle = FormBorderStyle.None;
+            titleSimulate.Dock = System.Windows.Forms.DockStyle.Fill;
+            panel1.Controls.Add(titleSimulate);
+            titleSimulate.Show();
+
+            panel6.Controls.Clear();
+            BodySimulation bodySimulate = BodySimulation.createForm();
+            bodySimulate.TopLevel = false;
+            bodySimulate.FormBorderStyle = FormBorderStyle.None;
+            bodySimulate.Dock = System.Windows.Forms.DockStyle.Fill;
+            panel6.Controls.Add(bodySimulate);
+            bodySimulate.Show();
+
+
+            titleSimulate.bodySimulation = bodySimulate;
+            bodySimulate.titleSimulation = titleSimulate;
+
+
+        }
     }
 }

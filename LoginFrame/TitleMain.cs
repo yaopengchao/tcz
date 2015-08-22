@@ -490,7 +490,7 @@ namespace LoginFrame
             }
         }
 
-        VoiceChatRoom vcr;
+        
         void openVoiceChat()
         {
             MainFrame mainFrame = MainFrame.createForm();

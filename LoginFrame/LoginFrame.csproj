@@ -99,6 +99,12 @@
     <Compile Include="AddUsers.Designer.cs">
       <DependentUpon>AddUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdjustPressure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdjustPressure.Designer.cs">
+      <DependentUpon>AdjustPressure.cs</DependentUpon>
+    </Compile>
     <Compile Include="ALawDecoder.cs" />
     <Compile Include="ALawEncoder.cs" />
     <Compile Include="ComboxItem.cs" />
@@ -117,6 +123,18 @@
     </Compile>
     <Compile Include="PageControl.Designer.cs">
       <DependentUpon>PageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BodySimulation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BodySimulation.Designer.cs">
+      <DependentUpon>BodySimulation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TitleSimulation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TitleSimulation.Designer.cs">
+      <DependentUpon>TitleSimulation.cs</DependentUpon>
     </Compile>
     <Compile Include="TalkMain.cs">
       <SubType>Form</SubType>
@@ -190,6 +208,9 @@
     <EmbeddedResource Include="AddUsers.resx">
       <DependentUpon>AddUsers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdjustPressure.resx">
+      <DependentUpon>AdjustPressure.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BodyMain.en.resx">
       <DependentUpon>BodyMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,6 +234,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PageControl.resx">
       <DependentUpon>PageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BodySimulation.resx">
+      <DependentUpon>BodySimulation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TitleSimulation.resx">
+      <DependentUpon>TitleSimulation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TalkMain.resx">
       <DependentUpon>TalkMain.cs</DependentUpon>
