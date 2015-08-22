@@ -157,6 +157,7 @@ namespace LoginFrame
             foreach (DataRow row in dataSet.Tables[0].Rows)
             {
                 ToolStripMenuItem subItem = AddContextMenu(row["name"].ToString(), menuStrip1.Items, null);
+                subItem.Image= LoginFrame.Properties.Resources.Error;
                 subItem.Click += new EventHandler(subItemClick1);//绑定方法
                 toolStripMenuItem1.DropDownItems.Add(subItem);
             }

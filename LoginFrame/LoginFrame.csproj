@@ -309,6 +309,7 @@
     <Content Include="bin\Debug\Regedit.txt" />
     <Content Include="bin\Debug\RolesType.xml" />
     <Content Include="pic\界面背景3.jpg" />
+    <None Include="Resources\Error.png" />
     <None Include="Resources\7.png" />
     <None Include="Resources\13.png" />
     <None Include="Resources\12.png" />
