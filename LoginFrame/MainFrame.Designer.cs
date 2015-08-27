@@ -49,6 +49,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.exMenu1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exMenu2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exMenu3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exMenu4 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -57,8 +61,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.panel5);
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
@@ -118,6 +122,11 @@
             // 
             // toolStripMenuItem2
             // 
+            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exMenu1,
+            this.exMenu2,
+            this.exMenu3,
+            this.exMenu4});
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
             // 
@@ -194,6 +203,26 @@
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
+            // exMenu1
+            // 
+            this.exMenu1.Name = "exMenu1";
+            resources.ApplyResources(this.exMenu1, "exMenu1");
+            // 
+            // exMenu2
+            // 
+            this.exMenu2.Name = "exMenu2";
+            resources.ApplyResources(this.exMenu2, "exMenu2");
+            // 
+            // exMenu3
+            // 
+            this.exMenu3.Name = "exMenu3";
+            resources.ApplyResources(this.exMenu3, "exMenu3");
+            // 
+            // exMenu4
+            // 
+            this.exMenu4.Name = "exMenu4";
+            resources.ApplyResources(this.exMenu4, "exMenu4");
+            // 
             // MainFrame
             // 
             resources.ApplyResources(this, "$this");
@@ -238,5 +267,9 @@
         public System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ToolStripMenuItem 主页ToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem exMenu1;
+        public System.Windows.Forms.ToolStripMenuItem exMenu2;
+        public System.Windows.Forms.ToolStripMenuItem exMenu3;
+        public System.Windows.Forms.ToolStripMenuItem exMenu4;
     }
 }

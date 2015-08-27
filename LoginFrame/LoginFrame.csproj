@@ -323,6 +323,7 @@
     <Content Include="lessons\1.mp3" />
     <Content Include="lessons\3.mp3" />
     <Content Include="lessons\2.mp3" />
+    <Content Include="lessons\19.swf" />
     <Content Include="pic\combobox.png" />
     <Content Include="pic\next.png" />
     <Content Include="pic\NoImage.jpg" />
