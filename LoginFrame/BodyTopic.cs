@@ -56,7 +56,8 @@ namespace LoginFrame
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            AddTopic addTopic = AddTopic.getInstance();
+            addTopic.ShowDialog();
         }
 
         private void btnQuery_Click(object sender, EventArgs e)
