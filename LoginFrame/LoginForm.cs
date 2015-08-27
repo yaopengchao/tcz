@@ -34,20 +34,13 @@ namespace LoginFrame
             comboBox1.Items.Add("English");
             comboBox1.SelectedIndex = 0;
 
-            //this.textBox1.Text = "manager";
-            //this.textBox2.Text = "manager";
-
-
-            this.comboBox2.Items.Add("admin");
-            this.comboBox2.Items.Add("student");
-            this.comboBox2.Items.Add("teacher");
-
-            comboBox2.SelectedIndex = 0;
+            this.loginId.Text = "admin";
+            this.textBox2.Text = "admin";
 
             this.comboBox3.Items.Add(new ComboxItem("学生", Constant.RoleStudent));
             this.comboBox3.Items.Add(new ComboxItem("教师", Constant.RoleTeacher));
             this.comboBox3.Items.Add(new ComboxItem("管理员", Constant.RoleManager));
-            comboBox3.SelectedIndex = 0;
+            comboBox3.SelectedIndex = 2;
         }
 
         public static string checkCode = "";
@@ -100,7 +93,7 @@ namespace LoginFrame
         {
             bool flag = false;
             //string username = this.textBox1.Text;
-            string username = comboBox2.SelectedItem.ToString();
+            string username = loginId.Text;
 
             string password = this.textBox2.Text;
 
@@ -147,14 +140,14 @@ namespace LoginFrame
                     else
                     {
                         MessageBox.Show("密码输入错误,请重新输入密码", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        this.textBox1.Text = "";
+                        this.loginId.Text = "";
                         this.textBox2.Text = "";
                     }
                 }
                 else
                 {
                     MessageBox.Show("用户名不存在,请重新输入用户名", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    this.textBox1.Text = "";
+                    this.loginId.Text = "";
                     this.textBox2.Text = "";
                 }
             }
@@ -551,11 +544,6 @@ Console.WriteLine("====开始搜寻局域网数据库IP====");
 
             //Caption
             res.ApplyResources(this, "$this");
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            this.textBox2.Text = comboBox2.SelectedItem.ToString();
         }
     }
 }
