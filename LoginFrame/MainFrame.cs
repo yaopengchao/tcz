@@ -58,7 +58,7 @@ namespace LoginFrame
                 //menuStrip1.Items[2].Visible = true;             //考试
                 exMenu3.Visible = false;
                 menuStrip1.Items[5].Visible = false;            //教师管理
-                panel5.Height = 140;
+                panel5.Height = 160;
             } else if (roleId.Equals("3"))          //学生
             {
                 menuStrip1.Items[7].Visible = false;            //云服务
@@ -1277,6 +1277,27 @@ namespace LoginFrame
             bodySimulate.titleSimulation = titleSimulate;
 
 
+        }
+
+        private void exMenu1_Click(object sender, EventArgs e)
+        {
+            panel5.Hide();
+
+            panel1.Controls.Clear();
+            TitletTopic titleTopic = TitletTopic.createForm();
+            titleTopic.TopLevel = false;
+            titleTopic.FormBorderStyle = FormBorderStyle.None;
+            titleTopic.Dock = System.Windows.Forms.DockStyle.Fill;
+            panel1.Controls.Add(titleTopic);
+            titleTopic.Show();
+
+            panel6.Controls.Clear();
+            BodyTopic bodyTopic = BodyTopic.createForm();
+            bodyTopic.TopLevel = false;
+            bodyTopic.FormBorderStyle = FormBorderStyle.None;
+            bodyTopic.Dock = System.Windows.Forms.DockStyle.Fill;
+            panel6.Controls.Add(bodyTopic);
+            bodyTopic.Show();
         }
     }
 }

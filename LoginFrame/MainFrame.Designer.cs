@@ -30,18 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrame));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.主页ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exMenu1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exMenu2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exMenu3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exMenu4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,10 +53,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.exMenu1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.exMenu2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.exMenu3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.exMenu4 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -73,14 +73,6 @@
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.Gainsboro;
-            this.label6.Image = global::LoginFrame.Properties.Resources.combobox1;
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // panel5
             // 
@@ -130,6 +122,27 @@
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
             // 
+            // exMenu1
+            // 
+            this.exMenu1.Name = "exMenu1";
+            resources.ApplyResources(this.exMenu1, "exMenu1");
+            this.exMenu1.Click += new System.EventHandler(this.exMenu1_Click);
+            // 
+            // exMenu2
+            // 
+            this.exMenu2.Name = "exMenu2";
+            resources.ApplyResources(this.exMenu2, "exMenu2");
+            // 
+            // exMenu3
+            // 
+            this.exMenu3.Name = "exMenu3";
+            resources.ApplyResources(this.exMenu3, "exMenu3");
+            // 
+            // exMenu4
+            // 
+            this.exMenu4.Name = "exMenu4";
+            resources.ApplyResources(this.exMenu4, "exMenu4");
+            // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
@@ -164,6 +177,14 @@
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
             resources.ApplyResources(this.toolStripMenuItem8, "toolStripMenuItem8");
             this.toolStripMenuItem8.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Gainsboro;
+            this.label6.Image = global::LoginFrame.Properties.Resources.combobox1;
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -202,26 +223,6 @@
             // 
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
-            // 
-            // exMenu1
-            // 
-            this.exMenu1.Name = "exMenu1";
-            resources.ApplyResources(this.exMenu1, "exMenu1");
-            // 
-            // exMenu2
-            // 
-            this.exMenu2.Name = "exMenu2";
-            resources.ApplyResources(this.exMenu2, "exMenu2");
-            // 
-            // exMenu3
-            // 
-            this.exMenu3.Name = "exMenu3";
-            resources.ApplyResources(this.exMenu3, "exMenu3");
-            // 
-            // exMenu4
-            // 
-            this.exMenu4.Name = "exMenu4";
-            resources.ApplyResources(this.exMenu4, "exMenu4");
             // 
             // MainFrame
             // 
