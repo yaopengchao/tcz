@@ -96,51 +96,6 @@ namespace LoginFrame
             Application.Exit();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            checkCode = GetRandomCode(4);
-            CreateImage(checkCode);
-
-            //测试时候直接将验证码写入
-            this.textBox3.Text = checkCode;
-        }
-
-        /// <summary>
-        /// 创建验证码图片
-        /// </summary>
-        /// <param name="checkCode"></param>
-        private void CreateImage(string checkCode)
-        {
-            int iwidth = (int)(checkCode.Length * 15);
-            System.Drawing.Bitmap image = new System.Drawing.Bitmap(iwidth, 21);
-            Graphics g = Graphics.FromImage(image);
-            Font f = new System.Drawing.Font("Arial ", 10);//, System.Drawing.FontStyle.Bold);
-            Brush b = new System.Drawing.SolidBrush(Color.Black);
-            Brush r = new System.Drawing.SolidBrush(Color.FromArgb(166, 8, 8));
-
-            g.Clear(System.Drawing.ColorTranslator.FromHtml("#99C1CB"));//背景色
-
-            char[] ch = checkCode.ToCharArray();
-            for (int i = 0; i < ch.Length; i++)
-            {
-                if (ch[i] >= '0' && ch[i] <= '9')
-                {
-                    //数字用红色显示
-                    g.DrawString(ch[i].ToString(), f, r, 3 + (i * 12), 3);
-                }
-                else
-                {   //字母用黑色显示
-                    g.DrawString(ch[i].ToString(), f, b, 3 + (i * 12), 3);
-                }
-            }
-            System.IO.MemoryStream ms = new System.IO.MemoryStream();
-            image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-            //history back 不重复 
-            pictureBox2.Image = image;
-        }
-
-
-
         private bool login()
         {
             bool flag = false;
@@ -157,66 +112,50 @@ namespace LoginFrame
             {
                 MessageBox.Show("密码不能为空!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
-
-            else if (this.textBox3.Text.Trim() == "")
-            {
-                MessageBox.Show("验证码不能为空!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            }
             else
             {
-                if (checkCode.ToLower() != this.textBox3.Text.Trim().ToLower())
-                {
-                    MessageBox.Show("验证码输入错误!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                }
-                else
-                {
-                    ImplUser Bll = new ImplUser();
+                ImplUser Bll = new ImplUser();
 
-                    int a = Bll.ExistsName(username);
+                int a = Bll.ExistsName(username);
 
-                    if (a != 0)
+                if (a != 0)
+                {
+
+                    DataSet ds = Bll.ExistsPwd(username, password, ((ComboxItem)this.comboBox3.Items[comboBox3selectIndex]).Value);
+
+                    if (ds.Tables[0].Rows.Count > 0)
                     {
-
-                        DataSet ds = Bll.ExistsPwd(username, password, ((ComboxItem)this.comboBox3.Items[comboBox3selectIndex]).Value);
-
-                        if (ds.Tables[0].Rows.Count > 0)
-                        {
-                            LoginRoler.username = Convert.ToString(ds.Tables[0].Rows[0][0].ToString());
-                            //LoginRoler.truename = Convert.ToString(ds.Tables[0].Rows[0][1].ToString());
-                            LoginRoler.roleid = Convert.ToString(ds.Tables[0].Rows[0][1].ToString());
-                            LoginRoler.language = comboBox1.SelectedIndex;
-                            LoginRoler.ip = GetAddressIP();
-                            LoginRoler.userId = Convert.ToInt32(ds.Tables[0].Rows[0][2].ToString());
-                            LoginRoler.pwd = password;
+                        LoginRoler.username = Convert.ToString(ds.Tables[0].Rows[0][0].ToString());
+                        //LoginRoler.truename = Convert.ToString(ds.Tables[0].Rows[0][1].ToString());
+                        LoginRoler.roleid = Convert.ToString(ds.Tables[0].Rows[0][1].ToString());
+                        LoginRoler.language = comboBox1.SelectedIndex;
+                        LoginRoler.ip = GetAddressIP();
+                        LoginRoler.userId = Convert.ToInt32(ds.Tables[0].Rows[0][2].ToString());
+                        LoginRoler.pwd = password;
 
 
-                            //检查是否还有其他老师在同一个局域网登录
+                        //检查是否还有其他老师在同一个局域网登录
 
 
-                            //记录登录信息
-                            //bool islogedin = Bll.logLogin(LoginRoler.username, LoginRoler.ip);
+                        //记录登录信息
+                        //bool islogedin = Bll.logLogin(LoginRoler.username, LoginRoler.ip);
 
 
-                            checkCode = "";
-                            flag = true;
-                        }
-                        else
-                        {
-                            MessageBox.Show("密码输入错误,请重新输入密码", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                            this.textBox1.Text = "";
-                            this.textBox2.Text = "";
-                            this.textBox3.Text = "";
-                            pictureBox2_Click(null, null);//调用刷新验证码方法
-                        }
+                        checkCode = "";
+                        flag = true;
                     }
                     else
                     {
-                        MessageBox.Show("用户名不存在,请重新输入用户名", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        MessageBox.Show("密码输入错误,请重新输入密码", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         this.textBox1.Text = "";
                         this.textBox2.Text = "";
-                        this.textBox3.Text = "";
-                        pictureBox2_Click(null, null);//调用刷新验证码方法
                     }
+                }
+                else
+                {
+                    MessageBox.Show("用户名不存在,请重新输入用户名", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    this.textBox1.Text = "";
+                    this.textBox2.Text = "";
                 }
             }
             return flag;
