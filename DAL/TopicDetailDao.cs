@@ -29,5 +29,21 @@ namespace DAL
             return Convert.ToInt32(MySqlHelper.ExecuteScalar(strSql, parames));
         }
 
+        public DataSet getTopicDetail(int topicId)
+        {
+            string strSql = "select topic_detail_id, item_pre, item_detail, item_order from ex_topic_detail where topic_id = " + topicId + " ORDER BY item_pre";
+            return listEntity(strSql, null, -1, 0);
+        }
+
+        public int deleteTopicDetail(int topicId)
+        {
+            string strSql = "delete from ex_topic_detail where topic_id = ?topicId";
+            MySqlParameter[] parames = new MySqlParameter[] {
+                new MySqlParameter("?topicId", MySqlDbType.Int32)
+            };
+            parames[0].Value = topicId;
+            return MySqlHelper.ExecuteNonQuery(strSql, parames);
+        }
+
     }
 }

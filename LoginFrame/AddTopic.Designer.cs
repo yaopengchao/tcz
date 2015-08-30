@@ -37,13 +37,14 @@
             this.addDetail = new System.Windows.Forms.Button();
             this.delDetail = new System.Windows.Forms.Button();
             this.dg = new System.Windows.Forms.DataGridView();
-            this.选项字符 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.topicCategory = new System.Windows.Forms.ComboBox();
             this.topicType = new System.Windows.Forms.ComboBox();
             this.txtAnswers = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtContent = new System.Windows.Forms.TextBox();
+            this.labTopicId = new System.Windows.Forms.Label();
+            this.选项字符 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -146,19 +147,6 @@
             this.dg.Size = new System.Drawing.Size(438, 120);
             this.dg.TabIndex = 17;
             // 
-            // 选项字符
-            // 
-            this.选项字符.FillWeight = 5.076141F;
-            this.选项字符.HeaderText = "选项字符";
-            this.选项字符.Name = "选项字符";
-            // 
-            // Column2
-            // 
-            this.Column2.FillWeight = 194.9239F;
-            this.Column2.HeaderText = "选项文本";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 335;
-            // 
             // topicCategory
             // 
             this.topicCategory.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -209,11 +197,35 @@
             this.txtContent.Size = new System.Drawing.Size(300, 60);
             this.txtContent.TabIndex = 7;
             // 
+            // labTopicId
+            // 
+            this.labTopicId.AutoSize = true;
+            this.labTopicId.Location = new System.Drawing.Point(603, 363);
+            this.labTopicId.Name = "labTopicId";
+            this.labTopicId.Size = new System.Drawing.Size(11, 12);
+            this.labTopicId.TabIndex = 23;
+            this.labTopicId.Text = "0";
+            this.labTopicId.Visible = false;
+            // 
+            // 选项字符
+            // 
+            this.选项字符.FillWeight = 5.076141F;
+            this.选项字符.HeaderText = "选项字符";
+            this.选项字符.Name = "选项字符";
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 194.9239F;
+            this.Column2.HeaderText = "选项文本";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 335;
+            // 
             // AddTopic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 500);
+            this.Controls.Add(this.labTopicId);
             this.Controls.Add(this.txtAnswers);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.topicType);
@@ -248,13 +260,14 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button addDetail;
         private System.Windows.Forms.Button delDetail;
-        private System.Windows.Forms.DataGridView dg;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 选项字符;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.ComboBox topicCategory;
-        private System.Windows.Forms.ComboBox topicType;
+        public System.Windows.Forms.DataGridView dg;
+        public System.Windows.Forms.ComboBox topicCategory;
+        public System.Windows.Forms.ComboBox topicType;
         public System.Windows.Forms.TextBox txtAnswers;
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox txtContent;
+        public System.Windows.Forms.Label labTopicId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 选项字符;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

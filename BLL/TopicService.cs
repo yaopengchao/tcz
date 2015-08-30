@@ -56,29 +56,65 @@ namespace BLL
                 string main = attrs[0];
                 string detail = attrs[1];
                 string[] mainDetail = main.Split(new char[] { ','});
-                topic.Content = mainDetail[0];
-                topic.TopicType = mainDetail[1];
-                topic.TopicCategory = mainDetail[2];
-                topic.Answers = mainDetail[3];
-                flag = topicDao.addTopic(topic);
-
-                string[] dDetail = detail.Split(new char[] { ';'});
-                foreach (string dtl in dDetail)
+                int topicId = Convert.ToInt32(mainDetail[4]);
+                if (topicId == 0)                              //添加
                 {
-                    if (dtl.IndexOf(",") > 0)
+                    topic.Content = mainDetail[0];
+                    topic.TopicType = mainDetail[1];
+                    topic.TopicCategory = mainDetail[2];
+                    topic.Answers = mainDetail[3];
+                    flag = topicDao.addTopic(topic);
+                    string[] dDetail = detail.Split(new char[] { ';' });
+                    foreach (string dtl in dDetail)
                     {
-                        TopicDetail topicDetail = new TopicDetail();
-                        string[] tpDetail = dtl.Split(new char[] { ',' });
-                        topicDetail.TopicId = topic.TopicId;
-                        topicDetail.ItemPre = tpDetail[0];
-                        topicDetail.ItemDetail = tpDetail[1];
-                        topicDetailDao.addTopicDetail(topicDetail);
+                        if (dtl.IndexOf(",") > 0)
+                        {
+                            TopicDetail topicDetail = new TopicDetail();
+                            string[] tpDetail = dtl.Split(new char[] { ',' });
+                            topicDetail.TopicId = topic.TopicId;
+                            topicDetail.ItemPre = tpDetail[0];
+                            topicDetail.ItemDetail = tpDetail[1];
+                            topicDetailDao.addTopicDetail(topicDetail);
+                        }
                     }
-                    
                 }
+                else
+                {
+                    topic.TopicId = topicId;
+                    topic.Content = mainDetail[0];
+                    topic.TopicType = mainDetail[1];
+                    topic.TopicCategory = mainDetail[2];
+                    topic.Answers = mainDetail[3];
+                    flag = topicDao.updateTopic(topic);
 
+                    topicDetailDao.deleteTopicDetail(topicId);
+                    string[] dDetail = detail.Split(new char[] { ';' });
+                    foreach (string dtl in dDetail)
+                    {
+                        if (dtl.IndexOf(",") > 0)
+                        {
+                            TopicDetail topicDetail = new TopicDetail();
+                            string[] tpDetail = dtl.Split(new char[] { ',' });
+                            topicDetail.TopicId = topic.TopicId;
+                            topicDetail.ItemPre = tpDetail[0];
+                            topicDetail.ItemDetail = tpDetail[1];
+                            topicDetailDao.addTopicDetail(topicDetail);
+                        }
+                    }
+                }
             }
             return flag;
+        }
+
+        public int deleteTopic(int topicId)
+        {
+            topicDetailDao.deleteTopicDetail(topicId);
+            return topicDao.deleteTopic(topicId);
+        }
+
+        public DataSet getTopicDetail(int topicId)
+        {
+            return topicDetailDao.getTopicDetail(topicId);
         }
     }
 }

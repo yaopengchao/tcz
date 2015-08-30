@@ -14,7 +14,7 @@ namespace DAL
         //根据条件进行分页查询
         public DataSet listTopics(Dictionary<string, string> strWheres, int startIndex, int pageSize)
         {
-            string strSql = "select topic_id, content, if (topic_type='1','理论类','操作类'), b.name, answers, create_time from ex_topic a, classify b where a.TOPIC_CATEGORY = b.id ";
+            string strSql = "select topic_id, content, if (topic_type='1','理论类','操作类'), b.name, answers, create_time, topic_type, topic_category from ex_topic a, classify b where a.TOPIC_CATEGORY = b.id ";
             return listEntity(strSql, strWheres, startIndex, pageSize);
         }
 
@@ -46,6 +46,35 @@ namespace DAL
             int topicId = Convert.ToInt32(MySqlHelper.ExecuteScalar(strSql, parames));
             topic.TopicId = topicId;
             return topicId;
+        }
+
+        public int updateTopic(Topic topic)
+        {
+            string strSql = "update ex_topic set content = ?content, topic_type = ?topicType, topic_category = ?topicCategory, answers = ?answers where topic_id = ?topicId";
+            MySqlParameter[] parames = new MySqlParameter[] {
+                new MySqlParameter("?content", MySqlDbType.VarChar),
+                new MySqlParameter("?topicType", MySqlDbType.VarChar),
+                new MySqlParameter("?topicCategory", MySqlDbType.VarChar),
+                new MySqlParameter("?answers", MySqlDbType.VarChar),
+                new MySqlParameter("?topicId", MySqlDbType.VarChar)
+            };
+            
+            parames[0].Value = topic.Content;
+            parames[1].Value = topic.TopicType;
+            parames[2].Value = topic.TopicCategory;
+            parames[3].Value = topic.Answers;
+            parames[4].Value = topic.TopicId;
+            return Convert.ToInt32(MySqlHelper.ExecuteNonQuery(strSql, parames));
+        }
+
+        public int deleteTopic(int topicId)
+        {
+            string strSql = "delete from ex_topic where topic_id = ?topicId";
+            MySqlParameter[] parames = new MySqlParameter[] {
+                new MySqlParameter("?topicId", MySqlDbType.Int32)
+            };
+            parames[0].Value = topicId;
+            return MySqlHelper.ExecuteNonQuery(strSql, parames);
         }
 
     }

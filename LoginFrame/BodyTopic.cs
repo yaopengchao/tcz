@@ -69,7 +69,7 @@ namespace LoginFrame
 
         private void button6_Click(object sender, EventArgs e)
         {
-            AddTopic addTopic = AddTopic.getInstance();
+            AddTopic addTopic = new AddTopic();
             addTopic.bodyTopic = this;
             addTopic.ShowDialog();
         }
@@ -105,6 +105,8 @@ namespace LoginFrame
             string[] cols = new string[] { "题目编号", "题干", "题目种类", "题目分类", "正确答案", "创建时间" };
             pageCtrl.Cols = cols;
             pageCtrl.dg.Columns[0].Visible = false;
+            pageCtrl.dg.Columns[6].Visible = false;
+            pageCtrl.dg.Columns[7].Visible = false;
             int[] widths = new int[] { 230, 150, 150, 150, 150, 150 };
             pageCtrl.Widths = widths;
         }
@@ -121,6 +123,48 @@ namespace LoginFrame
             topicType.SelectedIndex = 0;
             txtContent.Text = "";
             btnQueryClick();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int topicId = Convert.ToInt32(pageCtrl.dg.CurrentRow.Cells[0].Value);
+            if (topicId > 0)
+            {
+                topicService.deleteTopic(topicId);
+                btnQueryClick();
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AddTopic addTopic = new AddTopic();
+            addTopic.bodyTopic = this;
+            addTopic.labTitle.Text = "修改题目";
+            addTopic.topicType.SelectedIndex = Convert.ToInt32(pageCtrl.dg.CurrentRow.Cells[6].Value);
+            addTopic.topicCategory.SelectedIndex = Convert.ToInt32(pageCtrl.dg.CurrentRow.Cells[7].Value);
+            addTopic.txtContent.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[1].Value);
+            addTopic.txtAnswers.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[4].Value);
+            addTopic.labTopicId.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[0].Value);
+
+            DataTable dt = topicService.getTopicDetail(Convert.ToInt32(pageCtrl.dg.CurrentRow.Cells[0].Value)).Tables[0];
+            foreach (DataRow dr in dt.Rows)
+            {
+                int total = addTopic.dg.Rows.Count;
+                DataGridViewRow row = new DataGridViewRow();
+                DataGridViewTextBoxCell cell1 = new DataGridViewTextBoxCell();
+                cell1.Value = dr[1];
+                row.Cells.Add(cell1);
+                DataGridViewTextBoxCell cell2 = new DataGridViewTextBoxCell();
+                cell2.Value = dr[2];
+                row.Cells.Add(cell2);
+                addTopic.dg.Rows.Add(row);
+            }
+
+
+            
+
+
+            addTopic.ShowDialog();
         }
     }
 }

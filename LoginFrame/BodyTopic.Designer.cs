@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.查询条件 = new System.Windows.Forms.GroupBox();
+            this.topicCategory = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.topicType = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnQuery = new System.Windows.Forms.Button();
             this.txtContent = new System.Windows.Forms.TextBox();
@@ -36,10 +40,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.topicType = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.topicCategory = new System.Windows.Forms.ComboBox();
             this.pageCtrl = new LoginFrame.PageControl();
             this.查询条件.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +60,42 @@
             this.查询条件.TabIndex = 11;
             this.查询条件.TabStop = false;
             this.查询条件.Text = "查询条件";
+            // 
+            // topicCategory
+            // 
+            this.topicCategory.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.topicCategory.FormattingEnabled = true;
+            this.topicCategory.Location = new System.Drawing.Point(219, 24);
+            this.topicCategory.Name = "topicCategory";
+            this.topicCategory.Size = new System.Drawing.Size(87, 24);
+            this.topicCategory.TabIndex = 23;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(173, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(29, 12);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "分类";
+            // 
+            // topicType
+            // 
+            this.topicType.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.topicType.FormattingEnabled = true;
+            this.topicType.Location = new System.Drawing.Point(61, 24);
+            this.topicType.Name = "topicType";
+            this.topicType.Size = new System.Drawing.Size(87, 24);
+            this.topicType.TabIndex = 21;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(26, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 12);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "种类";
             // 
             // btnClear
             // 
@@ -105,6 +141,7 @@
             this.button4.TabIndex = 14;
             this.button4.Text = "删除";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -114,6 +151,7 @@
             this.button5.TabIndex = 13;
             this.button5.Text = "修改";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -124,42 +162,6 @@
             this.button6.Text = "添加";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 12);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "种类";
-            // 
-            // topicType
-            // 
-            this.topicType.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.topicType.FormattingEnabled = true;
-            this.topicType.Location = new System.Drawing.Point(61, 24);
-            this.topicType.Name = "topicType";
-            this.topicType.Size = new System.Drawing.Size(87, 24);
-            this.topicType.TabIndex = 21;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(173, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 12);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "分类";
-            // 
-            // topicCategory
-            // 
-            this.topicCategory.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.topicCategory.FormattingEnabled = true;
-            this.topicCategory.Location = new System.Drawing.Point(219, 24);
-            this.topicCategory.Name = "topicCategory";
-            this.topicCategory.Size = new System.Drawing.Size(87, 24);
-            this.topicCategory.TabIndex = 23;
             // 
             // pageCtrl
             // 

@@ -15,7 +15,7 @@ namespace LoginFrame
 
         ImplCourses Bll = new ImplCourses();
 
-        private static TopicService topicService;
+        private static TopicService topicService = new TopicService();
 
         public BodyTopic bodyTopic;
 
@@ -33,21 +33,6 @@ namespace LoginFrame
             topicType.DataSource = Constant.getTopicType();
             topicType.DisplayMember = "name";
             topicType.ValueMember = "id";
-        }
-
-        private static AddTopic instance;
-
-        public static AddTopic getInstance()
-        {
-            if (instance == null)
-            {
-                instance = new AddTopic();
-            }
-            if (topicService == null)
-            {
-                topicService = new TopicService();
-            }
-            return instance;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -109,7 +94,7 @@ namespace LoginFrame
             else
             {
                 string topicContent = "";
-                topicContent += content + "," + type + "," + category + "," + answers + "|";
+                topicContent += content + "," + type + "," + category + "," + answers + "," + labTopicId.Text + "|";
                 for (int i = 0; i < totalDetail; i++)
                 {
                     string itemPre = Convert.ToString(dg.Rows[i].Cells[0].Value);
