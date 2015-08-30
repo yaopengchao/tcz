@@ -54,7 +54,7 @@ namespace DAL
             parames[2].Value = user.UserType;
             parames[3].Value = user.Pwd;
             DateTime dt = DateTime.Now;
-            parames[4].Value = dt.ToString("yyyy-MM-dd HH:mm:ss"); ;
+            parames[4].Value = dt.ToString("yyyy-MM-dd HH:mm:ss"); 
             int userId = Convert.ToInt32(MySqlHelper.ExecuteScalar(strSql, parames));
             user.UserId = userId;
             return userId;

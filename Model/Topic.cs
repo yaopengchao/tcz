@@ -24,7 +24,8 @@ namespace Model
             set { content = value; }
         }
 
-        private string topicType
+        private string topicType;
+        public string TopicType
         {
             get { return topicType; }
             set { topicType = value; }

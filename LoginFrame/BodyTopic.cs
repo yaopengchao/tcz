@@ -57,10 +57,11 @@ namespace LoginFrame
         private void button6_Click(object sender, EventArgs e)
         {
             AddTopic addTopic = AddTopic.getInstance();
+            addTopic.bodyTopic = this;
             addTopic.ShowDialog();
         }
 
-        private void btnQuery_Click(object sender, EventArgs e)
+        public void btnQuery_Click(object sender, EventArgs e)
         {
             btnQueryClick();
         }
