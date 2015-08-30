@@ -36,12 +36,20 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.topicType = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.topicCategory = new System.Windows.Forms.ComboBox();
             this.pageCtrl = new LoginFrame.PageControl();
             this.查询条件.SuspendLayout();
             this.SuspendLayout();
             // 
             // 查询条件
             // 
+            this.查询条件.Controls.Add(this.topicCategory);
+            this.查询条件.Controls.Add(this.label3);
+            this.查询条件.Controls.Add(this.topicType);
+            this.查询条件.Controls.Add(this.label2);
             this.查询条件.Controls.Add(this.btnClear);
             this.查询条件.Controls.Add(this.btnQuery);
             this.查询条件.Controls.Add(this.txtContent);
@@ -55,16 +63,17 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(278, 25);
+            this.btnClear.Location = new System.Drawing.Point(642, 25);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 3;
             this.btnClear.Text = "清空";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnQuery
             // 
-            this.btnQuery.Location = new System.Drawing.Point(186, 25);
+            this.btnQuery.Location = new System.Drawing.Point(550, 25);
             this.btnQuery.Name = "btnQuery";
             this.btnQuery.Size = new System.Drawing.Size(75, 23);
             this.btnQuery.TabIndex = 2;
@@ -74,7 +83,7 @@
             // 
             // txtContent
             // 
-            this.txtContent.Location = new System.Drawing.Point(80, 27);
+            this.txtContent.Location = new System.Drawing.Point(407, 27);
             this.txtContent.Name = "txtContent";
             this.txtContent.Size = new System.Drawing.Size(100, 21);
             this.txtContent.TabIndex = 1;
@@ -82,7 +91,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 30);
+            this.label1.Location = new System.Drawing.Point(348, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 12);
             this.label1.TabIndex = 0;
@@ -115,6 +124,42 @@
             this.button6.Text = "添加";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(26, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 12);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "种类";
+            // 
+            // topicType
+            // 
+            this.topicType.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.topicType.FormattingEnabled = true;
+            this.topicType.Location = new System.Drawing.Point(61, 24);
+            this.topicType.Name = "topicType";
+            this.topicType.Size = new System.Drawing.Size(87, 24);
+            this.topicType.TabIndex = 21;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(173, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(29, 12);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "分类";
+            // 
+            // topicCategory
+            // 
+            this.topicCategory.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.topicCategory.FormattingEnabled = true;
+            this.topicCategory.Location = new System.Drawing.Point(219, 24);
+            this.topicCategory.Name = "topicCategory";
+            this.topicCategory.Size = new System.Drawing.Size(87, 24);
+            this.topicCategory.TabIndex = 23;
             // 
             // pageCtrl
             // 
@@ -163,5 +208,9 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox topicType;
+        private System.Windows.Forms.ComboBox topicCategory;
     }
 }

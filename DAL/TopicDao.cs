@@ -14,14 +14,14 @@ namespace DAL
         //根据条件进行分页查询
         public DataSet listTopics(Dictionary<string, string> strWheres, int startIndex, int pageSize)
         {
-            string strSql = "select topic_id, content, topic_type, topic_category, answers, create_time from ex_topic where 1 = 1 ";
+            string strSql = "select topic_id, content, if (topic_type='1','理论类','操作类'), b.name, answers, create_time from ex_topic a, classify b where a.TOPIC_CATEGORY = b.id ";
             return listEntity(strSql, strWheres, startIndex, pageSize);
         }
 
         //根据条件查询数量
         public int countTopics(Dictionary<string, string> strWheres)
         {
-            string strSql = "select count(1) from ex_topic where 1 = 1 ";
+            string strSql = "select count(1) from ex_topic a, classify b where a.TOPIC_CATEGORY = b.id ";
             return countEntity(strSql, strWheres);
         }
 

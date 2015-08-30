@@ -12,9 +12,22 @@ namespace LoginFrame
 {
     public partial class BodyTopic : Form
     {
+
+        ImplCourses Bll = new ImplCourses();
+
         public BodyTopic()
         {
             InitializeComponent();
+            topicCategory.Items.Clear();
+            topicCategory.DataSource = Bll.getAllCourses().Tables[0];
+            topicCategory.DisplayMember = "name";
+            topicCategory.ValueMember = "id";
+
+            topicType.Items.Clear();
+            topicType.Items.Clear();
+            topicType.DataSource = Constant.getTopicType();
+            topicType.DisplayMember = "name";
+            topicType.ValueMember = "id";
         }
 
         private static BodyTopic instance;
@@ -72,9 +85,19 @@ namespace LoginFrame
 
             pageCtrl.strWheres = strWheres;
             string content = txtContent.Text;
+            string type = Convert.ToString(topicType.SelectedValue);
+            string category = Convert.ToString(topicCategory.SelectedValue);
             if (content != null && !content.Equals(""))
             {
-                strWheres.Add("content", " like '%" + content + "%' ");
+                strWheres.Add("a.content", " like '%" + content + "%' ");
+            }
+            if (type != null && !type.Equals(""))
+            {
+                strWheres.Add("a.topic_type", " = '" + type + "' ");
+            }
+            if (category != null && !category.Equals(""))
+            {
+                strWheres.Add("a.topic_category", " = '" + category + "' ");
             }
             loadCount(strWheres);
             loadData(strWheres);
@@ -90,6 +113,14 @@ namespace LoginFrame
         {
             int userCount = topicService.countTopics(strWheres);
             pageCtrl.TotalRecord = userCount;
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            topicCategory.SelectedIndex = 0;
+            topicType.SelectedIndex = 0;
+            txtContent.Text = "";
+            btnQueryClick();
         }
     }
 }
