@@ -113,6 +113,12 @@
     </Compile>
     <Compile Include="ALawDecoder.cs" />
     <Compile Include="ALawEncoder.cs" />
+    <Compile Include="BodyExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BodyExam.Designer.cs">
+      <DependentUpon>BodyExam.cs</DependentUpon>
+    </Compile>
     <Compile Include="BodyTopic.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,12 @@
     </Compile>
     <Compile Include="BodySimulation.Designer.cs">
       <DependentUpon>BodySimulation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TitleExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TitleExam.Designer.cs">
+      <DependentUpon>TitleExam.cs</DependentUpon>
     </Compile>
     <Compile Include="TitleSimulation.cs">
       <SubType>Form</SubType>
@@ -232,6 +244,9 @@
     <EmbeddedResource Include="AdjustPressure.resx">
       <DependentUpon>AdjustPressure.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BodyExam.resx">
+      <DependentUpon>BodyExam.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BodyMain.en.resx">
       <DependentUpon>BodyMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -261,6 +276,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BodySimulation.resx">
       <DependentUpon>BodySimulation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TitleExam.resx">
+      <DependentUpon>TitleExam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TitleSimulation.resx">
       <DependentUpon>TitleSimulation.cs</DependentUpon>
@@ -343,6 +361,12 @@
     <Content Include="DLLS\ICSharpCode.SharpZipLib.dll" />
     <Content Include="DLLS\Microsoft.DirectX.DirectSound.dll" />
     <Content Include="DLLS\Microsoft.DirectX.dll" />
+    <Content Include="DLLS\MySql.Data.CF.dll" />
+    <Content Include="DLLS\MySql.Data.dll" />
+    <Content Include="DLLS\MySql.Data.Entity.dll" />
+    <Content Include="DLLS\MySql.Fabric.Plugin.dll" />
+    <Content Include="DLLS\MySql.Web.dll" />
+    <Content Include="DLLS\System.ServiceProcess.dll" />
     <Content Include="icon\favicon.ico" />
     <Content Include="lessons\1.swf" />
     <Content Include="lessons\2.swf" />

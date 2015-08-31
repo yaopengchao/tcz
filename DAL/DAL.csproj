@@ -48,6 +48,8 @@
     <Compile Include="ClassDao.cs" />
     <Compile Include="CommonDao.cs" />
     <Compile Include="DAOCourses.cs" />
+    <Compile Include="ExaminationDao.cs" />
+    <Compile Include="ExaminationDetailDao.cs" />
     <Compile Include="MySqlHelper.cs" />
     <Compile Include="DAOUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

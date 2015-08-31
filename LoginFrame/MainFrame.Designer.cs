@@ -132,6 +132,7 @@
             // 
             this.exMenu2.Name = "exMenu2";
             resources.ApplyResources(this.exMenu2, "exMenu2");
+            this.exMenu2.Click += new System.EventHandler(this.exMenu2_Click);
             // 
             // exMenu3
             // 
