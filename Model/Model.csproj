@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="ChatUser.cs" />
     <Compile Include="ClassInfo.cs" />
+    <Compile Include="Examination.cs" />
+    <Compile Include="ExaminationDetail.cs" />
     <Compile Include="LoginRoler.cs" />
     <Compile Include="Message.cs" />
     <Compile Include="OnlineUser.cs" />

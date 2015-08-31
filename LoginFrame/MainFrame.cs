@@ -1299,5 +1299,26 @@ namespace LoginFrame
             panel6.Controls.Add(bodyTopic);
             bodyTopic.Show();
         }
+
+        private void exMenu2_Click(object sender, EventArgs e)
+        {
+            panel5.Hide();
+
+            panel1.Controls.Clear();
+            TitleExam titleExam = TitleExam.createForm();
+            titleExam.TopLevel = false;
+            titleExam.FormBorderStyle = FormBorderStyle.None;
+            titleExam.Dock = System.Windows.Forms.DockStyle.Fill;
+            panel1.Controls.Add(titleExam);
+            titleExam.Show();
+
+            panel6.Controls.Clear();
+            BodyExam bodyExam = BodyExam.createForm();
+            bodyExam.TopLevel = false;
+            bodyExam.FormBorderStyle = FormBorderStyle.None;
+            bodyExam.Dock = System.Windows.Forms.DockStyle.Fill;
+            panel6.Controls.Add(bodyExam);
+            bodyExam.Show();
+        }
     }
 }
