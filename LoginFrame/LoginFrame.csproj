@@ -59,6 +59,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DLLS\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
+    <Reference Include="InTheHand.Net.Personal, Version=3.3.909.0, Culture=neutral, PublicKeyToken=ea38caa273134499, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLLS\InTheHand.Net.Personal.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DLLS\Microsoft.DirectX.dll</HintPath>
@@ -238,9 +242,6 @@
     <EmbeddedResource Include="BodyMain.zh-CN.resx">
       <DependentUpon>BodyMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BodyTopic.resx">
-      <DependentUpon>BodyTopic.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.en.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -341,6 +342,7 @@
     <Content Include="bin\Debug\LoginFrame.pdb" />
     <Content Include="bin\Debug\LoginFrame.vshost.exe" />
     <Content Include="DLLS\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="DLLS\InTheHand.Net.Personal.dll" />
     <Content Include="DLLS\Microsoft.DirectX.DirectSound.dll" />
     <Content Include="DLLS\Microsoft.DirectX.dll" />
     <Content Include="icon\favicon.ico" />

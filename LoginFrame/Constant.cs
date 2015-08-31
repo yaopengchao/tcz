@@ -39,5 +39,8 @@ namespace LoginFrame
             return list;
         }
 
+        public static string 开机验证码 = "FF000000000000PASSWORDFD";
+
+
     }
 }

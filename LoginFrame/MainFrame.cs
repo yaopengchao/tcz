@@ -113,7 +113,7 @@ namespace LoginFrame
                 Initialize();
             }
 
-            if (LoginRoler.roleid == Constant.RoleTeacher)
+            if (LoginRoler.isLocalIp)
                 {
                     //创建 服务器 负责监听的套接字 参数(使用IP4寻址协议，使用流式连接，使用TCP传输协议)
                     socketServer = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);

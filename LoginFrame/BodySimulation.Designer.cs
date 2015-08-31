@@ -167,6 +167,19 @@
             this.心前区震颤有 = new System.Windows.Forms.RadioButton();
             this.label30 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -189,6 +202,7 @@
             this.tabPage2.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel17.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -1656,12 +1670,150 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label59);
+            this.tabPage3.Controls.Add(this.label58);
+            this.tabPage3.Controls.Add(this.label57);
+            this.tabPage3.Controls.Add(this.button19);
+            this.tabPage3.Controls.Add(this.button18);
+            this.tabPage3.Controls.Add(this.button17);
+            this.tabPage3.Controls.Add(this.label56);
+            this.tabPage3.Controls.Add(this.label55);
+            this.tabPage3.Controls.Add(this.label54);
+            this.tabPage3.Controls.Add(this.label53);
+            this.tabPage3.Controls.Add(this.label52);
+            this.tabPage3.Controls.Add(this.label51);
+            this.tabPage3.Controls.Add(this.label24);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(1002, 578);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "硬件设备连接状态";
             this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label24.Location = new System.Drawing.Point(211, 141);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(111, 16);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "听诊模拟人1:";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label51.Location = new System.Drawing.Point(597, 141);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(111, 16);
+            this.label51.TabIndex = 1;
+            this.label51.Text = "听诊模拟人2:";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label52.Location = new System.Drawing.Point(211, 337);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(111, 16);
+            this.label52.TabIndex = 2;
+            this.label52.Text = "触诊模拟人1:";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label53.Location = new System.Drawing.Point(285, 204);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(77, 16);
+            this.label53.TabIndex = 3;
+            this.label53.Text = "听诊器1:";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label54.Location = new System.Drawing.Point(285, 262);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(77, 16);
+            this.label54.TabIndex = 4;
+            this.label54.Text = "听诊器2:";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label55.Location = new System.Drawing.Point(662, 204);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(77, 16);
+            this.label55.TabIndex = 5;
+            this.label55.Text = "听诊器1:";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label56.Location = new System.Drawing.Point(662, 262);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(77, 16);
+            this.label56.TabIndex = 6;
+            this.label56.Text = "听诊器2:";
+            // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(358, 141);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(75, 23);
+            this.button17.TabIndex = 7;
+            this.button17.Text = "未连接";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click_1);
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(746, 141);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(75, 23);
+            this.button18.TabIndex = 8;
+            this.button18.Text = "未连接";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
+            // button19
+            // 
+            this.button19.Location = new System.Drawing.Point(358, 337);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(75, 23);
+            this.button19.TabIndex = 9;
+            this.button19.Text = "未连接";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(254, 177);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(0, 12);
+            this.label57.TabIndex = 10;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(635, 177);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(0, 12);
+            this.label58.TabIndex = 11;
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(254, 377);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(0, 12);
+            this.label59.TabIndex = 12;
             // 
             // BodySimulation
             // 
@@ -1715,6 +1867,8 @@
             this.panel19.PerformLayout();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1860,5 +2014,18 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label59;
     }
 }

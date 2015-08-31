@@ -30,7 +30,7 @@ namespace LoginFrame
 
             Control.CheckForIllegalCrossThreadCalls = false;
 
-            comboBox1.Items.Add("中文简体");
+            comboBox1.Items.Add("中文");
             comboBox1.Items.Add("English");
             comboBox1.SelectedIndex = 0;
 
@@ -223,6 +223,7 @@ Console.WriteLine(">>>>>>>>>>>>>.往局域网中发送数据库IP的消息");
                 return;
             }
 
+            LoginRoler.isLocalIp = isLocalIp;
 
             Console.WriteLine("开启数据库操作.......");
             this.label6.Text = "开启数据库操作";

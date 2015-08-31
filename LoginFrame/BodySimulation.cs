@@ -2,6 +2,9 @@
 using Model;
 using System.Windows.Forms;
 using BLL;
+using InTheHand.Net.Bluetooth;
+using InTheHand.Windows.Forms;
+using InTheHand.Net;
 
 namespace LoginFrame
 {
@@ -16,7 +19,7 @@ namespace LoginFrame
             InitializeComponent();
         }
 
-
+       
         private static BodySimulation instance;
 
 
@@ -202,6 +205,21 @@ namespace LoginFrame
             load触诊人Data2Frm(_触诊模拟人);
 
             load听诊人Data2Frm(_听诊模拟人);
+
+            //检测蓝牙设备
+            checkBluetooth();
+        }
+
+        BluetoothRadio radio = null;//蓝牙适配器
+
+        private void checkBluetooth()
+        {
+            radio = BluetoothRadio.PrimaryRadio;//获取当前PC的蓝牙适配器
+            CheckForIllegalCrossThreadCalls = false;//不检查跨线程调用
+            if (radio == null)//检查该电脑蓝牙是否可用
+            {
+                MessageBox.Show("这个电脑蓝牙不可用！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void load听诊人Data2Frm(听诊模拟人 _听诊模拟人)
@@ -443,6 +461,113 @@ namespace LoginFrame
             _听诊模拟人.右肺下 = this.右肺下.Text;
             return _听诊模拟人;
         }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        BluetoothAddress sendAddress = null;//发送目的地址
+        private void chooseBluetooth(Label label,Button button,string type)
+        {
+            SelectBluetoothDeviceDialog dialog = new SelectBluetoothDeviceDialog();
+            dialog.ShowRemembered = true;//显示已经记住的蓝牙设备
+            dialog.ShowAuthenticated = true;//显示认证过的蓝牙设备
+            dialog.ShowUnknown = true;//显示位置蓝牙设备
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                sendAddress = dialog.SelectedDevice.DeviceAddress;//获取选择的远程蓝牙地址
+                //判别是否对应的模拟人类型  
+                if (checkMonitor(type))
+                {
+                    label.Text = "地址:" + sendAddress.ToString() + "    设备名:" + dialog.SelectedDevice.DeviceName;
+                    button.Text = "已连接";
+                }
+                else
+                {
+                    label.Text = "所连接的设备不是模拟人";
+                }
+               
+            }
+
+        }
+
+        private bool checkMonitor(string type)
+        {
+            return false;
+        }
+
+        public static bool tzmonitor1 = false;
+        /// <summary>
+        /// 听诊模拟人1
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button17_Click_1(object sender, EventArgs e)
+        {
+            if (tzmonitor1)
+            {
+                //断开
+                tzmonitor1 = false;
+                this.label57.Text = "";
+                this.button17.Text = "未连接";
+            }
+            else
+            {
+                chooseBluetooth(this.label57, this.button17);
+                tzmonitor1 = true;
+            }
+            
+        }
+
+        public static bool tzmonitor2 = false;
+
+        /// <summary>
+        /// 听诊模拟人2
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button18_Click(object sender, EventArgs e)
+        {
+            if (tzmonitor2)
+            {
+                //断开
+                tzmonitor2 = false;
+                this.label58.Text = "";
+                this.button18.Text = "未连接";
+            }
+            else
+            {
+                chooseBluetooth(this.label58, this.button18);
+                tzmonitor2 = true;
+            }
+        }
+
+        public static bool czmonitor1 = false;
+
+        /// <summary>
+        /// 触诊模拟人1
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button19_Click(object sender, EventArgs e)
+        {
+            if (czmonitor1)
+            {
+                //断开
+                czmonitor1 = false;
+                this.label59.Text = "";
+                this.button19.Text = "未连接";
+            }
+            else
+            {
+                chooseBluetooth(this.label59, this.button19);
+                czmonitor1 = true;
+            }
+            
+        }
+
+        
     }
 
     
