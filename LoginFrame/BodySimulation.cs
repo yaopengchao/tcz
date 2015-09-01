@@ -514,7 +514,7 @@ namespace LoginFrame
             }
             else
             {
-                chooseBluetooth(this.label57, this.button17);
+                chooseBluetooth(this.label57, this.button17,"tzmnr1");
                 tzmonitor1 = true;
             }
             
@@ -538,7 +538,7 @@ namespace LoginFrame
             }
             else
             {
-                chooseBluetooth(this.label58, this.button18);
+                chooseBluetooth(this.label58, this.button18, "tzmnr2");
                 tzmonitor2 = true;
             }
         }
@@ -561,7 +561,7 @@ namespace LoginFrame
             }
             else
             {
-                chooseBluetooth(this.label59, this.button19);
+                chooseBluetooth(this.label59, this.button19, "czmnr1");
                 czmonitor1 = true;
             }
             

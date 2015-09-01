@@ -248,9 +248,6 @@
     <EmbeddedResource Include="AdjustPressure.resx">
       <DependentUpon>AdjustPressure.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BodyExam.resx">
-      <DependentUpon>BodyExam.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BodyMain.en.resx">
       <DependentUpon>BodyMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -277,9 +274,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BodySimulation.resx">
       <DependentUpon>BodySimulation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TitleExam.resx">
-      <DependentUpon>TitleExam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TitleSimulation.resx">
       <DependentUpon>TitleSimulation.cs</DependentUpon>
