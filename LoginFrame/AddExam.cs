@@ -26,6 +26,7 @@ namespace LoginFrame
             exType.DataSource = Constant.getExamType();
             exType.DisplayMember = "name";
             exType.ValueMember = "id";
+            exType.SelectedIndex = 0;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -45,15 +46,24 @@ namespace LoginFrame
             if (exTypeValue == "1")
             {
                 this.Hide();
+                AddExam3 addExam3 = new AddExam3();
+                addExam3.addExam = this;
+                addExam3.bodyExam = this.bodyExam;
+                addExam3.ShowDialog();
+            }
+            else if (exTypeValue == "2")
+            {
+                this.Hide();
                 AddExam2 addExam2 = new AddExam2();
                 addExam2.addExam = this;
                 addExam2.bodyExam = this.bodyExam;
                 addExam2.ShowDialog();
             }
-            else if (exTypeValue == "2")
-            {
+        }
 
-            }
+        private void exType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

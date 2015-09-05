@@ -176,7 +176,7 @@
             this.topicType.Location = new System.Drawing.Point(267, 79);
             this.topicType.Name = "topicType";
             this.topicType.Size = new System.Drawing.Size(300, 24);
-            this.topicType.TabIndex = 20;
+            this.topicType.TabIndex = 7;
             this.topicType.SelectedIndexChanged += new System.EventHandler(this.topicType_SelectedIndexChanged);
             // 
             // txtAnswers
@@ -209,7 +209,7 @@
             this.txtContent.Multiline = true;
             this.txtContent.Name = "txtContent";
             this.txtContent.Size = new System.Drawing.Size(300, 60);
-            this.txtContent.TabIndex = 7;
+            this.txtContent.TabIndex = 20;
             // 
             // labTopicId
             // 

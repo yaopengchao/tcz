@@ -46,6 +46,11 @@ namespace BLL
             return examDao.countExams(strWheres);
         }
 
+        public DataSet getTopicCount(string type)
+        {
+            return examDao.getTopicCount(type);
+        }
+
         public int addExam(Examination exam, string topicIds)
         {
             int flag = examDao.addExam(exam);

@@ -51,9 +51,9 @@
             this.labTitle.Font = new System.Drawing.Font("宋体", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labTitle.Location = new System.Drawing.Point(30, 27);
             this.labTitle.Name = "labTitle";
-            this.labTitle.Size = new System.Drawing.Size(180, 27);
+            this.labTitle.Size = new System.Drawing.Size(236, 27);
             this.labTitle.TabIndex = 7;
-            this.labTitle.Text = "添加考试题目";
+            this.labTitle.Text = "手动添加考试题目";
             // 
             // topics
             // 
@@ -192,7 +192,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 500);
+            this.ClientSize = new System.Drawing.Size(800, 500);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button7);

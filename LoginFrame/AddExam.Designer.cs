@@ -149,7 +149,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 30);
             this.label5.TabIndex = 29;
-            this.label5.Text = "考试类型";
+            this.label5.Text = "选题方式";
             // 
             // exType
             // 
@@ -159,6 +159,7 @@
             this.exType.Name = "exType";
             this.exType.Size = new System.Drawing.Size(300, 24);
             this.exType.TabIndex = 30;
+            this.exType.SelectedIndexChanged += new System.EventHandler(this.exType_SelectedIndexChanged);
             // 
             // button2
             // 

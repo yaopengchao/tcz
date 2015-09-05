@@ -103,6 +103,12 @@
     <Compile Include="AddExam2.Designer.cs">
       <DependentUpon>AddExam2.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddExam3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddExam3.Designer.cs">
+      <DependentUpon>AddExam3.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddTopic.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddExam2.resx">
       <DependentUpon>AddExam2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddExam3.resx">
+      <DependentUpon>AddExam3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddTopic.resx">
       <DependentUpon>AddTopic.cs</DependentUpon>

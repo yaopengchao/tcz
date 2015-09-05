@@ -179,7 +179,7 @@ namespace LoginFrame
             exam.ExamName = addExam.txtExamName.Text;
             exam.StartTime = addExam.startTime.Text;
             exam.TotalMins = Convert.ToInt32(addExam.totalMins.Text);
-            exam.ExType = Convert.ToString(addExam.exType.SelectedValue);
+            exam.ExType = "1";
             int result = examService.addExam(exam, topicIds);
             if (result > 0)
             {

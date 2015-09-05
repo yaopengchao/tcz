@@ -42,19 +42,19 @@ namespace LoginFrame
         public static List<ExamType> getExamType()
         {
             List<ExamType> list = new List<ExamType>();
-            ExamType examType1 = new ExamType();
-            examType1.Id = "";
-            examType1.Name = "";
-            list.Add(examType1);
+            //ExamType examType1 = new ExamType();
+            //examType1.Id = "";
+            //examType1.Name = "";
+            //list.Add(examType1);
 
             ExamType examType2 = new ExamType();
             examType2.Id = "1";
-            examType2.Name = "考试";
+            examType2.Name = "随机选题";
             list.Add(examType2);
 
             ExamType examType3 = new ExamType();
             examType3.Id = "2";
-            examType3.Name = "自我测试";
+            examType3.Name = "手动选题";
             list.Add(examType3);
 
             return list;

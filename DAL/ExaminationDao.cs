@@ -25,6 +25,17 @@ namespace DAL
             return countEntity(strSql, strWheres);
         }
 
+        public DataSet getTopicCount(string type)
+        {
+            string strSql = "select a.TOPIC_CATEGORY, count(1) from ex_topic a ";
+            if (type != null && !type.Equals(""))
+            {
+                strSql += " where a.TOPIC_TYPE = '" + type + "'";
+            }
+            strSql += " GROUP BY a.TOPIC_CATEGORY ";
+            return listEntity(strSql, null);
+        }
+
         public int addExam(Examination exam)
         {
             string strSql = "insert into ex_examination(EXAM_CAT, EXAM_NAME, START_TIME, TOTAL_MINS, SCORES, EX_TYPE) values(?examCat, ?examName, ?startTime, ?totalMins, ?scores, ?exType); select last_insert_id();";
