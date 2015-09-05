@@ -99,10 +99,7 @@ namespace LoginFrame
 
         private void AddExam3_Load(object sender, EventArgs e)
         {
-            string type = Convert.ToString(addExam.exType.SelectedValue);
-            //DataSet ds = examService.getTopicCount(type);
-            //dt = ds.Tables[0];
-
+            string type = Convert.ToString(addExam.topicCategory.SelectedValue);
             strWheres.Clear();
             strWheres.Add("a.topic_type", " = '" + type + "' ");
             DataSet ds2 = topicService.listTopics(strWheres, -1, 0);

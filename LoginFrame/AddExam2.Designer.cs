@@ -212,6 +212,7 @@
             this.Name = "AddExam2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddExam2";
+            this.Load += new System.EventHandler(this.AddExam2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

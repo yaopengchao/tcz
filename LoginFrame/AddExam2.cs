@@ -38,24 +38,7 @@ namespace LoginFrame
             if (strWheres == null)
             {
                 strWheres = new Dictionary<string, string>();
-            }
-
-            DataSet dt = topicService.listTopics(strWheres, -1, 0);
-
-            topics.DataSource = dt.Tables[0];
-            topics.DisplayMember = "content";
-            topics.ValueMember = "topic_id";
-
-            DataSet dt2 = dt.Clone();
-            dt2.Tables[0].Rows.Clear();
-            examDetail.DataSource = dt2.Tables[0];
-            examDetail.DisplayMember = "content";
-            examDetail.ValueMember = "topic_id";
-
-            topicCategory.Items.Clear();
-            topicCategory.DataSource = Bll.getAllCourses().Tables[0];
-            topicCategory.DisplayMember = "name";
-            topicCategory.ValueMember = "id";
+            }            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -191,6 +174,29 @@ namespace LoginFrame
             {
                 MessageBox.Show("保存失败，请联系管理员");
             }
+        }
+
+        private void AddExam2_Load(object sender, EventArgs e)
+        {
+            string type = Convert.ToString(addExam.topicCategory.SelectedValue);
+            strWheres.Clear();
+            strWheres.Add("a.topic_type", " = '" + type + "' ");
+            DataSet dt = topicService.listTopics(strWheres, -1, 0);
+
+            topics.DataSource = dt.Tables[0];
+            topics.DisplayMember = "content";
+            topics.ValueMember = "topic_id";
+
+            DataSet dt2 = dt.Clone();
+            dt2.Tables[0].Rows.Clear();
+            examDetail.DataSource = dt2.Tables[0];
+            examDetail.DisplayMember = "content";
+            examDetail.ValueMember = "topic_id";
+
+            topicCategory.Items.Clear();
+            topicCategory.DataSource = Bll.getAllCourses().Tables[0];
+            topicCategory.DisplayMember = "name";
+            topicCategory.ValueMember = "id";
         }
     }
 }

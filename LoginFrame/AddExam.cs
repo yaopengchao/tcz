@@ -42,23 +42,40 @@ namespace LoginFrame
         private void button1_Click(object sender, EventArgs e)
         {
 
-            string exTypeValue = Convert.ToString(exType.SelectedValue);
-            if (exTypeValue == "1")
+            object categoryValue = topicCategory.SelectedValue;            
+            if ((string)categoryValue == "")
             {
-                this.Hide();
-                AddExam3 addExam3 = new AddExam3();
-                addExam3.addExam = this;
-                addExam3.bodyExam = this.bodyExam;
-                addExam3.ShowDialog();
+                MessageBox.Show("请选择种类!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
-            else if (exTypeValue == "2")
+            else if (txtExamName.Text == "")
             {
-                this.Hide();
-                AddExam2 addExam2 = new AddExam2();
-                addExam2.addExam = this;
-                addExam2.bodyExam = this.bodyExam;
-                addExam2.ShowDialog();
+                MessageBox.Show("考试名称不能为空!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
+            else if (totalMins.Text == "")
+            {
+                MessageBox.Show("考试时长不能为空!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else
+            {
+                string exTypeValue = Convert.ToString(exType.SelectedValue);
+                if (exTypeValue == "1")
+                {
+                    this.Hide();
+                    AddExam3 addExam3 = new AddExam3();
+                    addExam3.addExam = this;
+                    addExam3.bodyExam = this.bodyExam;
+                    addExam3.ShowDialog();
+                }
+                else if (exTypeValue == "2")
+                {
+                    this.Hide();
+                    AddExam2 addExam2 = new AddExam2();
+                    addExam2.addExam = this;
+                    addExam2.bodyExam = this.bodyExam;
+                    addExam2.ShowDialog();
+                }
+            }
+            
         }
 
         private void exType_SelectedIndexChanged(object sender, EventArgs e)
