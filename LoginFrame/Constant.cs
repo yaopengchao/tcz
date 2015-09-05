@@ -39,6 +39,27 @@ namespace LoginFrame
             return list;
         }
 
+        public static List<ExamType> getExamType()
+        {
+            List<ExamType> list = new List<ExamType>();
+            ExamType examType1 = new ExamType();
+            examType1.Id = "";
+            examType1.Name = "";
+            list.Add(examType1);
+
+            ExamType examType2 = new ExamType();
+            examType2.Id = "1";
+            examType2.Name = "考试";
+            list.Add(examType2);
+
+            ExamType examType3 = new ExamType();
+            examType3.Id = "2";
+            examType3.Name = "自我测试";
+            list.Add(examType3);
+
+            return list;
+        }
+
         public static string 开机验证码 = "FF000000000000PASSWORDFD";
 
 

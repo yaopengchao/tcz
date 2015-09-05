@@ -37,14 +37,14 @@
             this.addDetail = new System.Windows.Forms.Button();
             this.delDetail = new System.Windows.Forms.Button();
             this.dg = new System.Windows.Forms.DataGridView();
+            this.选项字符 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.topicCategory = new System.Windows.Forms.ComboBox();
             this.topicType = new System.Windows.Forms.ComboBox();
             this.txtAnswers = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtContent = new System.Windows.Forms.TextBox();
             this.labTopicId = new System.Windows.Forms.Label();
-            this.选项字符 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -147,6 +147,19 @@
             this.dg.Size = new System.Drawing.Size(438, 120);
             this.dg.TabIndex = 17;
             // 
+            // 选项字符
+            // 
+            this.选项字符.FillWeight = 5.076141F;
+            this.选项字符.HeaderText = "选项字符";
+            this.选项字符.Name = "选项字符";
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 194.9239F;
+            this.Column2.HeaderText = "选项文本";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 335;
+            // 
             // topicCategory
             // 
             this.topicCategory.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -164,6 +177,7 @@
             this.topicType.Name = "topicType";
             this.topicType.Size = new System.Drawing.Size(300, 24);
             this.topicType.TabIndex = 20;
+            this.topicType.SelectedIndexChanged += new System.EventHandler(this.topicType_SelectedIndexChanged);
             // 
             // txtAnswers
             // 
@@ -206,19 +220,6 @@
             this.labTopicId.TabIndex = 23;
             this.labTopicId.Text = "0";
             this.labTopicId.Visible = false;
-            // 
-            // 选项字符
-            // 
-            this.选项字符.FillWeight = 5.076141F;
-            this.选项字符.HeaderText = "选项字符";
-            this.选项字符.Name = "选项字符";
-            // 
-            // Column2
-            // 
-            this.Column2.FillWeight = 194.9239F;
-            this.Column2.HeaderText = "选项文本";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 335;
             // 
             // AddTopic
             // 

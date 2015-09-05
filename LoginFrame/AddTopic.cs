@@ -29,7 +29,6 @@ namespace LoginFrame
             topicCategory.ValueMember = "id";
 
             topicType.Items.Clear();
-            topicType.Items.Clear();
             topicType.DataSource = Constant.getTopicType();
             topicType.DisplayMember = "name";
             topicType.ValueMember = "id";
@@ -113,6 +112,11 @@ namespace LoginFrame
                     MessageBox.Show("保存失败，请联系管理员");
                 }
             }
+        }
+
+        private void topicType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

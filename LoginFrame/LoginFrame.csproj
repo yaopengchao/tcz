@@ -91,6 +91,18 @@
     <Compile Include="AddClass.Designer.cs">
       <DependentUpon>AddClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddExam.Designer.cs">
+      <DependentUpon>AddExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddExam2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddExam2.Designer.cs">
+      <DependentUpon>AddExam2.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddTopic.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +248,12 @@
     <EmbeddedResource Include="AddClass.resx">
       <DependentUpon>AddClass.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddExam.resx">
+      <DependentUpon>AddExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddExam2.resx">
+      <DependentUpon>AddExam2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddTopic.resx">
       <DependentUpon>AddTopic.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdjustPressure.resx">
       <DependentUpon>AdjustPressure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BodyExam.resx">
+      <DependentUpon>BodyExam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BodyMain.en.resx">
       <DependentUpon>BodyMain.cs</DependentUpon>
