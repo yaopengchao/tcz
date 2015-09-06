@@ -163,6 +163,7 @@ namespace LoginFrame
             exam.StartTime = addExam.startTime.Text;
             exam.TotalMins = Convert.ToInt32(addExam.totalMins.Text);
             exam.ExType = "1";
+            exam.ExaminationId = Convert.ToInt32(addExam.labExamId.Text);
             int result = examService.addExam(exam, topicIds);
             if (result > 0)
             {
@@ -179,16 +180,20 @@ namespace LoginFrame
         private void AddExam2_Load(object sender, EventArgs e)
         {
             string type = Convert.ToString(addExam.topicCategory.SelectedValue);
+            int examId = Convert.ToInt32(addExam.labExamId.Text);
             strWheres.Clear();
             strWheres.Add("a.topic_type", " = '" + type + "' ");
-            DataSet dt = topicService.listTopics(strWheres, -1, 0);
+            DataSet dt = topicService.listNotInExamTopics(strWheres, examId);
 
             topics.DataSource = dt.Tables[0];
             topics.DisplayMember = "content";
             topics.ValueMember = "topic_id";
 
-            DataSet dt2 = dt.Clone();
-            dt2.Tables[0].Rows.Clear();
+            strWheres.Clear();
+            strWheres.Add("b.TOPIC_TYPE", " = '" + type + "' ");         
+            strWheres.Add("a.EXAMINATION_ID", " = " + examId + " ");
+        
+            DataSet dt2 = examService.listExistDetail(strWheres);
             examDetail.DataSource = dt2.Tables[0];
             examDetail.DisplayMember = "content";
             examDetail.ValueMember = "topic_id";

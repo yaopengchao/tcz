@@ -14,7 +14,7 @@ namespace DAL
         //根据条件进行分页查询
         public DataSet listExams(Dictionary<string, string> strWheres, int startIndex, int pageSize)
         {
-            string strSql = "select examination_id, exam_name, if (exam_cat='1','理论类','操作类'), start_time, total_mins from ex_examination where 1 = 1 ";
+            string strSql = "select examination_id, exam_name, if (exam_cat='1','理论类','操作类'), start_time, total_mins, exam_cat from ex_examination where 1 = 1 ";
             return listEntity(strSql, strWheres, startIndex, pageSize);
         }
 
@@ -56,6 +56,26 @@ namespace DAL
             int examId = Convert.ToInt32(MySqlHelper.ExecuteScalar(strSql, parames));
             exam.ExaminationId = examId;
             return examId;
+        }
+
+        public int updateExam(Examination exam)
+        {
+            string strSql = "update ex_examination set EXAM_CAT =?examCat, EXAM_NAME = ?examName, START_TIME = ?startTime, TOTAL_MINS = ?totalMins, EX_TYPE = ?exType where examination_id = ?examId";
+            MySqlParameter[] parames = new MySqlParameter[] {
+                new MySqlParameter("?examCat", MySqlDbType.VarChar),
+                new MySqlParameter("?examName", MySqlDbType.VarChar),
+                new MySqlParameter("?startTime", MySqlDbType.VarChar),
+                new MySqlParameter("?totalMins", MySqlDbType.Int32),
+                new MySqlParameter("?exType", MySqlDbType.VarChar),
+                new MySqlParameter("?examId", MySqlDbType.Int32)
+            };
+            parames[0].Value = exam.ExamCat;
+            parames[1].Value = exam.ExamName;
+            parames[2].Value = exam.StartTime;
+            parames[3].Value = exam.TotalMins;
+            parames[4].Value = exam.ExType;
+            parames[5].Value = exam.ExaminationId;
+            return Convert.ToInt32(MySqlHelper.ExecuteNonQuery(strSql, parames));
         }
 
     }

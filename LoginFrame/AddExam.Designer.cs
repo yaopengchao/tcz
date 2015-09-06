@@ -41,6 +41,7 @@
             this.exType = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.labExamId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labTitle
@@ -111,7 +112,7 @@
             this.startTime.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.startTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.startTime.Location = new System.Drawing.Point(284, 193);
-            this.startTime.MinDate = new System.DateTime(2015, 9, 5, 11, 15, 9, 0);
+            this.startTime.MinDate = new System.DateTime(2015, 1, 1, 0, 0, 0, 0);
             this.startTime.Name = "startTime";
             this.startTime.ShowUpDown = true;
             this.startTime.Size = new System.Drawing.Size(300, 26);
@@ -181,11 +182,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // labExamId
+            // 
+            this.labExamId.AutoSize = true;
+            this.labExamId.Location = new System.Drawing.Point(654, 216);
+            this.labExamId.Name = "labExamId";
+            this.labExamId.Size = new System.Drawing.Size(11, 12);
+            this.labExamId.TabIndex = 33;
+            this.labExamId.Text = "0";
+            this.labExamId.Visible = false;
+            // 
             // AddExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 500);
+            this.Controls.Add(this.labExamId);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.exType);
@@ -223,5 +235,6 @@
         public System.Windows.Forms.ComboBox exType;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Label labExamId;
     }
 }

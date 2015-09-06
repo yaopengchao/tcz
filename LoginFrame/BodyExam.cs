@@ -79,6 +79,7 @@ namespace LoginFrame
             string[] cols = new string[] { "试卷编号", "考试名称", "试题种类", "考试开始时间", "考试时长(分钟)"};
             pageCtrl.Cols = cols;
             pageCtrl.dg.Columns[0].Visible = false;
+            pageCtrl.dg.Columns[5].Visible = false;
             int[] widths = new int[] { 30, 250, 150, 150, 150};
             pageCtrl.Widths = widths;
         }
@@ -108,6 +109,20 @@ namespace LoginFrame
             topicType.SelectedIndex = 0;
             txtExamName.Text = "";
             btnQueryClick();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AddExam addExam = new AddExam();
+            addExam.bodyExam = this;
+            addExam.labExamId.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[0].Value);
+            int exCat = Convert.ToInt32(pageCtrl.dg.CurrentRow.Cells[5].Value);
+            addExam.topicCategory.SelectedIndex = exCat;
+            addExam.txtExamName.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[1].Value);
+            addExam.startTime.Value = Convert.ToDateTime(pageCtrl.dg.CurrentRow.Cells[3].Value);
+            addExam.totalMins.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[4].Value);
+            addExam.exType.SelectedIndex = 1;
+            addExam.ShowDialog();
         }
     }
 }

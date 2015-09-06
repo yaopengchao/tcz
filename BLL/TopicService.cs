@@ -40,6 +40,11 @@ namespace BLL
             return topicDao.listTopics(strWheres, startIndex, pageSize);
         }
 
+        public DataSet listNotInExamTopics(Dictionary<string, string> strWheres, int examId)
+        {
+            return topicDao.listNotInExamTopics(strWheres, examId);
+        }
+
         //查询题目数量
         public int countTopics(Dictionary<string, string> strWheres)
         {

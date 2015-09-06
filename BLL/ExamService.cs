@@ -40,6 +40,11 @@ namespace BLL
             return examDao.listExams(strWheres, startIndex, pageSize);
         }
 
+        public DataSet listExistDetail(Dictionary<string, string> strWheres)
+        {
+            return examDetailDao.listExistDetail(strWheres);
+        }
+
         //查询题目数量
         public int countExams(Dictionary<string, string> strWheres)
         {
@@ -53,8 +58,19 @@ namespace BLL
 
         public int addExam(Examination exam, string topicIds)
         {
-            int flag = examDao.addExam(exam);
             int examId = exam.ExaminationId;
+            int flag = 0;
+            if (examId < 1)
+            {
+                flag = examDao.addExam(exam);
+                examId = exam.ExaminationId;
+            }
+            else
+            {
+                flag = examDao.updateExam(exam);
+                examDetailDao.deleteExamDetail(exam.ExaminationId);
+            }
+            
             if (topicIds.IndexOf(",") > -1)
             {
                 topicIds = topicIds.Substring(0, topicIds.Length - 1);

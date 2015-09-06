@@ -128,6 +128,7 @@
             this.button5.TabIndex = 16;
             this.button5.Text = "修改";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -180,7 +181,7 @@
         private PageControl pageCtrl;
         private System.Windows.Forms.GroupBox 查询条件;
         private System.Windows.Forms.ComboBox topicType;
-        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnQuery;
         private System.Windows.Forms.TextBox txtExamName;
