@@ -57,7 +57,6 @@ namespace LoginFrame
             }
             else
             {
-
                 mainFrame.panel6.Controls.Clear();
                 BodySelfTest2 self2 = new BodySelfTest2();
                 self2.TopLevel = false;

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using BLL;
+using Model;
 
 namespace LoginFrame
 {
@@ -109,6 +110,159 @@ namespace LoginFrame
             labTzCount.Text = "（题库共" + totalXz + "道题）";
             labFeibCount.Text = "（题库共" + totalFeib + "道题）";
             labFubCount.Text = "（题库共" + totalFub + "道题）";
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (xz == 0 && feib == 0 && fub == 0)
+            {
+                MessageBox.Show("请选择题目!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else
+            {
+                Examination exam = new Examination();
+                exam.ExamCat = Convert.ToString(self.topicCategory.SelectedValue);
+                exam.ExamName = self.txtExamName.Text;
+                exam.ExType = "2";
+                string topicIds = getRandomTopicIds(xz, xzList);
+                topicIds += getRandomTopicIds(feib, feibList);
+                topicIds += getRandomTopicIds(fub, fubList);
+                int result = examService.addExam(exam, topicIds);
+                if (result > 0)
+                {
+                    self.mainFrame.panel6.Controls.Clear();
+                    BodySelfTest3 self3 = new BodySelfTest3();
+                    self3.TopLevel = false;
+                    self3.examId = exam.ExaminationId;
+                    self3.FormBorderStyle = FormBorderStyle.None;
+                    self3.Dock = System.Windows.Forms.DockStyle.Fill;
+                    self.mainFrame.panel6.Controls.Add(self3);
+                    self3.Show();
+                }
+                else
+                {
+                    MessageBox.Show("选题失败，请联系管理员");
+                }
+            }
+            
+        }
+
+        private string getRandomTopicIds(int count, List<int> list)
+        {
+            string result = "";
+            List<int> cloneList = new List<int>(list);
+            if (count >= cloneList.Count)
+            {
+                foreach (int id in cloneList)
+                {
+                    result += id + ",";
+                }
+            }
+            else
+            {
+                Random random = new Random();
+                for (int i = 0; i < count; i++)
+                {
+                    int r = random.Next(cloneList.Count);
+                    result += cloneList[r] + ",";
+                    cloneList.RemoveAt(r);
+                }
+            }
+            if (result != "")
+            {
+                result = result.Substring(0, result.Length - 1);
+            }
+            return result;
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            xz = Convert.ToInt32(linkLabel1.Text);
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            xz = Convert.ToInt32(linkLabel2.Text);
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            xz = Convert.ToInt32(linkLabel3.Text);
+        }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            xz = Convert.ToInt32(linkLabel4.Text);
+        }
+
+        private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            xz = Convert.ToInt32(linkLabel5.Text);
+        }
+
+        private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            xz = totalXz;
+        }
+
+        private void linkLabel12_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            feib = Convert.ToInt32(linkLabel12.Text);
+        }
+
+        private void linkLabel11_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            feib = Convert.ToInt32(linkLabel11.Text);
+        }
+
+        private void linkLabel10_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            feib = Convert.ToInt32(linkLabel10.Text);
+        }
+
+        private void linkLabel9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            feib = Convert.ToInt32(linkLabel9.Text);
+        }
+
+        private void linkLabel8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            feib = Convert.ToInt32(linkLabel8.Text);
+        }
+
+        private void linkLabel7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            feib = totalFeib;
+        }
+
+        private void linkLabel18_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            fub = Convert.ToInt32(linkLabel18.Text);
+        }
+
+        private void linkLabel17_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            fub = Convert.ToInt32(linkLabel17.Text);
+        }
+
+        private void linkLabel16_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            fub = Convert.ToInt32(linkLabel16.Text);
+        }
+
+        private void linkLabel15_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            fub = Convert.ToInt32(linkLabel15.Text);
+        }
+
+        private void linkLabel14_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            fub = Convert.ToInt32(linkLabel14.Text);
+        }
+
+        private void linkLabel13_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            fub = totalFub;
         }
     }
 }

@@ -66,6 +66,7 @@
             this.button7.TabIndex = 65;
             this.button7.Text = "开始";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // linkLabel13
             // 
@@ -76,6 +77,7 @@
             this.linkLabel13.TabIndex = 64;
             this.linkLabel13.TabStop = true;
             this.linkLabel13.Text = "全部";
+            this.linkLabel13.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel13_LinkClicked);
             // 
             // linkLabel14
             // 
@@ -86,6 +88,7 @@
             this.linkLabel14.TabIndex = 63;
             this.linkLabel14.TabStop = true;
             this.linkLabel14.Text = "30";
+            this.linkLabel14.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel14_LinkClicked);
             // 
             // linkLabel15
             // 
@@ -96,6 +99,7 @@
             this.linkLabel15.TabIndex = 62;
             this.linkLabel15.TabStop = true;
             this.linkLabel15.Text = "25";
+            this.linkLabel15.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel15_LinkClicked);
             // 
             // linkLabel16
             // 
@@ -106,6 +110,7 @@
             this.linkLabel16.TabIndex = 61;
             this.linkLabel16.TabStop = true;
             this.linkLabel16.Text = "20";
+            this.linkLabel16.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel16_LinkClicked);
             // 
             // linkLabel17
             // 
@@ -116,6 +121,7 @@
             this.linkLabel17.TabIndex = 60;
             this.linkLabel17.TabStop = true;
             this.linkLabel17.Text = "15";
+            this.linkLabel17.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel17_LinkClicked);
             // 
             // linkLabel18
             // 
@@ -126,6 +132,7 @@
             this.linkLabel18.TabIndex = 59;
             this.linkLabel18.TabStop = true;
             this.linkLabel18.Text = "10";
+            this.linkLabel18.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel18_LinkClicked);
             // 
             // linkLabel7
             // 
@@ -136,6 +143,7 @@
             this.linkLabel7.TabIndex = 58;
             this.linkLabel7.TabStop = true;
             this.linkLabel7.Text = "全部";
+            this.linkLabel7.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel7_LinkClicked);
             // 
             // linkLabel8
             // 
@@ -146,6 +154,7 @@
             this.linkLabel8.TabIndex = 57;
             this.linkLabel8.TabStop = true;
             this.linkLabel8.Text = "30";
+            this.linkLabel8.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel8_LinkClicked);
             // 
             // linkLabel9
             // 
@@ -156,6 +165,7 @@
             this.linkLabel9.TabIndex = 56;
             this.linkLabel9.TabStop = true;
             this.linkLabel9.Text = "25";
+            this.linkLabel9.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel9_LinkClicked);
             // 
             // linkLabel10
             // 
@@ -166,6 +176,7 @@
             this.linkLabel10.TabIndex = 55;
             this.linkLabel10.TabStop = true;
             this.linkLabel10.Text = "20";
+            this.linkLabel10.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel10_LinkClicked);
             // 
             // linkLabel11
             // 
@@ -176,6 +187,7 @@
             this.linkLabel11.TabIndex = 54;
             this.linkLabel11.TabStop = true;
             this.linkLabel11.Text = "15";
+            this.linkLabel11.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel11_LinkClicked);
             // 
             // linkLabel12
             // 
@@ -186,6 +198,7 @@
             this.linkLabel12.TabIndex = 53;
             this.linkLabel12.TabStop = true;
             this.linkLabel12.Text = "10";
+            this.linkLabel12.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel12_LinkClicked);
             // 
             // linkLabel6
             // 
@@ -196,6 +209,7 @@
             this.linkLabel6.TabIndex = 52;
             this.linkLabel6.TabStop = true;
             this.linkLabel6.Text = "全部";
+            this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
             // 
             // linkLabel5
             // 
@@ -206,6 +220,7 @@
             this.linkLabel5.TabIndex = 51;
             this.linkLabel5.TabStop = true;
             this.linkLabel5.Text = "30";
+            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
             // 
             // linkLabel4
             // 
@@ -216,6 +231,7 @@
             this.linkLabel4.TabIndex = 50;
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "25";
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
             // linkLabel3
             // 
@@ -226,6 +242,7 @@
             this.linkLabel3.TabIndex = 49;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "20";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // linkLabel2
             // 
@@ -236,6 +253,7 @@
             this.linkLabel2.TabIndex = 48;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "15";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // linkLabel1
             // 
@@ -246,6 +264,7 @@
             this.linkLabel1.TabIndex = 47;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "10";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // labFubCount
             // 
