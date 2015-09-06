@@ -168,10 +168,6 @@ namespace LoginFrame
                     cloneList.RemoveAt(r);
                 }
             }
-            if (result != "")
-            {
-                result = result.Substring(0, result.Length - 1);
-            }
             return result;
         }
 

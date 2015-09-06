@@ -34,6 +34,11 @@ namespace BLL
             return instance;
         }
 
+        public DataTable getExamByExamId(int examId)
+        {
+            return examDao.getExamByExamId(examId);
+        }
+
         //分页查询题目
         public DataSet listExams(Dictionary<string, string> strWheres, int startIndex, int pageSize)
         {

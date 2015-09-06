@@ -15,6 +15,11 @@ namespace DAL
             return Convert.ToInt32(MySqlHelper.ExecuteScalar(strSql));
         }
 
+        public DataSet listEntity(string strSql)
+        {
+            return listEntity(strSql, null, -1, 0);
+        }
+
         public DataSet listEntity(string strSql, Dictionary<string, string> strWheres)
         {
             return listEntity(strSql, strWheres, -1, 0);

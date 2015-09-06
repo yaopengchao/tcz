@@ -39,6 +39,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BodySelfTest3";
             this.Text = "BodySelfTest3";
+            this.Load += new System.EventHandler(this.BodySelfTest3_Load);
             this.ResumeLayout(false);
 
         }

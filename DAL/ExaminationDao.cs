@@ -25,6 +25,13 @@ namespace DAL
             return countEntity(strSql, strWheres);
         }
 
+        public DataTable getExamByExamId(int examId)
+        {
+            string strSql = "select a.EXAMINATION_ID, b.EXAMINATION_DETAIL_ID, b.TOPIC_ID, c.CONTENT from ex_examination a INNER JOIN ex_examination_detail b on a.EXAMINATION_ID = b.EXAMINATION_ID ";
+            strSql += " INNER JOIN ex_topic c on b.TOPIC_ID = c.TOPIC_ID where a.EXAMINATION_ID = " + examId + " ORDER BY b.TOPIC_ORDER";
+            return listEntity(strSql).Tables[0];
+        }
+
         public DataSet getTopicCount(string type)
         {
             string strSql = "select a.TOPIC_CATEGORY, count(1) from ex_topic a ";
