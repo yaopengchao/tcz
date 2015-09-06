@@ -1140,29 +1140,24 @@ namespace LoginFrame
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            panel5.Hide();
+
             panel1.Controls.Clear();
-            TitleMain titleMain = TitleMain.createForm();
-            titleMain.TopLevel = false;
-            titleMain.FormBorderStyle = FormBorderStyle.None;
-            titleMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            panel1.Controls.Add(titleMain);
-            titleMain.Show();
+            TitleSelfTest titleSelf = TitleSelfTest.createForm();
+            titleSelf.TopLevel = false;
+            titleSelf.FormBorderStyle = FormBorderStyle.None;
+            titleSelf.Dock = System.Windows.Forms.DockStyle.Fill;
+            panel1.Controls.Add(titleSelf);
+            titleSelf.Show();
 
             panel6.Controls.Clear();
-            BodyMain bodyMain = BodyMain.createForm();
-            bodyMain.TopLevel = false;
-            bodyMain.FormBorderStyle = FormBorderStyle.None;
-            bodyMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            panel6.Controls.Add(bodyMain);
-            bodyMain.Show();
-
-
-            //互相访问控件
-            this.bodyMain = bodyMain;
-            this.titleMain = titleMain;
-
-            bodyMain.mainFrame = this;
-            titleMain.mainFrame = this;
+            BodySelfTest bodySelf = BodySelfTest.createForm();
+            bodySelf.mainFrame = this;
+            bodySelf.TopLevel = false;
+            bodySelf.FormBorderStyle = FormBorderStyle.None;
+            bodySelf.Dock = System.Windows.Forms.DockStyle.Fill;
+            panel6.Controls.Add(bodySelf);
+            bodySelf.Show();
 
         }
 
