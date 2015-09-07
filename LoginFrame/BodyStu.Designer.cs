@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BodyStu));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -47,125 +48,90 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(6, 9);
+            resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "添加";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(72, 9);
+            resources.ApplyResources(this.button2, "button2");
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(60, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "修改";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(140, 9);
+            resources.ApplyResources(this.button3, "button3");
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(60, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "删除";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(941, 9);
+            resources.ApplyResources(this.button4, "button4");
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(60, 23);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "删除";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(873, 9);
+            resources.ApplyResources(this.button5, "button5");
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(60, 23);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "修改";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(807, 9);
+            resources.ApplyResources(this.button6, "button6");
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(60, 23);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "添加";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // 查询条件
             // 
+            resources.ApplyResources(this.查询条件, "查询条件");
             this.查询条件.Controls.Add(this.btnClear);
             this.查询条件.Controls.Add(this.btnQuery);
             this.查询条件.Controls.Add(this.txtUserName);
             this.查询条件.Controls.Add(this.label1);
-            this.查询条件.Location = new System.Drawing.Point(238, 35);
             this.查询条件.Name = "查询条件";
-            this.查询条件.Size = new System.Drawing.Size(760, 60);
-            this.查询条件.TabIndex = 7;
             this.查询条件.TabStop = false;
-            this.查询条件.Text = "查询条件";
             this.查询条件.Enter += new System.EventHandler(this.查询条件_Enter);
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(278, 25);
+            resources.ApplyResources(this.btnClear, "btnClear");
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 23);
-            this.btnClear.TabIndex = 3;
-            this.btnClear.Text = "清空";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnQuery
             // 
-            this.btnQuery.Location = new System.Drawing.Point(186, 25);
+            resources.ApplyResources(this.btnQuery, "btnQuery");
             this.btnQuery.Name = "btnQuery";
-            this.btnQuery.Size = new System.Drawing.Size(75, 23);
-            this.btnQuery.TabIndex = 2;
-            this.btnQuery.Text = "查询";
             this.btnQuery.UseVisualStyleBackColor = true;
             this.btnQuery.Click += new System.EventHandler(this.btnQuery_Click);
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(80, 27);
+            resources.ApplyResources(this.txtUserName, "txtUserName");
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(100, 21);
-            this.txtUserName.TabIndex = 1;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 30);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 12);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "学员名称";
             // 
             // pageCtrl2
             // 
+            resources.ApplyResources(this.pageCtrl2, "pageCtrl2");
             this.pageCtrl2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pageCtrl2.Cols = new string[0];
             this.pageCtrl2.CurPage = 1;
-            this.pageCtrl2.Location = new System.Drawing.Point(7, 38);
             this.pageCtrl2.Name = "pageCtrl2";
             this.pageCtrl2.PageSize = 15;
-            this.pageCtrl2.Size = new System.Drawing.Size(200, 546);
             this.pageCtrl2.StartIndex = 0;
-            this.pageCtrl2.TabIndex = 8;
             this.pageCtrl2.TotalPage = 1;
             this.pageCtrl2.TotalRecord = 0;
             this.pageCtrl2.Widths = new int[0];
@@ -173,15 +139,13 @@
             // 
             // pageCtrl
             // 
+            resources.ApplyResources(this.pageCtrl, "pageCtrl");
             this.pageCtrl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pageCtrl.Cols = new string[0];
             this.pageCtrl.CurPage = 1;
-            this.pageCtrl.Location = new System.Drawing.Point(238, 101);
             this.pageCtrl.Name = "pageCtrl";
             this.pageCtrl.PageSize = 15;
-            this.pageCtrl.Size = new System.Drawing.Size(760, 483);
             this.pageCtrl.StartIndex = 0;
-            this.pageCtrl.TabIndex = 6;
             this.pageCtrl.TotalPage = 1;
             this.pageCtrl.TotalRecord = 0;
             this.pageCtrl.Widths = new int[0];
@@ -189,20 +153,16 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(741, 9);
+            resources.ApplyResources(this.button7, "button7");
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(60, 23);
-            this.button7.TabIndex = 9;
-            this.button7.Text = "导入";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // BodyStu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1010, 604);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.pageCtrl2);
             this.Controls.Add(this.查询条件);
@@ -215,7 +175,6 @@
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BodyStu";
-            this.Text = "BodyStu";
             this.Load += new System.EventHandler(this.BodyStu_Load);
             this.查询条件.ResumeLayout(false);
             this.查询条件.PerformLayout();
