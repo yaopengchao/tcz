@@ -269,6 +269,7 @@
     <Compile Include="TitletTopic.Designer.cs">
       <DependentUpon>TitletTopic.cs</DependentUpon>
     </Compile>
+    <Compile Include="Util.cs" />
     <Compile Include="VoiceChatRoom.cs">
       <SubType>Form</SubType>
     </Compile>
