@@ -5,6 +5,7 @@ using BLL;
 using InTheHand.Net.Bluetooth;
 using InTheHand.Windows.Forms;
 using InTheHand.Net;
+using System.ComponentModel;
 
 namespace LoginFrame
 {
@@ -195,6 +196,10 @@ namespace LoginFrame
 
         private void BodySimulation_Load(object sender, EventArgs e)
         {
+
+            Util.setLanguage();
+            ApplyResource();
+
             //初始化数据
             initData();
 
@@ -208,6 +213,24 @@ namespace LoginFrame
 
             //检测蓝牙设备
             checkBluetooth();
+        }
+
+
+        /// <summary>
+        /// 应用资源
+        /// ApplyResources 的第一个参数为要设置的控件
+        ///                  第二个参数为在资源文件中的ID，默认为控件的名称
+        /// </summary>
+        private void ApplyResource()
+        {
+            System.ComponentModel.ComponentResourceManager res = new ComponentResourceManager(typeof(BodySimulation));
+            foreach (Control ctl in Controls)
+            {
+                res.ApplyResources(ctl, ctl.Name);
+            }
+
+            //Caption
+            res.ApplyResources(this, "$this");
         }
 
         BluetoothRadio radio = null;//蓝牙适配器
