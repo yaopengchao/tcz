@@ -135,6 +135,7 @@
     </Compile>
     <Compile Include="ALawDecoder.cs" />
     <Compile Include="ALawEncoder.cs" />
+    <Compile Include="BluetoothUtil.cs" />
     <Compile Include="BodyExam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -302,7 +303,13 @@
     <EmbeddedResource Include="AdjustPressure.resx">
       <DependentUpon>AdjustPressure.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BodyExam.en.resx">
+      <DependentUpon>BodyExam.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BodyExam.resx">
+      <DependentUpon>BodyExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BodyExam.zh-CN.resx">
       <DependentUpon>BodyExam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BodyMain.en.resx">
@@ -311,14 +318,47 @@
     <EmbeddedResource Include="BodyMain.zh-CN.resx">
       <DependentUpon>BodyMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BodySelfTest.en.resx">
+      <DependentUpon>BodySelfTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BodySelfTest.resx">
       <DependentUpon>BodySelfTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BodySelfTest.zh-CN.resx">
+      <DependentUpon>BodySelfTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BodySelfTest2.en.resx">
+      <DependentUpon>BodySelfTest2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BodySelfTest2.resx">
       <DependentUpon>BodySelfTest2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BodySelfTest2.zh-CN.resx">
+      <DependentUpon>BodySelfTest2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BodySelfTest3.resx">
       <DependentUpon>BodySelfTest3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BodyStu.en.resx">
+      <DependentUpon>BodyStu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BodyStu.zh-CN.resx">
+      <DependentUpon>BodyStu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BodyTea.en.resx">
+      <DependentUpon>BodyTea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BodyTea.zh-CN.resx">
+      <DependentUpon>BodyTea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BodyTopic.en.resx">
+      <DependentUpon>BodyTopic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BodyTopic.resx">
+      <DependentUpon>BodyTopic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BodyTopic.zh-CN.resx">
+      <DependentUpon>BodyTopic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.en.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

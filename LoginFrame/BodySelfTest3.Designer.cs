@@ -28,17 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BodySelfTest3));
             this.SuspendLayout();
             // 
             // BodySelfTest3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(994, 566);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BodySelfTest3";
-            this.Text = "BodySelfTest3";
             this.Load += new System.EventHandler(this.BodySelfTest3_Load);
             this.ResumeLayout(false);
 

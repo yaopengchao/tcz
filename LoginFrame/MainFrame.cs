@@ -13,7 +13,8 @@ using System.IO;
 using g711audio;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
-
+using System.IO.Ports;
+using System.Text.RegularExpressions;
 
 namespace LoginFrame
 {
@@ -106,6 +107,8 @@ namespace LoginFrame
         /// <param name="e"></param>
         private void MainFrame_Load(object sender, EventArgs e)
         {
+            connectBluetooth();//连接串口蓝牙
+
             //只要不是老师你就要进去后搜索是否有语音邀请对话
             if (LoginRoler.roleid != Constant.RoleTeacher)
             {
@@ -179,6 +182,61 @@ namespace LoginFrame
                 //打印输出
                 //Console.WriteLine("=====================服 务 器 连 接 成 功Socekt用来通信聊天室用户的信息更新======================");
             }
+        }
+
+
+        SerialPort BluetoothConnection = new SerialPort();
+
+        private void connectBluetooth()
+        {
+            //Get all port list for selection
+            //获得所有的端口列表
+            string[] Ports = SerialPort.GetPortNames();
+
+            for (int i = 0; i < Ports.Length; i++)
+            {
+                string s = Ports[i].ToUpper();
+                Regex reg = new Regex("[^COM\\d]", RegexOptions.IgnoreCase | RegexOptions.Multiline);
+                s = reg.Replace(s, "");
+
+                //连接
+
+                if (!BluetoothConnection.IsOpen)
+                {
+                    //Start
+                    //"正在连接蓝牙设备";
+                    
+                    //Console.WriteLine("串口=="+s);
+                    BluetoothConnection.PortName = s;
+                    BluetoothConnection.Open();
+                    BluetoothConnection.ReadTimeout = 10000;
+                    BluetoothConnection.DataReceived += new SerialDataReceivedEventHandler(BlueToothDataReceived);
+                    //"蓝牙连接成功";
+
+                    //发送指令判断是什么类型的模拟人
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection,"");
+                }
+            }
+        }
+
+        string BlueToothReceivedData;
+
+        private void BlueToothDataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            //int length = BluetoothConnection.ReadByte();
+            Thread.Sleep(1000);
+            //BlueToothReceivedData = DateTime.Now.ToLongTimeString() + "\r\n";
+
+            Byte[] receivedData = new Byte[BluetoothConnection.BytesToRead];
+            BluetoothConnection.Read(receivedData, 0, receivedData.Length);
+            BluetoothConnection.DiscardInBuffer();
+
+            for (int i = 0; i < receivedData.Length; i++)
+            {
+                BlueToothReceivedData += receivedData[i];
+            }
+
+            Console.WriteLine(BlueToothReceivedData);
         }
 
         /// <summary>
@@ -350,7 +408,7 @@ namespace LoginFrame
         private AutoResetEvent autoResetEvent;
         private Notify notify;
         private WaveFormat waveFormat;
-        private Capture capture;
+        private Microsoft.DirectX.DirectSound.Capture capture;
         private int bufferSize;
         private CaptureBuffer captureBuffer;
         private UdpClient udpClient;                //Listens and sends data on port 1550, used in synchronous mode.
@@ -379,7 +437,7 @@ namespace LoginFrame
 
                 DeviceInformation deviceInfo = captureDeviceCollection[0];
 
-                capture = new Capture(deviceInfo.DriverGuid);
+                capture = new Microsoft.DirectX.DirectSound.Capture(deviceInfo.DriverGuid);
 
                 short channels = 1; //Stereo.
                 short bitsPerSample = 16; //16Bit, alternatively use 8Bits.
