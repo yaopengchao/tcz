@@ -141,6 +141,24 @@
     <Compile Include="BodyExam.Designer.cs">
       <DependentUpon>BodyExam.cs</DependentUpon>
     </Compile>
+    <Compile Include="BodySelfTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BodySelfTest.Designer.cs">
+      <DependentUpon>BodySelfTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BodySelfTest2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BodySelfTest2.Designer.cs">
+      <DependentUpon>BodySelfTest2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BodySelfTest3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BodySelfTest3.Designer.cs">
+      <DependentUpon>BodySelfTest3.cs</DependentUpon>
+    </Compile>
     <Compile Include="BodyTopic.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +193,12 @@
     </Compile>
     <Compile Include="TitleExam.Designer.cs">
       <DependentUpon>TitleExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TitleSelfTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TitleSelfTest.Designer.cs">
+      <DependentUpon>TitleSelfTest.cs</DependentUpon>
     </Compile>
     <Compile Include="TitleSimulation.cs">
       <SubType>Form</SubType>
@@ -284,6 +308,15 @@
     <EmbeddedResource Include="BodyMain.zh-CN.resx">
       <DependentUpon>BodyMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BodySelfTest.resx">
+      <DependentUpon>BodySelfTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BodySelfTest2.resx">
+      <DependentUpon>BodySelfTest2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BodySelfTest3.resx">
+      <DependentUpon>BodySelfTest3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.en.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -304,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BodySimulation.resx">
       <DependentUpon>BodySimulation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TitleSelfTest.resx">
+      <DependentUpon>TitleSelfTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TitleSimulation.resx">
       <DependentUpon>TitleSimulation.cs</DependentUpon>
