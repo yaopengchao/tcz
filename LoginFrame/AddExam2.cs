@@ -179,6 +179,12 @@ namespace LoginFrame
 
         private void AddExam2_Load(object sender, EventArgs e)
         {
+
+            Util.setLanguage();
+            ApplyResource();
+
+
+
             string type = Convert.ToString(addExam.topicCategory.SelectedValue);
             int examId = Convert.ToInt32(addExam.labExamId.Text);
             strWheres.Clear();
@@ -202,6 +208,23 @@ namespace LoginFrame
             topicCategory.DataSource = Bll.getAllCourses().Tables[0];
             topicCategory.DisplayMember = "name";
             topicCategory.ValueMember = "id";
+        }
+
+        /// <summary>
+        /// 应用资源
+        /// ApplyResources 的第一个参数为要设置的控件
+        ///                  第二个参数为在资源文件中的ID，默认为控件的名称
+        /// </summary>
+        private void ApplyResource()
+        {
+            System.ComponentModel.ComponentResourceManager res = new ComponentResourceManager(typeof(AddExam2));
+            foreach (Control ctl in Controls)
+            {
+                res.ApplyResources(ctl, ctl.Name);
+            }
+
+            //Caption
+            res.ApplyResources(this, "$this");
         }
     }
 }

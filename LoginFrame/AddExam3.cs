@@ -99,6 +99,11 @@ namespace LoginFrame
 
         private void AddExam3_Load(object sender, EventArgs e)
         {
+            Util.setLanguage();
+            ApplyResource();
+
+
+
             string type = Convert.ToString(addExam.topicCategory.SelectedValue);
             strWheres.Clear();
             strWheres.Add("a.topic_type", " = '" + type + "' ");
@@ -255,6 +260,23 @@ namespace LoginFrame
                 result = result.Substring(0, result.Length - 1);
             }
             return result;
+        }
+
+        /// <summary>
+        /// 应用资源
+        /// ApplyResources 的第一个参数为要设置的控件
+        ///                  第二个参数为在资源文件中的ID，默认为控件的名称
+        /// </summary>
+        private void ApplyResource()
+        {
+            System.ComponentModel.ComponentResourceManager res = new ComponentResourceManager(typeof(AddExam3));
+            foreach (Control ctl in Controls)
+            {
+                res.ApplyResources(ctl, ctl.Name);
+            }
+
+            //Caption
+            res.ApplyResources(this, "$this");
         }
     }
 }
