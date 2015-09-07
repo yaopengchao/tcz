@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddUser));
             this.labUname = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,113 +43,63 @@
             // 
             // labUname
             // 
-            this.labUname.AutoSize = true;
-            this.labUname.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labUname.Location = new System.Drawing.Point(85, 90);
-            this.labUname.MinimumSize = new System.Drawing.Size(0, 30);
+            resources.ApplyResources(this.labUname, "labUname");
             this.labUname.Name = "labUname";
-            this.labUname.Size = new System.Drawing.Size(85, 30);
-            this.labUname.TabIndex = 0;
-            this.labUname.Text = "学生名称";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(85, 157);
-            this.label2.MinimumSize = new System.Drawing.Size(0, 30);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 30);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "登录名";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(85, 221);
-            this.label3.MinimumSize = new System.Drawing.Size(0, 30);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 30);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "密码";
             // 
             // labTitle
             // 
-            this.labTitle.AutoSize = true;
-            this.labTitle.Font = new System.Drawing.Font("宋体", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labTitle.Location = new System.Drawing.Point(30, 27);
+            resources.ApplyResources(this.labTitle, "labTitle");
             this.labTitle.Name = "labTitle";
-            this.labTitle.Size = new System.Drawing.Size(124, 27);
-            this.labTitle.TabIndex = 3;
-            this.labTitle.Text = "添加学生";
             // 
             // txtUserName
             // 
-            this.txtUserName.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtUserName.Location = new System.Drawing.Point(227, 86);
-            this.txtUserName.MaximumSize = new System.Drawing.Size(300, 30);
-            this.txtUserName.MinimumSize = new System.Drawing.Size(300, 30);
+            resources.ApplyResources(this.txtUserName, "txtUserName");
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(300, 26);
-            this.txtUserName.TabIndex = 4;
             // 
             // txtLoginId
             // 
-            this.txtLoginId.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtLoginId.Location = new System.Drawing.Point(227, 153);
-            this.txtLoginId.MaximumSize = new System.Drawing.Size(300, 30);
-            this.txtLoginId.MinimumSize = new System.Drawing.Size(300, 30);
+            resources.ApplyResources(this.txtLoginId, "txtLoginId");
             this.txtLoginId.Name = "txtLoginId";
-            this.txtLoginId.Size = new System.Drawing.Size(300, 26);
-            this.txtLoginId.TabIndex = 5;
             // 
             // txtPwd
             // 
-            this.txtPwd.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtPwd.Location = new System.Drawing.Point(227, 216);
-            this.txtPwd.MaximumSize = new System.Drawing.Size(300, 30);
-            this.txtPwd.MinimumSize = new System.Drawing.Size(300, 30);
+            resources.ApplyResources(this.txtPwd, "txtPwd");
             this.txtPwd.Name = "txtPwd";
-            this.txtPwd.Size = new System.Drawing.Size(300, 26);
-            this.txtPwd.TabIndex = 6;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(173, 309);
+            resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 30);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "保存";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(331, 309);
+            resources.ApplyResources(this.button2, "button2");
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 30);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "取消";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // labUserId
             // 
-            this.labUserId.AutoSize = true;
-            this.labUserId.Location = new System.Drawing.Point(279, 357);
+            resources.ApplyResources(this.labUserId, "labUserId");
             this.labUserId.Name = "labUserId";
-            this.labUserId.Size = new System.Drawing.Size(11, 12);
-            this.labUserId.TabIndex = 11;
-            this.labUserId.Text = "0";
-            this.labUserId.Visible = false;
             this.labUserId.Click += new System.EventHandler(this.labUserId_Click);
             // 
             // AddUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 400);
             this.Controls.Add(this.labUserId);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -161,8 +112,6 @@
             this.Controls.Add(this.labUname);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddUser";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "AddUser";
             this.Load += new System.EventHandler(this.AddUser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
