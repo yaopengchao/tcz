@@ -22,7 +22,6 @@ namespace LoginFrame
 
         public BodyMain bodyMain;
         public TitleMain titleMain;
-        public TalkMain talkMain;
 
         public VoiceChatRoom voiceChatRoom;
 
