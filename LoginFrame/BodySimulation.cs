@@ -6,6 +6,8 @@ using InTheHand.Net.Bluetooth;
 using InTheHand.Windows.Forms;
 using InTheHand.Net;
 using System.ComponentModel;
+using System.Collections.Generic;
+using System.IO.Ports;
 
 namespace LoginFrame
 {
@@ -212,9 +214,31 @@ namespace LoginFrame
             load听诊人Data2Frm(_听诊模拟人);
 
             //检测蓝牙设备
-            checkBluetooth();
+            //checkBluetooth();
+
+            loadBluetoothState();
         }
 
+        private void loadBluetoothState()
+        {
+            Dictionary<string, SerialPort> tzmonitors = LoginRoler.Tzmonitors;
+            Dictionary<string, SerialPort> czmonitors = LoginRoler.Czmonitors;
+
+            if (tzmonitors["tzmnr1"].IsOpen)
+            {
+                button17.Text = "已连接";
+            }
+
+            if (tzmonitors["tzmnr2"].IsOpen)
+            {
+                button18.Text = "已连接";
+            }
+
+            if (tzmonitors["czmnr1"].IsOpen)
+            {
+                button19.Text = "已连接";
+            }
+        }
 
         /// <summary>
         /// 应用资源

@@ -142,6 +142,12 @@
     <Compile Include="BodyExam.Designer.cs">
       <DependentUpon>BodyExam.cs</DependentUpon>
     </Compile>
+    <Compile Include="BodyScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BodyScore.designer.cs">
+      <DependentUpon>BodyScore.cs</DependentUpon>
+    </Compile>
     <Compile Include="BodySelfTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,12 @@
     </Compile>
     <Compile Include="TitleExam.Designer.cs">
       <DependentUpon>TitleExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TitleScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TitleScore.designer.cs">
+      <DependentUpon>TitleScore.cs</DependentUpon>
     </Compile>
     <Compile Include="TitleSelfTest.cs">
       <SubType>Form</SubType>
@@ -318,6 +330,15 @@
     <EmbeddedResource Include="BodyMain.zh-CN.resx">
       <DependentUpon>BodyMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BodyScore.en.resx">
+      <DependentUpon>BodyScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BodyScore.resx">
+      <DependentUpon>BodyScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BodyScore.zh-CN.resx">
+      <DependentUpon>BodyScore.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BodySelfTest.en.resx">
       <DependentUpon>BodySelfTest.cs</DependentUpon>
     </EmbeddedResource>
@@ -380,6 +401,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BodySimulation.resx">
       <DependentUpon>BodySimulation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TitleScore.resx">
+      <DependentUpon>TitleScore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TitleSelfTest.resx">
       <DependentUpon>TitleSelfTest.cs</DependentUpon>

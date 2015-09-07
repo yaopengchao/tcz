@@ -1,6 +1,7 @@
 ﻿using InTheHand.Net;
 using System;
 using System.Collections.Generic;
+using System.IO.Ports;
 using System.Linq;
 using System.Text;
 
@@ -27,18 +28,18 @@ namespace Model
         public static Dictionary<string, OnlineUser> onlineUserDic = new Dictionary<string, OnlineUser>();
 
 
-        public static Dictionary<string, BluetoothAddress> tzmonitors = new Dictionary<string, BluetoothAddress>();//听诊模拟人
+        public static Dictionary<string, SerialPort> tzmonitors = new Dictionary<string, SerialPort>();//听诊模拟人
         
 
-        public static Dictionary<string, BluetoothAddress> Tzmonitors
+        public static Dictionary<string, SerialPort> Tzmonitors
         {
             get { return tzmonitors; }
             set { tzmonitors = value; }
         }
 
-        public static Dictionary<string, BluetoothAddress> czmonitors = new Dictionary<string, BluetoothAddress>();//触诊模拟人
+        public static Dictionary<string, SerialPort> czmonitors = new Dictionary<string, SerialPort>();//触诊模拟人
 
-        public static Dictionary<string, BluetoothAddress> Czmonitors
+        public static Dictionary<string, SerialPort> Czmonitors
         {
             get { return czmonitors; }
             set { czmonitors = value; }
