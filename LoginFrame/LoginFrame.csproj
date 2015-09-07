@@ -166,6 +166,7 @@
       <DependentUpon>BodyTopic.cs</DependentUpon>
     </Compile>
     <Compile Include="ComboxItem.cs" />
+    <Compile Include="CSerialClass.cs" />
     <Compile Include="ExcelRW.cs" />
     <Compile Include="ListUsers.cs" />
     <Compile Include="ModifyPassword.cs">
