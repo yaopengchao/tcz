@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
+using Model;
 
 namespace LoginFrame
 {
@@ -30,7 +33,15 @@ namespace LoginFrame
 
         private void TitleExam_Load(object sender, EventArgs e)
         {
-            Util.setLanguage();
+            if (LoginRoler.language == Constant.zhCN)
+            {
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("zh-CN");
+            }
+            else if (LoginRoler.language == Constant.En)
+            {
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
+            }
+            //对当前窗体应用更改后的资源
             ApplyResource();
         }
 

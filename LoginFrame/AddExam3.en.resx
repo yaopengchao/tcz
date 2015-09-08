@@ -117,54 +117,92 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 26pt, style=Bold</value>
+  <data name="linkLabel7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 12</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 12</value>
+  <data name="button6.Text" xml:space="preserve">
+    <value>取消</value>
   </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 35</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="button7.Text" xml:space="preserve">
+    <value>保存</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>自我测试</value>
+    <value>请随机选择题数</value>
   </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
+  <data name="label2.Text" xml:space="preserve">
+    <value>心脏听诊</value>
   </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label3.Text" xml:space="preserve">
+    <value>肺部听诊</value>
   </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="labFbCount.Text" xml:space="preserve">
+    <value>腹部听触诊</value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="labFeibCount.Text" xml:space="preserve">
+    <value>222</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 12</value>
+  <data name="labFubCount.Text" xml:space="preserve">
+    <value>222</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1024, 60</value>
+  <data name="labTitle.Text" xml:space="preserve">
+    <value>随机添加考试题目</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>TitleSelfTest</value>
+  <data name="labTzCount.Text" xml:space="preserve">
+    <value>222</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>TitleSelfTest</value>
+  <data name="linkLabel1.Text" xml:space="preserve">
+    <value>10</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="linkLabel10.Text" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="linkLabel11.Text" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="linkLabel12.Text" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="linkLabel13.Text" xml:space="preserve">
+    <value>全部 </value>
+  </data>
+  <data name="linkLabel14.Text" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="linkLabel15.Text" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="linkLabel16.Text" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="linkLabel17.Text" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="linkLabel18.Text" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="linkLabel2.Text" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="linkLabel3.Text" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="linkLabel4.Text" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="linkLabel5.Text" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="linkLabel6.Text" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="linkLabel7.Text" xml:space="preserve">
+    <value>全部 </value>
+  </data>
+  <data name="linkLabel8.Text" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="linkLabel9.Text" xml:space="preserve">
+    <value>25</value>
   </data>
 </root>

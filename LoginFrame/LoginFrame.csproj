@@ -300,7 +300,13 @@
     <EmbeddedResource Include="AddExam2.resx">
       <DependentUpon>AddExam2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddExam3.en.resx">
+      <DependentUpon>AddExam3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddExam3.resx">
+      <DependentUpon>AddExam3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddExam3.zh-CN.resx">
       <DependentUpon>AddExam3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddTopic.resx">
@@ -360,6 +366,12 @@
     <EmbeddedResource Include="BodySelfTest3.resx">
       <DependentUpon>BodySelfTest3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BodySimulation.en.resx">
+      <DependentUpon>BodySimulation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BodySimulation.zh-CN.resx">
+      <DependentUpon>BodySimulation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BodyStu.en.resx">
       <DependentUpon>BodyStu.cs</DependentUpon>
     </EmbeddedResource>
@@ -405,7 +417,13 @@
     <EmbeddedResource Include="TitleScore.resx">
       <DependentUpon>TitleScore.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TitleSelfTest.en.resx">
+      <DependentUpon>TitleSelfTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TitleSelfTest.resx">
+      <DependentUpon>TitleSelfTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TitleSelfTest.zh-CN.resx">
       <DependentUpon>TitleSelfTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TitleSimulation.resx">
