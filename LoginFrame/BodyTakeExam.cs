@@ -6,6 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using BLL;
+using Model;
+using System.Globalization;
 
 namespace LoginFrame
 {
@@ -13,6 +16,12 @@ namespace LoginFrame
     {
 
         public MainFrame mainFrame;
+
+        private ExamService examService;
+
+        private DataTable dt;
+
+        private List<int> examIds = new List<int>();
 
         private static BodyTakeExam instance;
 
@@ -28,6 +37,63 @@ namespace LoginFrame
         public BodyTakeExam()
         {
             InitializeComponent();
+            if (examService == null)
+            {
+                examService = ExamService.getInstance();
+            }
         }
+
+        private void BodyTakeExam_Load(object sender, EventArgs e)
+        {
+            DateTime now = DateTime.Now;
+            examIds.Clear();
+            dt = examService.listExams();
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {                
+                int examId = Convert.ToInt32(dt.Rows[i].ItemArray[0]);
+                examIds.Add(examId);
+                string examName = Convert.ToString(dt.Rows[i].ItemArray[1]);
+                string startTime = Convert.ToString(dt.Rows[i].ItemArray[2]);
+                int totalMins = Convert.ToInt32(dt.Rows[i].ItemArray[3]);
+                DateTime st = DateTime.ParseExact(startTime, "yyyy-MM-dd HH:mm", System.Globalization.CultureInfo.CurrentCulture);
+                st = st.AddMinutes(totalMins);
+                if (DateTime.Compare(now, st) < 0)
+                {
+                    Label labExName = new Label();
+                    labExName.AutoSize = true;
+                    labExName.Font = new System.Drawing.Font("宋体", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+                    labExName.Location = new System.Drawing.Point(165, 137 + 40 * i);
+                    labExName.Name = "labExamName" + i;
+                    labExName.Text = examName;
+                    this.Controls.Add(labExName);
+
+                    Label labStartTime = new Label();
+                    labStartTime.AutoSize = true;
+                    labStartTime.Font = new System.Drawing.Font("宋体", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+                    labStartTime.Location = new System.Drawing.Point(450, 137 + 40 * i);
+                    labStartTime.Name = "labStartTime" + i;
+                    labStartTime.Text = examName;
+                    this.Controls.Add(labStartTime);
+
+                    Button btnBegin = new Button();
+                    btnBegin.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+                    btnBegin.Location = new System.Drawing.Point(670, 141 + 40 * i);
+                    btnBegin.Name = "btnBegin" + i;
+                    btnBegin.Text = "进入";
+                    btnBegin.Click += new EventHandler(enterExam);
+                    this.Controls.Add(btnBegin);
+                }
+            }
+        }
+
+        private void enterExam(object sender, EventArgs e)
+        {
+            string buttonName = ((Button)sender).Name;
+            int index = Convert.ToInt32(buttonName.Substring(buttonName.LastIndexOf("n") + 1));
+            int examId = examIds[index];
+            MessageBox.Show(examId + "");
+        }
+
     }
 }

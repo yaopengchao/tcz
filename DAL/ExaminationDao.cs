@@ -11,6 +11,13 @@ namespace DAL
     public class ExaminationDao : CommonDao
     {
 
+        //查询考试列表
+        public DataSet listExams()
+        {
+            string strSql = "SELECT EXAMINATION_ID, EXAM_NAME, START_TIME, TOTAL_MINS from ex_examination where EX_TYPE = '1' ORDER BY START_TIME desc";
+            return listEntity(strSql);
+        }
+
         //根据条件进行分页查询
         public DataSet listExams(Dictionary<string, string> strWheres, int startIndex, int pageSize)
         {

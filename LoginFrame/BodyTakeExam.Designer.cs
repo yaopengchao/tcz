@@ -39,6 +39,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BodyTakeExam";
             this.Text = "BodyTakeExam";
+            this.Load += new System.EventHandler(this.BodyTakeExam_Load);
             this.ResumeLayout(false);
 
         }

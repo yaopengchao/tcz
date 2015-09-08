@@ -34,6 +34,13 @@ namespace BLL
             return instance;
         }
 
+        //查询考试列表
+        public DataTable listExams()
+        {
+            DataSet ds = examDao.listExams();
+            return ds.Tables[0];
+        }
+
         public DataTable getExamByExamId(int examId)
         {
             return examDao.getExamByExamId(examId);
