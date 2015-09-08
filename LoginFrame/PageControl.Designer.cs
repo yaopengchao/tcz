@@ -60,10 +60,10 @@
             // 
             // bn
             // 
+            resources.ApplyResources(this.bn, "bn");
             this.bn.AddNewItem = null;
             this.bn.CountItem = null;
             this.bn.DeleteItem = null;
-            this.bn.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.bn.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnFirstPage,
             this.toolStripSeparator1,
@@ -84,149 +84,130 @@
             this.toolStripLabel4,
             this.dropPageSize,
             this.toolStripLabel5});
-            this.bn.Location = new System.Drawing.Point(0, 273);
             this.bn.MoveFirstItem = null;
             this.bn.MoveLastItem = null;
             this.bn.MoveNextItem = null;
             this.bn.MovePreviousItem = null;
             this.bn.Name = "bn";
             this.bn.PositionItem = null;
-            this.bn.Size = new System.Drawing.Size(418, 25);
-            this.bn.TabIndex = 0;
-            this.bn.Text = "bindingNavigator1";
             // 
             // btnFirstPage
             // 
+            resources.ApplyResources(this.btnFirstPage, "btnFirstPage");
             this.btnFirstPage.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnFirstPage.Image = ((System.Drawing.Image)(resources.GetObject("btnFirstPage.Image")));
-            this.btnFirstPage.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnFirstPage.Name = "btnFirstPage";
-            this.btnFirstPage.Size = new System.Drawing.Size(23, 22);
             this.btnFirstPage.Click += new System.EventHandler(this.btnFirstPage_Click);
             // 
             // toolStripSeparator1
             // 
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // btnPrePage
             // 
+            resources.ApplyResources(this.btnPrePage, "btnPrePage");
             this.btnPrePage.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnPrePage.Image = ((System.Drawing.Image)(resources.GetObject("btnPrePage.Image")));
-            this.btnPrePage.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnPrePage.Name = "btnPrePage";
-            this.btnPrePage.Size = new System.Drawing.Size(23, 22);
             this.btnPrePage.Click += new System.EventHandler(this.btnPrePage_Click);
             // 
             // toolStripSeparator3
             // 
+            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
             // txtCurPage
             // 
+            resources.ApplyResources(this.txtCurPage, "txtCurPage");
             this.txtCurPage.Name = "txtCurPage";
-            this.txtCurPage.Size = new System.Drawing.Size(30, 25);
-            this.txtCurPage.Text = "1";
             // 
             // toolStripLabel1
             // 
+            resources.ApplyResources(this.toolStripLabel1, "toolStripLabel1");
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(13, 22);
-            this.toolStripLabel1.Text = "/";
             // 
             // labTotalPage
             // 
+            resources.ApplyResources(this.labTotalPage, "labTotalPage");
             this.labTotalPage.Name = "labTotalPage";
-            this.labTotalPage.Size = new System.Drawing.Size(15, 22);
-            this.labTotalPage.Text = "1";
             // 
             // toolStripSeparator4
             // 
+            resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
             // btnNextPage
             // 
+            resources.ApplyResources(this.btnNextPage, "btnNextPage");
             this.btnNextPage.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnNextPage.Image = ((System.Drawing.Image)(resources.GetObject("btnNextPage.Image")));
-            this.btnNextPage.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNextPage.Name = "btnNextPage";
-            this.btnNextPage.Size = new System.Drawing.Size(23, 22);
             this.btnNextPage.Click += new System.EventHandler(this.btnNextPage_Click);
             // 
             // toolStripSeparator5
             // 
+            resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
             // btnLastPage
             // 
+            resources.ApplyResources(this.btnLastPage, "btnLastPage");
             this.btnLastPage.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnLastPage.Image = ((System.Drawing.Image)(resources.GetObject("btnLastPage.Image")));
-            this.btnLastPage.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLastPage.Name = "btnLastPage";
-            this.btnLastPage.Size = new System.Drawing.Size(23, 22);
             this.btnLastPage.Click += new System.EventHandler(this.btnLastPage_Click);
             // 
             // toolStripSeparator6
             // 
+            resources.ApplyResources(this.toolStripSeparator6, "toolStripSeparator6");
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripLabel2
             // 
+            resources.ApplyResources(this.toolStripLabel2, "toolStripLabel2");
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(32, 22);
-            this.toolStripLabel2.Text = "总共";
             // 
             // labTotalRecord
             // 
+            resources.ApplyResources(this.labTotalRecord, "labTotalRecord");
             this.labTotalRecord.Name = "labTotalRecord";
-            this.labTotalRecord.Size = new System.Drawing.Size(30, 25);
-            this.labTotalRecord.Text = "0";
             // 
             // toolStripLabel3
             // 
+            resources.ApplyResources(this.toolStripLabel3, "toolStripLabel3");
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(20, 22);
-            this.toolStripLabel3.Text = "条";
             // 
             // toolStripSeparator7
             // 
+            resources.ApplyResources(this.toolStripSeparator7, "toolStripSeparator7");
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripLabel4
             // 
+            resources.ApplyResources(this.toolStripLabel4, "toolStripLabel4");
             this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(32, 22);
-            this.toolStripLabel4.Text = "每页";
             // 
             // dropPageSize
             // 
+            resources.ApplyResources(this.dropPageSize, "dropPageSize");
             this.dropPageSize.AutoCompleteCustomSource.AddRange(new string[] {
-            "10",
-            "20",
-            "50"});
+            resources.GetString("dropPageSize.AutoCompleteCustomSource"),
+            resources.GetString("dropPageSize.AutoCompleteCustomSource1"),
+            resources.GetString("dropPageSize.AutoCompleteCustomSource2")});
             this.dropPageSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.dropPageSize.DropDownWidth = 40;
             this.dropPageSize.Items.AddRange(new object[] {
-            "15",
-            "20",
-            "50"});
+            resources.GetString("dropPageSize.Items"),
+            resources.GetString("dropPageSize.Items1"),
+            resources.GetString("dropPageSize.Items2")});
             this.dropPageSize.Name = "dropPageSize";
-            this.dropPageSize.Size = new System.Drawing.Size(75, 25);
             this.dropPageSize.Click += new System.EventHandler(this.dropPageSize_Click);
             // 
             // toolStripLabel5
             // 
+            resources.ApplyResources(this.toolStripLabel5, "toolStripLabel5");
             this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(20, 22);
-            this.toolStripLabel5.Text = "条";
             // 
             // dg
             // 
+            resources.ApplyResources(this.dg, "dg");
             this.dg.AccessibleRole = System.Windows.Forms.AccessibleRole.RowHeader;
             this.dg.AllowUserToAddRows = false;
             this.dg.AllowUserToDeleteRows = false;
@@ -234,17 +215,10 @@
             this.dg.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dg.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dg.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dg.ColumnHeadersHeight = 36;
-            this.dg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dg.Location = new System.Drawing.Point(0, 0);
-            this.dg.MinimumSize = new System.Drawing.Size(0, 30);
             this.dg.Name = "dg";
             this.dg.ReadOnly = true;
-            this.dg.RowHeadersWidth = 30;
             this.dg.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dg.RowTemplate.Height = 28;
-            this.dg.Size = new System.Drawing.Size(418, 273);
-            this.dg.TabIndex = 1;
             this.dg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dg.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dg_RowPostPaint);
             this.dg.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dg_RowsAdded);
@@ -254,13 +228,12 @@
             // 
             // PageControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.dg);
             this.Controls.Add(this.bn);
             this.Name = "PageControl";
-            this.Size = new System.Drawing.Size(418, 298);
             this.Load += new System.EventHandler(this.PageControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bn)).EndInit();
             this.bn.ResumeLayout(false);

@@ -408,11 +408,17 @@
     <EmbeddedResource Include="ModifyPassword.resx">
       <DependentUpon>ModifyPassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PageControl.en.resx">
+      <DependentUpon>PageControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PageControl.resx">
       <DependentUpon>PageControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BodySimulation.resx">
       <DependentUpon>BodySimulation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageControl.zh-CN.resx">
+      <DependentUpon>PageControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TitleScore.resx">
       <DependentUpon>TitleScore.cs</DependentUpon>
