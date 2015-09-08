@@ -20,11 +20,24 @@ namespace LoginFrame
 
         private TopicService topicService;
 
+        private ExamResultService examResultService;
+
+        private static Dictionary<string, string> strWheres;
+
         private int cur;
+
+        private int examResultId;
+        private int examDetailId;
+        private int topicId;
+        private string answer;
 
         private int totalTopic;
 
+        private List<Control> items;
+
         private List<string> results = new List<string>();
+
+        private DataTable dt;
 
         public BodySelfTest3()
         {
@@ -38,52 +51,101 @@ namespace LoginFrame
             {
                 topicService = TopicService.getInstance();
             }
+            if (examResultService == null)
+            {
+                examResultService = ExamResultService.getInstance();
+            }
+            if (strWheres == null)
+            {
+                strWheres = new Dictionary<string, string>();
+            }
         }
 
         private void BodySelfTest3_Load(object sender, EventArgs e)
         {
-            DataTable dt = examService.getExamByExamId(examId);
-            totalTopic = dt.Rows.Count;
+            dt = examService.getExamByExamId(examId);
             cur = 0;
-            btnVisible(cur, totalTopic);
-            if (totalTopic > 0)
+            showTopic(dt, cur);
+        }
+
+        private void parseAnswers(string answers)
+        {
+            results.Clear();
+            if (answers.IndexOf("、") > -1)
             {
-                labTopicOrder.Text = "1.";
-                labContent.Text = Convert.ToString(dt.Rows[0].ItemArray[3]);
-                int topicId = Convert.ToInt32(dt.Rows[0].ItemArray[2]);
-                DataSet ds = topicService.getTopicDetail(topicId);
-                int topicCount = ds.Tables[0].Rows.Count;
-                for (int i = 0; i < topicCount; i++)
+                string[] answerArr = answers.Split('、');
+                foreach (string answer in answerArr)
                 {
-                    LinkLabel linLab = new LinkLabel();
-                    linLab.Text = Convert.ToString(ds.Tables[0].Rows[i].ItemArray[1]) + ":";
-                    linLab.Location = new System.Drawing.Point(180, 152 + 30 * i);
-
-                    linLab.AutoSize = true;
-                    linLab.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-                    linLab.Name = "labPreA" + i;
-                    linLab.LinkBehavior = LinkBehavior.NeverUnderline;
-                    //this.labPreA.Size = new System.Drawing.Size(31, 19);
-                    //this.labPreA.TabIndex = 3;
-                    //this.labPreA.TabStop = true;
-                    //this.labPreA.Text = "A:";
-                    linLab.Click += new EventHandler(preClick);
-                    this.Controls.Add(linLab);
-
-                    Label lab = new Label();
-                    lab.Text = Convert.ToString(ds.Tables[0].Rows[i].ItemArray[2]);
-                    lab.Location = new System.Drawing.Point(220, 152 + 30 * i);
-
-                    lab.AutoSize = true;
-                    lab.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-                    lab.Name = "labItemDetail" + i;
-                    //this.labItemDetail.Size = new System.Drawing.Size(69, 19);
-                    //this.labItemDetail.TabIndex = 4;
-                    //this.labItemDetail.Text = "label2";
-
-
-                    this.Controls.Add(lab);
+                    results.Add(answer);
                 }
+            }
+            else
+            {
+                results.Add(answers);
+            }
+        }
+
+        private void showTopic(DataTable dt, int cur)
+        {
+            items = new List<Control>();
+            examId = Convert.ToInt32(dt.Rows[cur].ItemArray[0]);
+            examDetailId = Convert.ToInt32(dt.Rows[cur].ItemArray[1]);
+            topicId = Convert.ToInt32(dt.Rows[cur].ItemArray[2]);
+            strWheres.Clear();
+            strWheres.Add("examination_id", " = " + examId);
+            strWheres.Add("examination_detail_id", " = " + examDetailId);
+            strWheres.Add("topic_id", " = " + topicId);
+            strWheres.Add("user_id", " = " + LoginRoler.userId);
+            DataTable examResultDt = examResultService.listExamResult(strWheres);
+            if (examResultDt != null && examResultDt.Rows.Count > 0)
+            {
+                examResultId = Convert.ToInt32(examResultDt.Rows[0].ItemArray[0]);
+                answer = Convert.ToString(examResultDt.Rows[0].ItemArray[5]);
+                parseAnswers(answer);
+                labResult.Text = getResults(results);
+            }
+            else
+            {
+                results.Clear();
+                labResult.Text = getResults(results);
+            }       
+
+            labTopicOrder.Text = cur + 1 + ".";
+            labContent.Text = Convert.ToString(dt.Rows[cur].ItemArray[3]);            
+            totalTopic = dt.Rows.Count;
+            btnVisible(cur, totalTopic);
+            DataSet ds = topicService.getTopicDetail(topicId);
+            int topicCount = ds.Tables[0].Rows.Count;
+            for (int i = 0; i < topicCount; i++)
+            {
+                LinkLabel linLab = new LinkLabel();
+                linLab.Text = Convert.ToString(ds.Tables[0].Rows[i].ItemArray[1]) + ":";
+                linLab.Location = new System.Drawing.Point(180, 152 + 30 * i);
+                linLab.AutoSize = true;
+                linLab.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+                linLab.Name = "labPre" + i;
+                linLab.LinkBehavior = LinkBehavior.NeverUnderline;
+                linLab.Click += new EventHandler(preClick);
+                this.Controls.Add(linLab);
+
+                Label lab = new Label();
+                lab.Text = Convert.ToString(ds.Tables[0].Rows[i].ItemArray[2]);
+                lab.Location = new System.Drawing.Point(220, 152 + 30 * i);
+
+                lab.AutoSize = true;
+                lab.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+                lab.Name = "labItemDetail" + i;
+                items.Add(lab);                
+            }
+            this.Controls.AddRange(items.ToArray());
+        }
+
+        private void clearLabels()
+        {
+
+            foreach (Control ctrl in items)
+            {
+                this.Controls.Remove(ctrl);
             }
         }
 
@@ -130,17 +192,51 @@ namespace LoginFrame
                     btnPre.Visible = false;
                     btnNext.Visible = true;
                 }
-                else if (cur > 0 && cur < total)
+                else if (cur > 0 && cur < total - 1)
                 {
                     btnPre.Visible = true;
                     btnNext.Visible = true;
                 }
-                else if (cur == total)
+                else if (cur == total - 1)
                 {
                     btnPre.Visible = true;
                     btnNext.Visible = false;
                 }
             }
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {            
+            ExamResult examResult = new ExamResult();
+            examResult.ExamResultId = examResultId;
+            examResult.ExaminationId = examId;
+            examResult.ExaminationDetailId = examDetailId;
+            examResult.TopicId = topicId;
+            examResult.Answer = labResult.Text;
+            examResult.UserId = LoginRoler.userId;
+            examResultService.addOrUpdateExamResult(examResult);
+
+            cur++;                                         //当前题号+1
+            labResult.Text = "";
+            clearLabels();
+            showTopic(dt, cur);
+        }
+
+        private void btnPre_Click(object sender, EventArgs e)
+        {
+            ExamResult examResult = new ExamResult();
+            examResult.ExamResultId = examResultId;
+            examResult.ExaminationId = examId;
+            examResult.ExaminationDetailId = examDetailId;
+            examResult.TopicId = topicId;
+            examResult.Answer = labResult.Text;
+            examResult.UserId = LoginRoler.userId;
+            examResultService.addOrUpdateExamResult(examResult);
+
+            cur--;                                         //当前题号+1
+            labResult.Text = "";
+            clearLabels();
+            showTopic(dt, cur);
         }
     }
 }

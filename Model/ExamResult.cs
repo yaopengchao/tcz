@@ -25,8 +25,8 @@ namespace Model
         private int examinationId;
         public int ExaminationId
         {
-            get { return examResultId; }
-            set { examResultId = value; }
+            get { return examinationId; }
+            set { examinationId = value; }
         }
 
         private int examinationDetailId;

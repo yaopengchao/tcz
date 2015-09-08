@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using DAL;
 using Model;
+using System.Data;
 
 namespace BLL
 {
@@ -28,9 +29,21 @@ namespace BLL
             return instance;
         }
 
-        public int addExamResult(ExamResult examResult)
+        public DataTable listExamResult(Dictionary<string, string> strWheres) {
+            return examResultDao.listExamResults(strWheres).Tables[0];
+        }
+
+        public int addOrUpdateExamResult(ExamResult examResult)
         {
-            return examResultDao.addExamResult(examResult);
+            int examResultId = examResult.ExamResultId;
+            if (examResultId > 0)
+            {
+                return examResultDao.updateExamResult(examResult);
+            }
+            else
+            {
+                return examResultDao.addExamResult(examResult);
+            }  
         }
 
     }
