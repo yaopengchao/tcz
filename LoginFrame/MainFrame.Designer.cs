@@ -121,6 +121,7 @@
             this.exMenu4});
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // exMenu1
             // 
@@ -138,6 +139,7 @@
             // 
             this.exMenu3.Name = "exMenu3";
             resources.ApplyResources(this.exMenu3, "exMenu3");
+            this.exMenu3.Click += new System.EventHandler(this.exMenu3_Click);
             // 
             // exMenu4
             // 

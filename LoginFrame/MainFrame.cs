@@ -55,8 +55,8 @@ namespace LoginFrame
             } else if (roleId.Equals("2"))          //教师
             {
                 menuStrip1.Items[1].Visible = false;            //自我测试
-                //menuStrip1.Items[2].Visible = true;             //考试
-                exMenu3.Visible = false;
+                menuStrip1.Items[2].Visible = true;             //考试
+                exMenu3.Visible = true;
                 menuStrip1.Items[5].Visible = false;            //教师管理
                 panel5.Height = 160;
             } else if (roleId.Equals("3"))          //学生
@@ -1371,6 +1371,33 @@ namespace LoginFrame
             bodyExam.Dock = System.Windows.Forms.DockStyle.Fill;
             panel6.Controls.Add(bodyExam);
             bodyExam.Show();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exMenu3_Click(object sender, EventArgs e)
+        {
+            panel5.Hide();
+
+            panel1.Controls.Clear();
+            TitleTakeExam titleTakeExam = TitleTakeExam.createForm();
+            titleTakeExam.TopLevel = false;
+            titleTakeExam.FormBorderStyle = FormBorderStyle.None;
+            titleTakeExam.Dock = System.Windows.Forms.DockStyle.Fill;
+            panel1.Controls.Add(titleTakeExam);
+            titleTakeExam.Show();
+
+            panel6.Controls.Clear();
+            BodyTakeExam bodyTakeExam = BodyTakeExam.createForm();
+            bodyTakeExam.mainFrame = this;
+            bodyTakeExam.TopLevel = false;
+            bodyTakeExam.FormBorderStyle = FormBorderStyle.None;
+            bodyTakeExam.Dock = System.Windows.Forms.DockStyle.Fill;
+            panel6.Controls.Add(bodyTakeExam);
+            bodyTakeExam.Show();
         }
     }
 }

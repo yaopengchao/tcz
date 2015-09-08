@@ -166,6 +166,12 @@
     <Compile Include="BodySelfTest3.Designer.cs">
       <DependentUpon>BodySelfTest3.cs</DependentUpon>
     </Compile>
+    <Compile Include="BodyTakeExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BodyTakeExam.Designer.cs">
+      <DependentUpon>BodyTakeExam.cs</DependentUpon>
+    </Compile>
     <Compile Include="BodyTopic.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,6 +277,12 @@
     </Compile>
     <Compile Include="TitleStu.Designer.cs">
       <DependentUpon>TitleStu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TitleTakeExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TitleTakeExam.Designer.cs">
+      <DependentUpon>TitleTakeExam.cs</DependentUpon>
     </Compile>
     <Compile Include="TitleTea.cs">
       <SubType>Form</SubType>
@@ -378,6 +390,9 @@
     <EmbeddedResource Include="BodyStu.zh-CN.resx">
       <DependentUpon>BodyStu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BodyTakeExam.resx">
+      <DependentUpon>BodyTakeExam.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BodyTea.en.resx">
       <DependentUpon>BodyTea.cs</DependentUpon>
     </EmbeddedResource>
@@ -474,6 +489,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TitleStu.resx">
       <DependentUpon>TitleStu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TitleTakeExam.resx">
+      <DependentUpon>TitleTakeExam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TitleTea.resx">
       <DependentUpon>TitleTea.cs</DependentUpon>
