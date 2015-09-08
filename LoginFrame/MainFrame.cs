@@ -214,7 +214,7 @@ namespace LoginFrame
                     //"蓝牙连接成功";
 
                     //发送指令判断是什么类型的模拟人
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection,"");
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection,Constant.获取命令);
                 }
             }
         }
