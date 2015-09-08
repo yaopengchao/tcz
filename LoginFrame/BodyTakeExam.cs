@@ -63,7 +63,7 @@ namespace LoginFrame
                     Label labExName = new Label();
                     labExName.AutoSize = true;
                     labExName.Font = new System.Drawing.Font("宋体", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-                    labExName.Location = new System.Drawing.Point(165, 137 + 40 * i);
+                    labExName.Location = new System.Drawing.Point(165, 120 + 40 * i);
                     labExName.Name = "labExamName" + i;
                     labExName.Text = examName;
                     this.Controls.Add(labExName);
@@ -71,14 +71,14 @@ namespace LoginFrame
                     Label labStartTime = new Label();
                     labStartTime.AutoSize = true;
                     labStartTime.Font = new System.Drawing.Font("宋体", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-                    labStartTime.Location = new System.Drawing.Point(450, 137 + 40 * i);
+                    labStartTime.Location = new System.Drawing.Point(450, 120 + 40 * i);
                     labStartTime.Name = "labStartTime" + i;
                     labStartTime.Text = examName;
                     this.Controls.Add(labStartTime);
 
                     Button btnBegin = new Button();
                     btnBegin.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-                    btnBegin.Location = new System.Drawing.Point(670, 141 + 40 * i);
+                    btnBegin.Location = new System.Drawing.Point(670, 124 + 40 * i);
                     btnBegin.Name = "btnBegin" + i;
                     btnBegin.Text = "进入";
                     btnBegin.Click += new EventHandler(enterExam);
@@ -92,7 +92,15 @@ namespace LoginFrame
             string buttonName = ((Button)sender).Name;
             int index = Convert.ToInt32(buttonName.Substring(buttonName.LastIndexOf("n") + 1));
             int examId = examIds[index];
-            MessageBox.Show(examId + "");
+            mainFrame.panel6.Controls.Clear();
+            BodyTakeExam2 exam2 = new BodyTakeExam2();
+            exam2.TopLevel = false;
+            exam2.takeExam = this;
+            exam2.examId = examId;
+            exam2.FormBorderStyle = FormBorderStyle.None;
+            exam2.Dock = System.Windows.Forms.DockStyle.Fill;
+            mainFrame.panel6.Controls.Add(exam2);
+            exam2.Show();
         }
 
     }

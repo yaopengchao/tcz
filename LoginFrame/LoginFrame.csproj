@@ -172,6 +172,12 @@
     <Compile Include="BodyTakeExam.Designer.cs">
       <DependentUpon>BodyTakeExam.cs</DependentUpon>
     </Compile>
+    <Compile Include="BodyTakeExam2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BodyTakeExam2.Designer.cs">
+      <DependentUpon>BodyTakeExam2.cs</DependentUpon>
+    </Compile>
     <Compile Include="BodyTopic.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -392,6 +398,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BodyTakeExam.resx">
       <DependentUpon>BodyTakeExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BodyTakeExam2.resx">
+      <DependentUpon>BodyTakeExam2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BodyTea.en.resx">
       <DependentUpon>BodyTea.cs</DependentUpon>
