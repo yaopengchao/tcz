@@ -83,6 +83,7 @@
             resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // BodySelfTest3
             // 

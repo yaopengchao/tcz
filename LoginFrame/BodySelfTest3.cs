@@ -22,6 +22,8 @@ namespace LoginFrame
 
         private ExamResultService examResultService;
 
+        public BodySelfTest2 selfTest2;
+
         private static Dictionary<string, string> strWheres;
 
         private int cur;
@@ -237,6 +239,26 @@ namespace LoginFrame
             labResult.Text = "";
             clearLabels();
             showTopic(dt, cur);
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+
+            TitleMain titleMain = TitleMain.createForm();
+            titleMain.TopLevel = false;
+            titleMain.FormBorderStyle = FormBorderStyle.None;
+            titleMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            selfTest2.self.mainFrame.panel1.Controls.Add(titleMain);
+            titleMain.Show();
+
+            //加载主体栏
+            selfTest2.self.mainFrame.panel6.Controls.Clear();
+            BodyMain bodyMain = BodyMain.createForm();
+            bodyMain.TopLevel = false;
+            bodyMain.FormBorderStyle = FormBorderStyle.None;
+            bodyMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            selfTest2.self.mainFrame.panel6.Controls.Add(bodyMain);
+            bodyMain.Show();
         }
     }
 }

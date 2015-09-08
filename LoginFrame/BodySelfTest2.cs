@@ -155,6 +155,7 @@ namespace LoginFrame
                     self.mainFrame.panel6.Controls.Clear();
                     BodySelfTest3 self3 = new BodySelfTest3();
                     self3.TopLevel = false;
+                    self3.selfTest2 = this;
                     self3.examId = exam.ExaminationId;
                     self3.FormBorderStyle = FormBorderStyle.None;
                     self3.Dock = System.Windows.Forms.DockStyle.Fill;
