@@ -22,6 +22,8 @@ namespace Model
 
         public static bool isLocalIp;
 
+        public static List<string> sendMsglist = new List<string>();
+
         public static List<OnlineUser> onlineUserlist = new List<OnlineUser>();
 
 
@@ -29,7 +31,13 @@ namespace Model
 
 
         public static Dictionary<string, SerialPort> tzmonitors = new Dictionary<string, SerialPort>();//听诊模拟人
-        
+
+        public static List<string> SendMsglist
+        {
+            get { return sendMsglist; }
+            set { sendMsglist = value; }
+        }
+
 
         public static Dictionary<string, SerialPort> Tzmonitors
         {
@@ -46,7 +54,7 @@ namespace Model
         }
 
 
-        public static List<ChatUser>  chatUserlist=new List<ChatUser>();
+        public static List<ChatUser> chatUserlist = new List<ChatUser>();
 
         public static Dictionary<string, OnlineUser> OnlineUserDic
         {

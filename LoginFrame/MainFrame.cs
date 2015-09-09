@@ -33,7 +33,7 @@ namespace LoginFrame
         {
             InitializeComponent();
 
-            if (LoginRoler.language==0)
+            if (LoginRoler.language == 0)
             {
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("zh-CN");
             }
@@ -52,14 +52,16 @@ namespace LoginFrame
             {
                 menuStrip1.Items[2].Visible = false;             //考试
                 panel5.Height = 180;
-            } else if (roleId.Equals("2"))          //教师
+            }
+            else if (roleId.Equals("2"))          //教师
             {
                 menuStrip1.Items[1].Visible = false;            //自我测试
                 menuStrip1.Items[2].Visible = true;             //考试
                 exMenu3.Visible = true;
                 menuStrip1.Items[5].Visible = false;            //教师管理
                 panel5.Height = 160;
-            } else if (roleId.Equals("3"))          //学生
+            }
+            else if (roleId.Equals("3"))          //学生
             {
                 menuStrip1.Items[7].Visible = false;            //云服务
                 panel5.Height = 180;
@@ -116,21 +118,21 @@ namespace LoginFrame
             }
 
             if (LoginRoler.isLocalIp)
-                {
-                    //创建 服务器 负责监听的套接字 参数(使用IP4寻址协议，使用流式连接，使用TCP传输协议)
-                    socketServer = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            {
+                //创建 服务器 负责监听的套接字 参数(使用IP4寻址协议，使用流式连接，使用TCP传输协议)
+                socketServer = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
-                    //获取IP地址
-                    IPAddress ip = IPAddress.Parse(LoginRoler.ip);
+                //获取IP地址
+                IPAddress ip = IPAddress.Parse(LoginRoler.ip);
 
-                    //创建 包含IP和Port的网络节点对象
-                    IPEndPoint endPoint = new IPEndPoint(ip, int.Parse("10021"));
+                //创建 包含IP和Port的网络节点对象
+                IPEndPoint endPoint = new IPEndPoint(ip, int.Parse("10021"));
 
-                    //将负责监听 的套接字 绑定到 唯一的IP和端口上
-                    socketServer.Bind(endPoint);
+                //将负责监听 的套接字 绑定到 唯一的IP和端口上
+                socketServer.Bind(endPoint);
 
-                    //设置监听队列 一次可以处理的最大数量
-                    socketServer.Listen(10);
+                //设置监听队列 一次可以处理的最大数量
+                socketServer.Listen(10);
 
 
                 //创建线程 负责监听
@@ -143,12 +145,12 @@ namespace LoginFrame
 
                 //创建线程 负责监听
                 threadWatch = new Thread(WatchConnection);
-                    //设置为后台线程
-                    threadWatch.IsBackground = true;
-                    //开启线程
-                    //threadWatch.Start();
+                //设置为后台线程
+                threadWatch.IsBackground = true;
+                //开启线程
+                //threadWatch.Start();
 
-                    //Console.WriteLine("=====================服 务 器 启 动 成 功该Socekt用来通信聊天室用户的信息更新======================");
+                //Console.WriteLine("=====================服 务 器 启 动 成 功该Socekt用来通信聊天室用户的信息更新======================");
             }
             else
             {
@@ -205,7 +207,7 @@ namespace LoginFrame
                 {
                     //Start
                     //"正在连接蓝牙设备";
-                    
+
                     //Console.WriteLine("串口=="+s);
                     BluetoothConnection.PortName = s;
                     BluetoothConnection.Open();
@@ -214,7 +216,7 @@ namespace LoginFrame
                     //"蓝牙连接成功";
 
                     //发送指令判断是什么类型的模拟人
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection,Constant.获取命令);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.获取命令);
                 }
             }
         }
@@ -236,7 +238,233 @@ namespace LoginFrame
                 BlueToothReceivedData += receivedData[i];
             }
 
-            Console.WriteLine(BlueToothReceivedData);
+            Console.WriteLine("接收的消息==" + BlueToothReceivedData);
+
+            //触诊
+            if (BlueToothReceivedData == Constant.触诊通信标识码返回)
+            {
+                Dictionary<string, SerialPort> czmonitors = LoginRoler.Czmonitors;
+                if (!czmonitors.ContainsKey("czmnr1"))
+                {
+                    czmonitors.Add("czmnr1", BluetoothConnection);
+                    LoginRoler.SendMsglist.Add("成功返回触诊通信标识码");
+                }
+            }
+
+            if (BlueToothReceivedData == Constant.归零成功)
+            {
+                LoginRoler.SendMsglist.Add("归零成功");
+            }
+            else if (BlueToothReceivedData == Constant.归零失败)
+            {
+                LoginRoler.SendMsglist.Add("归零失败");
+            }
+
+            if (BlueToothReceivedData == Constant.肝脏有肿大成功)
+            {
+                LoginRoler.SendMsglist.Add("肝脏有肿大成功");
+            }
+            else if (BlueToothReceivedData == Constant.肝脏有肿大失败)
+            {
+                LoginRoler.SendMsglist.Add("肝脏有肿大失败");
+            }
+
+            if (BlueToothReceivedData == Constant.肝脏质地质硬)
+            {
+                LoginRoler.SendMsglist.Add("肝脏质地质硬成功");
+            }
+            else if (BlueToothReceivedData == Constant.肝脏质地质硬)
+            {
+                LoginRoler.SendMsglist.Add("肝脏质地质硬失败");
+            }
+
+            if (BlueToothReceivedData == Constant.肝脏质地成功)
+            {
+                LoginRoler.SendMsglist.Add("肝脏质地成功");
+            }
+            else if (BlueToothReceivedData == Constant.肝脏质地失败)
+            {
+                LoginRoler.SendMsglist.Add("肝脏质地失败");
+            }
+
+
+            if (BlueToothReceivedData == Constant.脾脏有肿大成功)
+            {
+                LoginRoler.SendMsglist.Add("脾脏有肿大成功");
+            }
+            else if (BlueToothReceivedData == Constant.脾脏有肿大失败)
+            {
+                LoginRoler.SendMsglist.Add("脾脏有肿大失败");
+            }
+
+            if (BlueToothReceivedData == Constant.胆囊有肿大成功)
+            {
+                LoginRoler.SendMsglist.Add("胆囊有肿大成功");
+            }
+            else if (BlueToothReceivedData == Constant.胆囊有肿大失败)
+            {
+                LoginRoler.SendMsglist.Add("胆囊有肿大失败");
+            }
+
+            if (BlueToothReceivedData == Constant.胆囊触痛成功)
+            {
+                LoginRoler.SendMsglist.Add("胆囊触痛成功");
+            }
+            else if (BlueToothReceivedData == Constant.胆囊触痛失败)
+            {
+                LoginRoler.SendMsglist.Add("胆囊触痛失败");
+            }
+
+            if (BlueToothReceivedData == Constant.胆囊墨菲氏征成功)
+            {
+                LoginRoler.SendMsglist.Add("胆囊墨菲氏征成功");
+            }
+            else if (BlueToothReceivedData == Constant.胆囊墨菲氏征失败)
+            {
+                LoginRoler.SendMsglist.Add("胆囊墨菲氏征失败");
+            }
+
+            if (BlueToothReceivedData == Constant.胃部压痛成功)
+            {
+                LoginRoler.SendMsglist.Add("胃部压痛成功");
+            }
+            else if (BlueToothReceivedData == Constant.胃部压痛失败)
+            {
+                LoginRoler.SendMsglist.Add("胃部压痛失败");
+            }
+
+            if (BlueToothReceivedData == Constant.十二指肠成功)
+            {
+                LoginRoler.SendMsglist.Add("十二指肠成功");
+            }
+            else if (BlueToothReceivedData == Constant.十二指肠失败)
+            {
+                LoginRoler.SendMsglist.Add("十二指肠失败");
+            }
+
+            if (BlueToothReceivedData == Constant.胰腺成功)
+            {
+                LoginRoler.SendMsglist.Add("胰腺成功");
+            }
+            else if (BlueToothReceivedData == Constant.胰腺失败)
+            {
+                LoginRoler.SendMsglist.Add("胰腺失败");
+            }
+
+            if (BlueToothReceivedData == Constant.阑尾成功)
+            {
+                LoginRoler.SendMsglist.Add("阑尾成功");
+            }
+            else if (BlueToothReceivedData == Constant.阑尾失败)
+            {
+                LoginRoler.SendMsglist.Add("阑尾失败");
+            }
+
+            if (BlueToothReceivedData == Constant.小肠成功)
+            {
+                LoginRoler.SendMsglist.Add("小肠成功");
+            }
+            else if (BlueToothReceivedData == Constant.小肠失败)
+            {
+                LoginRoler.SendMsglist.Add("小肠失败");
+            }
+
+            if (BlueToothReceivedData == Constant.乙状结肠成功)
+            {
+                LoginRoler.SendMsglist.Add("乙状结肠成功");
+            }
+            else if (BlueToothReceivedData == Constant.乙状结肠失败)
+            {
+                LoginRoler.SendMsglist.Add("乙状结肠失败");
+            }
+
+            if (BlueToothReceivedData == Constant.胰腺反跳痛成功)
+            {
+                LoginRoler.SendMsglist.Add("胰腺反跳痛成功");
+            }
+            else if (BlueToothReceivedData == Constant.胰腺反跳痛失败)
+            {
+                LoginRoler.SendMsglist.Add("胰腺反跳痛失败");
+            }
+
+            if (BlueToothReceivedData == Constant.阑尾反跳痛成功)
+            {
+                LoginRoler.SendMsglist.Add("阑尾反跳痛成功");
+            }
+            else if (BlueToothReceivedData == Constant.阑尾反跳痛失败)
+            {
+                LoginRoler.SendMsglist.Add("阑尾反跳痛失败");
+            }
+
+            if (BlueToothReceivedData == Constant.小肠反跳痛成功)
+            {
+                LoginRoler.SendMsglist.Add("小肠反跳痛成功");
+            }
+            else if (BlueToothReceivedData == Constant.小肠反跳痛失败)
+            {
+                LoginRoler.SendMsglist.Add("小肠反跳痛失败");
+            }
+
+            if (BlueToothReceivedData == Constant.脉搏设置成功)
+            {
+                LoginRoler.SendMsglist.Add("脉搏设置成功");
+            }
+            else if (BlueToothReceivedData == Constant.脉搏设置失败)
+            {
+                LoginRoler.SendMsglist.Add("脉搏设置失败");
+            }
+
+            if (BlueToothReceivedData == Constant.血压设置收缩压成功)
+            {
+                LoginRoler.SendMsglist.Add("血压设置收缩压成功");
+            }
+            else if (BlueToothReceivedData == Constant.血压设置收缩压失败)
+            {
+                LoginRoler.SendMsglist.Add("血压设置收缩压失败");
+            }
+
+            if (BlueToothReceivedData == Constant.血压设置舒张压成功)
+            {
+                LoginRoler.SendMsglist.Add("血压设置舒张压成功");
+            }
+            else if (BlueToothReceivedData == Constant.血压设置舒张压失败)
+            {
+                LoginRoler.SendMsglist.Add("血压设置舒张压失败");
+            }
+
+            //听诊
+            if (BlueToothReceivedData == Constant.触诊通信标识码返回)
+            {
+                Dictionary<string, SerialPort> tzmonitors = LoginRoler.Tzmonitors;
+                if (!tzmonitors.ContainsKey("tzmnr1") && !tzmonitors.ContainsKey("tzmnr2"))
+                {
+                    tzmonitors.Add("tzmnr1", BluetoothConnection);
+                    LoginRoler.SendMsglist.Add("成功返回听诊通信标识码");
+                }
+                if (tzmonitors.ContainsKey("tzmnr1") && !tzmonitors.ContainsKey("tzmnr2"))
+                {
+                    tzmonitors.Add("tzmnr2", BluetoothConnection);
+                    LoginRoler.SendMsglist.Add("成功返回听诊通信标识码");
+                }
+            }
+
+            if (BlueToothReceivedData == Constant.心前区震颤成功)
+            {
+                LoginRoler.SendMsglist.Add("心前区震颤成功");
+            }
+            else if (BlueToothReceivedData == Constant.心前区震颤失败)
+            {
+                LoginRoler.SendMsglist.Add("心前区震颤失败");
+            }
+
+            if (BlueToothReceivedData == Constant.心尖搏动成功)
+            {
+                LoginRoler.SendMsglist.Add("心尖搏动成功");
+            }
+            else if (BlueToothReceivedData == Constant.心尖搏动失败)
+            {
+                LoginRoler.SendMsglist.Add("心尖搏动失败");
+            }
         }
 
         /// <summary>
@@ -244,7 +472,7 @@ namespace LoginFrame
         /// </summary>
         /// <param name="serverIp"></param>
         /// <param name="onlineUser"></param>
-        private void sendLoaclInfo(Socket socketSend,OnlineUser onlineUser)
+        private void sendLoaclInfo(Socket socketSend, OnlineUser onlineUser)
         {
             MemoryStream mStream = new MemoryStream();
             BinaryFormatter bformatter = new BinaryFormatter();  //二进制序列化类  
@@ -263,7 +491,7 @@ namespace LoginFrame
 
         public Dictionary<string, Socket> SocketDic
         {
-            
+
             get { return socketDic; }
             set { socketDic = value; }
         }
@@ -271,103 +499,103 @@ namespace LoginFrame
         void recvWatchConnection()
         {
             //持续不断的监听   更新聊天室用户信息
-           
-                //socketClient
-                byte[] buffer = new byte[1024];
-                MemoryStream mStream = new MemoryStream();
-                mStream.Position = 0;
-                while (true)
+
+            //socketClient
+            byte[] buffer = new byte[1024];
+            MemoryStream mStream = new MemoryStream();
+            mStream.Position = 0;
+            while (true)
+            {
+                int ReceiveCount = socketClient.Receive(buffer, 1024, 0);
+                if (ReceiveCount == 0)
                 {
-                    int ReceiveCount = socketClient.Receive(buffer, 1024, 0);
-                    if (ReceiveCount == 0)
-                    {
-                        break;//接收到的字节数为0时break  
-                    }
-                    else
-                    {
-                        //Console.WriteLine("成功获取到数据");
-                        mStream.Write(buffer, 0, ReceiveCount); //将接收到的数据写入内存流  
-                    }
-
-                    mStream.Flush();
-                    mStream.Position = 0;
-                    BinaryFormatter bFormatter = new BinaryFormatter();
-                    if (mStream.Capacity > 0)
-                    {
-                        List<ChatUser> chatUserslist = (List<ChatUser>)bFormatter.Deserialize(mStream);//将接收到的内存流反序列化为对象  
-
-                        LoginRoler.chatUserlist = chatUserslist;
-
-                        Console.WriteLine("接收到来教师发来最新聊天室用户数量:" + chatUserslist.Count + "的信息内容：");
-                    }
-                    else
-                    {
-                        //Console.WriteLine("接收到的数据为空。");
-                    }
-
+                    break;//接收到的字节数为0时break  
                 }
+                else
+                {
+                    //Console.WriteLine("成功获取到数据");
+                    mStream.Write(buffer, 0, ReceiveCount); //将接收到的数据写入内存流  
+                }
+
+                mStream.Flush();
+                mStream.Position = 0;
+                BinaryFormatter bFormatter = new BinaryFormatter();
+                if (mStream.Capacity > 0)
+                {
+                    List<ChatUser> chatUserslist = (List<ChatUser>)bFormatter.Deserialize(mStream);//将接收到的内存流反序列化为对象  
+
+                    LoginRoler.chatUserlist = chatUserslist;
+
+                    Console.WriteLine("接收到来教师发来最新聊天室用户数量:" + chatUserslist.Count + "的信息内容：");
+                }
+                else
+                {
+                    //Console.WriteLine("接收到的数据为空。");
+                }
+
+            }
         }
 
         //监听学生发来的信息
         void WatchConnectionInfo()
         {
-           
-                //持续不断的监听   更新聊天室用户信息
 
-                //socketClient
-                byte[] buffer = new byte[1024];
-                MemoryStream mStream = new MemoryStream();
-                mStream.Position = 0;
-                while (true)
+            //持续不断的监听   更新聊天室用户信息
+
+            //socketClient
+            byte[] buffer = new byte[1024];
+            MemoryStream mStream = new MemoryStream();
+            mStream.Position = 0;
+            while (true)
+            {
+
+                Socket sokConnection = socketServer.Accept();//返回一个 负责和该客户端通信的 套接字
+                                                             //将返回的新的套接字 存储到 字典序列中
+
+                string ip = sokConnection.RemoteEndPoint.ToString().Split(':')[0];
+
+                socketDic.Add(ip, sokConnection);
+
+
+                int ReceiveCount = sokConnection.Receive(buffer, 1024, 0);
+                if (ReceiveCount == 0)
                 {
-
-                    Socket sokConnection = socketServer.Accept();//返回一个 负责和该客户端通信的 套接字
-                                                                 //将返回的新的套接字 存储到 字典序列中
-
-                    string ip = sokConnection.RemoteEndPoint.ToString().Split(':')[0];
-
-                    socketDic.Add(ip, sokConnection);
-
-
-                    int ReceiveCount = sokConnection.Receive(buffer, 1024, 0);
-                    if (ReceiveCount == 0)
-                    {
-                        break;//接收到的字节数为0时break  
-                    }
-                    else
-                    {
-                        //Console.WriteLine("成功获取到数据");
-                        mStream.Write(buffer, 0, ReceiveCount); //将接收到的数据写入内存流  
-                       
-                    }
-
-
-                    mStream.Flush();
-                    
-                    mStream.Position = 0;
-                   
-                    BinaryFormatter bFormatter = new BinaryFormatter();
-                    if (mStream.Capacity > 0)
-                    {
-
-                        
-
-                        OnlineUser onlineUser = (OnlineUser)bFormatter.Deserialize(mStream);//将接收到的内存流反序列化为对象  
-
-                        Dictionary<string, OnlineUser> onlineUserDic = LoginRoler.OnlineUserDic;
-
-                        onlineUserDic.Add(onlineUser.ChatIp.ToString(), onlineUser);
-
-                    }
-                    else
-                    {
-                        //Console.WriteLine("接收到的数据为空。");
-                    }
+                    break;//接收到的字节数为0时break  
+                }
+                else
+                {
+                    //Console.WriteLine("成功获取到数据");
+                    mStream.Write(buffer, 0, ReceiveCount); //将接收到的数据写入内存流  
 
                 }
-                
-            
-          
+
+
+                mStream.Flush();
+
+                mStream.Position = 0;
+
+                BinaryFormatter bFormatter = new BinaryFormatter();
+                if (mStream.Capacity > 0)
+                {
+
+
+
+                    OnlineUser onlineUser = (OnlineUser)bFormatter.Deserialize(mStream);//将接收到的内存流反序列化为对象  
+
+                    Dictionary<string, OnlineUser> onlineUserDic = LoginRoler.OnlineUserDic;
+
+                    onlineUserDic.Add(onlineUser.ChatIp.ToString(), onlineUser);
+
+                }
+                else
+                {
+                    //Console.WriteLine("接收到的数据为空。");
+                }
+
+            }
+
+
+
         }
 
         //监听方法
@@ -381,7 +609,7 @@ namespace LoginFrame
 
                 //开始监听 客户端 连接请求 【注意】Accept方法会阻断当前的线程--未接受到请求 程序卡在那里
                 Socket sokConnection = socketServer.Accept();//返回一个 负责和该客户端通信的 套接字
-                                                                     //将返回的新的套接字 存储到 字典序列中
+                                                             //将返回的新的套接字 存储到 字典序列中
 
                 string ip = sokConnection.RemoteEndPoint.ToString().Split(':')[0];
 
@@ -391,7 +619,7 @@ namespace LoginFrame
 
                 //OnlineUser onlineUser = new OnlineUser();
 
-               // Dictionary<string, OnlineUser> onlineUserDic = LoginRoler.OnlineUserDic;
+                // Dictionary<string, OnlineUser> onlineUserDic = LoginRoler.OnlineUserDic;
 
                 //onlineUser.ChatIp = ip;
                 //onlineUser.ChatName = "测试";
@@ -600,62 +828,62 @@ namespace LoginFrame
             }
         }
 
-        
 
 
-        
+
+
 
 
 
         void microphoneCapturer_AudioCaptured(byte[] audioData)
         {
             Console.WriteLine("学生机发送语音中..." + audioData.Length);
-            
-                //循环聊天室里面的用户发送语音数据
 
-                List<ChatUser> chatUserlist = LoginRoler.chatUserlist;
+            //循环聊天室里面的用户发送语音数据
 
-                //chatroomusers
-                for (int a = 0; a < chatUserlist.Count; a++)
+            List<ChatUser> chatUserlist = LoginRoler.chatUserlist;
+
+            //chatroomusers
+            for (int a = 0; a < chatUserlist.Count; a++)
+            {
+
+                //Console.WriteLine("ip=" + chatroomusers.Items[a].Text.ToString() + "进入聊天");
+
+                string ip = (((ChatUser)chatUserlist[a]).ChatIp).ToString();
+
+                if (ip.Equals(LoginRoler.ip)) continue;
+
+                //Console.WriteLine("发送音频数据到:" + ip);
+
+                if (vocoder == Vocoder.ALaw)
                 {
-
-                    //Console.WriteLine("ip=" + chatroomusers.Items[a].Text.ToString() + "进入聊天");
-
-                    string ip = (((ChatUser)chatUserlist[a]).ChatIp).ToString();
-
-                    if (ip.Equals(LoginRoler.ip)) continue;
-
-                    //Console.WriteLine("发送音频数据到:" + ip);
-
-                    if (vocoder == Vocoder.ALaw)
-                    {
-                        byte[] dataToWrite = ALawEncoder.ALawEncode(audioData);
-                        //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
-                        udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
-                    }
-                    else if (vocoder == Vocoder.uLaw)
-                    {
-                        byte[] dataToWrite = MuLawEncoder.MuLawEncode(audioData);
-                        //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
-                        udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
-                        //udpClient.Send(dataToWrite, dataToWrite.Length, "192.168.0.104", 1550);
-                    }
-                    else
-                    {
-                        byte[] dataToWrite = audioData;
-                        //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
-                        udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
-                    }
+                    byte[] dataToWrite = ALawEncoder.ALawEncode(audioData);
+                    //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
+                    udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
                 }
+                else if (vocoder == Vocoder.uLaw)
+                {
+                    byte[] dataToWrite = MuLawEncoder.MuLawEncode(audioData);
+                    //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
+                    udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
+                    //udpClient.Send(dataToWrite, dataToWrite.Length, "192.168.0.104", 1550);
+                }
+                else
+                {
+                    byte[] dataToWrite = audioData;
+                    //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
+                    udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
+                }
+            }
 
-            
+
 
 
 
         }
 
 
-       
+
 
 
         /*
@@ -695,7 +923,7 @@ namespace LoginFrame
 
                     //循环聊天室里面的用户发送语音数据
 
-                    List<ChatUser> chatUserlist=LoginRoler.chatUserlist;
+                    List<ChatUser> chatUserlist = LoginRoler.chatUserlist;
 
                     //chatroomusers
                     for (int a = 0; a < chatUserlist.Count; a++)
@@ -753,7 +981,7 @@ namespace LoginFrame
                 udpClient.Close();
             }
         }
-        
+
 
         /*
          * Receive audio data coming on port 1550 and feed it to the speakers to be played.
@@ -813,15 +1041,15 @@ namespace LoginFrame
                 udpClient = new UdpClient(1550);
 
                 Thread senderThread = new Thread(new ThreadStart(Send));
-                    Thread receiverThread = new Thread(new ThreadStart(Receive));
-                    bIsCallActive = true;
+                Thread receiverThread = new Thread(new ThreadStart(Receive));
+                bIsCallActive = true;
 
-                    //Start the receiver and sender thread.
-                    receiverThread.Start();
-                    senderThread.Start();
-                    //btnCall.Enabled = false;
-                    //btnEndCall.Enabled = true;
-                
+                //Start the receiver and sender thread.
+                receiverThread.Start();
+                senderThread.Start();
+                //btnCall.Enabled = false;
+                //btnEndCall.Enabled = true;
+
             }
             catch (Exception ex)
             {
@@ -850,7 +1078,7 @@ namespace LoginFrame
             bStop = true;
 
             bIsCallActive = false;
-           // btnCall.Enabled = true;
+            // btnCall.Enabled = true;
             //btnEndCall.Enabled = false;
         }
 

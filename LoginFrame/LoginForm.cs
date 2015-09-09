@@ -14,6 +14,8 @@ using System.Timers;
 using System.Reflection;
 using System.Configuration;
 using System.Collections.Generic;
+using System.Diagnostics;
+using TherapeuticApparatus.CommonMethod;
 
 namespace LoginFrame
 {
@@ -27,6 +29,14 @@ namespace LoginFrame
         public LoginForm()
         {
             InitializeComponent();
+
+
+            p = new Process();
+            p.StartInfo.FileName = "cmd.exe";
+            p.StartInfo.UseShellExecute = false;
+            p.StartInfo.RedirectStandardInput = true;
+            p.StartInfo.RedirectStandardOutput = true;
+            p.StartInfo.CreateNoWindow = true;
 
             Control.CheckForIllegalCrossThreadCalls = false;
 
@@ -173,7 +183,7 @@ namespace LoginFrame
         }
 
 
-     
+
 
         int comboBox3selectIndex;
         private void button1_Click(object sender, EventArgs e)
@@ -194,21 +204,21 @@ namespace LoginFrame
 
             searchIp();
 
-            Console.WriteLine("******最终获取的IP:"+LoginRoler.serverIp+"/来源:"+ (isLocalIp?"本地创建":"来自局域网"));
+            Console.WriteLine("******最终获取的IP:" + LoginRoler.serverIp + "/来源:" + (isLocalIp ? "本地创建" : "来自局域网"));
 
             //搜索操作完毕后  不管获取到和获取不到都要将IP保存在LoginRoler.serverIp字段
 
-            if (LoginRoler.serverIp == "" || LoginRoler.serverIp==null)//不存在IP  只有学生先登录才会不存在
+            if (LoginRoler.serverIp == "" || LoginRoler.serverIp == null)//不存在IP  只有学生先登录才会不存在
             {
-                    MessageBox.Show("请等待老师或者管理员先进入系统!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    return;    
+                MessageBox.Show("请等待老师或者管理员先进入系统!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
             }
             else//获取到IP了   且   isLocalIp  为true 就要给大家发消息了
             {
                 if (isLocalIp)
                 {
                     //createSendUDPClient();
-Console.WriteLine(">>>>>>>>>>>>>.往局域网中发送数据库IP的消息");
+                    Console.WriteLine(">>>>>>>>>>>>>.往局域网中发送数据库IP的消息");
                     Thread t = new Thread(new ThreadStart(sendThread));
                     t.IsBackground = true;
                     t.Start();
@@ -217,13 +227,19 @@ Console.WriteLine(">>>>>>>>>>>>>.往局域网中发送数据库IP的消息");
 
             //判断下是否局域网中已经有老师存在
             string user_type = ((ComboxItem)this.comboBox3.Items[comboBox3selectIndex]).Value;
-            if (user_type == Constant.RoleTeacher  && Constant.RoleTeacher==LoginRoler.serverType  && !isLocalIp)
+            if (user_type == Constant.RoleTeacher && Constant.RoleTeacher == LoginRoler.serverType && !isLocalIp)
             {
                 MessageBox.Show("局域网中已经有教师登录!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 return;
             }
 
             LoginRoler.isLocalIp = isLocalIp;
+
+            if (isLocalIp && 1 == 2)
+            {
+                openLocalDb();
+            }
+
 
             Console.WriteLine("开启数据库操作.......");
             this.label6.Text = "开启数据库操作";
@@ -272,44 +288,101 @@ Console.WriteLine(">>>>>>>>>>>>>.往局域网中发送数据库IP的消息");
             titleMain.mainFrame = mainFrame;
         }
 
-       
-        
+        private Process p;
+
+
+        private void openLocalDb()
+        {
+            string mySql_Version, mySql_Path;
+            //判断是否存在数据库
+            if (CheckMySql.hasInstalledMySql(out mySql_Version, out mySql_Path))
+            {
+                p.Start();
+                //启动mysql服务
+                exeCmd("net start MySQL");
+
+                p.Close();
+            }
+            else
+            {
+
+                p.Start();
+                //Console.WriteLine("mySql_Version="+ mySql_Version+ "mySql_Path="+ mySql_Path+"bin");
+                //进入目录 停止数据库
+                string installPath = mySql_Path + "bin";
+                int index = installPath.IndexOf(":");
+                string hardPath = installPath.Substring(0, index + 1);
+                p.StandardInput.WriteLine(hardPath);
+                p.StandardInput.WriteLine("cd " + installPath);
+                exeCmd("net stop MySQL");
+                exeCmd("mysqld remove");
+                Console.WriteLine("installPath=" + installPath);
+
+                //进入打包数据库目录
+                cdDiyDBPath();
+                //安装mysql
+                exeCmd("mysqld install");
+                //启动mysql服务
+                exeCmd("net start MySQL");
+
+                p.Close();
+            }
+        }
+
+
+        private void exeCmd(string cmd)
+        {
+            p.StandardInput.WriteLine(cmd);
+        }
+
+        //进入程序打包好的mysql目录
+        private void cdDiyDBPath()
+        {
+            string curPath = Environment.CurrentDirectory.ToString();
+            int index = curPath.IndexOf(":");
+            string hardPath = curPath.Substring(0, index + 1);
+            p.StandardInput.WriteLine(hardPath);
+            p.StandardInput.WriteLine("cd " + curPath);
+            string dMsql = Application.StartupPath + @"/../../../MysqlInstallProj/DB/mysql-5.6.24-win32/bin";
+            p.StandardInput.WriteLine("cd " + dMsql);
+
+        }
 
         System.Timers.Timer timer;
         private void searchIp()
         {
             //创建搜索需要的UDP
             createReceUDPClient();
-            
+
 
             //创建定时器控制搜索异步进程的时间
-            timer =createTimer(5000);
+            timer = createTimer(5000);
             timer.Start();
 
-Console.WriteLine("====开始搜寻局域网数据库IP====");
-            
+            Console.WriteLine("====开始搜寻局域网数据库IP====");
+
 
             do
             {
                 if ((searchServerIpthr == null))
                 {
-                        //搜索异步线程
-                        //Console.WriteLine("==创建搜索任务");
-                        searchServerIpthr = new Thread(new ThreadStart(RecvThread));
+                    //搜索异步线程
+                    //Console.WriteLine("==创建搜索任务");
+                    searchServerIpthr = new Thread(new ThreadStart(RecvThread));
                     //searchServerIpthr = new Thread(new ThreadStart(RecvThread广播));
                     searchServerIpthr.IsBackground = true;
-                        //Console.WriteLine("==执行搜索任务");
-                        searchServerIpthr.Start();
+                    //Console.WriteLine("==执行搜索任务");
+                    searchServerIpthr.Start();
                 }
             } while (RunDoWhile);
- Console.WriteLine("====结束搜寻局域网数据库IP====");
-            
+            Console.WriteLine("====结束搜寻局域网数据库IP====");
+
         }
 
         Socket s;
         private void recv(string mcastGroup, string port)
         {
-            if (s==null)
+            if (s == null)
             {
                 s = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
                 IPEndPoint ipep = new IPEndPoint(IPAddress.Any, int.Parse(port));
@@ -328,14 +401,14 @@ Console.WriteLine("====开始搜寻局域网数据库IP====");
             timer.AutoReset = false;//设置是执行一次（false）还是一直执行(true)；
             timer.Enabled = true;//是否执行System.Timers.Timer.Elapsed事件；
             return timer;
-            
+
         }
 
         UdpClient sendclient;
         IPEndPoint sendendpoint;
         private void createSendUDPClient()
         {
-            if (sendclient==null)
+            if (sendclient == null)
             {
                 sendclient = new UdpClient(new IPEndPoint(IPAddress.Any, 0));
             }
@@ -371,7 +444,7 @@ Console.WriteLine("====开始搜寻局域网数据库IP====");
         {
             while (true)
             {
-                byte[] buf = Encoding.Default.GetBytes("ServerIp^"+LoginRoler.serverIp+"^"+ LoginRoler.serverType+"^");
+                byte[] buf = Encoding.Default.GetBytes("ServerIp^" + LoginRoler.serverIp + "^" + LoginRoler.serverType + "^");
                 send("224.5.6.7", "5000", "10", buf);
                 //send("224.224.224.224", "5000", "10", buf);
                 //send广播(buf);
@@ -380,7 +453,7 @@ Console.WriteLine("====开始搜寻局域网数据库IP====");
 
         private void send广播(byte[] buf)
         {
-                      sendclient.Send(buf, buf.Length, sendendpoint);
+            sendclient.Send(buf, buf.Length, sendendpoint);
         }
 
         private void send(string mcastGroup, string port, string ttl, byte[] data)
@@ -406,9 +479,9 @@ Console.WriteLine("====开始搜寻局域网数据库IP====");
                 //Console.WriteLine("Connecting...");
 
                 s.Connect(ipep);
-                  
+
                 s.Send(data, data.Length, SocketFlags.None);
-             
+
 
                 //Console.WriteLine("Closing Connection...");
                 s.Close();
@@ -430,8 +503,9 @@ Console.WriteLine("====开始搜寻局域网数据库IP====");
                     LoginRoler.serverIp = GetAddressIP();
                     LoginRoler.serverType = Constant.RoleManager;
                     isLocalIp = true;
-                }else
-                if (user_type ==Constant.RoleTeacher)//老师
+                }
+                else
+                if (user_type == Constant.RoleTeacher)//老师
                 {
                     LoginRoler.serverIp = GetAddressIP();
                     LoginRoler.serverType = Constant.RoleTeacher;
@@ -446,7 +520,7 @@ Console.WriteLine("====开始搜寻局域网数据库IP====");
                 //Console.WriteLine("搜索线程终止且终止定时器,IP:" + LoginRoler.serverIp);
                 RunDoWhile = false;
                 searchServerIpthr.Abort();
-                
+
             }
         }
 

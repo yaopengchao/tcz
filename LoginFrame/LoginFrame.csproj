@@ -184,6 +184,7 @@
     <Compile Include="BodyTopic.Designer.cs">
       <DependentUpon>BodyTopic.cs</DependentUpon>
     </Compile>
+    <Compile Include="CheckMySql.cs" />
     <Compile Include="ComboxItem.cs" />
     <Compile Include="CSerialClass.cs" />
     <Compile Include="ExcelRW.cs" />
