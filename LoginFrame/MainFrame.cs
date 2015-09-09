@@ -1627,5 +1627,26 @@ namespace LoginFrame
             panel6.Controls.Add(bodyTakeExam);
             bodyTakeExam.Show();
         }
+
+        private void 考试成绩ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel5.Hide();
+
+            panel1.Controls.Clear();
+            TitleScore titleScore = TitleScore.createForm();
+            titleScore.TopLevel = false;
+            titleScore.FormBorderStyle = FormBorderStyle.None;
+            titleScore.Dock = System.Windows.Forms.DockStyle.Fill;
+            panel1.Controls.Add(titleScore);
+            titleScore.Show();
+
+            panel6.Controls.Clear();
+            BodyScore bodyScore = BodyScore.createForm();
+            bodyScore.TopLevel = false;
+            bodyScore.FormBorderStyle = FormBorderStyle.None;
+            bodyScore.Dock = System.Windows.Forms.DockStyle.Fill;
+            panel6.Controls.Add(bodyScore);
+            bodyScore.Show();
+        }
     }
 }

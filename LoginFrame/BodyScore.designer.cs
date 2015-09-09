@@ -32,22 +32,14 @@
             this.查询条件 = new System.Windows.Forms.GroupBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnQuery = new System.Windows.Forms.Button();
-            this.txtUserName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.pageCtrl = new LoginFrame.PageControl();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.查询条件.SuspendLayout();
             this.SuspendLayout();
             // 
             // 查询条件
             // 
-            this.查询条件.Controls.Add(this.textBox1);
-            this.查询条件.Controls.Add(this.label2);
             this.查询条件.Controls.Add(this.btnClear);
             this.查询条件.Controls.Add(this.btnQuery);
-            this.查询条件.Controls.Add(this.txtUserName);
-            this.查询条件.Controls.Add(this.label1);
             resources.ApplyResources(this.查询条件, "查询条件");
             this.查询条件.Name = "查询条件";
             this.查询条件.TabStop = false;
@@ -66,16 +58,6 @@
             this.btnQuery.UseVisualStyleBackColor = true;
             this.btnQuery.Click += new System.EventHandler(this.btnQuery_Click);
             // 
-            // txtUserName
-            // 
-            resources.ApplyResources(this.txtUserName, "txtUserName");
-            this.txtUserName.Name = "txtUserName";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
             // pageCtrl
             // 
             this.pageCtrl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -90,16 +72,6 @@
             this.pageCtrl.Widths = new int[0];
             this.pageCtrl.Load += new System.EventHandler(this.pageControl1_Load);
             // 
-            // textBox1
-            // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
-            // 
             // BodyScore
             // 
             resources.ApplyResources(this, "$this");
@@ -109,9 +81,8 @@
             this.Controls.Add(this.pageCtrl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BodyScore";
-            this.Load += new System.EventHandler(this.BodyTea_Load);
+            this.Load += new System.EventHandler(this.BodyScore_Load);
             this.查询条件.ResumeLayout(false);
-            this.查询条件.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -121,9 +92,5 @@
         private System.Windows.Forms.GroupBox 查询条件;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnQuery;
-        private System.Windows.Forms.TextBox txtUserName;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
     }
 }

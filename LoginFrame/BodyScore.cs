@@ -16,7 +16,7 @@ namespace LoginFrame
     public partial class BodyScore : Form
     {
 
-        private static UserService userService;
+        private static ExamResultService examResultService;
 
         private static Dictionary<string, string> strWheres;
 
@@ -25,17 +25,17 @@ namespace LoginFrame
             InitializeComponent();
         }
 
-        private static BodyTea instance;
+        private static BodyScore instance;
 
-        public static BodyTea createForm()
+        public static BodyScore createForm()
         {
             if (instance == null || instance.IsDisposed)
             {
-                instance = new BodyTea();
+                instance = new BodyScore();
             }
-            if (userService == null)
+            if (examResultService == null)
             {
-                userService = UserService.getInstance();
+                examResultService = ExamResultService.getInstance();
             }
             if (strWheres == null)
             {
@@ -59,7 +59,7 @@ namespace LoginFrame
         {
             int startIndex = pageCtrl.StartIndex;
             int pageSize = pageCtrl.PageSize;
-            DataSet ds = userService.listTeachers(strWheres, startIndex, pageSize);
+            DataSet ds = examResultService.listExams(strWheres, startIndex, pageSize);
             pageCtrl.bs.DataSource = ds.Tables[0];
         }
 
@@ -73,28 +73,29 @@ namespace LoginFrame
             strWheres.Clear();
 
             pageCtrl.strWheres = strWheres;
-            string userName = txtUserName.Text;
+            string userName = "";
             if (userName != null && !userName.Equals(""))
             {
                 //strWheres.Add("a.user_name", " like '%" + userName + "%' ");
             }
+
             loadCount(strWheres);
             loadData(strWheres);
 
-            string[] cols = new string[] { "考试类型","考试名称","考试开始时间","考试时长" };
+            string[] cols = new string[] { "考试类型","考试名称","考试时长" };
             pageCtrl.Cols = cols;
             pageCtrl.dg.Columns[0].Visible = false;
-            int[] widths = new int[] { 150, 200, 200, 300 };
+            int[] widths = new int[] { 200, 200, 200};
             pageCtrl.Widths = widths;
         }
 
         private void loadCount(Dictionary<string, string> strWheres)
         {
-            int userCount = userService.countTeachers(strWheres);
+            int userCount = examResultService.countExams(strWheres);
             pageCtrl.TotalRecord = userCount;
         }
 
-        private void BodyTea_Load(object sender, EventArgs e)
+        private void BodyScore_Load(object sender, EventArgs e)
         {
             if (LoginRoler.language == Constant.zhCN)
             {
@@ -116,7 +117,7 @@ namespace LoginFrame
         /// </summary>
         private void ApplyResource()
         {
-            System.ComponentModel.ComponentResourceManager res = new ComponentResourceManager(typeof(BodyTea));
+            System.ComponentModel.ComponentResourceManager res = new ComponentResourceManager(typeof(BodyScore));
             foreach (Control ctl in Controls)
             {
                 res.ApplyResources(ctl, ctl.Name);
@@ -129,7 +130,7 @@ namespace LoginFrame
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            txtUserName.Text = "";
+            //txtUserName.Text = "";
             btnQuery_Click(sender, e);
         }
 
@@ -143,18 +144,6 @@ namespace LoginFrame
             
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            int userId = Convert.ToInt32(pageCtrl.dg.CurrentRow.Cells[0].Value);
-            if (userId > 0)
-            {
-                DialogResult dr = MessageBox.Show("确定要删除'" + pageCtrl.dg.CurrentRow.Cells[1].Value + "'吗？", "确认删除", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                if (dr == DialogResult.OK)
-                {
-                    userService.deleteUser(userId);
-                    btnQueryClick();
-                }
-            }
-        }
+        
     }
 }

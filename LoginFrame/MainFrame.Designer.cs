@@ -44,6 +44,7 @@
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
+            this.考试成绩ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -90,6 +91,7 @@
             this.主页ToolStripMenuItem,
             this.toolStripMenuItem1,
             this.toolStripMenuItem2,
+            this.考试成绩ToolStripMenuItem,
             this.toolStripMenuItem3,
             this.toolStripMenuItem4,
             this.toolStripMenuItem5,
@@ -174,6 +176,12 @@
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
             resources.ApplyResources(this.toolStripMenuItem7, "toolStripMenuItem7");
+            // 
+            // 考试成绩ToolStripMenuItem
+            // 
+            this.考试成绩ToolStripMenuItem.Name = "考试成绩ToolStripMenuItem";
+            resources.ApplyResources(this.考试成绩ToolStripMenuItem, "考试成绩ToolStripMenuItem");
+            this.考试成绩ToolStripMenuItem.Click += new System.EventHandler(this.考试成绩ToolStripMenuItem_Click);
             // 
             // toolStripMenuItem8
             // 
@@ -275,5 +283,6 @@
         public System.Windows.Forms.ToolStripMenuItem exMenu2;
         public System.Windows.Forms.ToolStripMenuItem exMenu3;
         public System.Windows.Forms.ToolStripMenuItem exMenu4;
+        private System.Windows.Forms.ToolStripMenuItem 考试成绩ToolStripMenuItem;
     }
 }

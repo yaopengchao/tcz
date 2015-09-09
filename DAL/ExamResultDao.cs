@@ -49,6 +49,30 @@ namespace DAL
             parames[1].Value = examResult.ExamResultId;
             return Convert.ToInt32(MySqlHelper.ExecuteNonQuery(strSql, parames));
         }
+       
+        public DataSet listUserExamResult(Dictionary<string, string> strWheres, int startIndex, int pageSize)
+        {
+            string strSql = "select EXAM_RESULT_ID, USER_ID, EXAMINATION_ID, EXAMINATION_DETAIL_ID, TOPIC_ID, ANSWERS from ex_exam_result where 1 = 1 ";
+            return listEntity(strSql, strWheres, startIndex, pageSize);
+        }
 
+
+        public DataSet listExams(Dictionary<string, string> strWheres, int startIndex, int pageSize)
+        {
+            string strSql = " select t2.EX_TYPE 考试类型,t2.EXAM_NAME 考试名称,t2.TOTAL_MINS 考试时长 from ex_exam_result t1,ex_examination t2 where t1.EXAMINATION_ID=t2.EXAMINATION_ID ";
+            return listEntity(strSql, strWheres, startIndex, pageSize);
+        }
+
+        public int countUserExamResult(Dictionary<string, string> strWheres)
+        {
+            string strSql = "select count(1) from ex_exam_result a where 1 = 1 ";
+            return countEntity(strSql, strWheres);
+        }
+
+        public int countExams(Dictionary<string, string> strWheres)
+        {
+            string strSql = " select count(1) from ex_exam_result t1,ex_examination t2 where t1.EXAMINATION_ID=t2.EXAMINATION_ID ";
+            return countEntity(strSql, strWheres);
+        }
     }
 }

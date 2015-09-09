@@ -52,6 +52,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TitleScore";
             this.Text = "TitleScore";
+            this.Load += new System.EventHandler(this.TitleScore_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

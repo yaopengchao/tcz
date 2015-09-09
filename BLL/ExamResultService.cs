@@ -33,6 +33,28 @@ namespace BLL
             return examResultDao.listExamResults(strWheres).Tables[0];
         }
 
+
+        public DataSet listUserExamResult(Dictionary<string, string> strWheres, int startIndex, int pageSize)
+        {
+            return examResultDao.listUserExamResult(strWheres, startIndex, pageSize);
+        }
+
+
+        public DataSet listExams(Dictionary<string, string> strWheres, int startIndex, int pageSize)
+        {
+            return examResultDao.listExams(strWheres, startIndex, pageSize);
+        }
+
+        public int countUserExamResult(Dictionary<string, string> strWheres)
+        {
+            return examResultDao.countUserExamResult(strWheres);
+        }
+
+        public int countExams(Dictionary<string, string> strWheres)
+        {
+            return examResultDao.countExams(strWheres);
+        }
+
         public int addOrUpdateExamResult(ExamResult examResult)
         {
             int examResultId = examResult.ExamResultId;
