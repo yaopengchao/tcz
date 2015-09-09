@@ -163,6 +163,7 @@ namespace LoginFrame
             {
                 results.Add(preText);
             }
+            results.Sort();
             labResult.Text = getResults(results);
         }
 
