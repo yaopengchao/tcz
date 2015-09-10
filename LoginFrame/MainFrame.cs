@@ -1611,7 +1611,7 @@ namespace LoginFrame
             panel5.Hide();
 
             panel1.Controls.Clear();
-            TitleTakeExam titleTakeExam = TitleTakeExam.createForm();
+            TitleTakeExam titleTakeExam = new TitleTakeExam();
             titleTakeExam.TopLevel = false;
             titleTakeExam.FormBorderStyle = FormBorderStyle.None;
             titleTakeExam.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1619,7 +1619,7 @@ namespace LoginFrame
             titleTakeExam.Show();
 
             panel6.Controls.Clear();
-            BodyTakeExam bodyTakeExam = BodyTakeExam.createForm();
+            BodyTakeExam bodyTakeExam = new BodyTakeExam();
             bodyTakeExam.mainFrame = this;
             bodyTakeExam.TopLevel = false;
             bodyTakeExam.FormBorderStyle = FormBorderStyle.None;
