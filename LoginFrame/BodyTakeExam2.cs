@@ -140,17 +140,20 @@ namespace LoginFrame
         private void parseAnswers(string answers)
         {
             results.Clear();
-            if (answers.IndexOf("、") > -1)
+            if (answers != "")
             {
-                string[] answerArr = answers.Split('、');
-                foreach (string answer in answerArr)
+                if (answers.IndexOf("、") > -1)
                 {
-                    results.Add(answer);
+                    string[] answerArr = answers.Split('、');
+                    foreach (string answer in answerArr)
+                    {
+                        results.Add(answer);
+                    }
                 }
-            }
-            else
-            {
-                results.Add(answers);
+                else
+                {
+                    results.Add(answers);
+                }
             }
         }
 
@@ -238,8 +241,9 @@ namespace LoginFrame
             showTopic(dt, cur);
         }
 
-        private void btnSubmit_Click(object sender, EventArgs e)
+        public void btnSubmit_Click(object sender, EventArgs e)
         {
+            takeExam.mainFrame.panel1.Controls.Clear();
             TitleMain titleMain = TitleMain.createForm();
             titleMain.TopLevel = false;
             titleMain.FormBorderStyle = FormBorderStyle.None;
