@@ -22,6 +22,7 @@ namespace LoginFrame
         private DataTable dt;
 
         private List<int> examIds = new List<int>();
+        private List<DateTime> endTimes = new List<DateTime>();
 
         private static BodyTakeExam instance;
 
@@ -47,6 +48,7 @@ namespace LoginFrame
         {
             DateTime now = DateTime.Now;
             examIds.Clear();
+            endTimes.Clear();
             dt = examService.listExams();
 
             for (int i = 0; i < dt.Rows.Count; i++)
@@ -58,6 +60,7 @@ namespace LoginFrame
                 int totalMins = Convert.ToInt32(dt.Rows[i].ItemArray[3]);
                 DateTime st = DateTime.ParseExact(startTime, "yyyy-MM-dd HH:mm", System.Globalization.CultureInfo.CurrentCulture);
                 st = st.AddMinutes(totalMins);
+                endTimes.Add(st);
                 if (DateTime.Compare(now, st) < 0)
                 {
                     Label labExName = new Label();
@@ -92,6 +95,8 @@ namespace LoginFrame
             string buttonName = ((Button)sender).Name;
             int index = Convert.ToInt32(buttonName.Substring(buttonName.LastIndexOf("n") + 1));
             int examId = examIds[index];
+            DateTime endTime = endTimes[index];
+
             mainFrame.panel6.Controls.Clear();
             BodyTakeExam2 exam2 = new BodyTakeExam2();
             exam2.TopLevel = false;
@@ -101,6 +106,16 @@ namespace LoginFrame
             exam2.Dock = System.Windows.Forms.DockStyle.Fill;
             mainFrame.panel6.Controls.Add(exam2);
             exam2.Show();
+
+            mainFrame.panel1.Controls.Clear();
+            TitleTakeExam2 takeExam = new TitleTakeExam2();
+            takeExam.TopLevel = false;
+            takeExam.bodyTakeExam2 = exam2;
+            takeExam.endTime = endTime;
+            takeExam.FormBorderStyle = FormBorderStyle.None;
+            takeExam.Dock = System.Windows.Forms.DockStyle.Fill;
+            mainFrame.panel1.Controls.Add(takeExam);
+            takeExam.Show();
         }
 
     }

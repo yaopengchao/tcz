@@ -73,18 +73,21 @@ namespace LoginFrame
         private void parseAnswers(string answers)
         {
             results.Clear();
-            if (answers.IndexOf("、") > -1)
+            if (answers != "")
             {
-                string[] answerArr = answers.Split('、');
-                foreach (string answer in answerArr)
+                if (answers.IndexOf("、") > -1)
                 {
-                    results.Add(answer);
+                    string[] answerArr = answers.Split('、');
+                    foreach (string answer in answerArr)
+                    {
+                        results.Add(answer);
+                    }
                 }
-            }
-            else
-            {
-                results.Add(answers);
-            }
+                else
+                {
+                    results.Add(answers);
+                }
+            }            
         }
 
         private void showTopic(DataTable dt, int cur)

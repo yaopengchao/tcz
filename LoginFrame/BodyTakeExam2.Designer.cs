@@ -76,7 +76,7 @@
             this.labResult.AutoSize = true;
             this.labResult.Font = new System.Drawing.Font("宋体", 16F);
             this.labResult.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labResult.Location = new System.Drawing.Point(304, 489);
+            this.labResult.Location = new System.Drawing.Point(304, 454);
             this.labResult.Name = "labResult";
             this.labResult.Size = new System.Drawing.Size(0, 22);
             this.labResult.TabIndex = 12;
