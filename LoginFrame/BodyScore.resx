@@ -189,28 +189,49 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;查询条件.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="pageCtrl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 101</value>
+    <value>0, 0</value>
   </data>
   <data name="pageCtrl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>980, 483</value>
+    <value>977, 491</value>
   </data>
   <data name="pageCtrl.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="&gt;&gt;pageCtrl.Name" xml:space="preserve">
     <value>pageCtrl</value>
   </data>
   <data name="&gt;&gt;pageCtrl.Type" xml:space="preserve">
-    <value>LoginFrame.PageControl, LoginFrame, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>LoginFrame.PageControl2, LoginFrame, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pageCtrl.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;pageCtrl.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 101</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>980, 491</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

@@ -59,7 +59,7 @@ namespace DAL
 
         public DataSet listExams(Dictionary<string, string> strWheres, int startIndex, int pageSize)
         {
-            string strSql = " select t2.EX_TYPE 考试类型,t2.EXAM_NAME 考试名称,t2.TOTAL_MINS 考试时长 from ex_exam_result t1,ex_examination t2 where t1.EXAMINATION_ID=t2.EXAMINATION_ID ";
+            string strSql = " select t1.EXAM_RESULT_ID as EXAM_RESULT_ID,t2.EXAMINATION_ID as EXAMINATION_ID,t2.EXAM_NAME as 考试名称,t2.TOTAL_MINS as 考试时长 from ex_exam_result t1,ex_examination t2 where t1.EXAMINATION_ID=t2.EXAMINATION_ID ";
             return listEntity(strSql, strWheres, startIndex, pageSize);
         }
 

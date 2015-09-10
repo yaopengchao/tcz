@@ -160,6 +160,12 @@
     <Compile Include="BodySelfTest2.Designer.cs">
       <DependentUpon>BodySelfTest2.cs</DependentUpon>
     </Compile>
+    <Compile Include="CheckBodySelfTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckBodySelfTest.Designer.cs">
+      <DependentUpon>CheckBodySelfTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="BodySelfTest3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +203,12 @@
     </Compile>
     <Compile Include="MuLawDecoder.cs" />
     <Compile Include="MuLawEncoder.cs" />
+    <Compile Include="PageControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PageControl2.Designer.cs">
+      <DependentUpon>PageControl2.cs</DependentUpon>
+    </Compile>
     <Compile Include="PageControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -382,6 +394,9 @@
     <EmbeddedResource Include="BodySelfTest2.zh-CN.resx">
       <DependentUpon>BodySelfTest2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CheckBodySelfTest.resx">
+      <DependentUpon>CheckBodySelfTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BodySelfTest3.resx">
       <DependentUpon>BodySelfTest3.cs</DependentUpon>
     </EmbeddedResource>
@@ -432,6 +447,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModifyPassword.resx">
       <DependentUpon>ModifyPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageControl2.en.resx">
+      <DependentUpon>PageControl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageControl2.resx">
+      <DependentUpon>PageControl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageControl2.zh-CN.resx">
+      <DependentUpon>PageControl2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PageControl.en.resx">
       <DependentUpon>PageControl.cs</DependentUpon>

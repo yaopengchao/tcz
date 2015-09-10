@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace LoginFrame
 {
-    partial class PageControl
+    partial class PageControl2
     {
         /// <summary> 
         /// 必需的设计器变量。
@@ -32,7 +32,7 @@ namespace LoginFrame
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PageControl));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PageControl2));
             this.bn = new System.Windows.Forms.BindingNavigator(this.components);
             this.btnFirstPage = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -228,15 +228,16 @@ namespace LoginFrame
             this.dg.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dg_RowsRemoved);
             this.dg.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dg_RowStateChanged);
             this.dg.Click += new System.EventHandler(this.dg_Click);
+
             // 
-            // PageControl
+            // PageControl2
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.dg);
             this.Controls.Add(this.bn);
-            this.Name = "PageControl";
+            this.Name = "PageControl2";
             this.Load += new System.EventHandler(this.PageControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bn)).EndInit();
             this.bn.ResumeLayout(false);

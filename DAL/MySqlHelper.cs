@@ -80,12 +80,6 @@ namespace DAL
             return i;
         }
 
-
-
-
-
-
-
         public static DataSet DateSet(string strSql)
         {
             DataSet ds = new DataSet();

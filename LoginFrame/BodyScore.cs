@@ -49,12 +49,25 @@ namespace LoginFrame
 
         }
 
-        private void pageControl1_Load(object sender, EventArgs e)
+        private void pageControl2_Load(object sender, EventArgs e)
         {
-            pageCtrl.loadData = new PageControl.loadDataEventHandler(loadData);
+            pageCtrl.loadData = new PageControl2.loadDataEventHandler(loadData);
+            pageCtrl.dg.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
             btnQuery_Click(sender, e);
         }
 
+        private void dgvData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView tempGdv = sender as DataGridView;//获取事件发送者
+            if (e.RowIndex > -1 && e.ColumnIndex > -1)//防止 Index 出错
+            {
+                this.panel1.Controls.Clear();
+
+                
+                String tempStr = tempGdv.Rows[e.RowIndex].Cells[1].Value.ToString();
+                MessageBox.Show("tempStr=" + tempStr);
+            }
+        }
         public void loadData(Dictionary<string, string> strWheres)
         {
             int startIndex = pageCtrl.StartIndex;
@@ -82,10 +95,10 @@ namespace LoginFrame
             loadCount(strWheres);
             loadData(strWheres);
 
-            string[] cols = new string[] { "考试类型","考试名称","考试时长" };
+            string[] cols = new string[] { "考试ID","考试名称","考试时长" };
             pageCtrl.Cols = cols;
             pageCtrl.dg.Columns[0].Visible = false;
-            int[] widths = new int[] { 200, 200, 200};
+            int[] widths = new int[] { 100,100,200};
             pageCtrl.Widths = widths;
         }
 

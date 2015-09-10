@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace LoginFrame
 {
-    public partial class PageControl : UserControl
+    public partial class PageControl2 : UserControl
     {
         public delegate void loadDataEventHandler(Dictionary<string, string> strWheres);
         public delegate void cellClickEventHandler();
@@ -21,7 +21,7 @@ namespace LoginFrame
         public Boolean pageShow = true;
         public Boolean firstCellShow = true;
 
-        public PageControl()
+        public PageControl2()
         {
             InitializeComponent();
         }
@@ -276,6 +276,6 @@ namespace LoginFrame
             cellClick();
         }
 
-       
+        
     }
 }
