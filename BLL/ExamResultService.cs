@@ -40,6 +40,19 @@ namespace BLL
         }
 
 
+        public DataTable getUserExams(Dictionary<string, string> strWheres)
+        {
+            return examResultDao.getUserExams(strWheres).Tables[0];
+        }
+
+
+        public DataTable getAllUserExams(Dictionary<string, string> strWheres)
+        {
+            return examResultDao.getAllUserExams(strWheres).Tables[0];
+        }
+
+        
+
         public DataSet listUserExamResult(Dictionary<string, string> strWheres, int startIndex, int pageSize)
         {
             return examResultDao.listUserExamResult(strWheres, startIndex, pageSize);

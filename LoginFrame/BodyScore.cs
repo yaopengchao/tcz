@@ -20,6 +20,8 @@ namespace LoginFrame
 
         private static Dictionary<string, string> strWheres;
 
+        ExamResultService Bll = new ExamResultService();
+
         public BodyScore()
         {
             InitializeComponent();
@@ -88,16 +90,40 @@ namespace LoginFrame
             strWheres.Clear();
 
             pageCtrl.strWheres = strWheres;
-            string userName = "";
-            if (userName != null && !userName.Equals(""))
+
+            //考试名称,考生姓名,考试开始时间  dateTimePicker1 结束时间 dateTimePicker2
+            if (this.comboBox1.Text.Length>0)
             {
-                //strWheres.Add("a.user_name", " like '%" + userName + "%' ");
+                string exam_id = this.comboBox1.SelectedValue.ToString();
+                if (exam_id != null && !exam_id.Equals(""))
+                {
+                    strWheres.Add(" t1.EXAMINATION_ID", " = '" + exam_id + "' ");
+                }
+            }
+
+            string userName = this.userName.Text;
+            if (userName!= null && !userName.Equals(""))
+            {
+                strWheres.Add(" u.user_name", " like '%" + userName + "%' ");
+            }
+
+            string dateTimePicker1 = this.dateTimePicker1.Value.ToString("yyyy-MM-dd");
+            if (dateTimePicker1 != null && !dateTimePicker1.Equals(""))
+            {
+                strWheres.Add(" t2.start_time", " >= '" + dateTimePicker1 + "  00:00:00' ");
+            }
+
+            //
+            string dateTimePicker2 = this.dateTimePicker2.Value.ToString("yyyy-MM-dd");
+            if (dateTimePicker2 != null && !dateTimePicker2.Equals(""))
+            {
+                strWheres.Add(" t2.start_time    ", " <= '" + dateTimePicker2 + "  23:59:59' ");
             }
 
             loadCount(strWheres);
             loadData(strWheres);
 
-            string[] cols = new string[] { "结果ID","考试ID","考生ID","考试名称","考生姓名","考试时长","考试成绩" };
+            string[] cols = new string[] { "结果ID","考试ID","考生ID","考试名称","考生姓名","考试时长", "得分率" };
             pageCtrl.Cols = cols;
             pageCtrl.dg.Columns[0].Visible = false;
             int[] widths = new int[] { 300,200,200,200,200,200 };
@@ -120,8 +146,89 @@ namespace LoginFrame
             {
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
             }
+
+           
+            
+
             //对当前窗体应用更改后的资源
             ApplyResource();
+
+            loadUserExams();
+
+            
+
+        }
+
+
+        public void AdjustComboBoxDropDownListWidth(object comboBox)
+        {
+            Graphics g = null;
+            Font font = null;
+            try
+            {
+                ComboBox senderComboBox = null;
+                if (comboBox is ComboBox)
+                    senderComboBox = (ComboBox)comboBox;
+                else if (comboBox is ToolStripComboBox)
+                    senderComboBox = ((ToolStripComboBox)comboBox).ComboBox;
+                else
+                    return;
+
+                int width = senderComboBox.Width;
+                g = senderComboBox.CreateGraphics();
+                font = senderComboBox.Font;
+
+                //checks if a scrollbar will be displayed.
+                //If yes, then get its width to adjust the size of the drop down list.
+                int vertScrollBarWidth =
+                    (senderComboBox.Items.Count > senderComboBox.MaxDropDownItems)
+                    ? SystemInformation.VerticalScrollBarWidth : 0;
+
+                int newWidth;
+                foreach (object s in senderComboBox.Items)  //Loop through list items and check size of each items.
+                {
+                    if (s != null)
+                    {
+                        newWidth = (int)g.MeasureString(s.ToString().Trim(), font).Width
+                            + vertScrollBarWidth;
+                        if (width < newWidth)
+                            width = newWidth;   //set the width of the drop down list to the width of the largest item.
+                    }
+                }
+                senderComboBox.DropDownWidth = width;
+            }
+            catch
+            { }
+            finally
+            {
+                if (g != null)
+                    g.Dispose();
+            }
+        }
+
+        private void loadUserExams()
+        {
+
+            if (LoginRoler.roleid.Equals(Constant.RoleStudent))
+            {
+                strWheres.Clear();
+                strWheres.Add("result.USER_ID", " = " + LoginRoler.userId);
+                this.comboBox1.Items.Clear();
+                this.comboBox1.DataSource = Bll.getUserExams(strWheres);
+                this.comboBox1.DisplayMember = "ExamName";
+                this.comboBox1.ValueMember = "ExamId";
+            }
+            else
+            {
+                strWheres.Clear();
+                this.comboBox1.Items.Clear();
+                this.comboBox1.DataSource = Bll.getAllUserExams(strWheres);
+                this.comboBox1.DisplayMember = "ExamName";
+                this.comboBox1.ValueMember = "ExamId";
+            }
+            this.comboBox1.SelectedIndex = -1;
+
+            AdjustComboBoxDropDownListWidth(comboBox1);
         }
 
 
@@ -159,6 +266,11 @@ namespace LoginFrame
             
         }
 
-        
+        private void userName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }
