@@ -16,6 +16,8 @@ namespace LoginFrame
 
         public int examId;
 
+        public string user_id;
+
         private ExamService examService;
 
         private TopicService topicService;
@@ -90,14 +92,14 @@ namespace LoginFrame
         private void showTopic(DataTable dt, int cur)
         {
             items = new List<Control>();
-            examId = Convert.ToInt32(dt.Rows[cur].ItemArray[0]);
+            examId = examId;
             examDetailId = Convert.ToInt32(dt.Rows[cur].ItemArray[1]);
             topicId = Convert.ToInt32(dt.Rows[cur].ItemArray[2]);
             strWheres.Clear();
             strWheres.Add("examination_id", " = " + examId);
             strWheres.Add("examination_detail_id", " = " + examDetailId);
             strWheres.Add("topic_id", " = " + topicId);
-            strWheres.Add("user_id", " = " + LoginRoler.userId);
+            strWheres.Add("user_id", " = " + user_id);
             DataTable examResultDt = examResultService.listExamResult(strWheres);
             if (examResultDt != null && examResultDt.Rows.Count > 0)
             {
@@ -110,7 +112,27 @@ namespace LoginFrame
             {
                 results.Clear();
                 labResult.Text = getResults(results);
-            }       
+            }
+
+
+            //正确答案  显示
+            strWheres.Clear();
+            strWheres.Add("topic_id", " = " + topicId);
+            DataTable examRightResultDt = examResultService.listExamRightResult(strWheres);
+            if (examRightResultDt != null && examRightResultDt.Rows.Count > 0)
+            {
+                answer = Convert.ToString(examRightResultDt.Rows[0].ItemArray[0]);
+                parseAnswers(answer);
+                labRightResult.Text = getResults(results);
+            }
+            else
+            {
+                results.Clear();
+                labRightResult.Text = getResults(results);
+            }
+
+
+            
 
             labTopicOrder.Text = cur + 1 + ".";
             labContent.Text = Convert.ToString(dt.Rows[cur].ItemArray[3]);            
@@ -140,6 +162,18 @@ namespace LoginFrame
                 items.Add(lab);                
             }
             this.Controls.AddRange(items.ToArray());
+            
+            isRightAnswers(labResult.Text, labRightResult.Text);
+        }
+
+        private void isRightAnswers(string result, string rightResult)
+        {
+            //判定答案是否正确
+            if (!result.Equals(rightResult))
+            {
+                labResult.BackColor = Color.Red;
+                label2.BackColor = Color.Red;
+            }
         }
 
         private void clearLabels()
@@ -245,21 +279,12 @@ namespace LoginFrame
         private void btnSubmit_Click(object sender, EventArgs e)
         {
 
-            TitleMain titleMain = TitleMain.createForm();
-            titleMain.TopLevel = false;
-            titleMain.FormBorderStyle = FormBorderStyle.None;
-            titleMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            selfTest2.self.mainFrame.panel1.Controls.Add(titleMain);
-            titleMain.Show();
+            this.Close();
+        }
 
-            //加载主体栏
-            selfTest2.self.mainFrame.panel6.Controls.Clear();
-            BodyMain bodyMain = BodyMain.createForm();
-            bodyMain.TopLevel = false;
-            bodyMain.FormBorderStyle = FormBorderStyle.None;
-            bodyMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            selfTest2.self.mainFrame.panel6.Controls.Add(bodyMain);
-            bodyMain.Show();
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

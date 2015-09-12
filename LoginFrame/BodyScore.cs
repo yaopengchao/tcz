@@ -61,11 +61,13 @@ namespace LoginFrame
             DataGridView tempGdv = sender as DataGridView;//获取事件发送者
             if (e.RowIndex > -1 && e.ColumnIndex > -1)//防止 Index 出错
             {
-                this.panel1.Controls.Clear();
-
-                
-                String tempStr = tempGdv.Rows[e.RowIndex].Cells[1].Value.ToString();
-                MessageBox.Show("tempStr=" + tempStr);
+                CheckBodySelfTest checkBodySelfTest = new CheckBodySelfTest();
+                checkBodySelfTest.TopLevel = true;
+                checkBodySelfTest.user_id = tempGdv.Rows[e.RowIndex].Cells[2].Value.ToString();
+                checkBodySelfTest.examId = Convert.ToInt32(tempGdv.Rows[e.RowIndex].Cells[1].Value.ToString()); 
+                checkBodySelfTest.FormBorderStyle = FormBorderStyle.None;
+                checkBodySelfTest.Dock = System.Windows.Forms.DockStyle.Fill;
+                checkBodySelfTest.ShowDialog();
             }
         }
         public void loadData(Dictionary<string, string> strWheres)
@@ -95,10 +97,10 @@ namespace LoginFrame
             loadCount(strWheres);
             loadData(strWheres);
 
-            string[] cols = new string[] { "考试ID","考试名称","考试时长" };
+            string[] cols = new string[] { "结果ID","考试ID","考生ID","考试名称","考生姓名","考试时长","考试成绩" };
             pageCtrl.Cols = cols;
             pageCtrl.dg.Columns[0].Visible = false;
-            int[] widths = new int[] { 100,100,200};
+            int[] widths = new int[] { 300,200,200,200,200,200 };
             pageCtrl.Widths = widths;
         }
 

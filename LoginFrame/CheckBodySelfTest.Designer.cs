@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BodySelfTest3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckBodySelfTest));
             this.label1 = new System.Windows.Forms.Label();
             this.labTopicOrder = new System.Windows.Forms.Label();
             this.labContent = new System.Windows.Forms.Label();
@@ -37,6 +37,9 @@
             this.btnPre = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.labRightResult = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -58,6 +61,7 @@
             // 
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // labResult
             // 
@@ -85,11 +89,29 @@
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
-            // BodySelfTest3
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // labRightResult
+            // 
+            resources.ApplyResources(this.labRightResult, "labRightResult");
+            this.labRightResult.Name = "labRightResult";
+            // 
+            // CheckBodySelfTest
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Controls.Add(this.labRightResult);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnPre);
@@ -99,7 +121,7 @@
             this.Controls.Add(this.labTopicOrder);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "BodySelfTest3";
+            this.Name = "CheckBodySelfTest";
             this.Load += new System.EventHandler(this.BodySelfTest3_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -116,5 +138,8 @@
         private System.Windows.Forms.Button btnPre;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labRightResult;
     }
 }

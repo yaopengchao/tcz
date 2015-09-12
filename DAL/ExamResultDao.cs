@@ -17,6 +17,12 @@ namespace DAL
             return listEntity(strSql, strWheres);
         }
 
+        public DataSet listExamRightResults(Dictionary<string, string> strWheres)
+        {
+            string strSql = "select  ANSWERS from ex_topic where 1 = 1  ";
+            return listEntity(strSql, strWheres);
+        }
+
         public int addExamResult(ExamResult examResult)
         {
             string strSql = "insert into ex_exam_result(user_id, examination_id, examination_detail_id, topic_id, answers) values(?userId, ?examId, ?examDetailId, ?topicId, ?answer); select last_insert_id();";
@@ -56,10 +62,9 @@ namespace DAL
             return listEntity(strSql, strWheres, startIndex, pageSize);
         }
 
-
         public DataSet listExams(Dictionary<string, string> strWheres, int startIndex, int pageSize)
         {
-            string strSql = " select t1.EXAM_RESULT_ID as EXAM_RESULT_ID,t2.EXAMINATION_ID as EXAMINATION_ID,t2.EXAM_NAME as 考试名称,t2.TOTAL_MINS as 考试时长 from ex_exam_result t1,ex_examination t2 where t1.EXAMINATION_ID=t2.EXAMINATION_ID ";
+            string strSql = " select t1.exam_result_id,t2.EXAMINATION_ID as EXAMINATION_ID,u.user_id,t2.EXAM_NAME as 考试名称,u.user_name as 考生姓名,t2.TOTAL_MINS as 考试时长,'' as 考试成绩  from ex_exam_result t1,ex_examination t2,sys_user u where t1.EXAMINATION_ID=t2.EXAMINATION_ID and t1.user_id=u.user_id ";
             return listEntity(strSql, strWheres, startIndex, pageSize);
         }
 

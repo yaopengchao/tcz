@@ -30,21 +30,51 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BodyScore));
             this.查询条件 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnQuery = new System.Windows.Forms.Button();
             this.pageCtrl = new LoginFrame.PageControl2();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.查询条件.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // 查询条件
             // 
+            this.查询条件.Controls.Add(this.comboBox1);
+            this.查询条件.Controls.Add(this.label4);
+            this.查询条件.Controls.Add(this.label3);
+            this.查询条件.Controls.Add(this.label2);
+            this.查询条件.Controls.Add(this.label1);
             this.查询条件.Controls.Add(this.btnClear);
             this.查询条件.Controls.Add(this.btnQuery);
             resources.ApplyResources(this.查询条件, "查询条件");
             this.查询条件.Name = "查询条件";
             this.查询条件.TabStop = false;
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
             // btnClear
             // 
@@ -80,6 +110,12 @@
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.comboBox1.Name = "comboBox1";
+            // 
             // BodyScore
             // 
             resources.ApplyResources(this, "$this");
@@ -91,6 +127,7 @@
             this.Name = "BodyScore";
             this.Load += new System.EventHandler(this.BodyScore_Load);
             this.查询条件.ResumeLayout(false);
+            this.查询条件.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -102,5 +139,10 @@
         private System.Windows.Forms.Button btnQuery;
         private PageControl2 pageCtrl;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
