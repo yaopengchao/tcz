@@ -28,24 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TitleExam));
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
-            resources.ApplyResources(this.label1, "label1");
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("宋体", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(389, 12);
             this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(159, 35);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "考卷系统";
             // 
             // TitleExam
             // 
-            resources.ApplyResources(this, "$this");
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(1024, 60);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TitleExam";
-            this.Load += new System.EventHandler(this.TitleExam_Load);
+            this.Text = "TitleExam";
             this.ResumeLayout(false);
             this.PerformLayout();
 
