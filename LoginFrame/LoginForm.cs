@@ -235,7 +235,7 @@ namespace LoginFrame
 
             LoginRoler.isLocalIp = isLocalIp;
 
-            if (isLocalIp && 1 == 2)
+            if (isLocalIp)
             {
                 openLocalDb();
             }
@@ -298,6 +298,16 @@ namespace LoginFrame
             if (CheckMySql.hasInstalledMySql(out mySql_Version, out mySql_Path))
             {
                 p.Start();
+
+                //停止mysql服务
+                exeCmd("net stop MySQL");
+
+                //进入打包好的mysql地址
+                cdDiyDBPath();
+
+                //安装mysql
+                exeCmd("mysqld install");
+
                 //启动mysql服务
                 exeCmd("net start MySQL");
 
@@ -309,17 +319,18 @@ namespace LoginFrame
                 p.Start();
                 //Console.WriteLine("mySql_Version="+ mySql_Version+ "mySql_Path="+ mySql_Path+"bin");
                 //进入目录 停止数据库
-                string installPath = mySql_Path + "bin";
-                int index = installPath.IndexOf(":");
-                string hardPath = installPath.Substring(0, index + 1);
-                p.StandardInput.WriteLine(hardPath);
-                p.StandardInput.WriteLine("cd " + installPath);
+                //string installPath = mySql_Path + "bin";
+                //int index = installPath.IndexOf(":");
+                //string hardPath = installPath.Substring(0, index + 1);
+                //p.StandardInput.WriteLine(hardPath);
+                //p.StandardInput.WriteLine("cd " + installPath);
                 exeCmd("net stop MySQL");
-                exeCmd("mysqld remove");
-                Console.WriteLine("installPath=" + installPath);
+                
+                //Console.WriteLine("installPath=" + installPath);
 
                 //进入打包数据库目录
                 cdDiyDBPath();
+                exeCmd("mysqld remove");
                 //安装mysql
                 exeCmd("mysqld install");
                 //启动mysql服务
@@ -338,13 +349,15 @@ namespace LoginFrame
         //进入程序打包好的mysql目录
         private void cdDiyDBPath()
         {
-            string curPath = Environment.CurrentDirectory.ToString();
+            string curPath = Application.StartupPath;
             int index = curPath.IndexOf(":");
             string hardPath = curPath.Substring(0, index + 1);
             p.StandardInput.WriteLine(hardPath);
             p.StandardInput.WriteLine("cd " + curPath);
-            string dMsql = Application.StartupPath + @"/../../../MysqlInstallProj/DB/mysql-5.6.24-win32/bin";
-            p.StandardInput.WriteLine("cd " + dMsql);
+            //string dMsql = Application.StartupPath + @"/../../../MysqlInstallProj/DB/mysql-5.6.24-win32/bin";
+            string mainPath = curPath.Substring(0, curPath.IndexOf("LoginFrame"));
+            mainPath += "MysqlInstallProj/DB/mysql-5.6.24-win32/bin";
+            p.StandardInput.WriteLine("cd " + mainPath);
 
         }
 
