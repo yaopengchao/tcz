@@ -77,7 +77,7 @@ namespace DAL
 
         public DataSet listExams(Dictionary<string, string> strWheres, int startIndex, int pageSize)
         {
-            string strSql = " select t1.exam_result_id,t2.EXAMINATION_ID as EXAMINATION_ID,u.user_id,t2.EXAM_NAME as 考试名称,u.user_name as 考生姓名,t2.TOTAL_MINS as 考试时长,'100' as 得分率  from ex_exam_result t1,ex_examination t2,sys_user u where t1.EXAMINATION_ID=t2.EXAMINATION_ID and t1.user_id=u.user_id ";
+            string strSql = " select t1.exam_result_id,t2.EXAMINATION_ID as EXAMINATION_ID,u.user_id,t2.EXAM_NAME as 考试名称,u.user_name as 考生姓名,t2.TOTAL_MINS as 考试时长,getScore(t2.EXAMINATION_ID,u.user_id) as 得分率  from ex_exam_result t1,ex_examination t2,sys_user u where t1.EXAMINATION_ID=t2.EXAMINATION_ID and t1.user_id=u.user_id ";
             return listEntityGroup(strSql, strWheres, startIndex, pageSize, " group by t1.EXAMINATION_ID,t1.USER_ID ");
         }
 
