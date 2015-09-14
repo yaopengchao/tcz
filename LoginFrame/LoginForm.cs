@@ -203,7 +203,7 @@ namespace LoginFrame
             comboBox3selectIndex = this.comboBox3.SelectedIndex;
 
             searchIp();
-
+            this.label6.Text = "搜索局域网内是否已有教师机或管理员登录";
             Console.WriteLine("******最终获取的IP:" + LoginRoler.serverIp + "/来源:" + (isLocalIp ? "本地创建" : "来自局域网"));
 
             //搜索操作完毕后  不管获取到和获取不到都要将IP保存在LoginRoler.serverIp字段
@@ -335,7 +335,8 @@ namespace LoginFrame
                 exeCmd("mysqld install");
                 //启动mysql服务
                 exeCmd("net start MySQL");
-
+                Console.WriteLine("mysql启动完毕等待5秒");
+                Thread.Sleep(5000);
                 p.Close();
             }
         }
@@ -357,6 +358,7 @@ namespace LoginFrame
             //string dMsql = Application.StartupPath + @"/../../../MysqlInstallProj/DB/mysql-5.6.24-win32/bin";
             string mainPath = curPath.Substring(0, curPath.IndexOf("LoginFrame"));
             mainPath += "MysqlInstallProj/DB/mysql-5.6.24-win32/bin";
+            Console.WriteLine("==========" + mainPath);
             p.StandardInput.WriteLine("cd " + mainPath);
 
         }
