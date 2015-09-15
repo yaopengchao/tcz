@@ -109,26 +109,20 @@ namespace LoginFrame
             {
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("zh-CN");
 
-                this.comboBox1.Text = "多媒体课件分类";
-                this.comboBox2.Text = "条目";
-
                 this.comboBox1.Items.Clear();
                 this.comboBox1.DataSource = Bll.getAllCourses().Tables[0];
-                this.comboBox1.DisplayMember = "name";
-                this.comboBox1.ValueMember = "id";
+                this.comboBox1.DisplayMember = "TCZ_NAME";
+                this.comboBox1.ValueMember = "TCZ_ID";
+
 
             }
             else if (LoginRoler.language == Constant.En)
             {
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
-
-                this.comboBox1.Text = "multimedia";
-                this.comboBox2.Text = "Entry";
-
                 this.comboBox1.Items.Clear();
                 this.comboBox1.DataSource = Bll.getAllCourses().Tables[0];
-                this.comboBox1.DisplayMember = "enname";
-                this.comboBox1.ValueMember = "id";
+                this.comboBox1.DisplayMember = "TCZ_NAME";
+                this.comboBox1.ValueMember = "TCZ_ID";
 
             }
             AdjustComboBoxDropDownListWidth(comboBox1);
@@ -146,20 +140,31 @@ namespace LoginFrame
         private void refreshFavorites()
         {
             //清空当前收藏列表保留第一项
-                for(int a= toolStripMenuItem1.DropDownItems.Count-1; a>=2; a--)
+            for(int a= toolStripMenuItem1.DropDownItems.Count-1; a>=2; a--)
             {
                 toolStripMenuItem1.DropDownItems.RemoveAt(a);
             }
 
-        //再从数据库获取该用户最新列表
-        DataSet dataSet = IUser.getFavorites(LoginRoler.username);
+            //再从数据库获取该用户最新列表
+            DataSet dataSet = IUser.getFavorites(LoginRoler.login_id);
 
             foreach (DataRow row in dataSet.Tables[0].Rows)
             {
-                ToolStripMenuItem subItem = AddContextMenu(row["name"].ToString(), menuStrip1.Items, null);
-                subItem.Image= LoginFrame.Properties.Resources.Error;
-                subItem.Click += new EventHandler(subItemClick1);//绑定方法
-                toolStripMenuItem1.DropDownItems.Add(subItem);
+
+                if (LoginRoler.language == Constant.zhCN)
+                {
+                    ToolStripMenuItem subItem = AddContextMenu(row["NAME"].ToString(), menuStrip1.Items, null);
+                    //subItem.Image = LoginFrame.Properties.Resources.Error;
+                    subItem.Click += new EventHandler(subItemClick1);//绑定方法
+                    toolStripMenuItem1.DropDownItems.Add(subItem);
+                }
+                else if (LoginRoler.language == Constant.En)
+                {
+                    ToolStripMenuItem subItem = AddContextMenu(row["ENAME"].ToString(), menuStrip1.Items, null);
+                    //subItem.Image = LoginFrame.Properties.Resources.Error;
+                    subItem.Click += new EventHandler(subItemClick1);//绑定方法
+                    toolStripMenuItem1.DropDownItems.Add(subItem);
+                }
             }
         }
 
@@ -560,16 +565,16 @@ namespace LoginFrame
                 this.comboBox2.DataSource = null;
                 this.comboBox2.Items.Clear();
                 this.comboBox2.DataSource = Bll.getCourses(comboBox1Value).Tables[0];
-                this.comboBox2.DisplayMember = "name";
-                this.comboBox2.ValueMember = "id";
+                this.comboBox2.DisplayMember = "CLASS_NAME";
+                this.comboBox2.ValueMember = "CLASS_ID";
             }
             else if (LoginRoler.language == Constant.En)
             {
                 this.comboBox2.DataSource = null;
                 this.comboBox2.Items.Clear();
                 this.comboBox2.DataSource = Bll.getCourses(comboBox1Value).Tables[0];
-                this.comboBox2.DisplayMember = "enname";
-                this.comboBox2.ValueMember = "id";
+                this.comboBox2.DisplayMember = "CLASS_ENAME";
+                this.comboBox2.ValueMember = "CLASS_ID";
             }
 
             AdjustComboBoxDropDownListWidth(comboBox2);
@@ -577,6 +582,8 @@ namespace LoginFrame
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            this.mainFrame.bodyMain.listView1.Items.Clear();
+
             if (this.comboBox2.DataSource == null) return;
 
             string comboBox2Value = this.comboBox2.SelectedValue.ToString();
@@ -585,7 +592,6 @@ namespace LoginFrame
 
             if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
             { 
-                this.mainFrame.bodyMain.listView1.Items.Clear();
 
                 this.mainFrame.bodyMain.listView1.BeginUpdate();
                 if (LoginRoler.language == Constant.zhCN)
@@ -593,8 +599,8 @@ namespace LoginFrame
                     int i = 0;
                     foreach (DataRow dr in ds.Tables[0].Rows)
                     {
-                        string name = dr["name"].ToString();
-                        string filename = dr["filename"].ToString();
+                        string name = dr["LESSON_NAME"].ToString();
+                        string filename = dr["LESSON_FILENAME"].ToString();
                         ListViewItem lvItem = new ListViewItem();
                         lvItem.Text = name.ToString();
                         lvItem.SubItems.Add(filename.ToString());
@@ -607,8 +613,8 @@ namespace LoginFrame
                     int i = 0;
                     foreach (DataRow dr in ds.Tables[0].Rows)
                     {
-                        string name = dr["ename"].ToString();
-                        string filename = dr["filename"].ToString();
+                        string name = dr["LESSON_ENAME"].ToString();
+                        string filename = dr["LESSON_FILENAME"].ToString();
                         ListViewItem lvItem = new ListViewItem();
                         lvItem.Text = name.ToString();
                         lvItem.SubItems.Add(filename.ToString());
@@ -689,7 +695,7 @@ namespace LoginFrame
                     foreach (ListViewItem lt in mainFrame.bodyMain.listView1.Items)
                     {
                         string filename = mainFrame.bodyMain.listView1.SelectedItems[0].SubItems[1].Text;
-                        bool isAdd = IUser.addFavorite(LoginRoler.username, filename);
+                        bool isAdd = IUser.addFavorite(LoginRoler.login_id, filename);
                         flag = flag && isAdd;
                     }
                 if (!flag)

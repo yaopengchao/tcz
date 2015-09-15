@@ -39,12 +39,12 @@
             this.exMenu2 = new System.Windows.Forms.ToolStripMenuItem();
             this.exMenu3 = new System.Windows.Forms.ToolStripMenuItem();
             this.exMenu4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.考试成绩ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
-            this.考试成绩ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -148,6 +148,12 @@
             this.exMenu4.Name = "exMenu4";
             resources.ApplyResources(this.exMenu4, "exMenu4");
             // 
+            // 考试成绩ToolStripMenuItem
+            // 
+            this.考试成绩ToolStripMenuItem.Name = "考试成绩ToolStripMenuItem";
+            resources.ApplyResources(this.考试成绩ToolStripMenuItem, "考试成绩ToolStripMenuItem");
+            this.考试成绩ToolStripMenuItem.Click += new System.EventHandler(this.考试成绩ToolStripMenuItem_Click);
+            // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
@@ -176,12 +182,6 @@
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
             resources.ApplyResources(this.toolStripMenuItem7, "toolStripMenuItem7");
-            // 
-            // 考试成绩ToolStripMenuItem
-            // 
-            this.考试成绩ToolStripMenuItem.Name = "考试成绩ToolStripMenuItem";
-            resources.ApplyResources(this.考试成绩ToolStripMenuItem, "考试成绩ToolStripMenuItem");
-            this.考试成绩ToolStripMenuItem.Click += new System.EventHandler(this.考试成绩ToolStripMenuItem_Click);
             // 
             // toolStripMenuItem8
             // 
@@ -247,6 +247,7 @@
             this.Name = "MainFrame";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainFrame_FormClosing);
             this.Load += new System.EventHandler(this.MainFrame_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

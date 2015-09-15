@@ -86,7 +86,7 @@ namespace TherapeuticApparatus.CommonMethod
             }
             catch (Exception ex)
             {
-                
+                Console.WriteLine(ex.StackTrace);
             }
 
             finally

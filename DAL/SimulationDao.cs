@@ -15,11 +15,11 @@ namespace DAL
             
             StringBuilder strSql = new StringBuilder();
             //先检查是否有旧记录没有正确退出
-            strSql.Append(" select count(1) from 触诊模拟人 ");
+            strSql.Append(" select count(1) from tcz_czmnr ");
             strSql.Append(" where ");
-            strSql.Append(" user_name=?user_name ");
+            strSql.Append(" LOGIN_ID=?LOGIN_ID ");
             MySqlParameter[] parameters0 = {
-                    new MySqlParameter("?user_name", MySqlDbType.VarChar)
+                    new MySqlParameter("?LOGIN_ID", MySqlDbType.VarChar)
             };
 
             parameters0[0].Value = user_name;
@@ -29,7 +29,7 @@ namespace DAL
             if (row0 > 0)//存在更新
             {
                 strSql = new StringBuilder();
-                strSql.Append(" update 触诊模拟人 set 肝脏肿大='"+ _触诊模拟人.肝脏肿大+"', ");
+                strSql.Append(" update tcz_czmnr set 肝脏肿大='" + _触诊模拟人.肝脏肿大+"', ");
                 strSql.Append(" 肝脏质地='" + _触诊模拟人.肝脏质地 + "', ");
                 strSql.Append(" 脾脏肿大='" + _触诊模拟人.脾脏肿大 + "', ");
                 strSql.Append(" 胆囊触痛='" + _触诊模拟人.胆囊触痛 + "', ");
@@ -52,9 +52,9 @@ namespace DAL
                 strSql.Append(" 血压收缩压='" + _触诊模拟人.血压收缩压 + "', ");
                 strSql.Append(" 血压舒张压='" + _触诊模拟人.血压舒张压 + "' ");
                 strSql.Append(" where ");
-                strSql.Append(" user_name=?user_name ");
+                strSql.Append(" LOGIN_ID=?LOGIN_ID ");
                 MySqlParameter[] parameters1 = {
-                    new MySqlParameter("?user_name", MySqlDbType.VarChar)
+                    new MySqlParameter("?LOGIN_ID", MySqlDbType.VarChar)
                 };
 
                 parameters1[0].Value = user_name;
@@ -72,11 +72,11 @@ namespace DAL
             else//不存在新增
             {
                 strSql = new StringBuilder();
-                strSql.Append(" insert into 触诊模拟人  ( user_name,");
+                strSql.Append(" insert into tcz_czmnr  ( LOGIN_ID,");
                 strSql.Append(" 肝脏肿大,肝脏质地, 脾脏肿大,胆囊触痛, ");
                 strSql.Append(" 胆囊肿大,胆囊墨菲氏征,压痛胃溃疡,压痛十二指肠,压痛胰腺,压痛阑尾,压痛小肠, ");
                 strSql.Append(" 乙状结肠,反跳痛胰腺,反跳痛阑尾,反跳痛小肠,肠鸣音,肾动脉听诊音,股动脉听诊音,脉搏,血压收缩压,血压舒张压 ");
-                strSql.Append(" ) values ( ?user_name, ");
+                strSql.Append(" ) values ( ?LOGIN_ID, ");
                 strSql.Append(" '" + _触诊模拟人.肝脏肿大 + "', ");
                 strSql.Append(" '" + _触诊模拟人.肝脏质地 + "', ");
                 strSql.Append(" '" + _触诊模拟人.脾脏肿大 + "', ");
@@ -101,7 +101,7 @@ namespace DAL
                 strSql.Append(" ) ");
 
                 MySqlParameter[] parameters = {
-                    new MySqlParameter("?user_name", MySqlDbType.VarChar)
+                    new MySqlParameter("?LOGIN_ID", MySqlDbType.VarChar)
                 };
 
                 parameters[0].Value = user_name;
@@ -127,11 +127,11 @@ namespace DAL
             strSql.Append(" 肝脏肿大,肝脏质地, 脾脏肿大,胆囊触痛, ");
             strSql.Append(" 胆囊肿大,胆囊墨菲氏征,压痛胃溃疡,压痛十二指肠,压痛胰腺,压痛阑尾,压痛小肠, ");
             strSql.Append(" 乙状结肠,反跳痛胰腺,反跳痛阑尾,反跳痛小肠,肠鸣音,肾动脉听诊音,股动脉听诊音,脉搏,血压收缩压,血压舒张压 ");
-            strSql.Append(" from 触诊模拟人 ");
+            strSql.Append(" from tcz_czmnr ");
             strSql.Append(" where ");
-            strSql.Append(" user_name = ?user_name ");
+            strSql.Append(" LOGIN_ID = ?LOGIN_ID ");
             MySqlParameter[] parameters = {
-                    new MySqlParameter("?user_name", MySqlDbType.VarChar)
+                    new MySqlParameter("?LOGIN_ID", MySqlDbType.VarChar)
             };
 
             parameters[0].Value = user_name;
@@ -177,11 +177,11 @@ namespace DAL
 
             StringBuilder strSql = new StringBuilder();
             //先检查是否有旧记录没有正确退出
-            strSql.Append(" select count(1) from 听诊模拟人 ");
+            strSql.Append(" select count(1) from tcz_tzmnr ");
             strSql.Append(" where ");
-            strSql.Append(" user_name=?user_name ");
+            strSql.Append(" LOGIN_ID=?LOGIN_ID ");
             MySqlParameter[] parameters0 = {
-                    new MySqlParameter("?user_name", MySqlDbType.VarChar)
+                    new MySqlParameter("?LOGIN_ID", MySqlDbType.VarChar)
             };
 
             parameters0[0].Value = user_name;
@@ -191,7 +191,7 @@ namespace DAL
             if (row0 > 0)//存在更新
             {
                 strSql = new StringBuilder();
-                strSql.Append(" update 听诊模拟人 set 心前区震颤='" + _听诊模拟人.心前区震颤 + "', ");
+                strSql.Append(" update tcz_tzmnr set 心前区震颤='" + _听诊模拟人.心前区震颤 + "', ");
                 strSql.Append(" 心尖搏动='" + _听诊模拟人.心尖搏动 + "', ");
                 strSql.Append(" 二尖瓣听诊区='" + _听诊模拟人.二尖瓣听诊区 + "', ");
                 strSql.Append(" 肺动脉瓣听诊区='" + _听诊模拟人.肺动脉瓣听诊区 + "', ");
@@ -206,9 +206,9 @@ namespace DAL
                 strSql.Append(" 右肺中='" + _听诊模拟人.右肺中 + "', ");
                 strSql.Append(" 右肺下='" + _听诊模拟人.右肺下 + "' ");
                 strSql.Append(" where ");
-                strSql.Append(" user_name=?user_name ");
+                strSql.Append(" LOGIN_ID=?LOGIN_ID ");
                 MySqlParameter[] parameters1 = {
-                    new MySqlParameter("?user_name", MySqlDbType.VarChar)
+                    new MySqlParameter("?LOGIN_ID", MySqlDbType.VarChar)
                 };
 
                 parameters1[0].Value = user_name;
@@ -226,11 +226,11 @@ namespace DAL
             else//不存在新增
             {
                 strSql = new StringBuilder();
-                strSql.Append(" insert into 听诊模拟人  ( user_name,");
+                strSql.Append(" insert into tcz_tzmnr  ( LOGIN_ID,");
                 strSql.Append(" 心前区震颤,心尖搏动, 二尖瓣听诊区,肺动脉瓣听诊区, ");
                 strSql.Append(" 主动脉瓣区,主动脉瓣第二听诊区,三尖瓣区,气管,左肺上,左肺中,左肺下, ");
                 strSql.Append(" 右肺上,右肺中,右肺下 ");
-                strSql.Append(" ) values ( ?user_name, ");
+                strSql.Append(" ) values ( ?LOGIN_ID, ");
                 strSql.Append(" '" + _听诊模拟人.心前区震颤 + "', ");
                 strSql.Append(" '" + _听诊模拟人.心尖搏动 + "', ");
                 strSql.Append(" '" + _听诊模拟人.二尖瓣听诊区 + "', ");
@@ -248,7 +248,7 @@ namespace DAL
                 strSql.Append(" ) ");
 
                 MySqlParameter[] parameters = {
-                    new MySqlParameter("?user_name", MySqlDbType.VarChar)
+                    new MySqlParameter("?LOGIN_ID", MySqlDbType.VarChar)
                 };
 
                 parameters[0].Value = user_name;
@@ -274,11 +274,11 @@ namespace DAL
             strSql.Append(" 心前区震颤,心尖搏动, 二尖瓣听诊区,肺动脉瓣听诊区, ");
             strSql.Append(" 主动脉瓣区,主动脉瓣第二听诊区,三尖瓣区,气管,左肺上,左肺中,左肺下, ");
             strSql.Append(" 右肺上,右肺中,右肺下 ");
-            strSql.Append(" from 听诊模拟人 ");
+            strSql.Append(" from tcz_tzmnr ");
             strSql.Append(" where ");
-            strSql.Append(" user_name = ?user_name ");
+            strSql.Append(" LOGIN_ID = ?LOGIN_ID ");
             MySqlParameter[] parameters = {
-                    new MySqlParameter("?user_name", MySqlDbType.VarChar)
+                    new MySqlParameter("?LOGIN_ID", MySqlDbType.VarChar)
             };
 
             parameters[0].Value = user_name;

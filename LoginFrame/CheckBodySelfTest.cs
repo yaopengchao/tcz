@@ -92,7 +92,6 @@ namespace LoginFrame
         private void showTopic(DataTable dt, int cur)
         {
             items = new List<Control>();
-            examId = examId;
             examDetailId = Convert.ToInt32(dt.Rows[cur].ItemArray[1]);
             topicId = Convert.ToInt32(dt.Rows[cur].ItemArray[2]);
             strWheres.Clear();

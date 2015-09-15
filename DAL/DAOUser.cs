@@ -35,7 +35,7 @@ namespace DAL
         public DataSet ExistsPwd(string loginId, string pwd,string user_type)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select user_name,user_type, user_id from sys_user");
+            strSql.Append("select login_id,user_name,user_type, user_id from sys_user");
             strSql.Append(" where ");
             strSql.Append(" login_id = ?loginId and pwd=?pwd and user_type=?user_type ");
             MySqlParameter[] parameters = {
@@ -226,9 +226,9 @@ namespace DAL
         public DataSet getFavorites(string user_name)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append(" select f.user_name as user_name,l.name as name,l.ename as ename,f.filename as filename from favorites f,lessons l where f.filename=l.filename ");
+            strSql.Append(" select f.LOGIN_ID as LOGIN_ID,l.LESSON_NAME as NAME,l.LESSON_ENAME as ENAME,f.FILENAME as FILENAME from sys_user_favorites f,tcz_lessons l where f.FILENAME=l.LESSON_FILENAME ");
             strSql.Append(" and ");
-            strSql.Append(" user_name=?user_name ");
+            strSql.Append(" LOGIN_ID=?user_name ");
             MySqlParameter[] parameters = {
                 new MySqlParameter("?user_name", MySqlDbType.VarChar)
             };
@@ -285,11 +285,11 @@ namespace DAL
         {
             StringBuilder strSql = new StringBuilder();
             //先检查是否有旧记录
-            strSql.Append(" select count(1) from favorites  ");
+            strSql.Append(" select count(1) from sys_user_favorites  ");
             strSql.Append(" where ");
-            strSql.Append(" user_name=?user_name ");
+            strSql.Append(" LOGIN_ID=?user_name ");
             strSql.Append(" and ");
-            strSql.Append(" filename=?filename ");
+            strSql.Append(" FILENAME=?filename ");
             MySqlParameter[] parameters0 = {
                     new MySqlParameter("?user_name", MySqlDbType.VarChar),
                     new MySqlParameter("?filename", MySqlDbType.VarChar)
@@ -307,7 +307,7 @@ namespace DAL
             else
             {//inert into
                 strSql = new StringBuilder();
-                strSql.Append(" insert into favorites (user_name,filename) values ( ");
+                strSql.Append(" insert into sys_user_favorites (LOGIN_ID,FILENAME) values ( ");
                 strSql.Append(" ?user_name, ");
               
                 strSql.Append(" ?filename  ) ");

@@ -102,7 +102,6 @@ namespace LoginFrame
         private bool login()
         {
             bool flag = false;
-            //string username = this.textBox1.Text;
             string username = loginId.Text;
 
             string password = this.textBox2.Text;
@@ -128,21 +127,14 @@ namespace LoginFrame
 
                     if (ds.Tables[0].Rows.Count > 0)
                     {
-                        LoginRoler.username = Convert.ToString(ds.Tables[0].Rows[0][0].ToString());
-                        //LoginRoler.truename = Convert.ToString(ds.Tables[0].Rows[0][1].ToString());
-                        LoginRoler.roleid = Convert.ToString(ds.Tables[0].Rows[0][1].ToString());
+
+                        LoginRoler.login_id = Convert.ToString(ds.Tables[0].Rows[0][0].ToString());
+                        LoginRoler.username = Convert.ToString(ds.Tables[0].Rows[0][1].ToString());
+                        LoginRoler.roleid = Convert.ToString(ds.Tables[0].Rows[0][2].ToString());
                         LoginRoler.language = comboBox1.SelectedIndex;
                         LoginRoler.ip = GetAddressIP();
-                        LoginRoler.userId = Convert.ToInt32(ds.Tables[0].Rows[0][2].ToString());
+                        LoginRoler.userId = Convert.ToInt32(ds.Tables[0].Rows[0][3].ToString());
                         LoginRoler.pwd = password;
-
-
-                        //检查是否还有其他老师在同一个局域网登录
-
-
-                        //记录登录信息
-                        //bool islogedin = Bll.logLogin(LoginRoler.username, LoginRoler.ip);
-
 
                         checkCode = "";
                         flag = true;
@@ -188,7 +180,7 @@ namespace LoginFrame
         int comboBox3selectIndex;
         private void button1_Click(object sender, EventArgs e)
         {
-            this.label6.Text = "搜索数据库IP......";
+            this.label6.Text = "局域网搜索数据库IP中......";
             //重置默认
             RunDoWhile = true;
 
@@ -202,8 +194,11 @@ namespace LoginFrame
             //登陆首先获取角色选择的index，因为写在后面会发生些错误 提前先获取
             comboBox3selectIndex = this.comboBox3.SelectedIndex;
 
-            searchIp();
             this.label6.Text = "搜索局域网内是否已有教师机或管理员登录";
+
+            searchIp();
+
+            
             Console.WriteLine("******最终获取的IP:" + LoginRoler.serverIp + "/来源:" + (isLocalIp ? "本地创建" : "来自局域网"));
 
             //搜索操作完毕后  不管获取到和获取不到都要将IP保存在LoginRoler.serverIp字段
@@ -335,8 +330,8 @@ namespace LoginFrame
                 exeCmd("mysqld install");
                 //启动mysql服务
                 exeCmd("net start MySQL");
-                Console.WriteLine("mysql启动完毕等待5秒");
-                Thread.Sleep(5000);
+                Console.WriteLine("mysql启动完毕等待10秒");
+                Thread.Sleep(10000);
                 p.Close();
             }
         }
@@ -369,24 +364,19 @@ namespace LoginFrame
             //创建搜索需要的UDP
             createReceUDPClient();
 
-
             //创建定时器控制搜索异步进程的时间
             timer = createTimer(5000);
             timer.Start();
 
             Console.WriteLine("====开始搜寻局域网数据库IP====");
 
-
             do
             {
                 if ((searchServerIpthr == null))
                 {
                     //搜索异步线程
-                    //Console.WriteLine("==创建搜索任务");
                     searchServerIpthr = new Thread(new ThreadStart(RecvThread));
-                    //searchServerIpthr = new Thread(new ThreadStart(RecvThread广播));
                     searchServerIpthr.IsBackground = true;
-                    //Console.WriteLine("==执行搜索任务");
                     searchServerIpthr.Start();
                 }
             } while (RunDoWhile);

@@ -65,7 +65,7 @@ namespace LoginFrame
             触诊模拟人 _触诊模拟人=get触诊模拟人数据();
 
             //持久化
-            if (simulationService.add触诊人设置(_触诊模拟人, LoginRoler.username))
+            if (simulationService.add触诊人设置(_触诊模拟人, LoginRoler.login_id))
             {
                 sendCzSettings(_触诊模拟人);
                 MessageBox.Show("设置成功!");
@@ -77,6 +77,8 @@ namespace LoginFrame
 
         private void sendCzSettings(触诊模拟人 _触诊模拟人)
         {
+            if (!LoginRoler.Czmonitors.ContainsKey("czmnr1")) return;
+
             SerialPort BluetoothConnection = LoginRoler.Czmonitors["czmnr1"];
 
             if (BluetoothConnection!=null)
@@ -453,19 +455,28 @@ namespace LoginFrame
             Dictionary<string, SerialPort> tzmonitors = LoginRoler.Tzmonitors;
             Dictionary<string, SerialPort> czmonitors = LoginRoler.Czmonitors;
 
-            if (tzmonitors["tzmnr1"].IsOpen)
+            if (tzmonitors.ContainsKey("tzmnr1"))
             {
-                button17.Text = "已连接";
+                if (tzmonitors["tzmnr1"].IsOpen)
+                {
+                    button17.Text = "已连接";
+                }
             }
 
-            if (tzmonitors["tzmnr2"].IsOpen)
+            if (tzmonitors.ContainsKey("tzmnr2"))
             {
-                button18.Text = "已连接";
+                if (tzmonitors["tzmnr2"].IsOpen)
+                {
+                    button18.Text = "已连接";
+                }
             }
 
-            if (tzmonitors["czmnr1"].IsOpen)
+            if (czmonitors.ContainsKey("czmnr1"))
             {
-                button19.Text = "已连接";
+                if (czmonitors["czmnr1"].IsOpen)
+                {
+                    button19.Text = "已连接";
+                }
             }
         }
 
@@ -687,8 +698,12 @@ namespace LoginFrame
 
         private void sendCzSettings(听诊模拟人 _听诊模拟人)
         {
-            SerialPort BluetoothConnection1 = LoginRoler.Czmonitors["tzmnr1"];
-            SerialPort BluetoothConnection2 = LoginRoler.Czmonitors["tzmnr2"];
+            if (!LoginRoler.Tzmonitors.ContainsKey("tzmnr1")) return;
+
+            if (!LoginRoler.Tzmonitors.ContainsKey("tzmnr2")) return;
+
+            SerialPort BluetoothConnection1 = LoginRoler.Tzmonitors["tzmnr1"];
+            SerialPort BluetoothConnection2 = LoginRoler.Tzmonitors["tzmnr2"];
 
             //心前区震颤
 
@@ -721,7 +736,7 @@ namespace LoginFrame
             听诊模拟人 _听诊模拟人 = get听诊模拟人数据();
 
             //持久化
-            if (simulationService.add听诊人设置(_听诊模拟人, LoginRoler.username))
+            if (simulationService.add听诊人设置(_听诊模拟人, LoginRoler.login_id))
             {
                 sendCzSettings(_听诊模拟人);
                 MessageBox.Show("设置成功!");

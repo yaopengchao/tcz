@@ -15,6 +15,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO.Ports;
 using System.Text.RegularExpressions;
+using System.Diagnostics;
 
 namespace LoginFrame
 {
@@ -109,6 +110,13 @@ namespace LoginFrame
         /// <param name="e"></param>
         private void MainFrame_Load(object sender, EventArgs e)
         {
+            p = new Process();
+            p.StartInfo.FileName = "cmd.exe";
+            p.StartInfo.UseShellExecute = false;
+            p.StartInfo.RedirectStandardInput = true;
+            p.StartInfo.RedirectStandardOutput = true;
+            p.StartInfo.CreateNoWindow = true;
+
             connectBluetooth();//连接串口蓝牙
 
             //只要不是老师你就要进去后搜索是否有语音邀请对话
@@ -1367,6 +1375,9 @@ namespace LoginFrame
 
             if (button == DialogResult.Yes)
             {
+
+                CloseDB();
+
                 Application.ExitThread();
             }
         }
@@ -1647,6 +1658,43 @@ namespace LoginFrame
             bodyScore.Dock = System.Windows.Forms.DockStyle.Fill;
             panel6.Controls.Add(bodyScore);
             bodyScore.Show();
+        }
+
+        private void exeCmd(string cmd)
+        {
+            p.StandardInput.WriteLine(cmd);
+
+        }
+        private Process p;
+
+        private void cdDiyDBPath()
+        {
+            string curPath = Application.StartupPath;
+            int index = curPath.IndexOf(":");
+            string hardPath = curPath.Substring(0, index + 1);
+            p.StandardInput.WriteLine(hardPath);
+            p.StandardInput.WriteLine("cd " + curPath);
+            //string dMsql = Application.StartupPath + @"/../../../MysqlInstallProj/DB/mysql-5.6.24-win32/bin";
+            string mainPath = curPath.Substring(0, curPath.IndexOf("LoginFrame"));
+            mainPath += "MysqlInstallProj/DB/mysql-5.6.24-win32/bin";
+            Console.WriteLine("==========" + mainPath);
+            p.StandardInput.WriteLine("cd " + mainPath);
+
+        }
+
+        private void MainFrame_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Console.WriteLine("关闭数据库,卸载服务");
+
+            CloseDB();
+            
+        }
+
+        private void CloseDB()
+        {
+            p.Start();
+            exeCmd("net stop MySQL");
+            p.Close();
         }
     }
 }

@@ -22,7 +22,6 @@ namespace LoginFrame
 
         public BodyExam bodyExam;
 
-        private DataTable dt;
 
         private int xz;
 
