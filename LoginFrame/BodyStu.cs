@@ -185,6 +185,7 @@ namespace LoginFrame
             addUser.bodyStu = this;
             addUser.user.UserType = "3";
             addUser.labTitle.Text = "添加学生";
+            addUser.labUname.Text = "学生名称";
             addUser.ShowDialog();
 
         }
@@ -204,13 +205,21 @@ namespace LoginFrame
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AddClass addClass = AddClass.getInstance();
-            addClass.bodyStu = this;
-            addClass.labTitle.Text = "修改班级";
-            addClass.txtClassName.Text = Convert.ToString(pageCtrl2.dg.CurrentRow.Cells[1].Value);
-            classId = Convert.ToInt32(pageCtrl2.dg.CurrentRow.Cells[0].Value);
-            addClass.labClassId.Text = Convert.ToString(classId);
-            addClass.ShowDialog();
+            if (pageCtrl2.dg.CurrentRow == null)
+            {
+                MessageBox.Show("请选择一条记录");
+            }
+            else
+            {
+                AddClass addClass = AddClass.getInstance();
+                addClass.bodyStu = this;
+                addClass.labTitle.Text = "修改班级";
+                addClass.txtClassName.Text = Convert.ToString(pageCtrl2.dg.CurrentRow.Cells[1].Value);
+                classId = Convert.ToInt32(pageCtrl2.dg.CurrentRow.Cells[0].Value);
+                addClass.labClassId.Text = Convert.ToString(classId);
+                addClass.ShowDialog();
+            }
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -236,16 +245,24 @@ namespace LoginFrame
 
         private void button5_Click(object sender, EventArgs e)
         {
-            classId = Convert.ToInt32(pageCtrl2.dg.CurrentRow.Cells[0].Value);
-            AddUser addUser = AddUser.getInstance();
-            addUser.bodyStu = this;
-            addUser.labTitle.Text = "修改学生";
-            addUser.user.UserType = "3";
-            addUser.labUserId.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[0].Value);
-            addUser.txtLoginId.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[2].Value);
-            addUser.txtUserName.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[1].Value);
-            addUser.txtPwd.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[3].Value);
-            addUser.ShowDialog();
+            if (pageCtrl.dg.CurrentRow == null)
+            {
+                MessageBox.Show("请选择一条记录");
+            }
+            else
+            {
+                classId = Convert.ToInt32(pageCtrl2.dg.CurrentRow.Cells[0].Value);
+                AddUser addUser = AddUser.getInstance();
+                addUser.bodyStu = this;
+                addUser.labTitle.Text = "修改学生";
+                addUser.labUname.Text = "学生名称";
+                addUser.user.UserType = "3";
+                addUser.labUserId.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[0].Value);
+                addUser.txtLoginId.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[2].Value);
+                addUser.txtUserName.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[1].Value);
+                addUser.txtPwd.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[3].Value);
+                addUser.ShowDialog();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
