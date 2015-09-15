@@ -111,8 +111,11 @@ namespace LoginFrame
         {
             DataSet ds = classService.listClass(strWheres);
             pageCtrl2.bs.DataSource = ds.Tables[0];
-            if (pageCtrl2.dg.SelectedRows.Count == 0)
-                pageCtrl2.dg.Rows[0].Selected = true;
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                if (pageCtrl2.dg.SelectedRows.Count == 0)
+                    pageCtrl2.dg.Rows[0].Selected = true;
+            }            
         }
 
         private void loadData(Dictionary<string, string> strWheres)
@@ -125,14 +128,18 @@ namespace LoginFrame
 
         private void btnQuery_Click(object sender, EventArgs e)
         {
-            if (pageCtrl2.dg.SelectedRows.Count > 0)
+            if (((DataTable)pageCtrl2.bs.DataSource).Rows.Count > 0)
             {
-                classId = Convert.ToInt32(pageCtrl2.dg.SelectedRows[0].Cells[0].Value);
-            } else
-            {
-                classId = Convert.ToInt32(pageCtrl2.dg.CurrentRow.Cells[0].Value);
-            }
-            btnQueryClick();
+                if (pageCtrl2.dg.SelectedRows.Count > 0)
+                {
+                    classId = Convert.ToInt32(pageCtrl2.dg.SelectedRows[0].Cells[0].Value);
+                }
+                else
+                {
+                    classId = Convert.ToInt32(pageCtrl2.dg.CurrentRow.Cells[0].Value);
+                }
+                btnQueryClick();
+            }  
         }
 
         public void btnQueryClick()

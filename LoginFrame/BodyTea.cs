@@ -124,7 +124,7 @@ namespace LoginFrame
 
         private void button6_Click(object sender, EventArgs e)
         {
-            AddUser addUser = AddUser.getInstance();
+            AddUser addUser = new AddUser();
             addUser.bodyTea = this;
             addUser.user.UserType = "2";
             addUser.labTitle.Text = "添加教师";
@@ -133,17 +133,24 @@ namespace LoginFrame
         }
 
         private void button5_Click(object sender, EventArgs e)
-        {
-            AddUser addUser = AddUser.getInstance();
-            addUser.bodyTea = this;
-            addUser.user.UserType = "2";
-            addUser.labTitle.Text = "修改教师";
-            addUser.labUname.Text = "教师名称";
-            addUser.labUserId.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[0].Value);
-            addUser.txtLoginId.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[2].Value);
-            addUser.txtUserName.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[1].Value);
-            addUser.txtPwd.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[3].Value);
-            addUser.ShowDialog();
+        {           
+            if (pageCtrl.dg.CurrentRow == null)
+            {
+                MessageBox.Show("请选择一条记录");
+            }
+            else
+            {
+                AddUser addUser = new AddUser();
+                addUser.bodyTea = this;
+                addUser.user.UserType = "2";
+                addUser.labTitle.Text = "修改教师";
+                addUser.labUname.Text = "教师名称";
+                addUser.labUserId.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[0].Value);
+                addUser.txtLoginId.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[2].Value);
+                addUser.txtUserName.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[1].Value);
+                addUser.txtPwd.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[3].Value);
+                addUser.ShowDialog();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)

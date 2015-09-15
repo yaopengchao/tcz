@@ -40,6 +40,10 @@ namespace LoginFrame
         public AddUser()
         {
             InitializeComponent();
+            if (userService == null)
+            {
+                userService = new UserService();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -74,7 +78,7 @@ namespace LoginFrame
         private void button1_Click(object sender, EventArgs e)
         {
             int result = 0;
-            int userId = Convert.ToInt32(labUserId.Text);
+            int userId = Convert.ToInt32(labUserId.Text == "" ? "0" : labUserId.Text);
             user.LoginId = txtLoginId.Text;
             user.UserName = txtUserName.Text;
             user.Pwd = txtPwd.Text;
