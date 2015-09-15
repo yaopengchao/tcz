@@ -25,8 +25,8 @@ namespace LoginFrame
 
             topicCategory.Items.Clear();
             topicCategory.DataSource = Bll.getAllCourses().Tables[0];
-            topicCategory.DisplayMember = "name";
-            topicCategory.ValueMember = "id";
+            topicCategory.DisplayMember = "TCZ_NAME";
+            topicCategory.ValueMember = "TCZ_ID";
 
             topicType.Items.Clear();
             topicType.DataSource = Constant.getTopicType();
