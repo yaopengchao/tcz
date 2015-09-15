@@ -13,19 +13,21 @@ namespace DAL
 
         public int addTopicDetail(TopicDetail topicDetail)
         {
-            string strSql = "insert into ex_topic_detail(topic_detail_id, topic_id, item_pre, item_detail, item_order) values(?topicDetailId, ?topicId, ?itemPre, ?itemDetail, ?itemOrder); select last_insert_id();";
+            string strSql = "insert into ex_topic_detail(topic_detail_id, topic_id, item_pre, item_detail, item_order, agreement) values(?topicDetailId, ?topicId, ?itemPre, ?itemDetail, ?itemOrder, ?agreement); select last_insert_id();";
             MySqlParameter[] parames = new MySqlParameter[] {
                 new MySqlParameter("?topicDetailId", MySqlDbType.VarChar),
                 new MySqlParameter("?topicId", MySqlDbType.VarChar),
                 new MySqlParameter("?itemPre", MySqlDbType.VarChar),
                 new MySqlParameter("?itemDetail", MySqlDbType.VarChar),
-                new MySqlParameter("?itemOrder", MySqlDbType.VarChar)
+                new MySqlParameter("?itemOrder", MySqlDbType.VarChar),
+                new MySqlParameter("?agreement", MySqlDbType.VarChar)
             };
             parames[0].Value = topicDetail.TopicDetailId;
             parames[1].Value = topicDetail.TopicId;
             parames[2].Value = topicDetail.ItemPre;
             parames[3].Value = topicDetail.ItemDetail;
             parames[4].Value = topicDetail.ItemOrder;
+            parames[5].Value = topicDetail.Agreement;
             return Convert.ToInt32(MySqlHelper.ExecuteScalar(strSql, parames));
         }
 
