@@ -155,22 +155,30 @@ namespace LoginFrame
                 {
                     ToolStripMenuItem subItem = AddContextMenu(row["NAME"].ToString(), menuStrip1.Items, null);
                     //subItem.Image = LoginFrame.Properties.Resources.Error;
-                    subItem.Click += new EventHandler(subItemClick1);//绑定方法
+                    subItem.Click += new EventHandler(subItemClick_playLesson);//绑定方法
+                    subItem.ToolTipText = "单击播放课件,双击删除收藏";
                     toolStripMenuItem1.DropDownItems.Add(subItem);
                 }
                 else if (LoginRoler.language == Constant.En)
                 {
                     ToolStripMenuItem subItem = AddContextMenu(row["ENAME"].ToString(), menuStrip1.Items, null);
                     //subItem.Image = LoginFrame.Properties.Resources.Error;
-                    subItem.Click += new EventHandler(subItemClick1);//绑定方法
+                    subItem.Click += new EventHandler(subItemClick_playLesson);//绑定方法
+                    subItem.DoubleClick += new EventHandler(subItemClick_deleteLesson);//绑定方法
+                    subItem.ToolTipText = "Click play courseware, double click Delete";
                     toolStripMenuItem1.DropDownItems.Add(subItem);
                 }
             }
         }
 
-        private void subItemClick1(object sender, EventArgs e)
+        private void subItemClick_playLesson(object sender, EventArgs e)
         {
-            MessageBox.Show("对了，就是我");
+            MessageBox.Show("播放");
+        }
+
+        private void subItemClick_deleteLesson(object sender, EventArgs e)
+        {
+            MessageBox.Show("删除");
         }
 
 
