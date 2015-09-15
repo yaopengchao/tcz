@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgreeMent.cs" />
     <Compile Include="ChatUser.cs" />
     <Compile Include="ClassInfo.cs" />
     <Compile Include="Examination.cs" />
