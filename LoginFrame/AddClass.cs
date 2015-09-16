@@ -33,6 +33,8 @@ namespace LoginFrame
         public AddClass()
         {
             InitializeComponent();
+            if (classService == null)
+                classService = new ClassService();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -46,7 +48,7 @@ namespace LoginFrame
             ClassInfo classInfo = new ClassInfo();
             classInfo.className = txtClassName.Text;
 
-            int classId = Convert.ToInt32(labClassId.Text);
+            int classId = Convert.ToInt32(labClassId.Text == "" ? "0" : labClassId.Text);
             if (classId > 0)                //修改操作
             {
                 classInfo.ClassId = classId;

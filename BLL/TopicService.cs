@@ -79,6 +79,8 @@ namespace BLL
                             topicDetail.TopicId = topic.TopicId;
                             topicDetail.ItemPre = tpDetail[0];
                             topicDetail.ItemDetail = tpDetail[1];
+                            topicDetail.Agreement = tpDetail[2];
+                            topicDetail.ItemOrder = tpDetail[3];
                             topicDetailDao.addTopicDetail(topicDetail);
                         }
                     }

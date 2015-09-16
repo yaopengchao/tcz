@@ -147,6 +147,7 @@
             // 
             this.exMenu4.Name = "exMenu4";
             resources.ApplyResources(this.exMenu4, "exMenu4");
+            this.exMenu4.Click += new System.EventHandler(this.exMenu4_Click);
             // 
             // 考试成绩ToolStripMenuItem
             // 

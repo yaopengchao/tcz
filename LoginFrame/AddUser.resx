@@ -117,325 +117,316 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="button2.Text" xml:space="preserve">
-    <value>取消</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="labUname.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>600, 400</value>
+  <data name="labUname.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 14pt</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="labUserId.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <data name="labUname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 90</value>
   </data>
-  <data name="&gt;&gt;button2.Type" xml:space="preserve">
+  <data name="labUname.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 30</value>
+  </data>
+  <data name="labUname.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 30</value>
+  </data>
+  <data name="labUname.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;labUname.Name" xml:space="preserve">
+    <value>labUname</value>
+  </data>
+  <data name="&gt;&gt;labUname.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labUname.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labUname.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 14pt</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 157</value>
+  </data>
+  <data name="label2.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 30</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 30</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>登录名</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 14pt</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 221</value>
+  </data>
+  <data name="label3.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 30</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 30</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>密码</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="labTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 20pt, style=Bold</value>
+  </data>
+  <data name="labTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 27</value>
+  </data>
+  <data name="labTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 27</value>
+  </data>
+  <data name="labTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;labTitle.Name" xml:space="preserve">
+    <value>labTitle</value>
+  </data>
+  <data name="&gt;&gt;labTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labTitle.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labTitle.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="txtUserName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 12pt</value>
+  </data>
+  <data name="txtUserName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 86</value>
+  </data>
+  <data name="txtUserName.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>300, 30</value>
+  </data>
+  <data name="txtUserName.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>300, 30</value>
+  </data>
+  <data name="txtUserName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 26</value>
+  </data>
+  <data name="txtUserName.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;txtUserName.Name" xml:space="preserve">
+    <value>txtUserName</value>
+  </data>
+  <data name="&gt;&gt;txtUserName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtUserName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtUserName.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="txtLoginId.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 12pt</value>
+  </data>
+  <data name="txtLoginId.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 153</value>
+  </data>
+  <data name="txtLoginId.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>300, 30</value>
+  </data>
+  <data name="txtLoginId.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>300, 30</value>
+  </data>
+  <data name="txtLoginId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 26</value>
+  </data>
+  <data name="txtLoginId.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;txtLoginId.Name" xml:space="preserve">
+    <value>txtLoginId</value>
+  </data>
+  <data name="&gt;&gt;txtLoginId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtLoginId.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtLoginId.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txtPwd.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 12pt</value>
+  </data>
+  <data name="txtPwd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>227, 216</value>
+  </data>
+  <data name="txtPwd.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>300, 30</value>
+  </data>
+  <data name="txtPwd.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>300, 30</value>
+  </data>
+  <data name="txtPwd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 26</value>
+  </data>
+  <data name="txtPwd.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;txtPwd.Name" xml:space="preserve">
+    <value>txtPwd</value>
+  </data>
+  <data name="&gt;&gt;txtPwd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtPwd.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtPwd.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>173, 309</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 30</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;button1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="label3.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>0, 30</value>
-  </data>
-  <data name="txtPwd.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
   <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;labUserId.Name" xml:space="preserve">
-    <value>labUserId</value>
-  </data>
-  <data name="labUname.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 14pt</value>
-  </data>
-  <data name="txtUserName.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>300, 30</value>
-  </data>
-  <data name="&gt;&gt;txtPwd.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtLoginId.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 309</value>
   </data>
   <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 30</value>
   </data>
-  <data name="&gt;&gt;txtUserName.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="button2.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
-  <data name="txtPwd.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 12pt</value>
+  <data name="button2.Text" xml:space="preserve">
+    <value>取消</value>
   </data>
-  <data name="&gt;&gt;txtLoginId.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;button2.Name" xml:space="preserve">
+    <value>button2</value>
   </data>
-  <data name="txtUserName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 86</value>
-  </data>
-  <data name="labUname.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 90</value>
-  </data>
-  <data name="labUserId.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;labTitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labUserId.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>密码</value>
-  </data>
-  <data name="&gt;&gt;txtUserName.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 30</value>
+  <data name="&gt;&gt;button2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;button2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 12</value>
-  </data>
   <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="labUserId.Text" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;labUname.Name" xml:space="preserve">
-    <value>labUname</value>
-  </data>
-  <data name="labTitle.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterParent</value>
-  </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>173, 309</value>
-  </data>
-  <data name="&gt;&gt;labUname.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 221</value>
-  </data>
-  <data name="&gt;&gt;txtPwd.Name" xml:space="preserve">
-    <value>txtPwd</value>
-  </data>
-  <data name="txtUserName.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;labUserId.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="labTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 27</value>
-  </data>
-  <data name="labUname.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="txtLoginId.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>300, 30</value>
-  </data>
-  <data name="txtUserName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 12pt</value>
-  </data>
-  <data name="labTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 27</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 30</value>
-  </data>
-  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 14pt</value>
-  </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="labTitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 20pt, style=Bold</value>
-  </data>
-  <data name="labUname.Text" xml:space="preserve">
-    <value>学生名称</value>
-  </data>
-  <data name="txtPwd.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>300, 30</value>
-  </data>
-  <data name="txtLoginId.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;txtPwd.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labTitle.Text" xml:space="preserve">
-    <value>添加学生</value>
-  </data>
-  <data name="&gt;&gt;labTitle.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;labTitle.Name" xml:space="preserve">
-    <value>labTitle</value>
-  </data>
-  <data name="txtPwd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 216</value>
-  </data>
-  <data name="label2.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>0, 30</value>
-  </data>
-  <data name="txtLoginId.Location" type="System.Drawing.Point, System.Drawing">
-    <value>227, 153</value>
-  </data>
-  <data name="txtPwd.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>300, 30</value>
-  </data>
-  <data name="labUserId.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;txtUserName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+  <data name="labUserId.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="labUserId.Location" type="System.Drawing.Point, System.Drawing">
     <value>279, 357</value>
   </data>
-  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>331, 309</value>
+  <data name="labUserId.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 12</value>
   </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 14pt</value>
+  <data name="labUserId.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
-  <data name="labUname.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 30</value>
+  <data name="labUserId.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="&gt;&gt;labTitle.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;labUserId.Name" xml:space="preserve">
+    <value>labUserId</value>
   </data>
-  <data name="labUname.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>0, 30</value>
-  </data>
-  <data name="&gt;&gt;txtLoginId.Name" xml:space="preserve">
-    <value>txtLoginId</value>
-  </data>
-  <data name="&gt;&gt;labUname.Type" xml:space="preserve">
+  <data name="&gt;&gt;labUserId.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labUserId.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 30</value>
-  </data>
-  <data name="txtLoginId.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 12pt</value>
-  </data>
-  <data name="txtUserName.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>300, 30</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>AddUser</value>
-  </data>
-  <data name="&gt;&gt;txtPwd.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>AddUser</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>登录名</value>
-  </data>
-  <data name="txtLoginId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 26</value>
-  </data>
-  <data name="&gt;&gt;labUname.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 157</value>
-  </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>保存</value>
-  </data>
-  <data name="&gt;&gt;button2.Name" xml:space="preserve">
-    <value>button2</value>
-  </data>
-  <data name="&gt;&gt;txtLoginId.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="txtPwd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 26</value>
-  </data>
-  <data name="labUserId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>11, 12</value>
-  </data>
-  <data name="button2.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="labUname.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;txtUserName.Name" xml:space="preserve">
-    <value>txtUserName</value>
-  </data>
-  <data name="txtLoginId.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>300, 30</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labTitle.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtUserName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 26</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;labUserId.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>600, 400</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>AddUser</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>AddUser</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

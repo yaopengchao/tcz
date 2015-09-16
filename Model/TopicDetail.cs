@@ -38,6 +38,13 @@ namespace Model
             set { itemDetail = value; }
         }
 
+        private string agreement;
+        public string Agreement
+        {
+            get { return agreement; }
+            set { agreement = value; }
+        }
+
         private string itemOrder;
         public string ItemOrder
         {

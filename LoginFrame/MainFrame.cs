@@ -51,20 +51,24 @@ namespace LoginFrame
             string roleId = LoginRoler.roleid;
             if (roleId.Equals("1"))                 //管理员
             {
+                menuStrip1.Items[1].Visible = false;            //自我测试
                 menuStrip1.Items[2].Visible = false;             //考试
-                panel5.Height = 180;
+                panel5.Height = 160;
             }
             else if (roleId.Equals("2"))          //教师
             {
                 menuStrip1.Items[1].Visible = false;            //自我测试
                 menuStrip1.Items[2].Visible = true;             //考试
-                exMenu3.Visible = true;
+                exMenu3.Visible = false;
                 menuStrip1.Items[5].Visible = false;            //教师管理
                 panel5.Height = 160;
             }
             else if (roleId.Equals("3"))          //学生
             {
                 menuStrip1.Items[7].Visible = false;            //云服务
+                menuStrip1.Items[2].Visible = true;             //考试
+                exMenu1.Visible = false;
+                exMenu2.Visible = false;
                 panel5.Height = 180;
                 exMenu1.Visible = false;
                 exMenu3.Visible = false;
@@ -1695,6 +1699,27 @@ namespace LoginFrame
             p.Start();
             exeCmd("net stop MySQL");
             p.Close();
+        }
+
+        private void exMenu4_Click(object sender, EventArgs e)
+        {
+            panel5.Hide();
+
+            panel1.Controls.Clear();
+            TitleScore titleScore = TitleScore.createForm();
+            titleScore.TopLevel = false;
+            titleScore.FormBorderStyle = FormBorderStyle.None;
+            titleScore.Dock = System.Windows.Forms.DockStyle.Fill;
+            panel1.Controls.Add(titleScore);
+            titleScore.Show();
+
+            panel6.Controls.Clear();
+            BodyScore bodyScore = BodyScore.createForm();
+            bodyScore.TopLevel = false;
+            bodyScore.FormBorderStyle = FormBorderStyle.None;
+            bodyScore.Dock = System.Windows.Forms.DockStyle.Fill;
+            panel6.Controls.Add(bodyScore);
+            bodyScore.Show();
         }
     }
 }

@@ -53,15 +53,15 @@
             // 
             // topics
             // 
-            resources.ApplyResources(this.topics, "topics");
             this.topics.FormattingEnabled = true;
+            resources.ApplyResources(this.topics, "topics");
             this.topics.Name = "topics";
             this.topics.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             // 
             // examDetail
             // 
-            resources.ApplyResources(this.examDetail, "examDetail");
             this.examDetail.FormattingEnabled = true;
+            resources.ApplyResources(this.examDetail, "examDetail");
             this.examDetail.Name = "examDetail";
             // 
             // topicCategory
