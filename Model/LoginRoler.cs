@@ -34,6 +34,16 @@ namespace Model
 
         public static Dictionary<string, SerialPort> tzmonitors = new Dictionary<string, SerialPort>();//听诊模拟人
 
+
+        public static Dictionary<string, AgreeMent> agreeMents = new Dictionary<string, AgreeMent>();//模拟人协议
+
+        public static Dictionary<string, AgreeMent> AgreeMents
+        {
+            get { return agreeMents; }
+            set { agreeMents = value; }
+        }
+
+
         public static List<string> SendMsglist
         {
             get { return sendMsglist; }

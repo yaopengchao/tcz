@@ -81,218 +81,219 @@ namespace LoginFrame
 
             SerialPort BluetoothConnection = LoginRoler.Czmonitors["czmnr1"];
 
+
+
             if (BluetoothConnection!=null)
             {
                 //肝脏肿大
                 if (_触诊模拟人.肝脏肿大 == "0")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.肝脏无肿大);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.肝脏无肿大]).Agreement);
                 }
                 else if (_触诊模拟人.肝脏肿大 == "1")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.肝脏有肿大1);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection,((AgreeMent)LoginRoler.AgreeMents[Constant.肝脏有肿大1]).Agreement);
                 }
                 else if (_触诊模拟人.肝脏肿大 == "2")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.肝脏有肿大2);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.肝脏有肿大2]).Agreement );
                 }
                 else if (_触诊模拟人.肝脏肿大 == "3")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.肝脏有肿大3);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.肝脏有肿大3]).Agreement  );
                 }
                 else if (_触诊模拟人.肝脏肿大 == "4")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.肝脏有肿大4);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.肝脏有肿大4]).Agreement );
                 }
                 else if (_触诊模拟人.肝脏肿大 == "5")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.肝脏有肿大5);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.肝脏有肿大5]).Agreement );
 
                 }
                 else if (_触诊模拟人.肝脏肿大 == "6")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.肝脏有肿大6);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.肝脏有肿大6]).Agreement );
 
                 }
                 else if (_触诊模拟人.肝脏肿大 == "7")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.肝脏有肿大7);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.肝脏有肿大7]).Agreement );
 
                 }
 
                 //肝脏质地
                 if (_触诊模拟人.肝脏质地=="1")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.肝脏质地质硬);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.肝脏质地质硬]).Agreement );
                 }
                 else if (_触诊模拟人.肝脏质地 == "0")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.肝脏质地质软);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.肝脏质地质软]).Agreement );
                 }
 
                 //脾脏肿大
                 if (_触诊模拟人.脾脏肿大 == "0")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.脾脏无肿大);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.脾脏无肿大]).Agreement );
                 }
                 else if (_触诊模拟人.脾脏肿大 == "1")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.脾脏有肿大1);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.脾脏有肿大1]).Agreement  );
                 }
                 else if (_触诊模拟人.脾脏肿大 == "2")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.脾脏有肿大2);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.脾脏有肿大2]).Agreement);
                 }
                 else if (_触诊模拟人.脾脏肿大 == "3")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.脾脏有肿大3);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.脾脏有肿大3]).Agreement);
                 }
                 else if (_触诊模拟人.脾脏肿大 == "4")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.脾脏有肿大4);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.脾脏有肿大4]).Agreement);
                 }
                 else if (_触诊模拟人.脾脏肿大 == "5")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.脾脏有肿大5);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.脾脏有肿大5]).Agreement);
 
                 }
                 else if (_触诊模拟人.脾脏肿大 == "6")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.脾脏有肿大6);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.脾脏有肿大6]).Agreement);
 
                 }
                 else if (_触诊模拟人.脾脏肿大 == "7")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.脾脏有肿大7);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.脾脏有肿大7]).Agreement);
 
                 }
 
                 //胆囊触痛
                 if (_触诊模拟人.胆囊触痛 == "1")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.胆囊有触痛);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.胆囊有触痛]).Agreement  );
                 }
                 else if (_触诊模拟人.胆囊触痛 == "0")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.胆囊无触痛);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.胆囊无触痛]).Agreement );
                 }
 
                 //胆囊肿大
 
                 if (_触诊模拟人.胆囊肿大 == "1")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.胆囊有肿大);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.胆囊有肿大]).Agreement );
                 }
                 else if (_触诊模拟人.胆囊肿大 == "0")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.胆囊无肿大);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.胆囊无肿大]).Agreement );
                 }
 
                 //墨菲氏征
                 if (_触诊模拟人.胆囊墨菲氏征 == "1")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.胆囊墨菲氏征有);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.胆囊墨菲氏征有]).Agreement );
                 }
                 else if (_触诊模拟人.胆囊墨菲氏征 == "0")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.胆囊墨菲氏征无);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.胆囊墨菲氏征无]).Agreement );
                 }
 
 
                 //压痛胃溃疡  胃部压痛
                 if (_触诊模拟人.压痛胃溃疡 == "1")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.胃部压痛有);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.胃部压痛有]).Agreement );
                 }
                 else if (_触诊模拟人.压痛胃溃疡 == "0")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.胃部压痛无);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.胃部压痛无]).Agreement );
                 }
 
                 //压痛十二指肠
                 if (_触诊模拟人.压痛十二指肠 == "1")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.十二指肠有);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.十二指肠有]).Agreement );
                 }
                 else if (_触诊模拟人.压痛十二指肠 == "0")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.十二指肠无);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.十二指肠无]).Agreement );
                 }
 
                 //压痛胰腺
                 if (_触诊模拟人.压痛胰腺 == "1")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.胰腺有);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.胰腺有]).Agreement );
                 }
                 else if (_触诊模拟人.压痛胰腺 == "0")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.胰腺无);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.胰腺无]).Agreement );
                 }
 
                 //压痛阑尾
                 if (_触诊模拟人.压痛阑尾 == "1")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.阑尾有);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.阑尾有]).Agreement );
                 }
                 else if (_触诊模拟人.压痛阑尾 == "0")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.阑尾无);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.阑尾无]).Agreement  );
                 }
                 //压痛小肠
                 if (_触诊模拟人.压痛小肠 == "1")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.小肠有);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.小肠有]).Agreement );
                 }
                 else if (_触诊模拟人.压痛小肠 == "0")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.小肠无);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.小肠无]).Agreement );
                 }
                 //压痛乙状结肠
                 if (_触诊模拟人.乙状结肠 == "1")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.乙状结肠有);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.乙状结肠有]).Agreement );
                 }
                 else if (_触诊模拟人.乙状结肠 == "0")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.乙状结肠无);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.乙状结肠无]).Agreement );
                 }
                 //反跳痛胰腺
                 if (_触诊模拟人.反跳痛胰腺 == "1")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.胰腺反跳痛有);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.胰腺反跳痛有]).Agreement );
                 }
                 else if (_触诊模拟人.反跳痛胰腺 == "0")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.胰腺反跳痛无);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.胰腺反跳痛无]).Agreement );
                 }
                 //反跳痛阑尾
                 if (_触诊模拟人.反跳痛阑尾 == "1")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.阑尾反跳痛有);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.阑尾反跳痛有]).Agreement );
                 }
                 else if (_触诊模拟人.反跳痛阑尾 == "0")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.阑尾反跳痛无);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.阑尾反跳痛无]).Agreement );
                 }
                 //反跳痛小肠
                 if (_触诊模拟人.反跳痛小肠 == "1")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.小肠反跳痛有);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.小肠反跳痛有]).Agreement );
                 }
                 else if (_触诊模拟人.反跳痛小肠 == "0")
                 {
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.小肠反跳痛无);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.小肠反跳痛无]).Agreement );
                 }
 
                 //脉搏
-                BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.脉搏设置.Replace("@", _触诊模拟人.脉搏));
+                BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.脉搏设置]).Agreement.Replace("@", _触诊模拟人.脉搏));
 
                 //血压收缩压
-                BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.血压设置收缩压.Replace("@", _触诊模拟人.血压收缩压));
-
+                BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.血压设置收缩压]).Agreement.Replace("@", _触诊模拟人.血压收缩压));
 
                 //血压舒张压
-                BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.血压设置舒张压.Replace("@", _触诊模拟人.血压舒张压));
+                BluetoothUtil.BlueToothDataSend(BluetoothConnection, ((AgreeMent)LoginRoler.AgreeMents[Constant.血压设置舒张压]).Agreement.Replace("@", _触诊模拟人.血压舒张压));
 
                 //盲肠音
                 //肾动脉听诊音
@@ -709,21 +710,21 @@ namespace LoginFrame
 
             if (_听诊模拟人.心前区震颤=="1")
             {
-                BluetoothUtil.BlueToothDataSend(BluetoothConnection1, Constant.心前区震颤有);
+                BluetoothUtil.BlueToothDataSend(BluetoothConnection1, ((AgreeMent)LoginRoler.AgreeMents[Constant.心前区震颤有]).Agreement );
             }
             else if (_听诊模拟人.心前区震颤 == "0")
             {
-                BluetoothUtil.BlueToothDataSend(BluetoothConnection1, Constant.心前区震颤无);
+                BluetoothUtil.BlueToothDataSend(BluetoothConnection1, ((AgreeMent)LoginRoler.AgreeMents[Constant.心前区震颤无]).Agreement);
             }
 
             //心尖搏动
             if (_听诊模拟人.心尖搏动 == "1")
             {
-                BluetoothUtil.BlueToothDataSend(BluetoothConnection1, Constant.心尖搏动有);
+                BluetoothUtil.BlueToothDataSend(BluetoothConnection1, ((AgreeMent)LoginRoler.AgreeMents[Constant.心尖搏动有]).Agreement);
             }
             else if (_听诊模拟人.心尖搏动 == "0")
             {
-                BluetoothUtil.BlueToothDataSend(BluetoothConnection1, Constant.心尖搏动无);
+                BluetoothUtil.BlueToothDataSend(BluetoothConnection1, ((AgreeMent)LoginRoler.AgreeMents[Constant.心尖搏动无]).Agreement );
             }
 
             //

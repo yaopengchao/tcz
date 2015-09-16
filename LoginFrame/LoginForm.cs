@@ -136,6 +136,10 @@ namespace LoginFrame
                         LoginRoler.userId = Convert.ToInt32(ds.Tables[0].Rows[0][3].ToString());
                         LoginRoler.pwd = password;
 
+                        loadAgreeMent();
+
+                        Console.WriteLine("模拟人协议加载数量"+LoginRoler.AgreeMents.Count);
+
                         checkCode = "";
                         flag = true;
                     }
@@ -154,6 +158,54 @@ namespace LoginFrame
                 }
             }
             return flag;
+        }
+
+        private AgreementService agreementService;
+        private static Dictionary<string, string> strWheres;
+
+        private void loadAgreeMent()
+        {
+            if (agreementService == null)
+            {
+                agreementService = AgreementService.getInstance();
+            }
+            if (strWheres == null)
+            {
+                strWheres = new Dictionary<string, string>();
+            }
+            Dictionary<string, AgreeMent> AgreeMents = LoginRoler.AgreeMents;
+            strWheres.Clear();
+            DataTable dataTable = agreementService.listAgreements(strWheres).Tables[0];
+            for (int i = 0; i < dataTable.Rows.Count; i++)
+            {
+                AgreeMent agreeMent = new AgreeMent();
+                string AgreeMents_str = "";
+                for (int j = 0; j < dataTable.Columns.Count; j++)
+                {
+                    if (j==0)
+                    {
+                        agreeMent.Agreement_id = dataTable.Rows[i][j].ToString();
+                    }
+                    else if (j == 1)
+                    {
+                        AgreeMents_str = dataTable.Rows[i][j].ToString();
+                        agreeMent.Agreement_name = dataTable.Rows[i][j].ToString();
+                    }
+                    else if (j == 2)
+                    {
+                        agreeMent.Agreement_ename = dataTable.Rows[i][j].ToString();
+                    }
+                    else if (j == 3)
+                    {
+                        agreeMent.Agreement_type = dataTable.Rows[i][j].ToString();
+                    }
+                    else if (j == 4)
+                    {
+                        agreeMent.Agreement = dataTable.Rows[i][j].ToString();
+                    }
+                }
+                AgreeMents.Add(AgreeMents_str, agreeMent);
+            }
         }
 
         /// <summary>
@@ -299,33 +351,25 @@ namespace LoginFrame
 
                 //进入打包好的mysql地址
                 cdDiyDBPath();
-
+                exeCmd("mysqld remove");
                 //安装mysql
                 exeCmd("mysqld install");
 
                 //启动mysql服务
                 exeCmd("net start MySQL");
-
+                Thread.Sleep(10000);
                 p.Close();
             }
             else
             {
 
                 p.Start();
-                //Console.WriteLine("mySql_Version="+ mySql_Version+ "mySql_Path="+ mySql_Path+"bin");
-                //进入目录 停止数据库
-                //string installPath = mySql_Path + "bin";
-                //int index = installPath.IndexOf(":");
-                //string hardPath = installPath.Substring(0, index + 1);
-                //p.StandardInput.WriteLine(hardPath);
-                //p.StandardInput.WriteLine("cd " + installPath);
+             
                 exeCmd("net stop MySQL");
-                
-                //Console.WriteLine("installPath=" + installPath);
 
                 //进入打包数据库目录
                 cdDiyDBPath();
-                exeCmd("mysqld remove");
+                //exeCmd("mysqld remove");
                 //安装mysql
                 exeCmd("mysqld install");
                 //启动mysql服务

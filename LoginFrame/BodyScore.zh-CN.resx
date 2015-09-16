@@ -133,7 +133,7 @@
     <value>添加</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>教师名称</value>
+    <value>考试名称</value>
   </data>
   <data name="查询条件.Text" xml:space="preserve">
     <value>查询条件</value>

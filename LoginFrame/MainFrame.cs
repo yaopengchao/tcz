@@ -220,15 +220,16 @@ namespace LoginFrame
                     //Start
                     //"正在连接蓝牙设备";
 
-                    //Console.WriteLine("串口=="+s);
+                    Console.WriteLine("串口=="+s);
                     BluetoothConnection.PortName = s;
+                    BluetoothConnection.BaudRate = 38400;
                     BluetoothConnection.Open();
                     BluetoothConnection.ReadTimeout = 10000;
                     BluetoothConnection.DataReceived += new SerialDataReceivedEventHandler(BlueToothDataReceived);
                     //"蓝牙连接成功";
 
                     //发送指令判断是什么类型的模拟人
-                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, Constant.获取命令);
+                    BluetoothUtil.BlueToothDataSend(BluetoothConnection, "AT+PSWD?");
                 }
             }
         }
@@ -253,7 +254,7 @@ namespace LoginFrame
             Console.WriteLine("接收的消息==" + BlueToothReceivedData);
 
             //触诊
-            if (BlueToothReceivedData == Constant.触诊通信标识码返回)
+            if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.触诊通信标识码返回]).Agreement)
             {
                 Dictionary<string, SerialPort> czmonitors = LoginRoler.Czmonitors;
                 if (!czmonitors.ContainsKey("czmnr1"))
@@ -263,189 +264,189 @@ namespace LoginFrame
                 }
             }
 
-            if (BlueToothReceivedData == Constant.归零成功)
+            if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.归零成功]).Agreement )
             {
                 LoginRoler.SendMsglist.Add("归零成功");
             }
-            else if (BlueToothReceivedData == Constant.归零失败)
+            else if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.归零失败]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("归零失败");
             }
 
-            if (BlueToothReceivedData == Constant.肝脏有肿大成功)
+            if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.肝脏有肿大成功]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("肝脏有肿大成功");
             }
-            else if (BlueToothReceivedData == Constant.肝脏有肿大失败)
+            else if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.肝脏有肿大失败]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("肝脏有肿大失败");
             }
 
-            if (BlueToothReceivedData == Constant.肝脏质地质硬)
+            if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.肝脏质地质硬]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("肝脏质地质硬成功");
             }
-            else if (BlueToothReceivedData == Constant.肝脏质地质硬)
+            else if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.肝脏质地质硬]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("肝脏质地质硬失败");
             }
 
-            if (BlueToothReceivedData == Constant.肝脏质地成功)
+            if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.肝脏质地成功]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("肝脏质地成功");
             }
-            else if (BlueToothReceivedData == Constant.肝脏质地失败)
+            else if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.肝脏质地失败]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("肝脏质地失败");
             }
 
 
-            if (BlueToothReceivedData == Constant.脾脏有肿大成功)
+            if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.脾脏有肿大成功]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("脾脏有肿大成功");
             }
-            else if (BlueToothReceivedData == Constant.脾脏有肿大失败)
+            else if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.脾脏有肿大失败]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("脾脏有肿大失败");
             }
 
-            if (BlueToothReceivedData == Constant.胆囊有肿大成功)
+            if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.胆囊有肿大成功]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("胆囊有肿大成功");
             }
-            else if (BlueToothReceivedData == Constant.胆囊有肿大失败)
+            else if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.胆囊有肿大失败]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("胆囊有肿大失败");
             }
 
-            if (BlueToothReceivedData == Constant.胆囊触痛成功)
+            if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.胆囊触痛成功]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("胆囊触痛成功");
             }
-            else if (BlueToothReceivedData == Constant.胆囊触痛失败)
+            else if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.胆囊触痛失败]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("胆囊触痛失败");
             }
 
-            if (BlueToothReceivedData == Constant.胆囊墨菲氏征成功)
+            if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.胆囊墨菲氏征成功]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("胆囊墨菲氏征成功");
             }
-            else if (BlueToothReceivedData == Constant.胆囊墨菲氏征失败)
+            else if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.胆囊墨菲氏征失败]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("胆囊墨菲氏征失败");
             }
 
-            if (BlueToothReceivedData == Constant.胃部压痛成功)
+            if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.胃部压痛成功]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("胃部压痛成功");
             }
-            else if (BlueToothReceivedData == Constant.胃部压痛失败)
+            else if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.胃部压痛失败]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("胃部压痛失败");
             }
 
-            if (BlueToothReceivedData == Constant.十二指肠成功)
+            if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.十二指肠成功]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("十二指肠成功");
             }
-            else if (BlueToothReceivedData == Constant.十二指肠失败)
+            else if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.十二指肠失败]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("十二指肠失败");
             }
 
-            if (BlueToothReceivedData == Constant.胰腺成功)
+            if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.胰腺成功]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("胰腺成功");
             }
-            else if (BlueToothReceivedData == Constant.胰腺失败)
+            else if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.胰腺失败]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("胰腺失败");
             }
 
-            if (BlueToothReceivedData == Constant.阑尾成功)
+            if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.阑尾成功]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("阑尾成功");
             }
-            else if (BlueToothReceivedData == Constant.阑尾失败)
+            else if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.阑尾失败]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("阑尾失败");
             }
 
-            if (BlueToothReceivedData == Constant.小肠成功)
+            if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.小肠成功]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("小肠成功");
             }
-            else if (BlueToothReceivedData == Constant.小肠失败)
+            else if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.小肠失败]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("小肠失败");
             }
 
-            if (BlueToothReceivedData == Constant.乙状结肠成功)
+            if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.乙状结肠成功]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("乙状结肠成功");
             }
-            else if (BlueToothReceivedData == Constant.乙状结肠失败)
+            else if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.乙状结肠失败]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("乙状结肠失败");
             }
 
-            if (BlueToothReceivedData == Constant.胰腺反跳痛成功)
+            if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.胰腺反跳痛成功]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("胰腺反跳痛成功");
             }
-            else if (BlueToothReceivedData == Constant.胰腺反跳痛失败)
+            else if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.胰腺反跳痛失败]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("胰腺反跳痛失败");
             }
 
-            if (BlueToothReceivedData == Constant.阑尾反跳痛成功)
+            if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.阑尾反跳痛成功]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("阑尾反跳痛成功");
             }
-            else if (BlueToothReceivedData == Constant.阑尾反跳痛失败)
+            else if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.阑尾反跳痛失败]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("阑尾反跳痛失败");
             }
 
-            if (BlueToothReceivedData == Constant.小肠反跳痛成功)
+            if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.小肠反跳痛成功]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("小肠反跳痛成功");
             }
-            else if (BlueToothReceivedData == Constant.小肠反跳痛失败)
+            else if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.小肠反跳痛失败]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("小肠反跳痛失败");
             }
 
-            if (BlueToothReceivedData == Constant.脉搏设置成功)
+            if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.脉搏设置成功]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("脉搏设置成功");
             }
-            else if (BlueToothReceivedData == Constant.脉搏设置失败)
+            else if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.脉搏设置失败]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("脉搏设置失败");
             }
 
-            if (BlueToothReceivedData == Constant.血压设置收缩压成功)
+            if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.血压设置收缩压成功]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("血压设置收缩压成功");
             }
-            else if (BlueToothReceivedData == Constant.血压设置收缩压失败)
+            else if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.血压设置收缩压失败]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("血压设置收缩压失败");
             }
 
-            if (BlueToothReceivedData == Constant.血压设置舒张压成功)
+            if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.血压设置舒张压成功]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("血压设置舒张压成功");
             }
-            else if (BlueToothReceivedData == Constant.血压设置舒张压失败)
+            else if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.血压设置舒张压失败]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("血压设置舒张压失败");
             }
 
             //听诊
-            if (BlueToothReceivedData == Constant.触诊通信标识码返回)
+            if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.触诊通信标识码返回]).Agreement)
             {
                 Dictionary<string, SerialPort> tzmonitors = LoginRoler.Tzmonitors;
                 if (!tzmonitors.ContainsKey("tzmnr1") && !tzmonitors.ContainsKey("tzmnr2"))
@@ -460,20 +461,20 @@ namespace LoginFrame
                 }
             }
 
-            if (BlueToothReceivedData == Constant.心前区震颤成功)
+            if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.心前区震颤成功]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("心前区震颤成功");
             }
-            else if (BlueToothReceivedData == Constant.心前区震颤失败)
+            else if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.心前区震颤失败]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("心前区震颤失败");
             }
 
-            if (BlueToothReceivedData == Constant.心尖搏动成功)
+            if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.心尖搏动成功]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("心尖搏动成功");
             }
-            else if (BlueToothReceivedData == Constant.心尖搏动失败)
+            else if (BlueToothReceivedData == ((AgreeMent)LoginRoler.AgreeMents[Constant.心尖搏动失败]).Agreement)
             {
                 LoginRoler.SendMsglist.Add("心尖搏动失败");
             }

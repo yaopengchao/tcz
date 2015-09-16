@@ -2,7 +2,7 @@
 using MySql.Data.MySqlClient;
 using System.Configuration;
 using Model;
-
+using System.IO;
 
 namespace DAL
 {
@@ -97,13 +97,63 @@ namespace DAL
             return ds;
         }
 
+        /// <summary> 
+        /// 执行Sql文件 
+        /// </summary> 
+        /// <param name="varFileName">sql文件</param> 
+        /// <returns></returns> 
+        private static bool ExecuteSqlFile(string varFileName)
+        {
+            using (StreamReader reader = new StreamReader(varFileName, System.Text.Encoding.GetEncoding("utf-8")))
+            {
+                MySqlCommand command;
+                MySqlConnection Connection = GetMysqlConnection;
+                Connection.Open();
+                try
+                {
+                    string line = "";
+                    string l;
+                    while (true)
+                    {
+                        // 如果line被使用，则设为空
+                        if (line.EndsWith(";"))
+                            line = "";
 
-      
+                        l = reader.ReadLine();
+
+                        // 如果到了最后一行，则退出循环
+                        if (l == null) break;
+                        // 去除空格
+                        l = l.TrimEnd();
+                        // 如果是空行，则跳出循环
+                        if (l == "") continue;
+                        // 如果是注释，则跳出循环
+                        if (l.StartsWith("--")) continue;
+
+                        // 行数加1 
+                        line += l;
+                        // 如果不是完整的一条语句，则继续读取
+                        if (!line.EndsWith(";")) continue;
+                        if (line.StartsWith("/*!"))
+                        {
+                            continue;
+                        }
+
+                        //执行当前行
+                        command = new MySqlCommand(line, Connection);
+                        command.ExecuteNonQuery();
+                    }
+                }
+                finally
+                {
+                    Connection.Close();
+                }
+            }
+
+            return true;
+        }
 
 
-        
-
-       
 
 
     }

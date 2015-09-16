@@ -138,25 +138,25 @@
     <value>自我测试</value>
   </data>
   <data name="exMenu1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>148, 22</value>
   </data>
   <data name="exMenu1.Text" xml:space="preserve">
     <value>题库管理</value>
   </data>
   <data name="exMenu2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>148, 22</value>
   </data>
   <data name="exMenu2.Text" xml:space="preserve">
     <value>试卷管理</value>
   </data>
   <data name="exMenu3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>148, 22</value>
   </data>
   <data name="exMenu3.Text" xml:space="preserve">
     <value>考试管理</value>
   </data>
   <data name="exMenu4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>148, 22</value>
   </data>
   <data name="exMenu4.Text" xml:space="preserve">
     <value>考试成绩管理</value>
@@ -235,7 +235,7 @@
     <value>0</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>907, 49</value>
+    <value>907, 40</value>
   </data>
   <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 224</value>
