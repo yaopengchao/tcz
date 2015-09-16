@@ -6,7 +6,7 @@ using System.Text;
 namespace Model
 {
     /// <summary>
-    /// 
+    /// 模拟人协议类
     /// </summary>
     public class AgreeMent
     {
