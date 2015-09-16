@@ -14,21 +14,21 @@ namespace DAL
         //根据条件进行分页查询
         public DataSet listTopics(Dictionary<string, string> strWheres, int startIndex, int pageSize)
         {
-            string strSql = "select topic_id, content, if (topic_type='1','理论类','操作类'), b.name, answers, create_time, topic_type, topic_category from ex_topic a, classify b where a.TOPIC_CATEGORY = b.id ";
+            string strSql = "select topic_id, content, if (topic_type='1','理论类','操作类'), b.TCZ_NAME, answers, create_time, topic_type, topic_category from ex_topic a, tcz_type b where a.TOPIC_CATEGORY = b.TCZ_ID ";
             return listEntity(strSql, strWheres, startIndex, pageSize);
         }
 
         //根据条件进行分页查询
         public DataSet listNotInExamTopics(Dictionary<string, string> strWheres, int examId)
         {
-            string strSql = "select topic_id, content, if (topic_type='1','理论类','操作类'), b.name, answers, create_time, topic_type, topic_category from ex_topic a, classify b where a.TOPIC_CATEGORY = b.id and a.TOPIC_ID not in (SELECT TOPIC_ID from ex_examination_detail where EXAMINATION_ID = " + examId + ")";
+            string strSql = "select topic_id, content, if (topic_type='1','理论类','操作类'), b.TCZ_NAME, answers, create_time, topic_type, topic_category from ex_topic a, tcz_type b where a.TOPIC_CATEGORY = b.TCZ_ID and a.TOPIC_ID not in (SELECT TOPIC_ID from ex_examination_detail where EXAMINATION_ID = " + examId + ")";
             return listEntity(strSql, strWheres);
         }
 
         //根据条件查询数量
         public int countTopics(Dictionary<string, string> strWheres)
         {
-            string strSql = "select count(1) from ex_topic a, classify b where a.TOPIC_CATEGORY = b.id ";
+            string strSql = "select count(1) from ex_topic a, tcz_type b where a.TOPIC_CATEGORY = b.TCZ_ID ";
             return countEntity(strSql, strWheres);
         }
 

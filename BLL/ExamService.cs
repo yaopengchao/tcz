@@ -83,7 +83,7 @@ namespace BLL
                 examDetailDao.deleteExamDetail(exam.ExaminationId);
             }
             
-            if (topicIds.IndexOf(",") > -1)
+            if (topicIds.IndexOf(",") > -1)                  //多个题目时
             {
                 topicIds = topicIds.Substring(0, topicIds.Length - 1);
                 string[] ids = topicIds.Split(',');
@@ -95,11 +95,23 @@ namespace BLL
                     examDetail.TopicOrder = i + 1;
                     examDetailDao.addExamDetail(examDetail);
                 }
-                
+            }
+            else
+            {
+                ExaminationDetail examDetail = new ExaminationDetail();
+                examDetail.ExaminationId = examId;
+                examDetail.TopicId = Convert.ToInt32(topicIds);
+                examDetail.TopicOrder = 1;
+                examDetailDao.addExamDetail(examDetail);
             }
 
             return flag;
         }
 
+        public int deleteExam(int examId)
+        {
+            examDetailDao.deleteExamDetail(examId);
+            return examDao.deleteExam(examId);
+        }
     }
 }
