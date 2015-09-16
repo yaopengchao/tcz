@@ -38,15 +38,15 @@
             this.addDetail = new System.Windows.Forms.Button();
             this.delDetail = new System.Windows.Forms.Button();
             this.dg = new System.Windows.Forms.DataGridView();
+            this.选项字符 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.topicCategory = new System.Windows.Forms.ComboBox();
             this.topicType = new System.Windows.Forms.ComboBox();
             this.txtAnswers = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtContent = new System.Windows.Forms.TextBox();
             this.labTopicId = new System.Windows.Forms.Label();
-            this.选项字符 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,6 +113,23 @@
             this.dg.RowHeadersVisible = false;
             this.dg.RowTemplate.Height = 23;
             // 
+            // 选项字符
+            // 
+            this.选项字符.FillWeight = 5.076141F;
+            resources.ApplyResources(this.选项字符, "选项字符");
+            this.选项字符.Name = "选项字符";
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 194.9239F;
+            resources.ApplyResources(this.Column2, "Column2");
+            this.Column2.Name = "Column2";
+            // 
+            // Column1
+            // 
+            resources.ApplyResources(this.Column1, "Column1");
+            this.Column1.Name = "Column1";
+            // 
             // topicCategory
             // 
             resources.ApplyResources(this.topicCategory, "topicCategory");
@@ -145,23 +162,6 @@
             // 
             resources.ApplyResources(this.labTopicId, "labTopicId");
             this.labTopicId.Name = "labTopicId";
-            // 
-            // 选项字符
-            // 
-            this.选项字符.FillWeight = 5.076141F;
-            resources.ApplyResources(this.选项字符, "选项字符");
-            this.选项字符.Name = "选项字符";
-            // 
-            // Column2
-            // 
-            this.Column2.FillWeight = 194.9239F;
-            resources.ApplyResources(this.Column2, "Column2");
-            this.Column2.Name = "Column2";
-            // 
-            // Column1
-            // 
-            resources.ApplyResources(this.Column1, "Column1");
-            this.Column1.Name = "Column1";
             // 
             // AddTopic
             // 

@@ -141,7 +141,7 @@ namespace LoginFrame
             else
             {
                 string topicContent = "";
-                topicContent += content + "," + type + "," + category + "," + answers + "," + labTopicId.Text + "|";
+                topicContent += content + "," + type + "," + category + "," + answers + "," + (labTopicId.Text == "" ? "0" : labTopicId.Text) + "|";
                 string temp = "";
                 for (int i = 0; i < totalDetail; i++)
                 {
