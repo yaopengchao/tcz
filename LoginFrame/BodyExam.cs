@@ -113,16 +113,23 @@ namespace LoginFrame
 
         private void button5_Click(object sender, EventArgs e)
         {
-            AddExam addExam = new AddExam();
-            addExam.bodyExam = this;
-            addExam.labExamId.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[0].Value);
-            int exCat = Convert.ToInt32(pageCtrl.dg.CurrentRow.Cells[5].Value);
-            addExam.topicCategory.SelectedIndex = exCat;
-            addExam.txtExamName.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[1].Value);
-            addExam.startTime.Value = Convert.ToDateTime(pageCtrl.dg.CurrentRow.Cells[3].Value);
-            addExam.totalMins.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[4].Value);
-            addExam.exType.SelectedIndex = 1;
-            addExam.ShowDialog();
+            if (pageCtrl.dg.CurrentRow == null)
+            {
+                MessageBox.Show("请选择一条记录");
+            }
+            else
+            {
+                AddExam addExam = new AddExam();
+                addExam.bodyExam = this;
+                addExam.labExamId.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[0].Value);
+                int exCat = Convert.ToInt32(pageCtrl.dg.CurrentRow.Cells[5].Value);
+                addExam.topicCategory.SelectedIndex = exCat;
+                addExam.txtExamName.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[1].Value);
+                addExam.startTime.Value = Convert.ToDateTime(pageCtrl.dg.CurrentRow.Cells[3].Value);
+                addExam.totalMins.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[4].Value);
+                addExam.exType.SelectedIndex = 1;
+                addExam.ShowDialog();
+            }
         }
 
         private void BodyExam_Load(object sender, EventArgs e)
@@ -146,6 +153,27 @@ namespace LoginFrame
 
             //Caption
             res.ApplyResources(this, "$this");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (pageCtrl.dg.CurrentRow == null)
+            {
+                MessageBox.Show("请选择一条记录");
+            }
+            else
+            {
+                int examId = Convert.ToInt32(pageCtrl.dg.CurrentRow.Cells[0].Value);
+                if (examId > 0)
+                {
+                    DialogResult dr = MessageBox.Show("确定要删除'" + pageCtrl.dg.CurrentRow.Cells[1].Value + "'吗？", "确认删除", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (dr == DialogResult.OK)
+                    {
+                        examService.deleteExam(examId);
+                        btnQueryClick();
+                    }
+                }
+            }
         }
     }
 }

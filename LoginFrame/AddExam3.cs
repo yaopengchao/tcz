@@ -216,7 +216,7 @@ namespace LoginFrame
             exam.StartTime = addExam.startTime.Text;
             exam.TotalMins = Convert.ToInt32(addExam.totalMins.Text);
             exam.ExType = "1";
-            exam.ExaminationId = Convert.ToInt32(addExam.labExamId.Text);
+            exam.ExaminationId = Convert.ToInt32(addExam.labExamId.Text == "" ? "0" : addExam.labExamId.Text);
             string topicIds = getRandomTopicIds(xz, xzList);
             topicIds += getRandomTopicIds(feib, feibList);
             topicIds += getRandomTopicIds(fub, fubList);
@@ -254,10 +254,10 @@ namespace LoginFrame
                     cloneList.RemoveAt(r);
                 }
             }
-            if (result != "")
-            {
-                result = result.Substring(0, result.Length - 1);
-            }
+            //if (result != "")
+            //{
+            //    result = result.Substring(0, result.Length - 1);
+            //}
             return result;
         }
 

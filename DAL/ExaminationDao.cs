@@ -92,5 +92,14 @@ namespace DAL
             return Convert.ToInt32(MySqlHelper.ExecuteNonQuery(strSql, parames));
         }
 
+        public int deleteExam(int examId)
+        {
+            string strSql = "delete from ex_examination where examination_id = ?examId";
+            MySqlParameter[] parames = new MySqlParameter[] {
+                new MySqlParameter("?examId", MySqlDbType.Int32)
+            };
+            parames[0].Value = examId;
+            return Convert.ToInt32(MySqlHelper.ExecuteNonQuery(strSql, parames));
+        }
     }
 }

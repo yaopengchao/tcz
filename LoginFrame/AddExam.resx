@@ -504,13 +504,10 @@
     <value>654, 216</value>
   </data>
   <data name="labExamId.Size" type="System.Drawing.Size, System.Drawing">
-    <value>11, 12</value>
+    <value>0, 12</value>
   </data>
   <data name="labExamId.TabIndex" type="System.Int32, mscorlib">
     <value>33</value>
-  </data>
-  <data name="labExamId.Text" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="labExamId.Visible" type="System.Boolean, mscorlib">
     <value>False</value>

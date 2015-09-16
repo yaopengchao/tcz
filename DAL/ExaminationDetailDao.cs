@@ -14,7 +14,7 @@ namespace DAL
         //根据条件查询
         public DataSet listExistDetail(Dictionary<string, string> strWheres)
         {
-            string strSql = "select b.topic_id, b.content, if (b.topic_type='1','理论类','操作类'), c.name, b.answers, b.create_time, b.topic_type, b.topic_category from ex_examination_detail a INNER JOIN ex_topic b on a.TOPIC_ID = b.TOPIC_ID INNER JOIN classify c on b.TOPIC_CATEGORY = c.id where 1 = 1 ";
+            string strSql = "select b.topic_id, b.content, if (b.topic_type='1','理论类','操作类'), c.TCZ_NAME, b.answers, b.create_time, b.topic_type, b.topic_category from ex_examination_detail a INNER JOIN ex_topic b on a.TOPIC_ID = b.TOPIC_ID INNER JOIN tcz_type c on b.TOPIC_CATEGORY = c.TCZ_ID where 1 = 1 ";
             return listEntity(strSql, strWheres);
         }
 
