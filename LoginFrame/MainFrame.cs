@@ -29,6 +29,7 @@ namespace LoginFrame
 
         public SoundPlayer splayer;
 
+        public List<Control> items = new List<Control>();
 
         public MainFrame()
         {
@@ -41,6 +42,14 @@ namespace LoginFrame
             else if (LoginRoler.language == 1)
             {
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en");
+            }
+
+            foreach (Control ctrl in panel6.Controls)
+            {
+                if (ctrl.Name == "panel5" || ctrl.Name == "menuStrip1" || ctrl.Name.Contains("toolStrip"))
+                {
+                    items.Add(ctrl);
+                }
             }
 
             //对当前窗体应用更改后的资源
@@ -1788,6 +1797,7 @@ namespace LoginFrame
 
             //加载主体栏
             mainFrame.panel6.Controls.Clear();
+            mainFrame.panel6.Controls.AddRange(mainFrame.items.ToArray());
             BodyMain bodyMain = BodyMain.createForm();
             bodyMain.TopLevel = false;
             bodyMain.FormBorderStyle = FormBorderStyle.None;

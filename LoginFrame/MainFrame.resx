@@ -117,6 +117,30 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>645, 9</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 12</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>广州新传媒软件开发有限公司      版本号:tingchuzhen</value>
+  </data>
   <data name="&gt;&gt;label4.Name" xml:space="preserve">
     <value>label4</value>
   </data>
@@ -129,18 +153,15 @@
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 729</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="panel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>1024, 39</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="panel3.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
@@ -163,19 +184,43 @@
     <value>Left</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 21</value>
+    <value>73, 21</value>
   </data>
   <data name="toolStripMenuItem1.Text" xml:space="preserve">
     <value>自我测试</value>
   </data>
+  <data name="exMenu1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 22</value>
+  </data>
+  <data name="exMenu1.Text" xml:space="preserve">
+    <value>题库管理</value>
+  </data>
+  <data name="exMenu2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 22</value>
+  </data>
+  <data name="exMenu2.Text" xml:space="preserve">
+    <value>试卷管理</value>
+  </data>
+  <data name="exMenu3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 22</value>
+  </data>
+  <data name="exMenu3.Text" xml:space="preserve">
+    <value>考试管理</value>
+  </data>
+  <data name="exMenu4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 22</value>
+  </data>
+  <data name="exMenu4.Text" xml:space="preserve">
+    <value>考试成绩管理</value>
+  </data>
   <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 21</value>
+    <value>73, 21</value>
   </data>
   <data name="toolStripMenuItem2.Text" xml:space="preserve">
     <value>考试</value>
   </data>
   <data name="考试成绩ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 21</value>
+    <value>73, 21</value>
   </data>
   <data name="考试成绩ToolStripMenuItem.Text" xml:space="preserve">
     <value>考试成绩</value>
@@ -184,31 +229,31 @@
     <value>False</value>
   </data>
   <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 21</value>
+    <value>73, 21</value>
   </data>
   <data name="toolStripMenuItem3.Text" xml:space="preserve">
     <value>个人资料</value>
   </data>
   <data name="toolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 21</value>
+    <value>73, 21</value>
   </data>
   <data name="toolStripMenuItem4.Text" xml:space="preserve">
     <value>学员管理</value>
   </data>
   <data name="toolStripMenuItem5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 21</value>
+    <value>73, 21</value>
   </data>
   <data name="toolStripMenuItem5.Text" xml:space="preserve">
     <value>教师管理</value>
   </data>
   <data name="toolStripMenuItem6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 21</value>
+    <value>73, 21</value>
   </data>
   <data name="toolStripMenuItem6.Text" xml:space="preserve">
     <value>设置模拟人</value>
   </data>
   <data name="toolStripMenuItem7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 21</value>
+    <value>73, 21</value>
   </data>
   <data name="toolStripMenuItem7.Text" xml:space="preserve">
     <value>云服务</value>
@@ -238,13 +283,16 @@
     <value>0</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>865, 0</value>
+    <value>878, 3</value>
   </data>
   <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 190</value>
   </data>
   <data name="panel5.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
+  </data>
+  <data name="panel5.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;panel5.Name" xml:space="preserve">
     <value>panel5</value>
@@ -282,6 +330,21 @@
   <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="lbl_exit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_exit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>964, 54</value>
+  </data>
+  <data name="lbl_exit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lbl_exit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 23</value>
+  </data>
+  <data name="lbl_exit.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
   <data name="&gt;&gt;lbl_exit.Name" xml:space="preserve">
     <value>lbl_exit</value>
   </data>
@@ -293,6 +356,21 @@
   </data>
   <data name="&gt;&gt;lbl_exit.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="lbl_menu.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_menu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>943, 54</value>
+  </data>
+  <data name="lbl_menu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lbl_menu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 23</value>
+  </data>
+  <data name="lbl_menu.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
   </data>
   <data name="&gt;&gt;lbl_menu.Name" xml:space="preserve">
     <value>lbl_menu</value>
@@ -306,6 +384,21 @@
   <data name="&gt;&gt;lbl_menu.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="lbl_mian.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_mian.Location" type="System.Drawing.Point, System.Drawing">
+    <value>876, 54</value>
+  </data>
+  <data name="lbl_mian.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lbl_mian.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 23</value>
+  </data>
+  <data name="lbl_mian.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
   <data name="&gt;&gt;lbl_mian.Name" xml:space="preserve">
     <value>lbl_mian</value>
   </data>
@@ -318,6 +411,27 @@
   <data name="&gt;&gt;lbl_mian.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="titlename.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="titlename.Font" type="System.Drawing.Font, System.Drawing">
+    <value>黑体, 12pt, style=Bold</value>
+  </data>
+  <data name="titlename.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="titlename.Location" type="System.Drawing.Point, System.Drawing">
+    <value>36, 56</value>
+  </data>
+  <data name="titlename.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 16</value>
+  </data>
+  <data name="titlename.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="titlename.Text" xml:space="preserve">
+    <value>主 界 面</value>
+  </data>
   <data name="&gt;&gt;titlename.Name" xml:space="preserve">
     <value>titlename</value>
   </data>
@@ -329,6 +443,30 @@
   </data>
   <data name="&gt;&gt;titlename.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="user_name.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="user_name.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="user_name.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="user_name.Location" type="System.Drawing.Point, System.Drawing">
+    <value>791, 50</value>
+  </data>
+  <data name="user_name.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>82, 22</value>
+  </data>
+  <data name="user_name.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 22</value>
+  </data>
+  <data name="user_name.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="user_name.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
   </data>
   <data name="&gt;&gt;user_name.Name" xml:space="preserve">
     <value>user_name</value>
@@ -386,213 +524,6 @@
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 9pt, style=Bold</value>
-  </data>
-  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>645, 9</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>339, 12</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>广州新传媒软件开发有限公司      版本号:tingchuzhen</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="user_name.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="user_name.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 9pt, style=Bold</value>
-  </data>
-  <data name="user_name.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="user_name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>791, 50</value>
-  </data>
-  <data name="user_name.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>82, 22</value>
-  </data>
-  <data name="user_name.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 22</value>
-  </data>
-  <data name="user_name.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="user_name.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;user_name.Name" xml:space="preserve">
-    <value>user_name</value>
-  </data>
-  <data name="&gt;&gt;user_name.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;user_name.Parent" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="&gt;&gt;user_name.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="titlename.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="titlename.Font" type="System.Drawing.Font, System.Drawing">
-    <value>黑体, 12pt, style=Bold</value>
-  </data>
-  <data name="titlename.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="titlename.Location" type="System.Drawing.Point, System.Drawing">
-    <value>36, 56</value>
-  </data>
-  <data name="titlename.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 16</value>
-  </data>
-  <data name="titlename.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="titlename.Text" xml:space="preserve">
-    <value>主 界 面</value>
-  </data>
-  <data name="&gt;&gt;titlename.Name" xml:space="preserve">
-    <value>titlename</value>
-  </data>
-  <data name="&gt;&gt;titlename.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;titlename.Parent" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="&gt;&gt;titlename.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="lbl_mian.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lbl_mian.Location" type="System.Drawing.Point, System.Drawing">
-    <value>876, 54</value>
-  </data>
-  <data name="lbl_mian.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lbl_mian.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 23</value>
-  </data>
-  <data name="lbl_mian.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;lbl_mian.Name" xml:space="preserve">
-    <value>lbl_mian</value>
-  </data>
-  <data name="&gt;&gt;lbl_mian.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_mian.Parent" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="&gt;&gt;lbl_mian.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lbl_menu.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lbl_menu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>943, 54</value>
-  </data>
-  <data name="lbl_menu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lbl_menu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>16, 23</value>
-  </data>
-  <data name="lbl_menu.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;lbl_menu.Name" xml:space="preserve">
-    <value>lbl_menu</value>
-  </data>
-  <data name="&gt;&gt;lbl_menu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_menu.Parent" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="&gt;&gt;lbl_menu.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lbl_exit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lbl_exit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>964, 54</value>
-  </data>
-  <data name="lbl_exit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lbl_exit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 23</value>
-  </data>
-  <data name="lbl_exit.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;lbl_exit.Name" xml:space="preserve">
-    <value>lbl_exit</value>
-  </data>
-  <data name="&gt;&gt;lbl_exit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_exit.Parent" xml:space="preserve">
-    <value>panel4</value>
-  </data>
-  <data name="&gt;&gt;lbl_exit.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="exMenu1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 22</value>
-  </data>
-  <data name="exMenu1.Text" xml:space="preserve">
-    <value>题库管理</value>
-  </data>
-  <data name="exMenu2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 22</value>
-  </data>
-  <data name="exMenu2.Text" xml:space="preserve">
-    <value>试卷管理</value>
-  </data>
-  <data name="exMenu3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 22</value>
-  </data>
-  <data name="exMenu3.Text" xml:space="preserve">
-    <value>考试管理</value>
-  </data>
-  <data name="exMenu4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 22</value>
-  </data>
-  <data name="exMenu4.Text" xml:space="preserve">
-    <value>考试成绩管理</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

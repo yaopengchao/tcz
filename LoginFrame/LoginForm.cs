@@ -316,7 +316,11 @@ namespace LoginFrame
 
 
             //加载主体栏
+            //mainFrame.panel6.Controls.Clear();
+
             mainFrame.panel6.Controls.Clear();
+            mainFrame.panel6.Controls.AddRange(mainFrame.items.ToArray());
+
             BodyMain bodyMain = BodyMain.createForm();
             bodyMain.TopLevel = false;
             bodyMain.FormBorderStyle = FormBorderStyle.None;

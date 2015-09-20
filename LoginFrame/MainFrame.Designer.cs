@@ -33,11 +33,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.user_name = new System.Windows.Forms.Label();
-            this.titlename = new System.Windows.Forms.Label();
-            this.lbl_mian = new System.Windows.Forms.Label();
-            this.lbl_menu = new System.Windows.Forms.Label();
-            this.lbl_exit = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,6 +48,11 @@
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lbl_exit = new System.Windows.Forms.Label();
+            this.lbl_menu = new System.Windows.Forms.Label();
+            this.lbl_mian = new System.Windows.Forms.Label();
+            this.titlename = new System.Windows.Forms.Label();
+            this.user_name = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -90,42 +90,6 @@
             this.panel6.Controls.Add(this.panel5);
             resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
-            // 
-            // user_name
-            // 
-            resources.ApplyResources(this.user_name, "user_name");
-            this.user_name.BackColor = System.Drawing.Color.Transparent;
-            this.user_name.ForeColor = System.Drawing.Color.Yellow;
-            this.user_name.Name = "user_name";
-            this.user_name.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // titlename
-            // 
-            resources.ApplyResources(this.titlename, "titlename");
-            this.titlename.BackColor = System.Drawing.Color.Transparent;
-            this.titlename.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.titlename.Name = "titlename";
-            // 
-            // lbl_mian
-            // 
-            this.lbl_mian.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.lbl_mian, "lbl_mian");
-            this.lbl_mian.Name = "lbl_mian";
-            this.lbl_mian.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // lbl_menu
-            // 
-            this.lbl_menu.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.lbl_menu, "lbl_menu");
-            this.lbl_menu.Name = "lbl_menu";
-            this.lbl_menu.Click += new System.EventHandler(this.label2_Click_1);
-            // 
-            // lbl_exit
-            // 
-            this.lbl_exit.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.lbl_exit, "lbl_exit");
-            this.lbl_exit.Name = "lbl_exit";
-            this.lbl_exit.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // panel5
             // 
@@ -238,6 +202,42 @@
             this.panel4.Controls.Add(this.user_name);
             resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
+            // 
+            // lbl_exit
+            // 
+            this.lbl_exit.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.lbl_exit, "lbl_exit");
+            this.lbl_exit.Name = "lbl_exit";
+            this.lbl_exit.Click += new System.EventHandler(this.label3_Click_1);
+            // 
+            // lbl_menu
+            // 
+            this.lbl_menu.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.lbl_menu, "lbl_menu");
+            this.lbl_menu.Name = "lbl_menu";
+            this.lbl_menu.Click += new System.EventHandler(this.label2_Click_1);
+            // 
+            // lbl_mian
+            // 
+            this.lbl_mian.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.lbl_mian, "lbl_mian");
+            this.lbl_mian.Name = "lbl_mian";
+            this.lbl_mian.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // titlename
+            // 
+            resources.ApplyResources(this.titlename, "titlename");
+            this.titlename.BackColor = System.Drawing.Color.Transparent;
+            this.titlename.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.titlename.Name = "titlename";
+            // 
+            // user_name
+            // 
+            resources.ApplyResources(this.user_name, "user_name");
+            this.user_name.BackColor = System.Drawing.Color.Transparent;
+            this.user_name.ForeColor = System.Drawing.Color.Yellow;
+            this.user_name.Name = "user_name";
+            this.user_name.Click += new System.EventHandler(this.label6_Click);
             // 
             // MainFrame
             // 
