@@ -602,6 +602,13 @@
     <Content Include="bin\Debug\Regedit.txt" />
     <Content Include="bin\Debug\RolesType.xml" />
     <Content Include="pic\界面背景3.jpg" />
+    <None Include="Resources\收藏夹.png" />
+    <None Include="Resources\播放.png" />
+    <None Include="Resources\暂停.png" />
+    <None Include="Resources\语音.png" />
+    <None Include="Resources\下一个.png" />
+    <None Include="Resources\上一个.png" />
+    <None Include="Resources\扩音.png" />
     <None Include="Resources\foot.jpg" />
     <None Include="Resources\head.png" />
     <None Include="Resources\Error.png" />
