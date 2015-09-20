@@ -30,10 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrame));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.user_name = new System.Windows.Forms.Label();
+            this.titlename = new System.Windows.Forms.Label();
+            this.lbl_mian = new System.Windows.Forms.Label();
+            this.lbl_menu = new System.Windows.Forms.Label();
+            this.lbl_exit = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,32 +52,24 @@
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
-            this.lbl_exit = new System.Windows.Forms.Label();
-            this.lbl_menu = new System.Windows.Forms.Label();
-            this.lbl_mian = new System.Windows.Forms.Label();
-            this.titlename = new System.Windows.Forms.Label();
-            this.user_name = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel6);
+            this.panel2.Controls.Add(this.panel4);
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // panel6
-            // 
-            resources.ApplyResources(this.panel6, "panel6");
-            this.panel6.Name = "panel6";
             // 
             // panel3
             // 
@@ -89,17 +85,47 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Name = "label4";
             // 
-            // panel4
+            // panel6
             // 
-            this.panel4.BackgroundImage = global::LoginFrame.Properties.Resources.head;
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Controls.Add(this.lbl_exit);
-            this.panel4.Controls.Add(this.lbl_menu);
-            this.panel4.Controls.Add(this.lbl_mian);
-            this.panel4.Controls.Add(this.titlename);
-            this.panel4.Controls.Add(this.user_name);
-            resources.ApplyResources(this.panel4, "panel4");
-            this.panel4.Name = "panel4";
+            this.panel6.Controls.Add(this.panel5);
+            resources.ApplyResources(this.panel6, "panel6");
+            this.panel6.Name = "panel6";
+            // 
+            // user_name
+            // 
+            resources.ApplyResources(this.user_name, "user_name");
+            this.user_name.BackColor = System.Drawing.Color.Transparent;
+            this.user_name.ForeColor = System.Drawing.Color.Yellow;
+            this.user_name.Name = "user_name";
+            this.user_name.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // titlename
+            // 
+            resources.ApplyResources(this.titlename, "titlename");
+            this.titlename.BackColor = System.Drawing.Color.Transparent;
+            this.titlename.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.titlename.Name = "titlename";
+            // 
+            // lbl_mian
+            // 
+            this.lbl_mian.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.lbl_mian, "lbl_mian");
+            this.lbl_mian.Name = "lbl_mian";
+            this.lbl_mian.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // lbl_menu
+            // 
+            this.lbl_menu.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.lbl_menu, "lbl_menu");
+            this.lbl_menu.Name = "lbl_menu";
+            this.lbl_menu.Click += new System.EventHandler(this.label2_Click_1);
+            // 
+            // lbl_exit
+            // 
+            this.lbl_exit.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.lbl_exit, "lbl_exit");
+            this.lbl_exit.Name = "lbl_exit";
+            this.lbl_exit.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // panel5
             // 
@@ -202,41 +228,16 @@
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
             resources.ApplyResources(this.toolStripMenuItem7, "toolStripMenuItem7");
             // 
-            // lbl_exit
+            // panel4
             // 
-            this.lbl_exit.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.lbl_exit, "lbl_exit");
-            this.lbl_exit.Name = "lbl_exit";
-            this.lbl_exit.Click += new System.EventHandler(this.label3_Click_1);
-            // 
-            // lbl_menu
-            // 
-            this.lbl_menu.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.lbl_menu, "lbl_menu");
-            this.lbl_menu.Name = "lbl_menu";
-            this.lbl_menu.Click += new System.EventHandler(this.label2_Click_1);
-            // 
-            // lbl_mian
-            // 
-            this.lbl_mian.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.lbl_mian, "lbl_mian");
-            this.lbl_mian.Name = "lbl_mian";
-            this.lbl_mian.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // titlename
-            // 
-            resources.ApplyResources(this.titlename, "titlename");
-            this.titlename.BackColor = System.Drawing.Color.Transparent;
-            this.titlename.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.titlename.Name = "titlename";
-            // 
-            // user_name
-            // 
-            resources.ApplyResources(this.user_name, "user_name");
-            this.user_name.BackColor = System.Drawing.Color.Transparent;
-            this.user_name.ForeColor = System.Drawing.Color.Yellow;
-            this.user_name.Name = "user_name";
-            this.user_name.Click += new System.EventHandler(this.label6_Click);
+            this.panel4.BackgroundImage = global::LoginFrame.Properties.Resources.head;
+            this.panel4.Controls.Add(this.lbl_exit);
+            this.panel4.Controls.Add(this.lbl_menu);
+            this.panel4.Controls.Add(this.lbl_mian);
+            this.panel4.Controls.Add(this.titlename);
+            this.panel4.Controls.Add(this.user_name);
+            resources.ApplyResources(this.panel4, "panel4");
+            this.panel4.Name = "panel4";
             // 
             // MainFrame
             // 
@@ -255,12 +256,13 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -268,27 +270,27 @@
         #endregion
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.MenuStrip menuStrip1;
         public System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         public System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-        public System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
-        public System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
-        public System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label user_name;
         public System.Windows.Forms.ToolStripMenuItem exMenu1;
         public System.Windows.Forms.ToolStripMenuItem exMenu2;
         public System.Windows.Forms.ToolStripMenuItem exMenu3;
         public System.Windows.Forms.ToolStripMenuItem exMenu4;
         private System.Windows.Forms.ToolStripMenuItem 考试成绩ToolStripMenuItem;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        public System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
+        public System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label titlename;
-        private System.Windows.Forms.Label lbl_mian;
-        private System.Windows.Forms.Label lbl_menu;
         private System.Windows.Forms.Label lbl_exit;
+        private System.Windows.Forms.Label lbl_menu;
+        private System.Windows.Forms.Label lbl_mian;
+        private System.Windows.Forms.Label titlename;
+        private System.Windows.Forms.Label user_name;
     }
 }
