@@ -107,15 +107,15 @@ namespace LoginFrame
             mainFrame.panel6.Controls.Add(exam2);
             exam2.Show();
 
-            mainFrame.panel1.Controls.Clear();
-            TitleTakeExam2 takeExam = new TitleTakeExam2();
-            takeExam.TopLevel = false;
-            takeExam.bodyTakeExam2 = exam2;
-            takeExam.endTime = endTime;
-            takeExam.FormBorderStyle = FormBorderStyle.None;
-            takeExam.Dock = System.Windows.Forms.DockStyle.Fill;
-            mainFrame.panel1.Controls.Add(takeExam);
-            takeExam.Show();
+            //mainFrame.panel1.Controls.Clear();
+            //TitleTakeExam2 takeExam = new TitleTakeExam2();
+            //takeExam.TopLevel = false;
+            //takeExam.bodyTakeExam2 = exam2;
+            //takeExam.endTime = endTime;
+            //takeExam.FormBorderStyle = FormBorderStyle.None;
+            //takeExam.Dock = System.Windows.Forms.DockStyle.Fill;
+            //mainFrame.panel1.Controls.Add(takeExam);
+            //takeExam.Show();
         }
 
     }

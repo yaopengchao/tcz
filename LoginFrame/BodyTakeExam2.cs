@@ -243,13 +243,13 @@ namespace LoginFrame
 
         public void btnSubmit_Click(object sender, EventArgs e)
         {
-            takeExam.mainFrame.panel1.Controls.Clear();
-            TitleMain titleMain = TitleMain.createForm();
-            titleMain.TopLevel = false;
-            titleMain.FormBorderStyle = FormBorderStyle.None;
-            titleMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            takeExam.mainFrame.panel1.Controls.Add(titleMain);
-            titleMain.Show();
+            //takeExam.mainFrame.panel1.Controls.Clear();
+            //TitleMain titleMain = TitleMain.createForm();
+            //titleMain.TopLevel = false;
+            //titleMain.FormBorderStyle = FormBorderStyle.None;
+            //titleMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            //takeExam.mainFrame.panel1.Controls.Add(titleMain);
+            //titleMain.Show();
 
             //加载主体栏
             takeExam.mainFrame.panel6.Controls.Clear();

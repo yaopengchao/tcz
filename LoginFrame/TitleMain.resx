@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="comboBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 22</value>
+    <value>107, 5</value>
   </data>
   <data name="comboBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>101, 20</value>
@@ -144,7 +144,7 @@
     <value>0</value>
   </data>
   <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 22</value>
+    <value>12, 10</value>
   </data>
   <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 20</value>
@@ -199,7 +199,7 @@
     <value>670, 10</value>
   </data>
   <data name="button10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 38</value>
+    <value>39, 20</value>
   </data>
   <data name="button10.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -223,7 +223,7 @@
     <value>451, 5</value>
   </data>
   <data name="button9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 43</value>
+    <value>44, 20</value>
   </data>
   <data name="button9.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -247,7 +247,7 @@
     <value>611, 10</value>
   </data>
   <data name="button7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 38</value>
+    <value>40, 20</value>
   </data>
   <data name="button7.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -274,7 +274,7 @@
     <value>542, 10</value>
   </data>
   <data name="button6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 38</value>
+    <value>37, 20</value>
   </data>
   <data name="button6.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -298,7 +298,7 @@
     <value>355, 10</value>
   </data>
   <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 38</value>
+    <value>41, 15</value>
   </data>
   <data name="button4.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -319,10 +319,10 @@
     <value>NoControl</value>
   </data>
   <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>269, 10</value>
+    <value>269, 5</value>
   </data>
   <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 38</value>
+    <value>42, 20</value>
   </data>
   <data name="button3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -345,20 +345,11 @@
   <data name="menuStrip1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 19</value>
-  </data>
-  <data name="toolStripMenuItem1.Text" xml:space="preserve">
-    <value>收  藏  夹</value>
-  </data>
-  <data name="toolStripMenuItem1.ToolTipText" xml:space="preserve">
-    <value>收藏夹</value>
-  </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>750, 19</value>
+    <value>741, 0</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 23</value>
+    <value>75, 25</value>
   </data>
   <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -382,7 +373,7 @@
     <value>0, 0</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1024, 60</value>
+    <value>1024, 31</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -398,6 +389,15 @@
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 21</value>
+  </data>
+  <data name="toolStripMenuItem1.Text" xml:space="preserve">
+    <value>收  藏  夹</value>
+  </data>
+  <data name="toolStripMenuItem1.ToolTipText" xml:space="preserve">
+    <value>收藏夹</value>
   </data>
   <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 22</value>
@@ -415,7 +415,7 @@
     <value>6, 12</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1024, 60</value>
+    <value>1024, 31</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>TitleMain</value>

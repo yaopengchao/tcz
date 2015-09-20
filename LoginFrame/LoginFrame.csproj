@@ -602,6 +602,8 @@
     <Content Include="bin\Debug\Regedit.txt" />
     <Content Include="bin\Debug\RolesType.xml" />
     <Content Include="pic\界面背景3.jpg" />
+    <None Include="Resources\foot.jpg" />
+    <None Include="Resources\head.png" />
     <None Include="Resources\Error.png" />
     <None Include="Resources\7.png" />
     <None Include="Resources\13.png" />

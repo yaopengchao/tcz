@@ -46,7 +46,7 @@ namespace LoginFrame
             //对当前窗体应用更改后的资源
             ApplyResource();
 
-            this.label6.Text = LoginRoler.username;
+            this.user_name.Text = LoginRoler.username;
 
             string roleId = LoginRoler.roleid;
             if (roleId.Equals("1"))                 //管理员
@@ -1334,13 +1334,13 @@ namespace LoginFrame
         private void frm2BodyMain()
         {
 
-            panel1.Controls.Clear();
-            TitleMain titleMain = TitleMain.createForm();
-            titleMain.TopLevel = false;
-            titleMain.FormBorderStyle = FormBorderStyle.None;
-            titleMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            panel1.Controls.Add(titleMain);
-            titleMain.Show();
+            //panel1.Controls.Clear();
+            //TitleMain titleMain = TitleMain.createForm();
+            //titleMain.TopLevel = false;
+            //titleMain.FormBorderStyle = FormBorderStyle.None;
+            //titleMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            //panel1.Controls.Add(titleMain);
+            //titleMain.Show();
 
             panel6.Controls.Clear();
             BodyMain bodyMain = BodyMain.createForm();
@@ -1352,10 +1352,10 @@ namespace LoginFrame
 
             //互相访问控件
             this.bodyMain = bodyMain;
-            this.titleMain = titleMain;
+            //this.titleMain = titleMain;
 
             bodyMain.mainFrame = this;
-            titleMain.mainFrame = this;
+            //titleMain.mainFrame = this;
 
 
         }
@@ -1396,13 +1396,13 @@ namespace LoginFrame
         {
             panel5.Hide();
 
-            panel1.Controls.Clear();
-            TitleStu stu = TitleStu.createForm();
-            stu.TopLevel = false;
-            stu.FormBorderStyle = FormBorderStyle.None;
-            stu.Dock = System.Windows.Forms.DockStyle.Fill;
-            panel1.Controls.Add(stu);
-            stu.Show();
+            //panel1.Controls.Clear();
+            //TitleStu stu = TitleStu.createForm();
+            //stu.TopLevel = false;
+            //stu.FormBorderStyle = FormBorderStyle.None;
+            //stu.Dock = System.Windows.Forms.DockStyle.Fill;
+            //panel1.Controls.Add(stu);
+            //stu.Show();
 
             panel6.Controls.Clear();
             BodyStu bodyStu = BodyStu.createForm();
@@ -1417,13 +1417,13 @@ namespace LoginFrame
         {
             panel5.Hide();
 
-            panel1.Controls.Clear();
-            TitleTea tea = TitleTea.createForm();
-            tea.TopLevel = false;
-            tea.FormBorderStyle = FormBorderStyle.None;
-            tea.Dock = System.Windows.Forms.DockStyle.Fill;
-            panel1.Controls.Add(tea);
-            tea.Show();
+            //panel1.Controls.Clear();
+            //TitleTea tea = TitleTea.createForm();
+            //tea.TopLevel = false;
+            //tea.FormBorderStyle = FormBorderStyle.None;
+            //tea.Dock = System.Windows.Forms.DockStyle.Fill;
+            //panel1.Controls.Add(tea);
+            //tea.Show();
 
             panel6.Controls.Clear();
             BodyTea bodyTea = BodyTea.createForm();
@@ -1443,13 +1443,13 @@ namespace LoginFrame
         {
             panel5.Hide();
 
-            panel1.Controls.Clear();
-            TitleSelfTest titleSelf = TitleSelfTest.createForm();
-            titleSelf.TopLevel = false;
-            titleSelf.FormBorderStyle = FormBorderStyle.None;
-            titleSelf.Dock = System.Windows.Forms.DockStyle.Fill;
-            panel1.Controls.Add(titleSelf);
-            titleSelf.Show();
+            //panel1.Controls.Clear();
+            //TitleSelfTest titleSelf = TitleSelfTest.createForm();
+            //titleSelf.TopLevel = false;
+            //titleSelf.FormBorderStyle = FormBorderStyle.None;
+            //titleSelf.Dock = System.Windows.Forms.DockStyle.Fill;
+            //panel1.Controls.Add(titleSelf);
+            //titleSelf.Show();
 
             panel6.Controls.Clear();
             BodySelfTest bodySelf = BodySelfTest.createForm();
@@ -1459,7 +1459,6 @@ namespace LoginFrame
             bodySelf.Dock = System.Windows.Forms.DockStyle.Fill;
             panel6.Controls.Add(bodySelf);
             bodySelf.Show();
-
         }
 
         /// <summary>
@@ -1491,14 +1490,7 @@ namespace LoginFrame
 
         private void label6_Click(object sender, EventArgs e)
         {
-            if (panel5.Visible)
-            {
-                panel5.Hide();
-            }
-            else
-            {
-                panel5.Show();
-            }
+            
         }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
@@ -1520,13 +1512,13 @@ namespace LoginFrame
 
 
             //加载菜单栏
-            mainFrame.panel1.Controls.Clear();
-            TitleMain titleMain = TitleMain.createForm();
-            titleMain.TopLevel = false;
-            titleMain.FormBorderStyle = FormBorderStyle.None;
-            titleMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            mainFrame.panel1.Controls.Add(titleMain);
-            titleMain.Show();
+            //mainFrame.panel1.Controls.Clear();
+            //TitleMain titleMain = TitleMain.createForm();
+            //titleMain.TopLevel = false;
+            //titleMain.FormBorderStyle = FormBorderStyle.None;
+            //titleMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            //mainFrame.panel1.Controls.Add(titleMain);
+            //titleMain.Show();
 
 
             //加载主体栏
@@ -1552,13 +1544,13 @@ namespace LoginFrame
         {
             panel5.Hide();
 
-            panel1.Controls.Clear();
-            TitleSimulation titleSimulate = TitleSimulation.createForm();
-            titleSimulate.TopLevel = false;
-            titleSimulate.FormBorderStyle = FormBorderStyle.None;
-            titleSimulate.Dock = System.Windows.Forms.DockStyle.Fill;
-            panel1.Controls.Add(titleSimulate);
-            titleSimulate.Show();
+            //panel1.Controls.Clear();
+            //TitleSimulation titleSimulate = TitleSimulation.createForm();
+            //titleSimulate.TopLevel = false;
+            //titleSimulate.FormBorderStyle = FormBorderStyle.None;
+            //titleSimulate.Dock = System.Windows.Forms.DockStyle.Fill;
+            //panel1.Controls.Add(titleSimulate);
+            //titleSimulate.Show();
 
             panel6.Controls.Clear();
             BodySimulation bodySimulate = BodySimulation.createForm();
@@ -1569,8 +1561,8 @@ namespace LoginFrame
             bodySimulate.Show();
 
 
-            titleSimulate.bodySimulation = bodySimulate;
-            bodySimulate.titleSimulation = titleSimulate;
+            //titleSimulate.bodySimulation = bodySimulate;
+            //bodySimulate.titleSimulation = titleSimulate;
 
 
         }
@@ -1579,13 +1571,13 @@ namespace LoginFrame
         {
             panel5.Hide();
 
-            panel1.Controls.Clear();
-            TitletTopic titleTopic = TitletTopic.createForm();
-            titleTopic.TopLevel = false;
-            titleTopic.FormBorderStyle = FormBorderStyle.None;
-            titleTopic.Dock = System.Windows.Forms.DockStyle.Fill;
-            panel1.Controls.Add(titleTopic);
-            titleTopic.Show();
+            //panel1.Controls.Clear();
+            //TitletTopic titleTopic = TitletTopic.createForm();
+            //titleTopic.TopLevel = false;
+            //titleTopic.FormBorderStyle = FormBorderStyle.None;
+            //titleTopic.Dock = System.Windows.Forms.DockStyle.Fill;
+            //panel1.Controls.Add(titleTopic);
+            //titleTopic.Show();
 
             panel6.Controls.Clear();
             BodyTopic bodyTopic = BodyTopic.createForm();
@@ -1600,13 +1592,13 @@ namespace LoginFrame
         {
             panel5.Hide();
 
-            panel1.Controls.Clear();
-            TitleExam titleExam = TitleExam.createForm();
-            titleExam.TopLevel = false;
-            titleExam.FormBorderStyle = FormBorderStyle.None;
-            titleExam.Dock = System.Windows.Forms.DockStyle.Fill;
-            panel1.Controls.Add(titleExam);
-            titleExam.Show();
+            //panel1.Controls.Clear();
+            //TitleExam titleExam = TitleExam.createForm();
+            //titleExam.TopLevel = false;
+            //titleExam.FormBorderStyle = FormBorderStyle.None;
+            //titleExam.Dock = System.Windows.Forms.DockStyle.Fill;
+            //panel1.Controls.Add(titleExam);
+            //titleExam.Show();
 
             panel6.Controls.Clear();
             BodyExam bodyExam = BodyExam.createForm();
@@ -1626,13 +1618,13 @@ namespace LoginFrame
         {
             panel5.Hide();
 
-            panel1.Controls.Clear();
-            TitleTakeExam titleTakeExam = new TitleTakeExam();
-            titleTakeExam.TopLevel = false;
-            titleTakeExam.FormBorderStyle = FormBorderStyle.None;
-            titleTakeExam.Dock = System.Windows.Forms.DockStyle.Fill;
-            panel1.Controls.Add(titleTakeExam);
-            titleTakeExam.Show();
+            //panel1.Controls.Clear();
+            //TitleTakeExam titleTakeExam = new TitleTakeExam();
+            //titleTakeExam.TopLevel = false;
+            //titleTakeExam.FormBorderStyle = FormBorderStyle.None;
+            //titleTakeExam.Dock = System.Windows.Forms.DockStyle.Fill;
+            //panel1.Controls.Add(titleTakeExam);
+            //titleTakeExam.Show();
 
             panel6.Controls.Clear();
             BodyTakeExam bodyTakeExam = new BodyTakeExam();
@@ -1648,13 +1640,13 @@ namespace LoginFrame
         {
             panel5.Hide();
 
-            panel1.Controls.Clear();
-            TitleScore titleScore = TitleScore.createForm();
-            titleScore.TopLevel = false;
-            titleScore.FormBorderStyle = FormBorderStyle.None;
-            titleScore.Dock = System.Windows.Forms.DockStyle.Fill;
-            panel1.Controls.Add(titleScore);
-            titleScore.Show();
+            //panel1.Controls.Clear();
+            //TitleScore titleScore = TitleScore.createForm();
+            //titleScore.TopLevel = false;
+            //titleScore.FormBorderStyle = FormBorderStyle.None;
+            //titleScore.Dock = System.Windows.Forms.DockStyle.Fill;
+            //panel1.Controls.Add(titleScore);
+            //titleScore.Show();
 
             panel6.Controls.Clear();
             BodyScore bodyScore = BodyScore.createForm();
@@ -1706,13 +1698,13 @@ namespace LoginFrame
         {
             panel5.Hide();
 
-            panel1.Controls.Clear();
-            TitleScore titleScore = TitleScore.createForm();
-            titleScore.TopLevel = false;
-            titleScore.FormBorderStyle = FormBorderStyle.None;
-            titleScore.Dock = System.Windows.Forms.DockStyle.Fill;
-            panel1.Controls.Add(titleScore);
-            titleScore.Show();
+            //panel1.Controls.Clear();
+            //TitleScore titleScore = TitleScore.createForm();
+            //titleScore.TopLevel = false;
+            //titleScore.FormBorderStyle = FormBorderStyle.None;
+            //titleScore.Dock = System.Windows.Forms.DockStyle.Fill;
+            //panel1.Controls.Add(titleScore);
+            //titleScore.Show();
 
             panel6.Controls.Clear();
             BodyScore bodyScore = BodyScore.createForm();
@@ -1721,6 +1713,96 @@ namespace LoginFrame
             bodyScore.Dock = System.Windows.Forms.DockStyle.Fill;
             panel6.Controls.Add(bodyScore);
             bodyScore.Show();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            if (panel5.Visible)
+            {
+                panel5.Hide();
+            }
+            else
+            {
+                panel5.Show();
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            DialogResult button = MessageBox.Show("确定要退出系统?", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
+
+            if (button == DialogResult.Yes)
+            {
+
+                CloseDB();
+
+                Application.ExitThread();
+            }
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+            DialogResult button = MessageBox.Show("确定要退出系统?", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
+
+            if (button == DialogResult.Yes)
+            {
+
+                CloseDB();
+
+                Application.ExitThread();
+            }
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+            if (panel5.Visible)
+            {
+                panel5.Hide();
+            }
+            else
+            {
+                panel5.Show();
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+            panel5.Hide();
+
+
+            //跳转代码
+            MainFrame mainFrame = MainFrame.createForm();
+
+
+            //加载菜单栏
+            //mainFrame.panel1.Controls.Clear();
+            //TitleMain titleMain = TitleMain.createForm();
+            //titleMain.TopLevel = false;
+            //titleMain.FormBorderStyle = FormBorderStyle.None;
+            //titleMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            //mainFrame.panel1.Controls.Add(titleMain);
+            //titleMain.Show();
+
+
+            //加载主体栏
+            mainFrame.panel6.Controls.Clear();
+            BodyMain bodyMain = BodyMain.createForm();
+            bodyMain.TopLevel = false;
+            bodyMain.FormBorderStyle = FormBorderStyle.None;
+            bodyMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            mainFrame.panel6.Controls.Add(bodyMain);
+            bodyMain.Show();
+            mainFrame.Show();
+
+
+            //互相访问控件
+            mainFrame.bodyMain = bodyMain;
+            //mainFrame.titleMain = titleMain;
+
+            bodyMain.mainFrame = mainFrame;
+            //titleMain.mainFrame = mainFrame;
         }
     }
 }

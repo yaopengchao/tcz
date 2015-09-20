@@ -41,6 +41,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,13 +114,22 @@
             // 
             // label6
             // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label3.Name = "label3";
             // 
             // LoginForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.label5);
@@ -154,5 +164,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label3;
     }
 }
