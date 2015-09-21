@@ -93,14 +93,13 @@
             // 
             // panel5
             // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.menuStrip1);
             resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -117,80 +116,116 @@
             // 
             // toolStripMenuItem1
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.BackColor = System.Drawing.Color.Transparent;
+            this.toolStripMenuItem1.BackgroundImage = global::LoginFrame.Properties.Resources.收藏条目;
             resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
+            this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripMenuItem2
             // 
+            this.toolStripMenuItem2.BackColor = System.Drawing.Color.Transparent;
+            this.toolStripMenuItem2.BackgroundImage = global::LoginFrame.Properties.Resources.收藏条目;
             this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exMenu1,
             this.exMenu2,
             this.exMenu3,
             this.exMenu4});
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
+            this.toolStripMenuItem2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // exMenu1
             // 
+            this.exMenu1.BackColor = System.Drawing.Color.Transparent;
+            this.exMenu1.BackgroundImage = global::LoginFrame.Properties.Resources.收藏条目;
+            this.exMenu1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.exMenu1.Name = "exMenu1";
             resources.ApplyResources(this.exMenu1, "exMenu1");
             this.exMenu1.Click += new System.EventHandler(this.exMenu1_Click);
             // 
             // exMenu2
             // 
+            this.exMenu2.BackColor = System.Drawing.Color.Transparent;
+            this.exMenu2.BackgroundImage = global::LoginFrame.Properties.Resources.收藏条目;
+            this.exMenu2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.exMenu2.Name = "exMenu2";
             resources.ApplyResources(this.exMenu2, "exMenu2");
             this.exMenu2.Click += new System.EventHandler(this.exMenu2_Click);
             // 
             // exMenu3
             // 
-            this.exMenu3.Name = "exMenu3";
+            this.exMenu3.BackColor = System.Drawing.Color.Transparent;
+            this.exMenu3.BackgroundImage = global::LoginFrame.Properties.Resources.收藏条目;
             resources.ApplyResources(this.exMenu3, "exMenu3");
+            this.exMenu3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.exMenu3.Name = "exMenu3";
             this.exMenu3.Click += new System.EventHandler(this.exMenu3_Click);
             // 
             // exMenu4
             // 
+            this.exMenu4.BackColor = System.Drawing.Color.Transparent;
+            this.exMenu4.BackgroundImage = global::LoginFrame.Properties.Resources.收藏条目;
+            this.exMenu4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.exMenu4.Name = "exMenu4";
             resources.ApplyResources(this.exMenu4, "exMenu4");
             this.exMenu4.Click += new System.EventHandler(this.exMenu4_Click);
             // 
             // 考试成绩ToolStripMenuItem
             // 
-            this.考试成绩ToolStripMenuItem.Name = "考试成绩ToolStripMenuItem";
+            this.考试成绩ToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.考试成绩ToolStripMenuItem.BackgroundImage = global::LoginFrame.Properties.Resources.收藏条目;
             resources.ApplyResources(this.考试成绩ToolStripMenuItem, "考试成绩ToolStripMenuItem");
+            this.考试成绩ToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.考试成绩ToolStripMenuItem.Name = "考试成绩ToolStripMenuItem";
             this.考试成绩ToolStripMenuItem.Click += new System.EventHandler(this.考试成绩ToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.BackColor = System.Drawing.Color.Transparent;
+            this.toolStripMenuItem3.BackgroundImage = global::LoginFrame.Properties.Resources.收藏条目;
             resources.ApplyResources(this.toolStripMenuItem3, "toolStripMenuItem3");
+            this.toolStripMenuItem3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // toolStripMenuItem4
             // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.BackColor = System.Drawing.Color.Transparent;
+            this.toolStripMenuItem4.BackgroundImage = global::LoginFrame.Properties.Resources.收藏条目;
             resources.ApplyResources(this.toolStripMenuItem4, "toolStripMenuItem4");
+            this.toolStripMenuItem4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // toolStripMenuItem5
             // 
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.BackColor = System.Drawing.Color.Transparent;
+            this.toolStripMenuItem5.BackgroundImage = global::LoginFrame.Properties.Resources.收藏条目;
             resources.ApplyResources(this.toolStripMenuItem5, "toolStripMenuItem5");
+            this.toolStripMenuItem5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
             this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
             // 
             // toolStripMenuItem6
             // 
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            this.toolStripMenuItem6.BackColor = System.Drawing.Color.Transparent;
+            this.toolStripMenuItem6.BackgroundImage = global::LoginFrame.Properties.Resources.收藏条目;
             resources.ApplyResources(this.toolStripMenuItem6, "toolStripMenuItem6");
+            this.toolStripMenuItem6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
             this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
             // 
             // toolStripMenuItem7
             // 
-            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
+            this.toolStripMenuItem7.BackColor = System.Drawing.Color.Transparent;
+            this.toolStripMenuItem7.BackgroundImage = global::LoginFrame.Properties.Resources.收藏条目;
             resources.ApplyResources(this.toolStripMenuItem7, "toolStripMenuItem7");
+            this.toolStripMenuItem7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
             // 
             // panel4
             // 
