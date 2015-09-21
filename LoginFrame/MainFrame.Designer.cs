@@ -206,6 +206,7 @@
             // lbl_exit
             // 
             this.lbl_exit.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_exit.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.lbl_exit, "lbl_exit");
             this.lbl_exit.Name = "lbl_exit";
             this.lbl_exit.Click += new System.EventHandler(this.label3_Click_1);
@@ -213,6 +214,7 @@
             // lbl_menu
             // 
             this.lbl_menu.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_menu.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.lbl_menu, "lbl_menu");
             this.lbl_menu.Name = "lbl_menu";
             this.lbl_menu.Click += new System.EventHandler(this.label2_Click_1);
@@ -220,6 +222,7 @@
             // lbl_mian
             // 
             this.lbl_mian.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_mian.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.lbl_mian, "lbl_mian");
             this.lbl_mian.Name = "lbl_mian";
             this.lbl_mian.Click += new System.EventHandler(this.label1_Click);

@@ -15,7 +15,6 @@ using System.IO;
 
 namespace LoginFrame
 {
-
     public partial class TitleMain : Form
     {
 
@@ -36,7 +35,6 @@ namespace LoginFrame
         /// </summary>
         UdpClient client;
         IPEndPoint multicast;
-
 
 
         public TitleMain()
@@ -276,12 +274,13 @@ namespace LoginFrame
             else
             {
                 //判断是否已经单机选择或者双击选择了swf课件
-                if (mainFrame.bodyMain.listView1.SelectedItems.Count == 0)
-                {
-                    MessageBox.Show("请先选择课件再点击播放!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    return;
-                }
-                string swfName = mainFrame.bodyMain.listView1.SelectedItems[0].SubItems[1].Text;
+                //if (mainFrame.bodyMain.listView1.SelectedItems.Count == 0)
+                //{
+                //    MessageBox.Show("请先选择课件再点击播放!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                //    return;
+                //}
+                string swfName = "";
+                    //mainFrame.bodyMain.listView1.SelectedItems[0].SubItems[1].Text;
                 string filpath = Application.StartupPath + @"/../../lessons/" + swfName + ".swf";
                 //检测文件是否存在
                 if (!File.Exists(filpath))
@@ -311,29 +310,29 @@ namespace LoginFrame
         private void button7_Click(object sender, EventArgs e)
         {
             //列表没有被选择过则无法上一个 下一个
-            if (mainFrame.bodyMain.listView1.SelectedItems.Count == 0)
-            {
-                MessageBox.Show("当前没有选择课件，本操作无法执行!!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                return;
-            }
+            //if (mainFrame.bodyMain.listView1.SelectedItems.Count == 0)
+            //{
+            //    MessageBox.Show("当前没有选择课件，本操作无法执行!!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            //    return;
+           // }
             //获取listview当前位置
-            int index= mainFrame.bodyMain.listView1.SelectedItems[0].Index;
+            //int index= mainFrame.bodyMain.listView1.SelectedItems[0].Index;
             //选择上一个item位置   listview越往上越小  
-            int preIndex = index - 1;
+            // preIndex = index - 1;
             //判断 该preIndex是否已经小于0了  小于0了则已经到列表顶部了无法再上一个课件了
-            if (preIndex<0)
-            {
-                MessageBox.Show("已经到达列表开头，本操作无法执行!!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                return;
-            }
-            mainFrame.bodyMain.listView1.Items[preIndex].Selected = true;
+            //if (preIndex<0)
+            //{
+            //    MessageBox.Show("已经到达列表开头，本操作无法执行!!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            //    return;
+            //}
+            //mainFrame.bodyMain.listView1.Items[preIndex].Selected = true;
             //模拟双击事件执行播放
-            mainFrame.bodyMain.BodyMain_listView_MouseDoubleClick(null,null);
+            //mainFrame.bodyMain.BodyMain_listView_MouseDoubleClick(null,null);
 
             //播放选中的文件
             if (isBroadcasting)
             {
-                Broadcast("PlayFlash^" + mainFrame.bodyMain.listView1.SelectedItems[0].Text + "^##");
+                //Broadcast("PlayFlash^" + mainFrame.bodyMain.listView1.SelectedItems[0].Text + "^##");
             }
 
         }
@@ -392,15 +391,15 @@ namespace LoginFrame
         /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
-            if (mainFrame.bodyMain.listView1.SelectedItems.Count == 0)
-            {
-                MessageBox.Show("请先选择课件播放后再扩音操作!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                return;
-            }
+            // (mainFrame.bodyMain.listView1.SelectedItems.Count == 0)
+            //{
+            //    MessageBox.Show("请先选择课件播放后再扩音操作!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            //    return;
+            //}
 
 
             //播放与 Falsh配对的音频文件名 不包括拓展名
-            string audioFilename = mainFrame.bodyMain.listView1.SelectedItems[0].SubItems[1].Text;
+            //string audioFilename = mainFrame.bodyMain.listView1.SelectedItems[0].SubItems[1].Text;
            
 
             //获取列表选中项，组装音频文件路径传给播放器
@@ -429,11 +428,11 @@ namespace LoginFrame
             {
                 if (isBroadcasting)
                 {
-                    Broadcast("PlayAudio^"+ audioFilename + "^##");
+                    //Broadcast("PlayAudio^"+ audioFilename + "^##");
                 }
 
                 this.isAudioPlaying = true;
-                this.mainFrame.audioPlayer(audioFilename);
+                //this.mainFrame.audioPlayer(audioFilename);
                 this.button6.BackgroundImage = LoginFrame.Properties.Resources.volume_up;
 
                 //暂停播放Flash
@@ -453,29 +452,29 @@ namespace LoginFrame
         public void button10_Click(object sender, EventArgs e)
         {
             //列表没有被选择过则无法上一个 下一个
-            if (mainFrame.bodyMain.listView1.SelectedItems.Count == 0)
-            {
-                MessageBox.Show("当前没有选择课件，本操作无法执行!!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                return;
-            }
+            //if (mainFrame.bodyMain.listView1.SelectedItems.Count == 0)
+            //{
+            //    MessageBox.Show("当前没有选择课件，本操作无法执行!!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            //    return;
+            //}
             //获取listview当前位置
-            int index = mainFrame.bodyMain.listView1.SelectedItems[0].Index;
+            //int index = mainFrame.bodyMain.listView1.SelectedItems[0].Index;
             //选择上一个item位置   listview越往上越小  
-            int sufIndex = index+1;
+            //int sufIndex = index+1;
             //判断 该preIndex是否已经小于0了  小于0了则已经到列表顶部了无法再上一个课件了
-            if (sufIndex > mainFrame.bodyMain.listView1.Items.Count-1)
-            {
-                MessageBox.Show("已经到达列表开头，本操作无法执行!!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                return;
-            }
-            mainFrame.bodyMain.listView1.Items[sufIndex].Selected = true;
+            //if (sufIndex > mainFrame.bodyMain.listView1.Items.Count-1)
+            //{
+            //    MessageBox.Show("已经到达列表开头，本操作无法执行!!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            //    return;
+            //}
+            //mainFrame.bodyMain.listView1.Items[sufIndex].Selected = true;
             //模拟双击事件执行播放
             mainFrame.bodyMain.BodyMain_listView_MouseDoubleClick(null, null);
 
             //播放选中的文件
             if (isBroadcasting)
             {
-                Broadcast("PlayFlash^" + mainFrame.bodyMain.listView1.SelectedItems[0].Text + "^##");
+                //Broadcast("PlayFlash^" + mainFrame.bodyMain.listView1.SelectedItems[0].Text + "^##");
             }
         }
 
@@ -590,7 +589,7 @@ namespace LoginFrame
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.mainFrame.bodyMain.listView1.Items.Clear();
+            //this.mainFrame.bodyMain.listView1.Items.Clear();
 
             if (this.comboBox2.DataSource == null) return;
 
@@ -601,7 +600,7 @@ namespace LoginFrame
             if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
             { 
 
-                this.mainFrame.bodyMain.listView1.BeginUpdate();
+                //this.mainFrame.bodyMain.listView1.BeginUpdate();
                 if (LoginRoler.language == Constant.zhCN)
                 {
                     int i = 0;
@@ -612,7 +611,7 @@ namespace LoginFrame
                         ListViewItem lvItem = new ListViewItem();
                         lvItem.Text = name.ToString();
                         lvItem.SubItems.Add(filename.ToString());
-                        this.mainFrame.bodyMain.listView1.Items.Insert(i, lvItem);
+                        //this.mainFrame.bodyMain.listView1.Items.Insert(i, lvItem);
                         i++;
                     }
                 }
@@ -626,11 +625,11 @@ namespace LoginFrame
                         ListViewItem lvItem = new ListViewItem();
                         lvItem.Text = name.ToString();
                         lvItem.SubItems.Add(filename.ToString());
-                        this.mainFrame.bodyMain.listView1.Items.Insert(i, lvItem);
+                        //this.mainFrame.bodyMain.listView1.Items.Insert(i, lvItem);
                         i++;
                     }
                 }
-                this.mainFrame.bodyMain.listView1.EndUpdate();
+                //this.mainFrame.bodyMain.listView1.EndUpdate();
             }
         }
 
@@ -690,30 +689,30 @@ namespace LoginFrame
         {
             //收藏当前课件到数据库
             //获取当前课件的文件名  文件名
-            if (mainFrame.bodyMain.listView1.Items.Count <= 0)
-            {
-                MessageBox.Show("请先选择课件再点击收藏!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                return;
-            }
-            else
-            {
-                bool flag = true;
-                if (mainFrame.bodyMain.listView1.Items.Count > 0) { 
+            //if (mainFrame.bodyMain.listView1.Items.Count <= 0)
+            //{
+            //    MessageBox.Show("请先选择课件再点击收藏!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            //    return;
+            //}
+            //else
+            //{
+            //    bool flag = true;
+            //    if (mainFrame.bodyMain.listView1.Items.Count > 0) { 
                     //循环选中列表
-                    foreach (ListViewItem lt in mainFrame.bodyMain.listView1.Items)
-                    {
-                        string filename = mainFrame.bodyMain.listView1.SelectedItems[0].SubItems[1].Text;
-                        bool isAdd = IUser.addFavorite(LoginRoler.login_id, filename);
-                        flag = flag && isAdd;
-                    }
-                if (!flag)
-                {
-                        MessageBox.Show("有课件收藏失败!请核对");
-                    }
-                    //重新刷新收藏夹数据
-                    refreshFavorites();
-                }
-            }
+            //        foreach (ListViewItem lt in mainFrame.bodyMain.listView1.Items)
+            //        {
+            //            string filename = mainFrame.bodyMain.listView1.SelectedItems[0].SubItems[1].Text;
+            //            bool isAdd = IUser.addFavorite(LoginRoler.login_id, filename);
+            //            flag = flag && isAdd;
+            //        }
+             //   if (!flag)
+             //   {
+             //           MessageBox.Show("有课件收藏失败!请核对");
+             //       }
+             //       //重新刷新收藏夹数据
+              //      refreshFavorites();
+              //  }
+           // }
         }
     }
 }
