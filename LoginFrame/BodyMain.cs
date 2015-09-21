@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using BLL;
 using Model;
+using System.Drawing;
 
 namespace LoginFrame
 {
@@ -113,11 +114,10 @@ namespace LoginFrame
             DataTable dt = Bll.getAllCourses().Tables[0];
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                //从数据库获取课件分类  然后遍历产生 按钮 动态添加到动态panel中
+                //从数据库获取课件分类  然后遍历产生 按钮 动态添加到动态leftPanel中
                 Button btnLessonType = new Button();
-                btnLessonType.Width = 190;
-                btnLessonType.Height = 22;
-                btnLessonType.Margin = Padding.Empty;
+                btnLessonType.Width = 188;
+                btnLessonType.Height = 22;  
                 btnLessonType.BackgroundImage = global::LoginFrame.Properties.Resources.课件分类;
                 btnLessonType.FlatStyle = FlatStyle.Popup;
 
@@ -129,116 +129,84 @@ namespace LoginFrame
                 {
                     btnLessonType.Text = dt.Rows[i]["TCZ_ENAME"].ToString();
                 }
-                btnLessonType.Tag = dt.Rows[i]["TCZ_ID"].ToString();
+                btnLessonType.Tag = "NOTOPEN#"+dt.Rows[i]["TCZ_ID"].ToString();
                 btnLessonType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
                 //btnLessonType.Font
                 //绑定按钮点击事件
-                //btnLessonType.Click += new EventHandler(btnLessonType_Click);
+                btnLessonType.Click += new EventHandler(btnLessonType_Click);
 
+
+                
                 this.leftPanel.Controls.Add(btnLessonType);
                 Console.WriteLine("添加类型");
-
-
-                DataTable classes = Bll.getCourses(dt.Rows[i]["TCZ_ID"].ToString()).Tables[0];
-                //创建一个流式的panel然后将按钮加到该panel中
-                FlowLayoutPanel flowLayoutPanel = new FlowLayoutPanel();
-                flowLayoutPanel.AutoScroll = true;
-                for (int j = 0; j < classes.Rows.Count; j++)
-                {
-                    Button btnClassType = new Button();
-                    btnClassType.Width = 160;
-                    btnClassType.Height = 20;
-                    btnClassType.Margin = Padding.Empty;
-                    btnClassType.BackgroundImage = global::LoginFrame.Properties.Resources.章节未选中;
-                    btnClassType.FlatStyle = FlatStyle.Popup;
-
-                    if (LoginRoler.language == Constant.zhCN)
-                    {
-                        btnClassType.Text = classes.Rows[j]["CLASS_NAME"].ToString();
-                    }
-                    else if (LoginRoler.language == Constant.En)
-                    {
-                        btnClassType.Text = classes.Rows[j]["CLASS_ENAME"].ToString();
-                    }
-                    btnClassType.Tag = classes.Rows[j]["CLASS_ID"].ToString();
-
-                    flowLayoutPanel.Controls.Add(btnClassType);
-
-                    //循环课件
-                    DataTable lessons = Bll.getLessons(classes.Rows[j]["CLASS_ID"].ToString()).Tables[0];
-                    ListView listView = new ListView();
-                    listView.Width = 130;
-                    listView.View = View.List;
-                    listView.BeginUpdate();
-                    for (int k = 0; k < lessons.Rows.Count; k++)
-                    {
-                        ListViewItem lvItem = new ListViewItem();
-                        lvItem.Text = lessons.Rows[k]["LESSON_NAME"].ToString();
-                        lvItem.SubItems.Add(lessons.Rows[k]["LESSON_FILENAME"].ToString());
-                        listView.Items.Add(lvItem);
-                    }
-                    listView.EndUpdate();
-                    flowLayoutPanel.Controls.Add(listView);
-                    Console.WriteLine("添加课件");
-                }
-                this.leftPanel.Controls.Add(flowLayoutPanel);
-
-                if (isOpenClass)
-                {
-                    flowLayoutPanel.Hide();
-                }
-                else
-                {
-                    isOpenClass = true;
-                    flowLayoutPanel.Show();
-                }
-                Console.WriteLine("添加章节");
             }
         }
 
         /// <summary>
-        /// 点击课件分类按钮 加载 章节数据
+        /// 点击分类按钮
         /// </summary>
-        /// <param name="lessonType"></param>
-        /// <returns></returns>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLessonType_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
             if (btn != null)
             {
-                //MessageBox.Show(btn.Tag.ToString());
-                //MessageBox.Show(btn.Text);
-                //检索该ID下的章节
-                DataTable dt = Bll.getCourses(btn.Tag.ToString()).Tables[0];
-
-                //创建一个流式的panel然后将按钮加到该panel中
-                FlowLayoutPanel flowLayoutPanel= new FlowLayoutPanel();
-                
-                for (int i = 0; i < dt.Rows.Count; i++)
+                string state = btn.Tag.ToString().Split('#')[0];
+                string type_id= btn.Tag.ToString().Split('#')[1];
+                //获取按钮索引
+                int btn_index = this.leftPanel.Controls.IndexOf(btn);
+                if (state== "NOTOPEN")
                 {
-                    Button btnClassType = new Button();
-                    btnClassType.Width = 180;
-                    btnClassType.Height = 15;
-                    btnClassType.Margin = Padding.Empty;
-                    btnClassType.BackgroundImage = global::LoginFrame.Properties.Resources.章节未选中;
-                    btnClassType.FlatStyle = FlatStyle.Popup;
-
-                    if (LoginRoler.language == Constant.zhCN)
+                    //创建一个流式的panel然后将按钮加到该panel中
+                    FlowLayoutPanel flowLayoutPanel = new FlowLayoutPanel();
+                    flowLayoutPanel.AutoScroll = true;
+                    DataTable classes = Bll.getCourses(type_id).Tables[0];
+                    for (int j = 0; j < classes.Rows.Count; j++)
                     {
-                        btnClassType.Text = dt.Rows[i]["CLASS_NAME"].ToString();
+                        Button btnClassType = new Button();
+                        btnClassType.Width = 160;
+                        btnClassType.Height = 20;
+                        btnClassType.BackgroundImage = global::LoginFrame.Properties.Resources.章节未选中;
+                        btnClassType.FlatStyle = FlatStyle.Popup;
+
+                        if (LoginRoler.language == Constant.zhCN)
+                        {
+                            btnClassType.Text = classes.Rows[j]["CLASS_NAME"].ToString();
+                        }
+                        else if (LoginRoler.language == Constant.En)
+                        {
+                            btnClassType.Text = classes.Rows[j]["CLASS_ENAME"].ToString();
+                        }
+                        btnClassType.Tag = "NOTOPEN#" + classes.Rows[j]["CLASS_ID"].ToString();
+
+                        flowLayoutPanel.Controls.Add(btnClassType);
                     }
-                    else if (LoginRoler.language == Constant.En)
+
+
+                    Control.ControlCollection cc = this.leftPanel.Controls;
+                    this.leftPanel.Controls.Clear();
+                    for (int i = 0; i < this.leftPanel.Controls.Count+1; i++)
                     {
-                        btnClassType.Text = dt.Rows[i]["CLASS_ENAME"].ToString();
+                        if(i < btn_index + 1) {
+                            this.leftPanel.Controls.Add(cc[i]);
+                        }
+                        else if (i== btn_index+1)
+                        {
+                            this.leftPanel.Controls.Add(flowLayoutPanel);
+                        }
+                        else if (i > btn_index + 1)
+                        {
+                            this.leftPanel.Controls.Add(cc[i-1]);
+                        }
                     }
-                    btnClassType.Tag = dt.Rows[i]["CLASS_ID"].ToString();
 
-                    //绑定按钮点击事件
-                    //btnClassType.Click += new EventHandler(btnClassType_Click);
+                    //MessageBox.Show("获取按钮索引"+ btn_index);
+                    Console.WriteLine("章节");
 
-                    flowLayoutPanel.Controls.Add(btnClassType);
+                    btn.Tag= "OPEN#" + type_id;
                 }
-                //btn.Controls.Add(flowLayoutPanel);
+                
             }
         }
 

@@ -143,17 +143,19 @@
             // toolStripMenuItem1
             // 
             resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
-            this.toolStripMenuItem1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.toolStripMenuItem1.BackColor = System.Drawing.Color.Transparent;
             this.toolStripMenuItem1.BackgroundImage = global::LoginFrame.Properties.Resources.收藏夹;
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem3,
             this.toolStripSeparator1});
+            this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.BackColor = System.Drawing.Color.Transparent;
             this.toolStripMenuItem3.BackgroundImage = global::LoginFrame.Properties.Resources.收藏条目;
+            this.toolStripMenuItem3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             resources.ApplyResources(this.toolStripMenuItem3, "toolStripMenuItem3");
             // 
