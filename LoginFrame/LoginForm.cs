@@ -345,7 +345,7 @@ namespace LoginFrame
 
                 //启动mysql服务
                 exeCmd("net start MySQL");
-                Thread.Sleep(5000);
+                Thread.Sleep(10000);
                 p.Close();
             }
             else
