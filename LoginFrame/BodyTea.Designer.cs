@@ -66,8 +66,11 @@
             // 
             this.查询条件.Controls.Add(this.btnClear);
             this.查询条件.Controls.Add(this.btnQuery);
+            this.查询条件.Controls.Add(this.button4);
             this.查询条件.Controls.Add(this.txtUserName);
+            this.查询条件.Controls.Add(this.button5);
             this.查询条件.Controls.Add(this.label1);
+            this.查询条件.Controls.Add(this.button6);
             resources.ApplyResources(this.查询条件, "查询条件");
             this.查询条件.Name = "查询条件";
             this.查询条件.TabStop = false;
@@ -117,9 +120,6 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Controls.Add(this.查询条件);
             this.Controls.Add(this.pageCtrl);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BodyTea";
             this.Load += new System.EventHandler(this.BodyTea_Load);
