@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using BLL;
 using Model;
 using System.Drawing;
+using System.Collections.Generic;
 
 namespace LoginFrame
 {
@@ -140,6 +141,7 @@ namespace LoginFrame
                 this.leftPanel.Controls.Add(btnLessonType);
                 Console.WriteLine("添加类型");
             }
+            
         }
 
         /// <summary>
@@ -180,33 +182,171 @@ namespace LoginFrame
                         }
                         btnClassType.Tag = "NOTOPEN#" + classes.Rows[j]["CLASS_ID"].ToString();
 
+                        btnClassType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                        //绑定按钮点击事件
+                        btnClassType.Click += new EventHandler(btnClassType_Click);
+
                         flowLayoutPanel.Controls.Add(btnClassType);
                     }
 
+                    
+                    {//刷新控件  将下拉的panel加载到leftpanel
+                        List<Control> list = new List<Control>();
 
-                    Control.ControlCollection cc = this.leftPanel.Controls;
-                    this.leftPanel.Controls.Clear();
-                    for (int i = 0; i < this.leftPanel.Controls.Count+1; i++)
-                    {
-                        if(i < btn_index + 1) {
-                            this.leftPanel.Controls.Add(cc[i]);
-                        }
-                        else if (i== btn_index+1)
+                        for (int i = 0; i < this.leftPanel.Controls.Count; i++)
                         {
-                            this.leftPanel.Controls.Add(flowLayoutPanel);
+                            //MessageBox.Show("往临时PANEL添加控件");
+                            list.Add(this.leftPanel.Controls[i]);
                         }
-                        else if (i > btn_index + 1)
+                        //MessageBox.Show("list控件数量:" + list.Count);
+
+                        this.leftPanel.Controls.Clear();
+                        for (int i = 0; i < list.Count + 1; i++)
                         {
-                            this.leftPanel.Controls.Add(cc[i-1]);
+                            if (i < btn_index + 1)
+                            {
+                                this.leftPanel.Controls.Add(list[i]);
+                            }
+                            else if (i == btn_index + 1)
+                            {
+                                this.leftPanel.Controls.Add(flowLayoutPanel);
+                            }
+                            else if (i > btn_index + 1)
+                            {
+                                this.leftPanel.Controls.Add(list[i-1]);
+                            }
                         }
                     }
 
-                    //MessageBox.Show("获取按钮索引"+ btn_index);
                     Console.WriteLine("章节");
 
                     btn.Tag= "OPEN#" + type_id;
+                    btn.BackgroundImage = global::LoginFrame.Properties.Resources.章节选中;
                 }
+                else
+                {
+                    this.leftPanel.Controls.RemoveAt(btn_index+1);
+                    btn.Tag = "NOTOPEN#" + type_id;
+                    btn.BackgroundImage = global::LoginFrame.Properties.Resources.章节未选中;
+                }
+
+            }
+        }
+
+
+        /// <summary>
+        /// 点击章节按钮
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnClassType_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            
+            if (btn != null)
+            {
+                string state = btn.Tag.ToString().Split('#')[0];
+                string type_id = btn.Tag.ToString().Split('#')[1];
+                //父控件
+                FlowLayoutPanel parentPanel = (FlowLayoutPanel)btn.Parent;
+                //获取按钮索引
+                int btn_index = parentPanel.Controls.IndexOf(btn);
+                //MessageBox.Show("章节索引"+btn_index);
                 
+                if (state == "NOTOPEN")
+                {
+                    FlowLayoutPanel flowLayoutPanel = new FlowLayoutPanel();
+                    flowLayoutPanel.AutoScroll = true;
+
+                    ListView listView = new ListView();
+                    listView.View = View.List;
+
+                    DataTable lessons = Bll.getLessons(type_id).Tables[0];
+                    for (int j = 0; j < lessons.Rows.Count; j++)
+                    {
+                        ListViewItem lvItem = new ListViewItem();
+
+                        if (LoginRoler.language == Constant.zhCN)
+                        {
+                            lvItem.Text = lessons.Rows[j]["LESSON_NAME"].ToString();
+                            lvItem.SubItems.Add(lessons.Rows[j]["LESSON_FILENAME"].ToString());
+                        }
+                        else if (LoginRoler.language == Constant.En)
+                        {
+                            lvItem.Text = lessons.Rows[j]["LESSON_ENAME"].ToString();
+                            lvItem.SubItems.Add(lessons.Rows[j]["LESSON_FILENAME"].ToString());
+                        }
+
+                        listView.Items.Add(lvItem);
+                    }
+
+                    flowLayoutPanel.Controls.Add(listView);
+
+                    {//刷新控件  将下拉的panel加载到leftpanel
+                        List<Control> list = new List<Control>();
+
+                        for (int i = 0; i < parentPanel.Controls.Count; i++)
+                        {
+                            //MessageBox.Show("往临时PANEL添加控件");
+                            list.Add(parentPanel.Controls[i]);
+                        }
+                        //MessageBox.Show("list控件数量:" + list.Count);
+
+                        parentPanel.Controls.Clear();
+                        for (int i = 0; i < list.Count + 1; i++)
+                        {
+                            if (i < btn_index + 1)
+                            {
+                                parentPanel.Controls.Add(list[i]);
+                            }
+                            else if (i == btn_index + 1)
+                            {
+                                parentPanel.Controls.Add(flowLayoutPanel);
+                            }
+                            else if (i > btn_index + 1)
+                            {
+                                parentPanel.Controls.Add(list[i - 1]);
+                            }
+                        }
+                    }
+
+                    Console.WriteLine("课件");
+
+                    btn.Tag = "OPEN#" + type_id;
+                }
+                else
+                {
+                    parentPanel.Controls.RemoveAt(btn_index + 1);
+                    btn.Tag = "NOTOPEN#" + type_id;
+                    //btn.BackgroundImage = global::LoginFrame.Properties.Resources.章节未选中;
+                }
+            }
+        }
+
+        /// <summary>
+        /// 在控件的某个索引后面加新的控件
+        /// </summary>
+        /// <param name="control"></param>
+        /// <param name="btn_index"></param>
+        private void reloadUi(Control fatherCtrl, int btn_index, Control childCtrl)
+        {
+            
+            //MessageBox.Show("类型"+ fatherCtrl.GetType()+"/"+ typeof(FlowLayoutPanel));
+            if (fatherCtrl.GetType().Equals(typeof(FlowLayoutPanel)))
+            {
+                FlowLayoutPanel tempPanel = new FlowLayoutPanel();
+                FlowLayoutPanel flowLayoutPanel = fatherCtrl as FlowLayoutPanel;
+                foreach (Control item in flowLayoutPanel.Controls)
+                {
+
+                }
+
+                    MessageBox.Show("test1");
+
+            }
+            else
+            {
+               // MessageBox.Show("test2");
             }
         }
 

@@ -232,7 +232,7 @@ namespace LoginFrame
         int comboBox3selectIndex;
         private void button1_Click(object sender, EventArgs e)
         {
-            this.label6.Text = "局域网搜索数据库IP中......";
+            this.label6.Image= global::LoginFrame.Properties.Resources.loading11;
             //重置默认
             RunDoWhile = true;
 
@@ -246,7 +246,7 @@ namespace LoginFrame
             //登陆首先获取角色选择的index，因为写在后面会发生些错误 提前先获取
             comboBox3selectIndex = this.comboBox3.SelectedIndex;
 
-            this.label6.Text = "搜索局域网内是否已有教师机或管理员登录";
+            //this.label6.Text = "搜索局域网内是否已有教师机或管理员登录";
 
             searchIp();
 
@@ -289,10 +289,10 @@ namespace LoginFrame
 
 
             Console.WriteLine("开启数据库操作.......");
-            this.label6.Text = "开启数据库操作";
+            //this.label6.Text = "开启数据库操作";
 
             Console.WriteLine("开始登录操作.......");
-            this.label6.Text = "开始登录操作";
+            //this.label6.Text = "开始登录操作";
 
             //登录代码
             bool isLogined = login();

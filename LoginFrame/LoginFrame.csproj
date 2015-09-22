@@ -602,6 +602,7 @@
     <Content Include="bin\Debug\Regedit.txt" />
     <Content Include="bin\Debug\RolesType.xml" />
     <Content Include="pic\界面背景3.jpg" />
+    <None Include="Resources\loading11.gif" />
     <None Include="Resources\章节选中.png" />
     <None Include="Resources\章节未选中.png" />
     <None Include="Resources\收藏条目.png" />
