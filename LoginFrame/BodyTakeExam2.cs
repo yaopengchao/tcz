@@ -107,6 +107,7 @@ namespace LoginFrame
                 linLab.Name = "labPre" + i;
                 linLab.LinkBehavior = LinkBehavior.NeverUnderline;
                 linLab.Click += new EventHandler(preClick);
+                linLab.LinkColor = System.Drawing.Color.Black;
                 this.Controls.Add(linLab);
 
                 Label lab = new Label();
@@ -250,6 +251,15 @@ namespace LoginFrame
             //titleMain.Dock = System.Windows.Forms.DockStyle.Fill;
             //takeExam.mainFrame.panel1.Controls.Add(titleMain);
             //titleMain.Show();
+
+            ExamResult examResult = new ExamResult();
+            examResult.ExamResultId = examResultId;
+            examResult.ExaminationId = examId;
+            examResult.ExaminationDetailId = examDetailId;
+            examResult.TopicId = topicId;
+            examResult.Answer = labResult.Text;
+            examResult.UserId = LoginRoler.userId;
+            examResultService.addOrUpdateExamResult(examResult);
 
             //加载主体栏
             takeExam.mainFrame.panel6.Controls.Clear();
