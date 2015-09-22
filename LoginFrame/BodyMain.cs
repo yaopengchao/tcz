@@ -182,10 +182,11 @@ namespace LoginFrame
                 {
                     //创建一个流式的panel然后将按钮加到该panel中
                     FlowLayoutPanel flowLayoutPanel = new FlowLayoutPanel();
-                    flowLayoutPanel.Width = 175;
+                    flowLayoutPanel.Width = 190;
                     //flowLayoutPanel.AutoSize = true;
                     flowLayoutPanel.AutoScroll = true;
                     DataTable classes = Bll.getCourses(type_id).Tables[0];
+                    int height = 5;
                     for (int j = 0; j < classes.Rows.Count; j++)
                     {
                         Button btnClassType = new Button();
@@ -208,10 +209,15 @@ namespace LoginFrame
                         //绑定按钮点击事件
                         btnClassType.Click += new EventHandler(btnClassType_Click);
 
+                        height += 25;
+
                         flowLayoutPanel.Controls.Add(btnClassType);
                     }
 
-                    
+                    Console.WriteLine("第一层高度为：" + height);
+                    flowLayoutPanel.Height = height;
+
+
                     {//刷新控件  将下拉的panel加载到leftpanel
                         List<Control> list = new List<Control>();
 
@@ -278,7 +284,7 @@ namespace LoginFrame
                 {
                     FlowLayoutPanel flowLayoutPanel = new FlowLayoutPanel();
                     //flowLayoutPanel.AutoSize = true;
-                    flowLayoutPanel.Width = 120;
+                    flowLayoutPanel.Width = 180;
                     flowLayoutPanel.AutoScroll = true;
 
                     ListView listView = new ListView();
@@ -305,6 +311,7 @@ namespace LoginFrame
                     }
 
                     flowLayoutPanel.Controls.Add(listView);
+                    flowLayoutPanel.Height = flowLayoutPanel.Height + 10;
 
                     {//刷新控件  将下拉的panel加载到leftpanel
                         List<Control> list = new List<Control>();
@@ -325,7 +332,8 @@ namespace LoginFrame
                             }
                             else if (i == btn_index + 1)
                             {
-                                parentPanel.Controls.Add(flowLayoutPanel);
+                                parentPanel.Height = parentPanel.Height + flowLayoutPanel.Height + 10;
+                                parentPanel.Controls.Add(flowLayoutPanel);                                
                             }
                             else if (i > btn_index + 1)
                             {
@@ -342,6 +350,9 @@ namespace LoginFrame
                 }
                 else
                 {
+
+                    FlowLayoutPanel flowLayoutPanel = (FlowLayoutPanel) parentPanel.Controls[btn_index + 1];
+                    parentPanel.Height = parentPanel.Height - flowLayoutPanel.Height - 10;
                     parentPanel.Controls.RemoveAt(btn_index + 1);
                     btn.Tag = "NOTOPEN#" + type_id;
                     btn.BackgroundImage = global::LoginFrame.Properties.Resources.章节未选中;
