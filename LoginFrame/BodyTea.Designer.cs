@@ -64,11 +64,11 @@
             // 
             // 查询条件
             // 
-            resources.ApplyResources(this.查询条件, "查询条件");
             this.查询条件.Controls.Add(this.btnClear);
             this.查询条件.Controls.Add(this.btnQuery);
             this.查询条件.Controls.Add(this.txtUserName);
             this.查询条件.Controls.Add(this.label1);
+            resources.ApplyResources(this.查询条件, "查询条件");
             this.查询条件.Name = "查询条件";
             this.查询条件.TabStop = false;
             // 
@@ -98,10 +98,10 @@
             // 
             // pageCtrl
             // 
-            resources.ApplyResources(this.pageCtrl, "pageCtrl");
             this.pageCtrl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pageCtrl.Cols = new string[0];
             this.pageCtrl.CurPage = 1;
+            resources.ApplyResources(this.pageCtrl, "pageCtrl");
             this.pageCtrl.Name = "pageCtrl";
             this.pageCtrl.PageSize = 15;
             this.pageCtrl.StartIndex = 0;

@@ -90,11 +90,11 @@
             // 
             // 查询条件
             // 
-            resources.ApplyResources(this.查询条件, "查询条件");
             this.查询条件.Controls.Add(this.btnClear);
             this.查询条件.Controls.Add(this.btnQuery);
             this.查询条件.Controls.Add(this.txtUserName);
             this.查询条件.Controls.Add(this.label1);
+            resources.ApplyResources(this.查询条件, "查询条件");
             this.查询条件.Name = "查询条件";
             this.查询条件.TabStop = false;
             this.查询条件.Enter += new System.EventHandler(this.查询条件_Enter);
@@ -125,10 +125,10 @@
             // 
             // pageCtrl2
             // 
-            resources.ApplyResources(this.pageCtrl2, "pageCtrl2");
             this.pageCtrl2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pageCtrl2.Cols = new string[0];
             this.pageCtrl2.CurPage = 1;
+            resources.ApplyResources(this.pageCtrl2, "pageCtrl2");
             this.pageCtrl2.Name = "pageCtrl2";
             this.pageCtrl2.PageSize = 15;
             this.pageCtrl2.StartIndex = 0;
@@ -139,10 +139,10 @@
             // 
             // pageCtrl
             // 
-            resources.ApplyResources(this.pageCtrl, "pageCtrl");
             this.pageCtrl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pageCtrl.Cols = new string[0];
             this.pageCtrl.CurPage = 1;
+            resources.ApplyResources(this.pageCtrl, "pageCtrl");
             this.pageCtrl.Name = "pageCtrl";
             this.pageCtrl.PageSize = 15;
             this.pageCtrl.StartIndex = 0;

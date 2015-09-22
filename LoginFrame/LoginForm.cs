@@ -305,19 +305,6 @@ namespace LoginFrame
             MainFrame mainFrame = MainFrame.createForm();
 
 
-            //加载菜单栏
-            //mainFrame.panel1.Controls.Clear();
-            //TitleMain titleMain = TitleMain.createForm();
-            //titleMain.TopLevel = false;
-            //titleMain.FormBorderStyle = FormBorderStyle.None;
-            //titleMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            //mainFrame.panel1.Controls.Add(titleMain);
-            //titleMain.Show();
-
-
-            //加载主体栏
-            //mainFrame.panel6.Controls.Clear();
-
             mainFrame.panel6.Controls.Clear();
             mainFrame.panel6.Controls.AddRange(mainFrame.items.ToArray());
 
@@ -333,10 +320,7 @@ namespace LoginFrame
 
             //互相访问控件
             mainFrame.bodyMain = bodyMain;
-            //mainFrame.titleMain = titleMain;
-
-            bodyMain.mainFrame = mainFrame;
-            //titleMain.mainFrame = mainFrame;
+           
         }
 
         private Process p;

@@ -208,23 +208,22 @@
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.tabControl1);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // tabControl1
             // 
-            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
             // tabPage1
             // 
-            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Controls.Add(this.血压舒张压);
             this.tabPage1.Controls.Add(this.血压收缩压);
             this.tabPage1.Controls.Add(this.股动脉听诊音);
@@ -277,6 +276,7 @@
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
@@ -343,9 +343,9 @@
             // 
             // panel18
             // 
-            resources.ApplyResources(this.panel18, "panel18");
             this.panel18.Controls.Add(this.脉搏);
             this.panel18.Controls.Add(this.label25);
+            resources.ApplyResources(this.panel18, "panel18");
             this.panel18.Name = "panel18";
             // 
             // 脉搏
@@ -378,9 +378,9 @@
             // 
             // panel15
             // 
-            resources.ApplyResources(this.panel15, "panel15");
             this.panel15.Controls.Add(this.反跳痛阑尾无);
             this.panel15.Controls.Add(this.反跳痛阑尾有);
+            resources.ApplyResources(this.panel15, "panel15");
             this.panel15.Name = "panel15";
             // 
             // 反跳痛阑尾无
@@ -399,9 +399,9 @@
             // 
             // panel16
             // 
-            resources.ApplyResources(this.panel16, "panel16");
             this.panel16.Controls.Add(this.反跳痛胰腺无);
             this.panel16.Controls.Add(this.反跳痛胰腺有);
+            resources.ApplyResources(this.panel16, "panel16");
             this.panel16.Name = "panel16";
             // 
             // 反跳痛胰腺无
@@ -420,9 +420,9 @@
             // 
             // panel14
             // 
-            resources.ApplyResources(this.panel14, "panel14");
             this.panel14.Controls.Add(this.反跳痛小肠无);
             this.panel14.Controls.Add(this.反跳痛小肠有);
+            resources.ApplyResources(this.panel14, "panel14");
             this.panel14.Name = "panel14";
             // 
             // 反跳痛小肠无
@@ -476,9 +476,9 @@
             // 
             // panel10
             // 
-            resources.ApplyResources(this.panel10, "panel10");
             this.panel10.Controls.Add(this.压痛阑尾无);
             this.panel10.Controls.Add(this.压痛阑尾有);
+            resources.ApplyResources(this.panel10, "panel10");
             this.panel10.Name = "panel10";
             // 
             // 压痛阑尾无
@@ -497,9 +497,9 @@
             // 
             // panel8
             // 
-            resources.ApplyResources(this.panel8, "panel8");
             this.panel8.Controls.Add(this.压痛乙状结肠无);
             this.panel8.Controls.Add(this.压痛乙状结肠有);
+            resources.ApplyResources(this.panel8, "panel8");
             this.panel8.Name = "panel8";
             // 
             // 压痛乙状结肠无
@@ -518,9 +518,9 @@
             // 
             // panel9
             // 
-            resources.ApplyResources(this.panel9, "panel9");
             this.panel9.Controls.Add(this.压痛胰腺无);
             this.panel9.Controls.Add(this.压痛胰腺有);
+            resources.ApplyResources(this.panel9, "panel9");
             this.panel9.Name = "panel9";
             // 
             // 压痛胰腺无
@@ -539,9 +539,9 @@
             // 
             // panel11
             // 
-            resources.ApplyResources(this.panel11, "panel11");
             this.panel11.Controls.Add(this.压痛十二指肠无);
             this.panel11.Controls.Add(this.压痛十二指肠有);
+            resources.ApplyResources(this.panel11, "panel11");
             this.panel11.Name = "panel11";
             // 
             // 压痛十二指肠无
@@ -560,9 +560,9 @@
             // 
             // panel7
             // 
-            resources.ApplyResources(this.panel7, "panel7");
             this.panel7.Controls.Add(this.压痛小肠无);
             this.panel7.Controls.Add(this.压痛小肠有);
+            resources.ApplyResources(this.panel7, "panel7");
             this.panel7.Name = "panel7";
             // 
             // 压痛小肠无
@@ -581,9 +581,9 @@
             // 
             // panel13
             // 
-            resources.ApplyResources(this.panel13, "panel13");
             this.panel13.Controls.Add(this.脾脏肿大);
             this.panel13.Controls.Add(this.label5);
+            resources.ApplyResources(this.panel13, "panel13");
             this.panel13.Name = "panel13";
             // 
             // 脾脏肿大
@@ -598,9 +598,9 @@
             // 
             // panel12
             // 
-            resources.ApplyResources(this.panel12, "panel12");
             this.panel12.Controls.Add(this.肝脏肿大);
             this.panel12.Controls.Add(this.label4);
+            resources.ApplyResources(this.panel12, "panel12");
             this.panel12.Name = "panel12";
             // 
             // 肝脏肿大
@@ -645,9 +645,9 @@
             // 
             // panel6
             // 
-            resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Controls.Add(this.压痛胃溃疡无);
             this.panel6.Controls.Add(this.压痛胃溃疡有);
+            resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
             // 
             // 压痛胃溃疡无
@@ -676,9 +676,9 @@
             // 
             // panel5
             // 
-            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Controls.Add(this.胆囊墨菲氏征阴性);
             this.panel5.Controls.Add(this.胆囊墨菲氏征阳性);
+            resources.ApplyResources(this.panel5, "panel5");
             this.panel5.Name = "panel5";
             // 
             // 胆囊墨菲氏征阴性
@@ -702,9 +702,9 @@
             // 
             // panel4
             // 
-            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Controls.Add(this.胆囊肿大无);
             this.panel4.Controls.Add(this.胆囊肿大有);
+            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             // 
             // 胆囊肿大无
@@ -728,9 +728,9 @@
             // 
             // panel3
             // 
-            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Controls.Add(this.肝脏质地软);
             this.panel3.Controls.Add(this.肝脏质地硬);
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             // 
             // 肝脏质地软
@@ -749,9 +749,9 @@
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Controls.Add(this.胆囊触痛无);
             this.panel2.Controls.Add(this.胆囊触痛有);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
             // 胆囊触痛无
@@ -790,7 +790,6 @@
             // 
             // tabPage2
             // 
-            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Controls.Add(this.button16);
             this.tabPage2.Controls.Add(this.button15);
             this.tabPage2.Controls.Add(this.button14);
@@ -837,6 +836,7 @@
             this.tabPage2.Controls.Add(this.label31);
             this.tabPage2.Controls.Add(this.panel17);
             this.tabPage2.Controls.Add(this.label30);
+            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
@@ -1067,9 +1067,9 @@
             // 
             // panel19
             // 
-            resources.ApplyResources(this.panel19, "panel19");
             this.panel19.Controls.Add(this.心尖搏动无);
             this.panel19.Controls.Add(this.心尖搏动有);
+            resources.ApplyResources(this.panel19, "panel19");
             this.panel19.Name = "panel19";
             // 
             // 心尖搏动无
@@ -1093,9 +1093,9 @@
             // 
             // panel17
             // 
-            resources.ApplyResources(this.panel17, "panel17");
             this.panel17.Controls.Add(this.心前区震颤无);
             this.panel17.Controls.Add(this.心前区震颤有);
+            resources.ApplyResources(this.panel17, "panel17");
             this.panel17.Name = "panel17";
             // 
             // 心前区震颤无
@@ -1119,7 +1119,6 @@
             // 
             // tabPage3
             // 
-            resources.ApplyResources(this.tabPage3, "tabPage3");
             this.tabPage3.Controls.Add(this.label59);
             this.tabPage3.Controls.Add(this.label58);
             this.tabPage3.Controls.Add(this.label57);
@@ -1133,6 +1132,7 @@
             this.tabPage3.Controls.Add(this.label52);
             this.tabPage3.Controls.Add(this.label51);
             this.tabPage3.Controls.Add(this.label24);
+            resources.ApplyResources(this.tabPage3, "tabPage3");
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);

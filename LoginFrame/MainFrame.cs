@@ -22,9 +22,6 @@ namespace LoginFrame
     public partial class MainFrame : Form
     {
 
-        public BodyMain bodyMain;
-        public TitleMain titleMain;
-
         public VoiceChatRoom voiceChatRoom;
 
         public SoundPlayer splayer;
@@ -1259,34 +1256,16 @@ namespace LoginFrame
                 //MessageBox.Show(msg);
             }
         }
-        /// <summary>
-        /// delegate委托代理，为了在线程中访问 控件
-        /// </summary>
-        /// <param name="text"></param>
-        public delegate void button6_changeText(string text);
-        public void button6changeText(string text)
-        {
-            this.titleMain.button6.Text = text;
-        }
 
-
-        public delegate void button3_changeText(string text);
-        public void button3changeText(string text)
-        {
-            this.titleMain.button3.Text = text;
-        }
-
-
+        public BodyMain bodyMain;
 
         /// <summary>
-        /// 停止或者叫暂停播放Flash
+        /// 初始化播放器
         /// </summary>
-        private void stopFlash()
+        private void FlashPlayerInit()
         {
+            this.bodyMain.axShockwaveFlashPlayer.Loop = false;//不循环播放
             this.bodyMain.axShockwaveFlashPlayer.Stop();
-
-            button6_changeText button6outdelegate = new button6_changeText(button6changeText);
-            this.BeginInvoke(button6outdelegate, new object[] { "" });
         }
 
         /// <summary>
@@ -1298,19 +1277,16 @@ namespace LoginFrame
             this.bodyMain.axShockwaveFlashPlayer.Loop = false;//不循环播放
             this.bodyMain.axShockwaveFlashPlayer.Movie = filpath;
             this.bodyMain.axShockwaveFlashPlayer.Play();
-            //Console.WriteLine("地址:" + filpath);
-            button6_changeText button6outdelegate = new button6_changeText(button6changeText);
-            this.BeginInvoke(button6outdelegate, new object[] { "" });
         }
 
         /// <summary>
-        /// 初始化播放器
+        /// 停止或者叫暂停播放Flash
         /// </summary>
-        private void FlashPlayerInit()
+        private void stopFlash()
         {
-            this.bodyMain.axShockwaveFlashPlayer.Loop = false;//不循环播放
             this.bodyMain.axShockwaveFlashPlayer.Stop();
         }
+
 
         /// <summary>
         /// 判断是否处于 多媒体界面 即   MainFrame中panel6 的界面为BobyMain
@@ -1342,16 +1318,11 @@ namespace LoginFrame
         /// </summary>
         private void frm2BodyMain()
         {
-
-            //panel1.Controls.Clear();
-            //TitleMain titleMain = TitleMain.createForm();
-            //titleMain.TopLevel = false;
-            //titleMain.FormBorderStyle = FormBorderStyle.None;
-            //titleMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            //panel1.Controls.Add(titleMain);
-            //titleMain.Show();
-
-            panel6.Controls.Clear();
+            this.titlename.Text = "主 界 面";
+            MainFrame mainFrame = MainFrame.createForm();
+            mainFrame.panel6.Controls.Clear();
+            mainFrame.panel6.Controls.AddRange(mainFrame.items.ToArray());
+           
             BodyMain bodyMain = BodyMain.createForm();
             bodyMain.TopLevel = false;
             bodyMain.FormBorderStyle = FormBorderStyle.None;
@@ -1360,13 +1331,7 @@ namespace LoginFrame
             bodyMain.Show();
 
             //互相访问控件
-            this.bodyMain = bodyMain;
-            //this.titleMain = titleMain;
-
-            bodyMain.mainFrame = this;
-            //titleMain.mainFrame = this;
-
-
+            mainFrame.bodyMain = bodyMain;
         }
 
         public static MainFrame createForm()
@@ -1404,16 +1369,12 @@ namespace LoginFrame
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
         {
             panel5.Hide();
+            
+            this.titlename.Text = ((ToolStripMenuItem)sender).Text;
+            MainFrame mainFrame = MainFrame.createForm();
+            mainFrame.panel6.Controls.Clear();
+            mainFrame.panel6.Controls.AddRange(mainFrame.items.ToArray());
 
-            //panel1.Controls.Clear();
-            //TitleStu stu = TitleStu.createForm();
-            //stu.TopLevel = false;
-            //stu.FormBorderStyle = FormBorderStyle.None;
-            //stu.Dock = System.Windows.Forms.DockStyle.Fill;
-            //panel1.Controls.Add(stu);
-            //stu.Show();
-
-            panel6.Controls.Clear();
             BodyStu bodyStu = BodyStu.createForm();
             bodyStu.TopLevel = false;
             bodyStu.FormBorderStyle = FormBorderStyle.None;
@@ -1426,15 +1387,11 @@ namespace LoginFrame
         {
             panel5.Hide();
 
-            //panel1.Controls.Clear();
-            //TitleTea tea = TitleTea.createForm();
-            //tea.TopLevel = false;
-            //tea.FormBorderStyle = FormBorderStyle.None;
-            //tea.Dock = System.Windows.Forms.DockStyle.Fill;
-            //panel1.Controls.Add(tea);
-            //tea.Show();
+            this.titlename.Text = ((ToolStripMenuItem)sender).Text;
+            MainFrame mainFrame = MainFrame.createForm();
+            mainFrame.panel6.Controls.Clear();
+            mainFrame.panel6.Controls.AddRange(mainFrame.items.ToArray());
 
-            panel6.Controls.Clear();
             BodyTea bodyTea = BodyTea.createForm();
             bodyTea.TopLevel = false;
             bodyTea.FormBorderStyle = FormBorderStyle.None;
@@ -1448,19 +1405,21 @@ namespace LoginFrame
 
         }
 
+        /// <summary>
+        /// 自我测试
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            
             panel5.Hide();
 
-            //panel1.Controls.Clear();
-            //TitleSelfTest titleSelf = TitleSelfTest.createForm();
-            //titleSelf.TopLevel = false;
-            //titleSelf.FormBorderStyle = FormBorderStyle.None;
-            //titleSelf.Dock = System.Windows.Forms.DockStyle.Fill;
-            //panel1.Controls.Add(titleSelf);
-            //titleSelf.Show();
+            this.titlename.Text = ((ToolStripMenuItem)sender).Text;
+            MainFrame mainFrame = MainFrame.createForm();
+            mainFrame.panel6.Controls.Clear();
+            mainFrame.panel6.Controls.AddRange(mainFrame.items.ToArray());
 
-            panel6.Controls.Clear();
             BodySelfTest bodySelf = BodySelfTest.createForm();
             bodySelf.mainFrame = this;
             bodySelf.TopLevel = false;
@@ -1478,20 +1437,11 @@ namespace LoginFrame
         {
             this.splayer = new SoundPlayer(LoginFrame.Properties.Resources.YouAreMySunshine);
             this.splayer.Play();
-
-            this.titleMain.button6.BackgroundImage = LoginFrame.Properties.Resources.volume;
-
-            //button3_changeText button3outdelegate = new button3_changeText(button3changeText);
-            //this.BeginInvoke(button3outdelegate, new object[] { "扩音中" });
-
         }
 
         public void stopPlayer()
         {
             this.splayer.Stop();
-
-            this.titleMain.button6.BackgroundImage = LoginFrame.Properties.Resources.volume_up;
-
         }
 
 
@@ -1515,23 +1465,11 @@ namespace LoginFrame
         {
             panel5.Hide();
 
-
-            //跳转代码
+            this.titlename.Text = ((ToolStripMenuItem)sender).Text;
             MainFrame mainFrame = MainFrame.createForm();
-
-
-            //加载菜单栏
-            //mainFrame.panel1.Controls.Clear();
-            //TitleMain titleMain = TitleMain.createForm();
-            //titleMain.TopLevel = false;
-            //titleMain.FormBorderStyle = FormBorderStyle.None;
-            //titleMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            //mainFrame.panel1.Controls.Add(titleMain);
-            //titleMain.Show();
-
-
-            //加载主体栏
             mainFrame.panel6.Controls.Clear();
+            mainFrame.panel6.Controls.AddRange(mainFrame.items.ToArray());
+
             BodyMain bodyMain = BodyMain.createForm();
             bodyMain.TopLevel = false;
             bodyMain.FormBorderStyle = FormBorderStyle.None;
@@ -1540,28 +1478,17 @@ namespace LoginFrame
             bodyMain.Show();
             mainFrame.Show();
 
-
-            //互相访问控件
-            mainFrame.bodyMain = bodyMain;
-            mainFrame.titleMain = titleMain;
-
-            bodyMain.mainFrame = mainFrame;
-            titleMain.mainFrame = mainFrame;
         }
 
         private void toolStripMenuItem6_Click(object sender, EventArgs e)
         {
             panel5.Hide();
 
-            //panel1.Controls.Clear();
-            //TitleSimulation titleSimulate = TitleSimulation.createForm();
-            //titleSimulate.TopLevel = false;
-            //titleSimulate.FormBorderStyle = FormBorderStyle.None;
-            //titleSimulate.Dock = System.Windows.Forms.DockStyle.Fill;
-            //panel1.Controls.Add(titleSimulate);
-            //titleSimulate.Show();
+            this.titlename.Text = ((ToolStripMenuItem)sender).Text;
+            MainFrame mainFrame = MainFrame.createForm();
+            mainFrame.panel6.Controls.Clear();
+            mainFrame.panel6.Controls.AddRange(mainFrame.items.ToArray());
 
-            panel6.Controls.Clear();
             BodySimulation bodySimulate = BodySimulation.createForm();
             bodySimulate.TopLevel = false;
             bodySimulate.FormBorderStyle = FormBorderStyle.None;
@@ -1569,26 +1496,17 @@ namespace LoginFrame
             panel6.Controls.Add(bodySimulate);
             bodySimulate.Show();
 
-
-            //titleSimulate.bodySimulation = bodySimulate;
-            //bodySimulate.titleSimulation = titleSimulate;
-
-
         }
 
         private void exMenu1_Click(object sender, EventArgs e)
         {
             panel5.Hide();
 
-            //panel1.Controls.Clear();
-            //TitletTopic titleTopic = TitletTopic.createForm();
-            //titleTopic.TopLevel = false;
-            //titleTopic.FormBorderStyle = FormBorderStyle.None;
-            //titleTopic.Dock = System.Windows.Forms.DockStyle.Fill;
-            //panel1.Controls.Add(titleTopic);
-            //titleTopic.Show();
+            this.titlename.Text = ((ToolStripMenuItem)sender).Text;
+            MainFrame mainFrame = MainFrame.createForm();
+            mainFrame.panel6.Controls.Clear();
+            mainFrame.panel6.Controls.AddRange(mainFrame.items.ToArray());
 
-            panel6.Controls.Clear();
             BodyTopic bodyTopic = BodyTopic.createForm();
             bodyTopic.TopLevel = false;
             bodyTopic.FormBorderStyle = FormBorderStyle.None;
@@ -1601,15 +1519,11 @@ namespace LoginFrame
         {
             panel5.Hide();
 
-            //panel1.Controls.Clear();
-            //TitleExam titleExam = TitleExam.createForm();
-            //titleExam.TopLevel = false;
-            //titleExam.FormBorderStyle = FormBorderStyle.None;
-            //titleExam.Dock = System.Windows.Forms.DockStyle.Fill;
-            //panel1.Controls.Add(titleExam);
-            //titleExam.Show();
+            this.titlename.Text = ((ToolStripMenuItem)sender).Text;
+            MainFrame mainFrame = MainFrame.createForm();
+            mainFrame.panel6.Controls.Clear();
+            mainFrame.panel6.Controls.AddRange(mainFrame.items.ToArray());
 
-            panel6.Controls.Clear();
             BodyExam bodyExam = BodyExam.createForm();
             bodyExam.TopLevel = false;
             bodyExam.FormBorderStyle = FormBorderStyle.None;
@@ -1627,15 +1541,11 @@ namespace LoginFrame
         {
             panel5.Hide();
 
-            //panel1.Controls.Clear();
-            //TitleTakeExam titleTakeExam = new TitleTakeExam();
-            //titleTakeExam.TopLevel = false;
-            //titleTakeExam.FormBorderStyle = FormBorderStyle.None;
-            //titleTakeExam.Dock = System.Windows.Forms.DockStyle.Fill;
-            //panel1.Controls.Add(titleTakeExam);
-            //titleTakeExam.Show();
+            this.titlename.Text = ((ToolStripMenuItem)sender).Text;
+            MainFrame mainFrame = MainFrame.createForm();
+            mainFrame.panel6.Controls.Clear();
+            mainFrame.panel6.Controls.AddRange(mainFrame.items.ToArray());
 
-            panel6.Controls.Clear();
             BodyTakeExam bodyTakeExam = new BodyTakeExam();
             bodyTakeExam.mainFrame = this;
             bodyTakeExam.TopLevel = false;
@@ -1649,15 +1559,11 @@ namespace LoginFrame
         {
             panel5.Hide();
 
-            //panel1.Controls.Clear();
-            //TitleScore titleScore = TitleScore.createForm();
-            //titleScore.TopLevel = false;
-            //titleScore.FormBorderStyle = FormBorderStyle.None;
-            //titleScore.Dock = System.Windows.Forms.DockStyle.Fill;
-            //panel1.Controls.Add(titleScore);
-            //titleScore.Show();
+            this.titlename.Text = ((ToolStripMenuItem)sender).Text;
+            MainFrame mainFrame = MainFrame.createForm();
+            mainFrame.panel6.Controls.Clear();
+            mainFrame.panel6.Controls.AddRange(mainFrame.items.ToArray());
 
-            panel6.Controls.Clear();
             BodyScore bodyScore = BodyScore.createForm();
             bodyScore.TopLevel = false;
             bodyScore.FormBorderStyle = FormBorderStyle.None;
@@ -1707,15 +1613,11 @@ namespace LoginFrame
         {
             panel5.Hide();
 
-            //panel1.Controls.Clear();
-            //TitleScore titleScore = TitleScore.createForm();
-            //titleScore.TopLevel = false;
-            //titleScore.FormBorderStyle = FormBorderStyle.None;
-            //titleScore.Dock = System.Windows.Forms.DockStyle.Fill;
-            //panel1.Controls.Add(titleScore);
-            //titleScore.Show();
+            this.titlename.Text = ((ToolStripMenuItem)sender).Text;
+            MainFrame mainFrame = MainFrame.createForm();
+            mainFrame.panel6.Controls.Clear();
+            mainFrame.panel6.Controls.AddRange(mainFrame.items.ToArray());
 
-            panel6.Controls.Clear();
             BodyScore bodyScore = BodyScore.createForm();
             bodyScore.TopLevel = false;
             bodyScore.FormBorderStyle = FormBorderStyle.None;
@@ -1781,38 +1683,13 @@ namespace LoginFrame
             panel5.Hide();
 
 
-            //跳转代码
-            MainFrame mainFrame = MainFrame.createForm();
+            frm2BodyMain();
 
+        }
 
-            //加载菜单栏
-            //mainFrame.panel1.Controls.Clear();
-            //TitleMain titleMain = TitleMain.createForm();
-            //titleMain.TopLevel = false;
-            //titleMain.FormBorderStyle = FormBorderStyle.None;
-            //titleMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            //mainFrame.panel1.Controls.Add(titleMain);
-            //titleMain.Show();
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
 
-
-            //加载主体栏
-            mainFrame.panel6.Controls.Clear();
-            mainFrame.panel6.Controls.AddRange(mainFrame.items.ToArray());
-            BodyMain bodyMain = BodyMain.createForm();
-            bodyMain.TopLevel = false;
-            bodyMain.FormBorderStyle = FormBorderStyle.None;
-            bodyMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            mainFrame.panel6.Controls.Add(bodyMain);
-            bodyMain.Show();
-            mainFrame.Show();
-
-
-            //互相访问控件
-            mainFrame.bodyMain = bodyMain;
-            //mainFrame.titleMain = titleMain;
-
-            bodyMain.mainFrame = mainFrame;
-            //titleMain.mainFrame = mainFrame;
         }
     }
 }
