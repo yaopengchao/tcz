@@ -45,8 +45,9 @@ namespace LoginFrame
                 if (LoginRoler.language == Constant.zhCN)
                 {
                     ToolStripMenuItem subItem = AddContextMenu(row["NAME"].ToString(), menuStrip1.Items, null);
+                    subItem.Tag = row["FILENAME"].ToString();
                     //subItem.Image = LoginFrame.Properties.Resources.Error;
-                    //subItem.Click += new EventHandler(subItemClick_playLesson);//绑定方法
+                    subItem.Click += new EventHandler(subItemClick_playLesson);//绑定方法
                     subItem.ToolTipText = "单击播放课件,双击删除收藏";
                     subItem.BackgroundImage = global::LoginFrame.Properties.Resources.收藏条目;
                     toolStripMenuItem1.DropDownItems.Add(subItem);
@@ -54,8 +55,9 @@ namespace LoginFrame
                 else if (LoginRoler.language == Constant.En)
                 {
                     ToolStripMenuItem subItem = AddContextMenu(row["ENAME"].ToString(), menuStrip1.Items, null);
+                    subItem.Tag = row["FILENAME"].ToString();
                     //subItem.Image = LoginFrame.Properties.Resources.Error;
-                    //subItem.Click += new EventHandler(subItemClick_playLesson);//绑定方法
+                    subItem.Click += new EventHandler(subItemClick_playLesson);//绑定方法
                     //subItem.DoubleClick += new EventHandler(subItemClick_deleteLesson);//绑定方法
                     subItem.ToolTipText = "Click play courseware, double click Delete";
                     subItem.BackgroundImage = global::LoginFrame.Properties.Resources.收藏条目;
@@ -64,6 +66,29 @@ namespace LoginFrame
             }
         }
 
+        private void subItemClick_playLesson(object sender, EventArgs e)
+        {
+            ToolStripMenuItem subItem = (ToolStripMenuItem)sender;
+            string swfName = subItem.Tag.ToString();
+            string filpath = Application.StartupPath + @"/../../lessons/" + swfName + ".swf";
+            //检测文件是否存在
+            if (!File.Exists(filpath))
+            {
+                MessageBox.Show("课件对应的Flash文件不存在!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
+
+            if (isBroadcasting)
+            {
+                Broadcast("PlayFlash^" + swfName + "^##");
+            }
+            playFlash(filpath);
+        }
+
+        private void subItemClick_deleteLesson(object sender, EventArgs e)
+        {
+            MessageBox.Show("删除");
+        }
 
         /// <summary>
         /// 添加子菜单
@@ -103,9 +128,6 @@ namespace LoginFrame
             
         }
 
-        private bool isOpenLesson = false;//是否有课件lesson页面已经打开
-        private bool isOpenClass = false;//是否有课件章节页面已经打开
-
         ImplCourses Bll = new ImplCourses();
         /// <summary>
         /// 初始化左侧课件列表
@@ -117,8 +139,8 @@ namespace LoginFrame
             {
                 //从数据库获取课件分类  然后遍历产生 按钮 动态添加到动态leftPanel中
                 Button btnLessonType = new Button();
-                btnLessonType.Width = 188;
-                btnLessonType.Height = 22;  
+                btnLessonType.Width = 190;
+                btnLessonType.Height = 25;  
                 btnLessonType.BackgroundImage = global::LoginFrame.Properties.Resources.课件分类;
                 btnLessonType.FlatStyle = FlatStyle.Popup;
 
@@ -135,8 +157,6 @@ namespace LoginFrame
                 //btnLessonType.Font
                 //绑定按钮点击事件
                 btnLessonType.Click += new EventHandler(btnLessonType_Click);
-
-
                 
                 this.leftPanel.Controls.Add(btnLessonType);
                 Console.WriteLine("添加类型");
@@ -162,12 +182,14 @@ namespace LoginFrame
                 {
                     //创建一个流式的panel然后将按钮加到该panel中
                     FlowLayoutPanel flowLayoutPanel = new FlowLayoutPanel();
+                    flowLayoutPanel.Width = 175;
+                    //flowLayoutPanel.AutoSize = true;
                     flowLayoutPanel.AutoScroll = true;
                     DataTable classes = Bll.getCourses(type_id).Tables[0];
                     for (int j = 0; j < classes.Rows.Count; j++)
                     {
                         Button btnClassType = new Button();
-                        btnClassType.Width = 160;
+                        btnClassType.Width = 175;
                         btnClassType.Height = 20;
                         btnClassType.BackgroundImage = global::LoginFrame.Properties.Resources.章节未选中;
                         btnClassType.FlatStyle = FlatStyle.Popup;
@@ -221,13 +243,12 @@ namespace LoginFrame
                     Console.WriteLine("章节");
 
                     btn.Tag= "OPEN#" + type_id;
-                    btn.BackgroundImage = global::LoginFrame.Properties.Resources.章节选中;
                 }
                 else
                 {
                     this.leftPanel.Controls.RemoveAt(btn_index+1);
                     btn.Tag = "NOTOPEN#" + type_id;
-                    btn.BackgroundImage = global::LoginFrame.Properties.Resources.章节未选中;
+                    //btn.BackgroundImage = global::LoginFrame.Properties.Resources.章节未选中;
                 }
 
             }
@@ -256,11 +277,14 @@ namespace LoginFrame
                 if (state == "NOTOPEN")
                 {
                     FlowLayoutPanel flowLayoutPanel = new FlowLayoutPanel();
+                    //flowLayoutPanel.AutoSize = true;
+                    flowLayoutPanel.Width = 120;
                     flowLayoutPanel.AutoScroll = true;
 
                     ListView listView = new ListView();
+                    listView.Width = 120;
                     listView.View = View.List;
-
+                    listView.DoubleClick += new System.EventHandler(listView_MouseDoubleClick);
                     DataTable lessons = Bll.getLessons(type_id).Tables[0];
                     for (int j = 0; j < lessons.Rows.Count; j++)
                     {
@@ -313,12 +337,14 @@ namespace LoginFrame
                     Console.WriteLine("课件");
 
                     btn.Tag = "OPEN#" + type_id;
+                    btn.BackgroundImage = global::LoginFrame.Properties.Resources.章节选中;
+
                 }
                 else
                 {
                     parentPanel.Controls.RemoveAt(btn_index + 1);
                     btn.Tag = "NOTOPEN#" + type_id;
-                    //btn.BackgroundImage = global::LoginFrame.Properties.Resources.章节未选中;
+                    btn.BackgroundImage = global::LoginFrame.Properties.Resources.章节未选中;
                 }
             }
         }
@@ -352,18 +378,22 @@ namespace LoginFrame
 
 
         //listview双击事件
-        public void BodyMain_listView_MouseDoubleClick(object sender, EventArgs e)
+        public void listView_MouseDoubleClick(object sender, EventArgs e)
         {
             //重置按钮状态或者说flash播放状态    每次双击时候都需要 flash播放器处于停止未播放的状态
             initFlashState();
-            mainFrame.titleMain.button6_Click(null,null);
+
+            //将当前点击的 Listview对象和索引保存
+            ListView listView = (ListView)sender;
+            chooseListView= listView;
+
+            btn_play_Click(null,null);
         }
 
         //flash播放器处于停止未播放的状态
         public void initFlashState()
         {
             this.axShockwaveFlashPlayer.Stop();
-            mainFrame.titleMain.button6.Text = "播放";
         }
 
         private static BodyMain instance;
@@ -386,7 +416,7 @@ namespace LoginFrame
                 return;
              }
             //获取listview当前位置
-            int index = chooseIndex;
+            int index = chooseListView.SelectedItems[0].Index;
             //选择上一个item位置   listview越往上越小  
             int preIndex = index - 1;
             //判断 该preIndex是否已经小于0了  小于0了则已经到列表顶部了无法再上一个课件了
@@ -468,13 +498,10 @@ namespace LoginFrame
             client.Send(buf, buf.Length, multicast);
         }
 
-
         public bool isBroadcasting = false;//是否广播中
         public bool isAudioPlaying = false;//是否扩音中
 
-
         private ListView chooseListView;//当前选中的listview
-        private int chooseIndex;//当前选中的序号
 
         private void btn_play_Click(object sender, EventArgs e)
         {
@@ -507,8 +534,20 @@ namespace LoginFrame
                 {
                     Broadcast("PlayFlash^" + swfName + "^##");
                 }
-                this.mainFrame.playFlash(filpath);
+                playFlash(filpath);
             }
+        }
+
+
+        /// <summary>
+        /// 播放指定路径Flash
+        /// </summary>
+        /// <param name="filpath"></param>
+        public void playFlash(string filpath)
+        {
+            this.axShockwaveFlashPlayer.Loop = false;//不循环播放
+            this.axShockwaveFlashPlayer.Movie = filpath;
+            this.axShockwaveFlashPlayer.Play();
         }
 
         /// <summary>
@@ -609,7 +648,7 @@ namespace LoginFrame
                 return;
             }
             //获取listview当前位置
-            int index = chooseIndex;
+            int index = chooseListView.SelectedItems[0].Index;
             //选择上一个item位置   listview越往上越小  
             int sufIndex = index+1;
             //判断 该preIndex是否已经小于0了  小于0了则已经到列表顶部了无法再上一个课件了
@@ -627,6 +666,36 @@ namespace LoginFrame
             {
                 Broadcast("PlayFlash^" + chooseListView.SelectedItems[0].SubItems[1].Text + "^##");
             }
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            //收藏当前课件到数据库
+            //获取当前课件的文件名  文件名
+            if (chooseListView.Items.Count <= 0)
+            {
+               MessageBox.Show("请先选择课件再点击收藏!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
+            else
+            {
+                bool flag = true;
+               if (chooseListView.Items.Count > 0) { 
+            //循环选中列表
+                    foreach (ListViewItem lt in chooseListView.Items)
+                    {
+                        string filename = chooseListView.SelectedItems[0].SubItems[1].Text;
+                       bool isAdd = IUser.addFavorite(LoginRoler.login_id, filename);
+                       flag = flag && isAdd;
+                    }
+               if (!flag)
+               {
+                       MessageBox.Show("有课件收藏失败!请核对");
+                   }
+                   //重新刷新收藏夹数据
+                  refreshFavorites();
+              }
+             }
         }
     }
 }

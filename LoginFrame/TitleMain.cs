@@ -444,39 +444,7 @@ namespace LoginFrame
             
         }
 
-        /// <summary>
-        /// 下一个
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public void button10_Click(object sender, EventArgs e)
-        {
-            //列表没有被选择过则无法上一个 下一个
-            //if (mainFrame.bodyMain.listView1.SelectedItems.Count == 0)
-            //{
-            //    MessageBox.Show("当前没有选择课件，本操作无法执行!!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            //    return;
-            //}
-            //获取listview当前位置
-            //int index = mainFrame.bodyMain.listView1.SelectedItems[0].Index;
-            //选择上一个item位置   listview越往上越小  
-            //int sufIndex = index+1;
-            //判断 该preIndex是否已经小于0了  小于0了则已经到列表顶部了无法再上一个课件了
-            //if (sufIndex > mainFrame.bodyMain.listView1.Items.Count-1)
-            //{
-            //    MessageBox.Show("已经到达列表开头，本操作无法执行!!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            //    return;
-            //}
-            //mainFrame.bodyMain.listView1.Items[sufIndex].Selected = true;
-            //模拟双击事件执行播放
-            mainFrame.bodyMain.BodyMain_listView_MouseDoubleClick(null, null);
-
-            //播放选中的文件
-            if (isBroadcasting)
-            {
-                //Broadcast("PlayFlash^" + mainFrame.bodyMain.listView1.SelectedItems[0].Text + "^##");
-            }
-        }
+        
 
         //对话按钮
         private void button9_Click(object sender, EventArgs e)

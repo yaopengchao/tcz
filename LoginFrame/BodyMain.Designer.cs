@@ -77,8 +77,8 @@
             // 
             // leftPanel
             // 
-            resources.ApplyResources(this.leftPanel, "leftPanel");
             this.leftPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            resources.ApplyResources(this.leftPanel, "leftPanel");
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.leftPanel_Paint);
             // 
@@ -93,7 +93,6 @@
             // 
             resources.ApplyResources(this.axShockwaveFlashPlayer, "axShockwaveFlashPlayer");
             this.axShockwaveFlashPlayer.Name = "axShockwaveFlashPlayer";
-            this.axShockwaveFlashPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axShockwaveFlashPlayer.OcxState")));
             // 
             // panel3
             // 
@@ -158,6 +157,7 @@
             this.toolStripMenuItem3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             resources.ApplyResources(this.toolStripMenuItem3, "toolStripMenuItem3");
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // toolStripSeparator1
             // 
