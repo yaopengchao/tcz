@@ -77,7 +77,7 @@
             // 
             // leftPanel
             // 
-            this.leftPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.leftPanel.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.leftPanel, "leftPanel");
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.leftPanel_Paint);
@@ -93,6 +93,7 @@
             // 
             resources.ApplyResources(this.axShockwaveFlashPlayer, "axShockwaveFlashPlayer");
             this.axShockwaveFlashPlayer.Name = "axShockwaveFlashPlayer";
+            this.axShockwaveFlashPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axShockwaveFlashPlayer.OcxState")));
             // 
             // panel3
             // 
@@ -217,6 +218,7 @@
             this.btn_stop.BackgroundImage = global::LoginFrame.Properties.Resources.暂停;
             resources.ApplyResources(this.btn_stop, "btn_stop");
             this.btn_stop.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_stop.FlatAppearance.BorderSize = 0;
             this.btn_stop.Name = "btn_stop";
             this.btn_stop.UseVisualStyleBackColor = true;
             this.btn_stop.Click += new System.EventHandler(this.btn_stop_Click);
@@ -226,6 +228,7 @@
             this.btn_music.BackgroundImage = global::LoginFrame.Properties.Resources.扩音;
             resources.ApplyResources(this.btn_music, "btn_music");
             this.btn_music.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_music.FlatAppearance.BorderSize = 0;
             this.btn_music.Name = "btn_music";
             this.btn_music.UseVisualStyleBackColor = true;
             this.btn_music.Click += new System.EventHandler(this.btn_music_Click);
@@ -235,6 +238,7 @@
             this.btn_pre.BackgroundImage = global::LoginFrame.Properties.Resources.上一个;
             resources.ApplyResources(this.btn_pre, "btn_pre");
             this.btn_pre.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_pre.FlatAppearance.BorderSize = 0;
             this.btn_pre.Name = "btn_pre";
             this.btn_pre.UseVisualStyleBackColor = true;
             this.btn_pre.Click += new System.EventHandler(this.btn_pre_Click);
@@ -244,6 +248,7 @@
             this.btn_next.BackgroundImage = global::LoginFrame.Properties.Resources.下一个;
             resources.ApplyResources(this.btn_next, "btn_next");
             this.btn_next.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_next.FlatAppearance.BorderSize = 0;
             this.btn_next.Name = "btn_next";
             this.btn_next.UseVisualStyleBackColor = true;
             this.btn_next.Click += new System.EventHandler(this.btn_next_Click);
@@ -254,6 +259,7 @@
             this.btn_voice.BackgroundImage = global::LoginFrame.Properties.Resources.语音;
             resources.ApplyResources(this.btn_voice, "btn_voice");
             this.btn_voice.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_voice.FlatAppearance.BorderSize = 0;
             this.btn_voice.Name = "btn_voice";
             this.btn_voice.UseVisualStyleBackColor = false;
             this.btn_voice.Click += new System.EventHandler(this.btn_voice_Click);

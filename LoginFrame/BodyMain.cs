@@ -17,11 +17,12 @@ namespace LoginFrame
     {
         public MainFrame mainFrame;
 
-        
+        public Button chooseButton;
 
         public BodyMain()
         {
             InitializeComponent();
+            leftPanel.BackColor = Color.FromArgb(255,208 ,232,253);
         }
 
 
@@ -142,8 +143,11 @@ namespace LoginFrame
                 btnLessonType.Width = 190;
                 btnLessonType.Height = 25;  
                 btnLessonType.BackgroundImage = global::LoginFrame.Properties.Resources.课件分类;
-                btnLessonType.FlatStyle = FlatStyle.Popup;
-
+                btnLessonType.FlatStyle = FlatStyle.Flat;
+                btnLessonType.FlatAppearance.BorderSize = 0;
+                //btnLessonType.Font = new Font("微软雅黑", 9);
+                //btnLessonType.ForeColor = Color.White;
+                btnLessonType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
                 if (language == Constant.zhCN)
                 {
                     btnLessonType.Text = dt.Rows[i]["TCZ_NAME"].ToString();
@@ -153,7 +157,7 @@ namespace LoginFrame
                     btnLessonType.Text = dt.Rows[i]["TCZ_ENAME"].ToString();
                 }
                 btnLessonType.Tag = "NOTOPEN#"+dt.Rows[i]["TCZ_ID"].ToString();
-                btnLessonType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                
                 //btnLessonType.Font
                 //绑定按钮点击事件
                 btnLessonType.Click += new EventHandler(btnLessonType_Click);
@@ -193,8 +197,10 @@ namespace LoginFrame
                         btnClassType.Width = 175;
                         btnClassType.Height = 20;
                         btnClassType.BackgroundImage = global::LoginFrame.Properties.Resources.章节未选中;
-                        btnClassType.FlatStyle = FlatStyle.Popup;
-
+                        btnClassType.FlatStyle = FlatStyle.Flat;
+                        btnClassType.FlatAppearance.BorderSize = 0;
+                        //btnClassType.Font = new Font("微软雅黑", 9);
+                        //btnClassType.ForeColor = Color.White;
                         if (LoginRoler.language == Constant.zhCN)
                         {
                             btnClassType.Text = classes.Rows[j]["CLASS_NAME"].ToString();
@@ -214,7 +220,7 @@ namespace LoginFrame
                         flowLayoutPanel.Controls.Add(btnClassType);
                     }
 
-                    Console.WriteLine("第一层高度为：" + height);
+                    //Console.WriteLine("第一层高度为：" + height);
                     flowLayoutPanel.Height = height;
 
 
@@ -247,14 +253,12 @@ namespace LoginFrame
                     }
 
                     Console.WriteLine("章节");
-
                     btn.Tag= "OPEN#" + type_id;
                 }
                 else
                 {
                     this.leftPanel.Controls.RemoveAt(btn_index+1);
                     btn.Tag = "NOTOPEN#" + type_id;
-                    //btn.BackgroundImage = global::LoginFrame.Properties.Resources.章节未选中;
                 }
 
             }
@@ -308,9 +312,32 @@ namespace LoginFrame
                         }
 
                         listView.Items.Add(lvItem);
-                    }
 
-                    flowLayoutPanel.Controls.Add(listView);
+
+                        Button btnLesson = new Button();
+                        btnLesson.Width = 160;
+                        btnLesson.Height = 20;
+                        btnLesson.FlatStyle = FlatStyle.Flat;
+                        btnLesson.FlatAppearance.BorderSize = 0;
+                        //btnLesson.Font = new Font("微软雅黑", 9);
+                        //btnLesson.ForeColor = Color.White;
+                        btnLesson.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                        if (LoginRoler.language == Constant.zhCN)
+                        {
+                            btnLesson.Text = lessons.Rows[j]["LESSON_NAME"].ToString();
+                        }
+                        else if (LoginRoler.language == Constant.En)
+                        {
+                            btnLesson.Text = lessons.Rows[j]["LESSON_ENAME"].ToString();
+                        }
+                        btnLesson.Tag = lessons.Rows[j]["LESSON_FILENAME"].ToString()+"#";
+
+                        btnLesson.Click += new System.EventHandler(btnLesson_Click);
+                        btnLesson.DoubleClick += new System.EventHandler(btnLesson_DBClick);
+                        flowLayoutPanel.Controls.Add(btnLesson);
+                    }
+                    
+                    //flowLayoutPanel.Controls.Add(listView);
                     flowLayoutPanel.Height = flowLayoutPanel.Height + 10;
 
                     {//刷新控件  将下拉的panel加载到leftpanel
@@ -346,7 +373,7 @@ namespace LoginFrame
 
                     btn.Tag = "OPEN#" + type_id;
                     btn.BackgroundImage = global::LoginFrame.Properties.Resources.章节选中;
-
+                    btn.ForeColor= Color.FromArgb(255, 78, 148, 226);
                 }
                 else
                 {
@@ -356,37 +383,41 @@ namespace LoginFrame
                     parentPanel.Controls.RemoveAt(btn_index + 1);
                     btn.Tag = "NOTOPEN#" + type_id;
                     btn.BackgroundImage = global::LoginFrame.Properties.Resources.章节未选中;
+                    btn.ForeColor = Color.White;
                 }
             }
         }
+
+        private void btnLesson_DBClick(object sender, EventArgs e)
+        {
+            btnLesson_Click(null, null);
+            btn_play_Click(null,null);
+        }
+
 
         /// <summary>
-        /// 在控件的某个索引后面加新的控件
+        /// 点击课件 进行播放
         /// </summary>
-        /// <param name="control"></param>
-        /// <param name="btn_index"></param>
-        private void reloadUi(Control fatherCtrl, int btn_index, Control childCtrl)
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnLesson_Click(object sender, EventArgs e)
         {
-            
-            //MessageBox.Show("类型"+ fatherCtrl.GetType()+"/"+ typeof(FlowLayoutPanel));
-            if (fatherCtrl.GetType().Equals(typeof(FlowLayoutPanel)))
+
+            Button btn = (Button)sender;
+
+            if (btn != null)
             {
-                FlowLayoutPanel tempPanel = new FlowLayoutPanel();
-                FlowLayoutPanel flowLayoutPanel = fatherCtrl as FlowLayoutPanel;
-                foreach (Control item in flowLayoutPanel.Controls)
+                //选中的按钮不为空 那么要先清除原先按钮的状态
+                if (chooseButton != null)
                 {
-
+                    chooseButton.BackColor = Color.Transparent;//变为透明色
                 }
-
-                    MessageBox.Show("test1");
-
-            }
-            else
-            {
-               // MessageBox.Show("test2");
+                chooseButton = btn;
+                btn.BackColor = Color.FromArgb(255, 78, 148, 226);
+                //将此次的按钮保存在chooseButton中
+                //且将该按钮背景色改为 蓝色
             }
         }
-
 
         //listview双击事件
         public void listView_MouseDoubleClick(object sender, EventArgs e)
@@ -396,7 +427,7 @@ namespace LoginFrame
 
             //将当前点击的 Listview对象和索引保存
             ListView listView = (ListView)sender;
-            chooseListView= listView;
+            //chooseListView= listView;
 
             btn_play_Click(null,null);
         }
@@ -421,13 +452,13 @@ namespace LoginFrame
         private void btn_pre_Click(object sender, EventArgs e)
         {
             //列表没有被选择过则无法上一个 下一个
-            if (chooseListView==null)
+            if (chooseButton==null)
             {
                 MessageBox.Show("当前没有选择课件，本操作无法执行!!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 return;
              }
             //获取listview当前位置
-            int index = chooseListView.SelectedItems[0].Index;
+            int index = chooseButton.Parent.Controls.IndexOf(chooseButton);
             //选择上一个item位置   listview越往上越小  
             int preIndex = index - 1;
             //判断 该preIndex是否已经小于0了  小于0了则已经到列表顶部了无法再上一个课件了
@@ -436,14 +467,16 @@ namespace LoginFrame
                 MessageBox.Show("已经到达本章列表开头，本操作无法执行!!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 return;
             }
-            chooseListView.Items[preIndex].Selected = true;
+            chooseButton.BackColor = Color.Transparent;
+            chooseButton.Parent.Controls[preIndex].BackColor= Color.FromArgb(255, 78, 148, 226);
+            chooseButton = (Button)chooseButton.Parent.Controls[preIndex];
             //模拟双击事件执行播放
-            //mainFrame.bodyMain.BodyMain_listView_MouseDoubleClick(null,null);
+            btnLesson_DBClick(null,null);
 
             //播放选中的文件
             if (isBroadcasting)
             {
-                Broadcast("PlayFlash^" + chooseListView.SelectedItems[0].SubItems[1].Text + "^##");
+                Broadcast("PlayFlash^" + chooseButton.Tag.ToString().Split('#')[0].ToString() + "^##");
             }
         }
 
@@ -512,7 +545,6 @@ namespace LoginFrame
         public bool isBroadcasting = false;//是否广播中
         public bool isAudioPlaying = false;//是否扩音中
 
-        private ListView chooseListView;//当前选中的listview
 
         private void btn_play_Click(object sender, EventArgs e)
         {
@@ -527,12 +559,12 @@ namespace LoginFrame
             else
             {
                 //判断是否已经单机选择或者双击选择了swf课件
-                if (chooseListView==null)
+                if (chooseButton==null)
                 {
                     MessageBox.Show("请先选择课件再点击播放!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     return;
                 }
-                string swfName = chooseListView.SelectedItems[0].SubItems[1].Text;
+                string swfName = chooseButton.Tag.ToString().Split('#')[0].ToString(); ;
                 string filpath = Application.StartupPath + @"/../../lessons/" + swfName + ".swf";
                 //检测文件是否存在
                 if (!File.Exists(filpath))
@@ -592,12 +624,9 @@ namespace LoginFrame
             }
         }
 
-       
-
-
         private void btn_music_Click(object sender, EventArgs e)
         {
-            if (chooseListView==null)
+            if (chooseButton == null)
             {
                 MessageBox.Show("请先选择课件播放后再扩音操作!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 return;
@@ -605,7 +634,7 @@ namespace LoginFrame
 
 
             //播放与 Falsh配对的音频文件名 不包括拓展名
-            string audioFilename = chooseListView.SelectedItems[0].SubItems[1].Text;
+            string audioFilename = chooseButton.Tag.ToString().Split('#')[1].ToString();
 
 
             //获取列表选中项，组装音频文件路径传给播放器
@@ -653,29 +682,31 @@ namespace LoginFrame
         private void btn_next_Click(object sender, EventArgs e)
         {
             //列表没有被选择过则无法上一个 下一个
-            if (chooseListView==null)
+            if (chooseButton == null)
             {
                 MessageBox.Show("当前没有选择课件，本操作无法执行!!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 return;
             }
             //获取listview当前位置
-            int index = chooseListView.SelectedItems[0].Index;
+            int index = chooseButton.Parent.Controls.IndexOf(chooseButton);
             //选择上一个item位置   listview越往上越小  
             int sufIndex = index+1;
             //判断 该preIndex是否已经小于0了  小于0了则已经到列表顶部了无法再上一个课件了
-            if (sufIndex > chooseListView.Items.Count-1)
+            if (sufIndex > chooseButton.Parent.Controls.Count-1)
             {
                MessageBox.Show("已经到达本章列表开头，本操作无法执行!!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 return;
             }
-            chooseListView.Items[sufIndex].Selected = true;
+            chooseButton.BackColor = Color.Transparent;
+            chooseButton.Parent.Controls[sufIndex].BackColor = Color.FromArgb(255, 78, 148, 226);
+            chooseButton = (Button)chooseButton.Parent.Controls[sufIndex];
             //模拟双击事件执行播放
-            //mainFrame.bodyMain.BodyMain_listView_MouseDoubleClick(null, null);
+            btnLesson_DBClick(null, null);
 
             //播放选中的文件
             if (isBroadcasting)
             {
-                Broadcast("PlayFlash^" + chooseListView.SelectedItems[0].SubItems[1].Text + "^##");
+                Broadcast("PlayFlash^" + chooseButton.Tag.ToString().Split('#')[0].ToString() + "^##");
             }
         }
 
@@ -683,7 +714,7 @@ namespace LoginFrame
         {
             //收藏当前课件到数据库
             //获取当前课件的文件名  文件名
-            if (chooseListView.Items.Count <= 0)
+            if (chooseButton!=null)
             {
                MessageBox.Show("请先选择课件再点击收藏!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 return;
@@ -691,14 +722,11 @@ namespace LoginFrame
             else
             {
                 bool flag = true;
-               if (chooseListView.Items.Count > 0) { 
-            //循环选中列表
-                    foreach (ListViewItem lt in chooseListView.Items)
-                    {
-                        string filename = chooseListView.SelectedItems[0].SubItems[1].Text;
-                       bool isAdd = IUser.addFavorite(LoginRoler.login_id, filename);
+            
+                        string filename = chooseButton.Tag.ToString().Split('#')[0].ToString();
+                        bool isAdd = IUser.addFavorite(LoginRoler.login_id, filename);
                        flag = flag && isAdd;
-                    }
+                  
                if (!flag)
                {
                        MessageBox.Show("有课件收藏失败!请核对");
