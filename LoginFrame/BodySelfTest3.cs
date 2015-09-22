@@ -131,6 +131,7 @@ namespace LoginFrame
                 linLab.Name = "labPre" + i;
                 linLab.LinkBehavior = LinkBehavior.NeverUnderline;
                 linLab.Click += new EventHandler(preClick);
+                linLab.LinkColor = System.Drawing.Color.Black;
                 this.Controls.Add(linLab);
 
                 Label lab = new Label();
@@ -255,13 +256,22 @@ namespace LoginFrame
             //selfTest2.self.mainFrame.panel1.Controls.Add(titleMain);
             //titleMain.Show();
 
+            ExamResult examResult = new ExamResult();
+            examResult.ExamResultId = examResultId;
+            examResult.ExaminationId = examId;
+            examResult.ExaminationDetailId = examDetailId;
+            examResult.TopicId = topicId;
+            examResult.Answer = labResult.Text;
+            examResult.UserId = LoginRoler.userId;
+            examResultService.addOrUpdateExamResult(examResult);
+
             //加载主体栏
-            selfTest2.self.mainFrame.panel6.Controls.Clear();
+            selfTest2.mainFrame.panel6.Controls.Clear();
             BodyMain bodyMain = BodyMain.createForm();
             bodyMain.TopLevel = false;
             bodyMain.FormBorderStyle = FormBorderStyle.None;
             bodyMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            selfTest2.self.mainFrame.panel6.Controls.Add(bodyMain);
+            selfTest2.mainFrame.panel6.Controls.Add(bodyMain);
             bodyMain.Show();
         }
     }

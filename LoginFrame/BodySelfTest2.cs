@@ -13,6 +13,11 @@ namespace LoginFrame
 {
     public partial class BodySelfTest2 : Form
     {
+
+        public MainFrame mainFrame;
+
+        public string topicType;
+
         public BodySelfTest2()
         {
             InitializeComponent();
@@ -29,7 +34,7 @@ namespace LoginFrame
             if (topicService == null)
             {
                 topicService = TopicService.getInstance();
-            }
+            }          
         }
 
         private int getCount(string category, DataTable dt)
@@ -119,32 +124,26 @@ namespace LoginFrame
             ApplyResource();
 
 
-            string type = Convert.ToString(self.topicCategory.SelectedValue);
-            strWheres.Clear();
-            strWheres.Add("a.topic_type", " = '" + type + "' ");
-            DataSet ds2 = topicService.listTopics(strWheres, -1, 0);
-            DataTable dt2 = ds2.Tables[0];
-
-            totalXz = getCount("1", dt2);                                        //心脏听诊
-            totalFeib = getCount("2", dt2);                                      //肺部听诊
-            totalFub = getCount("3", dt2);                                       //腹部听触诊
-
-            labTzCount.Text = "（题库共" + totalXz + "道题）";
-            labFeibCount.Text = "（题库共" + totalFeib + "道题）";
-            labFubCount.Text = "（题库共" + totalFub + "道题）";
+            //string type = Convert.ToString(self.topicCategory.SelectedValue);
+            
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            if (xz == 0 && feib == 0 && fub == 0)
+            if (topicType == null)
+            {
+                MessageBox.Show("请选择测试类别!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            else if (xz == 0 && feib == 0 && fub == 0)
             {
                 MessageBox.Show("请选择题目!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             else
             {
                 Examination exam = new Examination();
-                exam.ExamCat = Convert.ToString(self.topicCategory.SelectedValue);
-                exam.ExamName = self.txtExamName.Text;
+                exam.ExamCat = topicType;
+                DateTime dt = DateTime.Now;
+                exam.ExamName = dt.ToString("yyyy-MM-dd HH:mm") + LoginRoler.username + "的自我测试";
                 exam.ExType = "2";
                 string topicIds = getRandomTopicIds(xz, xzList);
                 topicIds += getRandomTopicIds(feib, feibList);
@@ -152,14 +151,15 @@ namespace LoginFrame
                 int result = examService.addExam(exam, topicIds);
                 if (result > 0)
                 {
-                    self.mainFrame.panel6.Controls.Clear();
+                    mainFrame.panel6.Controls.Clear();
+                    mainFrame.panel6.Controls.AddRange(mainFrame.items.ToArray());
                     BodySelfTest3 self3 = new BodySelfTest3();
                     self3.TopLevel = false;
                     self3.selfTest2 = this;
                     self3.examId = exam.ExaminationId;
                     self3.FormBorderStyle = FormBorderStyle.None;
                     self3.Dock = System.Windows.Forms.DockStyle.Fill;
-                    self.mainFrame.panel6.Controls.Add(self3);
+                    mainFrame.panel6.Controls.Add(self3);
                     self3.Show();
                 }
                 else
@@ -282,6 +282,34 @@ namespace LoginFrame
         private void linkLabel13_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             fub = totalFub;
+        }
+
+        private void getTopicNum(string type)
+        {
+            strWheres.Clear();
+            strWheres.Add("a.topic_type", " = '" + type + "' ");
+            DataSet ds2 = topicService.listTopics(strWheres, -1, 0);
+            DataTable dt2 = ds2.Tables[0];
+
+            totalXz = getCount("1", dt2);                                        //心脏听诊
+            totalFeib = getCount("2", dt2);                                      //肺部听诊
+            totalFub = getCount("3", dt2);                                       //腹部听触诊
+
+            labTzCount.Text = "（题库共" + totalXz + "道题）";
+            labFeibCount.Text = "（题库共" + totalFeib + "道题）";
+            labFubCount.Text = "（题库共" + totalFub + "道题）";
+        }
+
+        private void linkLabel19_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            topicType = "1";
+            getTopicNum(topicType);
+        }
+
+        private void linkLabel20_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            topicType = "2";
+            getTopicNum(topicType);
         }
     }
 }

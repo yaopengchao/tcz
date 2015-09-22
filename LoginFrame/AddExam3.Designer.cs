@@ -103,6 +103,7 @@
             // linkLabel1
             // 
             resources.ApplyResources(this.linkLabel1, "linkLabel1");
+            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.TabStop = true;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
@@ -110,6 +111,7 @@
             // linkLabel2
             // 
             resources.ApplyResources(this.linkLabel2, "linkLabel2");
+            this.linkLabel2.LinkColor = System.Drawing.Color.Black;
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.TabStop = true;
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
@@ -117,6 +119,7 @@
             // linkLabel3
             // 
             resources.ApplyResources(this.linkLabel3, "linkLabel3");
+            this.linkLabel3.LinkColor = System.Drawing.Color.Black;
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.TabStop = true;
             this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
@@ -124,6 +127,7 @@
             // linkLabel4
             // 
             resources.ApplyResources(this.linkLabel4, "linkLabel4");
+            this.linkLabel4.LinkColor = System.Drawing.Color.Black;
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.TabStop = true;
             this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
@@ -131,6 +135,7 @@
             // linkLabel5
             // 
             resources.ApplyResources(this.linkLabel5, "linkLabel5");
+            this.linkLabel5.LinkColor = System.Drawing.Color.Black;
             this.linkLabel5.Name = "linkLabel5";
             this.linkLabel5.TabStop = true;
             this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
@@ -138,6 +143,7 @@
             // linkLabel6
             // 
             resources.ApplyResources(this.linkLabel6, "linkLabel6");
+            this.linkLabel6.LinkColor = System.Drawing.Color.Black;
             this.linkLabel6.Name = "linkLabel6";
             this.linkLabel6.TabStop = true;
             this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
@@ -145,6 +151,7 @@
             // linkLabel7
             // 
             resources.ApplyResources(this.linkLabel7, "linkLabel7");
+            this.linkLabel7.LinkColor = System.Drawing.Color.Black;
             this.linkLabel7.Name = "linkLabel7";
             this.linkLabel7.TabStop = true;
             this.linkLabel7.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel7_LinkClicked);
@@ -152,6 +159,7 @@
             // linkLabel8
             // 
             resources.ApplyResources(this.linkLabel8, "linkLabel8");
+            this.linkLabel8.LinkColor = System.Drawing.Color.Black;
             this.linkLabel8.Name = "linkLabel8";
             this.linkLabel8.TabStop = true;
             this.linkLabel8.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel8_LinkClicked);
@@ -159,6 +167,7 @@
             // linkLabel9
             // 
             resources.ApplyResources(this.linkLabel9, "linkLabel9");
+            this.linkLabel9.LinkColor = System.Drawing.Color.Black;
             this.linkLabel9.Name = "linkLabel9";
             this.linkLabel9.TabStop = true;
             this.linkLabel9.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel9_LinkClicked);
@@ -166,6 +175,7 @@
             // linkLabel10
             // 
             resources.ApplyResources(this.linkLabel10, "linkLabel10");
+            this.linkLabel10.LinkColor = System.Drawing.Color.Black;
             this.linkLabel10.Name = "linkLabel10";
             this.linkLabel10.TabStop = true;
             this.linkLabel10.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel10_LinkClicked);
@@ -173,6 +183,7 @@
             // linkLabel11
             // 
             resources.ApplyResources(this.linkLabel11, "linkLabel11");
+            this.linkLabel11.LinkColor = System.Drawing.Color.Black;
             this.linkLabel11.Name = "linkLabel11";
             this.linkLabel11.TabStop = true;
             this.linkLabel11.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel11_LinkClicked);
@@ -180,6 +191,7 @@
             // linkLabel12
             // 
             resources.ApplyResources(this.linkLabel12, "linkLabel12");
+            this.linkLabel12.LinkColor = System.Drawing.Color.Black;
             this.linkLabel12.Name = "linkLabel12";
             this.linkLabel12.TabStop = true;
             this.linkLabel12.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel12_LinkClicked);
@@ -187,6 +199,7 @@
             // linkLabel13
             // 
             resources.ApplyResources(this.linkLabel13, "linkLabel13");
+            this.linkLabel13.LinkColor = System.Drawing.Color.Black;
             this.linkLabel13.Name = "linkLabel13";
             this.linkLabel13.TabStop = true;
             this.linkLabel13.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel13_LinkClicked);
@@ -194,6 +207,7 @@
             // linkLabel14
             // 
             resources.ApplyResources(this.linkLabel14, "linkLabel14");
+            this.linkLabel14.LinkColor = System.Drawing.Color.Black;
             this.linkLabel14.Name = "linkLabel14";
             this.linkLabel14.TabStop = true;
             this.linkLabel14.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel14_LinkClicked);
@@ -201,6 +215,7 @@
             // linkLabel15
             // 
             resources.ApplyResources(this.linkLabel15, "linkLabel15");
+            this.linkLabel15.LinkColor = System.Drawing.Color.Black;
             this.linkLabel15.Name = "linkLabel15";
             this.linkLabel15.TabStop = true;
             this.linkLabel15.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel15_LinkClicked);
@@ -208,6 +223,7 @@
             // linkLabel16
             // 
             resources.ApplyResources(this.linkLabel16, "linkLabel16");
+            this.linkLabel16.LinkColor = System.Drawing.Color.Black;
             this.linkLabel16.Name = "linkLabel16";
             this.linkLabel16.TabStop = true;
             this.linkLabel16.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel16_LinkClicked);
@@ -215,6 +231,7 @@
             // linkLabel17
             // 
             resources.ApplyResources(this.linkLabel17, "linkLabel17");
+            this.linkLabel17.LinkColor = System.Drawing.Color.Black;
             this.linkLabel17.Name = "linkLabel17";
             this.linkLabel17.TabStop = true;
             this.linkLabel17.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel17_LinkClicked);
@@ -222,6 +239,7 @@
             // linkLabel18
             // 
             resources.ApplyResources(this.linkLabel18, "linkLabel18");
+            this.linkLabel18.LinkColor = System.Drawing.Color.Black;
             this.linkLabel18.Name = "linkLabel18";
             this.linkLabel18.TabStop = true;
             this.linkLabel18.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel18_LinkClicked);
