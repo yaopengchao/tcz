@@ -185,11 +185,11 @@ namespace LoginFrame
                 {
                     if (j==0)
                     {
+                        AgreeMents_str = dataTable.Rows[i][j].ToString();
                         agreeMent.Agreement_id = dataTable.Rows[i][j].ToString();
                     }
                     else if (j == 1)
                     {
-                        AgreeMents_str = dataTable.Rows[i][j].ToString();
                         agreeMent.Agreement_name = dataTable.Rows[i][j].ToString();
                     }
                     else if (j == 2)
@@ -227,13 +227,11 @@ namespace LoginFrame
             return AddressIP;
         }
 
-
-
-
         int comboBox3selectIndex;
         private void button1_Click(object sender, EventArgs e)
         {
-            this.label6.Image= global::LoginFrame.Properties.Resources.loading11;
+            button1.Enabled = false;
+            this.label6.Image = global::LoginFrame.Properties.Resources.loading11;
             //重置默认
             RunDoWhile = true;
 
@@ -324,6 +322,7 @@ namespace LoginFrame
             bodyMain.mainFrame = mainFrame;
 
         }
+
 
         private Process p;
 

@@ -29,6 +29,14 @@ namespace LoginFrame
 
             button2.BackColor = Color.FromArgb(255, 80, 151, 228);
             button1.ForeColor = Color.White;
+
+
+            button3.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button3.ForeColor = Color.White;
+
+            button4.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button4.ForeColor = Color.White;
+
         }
 
        
@@ -899,7 +907,10 @@ namespace LoginFrame
             
         }
 
-        
+        private void 胆囊肿大无_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
     
