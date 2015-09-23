@@ -1417,7 +1417,7 @@ namespace LoginFrame
         /// <param name="e"></param>
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            
+
             panel5.Hide();
 
             this.titlename.Text = ((ToolStripMenuItem)sender).Text;
@@ -1425,7 +1425,7 @@ namespace LoginFrame
             mainFrame.panel6.Controls.Clear();
             mainFrame.panel6.Controls.AddRange(mainFrame.items.ToArray());
 
-            BodySelfTest bodySelf = BodySelfTest.createForm();
+            BodySelfTest2 bodySelf = BodySelfTest2.createForm();
             bodySelf.mainFrame = this;
             bodySelf.TopLevel = false;
             bodySelf.FormBorderStyle = FormBorderStyle.None;
