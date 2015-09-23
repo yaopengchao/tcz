@@ -321,7 +321,8 @@ namespace LoginFrame
 
             //互相访问控件
             mainFrame.bodyMain = bodyMain;
-           
+            bodyMain.mainFrame = mainFrame;
+
         }
 
         private Process p;

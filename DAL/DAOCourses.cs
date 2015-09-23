@@ -46,7 +46,7 @@ namespace DAL
         {
             StringBuilder strSql = new StringBuilder();
 
-            strSql.Append(" select LESSON_ID,LESSON_NAME,LESSON_ENAME,LESSON_FILENAME from  tcz_lessons  ");
+            strSql.Append(" select LESSON_ID,LESSON_NAME,LESSON_ENAME,LESSON_FILENAME,LESSON_MUSIC_FILENAME from  tcz_lessons  ");
             strSql.Append(" where ");
             strSql.Append(" LESSON_CLASS_ID=?parentid ");
 

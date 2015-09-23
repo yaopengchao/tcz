@@ -47,9 +47,9 @@ namespace LoginFrame
                 if (LoginRoler.language == Constant.zhCN)
                 {
                     ToolStripMenuItem subItem = AddContextMenu(row["NAME"].ToString(), menuStrip1.Items, null);
-                    subItem.Tag = row["FILENAME"].ToString();
-                    //subItem.Image = LoginFrame.Properties.Resources.Error;
+                    subItem.Tag = row["FILENAME"].ToString()+"#"+ row["MUSICFILENAME"].ToString()+"#"+ row["LESSON_ID"].ToString();
                     subItem.Click += new EventHandler(subItemClick_playLesson);//绑定方法
+                    subItem.DoubleClick += new EventHandler(subItemClick_deleteLesson);//绑定方法
                     subItem.ToolTipText = "单击播放课件,双击删除收藏";
                     subItem.BackgroundImage = global::LoginFrame.Properties.Resources.收藏条目;
                     toolStripMenuItem1.DropDownItems.Add(subItem);
@@ -57,10 +57,9 @@ namespace LoginFrame
                 else if (LoginRoler.language == Constant.En)
                 {
                     ToolStripMenuItem subItem = AddContextMenu(row["ENAME"].ToString(), menuStrip1.Items, null);
-                    subItem.Tag = row["FILENAME"].ToString();
-                    //subItem.Image = LoginFrame.Properties.Resources.Error;
+                    subItem.Tag = row["FILENAME"].ToString() + "#" + row["MUSICFILENAME"].ToString() + "#" + row["LESSON_ID"].ToString();
                     subItem.Click += new EventHandler(subItemClick_playLesson);//绑定方法
-                    //subItem.DoubleClick += new EventHandler(subItemClick_deleteLesson);//绑定方法
+                    subItem.DoubleClick += new EventHandler(subItemClick_deleteLesson);//绑定方法
                     subItem.ToolTipText = "Click play courseware, double click Delete";
                     subItem.BackgroundImage = global::LoginFrame.Properties.Resources.收藏条目;
                     toolStripMenuItem1.DropDownItems.Add(subItem);
@@ -71,7 +70,7 @@ namespace LoginFrame
         private void subItemClick_playLesson(object sender, EventArgs e)
         {
             ToolStripMenuItem subItem = (ToolStripMenuItem)sender;
-            string swfName = subItem.Tag.ToString();
+            string swfName = subItem.Tag.ToString().Split('#')[0];
             string filpath = Application.StartupPath + @"/../../lessons/" + swfName + ".swf";
             //检测文件是否存在
             if (!File.Exists(filpath))
@@ -89,7 +88,21 @@ namespace LoginFrame
 
         private void subItemClick_deleteLesson(object sender, EventArgs e)
         {
-            MessageBox.Show("删除");
+            ToolStripMenuItem subItem = (ToolStripMenuItem)sender;
+            string lesson_id = subItem.Tag.ToString().Split('#')[2];
+            bool isDelete=IUser.deleteFavorite(LoginRoler.login_id, lesson_id);
+            if (isDelete)
+            {
+                MessageBox.Show("删除成功!");
+            }
+            else
+            {
+                MessageBox.Show("删除失败!");
+            }
+
+            //重新刷新收藏夹数据
+            refreshFavorites();
+
         }
 
         /// <summary>
@@ -292,35 +305,20 @@ namespace LoginFrame
                     flowLayoutPanel.HorizontalScroll.Visible = false;
                     flowLayoutPanel.Width = 180;
                     flowLayoutPanel.AutoScroll = true;
-
-                    ListView listView = new ListView();
-                    listView.Width = 120;
-                    listView.View = View.List;
-                    listView.DoubleClick += new System.EventHandler(listView_MouseDoubleClick);
+                   
                     DataTable lessons = Bll.getLessons(type_id).Tables[0];
                     for (int j = 0; j < lessons.Rows.Count; j++)
                     {
-                        ListViewItem lvItem = new ListViewItem();
 
-                        if (LoginRoler.language == Constant.zhCN)
-                        {
-                            lvItem.Text = lessons.Rows[j]["LESSON_NAME"].ToString();
-                            lvItem.SubItems.Add(lessons.Rows[j]["LESSON_FILENAME"].ToString());
-                        }
-                        else if (LoginRoler.language == Constant.En)
-                        {
-                            lvItem.Text = lessons.Rows[j]["LESSON_ENAME"].ToString();
-                            lvItem.SubItems.Add(lessons.Rows[j]["LESSON_FILENAME"].ToString());
-                        }
-
-                        listView.Items.Add(lvItem);
-
-
-                        Button btnLesson = new Button();
+                        ButtonEx btnLesson = new ButtonEx();
                         btnLesson.Width = 160;
                         btnLesson.Height = 20;
                         btnLesson.FlatStyle = FlatStyle.Flat;
                         btnLesson.FlatAppearance.BorderSize = 0;
+
+
+                        //Button btnLesson = new Button();
+                     
                         //btnLesson.Font = new Font("微软雅黑", 9);
                         //btnLesson.ForeColor = Color.White;
                         btnLesson.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -332,10 +330,11 @@ namespace LoginFrame
                         {
                             btnLesson.Text = lessons.Rows[j]["LESSON_ENAME"].ToString();
                         }
-                        btnLesson.Tag = lessons.Rows[j]["LESSON_FILENAME"].ToString() + "#";
+                        btnLesson.Tag = lessons.Rows[j]["LESSON_FILENAME"].ToString() + "#"+ lessons.Rows[j]["LESSON_MUSIC_FILENAME"].ToString() + "#"+ lessons.Rows[j]["LESSON_ID"].ToString();
 
                         btnLesson.Click += new System.EventHandler(btnLesson_Click);
                         btnLesson.DoubleClick += new System.EventHandler(btnLesson_DBClick);
+
                         flowLayoutPanel.Controls.Add(btnLesson);
                     }
 
@@ -681,7 +680,7 @@ namespace LoginFrame
             {
                 Broadcast("StopFlash^NoFileName^##");
             }
-            mainFrame.bodyMain.axShockwaveFlashPlayer.Stop();
+            this.axShockwaveFlashPlayer.Stop();
         }
 
         private void btn_next_Click(object sender, EventArgs e)
@@ -715,11 +714,14 @@ namespace LoginFrame
             }
         }
 
+        /// <summary>
+        /// 选择课件保存到收藏夹
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            //收藏当前课件到数据库
-            //获取当前课件的文件名  文件名
-            if (chooseButton != null)
+            if (chooseButton == null)
             {
                 MessageBox.Show("请先选择课件再点击收藏!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 return;
@@ -728,8 +730,8 @@ namespace LoginFrame
             {
                 bool flag = true;
 
-                string filename = chooseButton.Tag.ToString().Split('#')[0].ToString();
-                bool isAdd = IUser.addFavorite(LoginRoler.login_id, filename);
+                string LESSON_ID = chooseButton.Tag.ToString().Split('#')[2].ToString();
+                bool isAdd = IUser.addFavorite(LoginRoler.login_id, LESSON_ID);
                 flag = flag && isAdd;
 
                 if (!flag)

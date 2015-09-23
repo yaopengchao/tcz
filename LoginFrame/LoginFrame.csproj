@@ -160,6 +160,9 @@
     <Compile Include="BodySelfTest2.Designer.cs">
       <DependentUpon>BodySelfTest2.cs</DependentUpon>
     </Compile>
+    <Compile Include="ButtonEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CheckBodySelfTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -565,6 +568,7 @@
     <Content Include="lessons\3.mp3" />
     <Content Include="lessons\2.mp3" />
     <Content Include="lessons\19.swf" />
+    <Content Include="lessons\YouAreMySunshine.wav" />
     <Content Include="pic\combobox.png" />
     <Content Include="pic\next.png" />
     <Content Include="pic\NoImage.jpg" />

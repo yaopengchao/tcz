@@ -223,17 +223,17 @@ namespace DAL
         /// </summary>
         /// <param name="user_name"></param>
         /// <returns></returns>
-        public DataSet getFavorites(string user_name)
+        public DataSet getFavorites(string login_id)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append(" select f.LOGIN_ID as LOGIN_ID,l.LESSON_NAME as NAME,l.LESSON_ENAME as ENAME,f.FILENAME as FILENAME from sys_user_favorites f,tcz_lessons l where f.FILENAME=l.LESSON_FILENAME ");
-            strSql.Append(" and ");
-            strSql.Append(" LOGIN_ID=?user_name ");
+            strSql.Append(" select f.LOGIN_ID as LOGIN_ID,l.LESSON_ID as LESSON_ID,l.LESSON_NAME as NAME,l.LESSON_ENAME as ENAME,l.LESSON_FILENAME as FILENAME,l.LESSON_MUSIC_FILENAME as  MUSICFILENAME from sys_user_favorites f,tcz_lessons l where 1=1 ");
+            strSql.Append(" and f.LESSON_ID=l.LESSON_ID ");
+            strSql.Append(" and f.LOGIN_ID=?login_id ");
             MySqlParameter[] parameters = {
-                new MySqlParameter("?user_name", MySqlDbType.VarChar)
+                new MySqlParameter("?login_id", MySqlDbType.VarChar)
             };
 
-            parameters[0].Value = user_name;
+            parameters[0].Value = login_id;
 
             DataSet ds = MySqlHelper.DateSet(strSql.ToString(), parameters);
 
@@ -246,22 +246,22 @@ namespace DAL
         /// <param name="user_name"></param>
         /// <param name="filename"></param>
         /// <returns></returns>
-        public bool deleteFavorite(string user_name, string filename)
+        public bool deleteFavorite(string login_id, string lesson_id)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append(" delete from favorites  ");
+            strSql.Append(" delete from sys_user_favorites  ");
             strSql.Append(" where ");
-            strSql.Append(" user_name=?user_name ");
+            strSql.Append(" login_id=?login_id ");
             strSql.Append(" and ");
-            strSql.Append(" filename=?filename ");
+            strSql.Append(" lesson_id=?lesson_id ");
 
             MySqlParameter[] parameters0 = {
-                    new MySqlParameter("?user_name", MySqlDbType.VarChar),
-                    new MySqlParameter("?filename", MySqlDbType.VarChar)
+                    new MySqlParameter("?login_id", MySqlDbType.VarChar),
+                    new MySqlParameter("?lesson_id", MySqlDbType.VarChar)
             };
 
-            parameters0[0].Value = user_name;
-            parameters0[1].Value = filename;
+            parameters0[0].Value = login_id;
+            parameters0[1].Value = lesson_id;
 
             int row0 = Convert.ToInt32(MySqlHelper.ExecuteScalar(strSql.ToString(), parameters0));
 
@@ -281,22 +281,22 @@ namespace DAL
         /// <param name="user_name"></param>
         /// <param name="user_ip"></param>
         /// <returns></returns>
-        public bool addFavorite(string user_name,string filename)
+        public bool addFavorite(string login_id,string lesson_id)
         {
             StringBuilder strSql = new StringBuilder();
             //先检查是否有旧记录
             strSql.Append(" select count(1) from sys_user_favorites  ");
             strSql.Append(" where ");
-            strSql.Append(" LOGIN_ID=?user_name ");
+            strSql.Append(" LOGIN_ID=?login_id ");
             strSql.Append(" and ");
-            strSql.Append(" FILENAME=?filename ");
+            strSql.Append(" LESSON_ID=?lesson_id ");
             MySqlParameter[] parameters0 = {
-                    new MySqlParameter("?user_name", MySqlDbType.VarChar),
-                    new MySqlParameter("?filename", MySqlDbType.VarChar)
+                    new MySqlParameter("?login_id", MySqlDbType.VarChar),
+                    new MySqlParameter("?lesson_id", MySqlDbType.VarChar)
             };
 
-            parameters0[0].Value = user_name;
-            parameters0[1].Value = filename;
+            parameters0[0].Value = login_id;
+            parameters0[1].Value = lesson_id;
 
             int row0 = Convert.ToInt32(MySqlHelper.ExecuteScalar(strSql.ToString(), parameters0));
 
@@ -307,20 +307,20 @@ namespace DAL
             else
             {//inert into
                 strSql = new StringBuilder();
-                strSql.Append(" insert into sys_user_favorites (LOGIN_ID,FILENAME) values ( ");
-                strSql.Append(" ?user_name, ");
+                strSql.Append(" insert into sys_user_favorites (LOGIN_ID,LESSON_ID) values ( ");
+                strSql.Append(" ?login_id, ");
               
-                strSql.Append(" ?filename  ) ");
+                strSql.Append(" ?lesson_id  ) ");
 
                 MySqlParameter[] parameters = {
-                    new MySqlParameter("?user_name", MySqlDbType.VarChar),
+                    new MySqlParameter("?login_id", MySqlDbType.VarChar),
                
-                    new MySqlParameter("?filename", MySqlDbType.VarChar)
+                    new MySqlParameter("?lesson_id", MySqlDbType.VarChar)
                 };
 
-                parameters[0].Value = user_name;
+                parameters[0].Value = login_id;
              
-                parameters[1].Value = filename;
+                parameters[1].Value = lesson_id;
 
                 int rows = MySqlHelper.ExecuteNonQuery(strSql.ToString(), parameters);
 

@@ -1336,6 +1336,7 @@ namespace LoginFrame
 
             //互相访问控件
             mainFrame.bodyMain = bodyMain;
+            bodyMain.mainFrame = mainFrame;
         }
 
         public static MainFrame createForm()
@@ -1439,7 +1440,7 @@ namespace LoginFrame
         /// <param name="filepath">播放 音频文件路径</param>
         public void audioPlayer(string filename)
         {
-            this.splayer = new SoundPlayer(LoginFrame.Properties.Resources.YouAreMySunshine);
+            this.splayer = new SoundPlayer(Application.StartupPath + @"/../../lessons/" + filename + ".wav");
             this.splayer.Play();
         }
 
