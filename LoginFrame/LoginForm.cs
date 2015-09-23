@@ -30,6 +30,7 @@ namespace LoginFrame
         {
             InitializeComponent();
 
+            this.BackColor = Color.FromArgb(255, 208, 232, 253);
 
             p = new Process();
             p.StartInfo.FileName = "cmd.exe";

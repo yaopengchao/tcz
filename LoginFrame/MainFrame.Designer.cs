@@ -101,8 +101,8 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
@@ -299,7 +299,6 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -331,7 +330,7 @@
         private System.Windows.Forms.Label lbl_exit;
         private System.Windows.Forms.Label lbl_menu;
         private System.Windows.Forms.Label lbl_mian;
-        private System.Windows.Forms.Label titlename;
+        public System.Windows.Forms.Label titlename;
         private System.Windows.Forms.Label user_name;
     }
 }

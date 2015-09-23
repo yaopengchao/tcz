@@ -434,15 +434,6 @@
   <data name="&gt;&gt;label26.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="脉搏.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="脉搏.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 21</value>
-  </data>
-  <data name="脉搏.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
   <data name="&gt;&gt;脉搏.Name" xml:space="preserve">
     <value>脉搏</value>
   </data>
@@ -454,24 +445,6 @@
   </data>
   <data name="&gt;&gt;脉搏.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="label25.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label25.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="label25.Location" type="System.Drawing.Point, System.Drawing">
-    <value>65, 4</value>
-  </data>
-  <data name="label25.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 14</value>
-  </data>
-  <data name="label25.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="label25.Text" xml:space="preserve">
-    <value>次/分</value>
   </data>
   <data name="&gt;&gt;label25.Name" xml:space="preserve">
     <value>label25</value>
@@ -506,6 +479,10 @@
   <data name="&gt;&gt;panel18.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
   <data name="button2.Font" type="System.Drawing.Font, System.Drawing">
     <value>宋体, 10.5pt, style=Bold</value>
   </data>
@@ -532,6 +509,9 @@
   </data>
   <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
     <value>13</value>
+  </data>
+  <data name="button1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <data name="button1.Font" type="System.Drawing.Font, System.Drawing">
     <value>宋体, 10.5pt, style=Bold</value>
@@ -590,24 +570,6 @@
   <data name="&gt;&gt;label223.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="反跳痛阑尾无.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="反跳痛阑尾无.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="反跳痛阑尾无.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 3</value>
-  </data>
-  <data name="反跳痛阑尾无.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="反跳痛阑尾无.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="反跳痛阑尾无.Text" xml:space="preserve">
-    <value>无</value>
-  </data>
   <data name="&gt;&gt;反跳痛阑尾无.Name" xml:space="preserve">
     <value>反跳痛阑尾无</value>
   </data>
@@ -619,24 +581,6 @@
   </data>
   <data name="&gt;&gt;反跳痛阑尾无.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="反跳痛阑尾有.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="反跳痛阑尾有.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="反跳痛阑尾有.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 3</value>
-  </data>
-  <data name="反跳痛阑尾有.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="反跳痛阑尾有.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="反跳痛阑尾有.Text" xml:space="preserve">
-    <value>有</value>
   </data>
   <data name="&gt;&gt;反跳痛阑尾有.Name" xml:space="preserve">
     <value>反跳痛阑尾有</value>
@@ -671,24 +615,6 @@
   <data name="&gt;&gt;panel15.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
-  <data name="反跳痛胰腺无.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="反跳痛胰腺无.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="反跳痛胰腺无.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 3</value>
-  </data>
-  <data name="反跳痛胰腺无.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="反跳痛胰腺无.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="反跳痛胰腺无.Text" xml:space="preserve">
-    <value>无</value>
-  </data>
   <data name="&gt;&gt;反跳痛胰腺无.Name" xml:space="preserve">
     <value>反跳痛胰腺无</value>
   </data>
@@ -700,24 +626,6 @@
   </data>
   <data name="&gt;&gt;反跳痛胰腺无.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="反跳痛胰腺有.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="反跳痛胰腺有.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="反跳痛胰腺有.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 3</value>
-  </data>
-  <data name="反跳痛胰腺有.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="反跳痛胰腺有.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="反跳痛胰腺有.Text" xml:space="preserve">
-    <value>有</value>
   </data>
   <data name="&gt;&gt;反跳痛胰腺有.Name" xml:space="preserve">
     <value>反跳痛胰腺有</value>
@@ -752,24 +660,6 @@
   <data name="&gt;&gt;panel16.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <data name="反跳痛小肠无.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="反跳痛小肠无.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="反跳痛小肠无.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 3</value>
-  </data>
-  <data name="反跳痛小肠无.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="反跳痛小肠无.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="反跳痛小肠无.Text" xml:space="preserve">
-    <value>无</value>
-  </data>
   <data name="&gt;&gt;反跳痛小肠无.Name" xml:space="preserve">
     <value>反跳痛小肠无</value>
   </data>
@@ -781,24 +671,6 @@
   </data>
   <data name="&gt;&gt;反跳痛小肠无.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="反跳痛小肠有.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="反跳痛小肠有.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="反跳痛小肠有.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 3</value>
-  </data>
-  <data name="反跳痛小肠有.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="反跳痛小肠有.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="反跳痛小肠有.Text" xml:space="preserve">
-    <value>有</value>
   </data>
   <data name="&gt;&gt;反跳痛小肠有.Name" xml:space="preserve">
     <value>反跳痛小肠有</value>
@@ -1043,24 +915,6 @@
   <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
-  <data name="压痛阑尾无.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="压痛阑尾无.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="压痛阑尾无.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 3</value>
-  </data>
-  <data name="压痛阑尾无.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="压痛阑尾无.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="压痛阑尾无.Text" xml:space="preserve">
-    <value>无</value>
-  </data>
   <data name="&gt;&gt;压痛阑尾无.Name" xml:space="preserve">
     <value>压痛阑尾无</value>
   </data>
@@ -1072,24 +926,6 @@
   </data>
   <data name="&gt;&gt;压痛阑尾无.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="压痛阑尾有.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="压痛阑尾有.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="压痛阑尾有.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 3</value>
-  </data>
-  <data name="压痛阑尾有.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="压痛阑尾有.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="压痛阑尾有.Text" xml:space="preserve">
-    <value>有</value>
   </data>
   <data name="&gt;&gt;压痛阑尾有.Name" xml:space="preserve">
     <value>压痛阑尾有</value>
@@ -1124,24 +960,6 @@
   <data name="&gt;&gt;panel10.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
-  <data name="压痛乙状结肠无.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="压痛乙状结肠无.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="压痛乙状结肠无.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 3</value>
-  </data>
-  <data name="压痛乙状结肠无.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="压痛乙状结肠无.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="压痛乙状结肠无.Text" xml:space="preserve">
-    <value>无</value>
-  </data>
   <data name="&gt;&gt;压痛乙状结肠无.Name" xml:space="preserve">
     <value>压痛乙状结肠无</value>
   </data>
@@ -1153,24 +971,6 @@
   </data>
   <data name="&gt;&gt;压痛乙状结肠无.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="压痛乙状结肠有.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="压痛乙状结肠有.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="压痛乙状结肠有.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 3</value>
-  </data>
-  <data name="压痛乙状结肠有.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 18</value>
-  </data>
-  <data name="压痛乙状结肠有.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="压痛乙状结肠有.Text" xml:space="preserve">
-    <value>有 </value>
   </data>
   <data name="&gt;&gt;压痛乙状结肠有.Name" xml:space="preserve">
     <value>压痛乙状结肠有</value>
@@ -1205,24 +1005,6 @@
   <data name="&gt;&gt;panel8.ZOrder" xml:space="preserve">
     <value>27</value>
   </data>
-  <data name="压痛胰腺无.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="压痛胰腺无.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="压痛胰腺无.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 3</value>
-  </data>
-  <data name="压痛胰腺无.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="压痛胰腺无.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="压痛胰腺无.Text" xml:space="preserve">
-    <value>无</value>
-  </data>
   <data name="&gt;&gt;压痛胰腺无.Name" xml:space="preserve">
     <value>压痛胰腺无</value>
   </data>
@@ -1234,24 +1016,6 @@
   </data>
   <data name="&gt;&gt;压痛胰腺无.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="压痛胰腺有.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="压痛胰腺有.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="压痛胰腺有.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 3</value>
-  </data>
-  <data name="压痛胰腺有.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="压痛胰腺有.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="压痛胰腺有.Text" xml:space="preserve">
-    <value>有</value>
   </data>
   <data name="&gt;&gt;压痛胰腺有.Name" xml:space="preserve">
     <value>压痛胰腺有</value>
@@ -1286,24 +1050,6 @@
   <data name="&gt;&gt;panel9.ZOrder" xml:space="preserve">
     <value>28</value>
   </data>
-  <data name="压痛十二指肠无.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="压痛十二指肠无.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="压痛十二指肠无.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 3</value>
-  </data>
-  <data name="压痛十二指肠无.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="压痛十二指肠无.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="压痛十二指肠无.Text" xml:space="preserve">
-    <value>无</value>
-  </data>
   <data name="&gt;&gt;压痛十二指肠无.Name" xml:space="preserve">
     <value>压痛十二指肠无</value>
   </data>
@@ -1315,24 +1061,6 @@
   </data>
   <data name="&gt;&gt;压痛十二指肠无.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="压痛十二指肠有.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="压痛十二指肠有.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="压痛十二指肠有.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 3</value>
-  </data>
-  <data name="压痛十二指肠有.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="压痛十二指肠有.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="压痛十二指肠有.Text" xml:space="preserve">
-    <value>有</value>
   </data>
   <data name="&gt;&gt;压痛十二指肠有.Name" xml:space="preserve">
     <value>压痛十二指肠有</value>
@@ -1367,24 +1095,6 @@
   <data name="&gt;&gt;panel11.ZOrder" xml:space="preserve">
     <value>29</value>
   </data>
-  <data name="压痛小肠无.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="压痛小肠无.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="压痛小肠无.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 3</value>
-  </data>
-  <data name="压痛小肠无.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="压痛小肠无.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="压痛小肠无.Text" xml:space="preserve">
-    <value>无</value>
-  </data>
   <data name="&gt;&gt;压痛小肠无.Name" xml:space="preserve">
     <value>压痛小肠无</value>
   </data>
@@ -1396,24 +1106,6 @@
   </data>
   <data name="&gt;&gt;压痛小肠无.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="压痛小肠有.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="压痛小肠有.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="压痛小肠有.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 3</value>
-  </data>
-  <data name="压痛小肠有.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="压痛小肠有.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="压痛小肠有.Text" xml:space="preserve">
-    <value>有</value>
   </data>
   <data name="&gt;&gt;压痛小肠有.Name" xml:space="preserve">
     <value>压痛小肠有</value>
@@ -1448,15 +1140,6 @@
   <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
     <value>30</value>
   </data>
-  <data name="脾脏肿大.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="脾脏肿大.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 21</value>
-  </data>
-  <data name="脾脏肿大.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
   <data name="&gt;&gt;脾脏肿大.Name" xml:space="preserve">
     <value>脾脏肿大</value>
   </data>
@@ -1468,24 +1151,6 @@
   </data>
   <data name="&gt;&gt;脾脏肿大.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 5</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 14</value>
-  </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>cm</value>
   </data>
   <data name="&gt;&gt;label5.Name" xml:space="preserve">
     <value>label5</value>
@@ -1520,15 +1185,6 @@
   <data name="&gt;&gt;panel13.ZOrder" xml:space="preserve">
     <value>31</value>
   </data>
-  <data name="肝脏肿大.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="肝脏肿大.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 21</value>
-  </data>
-  <data name="肝脏肿大.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
   <data name="&gt;&gt;肝脏肿大.Name" xml:space="preserve">
     <value>肝脏肿大</value>
   </data>
@@ -1540,24 +1196,6 @@
   </data>
   <data name="&gt;&gt;肝脏肿大.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 5</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 14</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>cm</value>
   </data>
   <data name="&gt;&gt;label4.Name" xml:space="preserve">
     <value>label4</value>
@@ -1772,24 +1410,6 @@
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
     <value>38</value>
   </data>
-  <data name="压痛胃溃疡无.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="压痛胃溃疡无.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="压痛胃溃疡无.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 3</value>
-  </data>
-  <data name="压痛胃溃疡无.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="压痛胃溃疡无.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="压痛胃溃疡无.Text" xml:space="preserve">
-    <value>无</value>
-  </data>
   <data name="&gt;&gt;压痛胃溃疡无.Name" xml:space="preserve">
     <value>压痛胃溃疡无</value>
   </data>
@@ -1801,24 +1421,6 @@
   </data>
   <data name="&gt;&gt;压痛胃溃疡无.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="压痛胃溃疡有.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="压痛胃溃疡有.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="压痛胃溃疡有.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 3</value>
-  </data>
-  <data name="压痛胃溃疡有.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="压痛胃溃疡有.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="压痛胃溃疡有.Text" xml:space="preserve">
-    <value>有</value>
   </data>
   <data name="&gt;&gt;压痛胃溃疡有.Name" xml:space="preserve">
     <value>压痛胃溃疡有</value>
@@ -1913,24 +1515,6 @@
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
     <value>41</value>
   </data>
-  <data name="胆囊墨菲氏征阴性.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="胆囊墨菲氏征阴性.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="胆囊墨菲氏征阴性.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 2</value>
-  </data>
-  <data name="胆囊墨菲氏征阴性.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 18</value>
-  </data>
-  <data name="胆囊墨菲氏征阴性.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="胆囊墨菲氏征阴性.Text" xml:space="preserve">
-    <value>阴性</value>
-  </data>
   <data name="&gt;&gt;胆囊墨菲氏征阴性.Name" xml:space="preserve">
     <value>胆囊墨菲氏征阴性</value>
   </data>
@@ -1942,24 +1526,6 @@
   </data>
   <data name="&gt;&gt;胆囊墨菲氏征阴性.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="胆囊墨菲氏征阳性.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="胆囊墨菲氏征阳性.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="胆囊墨菲氏征阳性.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 2</value>
-  </data>
-  <data name="胆囊墨菲氏征阳性.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 18</value>
-  </data>
-  <data name="胆囊墨菲氏征阳性.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="胆囊墨菲氏征阳性.Text" xml:space="preserve">
-    <value>阳性</value>
   </data>
   <data name="&gt;&gt;胆囊墨菲氏征阳性.Name" xml:space="preserve">
     <value>胆囊墨菲氏征阳性</value>
@@ -2024,24 +1590,6 @@
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
     <value>43</value>
   </data>
-  <data name="胆囊肿大无.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="胆囊肿大无.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="胆囊肿大无.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 3</value>
-  </data>
-  <data name="胆囊肿大无.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="胆囊肿大无.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="胆囊肿大无.Text" xml:space="preserve">
-    <value>无</value>
-  </data>
   <data name="&gt;&gt;胆囊肿大无.Name" xml:space="preserve">
     <value>胆囊肿大无</value>
   </data>
@@ -2053,24 +1601,6 @@
   </data>
   <data name="&gt;&gt;胆囊肿大无.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="胆囊肿大有.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="胆囊肿大有.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="胆囊肿大有.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 3</value>
-  </data>
-  <data name="胆囊肿大有.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="胆囊肿大有.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="胆囊肿大有.Text" xml:space="preserve">
-    <value>有</value>
   </data>
   <data name="&gt;&gt;胆囊肿大有.Name" xml:space="preserve">
     <value>胆囊肿大有</value>
@@ -2135,24 +1665,6 @@
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
     <value>45</value>
   </data>
-  <data name="肝脏质地软.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="肝脏质地软.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="肝脏质地软.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 3</value>
-  </data>
-  <data name="肝脏质地软.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="肝脏质地软.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="肝脏质地软.Text" xml:space="preserve">
-    <value>软</value>
-  </data>
   <data name="&gt;&gt;肝脏质地软.Name" xml:space="preserve">
     <value>肝脏质地软</value>
   </data>
@@ -2164,24 +1676,6 @@
   </data>
   <data name="&gt;&gt;肝脏质地软.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="肝脏质地硬.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="肝脏质地硬.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="肝脏质地硬.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 3</value>
-  </data>
-  <data name="肝脏质地硬.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="肝脏质地硬.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="肝脏质地硬.Text" xml:space="preserve">
-    <value>硬</value>
   </data>
   <data name="&gt;&gt;肝脏质地硬.Name" xml:space="preserve">
     <value>肝脏质地硬</value>
@@ -2216,24 +1710,6 @@
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
     <value>46</value>
   </data>
-  <data name="胆囊触痛无.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="胆囊触痛无.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="胆囊触痛无.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 3</value>
-  </data>
-  <data name="胆囊触痛无.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="胆囊触痛无.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="胆囊触痛无.Text" xml:space="preserve">
-    <value>无</value>
-  </data>
   <data name="&gt;&gt;胆囊触痛无.Name" xml:space="preserve">
     <value>胆囊触痛无</value>
   </data>
@@ -2245,24 +1721,6 @@
   </data>
   <data name="&gt;&gt;胆囊触痛无.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="胆囊触痛有.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="胆囊触痛有.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt, style=Bold</value>
-  </data>
-  <data name="胆囊触痛有.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 3</value>
-  </data>
-  <data name="胆囊触痛有.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 18</value>
-  </data>
-  <data name="胆囊触痛有.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="胆囊触痛有.Text" xml:space="preserve">
-    <value>有</value>
   </data>
   <data name="&gt;&gt;胆囊触痛有.Name" xml:space="preserve">
     <value>胆囊触痛有</value>
@@ -2420,7 +1878,6 @@
   <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
@@ -2444,6 +1901,1740 @@
   </data>
   <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="&gt;&gt;button16.Name" xml:space="preserve">
+    <value>button16</value>
+  </data>
+  <data name="&gt;&gt;button16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button16.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;button16.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;button15.Name" xml:space="preserve">
+    <value>button15</value>
+  </data>
+  <data name="&gt;&gt;button15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button15.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;button15.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;button14.Name" xml:space="preserve">
+    <value>button14</value>
+  </data>
+  <data name="&gt;&gt;button14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button14.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;button14.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;button13.Name" xml:space="preserve">
+    <value>button13</value>
+  </data>
+  <data name="&gt;&gt;button13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button13.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;button13.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;button12.Name" xml:space="preserve">
+    <value>button12</value>
+  </data>
+  <data name="&gt;&gt;button12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button12.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;button12.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;button11.Name" xml:space="preserve">
+    <value>button11</value>
+  </data>
+  <data name="&gt;&gt;button11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button11.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;button11.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;button10.Name" xml:space="preserve">
+    <value>button10</value>
+  </data>
+  <data name="&gt;&gt;button10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button10.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;button10.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;button9.Name" xml:space="preserve">
+    <value>button9</value>
+  </data>
+  <data name="&gt;&gt;button9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button9.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;button9.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;button8.Name" xml:space="preserve">
+    <value>button8</value>
+  </data>
+  <data name="&gt;&gt;button8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button8.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;button8.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;button7.Name" xml:space="preserve">
+    <value>button7</value>
+  </data>
+  <data name="&gt;&gt;button7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button7.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;button7.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;button6.Name" xml:space="preserve">
+    <value>button6</value>
+  </data>
+  <data name="&gt;&gt;button6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button6.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;button6.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;右肺上.Name" xml:space="preserve">
+    <value>右肺上</value>
+  </data>
+  <data name="&gt;&gt;右肺上.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;右肺上.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;右肺上.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;button5.Name" xml:space="preserve">
+    <value>button5</value>
+  </data>
+  <data name="&gt;&gt;button5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button5.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;button5.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;右肺下.Name" xml:space="preserve">
+    <value>右肺下</value>
+  </data>
+  <data name="&gt;&gt;右肺下.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;右肺下.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;右肺下.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;左肺中.Name" xml:space="preserve">
+    <value>左肺中</value>
+  </data>
+  <data name="&gt;&gt;左肺中.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;左肺中.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;左肺中.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;左肺下.Name" xml:space="preserve">
+    <value>左肺下</value>
+  </data>
+  <data name="&gt;&gt;左肺下.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;左肺下.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;左肺下.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;右肺中.Name" xml:space="preserve">
+    <value>右肺中</value>
+  </data>
+  <data name="&gt;&gt;右肺中.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;右肺中.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;右肺中.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;肺动脉瓣听诊区.Name" xml:space="preserve">
+    <value>肺动脉瓣听诊区</value>
+  </data>
+  <data name="&gt;&gt;肺动脉瓣听诊区.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;肺动脉瓣听诊区.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;肺动脉瓣听诊区.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;主动脉瓣区.Name" xml:space="preserve">
+    <value>主动脉瓣区</value>
+  </data>
+  <data name="&gt;&gt;主动脉瓣区.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;主动脉瓣区.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;主动脉瓣区.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;主动脉瓣第二听诊区.Name" xml:space="preserve">
+    <value>主动脉瓣第二听诊区</value>
+  </data>
+  <data name="&gt;&gt;主动脉瓣第二听诊区.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;主动脉瓣第二听诊区.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;主动脉瓣第二听诊区.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;三尖瓣区.Name" xml:space="preserve">
+    <value>三尖瓣区</value>
+  </data>
+  <data name="&gt;&gt;三尖瓣区.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;三尖瓣区.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;三尖瓣区.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;气管.Name" xml:space="preserve">
+    <value>气管</value>
+  </data>
+  <data name="&gt;&gt;气管.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;气管.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;气管.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;左肺上.Name" xml:space="preserve">
+    <value>左肺上</value>
+  </data>
+  <data name="&gt;&gt;左肺上.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;左肺上.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;左肺上.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;二尖瓣听诊区.Name" xml:space="preserve">
+    <value>二尖瓣听诊区</value>
+  </data>
+  <data name="&gt;&gt;二尖瓣听诊区.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;二尖瓣听诊区.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;二尖瓣听诊区.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;button4.Name" xml:space="preserve">
+    <value>button4</value>
+  </data>
+  <data name="&gt;&gt;button4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button4.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;button3.Name" xml:space="preserve">
+    <value>button3</value>
+  </data>
+  <data name="&gt;&gt;button3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button3.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;label44.Name" xml:space="preserve">
+    <value>label44</value>
+  </data>
+  <data name="&gt;&gt;label44.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label44.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label44.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;label45.Name" xml:space="preserve">
+    <value>label45</value>
+  </data>
+  <data name="&gt;&gt;label45.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label45.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label45.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;label46.Name" xml:space="preserve">
+    <value>label46</value>
+  </data>
+  <data name="&gt;&gt;label46.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label46.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label46.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;label47.Name" xml:space="preserve">
+    <value>label47</value>
+  </data>
+  <data name="&gt;&gt;label47.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label47.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label47.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;label43.Name" xml:space="preserve">
+    <value>label43</value>
+  </data>
+  <data name="&gt;&gt;label43.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label43.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label43.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;label42.Name" xml:space="preserve">
+    <value>label42</value>
+  </data>
+  <data name="&gt;&gt;label42.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label42.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label42.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;label41.Name" xml:space="preserve">
+    <value>label41</value>
+  </data>
+  <data name="&gt;&gt;label41.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label41.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label41.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;label40.Name" xml:space="preserve">
+    <value>label40</value>
+  </data>
+  <data name="&gt;&gt;label40.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label40.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label40.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;label39.Name" xml:space="preserve">
+    <value>label39</value>
+  </data>
+  <data name="&gt;&gt;label39.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label39.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label39.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="&gt;&gt;label38.Name" xml:space="preserve">
+    <value>label38</value>
+  </data>
+  <data name="&gt;&gt;label38.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label38.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label38.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="&gt;&gt;label37.Name" xml:space="preserve">
+    <value>label37</value>
+  </data>
+  <data name="&gt;&gt;label37.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label37.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label37.ZOrder" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="&gt;&gt;label36.Name" xml:space="preserve">
+    <value>label36</value>
+  </data>
+  <data name="&gt;&gt;label36.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label36.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label36.ZOrder" xml:space="preserve">
+    <value>37</value>
+  </data>
+  <data name="&gt;&gt;label35.Name" xml:space="preserve">
+    <value>label35</value>
+  </data>
+  <data name="&gt;&gt;label35.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label35.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label35.ZOrder" xml:space="preserve">
+    <value>38</value>
+  </data>
+  <data name="&gt;&gt;label34.Name" xml:space="preserve">
+    <value>label34</value>
+  </data>
+  <data name="&gt;&gt;label34.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label34.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label34.ZOrder" xml:space="preserve">
+    <value>39</value>
+  </data>
+  <data name="&gt;&gt;label33.Name" xml:space="preserve">
+    <value>label33</value>
+  </data>
+  <data name="&gt;&gt;label33.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label33.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label33.ZOrder" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="&gt;&gt;label32.Name" xml:space="preserve">
+    <value>label32</value>
+  </data>
+  <data name="&gt;&gt;label32.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label32.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label32.ZOrder" xml:space="preserve">
+    <value>41</value>
+  </data>
+  <data name="&gt;&gt;panel19.Name" xml:space="preserve">
+    <value>panel19</value>
+  </data>
+  <data name="&gt;&gt;panel19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel19.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;panel19.ZOrder" xml:space="preserve">
+    <value>42</value>
+  </data>
+  <data name="&gt;&gt;label31.Name" xml:space="preserve">
+    <value>label31</value>
+  </data>
+  <data name="&gt;&gt;label31.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label31.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label31.ZOrder" xml:space="preserve">
+    <value>43</value>
+  </data>
+  <data name="&gt;&gt;panel17.Name" xml:space="preserve">
+    <value>panel17</value>
+  </data>
+  <data name="&gt;&gt;panel17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel17.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;panel17.ZOrder" xml:space="preserve">
+    <value>44</value>
+  </data>
+  <data name="&gt;&gt;label30.Name" xml:space="preserve">
+    <value>label30</value>
+  </data>
+  <data name="&gt;&gt;label30.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label30.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label30.ZOrder" xml:space="preserve">
+    <value>45</value>
+  </data>
+  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1002, 614</value>
+  </data>
+  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>听诊模拟人设置</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label59.Name" xml:space="preserve">
+    <value>label59</value>
+  </data>
+  <data name="&gt;&gt;label59.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label59.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;label59.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label58.Name" xml:space="preserve">
+    <value>label58</value>
+  </data>
+  <data name="&gt;&gt;label58.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label58.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;label58.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label57.Name" xml:space="preserve">
+    <value>label57</value>
+  </data>
+  <data name="&gt;&gt;label57.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label57.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;label57.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;button19.Name" xml:space="preserve">
+    <value>button19</value>
+  </data>
+  <data name="&gt;&gt;button19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button19.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;button19.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;button18.Name" xml:space="preserve">
+    <value>button18</value>
+  </data>
+  <data name="&gt;&gt;button18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button18.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;button18.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;button17.Name" xml:space="preserve">
+    <value>button17</value>
+  </data>
+  <data name="&gt;&gt;button17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button17.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;button17.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;label56.Name" xml:space="preserve">
+    <value>label56</value>
+  </data>
+  <data name="&gt;&gt;label56.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label56.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;label56.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;label55.Name" xml:space="preserve">
+    <value>label55</value>
+  </data>
+  <data name="&gt;&gt;label55.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label55.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;label55.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label54.Name" xml:space="preserve">
+    <value>label54</value>
+  </data>
+  <data name="&gt;&gt;label54.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label54.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;label54.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label53.Name" xml:space="preserve">
+    <value>label53</value>
+  </data>
+  <data name="&gt;&gt;label53.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label53.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;label53.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;label52.Name" xml:space="preserve">
+    <value>label52</value>
+  </data>
+  <data name="&gt;&gt;label52.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label52.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;label52.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;label51.Name" xml:space="preserve">
+    <value>label51</value>
+  </data>
+  <data name="&gt;&gt;label51.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label51.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;label51.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;label24.Name" xml:space="preserve">
+    <value>label24</value>
+  </data>
+  <data name="&gt;&gt;label24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label24.Parent" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;label24.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1002, 614</value>
+  </data>
+  <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>硬件设备连接状态</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1010, 640</value>
+  </data>
+  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1010, 643</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="脉搏.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="脉搏.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 21</value>
+  </data>
+  <data name="脉搏.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;脉搏.Name" xml:space="preserve">
+    <value>脉搏</value>
+  </data>
+  <data name="&gt;&gt;脉搏.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;脉搏.Parent" xml:space="preserve">
+    <value>panel18</value>
+  </data>
+  <data name="&gt;&gt;脉搏.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label25.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label25.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="label25.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 4</value>
+  </data>
+  <data name="label25.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 14</value>
+  </data>
+  <data name="label25.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="label25.Text" xml:space="preserve">
+    <value>次/分</value>
+  </data>
+  <data name="&gt;&gt;label25.Name" xml:space="preserve">
+    <value>label25</value>
+  </data>
+  <data name="&gt;&gt;label25.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label25.Parent" xml:space="preserve">
+    <value>panel18</value>
+  </data>
+  <data name="&gt;&gt;label25.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="反跳痛阑尾无.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="反跳痛阑尾无.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="反跳痛阑尾无.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 3</value>
+  </data>
+  <data name="反跳痛阑尾无.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 18</value>
+  </data>
+  <data name="反跳痛阑尾无.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="反跳痛阑尾无.Text" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="&gt;&gt;反跳痛阑尾无.Name" xml:space="preserve">
+    <value>反跳痛阑尾无</value>
+  </data>
+  <data name="&gt;&gt;反跳痛阑尾无.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;反跳痛阑尾无.Parent" xml:space="preserve">
+    <value>panel15</value>
+  </data>
+  <data name="&gt;&gt;反跳痛阑尾无.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="反跳痛阑尾有.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="反跳痛阑尾有.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="反跳痛阑尾有.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 3</value>
+  </data>
+  <data name="反跳痛阑尾有.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 18</value>
+  </data>
+  <data name="反跳痛阑尾有.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="反跳痛阑尾有.Text" xml:space="preserve">
+    <value>有</value>
+  </data>
+  <data name="&gt;&gt;反跳痛阑尾有.Name" xml:space="preserve">
+    <value>反跳痛阑尾有</value>
+  </data>
+  <data name="&gt;&gt;反跳痛阑尾有.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;反跳痛阑尾有.Parent" xml:space="preserve">
+    <value>panel15</value>
+  </data>
+  <data name="&gt;&gt;反跳痛阑尾有.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="反跳痛胰腺无.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="反跳痛胰腺无.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="反跳痛胰腺无.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 3</value>
+  </data>
+  <data name="反跳痛胰腺无.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 18</value>
+  </data>
+  <data name="反跳痛胰腺无.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="反跳痛胰腺无.Text" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="&gt;&gt;反跳痛胰腺无.Name" xml:space="preserve">
+    <value>反跳痛胰腺无</value>
+  </data>
+  <data name="&gt;&gt;反跳痛胰腺无.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;反跳痛胰腺无.Parent" xml:space="preserve">
+    <value>panel16</value>
+  </data>
+  <data name="&gt;&gt;反跳痛胰腺无.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="反跳痛胰腺有.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="反跳痛胰腺有.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="反跳痛胰腺有.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 3</value>
+  </data>
+  <data name="反跳痛胰腺有.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 18</value>
+  </data>
+  <data name="反跳痛胰腺有.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="反跳痛胰腺有.Text" xml:space="preserve">
+    <value>有</value>
+  </data>
+  <data name="&gt;&gt;反跳痛胰腺有.Name" xml:space="preserve">
+    <value>反跳痛胰腺有</value>
+  </data>
+  <data name="&gt;&gt;反跳痛胰腺有.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;反跳痛胰腺有.Parent" xml:space="preserve">
+    <value>panel16</value>
+  </data>
+  <data name="&gt;&gt;反跳痛胰腺有.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="反跳痛小肠无.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="反跳痛小肠无.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="反跳痛小肠无.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 3</value>
+  </data>
+  <data name="反跳痛小肠无.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 18</value>
+  </data>
+  <data name="反跳痛小肠无.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="反跳痛小肠无.Text" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="&gt;&gt;反跳痛小肠无.Name" xml:space="preserve">
+    <value>反跳痛小肠无</value>
+  </data>
+  <data name="&gt;&gt;反跳痛小肠无.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;反跳痛小肠无.Parent" xml:space="preserve">
+    <value>panel14</value>
+  </data>
+  <data name="&gt;&gt;反跳痛小肠无.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="反跳痛小肠有.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="反跳痛小肠有.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="反跳痛小肠有.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 3</value>
+  </data>
+  <data name="反跳痛小肠有.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 18</value>
+  </data>
+  <data name="反跳痛小肠有.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="反跳痛小肠有.Text" xml:space="preserve">
+    <value>有</value>
+  </data>
+  <data name="&gt;&gt;反跳痛小肠有.Name" xml:space="preserve">
+    <value>反跳痛小肠有</value>
+  </data>
+  <data name="&gt;&gt;反跳痛小肠有.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;反跳痛小肠有.Parent" xml:space="preserve">
+    <value>panel14</value>
+  </data>
+  <data name="&gt;&gt;反跳痛小肠有.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="压痛阑尾无.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="压痛阑尾无.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="压痛阑尾无.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 3</value>
+  </data>
+  <data name="压痛阑尾无.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 18</value>
+  </data>
+  <data name="压痛阑尾无.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="压痛阑尾无.Text" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="&gt;&gt;压痛阑尾无.Name" xml:space="preserve">
+    <value>压痛阑尾无</value>
+  </data>
+  <data name="&gt;&gt;压痛阑尾无.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;压痛阑尾无.Parent" xml:space="preserve">
+    <value>panel10</value>
+  </data>
+  <data name="&gt;&gt;压痛阑尾无.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="压痛阑尾有.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="压痛阑尾有.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="压痛阑尾有.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 3</value>
+  </data>
+  <data name="压痛阑尾有.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 18</value>
+  </data>
+  <data name="压痛阑尾有.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="压痛阑尾有.Text" xml:space="preserve">
+    <value>有</value>
+  </data>
+  <data name="&gt;&gt;压痛阑尾有.Name" xml:space="preserve">
+    <value>压痛阑尾有</value>
+  </data>
+  <data name="&gt;&gt;压痛阑尾有.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;压痛阑尾有.Parent" xml:space="preserve">
+    <value>panel10</value>
+  </data>
+  <data name="&gt;&gt;压痛阑尾有.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="压痛乙状结肠无.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="压痛乙状结肠无.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="压痛乙状结肠无.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 3</value>
+  </data>
+  <data name="压痛乙状结肠无.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 18</value>
+  </data>
+  <data name="压痛乙状结肠无.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="压痛乙状结肠无.Text" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="&gt;&gt;压痛乙状结肠无.Name" xml:space="preserve">
+    <value>压痛乙状结肠无</value>
+  </data>
+  <data name="&gt;&gt;压痛乙状结肠无.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;压痛乙状结肠无.Parent" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="&gt;&gt;压痛乙状结肠无.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="压痛乙状结肠有.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="压痛乙状结肠有.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="压痛乙状结肠有.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 3</value>
+  </data>
+  <data name="压痛乙状结肠有.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 18</value>
+  </data>
+  <data name="压痛乙状结肠有.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="压痛乙状结肠有.Text" xml:space="preserve">
+    <value>有 </value>
+  </data>
+  <data name="&gt;&gt;压痛乙状结肠有.Name" xml:space="preserve">
+    <value>压痛乙状结肠有</value>
+  </data>
+  <data name="&gt;&gt;压痛乙状结肠有.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;压痛乙状结肠有.Parent" xml:space="preserve">
+    <value>panel8</value>
+  </data>
+  <data name="&gt;&gt;压痛乙状结肠有.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="压痛胰腺无.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="压痛胰腺无.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="压痛胰腺无.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 3</value>
+  </data>
+  <data name="压痛胰腺无.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 18</value>
+  </data>
+  <data name="压痛胰腺无.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="压痛胰腺无.Text" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="&gt;&gt;压痛胰腺无.Name" xml:space="preserve">
+    <value>压痛胰腺无</value>
+  </data>
+  <data name="&gt;&gt;压痛胰腺无.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;压痛胰腺无.Parent" xml:space="preserve">
+    <value>panel9</value>
+  </data>
+  <data name="&gt;&gt;压痛胰腺无.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="压痛胰腺有.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="压痛胰腺有.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="压痛胰腺有.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 3</value>
+  </data>
+  <data name="压痛胰腺有.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 18</value>
+  </data>
+  <data name="压痛胰腺有.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="压痛胰腺有.Text" xml:space="preserve">
+    <value>有</value>
+  </data>
+  <data name="&gt;&gt;压痛胰腺有.Name" xml:space="preserve">
+    <value>压痛胰腺有</value>
+  </data>
+  <data name="&gt;&gt;压痛胰腺有.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;压痛胰腺有.Parent" xml:space="preserve">
+    <value>panel9</value>
+  </data>
+  <data name="&gt;&gt;压痛胰腺有.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="压痛十二指肠无.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="压痛十二指肠无.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="压痛十二指肠无.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 3</value>
+  </data>
+  <data name="压痛十二指肠无.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 18</value>
+  </data>
+  <data name="压痛十二指肠无.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="压痛十二指肠无.Text" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="&gt;&gt;压痛十二指肠无.Name" xml:space="preserve">
+    <value>压痛十二指肠无</value>
+  </data>
+  <data name="&gt;&gt;压痛十二指肠无.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;压痛十二指肠无.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;压痛十二指肠无.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="压痛十二指肠有.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="压痛十二指肠有.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="压痛十二指肠有.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 3</value>
+  </data>
+  <data name="压痛十二指肠有.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 18</value>
+  </data>
+  <data name="压痛十二指肠有.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="压痛十二指肠有.Text" xml:space="preserve">
+    <value>有</value>
+  </data>
+  <data name="&gt;&gt;压痛十二指肠有.Name" xml:space="preserve">
+    <value>压痛十二指肠有</value>
+  </data>
+  <data name="&gt;&gt;压痛十二指肠有.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;压痛十二指肠有.Parent" xml:space="preserve">
+    <value>panel11</value>
+  </data>
+  <data name="&gt;&gt;压痛十二指肠有.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="压痛小肠无.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="压痛小肠无.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="压痛小肠无.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 3</value>
+  </data>
+  <data name="压痛小肠无.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 18</value>
+  </data>
+  <data name="压痛小肠无.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="压痛小肠无.Text" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="&gt;&gt;压痛小肠无.Name" xml:space="preserve">
+    <value>压痛小肠无</value>
+  </data>
+  <data name="&gt;&gt;压痛小肠无.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;压痛小肠无.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;压痛小肠无.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="压痛小肠有.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="压痛小肠有.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="压痛小肠有.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 3</value>
+  </data>
+  <data name="压痛小肠有.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 18</value>
+  </data>
+  <data name="压痛小肠有.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="压痛小肠有.Text" xml:space="preserve">
+    <value>有</value>
+  </data>
+  <data name="&gt;&gt;压痛小肠有.Name" xml:space="preserve">
+    <value>压痛小肠有</value>
+  </data>
+  <data name="&gt;&gt;压痛小肠有.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;压痛小肠有.Parent" xml:space="preserve">
+    <value>panel7</value>
+  </data>
+  <data name="&gt;&gt;压痛小肠有.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="脾脏肿大.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="脾脏肿大.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 21</value>
+  </data>
+  <data name="脾脏肿大.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;脾脏肿大.Name" xml:space="preserve">
+    <value>脾脏肿大</value>
+  </data>
+  <data name="&gt;&gt;脾脏肿大.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;脾脏肿大.Parent" xml:space="preserve">
+    <value>panel13</value>
+  </data>
+  <data name="&gt;&gt;脾脏肿大.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 5</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 14</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>cm</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>panel13</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="肝脏肿大.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="肝脏肿大.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 21</value>
+  </data>
+  <data name="肝脏肿大.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;肝脏肿大.Name" xml:space="preserve">
+    <value>肝脏肿大</value>
+  </data>
+  <data name="&gt;&gt;肝脏肿大.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;肝脏肿大.Parent" xml:space="preserve">
+    <value>panel12</value>
+  </data>
+  <data name="&gt;&gt;肝脏肿大.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 5</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 14</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>cm</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>panel12</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="压痛胃溃疡无.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="压痛胃溃疡无.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="压痛胃溃疡无.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 3</value>
+  </data>
+  <data name="压痛胃溃疡无.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 18</value>
+  </data>
+  <data name="压痛胃溃疡无.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="压痛胃溃疡无.Text" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="&gt;&gt;压痛胃溃疡无.Name" xml:space="preserve">
+    <value>压痛胃溃疡无</value>
+  </data>
+  <data name="&gt;&gt;压痛胃溃疡无.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;压痛胃溃疡无.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;压痛胃溃疡无.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="压痛胃溃疡有.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="压痛胃溃疡有.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="压痛胃溃疡有.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 3</value>
+  </data>
+  <data name="压痛胃溃疡有.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 18</value>
+  </data>
+  <data name="压痛胃溃疡有.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="压痛胃溃疡有.Text" xml:space="preserve">
+    <value>有</value>
+  </data>
+  <data name="&gt;&gt;压痛胃溃疡有.Name" xml:space="preserve">
+    <value>压痛胃溃疡有</value>
+  </data>
+  <data name="&gt;&gt;压痛胃溃疡有.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;压痛胃溃疡有.Parent" xml:space="preserve">
+    <value>panel6</value>
+  </data>
+  <data name="&gt;&gt;压痛胃溃疡有.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="胆囊墨菲氏征阴性.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="胆囊墨菲氏征阴性.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="胆囊墨菲氏征阴性.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 2</value>
+  </data>
+  <data name="胆囊墨菲氏征阴性.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 18</value>
+  </data>
+  <data name="胆囊墨菲氏征阴性.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="胆囊墨菲氏征阴性.Text" xml:space="preserve">
+    <value>阴性</value>
+  </data>
+  <data name="&gt;&gt;胆囊墨菲氏征阴性.Name" xml:space="preserve">
+    <value>胆囊墨菲氏征阴性</value>
+  </data>
+  <data name="&gt;&gt;胆囊墨菲氏征阴性.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;胆囊墨菲氏征阴性.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;胆囊墨菲氏征阴性.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="胆囊墨菲氏征阳性.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="胆囊墨菲氏征阳性.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="胆囊墨菲氏征阳性.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 2</value>
+  </data>
+  <data name="胆囊墨菲氏征阳性.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 18</value>
+  </data>
+  <data name="胆囊墨菲氏征阳性.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="胆囊墨菲氏征阳性.Text" xml:space="preserve">
+    <value>阳性</value>
+  </data>
+  <data name="&gt;&gt;胆囊墨菲氏征阳性.Name" xml:space="preserve">
+    <value>胆囊墨菲氏征阳性</value>
+  </data>
+  <data name="&gt;&gt;胆囊墨菲氏征阳性.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;胆囊墨菲氏征阳性.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;胆囊墨菲氏征阳性.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="胆囊肿大无.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="胆囊肿大无.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="胆囊肿大无.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 3</value>
+  </data>
+  <data name="胆囊肿大无.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 18</value>
+  </data>
+  <data name="胆囊肿大无.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="胆囊肿大无.Text" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="&gt;&gt;胆囊肿大无.Name" xml:space="preserve">
+    <value>胆囊肿大无</value>
+  </data>
+  <data name="&gt;&gt;胆囊肿大无.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;胆囊肿大无.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;胆囊肿大无.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="胆囊肿大有.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="胆囊肿大有.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="胆囊肿大有.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 3</value>
+  </data>
+  <data name="胆囊肿大有.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 18</value>
+  </data>
+  <data name="胆囊肿大有.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="胆囊肿大有.Text" xml:space="preserve">
+    <value>有</value>
+  </data>
+  <data name="&gt;&gt;胆囊肿大有.Name" xml:space="preserve">
+    <value>胆囊肿大有</value>
+  </data>
+  <data name="&gt;&gt;胆囊肿大有.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;胆囊肿大有.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;胆囊肿大有.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="肝脏质地软.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="肝脏质地软.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="肝脏质地软.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 3</value>
+  </data>
+  <data name="肝脏质地软.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 18</value>
+  </data>
+  <data name="肝脏质地软.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="肝脏质地软.Text" xml:space="preserve">
+    <value>软</value>
+  </data>
+  <data name="&gt;&gt;肝脏质地软.Name" xml:space="preserve">
+    <value>肝脏质地软</value>
+  </data>
+  <data name="&gt;&gt;肝脏质地软.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;肝脏质地软.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;肝脏质地软.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="肝脏质地硬.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="肝脏质地硬.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="肝脏质地硬.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 3</value>
+  </data>
+  <data name="肝脏质地硬.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 18</value>
+  </data>
+  <data name="肝脏质地硬.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="肝脏质地硬.Text" xml:space="preserve">
+    <value>硬</value>
+  </data>
+  <data name="&gt;&gt;肝脏质地硬.Name" xml:space="preserve">
+    <value>肝脏质地硬</value>
+  </data>
+  <data name="&gt;&gt;肝脏质地硬.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;肝脏质地硬.Parent" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;肝脏质地硬.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="胆囊触痛无.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="胆囊触痛无.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="胆囊触痛无.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 3</value>
+  </data>
+  <data name="胆囊触痛无.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 18</value>
+  </data>
+  <data name="胆囊触痛无.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="胆囊触痛无.Text" xml:space="preserve">
+    <value>无</value>
+  </data>
+  <data name="&gt;&gt;胆囊触痛无.Name" xml:space="preserve">
+    <value>胆囊触痛无</value>
+  </data>
+  <data name="&gt;&gt;胆囊触痛无.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;胆囊触痛无.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;胆囊触痛无.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="胆囊触痛有.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="胆囊触痛有.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt, style=Bold</value>
+  </data>
+  <data name="胆囊触痛有.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 3</value>
+  </data>
+  <data name="胆囊触痛有.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 18</value>
+  </data>
+  <data name="胆囊触痛有.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="胆囊触痛有.Text" xml:space="preserve">
+    <value>有</value>
+  </data>
+  <data name="&gt;&gt;胆囊触痛有.Name" xml:space="preserve">
+    <value>胆囊触痛有</value>
+  </data>
+  <data name="&gt;&gt;胆囊触痛有.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;胆囊触痛有.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;胆囊触痛有.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="button16.Font" type="System.Drawing.Font, System.Drawing">
     <value>宋体, 10.5pt, style=Bold</value>
@@ -3555,6 +4746,51 @@
   <data name="&gt;&gt;label32.ZOrder" xml:space="preserve">
     <value>41</value>
   </data>
+  <data name="&gt;&gt;心尖搏动无.Name" xml:space="preserve">
+    <value>心尖搏动无</value>
+  </data>
+  <data name="&gt;&gt;心尖搏动无.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;心尖搏动无.Parent" xml:space="preserve">
+    <value>panel19</value>
+  </data>
+  <data name="&gt;&gt;心尖搏动无.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;心尖搏动有.Name" xml:space="preserve">
+    <value>心尖搏动有</value>
+  </data>
+  <data name="&gt;&gt;心尖搏动有.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;心尖搏动有.Parent" xml:space="preserve">
+    <value>panel19</value>
+  </data>
+  <data name="&gt;&gt;心尖搏动有.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>520, 38</value>
+  </data>
+  <data name="panel19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 22</value>
+  </data>
+  <data name="panel19.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;panel19.Name" xml:space="preserve">
+    <value>panel19</value>
+  </data>
+  <data name="&gt;&gt;panel19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel19.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;panel19.ZOrder" xml:space="preserve">
+    <value>42</value>
+  </data>
   <data name="心尖搏动无.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -3615,27 +4851,6 @@
   <data name="&gt;&gt;心尖搏动有.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="panel19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>520, 38</value>
-  </data>
-  <data name="panel19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 22</value>
-  </data>
-  <data name="panel19.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;panel19.Name" xml:space="preserve">
-    <value>panel19</value>
-  </data>
-  <data name="&gt;&gt;panel19.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel19.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;panel19.ZOrder" xml:space="preserve">
-    <value>42</value>
-  </data>
   <data name="label31.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -3665,6 +4880,51 @@
   </data>
   <data name="&gt;&gt;label31.ZOrder" xml:space="preserve">
     <value>43</value>
+  </data>
+  <data name="&gt;&gt;心前区震颤无.Name" xml:space="preserve">
+    <value>心前区震颤无</value>
+  </data>
+  <data name="&gt;&gt;心前区震颤无.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;心前区震颤无.Parent" xml:space="preserve">
+    <value>panel17</value>
+  </data>
+  <data name="&gt;&gt;心前区震颤无.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;心前区震颤有.Name" xml:space="preserve">
+    <value>心前区震颤有</value>
+  </data>
+  <data name="&gt;&gt;心前区震颤有.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;心前区震颤有.Parent" xml:space="preserve">
+    <value>panel17</value>
+  </data>
+  <data name="&gt;&gt;心前区震颤有.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>162, 38</value>
+  </data>
+  <data name="panel17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 22</value>
+  </data>
+  <data name="panel17.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;panel17.Name" xml:space="preserve">
+    <value>panel17</value>
+  </data>
+  <data name="&gt;&gt;panel17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel17.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;panel17.ZOrder" xml:space="preserve">
+    <value>44</value>
   </data>
   <data name="心前区震颤无.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3726,27 +4986,6 @@
   <data name="&gt;&gt;心前区震颤有.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="panel17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>162, 38</value>
-  </data>
-  <data name="panel17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 22</value>
-  </data>
-  <data name="panel17.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;panel17.Name" xml:space="preserve">
-    <value>panel17</value>
-  </data>
-  <data name="&gt;&gt;panel17.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel17.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;panel17.ZOrder" xml:space="preserve">
-    <value>44</value>
-  </data>
   <data name="label30.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -3776,33 +5015,6 @@
   </data>
   <data name="&gt;&gt;label30.ZOrder" xml:space="preserve">
     <value>45</value>
-  </data>
-  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1002, 614</value>
-  </data>
-  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tabPage2.Text" xml:space="preserve">
-    <value>听诊模拟人设置</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="label59.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4157,72 +5369,6 @@
   </data>
   <data name="&gt;&gt;label24.ZOrder" xml:space="preserve">
     <value>12</value>
-  </data>
-  <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1002, 614</value>
-  </data>
-  <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="tabPage3.Text" xml:space="preserve">
-    <value>硬件设备连接状态</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
-    <value>tabPage3</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1010, 640</value>
-  </data>
-  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1010, 643</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

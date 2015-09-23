@@ -66,6 +66,7 @@
             // 
             // button7
             // 
+            this.button7.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.button7, "button7");
             this.button7.Name = "button7";
             this.button7.UseVisualStyleBackColor = true;
@@ -219,25 +220,21 @@
             // 
             resources.ApplyResources(this.labFubCount, "labFubCount");
             this.labFubCount.Name = "labFubCount";
-            this.labFubCount.Text = "（题库共0道题）";
             // 
             // labFeibCount
             // 
             resources.ApplyResources(this.labFeibCount, "labFeibCount");
             this.labFeibCount.Name = "labFeibCount";
-            this.labFeibCount.Text = "（题库共0道题）";
             // 
             // labTzCount
             // 
             resources.ApplyResources(this.labTzCount, "labTzCount");
             this.labTzCount.Name = "labTzCount";
-            this.labTzCount.Text = "（题库共0道题）";
             // 
             // labFbCount
             // 
             resources.ApplyResources(this.labFbCount, "labFbCount");
             this.labFbCount.Name = "labFbCount";
-           
             // 
             // label3
             // 

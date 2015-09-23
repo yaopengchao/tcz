@@ -11,6 +11,7 @@ using Model;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.ComponentModel;
+using System.Drawing;
 
 namespace LoginFrame
 {
@@ -44,9 +45,30 @@ namespace LoginFrame
         public VoiceChatRoom()
         {
             InitializeComponent();
+
+            this.BackColor = Color.FromArgb(255, 208, 232, 253);
+
+            panel1.BackColor = Color.FromArgb(255, 208, 232, 253);
+
+
+            button1.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button1.ForeColor = Color.White;
+
+            btnCall.BackColor = Color.FromArgb(255, 80, 151, 228);
+            btnCall.ForeColor = Color.White;
+
+            btnEndCall.BackColor = Color.FromArgb(255, 80, 151, 228);
+            btnEndCall.ForeColor = Color.White;
+
+
+
             //取消跨线程访问空间
             Control.CheckForIllegalCrossThreadCalls = false;
-            Initialize();
+
+            if (LoginRoler.roleid == Constant.RoleStudent)
+            {
+                Initialize();
+            }
         }
 
         private void VoiceChat_Load(object sender, EventArgs e)

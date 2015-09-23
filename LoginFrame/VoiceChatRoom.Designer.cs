@@ -108,6 +108,7 @@
             // 
             // btnCall
             // 
+            this.btnCall.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.btnCall, "btnCall");
             this.btnCall.Name = "btnCall";
             this.btnCall.UseVisualStyleBackColor = true;
@@ -115,6 +116,7 @@
             // 
             // btnEndCall
             // 
+            this.btnEndCall.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.btnEndCall, "btnEndCall");
             this.btnEndCall.Name = "btnEndCall";
             this.btnEndCall.UseVisualStyleBackColor = true;
@@ -127,6 +129,7 @@
             // 
             // button1
             // 
+            this.button1.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
             this.button1.UseVisualStyleBackColor = true;

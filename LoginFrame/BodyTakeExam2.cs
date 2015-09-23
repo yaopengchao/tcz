@@ -41,6 +41,17 @@ namespace LoginFrame
         {
             InitializeComponent();
 
+            //this.BackColor = Color.FromArgb(255, 208, 232, 253);
+
+            btnPre.BackColor = Color.FromArgb(255, 80, 151, 228);
+            btnPre.ForeColor = Color.White;
+
+            btnNext.BackColor = Color.FromArgb(255, 80, 151, 228);
+            btnNext.ForeColor = Color.White;
+
+            btnSubmit.BackColor = Color.FromArgb(255, 80, 151, 228);
+            btnSubmit.ForeColor = Color.White;
+
             if (examService == null)
             {
                 examService = ExamService.getInstance();

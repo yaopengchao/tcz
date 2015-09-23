@@ -25,6 +25,13 @@ namespace LoginFrame
         public BodyScore()
         {
             InitializeComponent();
+
+            //this.BackColor = Color.FromArgb(255, 208, 232, 253);
+            btnQuery.BackColor = Color.FromArgb(255, 80, 151, 228);
+            btnClear.BackColor = Color.FromArgb(255, 80, 151, 228);
+
+            btnQuery.ForeColor = Color.White;
+            btnClear.ForeColor = Color.White;
         }
 
         private static BodyScore instance;

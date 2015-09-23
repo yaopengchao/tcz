@@ -177,12 +177,18 @@
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="panel5.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="panel5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>43, 15</value>
   </metadata>
+  <data name="menuStrip1.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="menuStrip1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Center</value>
   </data>
@@ -193,7 +199,7 @@
     <value>微软雅黑, 9pt</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 21</value>
+    <value>110, 21</value>
   </data>
   <data name="toolStripMenuItem1.Text" xml:space="preserve">
     <value>自我测试</value>
@@ -229,7 +235,7 @@
     <value>微软雅黑, 9pt</value>
   </data>
   <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 21</value>
+    <value>110, 21</value>
   </data>
   <data name="toolStripMenuItem2.Text" xml:space="preserve">
     <value>考试</value>
@@ -238,7 +244,7 @@
     <value>微软雅黑, 9pt</value>
   </data>
   <data name="考试成绩ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 21</value>
+    <value>110, 21</value>
   </data>
   <data name="考试成绩ToolStripMenuItem.Text" xml:space="preserve">
     <value>考试成绩</value>
@@ -250,7 +256,7 @@
     <value>微软雅黑, 9pt</value>
   </data>
   <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 21</value>
+    <value>110, 21</value>
   </data>
   <data name="toolStripMenuItem3.Text" xml:space="preserve">
     <value>个人资料</value>
@@ -259,7 +265,7 @@
     <value>微软雅黑, 9pt</value>
   </data>
   <data name="toolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 21</value>
+    <value>110, 21</value>
   </data>
   <data name="toolStripMenuItem4.Text" xml:space="preserve">
     <value>学员管理</value>
@@ -268,7 +274,7 @@
     <value>微软雅黑, 9pt</value>
   </data>
   <data name="toolStripMenuItem5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 21</value>
+    <value>110, 21</value>
   </data>
   <data name="toolStripMenuItem5.Text" xml:space="preserve">
     <value>教师管理</value>
@@ -277,7 +283,7 @@
     <value>微软雅黑, 9pt</value>
   </data>
   <data name="toolStripMenuItem6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 21</value>
+    <value>110, 21</value>
   </data>
   <data name="toolStripMenuItem6.Text" xml:space="preserve">
     <value>设置模拟人</value>
@@ -286,7 +292,7 @@
     <value>微软雅黑, 9pt</value>
   </data>
   <data name="toolStripMenuItem7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 21</value>
+    <value>110, 21</value>
   </data>
   <data name="toolStripMenuItem7.Text" xml:space="preserve">
     <value>云服务</value>
@@ -294,8 +300,11 @@
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="menuStrip1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 153</value>
+    <value>117, 152</value>
   </data>
   <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -316,10 +325,10 @@
     <value>0</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>878, 3</value>
+    <value>850, 3</value>
   </data>
   <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 153</value>
+    <value>123, 152</value>
   </data>
   <data name="panel5.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>

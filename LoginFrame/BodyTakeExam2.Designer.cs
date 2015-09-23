@@ -40,6 +40,9 @@
             // 
             // btnSubmit
             // 
+            this.btnSubmit.FlatAppearance.BorderSize = 0;
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmit.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSubmit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnSubmit.Location = new System.Drawing.Point(739, 453);
             this.btnSubmit.Name = "btnSubmit";
@@ -51,6 +54,9 @@
             // 
             // btnNext
             // 
+            this.btnNext.FlatAppearance.BorderSize = 0;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnNext.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnNext.Location = new System.Drawing.Point(583, 453);
             this.btnNext.Name = "btnNext";
@@ -62,6 +68,9 @@
             // 
             // btnPre
             // 
+            this.btnPre.FlatAppearance.BorderSize = 0;
+            this.btnPre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPre.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnPre.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnPre.Location = new System.Drawing.Point(477, 453);
             this.btnPre.Name = "btnPre";
@@ -84,44 +93,44 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("宋体", 16F);
+            this.label2.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label2.Location = new System.Drawing.Point(180, 454);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 22);
+            this.label2.Size = new System.Drawing.Size(54, 28);
             this.label2.TabIndex = 11;
             this.label2.Text = "答案";
             // 
             // labContent
             // 
             this.labContent.AutoSize = true;
-            this.labContent.Font = new System.Drawing.Font("宋体", 14F);
+            this.labContent.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labContent.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labContent.Location = new System.Drawing.Point(208, 61);
             this.labContent.Name = "labContent";
-            this.labContent.Size = new System.Drawing.Size(19, 19);
+            this.labContent.Size = new System.Drawing.Size(23, 25);
             this.labContent.TabIndex = 10;
             this.labContent.Text = "1";
             // 
             // labTopicOrder
             // 
             this.labTopicOrder.AutoSize = true;
-            this.labTopicOrder.Font = new System.Drawing.Font("宋体", 14F);
+            this.labTopicOrder.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labTopicOrder.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labTopicOrder.Location = new System.Drawing.Point(183, 61);
             this.labTopicOrder.Name = "labTopicOrder";
-            this.labTopicOrder.Size = new System.Drawing.Size(19, 19);
+            this.labTopicOrder.Size = new System.Drawing.Size(23, 25);
             this.labTopicOrder.TabIndex = 9;
             this.labTopicOrder.Text = "1";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("宋体", 16F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label1.Location = new System.Drawing.Point(103, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 22);
+            this.label1.Size = new System.Drawing.Size(75, 28);
             this.label1.TabIndex = 8;
             this.label1.Text = "题干：";
             // 

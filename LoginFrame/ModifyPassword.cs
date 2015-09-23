@@ -22,6 +22,17 @@ namespace LoginFrame
         public ModifyPassword()
         {
             InitializeComponent();
+
+            //this.BackColor = Color.FromArgb(255, 208, 232, 253);
+
+          
+
+            button1.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button1.ForeColor = Color.White;
+
+            button2.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button2.ForeColor = Color.White;
+
             userId = LoginRoler.userId;
             userService = UserService.getInstance();
             if (mainFram == null)

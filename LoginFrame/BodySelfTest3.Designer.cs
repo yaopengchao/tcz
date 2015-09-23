@@ -66,6 +66,7 @@
             // 
             // btnPre
             // 
+            this.btnPre.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.btnPre, "btnPre");
             this.btnPre.Name = "btnPre";
             this.btnPre.UseVisualStyleBackColor = true;
@@ -73,6 +74,7 @@
             // 
             // btnNext
             // 
+            this.btnNext.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.btnNext, "btnNext");
             this.btnNext.Name = "btnNext";
             this.btnNext.UseVisualStyleBackColor = true;
@@ -80,6 +82,7 @@
             // 
             // btnSubmit
             // 
+            this.btnSubmit.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.btnSubmit, "btnSubmit");
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.UseVisualStyleBackColor = true;

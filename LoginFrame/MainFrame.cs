@@ -16,6 +16,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO.Ports;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
+using System.Drawing;
 
 namespace LoginFrame
 {
@@ -31,6 +32,10 @@ namespace LoginFrame
         public MainFrame()
         {
             InitializeComponent();
+
+            this.BackColor = Color.FromArgb(255, 208, 232, 253);
+
+            panel6.BackColor = Color.FromArgb(255, 208, 232, 253);
 
             if (LoginRoler.language == 0)
             {
@@ -79,7 +84,6 @@ namespace LoginFrame
                 exMenu1.Visible = false;
                 exMenu3.Visible = false;
             }
-
         }
 
         /// <summary>

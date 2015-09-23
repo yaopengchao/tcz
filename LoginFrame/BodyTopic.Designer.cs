@@ -83,6 +83,7 @@
             // 
             // btnClear
             // 
+            this.btnClear.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.btnClear, "btnClear");
             this.btnClear.Name = "btnClear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -90,6 +91,7 @@
             // 
             // btnQuery
             // 
+            this.btnQuery.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.btnQuery, "btnQuery");
             this.btnQuery.Name = "btnQuery";
             this.btnQuery.UseVisualStyleBackColor = true;
@@ -107,6 +109,7 @@
             // 
             // button4
             // 
+            this.button4.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.button4, "button4");
             this.button4.Name = "button4";
             this.button4.UseVisualStyleBackColor = true;
@@ -114,6 +117,7 @@
             // 
             // button5
             // 
+            this.button5.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.button5, "button5");
             this.button5.Name = "button5";
             this.button5.UseVisualStyleBackColor = true;
@@ -121,6 +125,7 @@
             // 
             // button6
             // 
+            this.button6.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.button6, "button6");
             this.button6.Name = "button6";
             this.button6.UseVisualStyleBackColor = true;

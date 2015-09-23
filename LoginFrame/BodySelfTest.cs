@@ -30,6 +30,11 @@ namespace LoginFrame
         {
             InitializeComponent();
 
+            //this.BackColor = Color.FromArgb(255, 208, 232, 253);
+
+            button1.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button1.ForeColor = Color.White;
+
             topicCategory.Items.Clear();
             topicCategory.DataSource = Constant.getTopicType();
             topicCategory.DisplayMember = "name";

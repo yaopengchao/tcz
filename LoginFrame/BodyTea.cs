@@ -21,6 +21,24 @@ namespace LoginFrame
         public BodyTea()
         {
             InitializeComponent();
+
+            //this.BackColor = Color.FromArgb(255, 208, 232, 253);
+
+            btnQuery.BackColor = Color.FromArgb(255, 80, 151, 228);
+            btnClear.BackColor = Color.FromArgb(255, 80, 151, 228);
+           
+            button6.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button5.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button4.BackColor = Color.FromArgb(255, 80, 151, 228);
+         
+
+            btnQuery.ForeColor = Color.White;
+            btnClear.ForeColor = Color.White;
+         
+            button6.ForeColor = Color.White;
+            button5.ForeColor = Color.White;
+            button4.ForeColor = Color.White;
+         
         }
 
         private static BodyTea instance;

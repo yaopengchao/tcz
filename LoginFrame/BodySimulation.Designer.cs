@@ -360,12 +360,14 @@
             // 
             // button2
             // 
+            this.button2.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.button2, "button2");
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
+            this.button1.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
             this.button1.UseVisualStyleBackColor = true;

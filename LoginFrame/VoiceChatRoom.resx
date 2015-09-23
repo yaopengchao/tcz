@@ -117,20 +117,47 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="姓名.Text" xml:space="preserve">
-    <value>姓名</value>
+  <data name="&gt;&gt;onlineuses.Name" xml:space="preserve">
+    <value>onlineuses</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="姓名.Width" type="System.Int32, mscorlib">
-    <value>70</value>
+  <data name="&gt;&gt;onlineuses.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="IP地址.Text" xml:space="preserve">
-    <value>IP地址</value>
+  <data name="&gt;&gt;onlineuses.Parent" xml:space="preserve">
+    <value>groupBox1</value>
   </data>
-  <data name="IP地址.Width" type="System.Int32, mscorlib">
-    <value>116</value>
+  <data name="&gt;&gt;onlineuses.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="groupBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 9pt</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 152</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 293</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>可邀请在线用户</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="onlineuses.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 20</value>
   </data>
@@ -152,54 +179,21 @@
   <data name="&gt;&gt;onlineuses.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>59, 30</value>
+  <data name="姓名.Text" xml:space="preserve">
+    <value>姓名</value>
   </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 293</value>
+  <data name="姓名.Width" type="System.Int32, mscorlib">
+    <value>70</value>
   </data>
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="IP地址.Text" xml:space="preserve">
+    <value>IP地址</value>
   </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>可邀请在线用户</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="IP地址.Width" type="System.Int32, mscorlib">
+    <value>116</value>
   </data>
   <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="姓名2.Text" xml:space="preserve">
-    <value>姓名</value>
-  </data>
-  <data name="姓名2.Width" type="System.Int32, mscorlib">
-    <value>70</value>
-  </data>
-  <data name="IP地址2.Text" xml:space="preserve">
-    <value>IP地址</value>
-  </data>
-  <data name="IP地址2.Width" type="System.Int32, mscorlib">
-    <value>116</value>
-  </data>
-  <data name="chatroomusers.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 20</value>
-  </data>
-  <data name="chatroomusers.Size" type="System.Drawing.Size, System.Drawing">
-    <value>187, 267</value>
-  </data>
-  <data name="chatroomusers.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="&gt;&gt;chatroomusers.Name" xml:space="preserve">
     <value>chatroomusers</value>
   </data>
@@ -212,8 +206,11 @@
   <data name="&gt;&gt;chatroomusers.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="groupBox2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 9pt</value>
+  </data>
   <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>477, 30</value>
+    <value>627, 152</value>
   </data>
   <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 293</value>
@@ -236,8 +233,48 @@
   <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="chatroomusers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 20</value>
+  </data>
+  <data name="chatroomusers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 267</value>
+  </data>
+  <data name="chatroomusers.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;chatroomusers.Name" xml:space="preserve">
+    <value>chatroomusers</value>
+  </data>
+  <data name="&gt;&gt;chatroomusers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chatroomusers.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;chatroomusers.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="姓名2.Text" xml:space="preserve">
+    <value>姓名</value>
+  </data>
+  <data name="姓名2.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="IP地址2.Text" xml:space="preserve">
+    <value>IP地址</value>
+  </data>
+  <data name="IP地址2.Width" type="System.Int32, mscorlib">
+    <value>116</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnCall.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnCall.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 9pt</value>
+  </data>
   <data name="btnCall.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 195</value>
+    <value>431, 317</value>
   </data>
   <data name="btnCall.Size" type="System.Drawing.Size, System.Drawing">
     <value>167, 44</value>
@@ -260,8 +297,14 @@
   <data name="&gt;&gt;btnCall.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="btnEndCall.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnEndCall.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 9pt</value>
+  </data>
   <data name="btnEndCall.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 245</value>
+    <value>431, 367</value>
   </data>
   <data name="btnEndCall.Size" type="System.Drawing.Size, System.Drawing">
     <value>167, 50</value>
@@ -288,7 +331,7 @@
     <value>宋体, 9pt, style=Bold</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 30</value>
+    <value>431, 152</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>167, 20</value>
@@ -314,8 +357,14 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="button1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="button1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 9pt</value>
+  </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 150</value>
+    <value>431, 272</value>
   </data>
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>167, 39</value>
@@ -348,7 +397,7 @@
     <value>u-Law</value>
   </data>
   <data name="cmbCodecs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>353, 118</value>
+    <value>503, 240</value>
   </data>
   <data name="cmbCodecs.Size" type="System.Drawing.Size, System.Drawing">
     <value>95, 20</value>
@@ -372,7 +421,7 @@
     <value>True</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>282, 121</value>
+    <value>432, 243</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 12</value>
@@ -395,8 +444,11 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 50</value>
+    <value>431, 172</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>167, 60</value>
@@ -420,10 +472,13 @@
     <value>1</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>143, 86</value>
+    <value>0, 0</value>
+  </data>
+  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>730, 364</value>
+    <value>1010, 648</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -447,9 +502,8 @@
     <value>6, 12</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1010, 604</value>
+    <value>1010, 648</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>

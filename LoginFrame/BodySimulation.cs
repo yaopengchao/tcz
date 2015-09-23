@@ -8,6 +8,7 @@ using InTheHand.Net;
 using System.ComponentModel;
 using System.Collections.Generic;
 using System.IO.Ports;
+using System.Drawing;
 
 namespace LoginFrame
 {
@@ -20,6 +21,14 @@ namespace LoginFrame
         public BodySimulation()
         {
             InitializeComponent();
+
+            //this.BackColor = Color.FromArgb(255, 208, 232, 253);
+
+            button1.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button1.ForeColor = Color.White;
+
+            button2.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button1.ForeColor = Color.White;
         }
 
        

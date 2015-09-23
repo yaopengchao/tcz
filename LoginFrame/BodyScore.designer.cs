@@ -107,6 +107,7 @@
             // 
             // btnClear
             // 
+            this.btnClear.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.btnClear, "btnClear");
             this.btnClear.Name = "btnClear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -114,6 +115,7 @@
             // 
             // btnQuery
             // 
+            this.btnQuery.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.btnQuery, "btnQuery");
             this.btnQuery.Name = "btnQuery";
             this.btnQuery.UseVisualStyleBackColor = true;

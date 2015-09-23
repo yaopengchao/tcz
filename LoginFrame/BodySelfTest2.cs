@@ -22,6 +22,11 @@ namespace LoginFrame
         {
             InitializeComponent();
 
+            //this.BackColor = Color.FromArgb(255, 208, 232, 253);
+
+            button7.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button7.ForeColor = Color.White;
+
             if (strWheres == null)
             {
                 strWheres = new Dictionary<string, string>();
