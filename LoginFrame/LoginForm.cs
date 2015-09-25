@@ -16,6 +16,7 @@ using System.Configuration;
 using System.Collections.Generic;
 using System.Diagnostics;
 using TherapeuticApparatus.CommonMethod;
+using System.IO;
 
 namespace LoginFrame
 {
@@ -330,42 +331,48 @@ namespace LoginFrame
         private void openLocalDb()
         {
             string mySql_Version, mySql_Path;
-            //判断是否存在数据库
-            if (CheckMySql.hasInstalledMySql(out mySql_Version, out mySql_Path))
+           
+
+            if (1 == 1)
             {
-                p.Start();
+                //判断是否存在数据库
+                if (CheckMySql.hasInstalledMySql(out mySql_Version, out mySql_Path))
+                {
+                    p.Start();
 
-                //停止mysql服务
-                exeCmd("net stop MySQL");
+                    //停止mysql服务
+                    exeCmd("net stop MySQL");
+                    exeCmd("sc delete MySQL");
 
-                //进入打包好的mysql地址
-                cdDiyDBPath();
-                exeCmd("mysqld remove");
-                //安装mysql
-                exeCmd("mysqld install");
+                    //进入打包好的mysql地址
+                    cdDiyDBPath();
+                    exeCmd("bin\'mysqld-nt.exe -install");
+                    //安装mysql
+                    //exeCmd("mysqld install");
 
-                //启动mysql服务
-                exeCmd("net start MySQL");
-                Thread.Sleep(10000);
-                p.Close();
-            }
-            else
-            {
+                    //启动mysql服务
+                    exeCmd("net start MySQL");
+                    Thread.Sleep(10000);
+                    p.Close();
+                }
+                else
+                {
 
-                p.Start();
-             
-                exeCmd("net stop MySQL");
+                    p.Start();
 
-                //进入打包数据库目录
-                cdDiyDBPath();
-                //exeCmd("mysqld remove");
-                //安装mysql
-                exeCmd("mysqld install");
-                //启动mysql服务
-                exeCmd("net start MySQL");
-                Console.WriteLine("mysql启动完毕等待10秒");
-                Thread.Sleep(5000);
-                p.Close();
+                    exeCmd("net stop MySQL");
+                    exeCmd("sc delete MySQL");
+                    //进入打包数据库目录
+                    cdDiyDBPath();
+                    exeCmd("mysqld-nt.exe -install");
+                    //安装mysql
+                    //exeCmd("mysqld install");
+                    //启动mysql服务
+                    exeCmd("net start MySQL");
+                    Console.WriteLine("mysql启动完毕等待10秒");
+                    Thread.Sleep(5000);
+                    p.Close();
+                }
             }
         }
 
@@ -385,7 +392,7 @@ namespace LoginFrame
             p.StandardInput.WriteLine("cd " + curPath);
             //string dMsql = Application.StartupPath + @"/../../../MysqlInstallProj/DB/mysql-5.6.24-win32/bin";
             string mainPath = curPath.Substring(0, curPath.IndexOf("LoginFrame"));
-            mainPath += "MysqlInstallProj/DB/mysql-5.6.24-win32/bin";
+            mainPath += "MysqlInstallProj/DB/MySQL5.1/bin";
             Console.WriteLine("==========" + mainPath);
             p.StandardInput.WriteLine("cd " + mainPath);
 

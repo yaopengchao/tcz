@@ -32,87 +32,92 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.血压舒张压 = new System.Windows.Forms.TextBox();
-            this.血压收缩压 = new System.Windows.Forms.TextBox();
-            this.股动脉听诊音 = new System.Windows.Forms.TextBox();
-            this.肠鸣音 = new System.Windows.Forms.TextBox();
-            this.肾动脉听诊音 = new System.Windows.Forms.TextBox();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label223 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
             this.脉搏 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label223 = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.反跳痛阑尾无 = new System.Windows.Forms.RadioButton();
-            this.反跳痛阑尾有 = new System.Windows.Forms.RadioButton();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.反跳痛胰腺无 = new System.Windows.Forms.RadioButton();
-            this.反跳痛胰腺有 = new System.Windows.Forms.RadioButton();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.血压舒张压 = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.血压收缩压 = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.反跳痛小肠无 = new System.Windows.Forms.RadioButton();
             this.反跳痛小肠有 = new System.Windows.Forms.RadioButton();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.压痛阑尾无 = new System.Windows.Forms.RadioButton();
-            this.压痛阑尾有 = new System.Windows.Forms.RadioButton();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.压痛乙状结肠无 = new System.Windows.Forms.RadioButton();
-            this.压痛乙状结肠有 = new System.Windows.Forms.RadioButton();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.压痛胰腺无 = new System.Windows.Forms.RadioButton();
-            this.压痛胰腺有 = new System.Windows.Forms.RadioButton();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.压痛十二指肠无 = new System.Windows.Forms.RadioButton();
-            this.压痛十二指肠有 = new System.Windows.Forms.RadioButton();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.反跳痛胰腺无 = new System.Windows.Forms.RadioButton();
+            this.反跳痛胰腺有 = new System.Windows.Forms.RadioButton();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.反跳痛阑尾无 = new System.Windows.Forms.RadioButton();
+            this.反跳痛阑尾有 = new System.Windows.Forms.RadioButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.压痛小肠无 = new System.Windows.Forms.RadioButton();
             this.压痛小肠有 = new System.Windows.Forms.RadioButton();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.脾脏肿大 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.肝脏肿大 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.压痛乙状结肠无 = new System.Windows.Forms.RadioButton();
+            this.压痛乙状结肠有 = new System.Windows.Forms.RadioButton();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.压痛阑尾无 = new System.Windows.Forms.RadioButton();
+            this.压痛阑尾有 = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.压痛胃溃疡无 = new System.Windows.Forms.RadioButton();
             this.压痛胃溃疡有 = new System.Windows.Forms.RadioButton();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.胆囊墨菲氏征阴性 = new System.Windows.Forms.RadioButton();
-            this.胆囊墨菲氏征阳性 = new System.Windows.Forms.RadioButton();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.胆囊肿大无 = new System.Windows.Forms.RadioButton();
-            this.胆囊肿大有 = new System.Windows.Forms.RadioButton();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.肝脏质地软 = new System.Windows.Forms.RadioButton();
-            this.肝脏质地硬 = new System.Windows.Forms.RadioButton();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.压痛十二指肠无 = new System.Windows.Forms.RadioButton();
+            this.压痛十二指肠有 = new System.Windows.Forms.RadioButton();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.压痛胰腺无 = new System.Windows.Forms.RadioButton();
+            this.压痛胰腺有 = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.股动脉听诊音 = new System.Windows.Forms.TextBox();
+            this.肾动脉听诊音 = new System.Windows.Forms.TextBox();
+            this.肠鸣音 = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.胆囊触痛无 = new System.Windows.Forms.RadioButton();
             this.胆囊触痛有 = new System.Windows.Forms.RadioButton();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.肝脏肿大 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.脾脏肿大 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.肝脏质地软 = new System.Windows.Forms.RadioButton();
+            this.肝脏质地硬 = new System.Windows.Forms.RadioButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.胆囊肿大无 = new System.Windows.Forms.RadioButton();
+            this.胆囊肿大有 = new System.Windows.Forms.RadioButton();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.胆囊墨菲氏征阴性 = new System.Windows.Forms.RadioButton();
+            this.胆囊墨菲氏征阳性 = new System.Windows.Forms.RadioButton();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button16 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
@@ -178,39 +183,34 @@
             this.label52 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.panel18.SuspendLayout();
-            this.panel15.SuspendLayout();
-            this.panel16.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.panel14.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel11.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel12.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel17.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -242,66 +242,24 @@
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // 血压舒张压
+            // groupBox5
             // 
-            resources.ApplyResources(this.血压舒张压, "血压舒张压");
-            this.血压舒张压.Name = "血压舒张压";
+            this.groupBox5.Controls.Add(this.label223);
+            this.groupBox5.Controls.Add(this.panel18);
+            this.groupBox5.Controls.Add(this.label26);
+            this.groupBox5.Controls.Add(this.label27);
+            this.groupBox5.Controls.Add(this.label28);
+            this.groupBox5.Controls.Add(this.血压舒张压);
+            this.groupBox5.Controls.Add(this.label29);
+            this.groupBox5.Controls.Add(this.血压收缩压);
+            resources.ApplyResources(this.groupBox5, "groupBox5");
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.TabStop = false;
             // 
-            // 血压收缩压
+            // label223
             // 
-            resources.ApplyResources(this.血压收缩压, "血压收缩压");
-            this.血压收缩压.Name = "血压收缩压";
-            // 
-            // 股动脉听诊音
-            // 
-            resources.ApplyResources(this.股动脉听诊音, "股动脉听诊音");
-            this.股动脉听诊音.Name = "股动脉听诊音";
-            // 
-            // 肠鸣音
-            // 
-            resources.ApplyResources(this.肠鸣音, "肠鸣音");
-            this.肠鸣音.Name = "肠鸣音";
-            // 
-            // 肾动脉听诊音
-            // 
-            resources.ApplyResources(this.肾动脉听诊音, "肾动脉听诊音");
-            this.肾动脉听诊音.Name = "肾动脉听诊音";
-            // 
-            // label50
-            // 
-            resources.ApplyResources(this.label50, "label50");
-            this.label50.Name = "label50";
-            // 
-            // label49
-            // 
-            resources.ApplyResources(this.label49, "label49");
-            this.label49.Name = "label49";
-            // 
-            // label48
-            // 
-            resources.ApplyResources(this.label48, "label48");
-            this.label48.Name = "label48";
-            // 
-            // label29
-            // 
-            resources.ApplyResources(this.label29, "label29");
-            this.label29.Name = "label29";
-            this.label29.Click += new System.EventHandler(this.label29_Click);
-            // 
-            // label28
-            // 
-            resources.ApplyResources(this.label28, "label28");
-            this.label28.Name = "label28";
-            // 
-            // label27
-            // 
-            resources.ApplyResources(this.label27, "label27");
-            this.label27.Name = "label27";
-            // 
-            // label26
-            // 
-            resources.ApplyResources(this.label26, "label26");
-            this.label26.Name = "label26";
+            resources.ApplyResources(this.label223, "label223");
+            this.label223.Name = "label223";
             // 
             // panel18
             // 
@@ -320,67 +278,63 @@
             resources.ApplyResources(this.label25, "label25");
             this.label25.Name = "label25";
             // 
-            // button2
+            // label26
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.label26, "label26");
+            this.label26.Name = "label26";
             // 
-            // button1
+            // label27
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            resources.ApplyResources(this.label27, "label27");
+            this.label27.Name = "label27";
             // 
-            // label223
+            // label28
             // 
-            resources.ApplyResources(this.label223, "label223");
-            this.label223.Name = "label223";
+            resources.ApplyResources(this.label28, "label28");
+            this.label28.Name = "label28";
             // 
-            // panel15
+            // 血压舒张压
             // 
-            this.panel15.Controls.Add(this.反跳痛阑尾无);
-            this.panel15.Controls.Add(this.反跳痛阑尾有);
-            resources.ApplyResources(this.panel15, "panel15");
-            this.panel15.Name = "panel15";
+            resources.ApplyResources(this.血压舒张压, "血压舒张压");
+            this.血压舒张压.Name = "血压舒张压";
             // 
-            // 反跳痛阑尾无
+            // label29
             // 
-            resources.ApplyResources(this.反跳痛阑尾无, "反跳痛阑尾无");
-            this.反跳痛阑尾无.Name = "反跳痛阑尾无";
-            this.反跳痛阑尾无.TabStop = true;
-            this.反跳痛阑尾无.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.label29, "label29");
+            this.label29.Name = "label29";
+            this.label29.Click += new System.EventHandler(this.label29_Click);
             // 
-            // 反跳痛阑尾有
+            // 血压收缩压
             // 
-            resources.ApplyResources(this.反跳痛阑尾有, "反跳痛阑尾有");
-            this.反跳痛阑尾有.Name = "反跳痛阑尾有";
-            this.反跳痛阑尾有.TabStop = true;
-            this.反跳痛阑尾有.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.血压收缩压, "血压收缩压");
+            this.血压收缩压.Name = "血压收缩压";
             // 
-            // panel16
+            // groupBox4
             // 
-            this.panel16.Controls.Add(this.反跳痛胰腺无);
-            this.panel16.Controls.Add(this.反跳痛胰腺有);
-            resources.ApplyResources(this.panel16, "panel16");
-            this.panel16.Name = "panel16";
+            this.groupBox4.Controls.Add(this.label21);
+            this.groupBox4.Controls.Add(this.label22);
+            this.groupBox4.Controls.Add(this.label23);
+            this.groupBox4.Controls.Add(this.panel14);
+            this.groupBox4.Controls.Add(this.panel16);
+            this.groupBox4.Controls.Add(this.panel15);
+            resources.ApplyResources(this.groupBox4, "groupBox4");
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.TabStop = false;
             // 
-            // 反跳痛胰腺无
+            // label21
             // 
-            resources.ApplyResources(this.反跳痛胰腺无, "反跳痛胰腺无");
-            this.反跳痛胰腺无.Name = "反跳痛胰腺无";
-            this.反跳痛胰腺无.TabStop = true;
-            this.反跳痛胰腺无.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.label21, "label21");
+            this.label21.Name = "label21";
             // 
-            // 反跳痛胰腺有
+            // label22
             // 
-            resources.ApplyResources(this.反跳痛胰腺有, "反跳痛胰腺有");
-            this.反跳痛胰腺有.Name = "反跳痛胰腺有";
-            this.反跳痛胰腺有.TabStop = true;
-            this.反跳痛胰腺有.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.label22, "label22");
+            this.label22.Name = "label22";
+            // 
+            // label23
+            // 
+            resources.ApplyResources(this.label23, "label23");
+            this.label23.Name = "label23";
             // 
             // panel14
             // 
@@ -403,119 +357,80 @@
             this.反跳痛小肠有.TabStop = true;
             this.反跳痛小肠有.UseVisualStyleBackColor = true;
             // 
-            // label23
+            // panel16
             // 
-            resources.ApplyResources(this.label23, "label23");
-            this.label23.Name = "label23";
+            this.panel16.Controls.Add(this.反跳痛胰腺无);
+            this.panel16.Controls.Add(this.反跳痛胰腺有);
+            resources.ApplyResources(this.panel16, "panel16");
+            this.panel16.Name = "panel16";
             // 
-            // label22
+            // 反跳痛胰腺无
             // 
-            resources.ApplyResources(this.label22, "label22");
-            this.label22.Name = "label22";
+            resources.ApplyResources(this.反跳痛胰腺无, "反跳痛胰腺无");
+            this.反跳痛胰腺无.Name = "反跳痛胰腺无";
+            this.反跳痛胰腺无.TabStop = true;
+            this.反跳痛胰腺无.UseVisualStyleBackColor = true;
             // 
-            // label21
+            // 反跳痛胰腺有
             // 
-            resources.ApplyResources(this.label21, "label21");
-            this.label21.Name = "label21";
+            resources.ApplyResources(this.反跳痛胰腺有, "反跳痛胰腺有");
+            this.反跳痛胰腺有.Name = "反跳痛胰腺有";
+            this.反跳痛胰腺有.TabStop = true;
+            this.反跳痛胰腺有.UseVisualStyleBackColor = true;
             // 
-            // label19
+            // panel15
             // 
-            resources.ApplyResources(this.label19, "label19");
-            this.label19.Name = "label19";
+            this.panel15.Controls.Add(this.反跳痛阑尾无);
+            this.panel15.Controls.Add(this.反跳痛阑尾有);
+            resources.ApplyResources(this.panel15, "panel15");
+            this.panel15.Name = "panel15";
             // 
-            // label18
+            // 反跳痛阑尾无
             // 
-            resources.ApplyResources(this.label18, "label18");
-            this.label18.Name = "label18";
+            resources.ApplyResources(this.反跳痛阑尾无, "反跳痛阑尾无");
+            this.反跳痛阑尾无.Name = "反跳痛阑尾无";
+            this.反跳痛阑尾无.TabStop = true;
+            this.反跳痛阑尾无.UseVisualStyleBackColor = true;
             // 
-            // label17
+            // 反跳痛阑尾有
             // 
-            resources.ApplyResources(this.label17, "label17");
-            this.label17.Name = "label17";
+            resources.ApplyResources(this.反跳痛阑尾有, "反跳痛阑尾有");
+            this.反跳痛阑尾有.Name = "反跳痛阑尾有";
+            this.反跳痛阑尾有.TabStop = true;
+            this.反跳痛阑尾有.UseVisualStyleBackColor = true;
             // 
-            // panel10
+            // groupBox3
             // 
-            this.panel10.Controls.Add(this.压痛阑尾无);
-            this.panel10.Controls.Add(this.压痛阑尾有);
-            resources.ApplyResources(this.panel10, "panel10");
-            this.panel10.Name = "panel10";
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.panel7);
+            this.groupBox3.Controls.Add(this.panel8);
+            this.groupBox3.Controls.Add(this.panel10);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.panel6);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.panel11);
+            this.groupBox3.Controls.Add(this.panel9);
+            resources.ApplyResources(this.groupBox3, "groupBox3");
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.TabStop = false;
             // 
-            // 压痛阑尾无
+            // label13
             // 
-            resources.ApplyResources(this.压痛阑尾无, "压痛阑尾无");
-            this.压痛阑尾无.Name = "压痛阑尾无";
-            this.压痛阑尾无.TabStop = true;
-            this.压痛阑尾无.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.Name = "label13";
             // 
-            // 压痛阑尾有
+            // label14
             // 
-            resources.ApplyResources(this.压痛阑尾有, "压痛阑尾有");
-            this.压痛阑尾有.Name = "压痛阑尾有";
-            this.压痛阑尾有.TabStop = true;
-            this.压痛阑尾有.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.label14, "label14");
+            this.label14.Name = "label14";
             // 
-            // panel8
+            // label15
             // 
-            this.panel8.Controls.Add(this.压痛乙状结肠无);
-            this.panel8.Controls.Add(this.压痛乙状结肠有);
-            resources.ApplyResources(this.panel8, "panel8");
-            this.panel8.Name = "panel8";
-            // 
-            // 压痛乙状结肠无
-            // 
-            resources.ApplyResources(this.压痛乙状结肠无, "压痛乙状结肠无");
-            this.压痛乙状结肠无.Name = "压痛乙状结肠无";
-            this.压痛乙状结肠无.TabStop = true;
-            this.压痛乙状结肠无.UseVisualStyleBackColor = true;
-            // 
-            // 压痛乙状结肠有
-            // 
-            resources.ApplyResources(this.压痛乙状结肠有, "压痛乙状结肠有");
-            this.压痛乙状结肠有.Name = "压痛乙状结肠有";
-            this.压痛乙状结肠有.TabStop = true;
-            this.压痛乙状结肠有.UseVisualStyleBackColor = true;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.压痛胰腺无);
-            this.panel9.Controls.Add(this.压痛胰腺有);
-            resources.ApplyResources(this.panel9, "panel9");
-            this.panel9.Name = "panel9";
-            // 
-            // 压痛胰腺无
-            // 
-            resources.ApplyResources(this.压痛胰腺无, "压痛胰腺无");
-            this.压痛胰腺无.Name = "压痛胰腺无";
-            this.压痛胰腺无.TabStop = true;
-            this.压痛胰腺无.UseVisualStyleBackColor = true;
-            // 
-            // 压痛胰腺有
-            // 
-            resources.ApplyResources(this.压痛胰腺有, "压痛胰腺有");
-            this.压痛胰腺有.Name = "压痛胰腺有";
-            this.压痛胰腺有.TabStop = true;
-            this.压痛胰腺有.UseVisualStyleBackColor = true;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.压痛十二指肠无);
-            this.panel11.Controls.Add(this.压痛十二指肠有);
-            resources.ApplyResources(this.panel11, "panel11");
-            this.panel11.Name = "panel11";
-            // 
-            // 压痛十二指肠无
-            // 
-            resources.ApplyResources(this.压痛十二指肠无, "压痛十二指肠无");
-            this.压痛十二指肠无.Name = "压痛十二指肠无";
-            this.压痛十二指肠无.TabStop = true;
-            this.压痛十二指肠无.UseVisualStyleBackColor = true;
-            // 
-            // 压痛十二指肠有
-            // 
-            resources.ApplyResources(this.压痛十二指肠有, "压痛十二指肠有");
-            this.压痛十二指肠有.Name = "压痛十二指肠有";
-            this.压痛十二指肠有.TabStop = true;
-            this.压痛十二指肠有.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.label15, "label15");
+            this.label15.Name = "label15";
             // 
             // panel7
             // 
@@ -538,64 +453,57 @@
             this.压痛小肠有.TabStop = true;
             this.压痛小肠有.UseVisualStyleBackColor = true;
             // 
-            // panel13
+            // panel8
             // 
-            this.panel13.Controls.Add(this.脾脏肿大);
-            this.panel13.Controls.Add(this.label5);
-            resources.ApplyResources(this.panel13, "panel13");
-            this.panel13.Name = "panel13";
+            this.panel8.Controls.Add(this.压痛乙状结肠无);
+            this.panel8.Controls.Add(this.压痛乙状结肠有);
+            resources.ApplyResources(this.panel8, "panel8");
+            this.panel8.Name = "panel8";
             // 
-            // 脾脏肿大
+            // 压痛乙状结肠无
             // 
-            resources.ApplyResources(this.脾脏肿大, "脾脏肿大");
-            this.脾脏肿大.Name = "脾脏肿大";
+            resources.ApplyResources(this.压痛乙状结肠无, "压痛乙状结肠无");
+            this.压痛乙状结肠无.Name = "压痛乙状结肠无";
+            this.压痛乙状结肠无.TabStop = true;
+            this.压痛乙状结肠无.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // 压痛乙状结肠有
             // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
+            resources.ApplyResources(this.压痛乙状结肠有, "压痛乙状结肠有");
+            this.压痛乙状结肠有.Name = "压痛乙状结肠有";
+            this.压痛乙状结肠有.TabStop = true;
+            this.压痛乙状结肠有.UseVisualStyleBackColor = true;
             // 
-            // panel12
+            // panel10
             // 
-            this.panel12.Controls.Add(this.肝脏肿大);
-            this.panel12.Controls.Add(this.label4);
-            resources.ApplyResources(this.panel12, "panel12");
-            this.panel12.Name = "panel12";
+            this.panel10.Controls.Add(this.压痛阑尾无);
+            this.panel10.Controls.Add(this.压痛阑尾有);
+            resources.ApplyResources(this.panel10, "panel10");
+            this.panel10.Name = "panel10";
             // 
-            // 肝脏肿大
+            // 压痛阑尾无
             // 
-            resources.ApplyResources(this.肝脏肿大, "肝脏肿大");
-            this.肝脏肿大.Name = "肝脏肿大";
+            resources.ApplyResources(this.压痛阑尾无, "压痛阑尾无");
+            this.压痛阑尾无.Name = "压痛阑尾无";
+            this.压痛阑尾无.TabStop = true;
+            this.压痛阑尾无.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // 压痛阑尾有
             // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
-            // 
-            // label15
-            // 
-            resources.ApplyResources(this.label15, "label15");
-            this.label15.Name = "label15";
-            // 
-            // label14
-            // 
-            resources.ApplyResources(this.label14, "label14");
-            this.label14.Name = "label14";
-            // 
-            // label13
-            // 
-            resources.ApplyResources(this.label13, "label13");
-            this.label13.Name = "label13";
+            resources.ApplyResources(this.压痛阑尾有, "压痛阑尾有");
+            this.压痛阑尾有.Name = "压痛阑尾有";
+            this.压痛阑尾有.TabStop = true;
+            this.压痛阑尾有.UseVisualStyleBackColor = true;
             // 
             // label12
             // 
             resources.ApplyResources(this.label12, "label12");
             this.label12.Name = "label12";
             // 
-            // label11
+            // label10
             // 
-            resources.ApplyResources(this.label11, "label11");
-            this.label11.Name = "label11";
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.Name = "label10";
             // 
             // panel6
             // 
@@ -618,36 +526,231 @@
             this.压痛胃溃疡有.TabStop = true;
             this.压痛胃溃疡有.UseVisualStyleBackColor = true;
             // 
-            // label10
+            // label11
             // 
-            resources.ApplyResources(this.label10, "label10");
-            this.label10.Name = "label10";
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
             // 
-            // panel5
+            // panel11
             // 
-            this.panel5.Controls.Add(this.胆囊墨菲氏征阴性);
-            this.panel5.Controls.Add(this.胆囊墨菲氏征阳性);
-            resources.ApplyResources(this.panel5, "panel5");
-            this.panel5.Name = "panel5";
+            this.panel11.Controls.Add(this.压痛十二指肠无);
+            this.panel11.Controls.Add(this.压痛十二指肠有);
+            resources.ApplyResources(this.panel11, "panel11");
+            this.panel11.Name = "panel11";
             // 
-            // 胆囊墨菲氏征阴性
+            // 压痛十二指肠无
             // 
-            resources.ApplyResources(this.胆囊墨菲氏征阴性, "胆囊墨菲氏征阴性");
-            this.胆囊墨菲氏征阴性.Name = "胆囊墨菲氏征阴性";
-            this.胆囊墨菲氏征阴性.TabStop = true;
-            this.胆囊墨菲氏征阴性.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.压痛十二指肠无, "压痛十二指肠无");
+            this.压痛十二指肠无.Name = "压痛十二指肠无";
+            this.压痛十二指肠无.TabStop = true;
+            this.压痛十二指肠无.UseVisualStyleBackColor = true;
             // 
-            // 胆囊墨菲氏征阳性
+            // 压痛十二指肠有
             // 
-            resources.ApplyResources(this.胆囊墨菲氏征阳性, "胆囊墨菲氏征阳性");
-            this.胆囊墨菲氏征阳性.Name = "胆囊墨菲氏征阳性";
-            this.胆囊墨菲氏征阳性.TabStop = true;
-            this.胆囊墨菲氏征阳性.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.压痛十二指肠有, "压痛十二指肠有");
+            this.压痛十二指肠有.Name = "压痛十二指肠有";
+            this.压痛十二指肠有.TabStop = true;
+            this.压痛十二指肠有.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // panel9
             // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.Name = "label8";
+            this.panel9.Controls.Add(this.压痛胰腺无);
+            this.panel9.Controls.Add(this.压痛胰腺有);
+            resources.ApplyResources(this.panel9, "panel9");
+            this.panel9.Name = "panel9";
+            // 
+            // 压痛胰腺无
+            // 
+            resources.ApplyResources(this.压痛胰腺无, "压痛胰腺无");
+            this.压痛胰腺无.Name = "压痛胰腺无";
+            this.压痛胰腺无.TabStop = true;
+            this.压痛胰腺无.UseVisualStyleBackColor = true;
+            // 
+            // 压痛胰腺有
+            // 
+            resources.ApplyResources(this.压痛胰腺有, "压痛胰腺有");
+            this.压痛胰腺有.Name = "压痛胰腺有";
+            this.压痛胰腺有.TabStop = true;
+            this.压痛胰腺有.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Controls.Add(this.label18);
+            this.groupBox2.Controls.Add(this.label19);
+            this.groupBox2.Controls.Add(this.股动脉听诊音);
+            this.groupBox2.Controls.Add(this.肾动脉听诊音);
+            this.groupBox2.Controls.Add(this.肠鸣音);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.TabStop = false;
+            // 
+            // label17
+            // 
+            resources.ApplyResources(this.label17, "label17");
+            this.label17.Name = "label17";
+            // 
+            // label18
+            // 
+            resources.ApplyResources(this.label18, "label18");
+            this.label18.Name = "label18";
+            // 
+            // label19
+            // 
+            resources.ApplyResources(this.label19, "label19");
+            this.label19.Name = "label19";
+            // 
+            // 股动脉听诊音
+            // 
+            resources.ApplyResources(this.股动脉听诊音, "股动脉听诊音");
+            this.股动脉听诊音.Name = "股动脉听诊音";
+            // 
+            // 肾动脉听诊音
+            // 
+            resources.ApplyResources(this.肾动脉听诊音, "肾动脉听诊音");
+            this.肾动脉听诊音.Name = "肾动脉听诊音";
+            // 
+            // 肠鸣音
+            // 
+            resources.ApplyResources(this.肠鸣音, "肠鸣音");
+            this.肠鸣音.Name = "肠鸣音";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.panel2);
+            this.groupBox1.Controls.Add(this.panel12);
+            this.groupBox1.Controls.Add(this.panel13);
+            this.groupBox1.Controls.Add(this.label50);
+            this.groupBox1.Controls.Add(this.label48);
+            this.groupBox1.Controls.Add(this.label49);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.panel3);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.panel4);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.panel5);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.胆囊触痛无);
+            this.panel2.Controls.Add(this.胆囊触痛有);
+            resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Name = "panel2";
+            // 
+            // 胆囊触痛无
+            // 
+            resources.ApplyResources(this.胆囊触痛无, "胆囊触痛无");
+            this.胆囊触痛无.Name = "胆囊触痛无";
+            this.胆囊触痛无.TabStop = true;
+            this.胆囊触痛无.UseVisualStyleBackColor = true;
+            // 
+            // 胆囊触痛有
+            // 
+            resources.ApplyResources(this.胆囊触痛有, "胆囊触痛有");
+            this.胆囊触痛有.Name = "胆囊触痛有";
+            this.胆囊触痛有.TabStop = true;
+            this.胆囊触痛有.UseVisualStyleBackColor = true;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.肝脏肿大);
+            this.panel12.Controls.Add(this.label4);
+            resources.ApplyResources(this.panel12, "panel12");
+            this.panel12.Name = "panel12";
+            // 
+            // 肝脏肿大
+            // 
+            resources.ApplyResources(this.肝脏肿大, "肝脏肿大");
+            this.肝脏肿大.Name = "肝脏肿大";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.脾脏肿大);
+            this.panel13.Controls.Add(this.label5);
+            resources.ApplyResources(this.panel13, "panel13");
+            this.panel13.Name = "panel13";
+            // 
+            // 脾脏肿大
+            // 
+            resources.ApplyResources(this.脾脏肿大, "脾脏肿大");
+            this.脾脏肿大.Name = "脾脏肿大";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // label50
+            // 
+            resources.ApplyResources(this.label50, "label50");
+            this.label50.Name = "label50";
+            // 
+            // label48
+            // 
+            resources.ApplyResources(this.label48, "label48");
+            this.label48.Name = "label48";
+            // 
+            // label49
+            // 
+            resources.ApplyResources(this.label49, "label49");
+            this.label49.Name = "label49";
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.肝脏质地软);
+            this.panel3.Controls.Add(this.肝脏质地硬);
+            resources.ApplyResources(this.panel3, "panel3");
+            this.panel3.Name = "panel3";
+            // 
+            // 肝脏质地软
+            // 
+            resources.ApplyResources(this.肝脏质地软, "肝脏质地软");
+            this.肝脏质地软.Name = "肝脏质地软";
+            this.肝脏质地软.TabStop = true;
+            this.肝脏质地软.UseVisualStyleBackColor = true;
+            // 
+            // 肝脏质地硬
+            // 
+            resources.ApplyResources(this.肝脏质地硬, "肝脏质地硬");
+            this.肝脏质地硬.Name = "肝脏质地硬";
+            this.肝脏质地硬.TabStop = true;
+            this.肝脏质地硬.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
             // 
             // panel4
             // 
@@ -671,72 +774,46 @@
             this.胆囊肿大有.TabStop = true;
             this.胆囊肿大有.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // label8
             // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.Name = "label7";
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
             // 
-            // panel3
+            // panel5
             // 
-            this.panel3.Controls.Add(this.肝脏质地软);
-            this.panel3.Controls.Add(this.肝脏质地硬);
-            resources.ApplyResources(this.panel3, "panel3");
-            this.panel3.Name = "panel3";
+            this.panel5.Controls.Add(this.胆囊墨菲氏征阴性);
+            this.panel5.Controls.Add(this.胆囊墨菲氏征阳性);
+            resources.ApplyResources(this.panel5, "panel5");
+            this.panel5.Name = "panel5";
             // 
-            // 肝脏质地软
+            // 胆囊墨菲氏征阴性
             // 
-            resources.ApplyResources(this.肝脏质地软, "肝脏质地软");
-            this.肝脏质地软.Name = "肝脏质地软";
-            this.肝脏质地软.TabStop = true;
-            this.肝脏质地软.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.胆囊墨菲氏征阴性, "胆囊墨菲氏征阴性");
+            this.胆囊墨菲氏征阴性.Name = "胆囊墨菲氏征阴性";
+            this.胆囊墨菲氏征阴性.TabStop = true;
+            this.胆囊墨菲氏征阴性.UseVisualStyleBackColor = true;
             // 
-            // 肝脏质地硬
+            // 胆囊墨菲氏征阳性
             // 
-            resources.ApplyResources(this.肝脏质地硬, "肝脏质地硬");
-            this.肝脏质地硬.Name = "肝脏质地硬";
-            this.肝脏质地硬.TabStop = true;
-            this.肝脏质地硬.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.胆囊墨菲氏征阳性, "胆囊墨菲氏征阳性");
+            this.胆囊墨菲氏征阳性.Name = "胆囊墨菲氏征阳性";
+            this.胆囊墨菲氏征阳性.TabStop = true;
+            this.胆囊墨菲氏征阳性.UseVisualStyleBackColor = true;
             // 
-            // panel2
+            // button2
             // 
-            this.panel2.Controls.Add(this.胆囊触痛无);
-            this.panel2.Controls.Add(this.胆囊触痛有);
-            resources.ApplyResources(this.panel2, "panel2");
-            this.panel2.Name = "panel2";
+            this.button2.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // 胆囊触痛无
+            // button1
             // 
-            resources.ApplyResources(this.胆囊触痛无, "胆囊触痛无");
-            this.胆囊触痛无.Name = "胆囊触痛无";
-            this.胆囊触痛无.TabStop = true;
-            this.胆囊触痛无.UseVisualStyleBackColor = true;
-            // 
-            // 胆囊触痛有
-            // 
-            resources.ApplyResources(this.胆囊触痛有, "胆囊触痛有");
-            this.胆囊触痛有.Name = "胆囊触痛有";
-            this.胆囊触痛有.TabStop = true;
-            this.胆囊触痛有.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            this.button1.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tabPage2
             // 
@@ -1160,83 +1237,6 @@
             resources.ApplyResources(this.label24, "label24");
             this.label24.Name = "label24";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.panel2);
-            this.groupBox1.Controls.Add(this.panel12);
-            this.groupBox1.Controls.Add(this.panel13);
-            this.groupBox1.Controls.Add(this.label50);
-            this.groupBox1.Controls.Add(this.label48);
-            this.groupBox1.Controls.Add(this.label49);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.panel3);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.panel4);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.panel5);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.TabStop = false;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Controls.Add(this.股动脉听诊音);
-            this.groupBox2.Controls.Add(this.肾动脉听诊音);
-            this.groupBox2.Controls.Add(this.肠鸣音);
-            resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.TabStop = false;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.panel7);
-            this.groupBox3.Controls.Add(this.panel8);
-            this.groupBox3.Controls.Add(this.panel10);
-            this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.panel6);
-            this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.panel11);
-            this.groupBox3.Controls.Add(this.panel9);
-            resources.ApplyResources(this.groupBox3, "groupBox3");
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.TabStop = false;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.label21);
-            this.groupBox4.Controls.Add(this.label22);
-            this.groupBox4.Controls.Add(this.label23);
-            this.groupBox4.Controls.Add(this.panel14);
-            this.groupBox4.Controls.Add(this.panel16);
-            this.groupBox4.Controls.Add(this.panel15);
-            resources.ApplyResources(this.groupBox4, "groupBox4");
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.TabStop = false;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.label223);
-            this.groupBox5.Controls.Add(this.panel18);
-            this.groupBox5.Controls.Add(this.label26);
-            this.groupBox5.Controls.Add(this.label27);
-            this.groupBox5.Controls.Add(this.label28);
-            this.groupBox5.Controls.Add(this.血压舒张压);
-            this.groupBox5.Controls.Add(this.label29);
-            this.groupBox5.Controls.Add(this.血压收缩压);
-            resources.ApplyResources(this.groupBox5, "groupBox5");
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.TabStop = false;
-            // 
             // BodySimulation
             // 
             resources.ApplyResources(this, "$this");
@@ -1248,38 +1248,48 @@
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
-            this.panel16.ResumeLayout(false);
-            this.panel16.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.panel19.ResumeLayout(false);
@@ -1288,16 +1298,6 @@
             this.panel17.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
