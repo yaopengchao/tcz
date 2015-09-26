@@ -62,7 +62,7 @@ namespace LoginFrame
         {
             //将当前索引的文字直接赋值到标题就可以了，所以只需要关注TAB的中文名称即可
             //Console.WriteLine(this.tabControl1.SelectedTab.Text);
-            titleSimulation.label1.Text = this.tabControl1.SelectedTab.Text;
+            //titleSimulation.label1.Text = this.tabControl1.SelectedTab.Text;
         }
 
         private void label29_Click(object sender, EventArgs e)
@@ -84,7 +84,7 @@ namespace LoginFrame
             //持久化
             if (simulationService.add触诊人设置(_触诊模拟人, LoginRoler.login_id))
             {
-                sendCzSettings(_触诊模拟人);
+                //sendCzSettings(_触诊模拟人);
                 MessageBox.Show("设置成功!");
             }else{
                 MessageBox.Show("设置失败!");
@@ -756,7 +756,7 @@ namespace LoginFrame
             //持久化
             if (simulationService.add听诊人设置(_听诊模拟人, LoginRoler.login_id))
             {
-                sendCzSettings(_听诊模拟人);
+                //sendCzSettings(_听诊模拟人);
                 MessageBox.Show("设置成功!");
             }
             else
