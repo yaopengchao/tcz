@@ -117,14 +117,14 @@ namespace LoginFrame
             string dateTimePicker1 = this.dateTimePicker1.Value.ToString("yyyy-MM-dd");
             if (dateTimePicker1 != null && !dateTimePicker1.Equals(""))
             {
-                strWheres.Add(" t2.start_time", " >= '" + dateTimePicker1 + "  00:00:00' ");
+                strWheres.Add(" t2.start_time", " >= '" + dateTimePicker1 + " 00:00:00' ");
             }
 
             //
             string dateTimePicker2 = this.dateTimePicker2.Value.ToString("yyyy-MM-dd");
             if (dateTimePicker2 != null && !dateTimePicker2.Equals(""))
             {
-                strWheres.Add(" t2.start_time    ", " <= '" + dateTimePicker2 + "  23:59:59' ");
+                strWheres.Add(" t2.start_time    ", " <= '" + dateTimePicker2 + " 23:59:59' ");
             }
 
             loadCount(strWheres);

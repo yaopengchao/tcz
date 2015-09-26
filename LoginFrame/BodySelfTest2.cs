@@ -148,9 +148,9 @@ namespace LoginFrame
                 Examination exam = new Examination();
                 exam.ExamCat = topicType;
                 DateTime dt = DateTime.Now;
-                exam.ExamName = dt.ToString("yyyy-MM-dd HH:mm") + LoginRoler.username + "的自我测试";
+                exam.ExamName = dt.ToString("yyyy-MM-dd HH:mm:ss") + LoginRoler.username + "的自我测试";
                 exam.ExType = "2";
-                exam.StartTime = dt.ToString("yyyy-MM-dd HH:mm");
+                exam.StartTime = dt.ToString("yyyy-MM-dd HH:mm:ss");
                 string topicIds = getRandomTopicIds(xz, xzList);
                 topicIds += getRandomTopicIds(feib, feibList);
                 topicIds += getRandomTopicIds(fub, fubList);

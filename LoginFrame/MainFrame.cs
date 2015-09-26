@@ -132,7 +132,7 @@ namespace LoginFrame
             p.StartInfo.RedirectStandardOutput = true;
             p.StartInfo.CreateNoWindow = true;
 
-            connectBluetooth();//连接串口蓝牙
+            //connectBluetooth();//连接串口蓝牙
 
             //只要不是老师你就要进去后搜索是否有语音邀请对话
             if (LoginRoler.roleid != Constant.RoleTeacher)
