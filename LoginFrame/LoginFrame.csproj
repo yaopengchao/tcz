@@ -561,14 +561,8 @@
     <Content Include="DLLS\MySql.Web.dll" />
     <Content Include="DLLS\System.ServiceProcess.dll" />
     <Content Include="icon\favicon.ico" />
-    <Content Include="lessons\1.swf" />
-    <Content Include="lessons\2.swf" />
-    <Content Include="lessons\3.swf" />
-    <Content Include="lessons\1.mp3" />
-    <Content Include="lessons\3.mp3" />
-    <Content Include="lessons\2.mp3" />
-    <Content Include="lessons\19.swf" />
     <Content Include="lessons\YouAreMySunshine.wav" />
+    <Content Include="lessons\正常呼吸音.swf" />
     <Content Include="pic\combobox.png" />
     <Content Include="pic\next.png" />
     <Content Include="pic\NoImage.jpg" />
