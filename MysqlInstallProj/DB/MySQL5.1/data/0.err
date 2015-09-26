@@ -373,3 +373,7 @@ Version: '5.1.28-rc-community'  socket: ''  port: 3306  MySQL Community Server (
 
 150926  9:59:40 [Note] MySQL: Shutdown complete
 
+150926 10:06:37 [Note] Plugin 'InnoDB' disabled by command line option
+150926 10:06:37 [Note] Event Scheduler: Loaded 0 events
+150926 10:06:37 [Note] MySQL: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 3306  MySQL Community Server (GPL)

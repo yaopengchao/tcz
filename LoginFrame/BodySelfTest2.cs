@@ -150,6 +150,7 @@ namespace LoginFrame
                 DateTime dt = DateTime.Now;
                 exam.ExamName = dt.ToString("yyyy-MM-dd HH:mm") + LoginRoler.username + "的自我测试";
                 exam.ExType = "2";
+                exam.StartTime = dt.ToString("yyyy-MM-dd HH:mm");
                 string topicIds = getRandomTopicIds(xz, xzList);
                 topicIds += getRandomTopicIds(feib, feibList);
                 topicIds += getRandomTopicIds(fub, fubList);
