@@ -274,6 +274,7 @@ namespace LoginFrame
 
             //加载主体栏
             takeExam.mainFrame.panel6.Controls.Clear();
+            takeExam.mainFrame.panel6.Controls.AddRange(takeExam.mainFrame.items.ToArray());
             BodyMain bodyMain = BodyMain.createForm();
             bodyMain.TopLevel = false;
             bodyMain.FormBorderStyle = FormBorderStyle.None;

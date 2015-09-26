@@ -278,6 +278,7 @@ namespace LoginFrame
 
             //加载主体栏
             selfTest2.mainFrame.panel6.Controls.Clear();
+            selfTest2.mainFrame.panel6.Controls.AddRange(selfTest2.mainFrame.items.ToArray());
             BodyMain bodyMain = BodyMain.createForm();
             bodyMain.TopLevel = false;
             bodyMain.FormBorderStyle = FormBorderStyle.None;
