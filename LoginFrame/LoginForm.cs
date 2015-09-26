@@ -277,6 +277,7 @@ namespace LoginFrame
             if (user_type == Constant.RoleTeacher && Constant.RoleTeacher == LoginRoler.serverType && !isLocalIp)
             {
                 MessageBox.Show("局域网中已经有教师登录!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                button1.Enabled = true;
                 return;
             }
 
@@ -298,6 +299,7 @@ namespace LoginFrame
             bool isLogined = login();
             if (!isLogined)
             {
+                button1.Enabled = true;
                 return;
             }
 
@@ -370,7 +372,7 @@ namespace LoginFrame
                     //启动mysql服务
                     exeCmd("net start MySQL");
                     Console.WriteLine("mysql启动完毕等待10秒");
-                    Thread.Sleep(10000);
+                    Thread.Sleep(5000);
                     p.Close();
                 }
             }
