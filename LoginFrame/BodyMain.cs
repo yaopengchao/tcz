@@ -203,7 +203,8 @@ namespace LoginFrame
                     flowLayoutPanel.HorizontalScroll.Visible = false;
                     flowLayoutPanel.Width = 190;
                     //flowLayoutPanel.AutoSize = true;
-                    flowLayoutPanel.AutoScroll = true;
+                    //flowLayoutPanel.AutoScroll = true;
+                    flowLayoutPanel.AutoSize = true;
                     DataTable classes = Bll.getCourses(type_id).Tables[0];
                     int height = 5;
                     for (int j = 0; j < classes.Rows.Count; j++)
