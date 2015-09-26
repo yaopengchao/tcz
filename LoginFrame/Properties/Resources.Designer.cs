@@ -93,6 +93,26 @@ namespace LoginFrame.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap stopsysnc {
+            get {
+                object obj = ResourceManager.GetObject("stopsysnc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap sysnc {
+            get {
+                object obj = ResourceManager.GetObject("sysnc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap 上一个 {
             get {
                 object obj = ResourceManager.GetObject("上一个", resourceCulture);

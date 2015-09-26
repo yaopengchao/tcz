@@ -123,6 +123,7 @@
             // 
             // btn_async
             // 
+            this.btn_async.BackgroundImage = global::LoginFrame.Properties.Resources.sysnc;
             resources.ApplyResources(this.btn_async, "btn_async");
             this.btn_async.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_async.FlatAppearance.BorderSize = 0;

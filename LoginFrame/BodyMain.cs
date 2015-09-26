@@ -608,15 +608,22 @@ namespace LoginFrame
             if (isBroadcasting)
             {
                 isBroadcasting = false;
-                client = null;
-                multicast = null;
+                btn_async.BackgroundImage = global::LoginFrame.Properties.Resources.sysnc;
             }
             else
             {
-                client = new UdpClient(5566);
-                client.JoinMulticastGroup(IPAddress.Parse("234.5.6.7"));
-                multicast = new IPEndPoint(IPAddress.Parse("234.5.6.7"), 7788);
+                if (client==null)
+                {
+                    client = new UdpClient(5566);
+                    client.JoinMulticastGroup(IPAddress.Parse("234.5.6.7"));
+                }
+                if (multicast==null)
+                {
+                    multicast = new IPEndPoint(IPAddress.Parse("234.5.6.7"), 7788);
+                }
+                
                 isBroadcasting = true;
+                btn_async.BackgroundImage = global::LoginFrame.Properties.Resources.stopsysnc;
             }
         }
 

@@ -575,6 +575,8 @@
     <Content Include="bin\Debug\Regedit.txt" />
     <Content Include="bin\Debug\RolesType.xml" />
     <Content Include="pic\界面背景3.jpg" />
+    <None Include="Resources\stopsysnc.png" />
+    <None Include="Resources\sysnc.png" />
     <Content Include="TEMP\tcz.sql" />
     <None Include="Resources\登录界面.png" />
     <None Include="Resources\章节选中.png" />
@@ -614,8 +616,6 @@
     <None Include="Resources\combobox.png" />
     <None Include="Resources\comboboxend.png" />
     <None Include="Resources\cobegmbobox.png" />
-    <None Include="Resources\sysnc.png" />
-    <None Include="Resources\stopsysnc.png" />
     <None Include="Resources\stop.png" />
     <None Include="Resources\priview.png" />
     <None Include="Resources\next.png" />
