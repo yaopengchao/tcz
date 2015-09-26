@@ -216,7 +216,7 @@
             // 
             // btn_stop
             // 
-            this.btn_stop.BackgroundImage = global::LoginFrame.Properties.Resources.暂停;
+            this.btn_stop.BackgroundImage = global::LoginFrame.Properties.Resources.暂停中;
             resources.ApplyResources(this.btn_stop, "btn_stop");
             this.btn_stop.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_stop.FlatAppearance.BorderSize = 0;

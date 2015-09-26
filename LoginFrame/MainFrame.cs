@@ -649,6 +649,10 @@ namespace LoginFrame
 
                 string ip = sokConnection.RemoteEndPoint.ToString().Split(':')[0];
 
+                if (socketDic.ContainsKey(ip))
+                {
+                    socketDic.Remove(ip);
+                }
                 socketDic.Add(ip, sokConnection);
 
                 //将在线用户加入到LoginRoler  onlineUserDic

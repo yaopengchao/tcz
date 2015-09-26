@@ -577,6 +577,12 @@
     <Content Include="pic\界面背景3.jpg" />
     <None Include="Resources\stopsysnc.png" />
     <None Include="Resources\sysnc.png" />
+    <None Include="Resources\播放中.png" />
+    <None Include="Resources\扩音中.png" />
+    <None Include="Resources\上一个中.png" />
+    <None Include="Resources\下一个中.png" />
+    <None Include="Resources\语音中.png" />
+    <None Include="Resources\暂停中.png" />
     <Content Include="TEMP\tcz.sql" />
     <None Include="Resources\登录界面.png" />
     <None Include="Resources\章节选中.png" />

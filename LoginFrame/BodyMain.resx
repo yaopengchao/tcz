@@ -266,7 +266,7 @@
     <value>NoControl</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>518, 5</value>
+    <value>487, 5</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>2, 30</value>
@@ -299,7 +299,7 @@
     <value>NoControl</value>
   </data>
   <data name="btn_async.Location" type="System.Drawing.Point, System.Drawing">
-    <value>533, 5</value>
+    <value>445, 5</value>
   </data>
   <data name="btn_async.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -353,7 +353,7 @@
     <value>收藏夹</value>
   </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>366, 9</value>
+    <value>279, 9</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 23</value>
@@ -380,7 +380,7 @@
     <value>NoControl</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>217, 5</value>
+    <value>130, 5</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>2, 30</value>
@@ -407,7 +407,7 @@
     <value>NoControl</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 5</value>
+    <value>63, 5</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>2, 30</value>
@@ -434,7 +434,7 @@
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>86, 5</value>
+    <value>431, 5</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>2, 30</value>
@@ -461,7 +461,7 @@
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>282, 5</value>
+    <value>195, 5</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>2, 30</value>
@@ -488,7 +488,7 @@
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>349, 5</value>
+    <value>262, 5</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>2, 30</value>
@@ -515,7 +515,7 @@
     <value>NoControl</value>
   </data>
   <data name="分隔线.Location" type="System.Drawing.Point, System.Drawing">
-    <value>454, 5</value>
+    <value>367, 5</value>
   </data>
   <data name="分隔线.Size" type="System.Drawing.Size, System.Drawing">
     <value>2, 30</value>
@@ -548,7 +548,7 @@
     <value>NoControl</value>
   </data>
   <data name="btn_play.Location" type="System.Drawing.Point, System.Drawing">
-    <value>475, 5</value>
+    <value>386, 5</value>
   </data>
   <data name="btn_play.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -581,7 +581,7 @@
     <value>NoControl</value>
   </data>
   <data name="btn_stop.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 6</value>
+    <value>18, 6</value>
   </data>
   <data name="btn_stop.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -614,7 +614,7 @@
     <value>NoControl</value>
   </data>
   <data name="btn_music.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 6</value>
+    <value>83, 6</value>
   </data>
   <data name="btn_music.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -647,7 +647,7 @@
     <value>NoControl</value>
   </data>
   <data name="btn_pre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>237, 6</value>
+    <value>150, 6</value>
   </data>
   <data name="btn_pre.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -680,7 +680,7 @@
     <value>NoControl</value>
   </data>
   <data name="btn_next.Location" type="System.Drawing.Point, System.Drawing">
-    <value>300, 6</value>
+    <value>213, 6</value>
   </data>
   <data name="btn_next.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -713,7 +713,7 @@
     <value>NoControl</value>
   </data>
   <data name="btn_voice.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 6</value>
+    <value>504, 6</value>
   </data>
   <data name="btn_voice.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>

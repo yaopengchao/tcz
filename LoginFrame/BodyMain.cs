@@ -22,8 +22,20 @@ namespace LoginFrame
         public BodyMain()
         {
             InitializeComponent();
+
+            if (LoginRoler.roleid!= Constant.RoleTeacher)
+            {
+                label3.Visible = false;
+                btn_async.Visible = false;
+                label7.Visible = false;
+                btn_voice.Visible = false;
+            }
+
             leftPanel.HorizontalScroll.Visible = false;
             leftPanel.BackColor = Color.FromArgb(255, 208, 232, 253);
+
+            btn_stop.Enabled = false;
+
         }
 
 
@@ -555,8 +567,11 @@ namespace LoginFrame
 
         private void btn_play_Click(object sender, EventArgs e)
         {
-                //判断是否已经单机选择或者双击选择了swf课件
-                if (chooseButton == null)
+           
+
+
+            //判断是否已经单机选择或者双击选择了swf课件
+            if (chooseButton == null)
                 {
                     MessageBox.Show("请先选择课件再点击播放!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     return;
@@ -575,7 +590,14 @@ namespace LoginFrame
                     Broadcast("PlayFlash^" + swfName + "^##");
                 }
                 playFlash(filpath);
+
+
+            btn_play.Enabled = false;
+            btn_play.BackgroundImage = global::LoginFrame.Properties.Resources.播放中;
+            btn_stop.BackgroundImage = global::LoginFrame.Properties.Resources.暂停;
         }
+
+       
 
 
         /// <summary>
@@ -629,6 +651,7 @@ namespace LoginFrame
 
         private void btn_music_Click(object sender, EventArgs e)
         {
+
             if (chooseButton == null)
             {
                 MessageBox.Show("请先选择课件播放后再扩音操作!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
@@ -663,7 +686,7 @@ namespace LoginFrame
                 {
                     this.btn_play_Click(null, null);
                 }
-
+                btn_music.BackgroundImage = global::LoginFrame.Properties.Resources.扩音;
             }
             else
             {
@@ -680,8 +703,15 @@ namespace LoginFrame
                 {
                     this.btn_stop_Click(null, null);
                 }
+
+                btn_music.BackgroundImage = global::LoginFrame.Properties.Resources.扩音中;
             }
+
+
+           
         }
+
+
 
         private void btn_stop_Click(object sender, EventArgs e)
         {
@@ -690,6 +720,10 @@ namespace LoginFrame
                 Broadcast("StopFlash^NoFileName^##");
             }
             this.axShockwaveFlashPlayer.Stop();
+
+            btn_stop.BackgroundImage = global::LoginFrame.Properties.Resources.暂停中;
+            btn_play.BackgroundImage = global::LoginFrame.Properties.Resources.播放;
+            btn_stop.Enabled = false;
         }
 
         private void btn_next_Click(object sender, EventArgs e)
