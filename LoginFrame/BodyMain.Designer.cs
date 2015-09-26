@@ -294,12 +294,12 @@
         public System.Windows.Forms.ColorDialog colorDialog1;
         public AxShockwaveFlashObjects.AxShockwaveFlash axShockwaveFlashPlayer;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btn_voice;
-        private System.Windows.Forms.Button btn_play;
-        private System.Windows.Forms.Button btn_stop;
-        private System.Windows.Forms.Button btn_music;
-        private System.Windows.Forms.Button btn_pre;
-        private System.Windows.Forms.Button btn_next;
+        public System.Windows.Forms.Button btn_voice;
+        public System.Windows.Forms.Button btn_play;
+        public System.Windows.Forms.Button btn_stop;
+        public System.Windows.Forms.Button btn_music;
+        public System.Windows.Forms.Button btn_pre;
+        public System.Windows.Forms.Button btn_next;
         private System.Windows.Forms.Label 分隔线;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -308,10 +308,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel leftPanel;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        public System.Windows.Forms.MenuStrip menuStrip1;
+        public System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        public System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        public System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btn_async;
     }

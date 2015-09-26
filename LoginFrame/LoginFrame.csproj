@@ -583,6 +583,7 @@
     <None Include="Resources\下一个中.png" />
     <None Include="Resources\语音中.png" />
     <None Include="Resources\暂停中.png" />
+    <None Include="Resources\收藏夹中.png" />
     <Content Include="TEMP\tcz.sql" />
     <None Include="Resources\登录界面.png" />
     <None Include="Resources\章节选中.png" />

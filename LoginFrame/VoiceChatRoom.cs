@@ -667,7 +667,26 @@ namespace LoginFrame
             }
 
             this.Close();
+            
 
+            MainFrame mainFrame = MainFrame.createForm();
+            mainFrame.titlename.Text = "主 界 面";
+            mainFrame.panel6.Controls.Clear();
+            mainFrame.panel6.Controls.AddRange(mainFrame.items.ToArray());
+
+            BodyMain bodyMain = BodyMain.createForm();
+            bodyMain.TopLevel = false;
+            bodyMain.isTalking = false;
+            bodyMain.btn_voice.BackgroundImage= global::LoginFrame.Properties.Resources.语音;
+            bodyMain.FormBorderStyle = FormBorderStyle.None;
+            bodyMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            mainFrame.panel6.Controls.Add(bodyMain);
+            bodyMain.Show();
+            
+
+            //互相访问控件
+            mainFrame.bodyMain = bodyMain;
+            bodyMain.mainFrame = mainFrame;
 
 
         }

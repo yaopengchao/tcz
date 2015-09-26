@@ -69,9 +69,6 @@ namespace DAL
         }
 
 
-
-
-
         public static int ExecuteNonQuery(string strSql, params MySqlParameter[] values)
         {
             MySqlCommand cmd = MysqlCommand(strSql, values);

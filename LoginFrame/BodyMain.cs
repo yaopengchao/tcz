@@ -17,6 +17,11 @@ namespace LoginFrame
     {
         public MainFrame mainFrame;
 
+
+        public Button chooseButton1;
+
+        public Button chooseButton2;
+
         public Button chooseButton;
 
         public BodyMain()
@@ -35,6 +40,8 @@ namespace LoginFrame
             leftPanel.BackColor = Color.FromArgb(255, 208, 232, 253);
 
             btn_stop.Enabled = false;
+
+            
 
         }
 
@@ -205,6 +212,7 @@ namespace LoginFrame
             Button btn = (Button)sender;
             if (btn != null)
             {
+
                 string state = btn.Tag.ToString().Split('#')[0];
                 string type_id = btn.Tag.ToString().Split('#')[1];
                 //获取按钮索引
@@ -291,6 +299,11 @@ namespace LoginFrame
                 }
 
             }
+        }
+
+        private void btnLessonType_Click_Close(Button chooseButton1)
+        {
+            throw new NotImplementedException();
         }
 
 
@@ -405,6 +418,7 @@ namespace LoginFrame
 
         private void btnLesson_DBClick(object sender, EventArgs e)
         {
+
             btnLesson_Click(null, null);
             btn_play_Click(null, null);
         }
@@ -523,6 +537,7 @@ namespace LoginFrame
             mainFrame.titlename.Text = "主 界 面";
 
             BodyMain bodyMain = BodyMain.createForm();
+            bodyMain.isTalking = false;
             bodyMain.TopLevel = false;
             bodyMain.FormBorderStyle = FormBorderStyle.None;
             bodyMain.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -593,6 +608,7 @@ namespace LoginFrame
 
 
             btn_play.Enabled = false;
+            btn_stop.Enabled = true;
             btn_play.BackgroundImage = global::LoginFrame.Properties.Resources.播放中;
             btn_stop.BackgroundImage = global::LoginFrame.Properties.Resources.暂停;
         }
@@ -631,6 +647,8 @@ namespace LoginFrame
             {
                 isBroadcasting = false;
                 btn_async.BackgroundImage = global::LoginFrame.Properties.Resources.sysnc;
+
+                Broadcast("notBroadcasting^" + "" + "^##");
             }
             else
             {
@@ -643,9 +661,15 @@ namespace LoginFrame
                 {
                     multicast = new IPEndPoint(IPAddress.Parse("234.5.6.7"), 7788);
                 }
-                
+
+
+                Broadcast("isBroadcasting^" + "" + "^##");
+
                 isBroadcasting = true;
                 btn_async.BackgroundImage = global::LoginFrame.Properties.Resources.stopsysnc;
+
+
+
             }
         }
 
@@ -724,6 +748,7 @@ namespace LoginFrame
             btn_stop.BackgroundImage = global::LoginFrame.Properties.Resources.暂停中;
             btn_play.BackgroundImage = global::LoginFrame.Properties.Resources.播放;
             btn_stop.Enabled = false;
+            btn_play.Enabled = true;
         }
 
         private void btn_next_Click(object sender, EventArgs e)

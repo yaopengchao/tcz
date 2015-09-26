@@ -25,6 +25,8 @@ namespace LoginFrame
 
         public VoiceChatRoom voiceChatRoom;
 
+        public BodyMain bodyMain;
+
         public SoundPlayer splayer;
 
         public List<Control> items = new List<Control>();
@@ -1271,6 +1273,12 @@ namespace LoginFrame
                     case "StopAudio"://停止扩音
                         stopPlayer();
                         break;
+                    case "isBroadcasting"://同步中，屏蔽被同步机器按钮  
+                        Broadcast("isBroadcasting");
+                        break;
+                    case "notBroadcasting"://不在同步，屏蔽被同步机器按钮  
+                        Broadcast("notBroadcasting");
+                        break;
                     default: break;
                 }
 
@@ -1278,7 +1286,50 @@ namespace LoginFrame
             }
         }
 
-        public BodyMain bodyMain;
+        private void Broadcast(string state)
+        {
+            if (state.Equals("isBroadcasting"))
+            {
+                this.bodyMain.btn_stop.BackgroundImage= global::LoginFrame.Properties.Resources.暂停中;
+                this.bodyMain.btn_voice.BackgroundImage = global::LoginFrame.Properties.Resources.语音中;
+                this.bodyMain.btn_play.BackgroundImage = global::LoginFrame.Properties.Resources.播放中;
+                this.bodyMain.btn_music.BackgroundImage = global::LoginFrame.Properties.Resources.扩音中;
+                this.bodyMain.btn_pre.BackgroundImage = global::LoginFrame.Properties.Resources.上一个中;
+                this.bodyMain.btn_next.BackgroundImage = global::LoginFrame.Properties.Resources.下一个中;
+                this.bodyMain.toolStripMenuItem1.BackgroundImage = global::LoginFrame.Properties.Resources.收藏夹中;
+
+
+
+                this.bodyMain.btn_stop.Enabled = false;
+                this.bodyMain.btn_voice.Enabled = false;
+                this.bodyMain.btn_play.Enabled = false;
+                this.bodyMain.btn_music.Enabled = false;
+                this.bodyMain.btn_pre.Enabled = false;
+                this.bodyMain.btn_next.Enabled = false;
+                this.bodyMain.toolStripMenuItem1.Enabled = false;
+
+            }
+            else if (state.Equals("notBroadcasting"))
+            {
+                this.bodyMain.btn_stop.BackgroundImage = global::LoginFrame.Properties.Resources.暂停;
+                this.bodyMain.btn_voice.BackgroundImage = global::LoginFrame.Properties.Resources.语音;
+                this.bodyMain.btn_play.BackgroundImage = global::LoginFrame.Properties.Resources.播放;
+                this.bodyMain.btn_music.BackgroundImage = global::LoginFrame.Properties.Resources.扩音;
+                this.bodyMain.btn_pre.BackgroundImage = global::LoginFrame.Properties.Resources.上一个;
+                this.bodyMain.btn_next.BackgroundImage = global::LoginFrame.Properties.Resources.下一个;
+                this.bodyMain.toolStripMenuItem1.BackgroundImage = global::LoginFrame.Properties.Resources.收藏夹;
+
+                this.bodyMain.btn_stop.Enabled = true;
+                this.bodyMain.btn_voice.Enabled = true;
+                this.bodyMain.btn_play.Enabled = true;
+                this.bodyMain.btn_music.Enabled = true;
+                this.bodyMain.btn_pre.Enabled = true;
+                this.bodyMain.btn_next.Enabled = true;
+                this.bodyMain.toolStripMenuItem1.Enabled = true;
+            }
+        }
+
+       
 
         /// <summary>
         /// 初始化播放器
