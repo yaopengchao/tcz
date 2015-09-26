@@ -21,7 +21,11 @@ namespace DAL
         //根据条件进行分页查询
         public DataSet listNotInExamTopics(Dictionary<string, string> strWheres, int examId)
         {
-            string strSql = "select topic_id, content, if (topic_type='1','理论类','操作类'), b.TCZ_NAME, answers, create_time, topic_type, topic_category from ex_topic a, tcz_type b where a.TOPIC_CATEGORY = b.TCZ_ID and a.TOPIC_ID not in (SELECT TOPIC_ID from ex_examination_detail where EXAMINATION_ID = " + examId + ")";
+            string strSql = "select topic_id, content, if (topic_type='1','理论类','操作类'), b.TCZ_NAME, answers, create_time, topic_type, topic_category from ex_topic a, tcz_type b where a.TOPIC_CATEGORY = b.TCZ_ID ";
+            if (examId != 0)
+            {
+                strSql += " and a.TOPIC_ID not in (SELECT TOPIC_ID from ex_examination_detail where EXAMINATION_ID = " + examId + ")";
+            }             
             return listEntity(strSql, strWheres);
         }
 

@@ -157,24 +157,31 @@ namespace LoginFrame
                 object topicId = dr.ItemArray[0];
                 topicIds += topicId + ",";
             }
-            Examination exam = new Examination();
-            exam.ExamCat = Convert.ToString(addExam.topicCategory.SelectedValue);
-            exam.ExamName = addExam.txtExamName.Text;
-            exam.StartTime = addExam.startTime.Text;
-            exam.TotalMins = Convert.ToInt32(addExam.totalMins.Text);
-            exam.ExType = "1";
-            exam.ExaminationId = Convert.ToInt32(addExam.labExamId.Text == "" ? "0" : addExam.labExamId.Text);
-            int result = examService.addExam(exam, topicIds);
-            if (result > 0)
+            if (topicIds == "")
             {
-                MessageBox.Show("保存成功");
-                bodyExam.btnQuery_Click(sender, e);
-                this.Close();
+                MessageBox.Show("试卷不能没有题目");
             }
             else
             {
-                MessageBox.Show("保存失败，请联系管理员");
-            }
+                Examination exam = new Examination();
+                exam.ExamCat = Convert.ToString(addExam.topicCategory.SelectedValue);
+                exam.ExamName = addExam.txtExamName.Text;
+                exam.StartTime = addExam.startTime.Text;
+                exam.TotalMins = Convert.ToInt32(addExam.totalMins.Text);
+                exam.ExType = "1";
+                exam.ExaminationId = Convert.ToInt32(addExam.labExamId.Text == "" ? "0" : addExam.labExamId.Text);
+                int result = examService.addExam(exam, topicIds);
+                if (result > 0)
+                {
+                    MessageBox.Show("保存成功");
+                    bodyExam.btnQuery_Click(sender, e);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("保存失败，请联系管理员");
+                }
+            }            
         }
 
         private void AddExam2_Load(object sender, EventArgs e)
@@ -186,7 +193,7 @@ namespace LoginFrame
 
 
             string type = Convert.ToString(addExam.topicCategory.SelectedValue);
-            int examId = Convert.ToInt32(addExam.labExamId.Text);
+            int examId = Convert.ToInt32(addExam.labExamId.Text == "" ? "0" : addExam.labExamId.Text);
             strWheres.Clear();
             strWheres.Add("a.topic_type", " = '" + type + "' ");
             DataSet dt = topicService.listNotInExamTopics(strWheres, examId);

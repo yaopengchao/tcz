@@ -100,7 +100,7 @@ namespace BLL
             {
                 ExaminationDetail examDetail = new ExaminationDetail();
                 examDetail.ExaminationId = examId;
-                examDetail.TopicId = Convert.ToInt32(topicIds);
+                examDetail.TopicId = Convert.ToInt32(topicIds == "" ? "0" : topicIds);
                 examDetail.TopicOrder = 1;
                 examDetailDao.addExamDetail(examDetail);
             }
