@@ -332,50 +332,25 @@ namespace LoginFrame
 
         private void openLocalDb()
         {
-            string mySql_Version, mySql_Path;
-           
+            //string mySql_Version, mySql_Path;
+            //if (CheckMySql.hasInstalledMySql(out mySql_Version, out mySql_Path))
 
-            if (1 == 1)
-            {
-                //判断是否存在数据库
-                if (CheckMySql.hasInstalledMySql(out mySql_Version, out mySql_Path))
-                {
-                    p.Start();
+            p.Start();
 
-                    //停止mysql服务
-                    exeCmd("net stop MySQL");
-                    exeCmd("sc delete MySQL");
+            exeCmd("net stop MySQL");
+            exeCmd("sc delete MySQL");
+            //进入打包数据库目录
+            cdDiyDBPath();
+            exeCmd("mysqld-nt.exe -install");
+            //安装mysql
+            //exeCmd("mysqld install");
+            //启动mysql服务
+            exeCmd("net start MySQL");
+            //Console.WriteLine("mysql启动完毕等待10秒");
+            Thread.Sleep(5000);
+            p.Close();
 
-                    //进入打包好的mysql地址
-                    cdDiyDBPath();
-                    exeCmd("bin\'mysqld-nt.exe -install");
-                    //安装mysql
-                    //exeCmd("mysqld install");
-
-                    //启动mysql服务
-                    exeCmd("net start MySQL");
-                    Thread.Sleep(10000);
-                    p.Close();
-                }
-                else
-                {
-
-                    p.Start();
-
-                    exeCmd("net stop MySQL");
-                    exeCmd("sc delete MySQL");
-                    //进入打包数据库目录
-                    cdDiyDBPath();
-                    exeCmd("mysqld-nt.exe -install");
-                    //安装mysql
-                    //exeCmd("mysqld install");
-                    //启动mysql服务
-                    exeCmd("net start MySQL");
-                    Console.WriteLine("mysql启动完毕等待10秒");
-                    Thread.Sleep(5000);
-                    p.Close();
-                }
-            }
+            
         }
 
 
