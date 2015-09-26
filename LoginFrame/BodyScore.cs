@@ -133,6 +133,8 @@ namespace LoginFrame
             string[] cols = new string[] { "结果ID","考试ID","考生ID","考试名称","考生姓名","考试时长", "得分率" };
             pageCtrl.Cols = cols;
             pageCtrl.dg.Columns[0].Visible = false;
+            pageCtrl.dg.Columns[1].Visible = false;
+            pageCtrl.dg.Columns[2].Visible = false;
             int[] widths = new int[] { 100,100,200,200,200,100 };
             pageCtrl.Widths = widths;
         }
