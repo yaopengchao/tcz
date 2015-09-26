@@ -15,7 +15,9 @@ namespace LoginFrame
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            LoginForm loginForm = new LoginForm();
+            loginForm.openLocalDb();
+            Application.Run(loginForm);
         }
     }
 }

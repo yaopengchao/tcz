@@ -330,7 +330,7 @@ namespace LoginFrame
         private Process p;
 
 
-        private void openLocalDb()
+        public void openLocalDb()
         {
             //string mySql_Version, mySql_Path;
             //if (CheckMySql.hasInstalledMySql(out mySql_Version, out mySql_Path))
@@ -347,7 +347,7 @@ namespace LoginFrame
             //启动mysql服务
             exeCmd("net start MySQL");
             //Console.WriteLine("mysql启动完毕等待10秒");
-            Thread.Sleep(5000);
+            Thread.Sleep(3000);
             p.Close();
 
             
