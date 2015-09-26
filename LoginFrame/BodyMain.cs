@@ -154,8 +154,9 @@ namespace LoginFrame
             {
                 //从数据库获取课件分类  然后遍历产生 按钮 动态添加到动态leftPanel中
                 Button btnLessonType = new Button();
-                btnLessonType.Width = 190;
+                btnLessonType.Width = 188;
                 btnLessonType.Height = 25;
+                btnLessonType.Margin = Padding.Empty;
                 btnLessonType.BackgroundImage = global::LoginFrame.Properties.Resources.课件分类;
                 btnLessonType.FlatStyle = FlatStyle.Flat;
                 btnLessonType.FlatAppearance.BorderSize = 0;
@@ -210,7 +211,7 @@ namespace LoginFrame
                     for (int j = 0; j < classes.Rows.Count; j++)
                     {
                         Button btnClassType = new Button();
-                        btnClassType.Width = 175;
+                        btnClassType.Width = 170;
                         btnClassType.Height = 20;
                         btnClassType.BackgroundImage = global::LoginFrame.Properties.Resources.章节未选中;
                         btnClassType.FlatStyle = FlatStyle.Flat;
@@ -304,7 +305,7 @@ namespace LoginFrame
                 {
                     FlowLayoutPanel flowLayoutPanel = new FlowLayoutPanel();
                     flowLayoutPanel.HorizontalScroll.Visible = false;
-                    flowLayoutPanel.Width = 180;
+                    flowLayoutPanel.Width = 175;
                     flowLayoutPanel.AutoScroll = true;
                    
                     DataTable lessons = Bll.getLessons(type_id).Tables[0];
