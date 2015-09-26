@@ -543,7 +543,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
-    <Folder Include="TEMP\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\Library.dll" />
@@ -576,6 +575,7 @@
     <Content Include="bin\Debug\Regedit.txt" />
     <Content Include="bin\Debug\RolesType.xml" />
     <Content Include="pic\界面背景3.jpg" />
+    <Content Include="TEMP\tcz.sql" />
     <None Include="Resources\登录界面.png" />
     <None Include="Resources\章节选中.png" />
     <None Include="Resources\章节未选中.png" />
