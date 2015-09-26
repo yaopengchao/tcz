@@ -201,14 +201,20 @@ namespace LoginFrame
 
         private void button6_Click(object sender, EventArgs e)
         {
-            classId = Convert.ToInt32(pageCtrl2.dg.CurrentRow.Cells[0].Value);
-            AddUser addUser = AddUser.getInstance();
-            addUser.bodyStu = this;
-            addUser.user.UserType = "3";
-            addUser.labTitle.Text = "添加学生";
-            addUser.labUname.Text = "学生名称";
-            addUser.ShowDialog();
-
+            if (pageCtrl2.dg.CurrentRow == null)
+            {
+                MessageBox.Show("请选择一个班级");
+            }
+            else
+            {
+                classId = Convert.ToInt32(pageCtrl2.dg.CurrentRow.Cells[0].Value);
+                AddUser addUser = AddUser.getInstance();
+                addUser.bodyStu = this;
+                addUser.user.UserType = "3";
+                addUser.labTitle.Text = "添加学生";
+                addUser.labUname.Text = "学生名称";
+                addUser.ShowDialog();
+            }            
         }
 
         private void 查询条件_Enter(object sender, EventArgs e)
@@ -288,16 +294,23 @@ namespace LoginFrame
 
         private void button4_Click(object sender, EventArgs e)
         {
-            int userId = Convert.ToInt32(pageCtrl.dg.CurrentRow.Cells[0].Value);
-            if (userId > 0)
+            if (pageCtrl.dg.CurrentRow == null)
             {
-                DialogResult dr = MessageBox.Show("确定要删除'" + pageCtrl.dg.CurrentRow.Cells[1].Value + "'吗？", "确认删除", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                if (dr == DialogResult.OK)
-                {
-                    userService.deleteUser(userId);
-                    btnQueryClick();
-                }
+                MessageBox.Show("请选择一条记录");
             }
+            else
+            {
+                int userId = Convert.ToInt32(pageCtrl.dg.CurrentRow.Cells[0].Value);
+                if (userId > 0)
+                {
+                    DialogResult dr = MessageBox.Show("确定要删除'" + pageCtrl.dg.CurrentRow.Cells[1].Value + "'吗？", "确认删除", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (dr == DialogResult.OK)
+                    {
+                        userService.deleteUser(userId);
+                        btnQueryClick();
+                    }
+                }
+            }            
         }
 
         private void button7_Click(object sender, EventArgs e)

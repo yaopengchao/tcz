@@ -377,3 +377,76 @@ Version: '5.1.28-rc-community'  socket: ''  port: 3306  MySQL Community Server (
 150926 10:06:37 [Note] Event Scheduler: Loaded 0 events
 150926 10:06:37 [Note] MySQL: ready for connections.
 Version: '5.1.28-rc-community'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150926 10:22:31 [Note] MySQL: Normal shutdown
+
+150926 10:22:31 [Note] Event Scheduler: Purging the queue. 0 events
+150926 10:22:33 [Warning] MySQL: Forcing close of thread 4  user: 'root'
+
+150926 10:22:33 [Warning] MySQL: Forcing close of thread 3  user: 'root'
+
+150926 10:22:33 [Warning] MySQL: Forcing close of thread 2  user: 'root'
+
+150926 10:22:33 [Note] MySQL: Shutdown complete
+
+150926 10:29:17 [Note] Plugin 'InnoDB' disabled by command line option
+150926 10:29:17 [Note] Event Scheduler: Loaded 0 events
+150926 10:29:17 [Note] MySQL: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150926 10:29:28 [Note] MySQL: Normal shutdown
+
+150926 10:29:28 [Note] Event Scheduler: Purging the queue. 0 events
+150926 10:29:28 [Note] MySQL: Shutdown complete
+
+150926 10:37:38 [Note] Plugin 'InnoDB' disabled by command line option
+150926 10:37:38 [Note] Event Scheduler: Loaded 0 events
+150926 10:37:38 [Note] MySQL: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150926 10:38:23 [Note] MySQL: Normal shutdown
+
+150926 10:38:23 [Note] Event Scheduler: Purging the queue. 0 events
+150926 10:38:23 [Note] MySQL: Shutdown complete
+
+150926 10:38:27 [Note] Plugin 'InnoDB' disabled by command line option
+150926 10:38:27 [Note] Event Scheduler: Loaded 0 events
+150926 10:38:27 [Note] MySQL: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150926 10:42:24 [Note] MySQL: Normal shutdown
+
+150926 10:42:24 [Note] Event Scheduler: Purging the queue. 0 events
+150926 10:42:24 [Note] MySQL: Shutdown complete
+
+150926 10:42:27 [Note] Plugin 'InnoDB' disabled by command line option
+150926 10:42:27 [Note] Event Scheduler: Loaded 0 events
+150926 10:42:27 [Note] MySQL: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150926 10:42:59 [Note] MySQL: Normal shutdown
+
+150926 10:42:59 [Note] Event Scheduler: Purging the queue. 0 events
+150926 10:43:01 [Warning] MySQL: Forcing close of thread 5  user: 'root'
+
+150926 10:43:01 [Warning] MySQL: Forcing close of thread 4  user: 'root'
+
+150926 10:43:01 [Warning] MySQL: Forcing close of thread 3  user: 'root'
+
+150926 10:43:01 [Warning] MySQL: Forcing close of thread 2  user: 'root'
+
+150926 10:43:01 [Note] MySQL: Shutdown complete
+
+150926 10:43:02 [Note] Plugin 'InnoDB' disabled by command line option
+150926 10:43:03 [Note] Event Scheduler: Loaded 0 events
+150926 10:43:03 [Note] MySQL: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150926 10:45:41 [Note] MySQL: Normal shutdown
+
+150926 10:45:41 [Note] Event Scheduler: Purging the queue. 0 events
+150926 10:45:41 [Note] MySQL: Shutdown complete
+
+150926 10:45:44 [Note] Plugin 'InnoDB' disabled by command line option
+150926 10:45:44 [Note] Event Scheduler: Loaded 0 events
+150926 10:45:44 [Note] MySQL: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 3306  MySQL Community Server (GPL)
+150926 10:46:28 [Note] MySQL: Normal shutdown
+
+150926 10:46:28 [Note] Event Scheduler: Purging the queue. 0 events
+150926 10:46:28 [Note] MySQL: Shutdown complete
+
