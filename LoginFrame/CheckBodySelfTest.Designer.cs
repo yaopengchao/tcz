@@ -40,6 +40,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.labRightResult = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -104,27 +106,35 @@
             resources.ApplyResources(this.labRightResult, "labRightResult");
             this.labRightResult.Name = "labRightResult";
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.labRightResult);
+            this.panel1.Controls.Add(this.labTopicOrder);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.labContent);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.btnSubmit);
+            this.panel1.Controls.Add(this.labResult);
+            this.panel1.Controls.Add(this.btnNext);
+            this.panel1.Controls.Add(this.btnPre);
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            // 
             // CheckBodySelfTest
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Controls.Add(this.labRightResult);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.btnPre);
-            this.Controls.Add(this.labResult);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.labContent);
-            this.Controls.Add(this.labTopicOrder);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CheckBodySelfTest";
             this.Load += new System.EventHandler(this.BodySelfTest3_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -141,5 +151,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label labRightResult;
+        private System.Windows.Forms.Panel panel1;
     }
 }

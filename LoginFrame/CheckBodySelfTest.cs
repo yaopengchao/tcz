@@ -184,6 +184,11 @@ namespace LoginFrame
                 labResult.BackColor = Color.Red;
                 label2.BackColor = Color.Red;
             }
+            else
+            {
+                labResult.BackColor = Color.White;
+                label2.BackColor = Color.White;
+            }
         }
 
         private void clearLabels()

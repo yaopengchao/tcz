@@ -126,7 +126,7 @@
     <value>微软雅黑, 15.75pt, style=Bold</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>103, 59</value>
+    <value>27, 52</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 28</value>
@@ -144,10 +144,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>0</value>
   </data>
   <data name="labTopicOrder.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -156,7 +156,7 @@
     <value>微软雅黑, 14.25pt</value>
   </data>
   <data name="labTopicOrder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>183, 61</value>
+    <value>107, 54</value>
   </data>
   <data name="labTopicOrder.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 25</value>
@@ -174,10 +174,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labTopicOrder.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;labTopicOrder.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>2</value>
   </data>
   <data name="labContent.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -186,7 +186,7 @@
     <value>微软雅黑, 14.25pt</value>
   </data>
   <data name="labContent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 61</value>
+    <value>132, 54</value>
   </data>
   <data name="labContent.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 25</value>
@@ -204,10 +204,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labContent.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;labContent.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>4</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -216,7 +216,7 @@
     <value>微软雅黑, 15.75pt</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>159, 454</value>
+    <value>83, 447</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 28</value>
@@ -234,10 +234,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="labResult.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -246,7 +246,7 @@
     <value>宋体, 16pt</value>
   </data>
   <data name="labResult.Location" type="System.Drawing.Point, System.Drawing">
-    <value>257, 454</value>
+    <value>181, 447</value>
   </data>
   <data name="labResult.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 22</value>
@@ -261,16 +261,16 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labResult.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;labResult.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="btnPre.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt</value>
   </data>
   <data name="btnPre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>477, 453</value>
+    <value>401, 446</value>
   </data>
   <data name="btnPre.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -288,16 +288,16 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnPre.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;btnPre.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>10</value>
   </data>
   <data name="btnNext.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt</value>
   </data>
   <data name="btnNext.Location" type="System.Drawing.Point, System.Drawing">
-    <value>583, 453</value>
+    <value>507, 446</value>
   </data>
   <data name="btnNext.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -315,16 +315,16 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnNext.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;btnNext.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>9</value>
   </data>
   <data name="btnSubmit.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt</value>
   </data>
   <data name="btnSubmit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>739, 453</value>
+    <value>663, 446</value>
   </data>
   <data name="btnSubmit.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -342,10 +342,10 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnSubmit.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;btnSubmit.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>7</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -358,7 +358,7 @@
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>159, 510</value>
+    <value>83, 503</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 28</value>
@@ -376,10 +376,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -391,7 +391,7 @@
     <value>NoControl</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>450, 9</value>
+    <value>374, 2</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 28</value>
@@ -409,10 +409,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="labRightResult.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -424,7 +424,7 @@
     <value>NoControl</value>
   </data>
   <data name="labRightResult.Location" type="System.Drawing.Point, System.Drawing">
-    <value>257, 510</value>
+    <value>181, 503</value>
   </data>
   <data name="labRightResult.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 22</value>
@@ -439,9 +439,33 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labRightResult.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>panel1</value>
   </data>
   <data name="&gt;&gt;labRightResult.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>990, 567</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
