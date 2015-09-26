@@ -125,6 +125,18 @@ namespace LoginFrame
         /// <param name="e"></param>
         private void MainFrame_Load(object sender, EventArgs e)
         {
+
+            if (LoginRoler.roleid == Constant.RoleStudent)
+            {
+                //MessageBox.Show("开启自动监听....");
+
+                Thread t = new Thread(new ThreadStart(RecvThread));
+                t.IsBackground = true;
+                t.Start();
+
+            }
+
+
             p = new Process();
             p.StartInfo.FileName = "cmd.exe";
             p.StartInfo.UseShellExecute = false;
