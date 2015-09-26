@@ -81,9 +81,9 @@ namespace LoginFrame
                 menuStrip1.Items[1].Visible = true;             //考试
                 exMenu1.Visible = false;
                 exMenu2.Visible = false;
-                panel5.Height = 180;
+                panel5.Height = 160;
                 exMenu1.Visible = false;
-                exMenu3.Visible = false;
+                exMenu3.Visible = true;
             }
         }
 
