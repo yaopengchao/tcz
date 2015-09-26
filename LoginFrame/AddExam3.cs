@@ -210,27 +210,34 @@ namespace LoginFrame
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Examination exam = new Examination();
-            exam.ExamCat = Convert.ToString(addExam.topicCategory.SelectedValue);
-            exam.ExamName = addExam.txtExamName.Text;
-            exam.StartTime = addExam.startTime.Text;
-            exam.TotalMins = Convert.ToInt32(addExam.totalMins.Text);
-            exam.ExType = "1";
-            exam.ExaminationId = Convert.ToInt32(addExam.labExamId.Text == "" ? "0" : addExam.labExamId.Text);
-            string topicIds = getRandomTopicIds(xz, xzList);
-            topicIds += getRandomTopicIds(feib, feibList);
-            topicIds += getRandomTopicIds(fub, fubList);
-            int result = examService.addExam(exam, topicIds);
-            if (result > 0)
+            if (xz == 0 && feib == 0 && fub == 0)
             {
-                MessageBox.Show("保存成功");
-                bodyExam.btnQuery_Click(sender, e);
-                this.Close();
+                MessageBox.Show("请选择题目!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             else
             {
-                MessageBox.Show("保存失败，请联系管理员");
-            }
+                Examination exam = new Examination();
+                exam.ExamCat = Convert.ToString(addExam.topicCategory.SelectedValue);
+                exam.ExamName = addExam.txtExamName.Text;
+                exam.StartTime = addExam.startTime.Text;
+                exam.TotalMins = Convert.ToInt32(addExam.totalMins.Text);
+                exam.ExType = "1";
+                exam.ExaminationId = Convert.ToInt32(addExam.labExamId.Text == "" ? "0" : addExam.labExamId.Text);
+                string topicIds = getRandomTopicIds(xz, xzList);
+                topicIds += getRandomTopicIds(feib, feibList);
+                topicIds += getRandomTopicIds(fub, fubList);
+                int result = examService.addExam(exam, topicIds);
+                if (result > 0)
+                {
+                    MessageBox.Show("保存成功");
+                    bodyExam.btnQuery_Click(sender, e);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("保存失败，请联系管理员");
+                }
+            }            
         }
 
         private string getRandomTopicIds(int count, List<int> list)
