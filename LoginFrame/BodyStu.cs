@@ -251,23 +251,31 @@ namespace LoginFrame
 
         private void button3_Click(object sender, EventArgs e)
         {
-            classId = Convert.ToInt32(pageCtrl2.dg.CurrentRow.Cells[0].Value);
-            if (classId > 0)
+            if (pageCtrl2.dg.CurrentRow == null)
             {
-                int userCount = classService.getUserCount(classId);
-                if (userCount > 0)                      //班级底下有学员，不能删除
+                MessageBox.Show("请选择一条记录");
+            }
+            else
+            {
+                classId = Convert.ToInt32(pageCtrl2.dg.CurrentRow.Cells[0].Value);
+                if (classId > 0)
                 {
-                    MessageBox.Show("请先删除班级底下的学员再删班级");
-                } else
-                {
-                    DialogResult dr = MessageBox.Show("确定要删除'" + pageCtrl2.dg.CurrentRow.Cells[1].Value + "'吗？", "确认删除", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                    if (dr == DialogResult.OK)
+                    int userCount = classService.getUserCount(classId);
+                    if (userCount > 0)                      //班级底下有学员，不能删除
                     {
-                        classService.deleteClass(classId);
-                        loadClass(null);
+                        MessageBox.Show("请先删除班级底下的学员再删班级");
+                    }
+                    else
+                    {
+                        DialogResult dr = MessageBox.Show("确定要删除'" + pageCtrl2.dg.CurrentRow.Cells[1].Value + "'吗？", "确认删除", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                        if (dr == DialogResult.OK)
+                        {
+                            classService.deleteClass(classId);
+                            loadClass(null);
+                        }
                     }
                 }
-            }
+            }            
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -315,11 +323,18 @@ namespace LoginFrame
 
         private void button7_Click(object sender, EventArgs e)
         {
-            classId = Convert.ToInt32(pageCtrl2.dg.CurrentRow.Cells[0].Value);
-            AddUsers addUsers = AddUsers.getInstance();
-            addUsers.bodyStu = this;
-            addUsers.labTitle.Text = "批量添加学生";
-            addUsers.ShowDialog();
+            if (pageCtrl2.dg.CurrentRow == null)
+            {
+                MessageBox.Show("请选择一个班级");
+            }
+            else
+            {
+                classId = Convert.ToInt32(pageCtrl2.dg.CurrentRow.Cells[0].Value);
+                AddUsers addUsers = AddUsers.getInstance();
+                addUsers.bodyStu = this;
+                addUsers.labTitle.Text = "批量添加学生";
+                addUsers.ShowDialog();
+            }                
         }
     }
 }
