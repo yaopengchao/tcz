@@ -91,6 +91,7 @@
             // label6
             // 
             this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Image = global::LoginFrame.Properties.Resources.loading11;
             resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
             // 

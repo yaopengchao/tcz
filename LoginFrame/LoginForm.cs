@@ -29,16 +29,28 @@ namespace LoginFrame
 
         public LoginForm()
         {
-            InitializeComponent();
-
-            this.BackColor = Color.FromArgb(255, 208, 232, 253);
-
             p = new Process();
             p.StartInfo.FileName = "cmd.exe";
             p.StartInfo.UseShellExecute = false;
             p.StartInfo.RedirectStandardInput = true;
             p.StartInfo.RedirectStandardOutput = true;
             p.StartInfo.CreateNoWindow = true;
+
+
+            InitializeComponent();
+            button1.Enabled = false;
+
+            openLocalDb();
+
+
+            Thread t = new Thread(new ThreadStart(messageThread));
+            t.IsBackground = true;
+            t.Start();
+
+
+            this.BackColor = Color.FromArgb(255, 208, 232, 253);
+
+
 
             Control.CheckForIllegalCrossThreadCalls = false;
 
@@ -53,6 +65,16 @@ namespace LoginFrame
             this.comboBox3.Items.Add(new ComboxItem("教师", Constant.RoleTeacher));
             this.comboBox3.Items.Add(new ComboxItem("管理员", Constant.RoleManager));
             comboBox3.SelectedIndex = 2;
+
+
+        }
+
+        private void messageThread()
+        {
+            Thread.Sleep(1000);
+            this.label6.Image = null;
+            this.label6.Text = "初始化完成....";
+            this.button1.Enabled = true;
         }
 
         public static string checkCode = "";
@@ -140,7 +162,7 @@ namespace LoginFrame
 
                         loadAgreeMent();
 
-                        Console.WriteLine("模拟人协议加载数量"+LoginRoler.AgreeMents.Count);
+                        Console.WriteLine("模拟人协议加载数量" + LoginRoler.AgreeMents.Count);
 
                         checkCode = "";
                         flag = true;
@@ -184,7 +206,7 @@ namespace LoginFrame
                 string AgreeMents_str = "";
                 for (int j = 0; j < dataTable.Columns.Count; j++)
                 {
-                    if (j==0)
+                    if (j == 0)
                     {
                         AgreeMents_str = dataTable.Rows[i][j].ToString();
                         agreeMent.Agreement_id = dataTable.Rows[i][j].ToString();
@@ -231,8 +253,6 @@ namespace LoginFrame
         int comboBox3selectIndex;
         private void button1_Click(object sender, EventArgs e)
         {
-            button1.Enabled = false;
-            this.label6.Image = global::LoginFrame.Properties.Resources.loading11;
             //重置默认
             RunDoWhile = true;
 
@@ -250,7 +270,7 @@ namespace LoginFrame
 
             searchIp();
 
-            
+
             Console.WriteLine("******最终获取的IP:" + LoginRoler.serverIp + "/来源:" + (isLocalIp ? "本地创建" : "来自局域网"));
 
             //搜索操作完毕后  不管获取到和获取不到都要将IP保存在LoginRoler.serverIp字段
@@ -266,7 +286,7 @@ namespace LoginFrame
                 {
                     //createSendUDPClient();
                     Console.WriteLine(">>>>>>>>>>>>>.往局域网中发送数据库IP的消息");
-                    Thread t = new Thread(new ThreadStart(sendThread));
+                    Thread t = new Thread(new ThreadStart(msgThread));
                     t.IsBackground = true;
                     t.Start();
                 }
@@ -283,10 +303,10 @@ namespace LoginFrame
 
             LoginRoler.isLocalIp = isLocalIp;
 
-            if (isLocalIp)
-            {
-                openLocalDb();
-            }
+            //if (isLocalIp)
+            // {
+            //     openLocalDb();
+            //}
 
 
             Console.WriteLine("开启数据库操作.......");
@@ -350,7 +370,7 @@ namespace LoginFrame
             Thread.Sleep(3000);
             p.Close();
 
-            
+
         }
 
 
@@ -382,7 +402,7 @@ namespace LoginFrame
             createReceUDPClient();
 
             //创建定时器控制搜索异步进程的时间
-            timer = createTimer(5000);
+            timer = createTimer(2000);
             timer.Start();
 
             Console.WriteLine("====开始搜寻局域网数据库IP====");
@@ -462,7 +482,7 @@ namespace LoginFrame
         }
 
 
-        private void sendThread()
+        private void msgThread()
         {
             while (true)
             {

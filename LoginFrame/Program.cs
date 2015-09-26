@@ -15,9 +15,11 @@ namespace LoginFrame
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            LoginForm loginForm = new LoginForm();
-            loginForm.openLocalDb();
-            Application.Run(loginForm);
+            //LoginForm loginForm = new LoginForm();
+            //loginForm.openLocalDb();
+            //Application.Run(loginForm);
+
+            Application.Run(new LoginForm());
         }
     }
 }
