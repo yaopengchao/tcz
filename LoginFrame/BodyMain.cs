@@ -324,9 +324,9 @@ namespace LoginFrame
             }
         }
 
-        
 
 
+        int addHeight = 0;
         /// <summary>
         /// 点击章节按钮
         /// </summary>
@@ -357,6 +357,9 @@ namespace LoginFrame
                     flowLayoutPanel.AutoSize = true;
 
                     DataTable lessons = Bll.getLessons(type_id).Tables[0];
+
+                    
+
                     for (int j = 0; j < lessons.Rows.Count; j++)
                     {
 
@@ -391,6 +394,8 @@ namespace LoginFrame
 
                     //flowLayoutPanel.Controls.Add(listView);
                     flowLayoutPanel.Height = flowLayoutPanel.Height + 10;
+                    addHeight = flowLayoutPanel.Height;
+
 
                     {//刷新控件  将下拉的panel加载到leftpanel
                         List<Control> list = new List<Control>();
@@ -411,7 +416,7 @@ namespace LoginFrame
                             }
                             else if (i == btn_index + 1)
                             {
-                                parentPanel.Height = parentPanel.Height + flowLayoutPanel.Height + 10;
+                                parentPanel.Height = parentPanel.Height + flowLayoutPanel.Height;
                                 parentPanel.Controls.Add(flowLayoutPanel);
                             }
                             else if (i > btn_index + 1)
@@ -426,13 +431,14 @@ namespace LoginFrame
                     btn.Tag = "OPEN#" + type_id;
                     btn.BackgroundImage = global::LoginFrame.Properties.Resources.章节选中;
                     btn.ForeColor = Color.FromArgb(255, 78, 148, 226);
+
+                    
                 }
                 else
                 {
-
                     FlowLayoutPanel flowLayoutPanel = (FlowLayoutPanel)parentPanel.Controls[btn_index + 1];
-                    parentPanel.Height = parentPanel.Height - flowLayoutPanel.Height - 10;
                     parentPanel.Controls.RemoveAt(btn_index + 1);
+                    parentPanel.Height = parentPanel.Height - addHeight;
                     btn.Tag = "NOTOPEN#" + type_id;
                     btn.BackgroundImage = global::LoginFrame.Properties.Resources.章节未选中;
                     btn.ForeColor = Color.White;
@@ -449,17 +455,17 @@ namespace LoginFrame
                     if (state == "OPEN")
                     {
                         parentPanel = (FlowLayoutPanel)chooseButton2.Parent;
-                        parentPanel.AutoSize = false;
+                        parentPanel.AutoSize = true;
                         //获取按钮索引
                         btn_index = parentPanel.Controls.IndexOf(chooseButton2);
 
                         FlowLayoutPanel flowLayoutPanel = (FlowLayoutPanel)parentPanel.Controls[btn_index + 1];
-                        flowLayoutPanel.AutoSize=false;
+                        flowLayoutPanel.AutoSize=true;
                         type_id = chooseButton2.Tag.ToString().Split('#')[1];
 
                         flowLayoutPanel = (FlowLayoutPanel)parentPanel.Controls[btn_index + 1];
-                        parentPanel.Height = parentPanel.Height - flowLayoutPanel.Height - 10;
                         parentPanel.Controls.RemoveAt(btn_index + 1);
+                        parentPanel.Height = parentPanel.Height - flowLayoutPanel.Height;
                         chooseButton2.Tag = "NOTOPEN#" + type_id;
                         chooseButton2.BackgroundImage = global::LoginFrame.Properties.Resources.章节未选中;
                         chooseButton2.ForeColor = Color.White;
