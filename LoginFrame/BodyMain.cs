@@ -439,6 +439,7 @@ namespace LoginFrame
                     FlowLayoutPanel flowLayoutPanel = (FlowLayoutPanel)parentPanel.Controls[btn_index + 1];
                     parentPanel.Controls.RemoveAt(btn_index + 1);
                     parentPanel.Height = parentPanel.Height - addHeight;
+                    //addHeight = 0;
                     btn.Tag = "NOTOPEN#" + type_id;
                     btn.BackgroundImage = global::LoginFrame.Properties.Resources.章节未选中;
                     btn.ForeColor = Color.White;
