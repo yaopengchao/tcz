@@ -582,8 +582,6 @@ namespace LoginFrame
 
         private void btn_play_Click(object sender, EventArgs e)
         {
-           
-
 
             //判断是否已经单机选择或者双击选择了swf课件
             if (chooseButton == null)
@@ -626,12 +624,6 @@ namespace LoginFrame
             this.axShockwaveFlashPlayer.Movie = filpath;
             this.axShockwaveFlashPlayer.Play();
         }
-
-        /// <summary>
-        /// UDP客户端
-        /// </summary>
-        UdpClient client;
-        IPEndPoint multicast;
 
         /// <summary>
         /// 同步教学按钮

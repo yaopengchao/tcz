@@ -275,6 +275,7 @@ namespace LoginFrame
         {
             //重置默认
             RunDoWhile = true;
+            isLocalIp = false;
 
             //================================================================================
             //登录说明:
@@ -419,21 +420,15 @@ namespace LoginFrame
         System.Timers.Timer timer;
         private void searchIp()
         {
-            
-
             //创建定时器控制搜索异步进程的时间
             timer = createTimer(2000);
             timer.Start();
 
             Console.WriteLine("====开始搜寻局域网数据库IP====");
-
-
-            if ((searchServerIpRecv == null))
-            {
-                searchServerIpRecv = new Thread(new ThreadStart(RecvThread));
-                searchServerIpRecv.IsBackground = true;
-                searchServerIpRecv.Start();
-            }
+          
+            searchServerIpRecv = new Thread(new ThreadStart(RecvThread));
+            searchServerIpRecv.IsBackground = true;
+            searchServerIpRecv.Start();
 
             do
             {

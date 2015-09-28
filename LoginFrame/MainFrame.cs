@@ -204,14 +204,18 @@ namespace LoginFrame
                 OnlineUser onlineUser = new OnlineUser();
                 onlineUser.ChatIp = LoginRoler.ip;
                 onlineUser.ChatName = LoginRoler.username;
+
+               
+
+
                 sendLoaclInfo(socketClient, onlineUser);
 
 
-                //该线程用来接收教师机发送过来的最新聊天室名单IP
-                recvthreadWatch = new Thread(new ThreadStart(recvWatchConnection));
-                recvthreadWatch.IsBackground = true;
-                recvthreadWatch.Start();//可能有并发请求，所以消息的接收也需要在子线程中处理  
-
+                    //该线程用来接收教师机发送过来的最新聊天室名单IP
+                    recvthreadWatch = new Thread(new ThreadStart(recvWatchConnection));
+                    recvthreadWatch.IsBackground = true;
+                    recvthreadWatch.Start();//可能有并发请求，所以消息的接收也需要在子线程中处理  
+                
 
                 //打印输出
                 //Console.WriteLine("=====================服 务 器 连 接 成 功Socekt用来通信聊天室用户的信息更新======================");
@@ -529,8 +533,12 @@ namespace LoginFrame
             set { socketDic = value; }
         }
 
-        void recvWatchConnection()
+        void recvWatchConnection ()
         {
+
+            try
+            {
+           
             //持续不断的监听   更新聊天室用户信息
 
             //socketClient
@@ -565,7 +573,29 @@ namespace LoginFrame
                 {
                     //Console.WriteLine("接收到的数据为空。");
                 }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("发现主机直接下机 所以该处强制学生机关闭程序"+ ex.ToString());
 
+                if (socketClient!=null)
+                {
+                    socketClient.Close();
+                }
+                
+
+            }
+        }
+
+        private void closeApp()
+        {
+            if (LoginRoler.isLocalIp)
+            {
+                //发现主机直接下机 所以该处强制学生机关闭程序
+                //发送关闭的指令
+                byte[] buf = Encoding.Default.GetBytes("Close^^##");
+                LoginRoler.UDPSend.Send(buf, buf.Length, LoginRoler.SendMulticast);
             }
         }
 
@@ -1296,6 +1326,15 @@ namespace LoginFrame
                             LoginRoler.UDPSend.Send(buf, buf.Length, LoginRoler.SendMulticast);
                         }
                         break;
+                    case "Close":
+                        if (!LoginRoler.isLocalIp)
+                        {
+                            //弹出提示 告诉非  开数据的用户 说 主机关闭 现在强制关机
+                            MessageBox.Show("因为数据库主机已经关闭，现在强制退出此程序!");
+                            System.Environment.Exit(0);
+                        }
+                        
+                        break;
                     default: break;
                 }
             }
@@ -1750,6 +1789,8 @@ namespace LoginFrame
             {
 
                 CloseDB();
+
+                closeApp();
 
                 Application.ExitThread();
             }
