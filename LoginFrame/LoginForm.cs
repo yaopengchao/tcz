@@ -322,6 +322,13 @@ namespace LoginFrame
                 return;
             }
 
+            if (user_type == Constant.RoleManager && Constant.RoleManager == LoginRoler.serverType && !isLocalIp)
+            {
+                MessageBox.Show("局域网中已经有管理员登录!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                button1.Enabled = true;
+                return;
+            }
+
             LoginRoler.isLocalIp = isLocalIp;
 
             //if (isLocalIp)

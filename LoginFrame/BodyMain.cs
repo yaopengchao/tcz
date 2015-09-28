@@ -41,8 +41,6 @@ namespace LoginFrame
 
             btn_stop.Enabled = false;
 
-            
-
         }
 
 
