@@ -177,6 +177,7 @@ namespace LoginFrame
                 btnLessonType.BackgroundImage = global::LoginFrame.Properties.Resources.课件分类;
                 btnLessonType.FlatStyle = FlatStyle.Flat;
                 btnLessonType.FlatAppearance.BorderSize = 0;
+                btnLessonType.Cursor = System.Windows.Forms.Cursors.Hand;
                 //btnLessonType.Font = new Font("微软雅黑", 9);
                 //btnLessonType.ForeColor = Color.White;
                 btnLessonType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -234,6 +235,7 @@ namespace LoginFrame
                         btnClassType.BackgroundImage = global::LoginFrame.Properties.Resources.章节未选中;
                         btnClassType.FlatStyle = FlatStyle.Flat;
                         btnClassType.FlatAppearance.BorderSize = 0;
+                        btnClassType.Cursor = System.Windows.Forms.Cursors.Hand;
                         //btnClassType.Font = new Font("微软雅黑", 9);
                         //btnClassType.ForeColor = Color.White;
                         if (LoginRoler.language == Constant.zhCN)
@@ -296,6 +298,29 @@ namespace LoginFrame
                     btn.Tag = "NOTOPEN#" + type_id;
                 }
 
+                if (chooseButton1!=null && chooseButton1.Tag.ToString().Split('#')[1] != btn.Tag.ToString().Split('#')[1])
+                {
+
+
+                    state = chooseButton1.Tag.ToString().Split('#')[0];
+                 
+                    if (state == "OPEN")
+                    {
+                        type_id = chooseButton1.Tag.ToString().Split('#')[1];
+                        //获取按钮索引
+                        btn_index = this.leftPanel.Controls.IndexOf(chooseButton1);
+
+                        //将之前按钮的展现去除掉
+                        this.leftPanel.Controls.RemoveAt(btn_index + 1);
+                        chooseButton1.Tag = "NOTOPEN#" + type_id;
+                    }
+                    
+                }
+               
+                //记录该BUTTON到ChooseBtn1
+
+                chooseButton1 = btn;
+
             }
         }
 
@@ -336,6 +361,7 @@ namespace LoginFrame
                     {
 
                         ButtonEx btnLesson = new ButtonEx();
+                        btnLesson.Cursor = System.Windows.Forms.Cursors.Hand;
                         btnLesson.Width = 160;
                         btnLesson.Height = 20;
                         btnLesson.FlatStyle = FlatStyle.Flat;
@@ -411,6 +437,37 @@ namespace LoginFrame
                     btn.BackgroundImage = global::LoginFrame.Properties.Resources.章节未选中;
                     btn.ForeColor = Color.White;
                 }
+
+
+                if (chooseButton2 != null)
+                {
+
+                    state = chooseButton2.Tag.ToString().Split('#')[0];
+
+                    if (state == "OPEN")
+                    {
+                        parentPanel = (FlowLayoutPanel)chooseButton2.Parent;
+                        //获取按钮索引
+                        btn_index = parentPanel.Controls.IndexOf(chooseButton2);
+
+                        FlowLayoutPanel flowLayoutPanel = (FlowLayoutPanel)parentPanel.Controls[btn_index + 1];
+                        type_id = chooseButton2.Tag.ToString().Split('#')[1];
+
+                        flowLayoutPanel = (FlowLayoutPanel)parentPanel.Controls[btn_index + 1];
+                        parentPanel.Height = parentPanel.Height - flowLayoutPanel.Height - 10;
+                        parentPanel.Controls.RemoveAt(btn_index + 1);
+                        chooseButton2.Tag = "NOTOPEN#" + type_id;
+                        chooseButton2.BackgroundImage = global::LoginFrame.Properties.Resources.章节未选中;
+                        chooseButton2.ForeColor = Color.White;
+                    }
+
+
+                    
+                }
+
+                //记录该BUTTON到ChooseBtn2
+
+                chooseButton2 = btn;
             }
         }
 
