@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
@@ -18,8 +19,8 @@ namespace LoginFrame
             //LoginForm loginForm = new LoginForm();
             //loginForm.openLocalDb();
             //Application.Run(loginForm);
-
             Application.Run(new LoginForm());
         }
+
     }
 }

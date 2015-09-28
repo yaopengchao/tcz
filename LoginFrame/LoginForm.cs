@@ -66,7 +66,27 @@ namespace LoginFrame
             this.comboBox3.Items.Add(new ComboxItem("管理员", Constant.RoleManager));
             comboBox3.SelectedIndex = 2;
 
+            loadUDP();
 
+            
+        }
+
+        /// <summary>
+        /// 创建UDP收发对象和加载到LoginRoler中便于管理
+        /// </summary>
+        private void loadUDP()
+        {
+            //创建搜索需要的UDP接收对象
+
+            LoginRoler.UDPRecv = new UdpClient(7788);
+            LoginRoler.UDPRecv.JoinMulticastGroup(IPAddress.Parse(System.Configuration.ConfigurationManager.AppSettings["UDPAddress"]));
+            LoginRoler.RecvMulticast = new IPEndPoint(IPAddress.Parse(System.Configuration.ConfigurationManager.AppSettings["UDPAddress"]), 5566);
+
+
+            //创建UDP需要的UDP发送对象
+            LoginRoler.UDPSend = new UdpClient(5566);
+            LoginRoler.UDPSend.JoinMulticastGroup(IPAddress.Parse(System.Configuration.ConfigurationManager.AppSettings["UDPAddress"]));
+            LoginRoler.SendMulticast = new IPEndPoint(IPAddress.Parse(System.Configuration.ConfigurationManager.AppSettings["UDPAddress"]), 7788);
         }
 
         private void messageThread()
@@ -269,7 +289,7 @@ namespace LoginFrame
             //this.label6.Text = "搜索局域网内是否已有教师机或管理员登录";
 
             searchIp();
-
+            
 
             Console.WriteLine("******最终获取的IP:" + LoginRoler.serverIp + "/来源:" + (isLocalIp ? "本地创建" : "来自局域网"));
 
@@ -282,14 +302,14 @@ namespace LoginFrame
             }
             else//获取到IP了   且   isLocalIp  为true 就要给大家发消息了
             {
-                if (isLocalIp)
-                {
-                    //createSendUDPClient();
-                    Console.WriteLine(">>>>>>>>>>>>>.往局域网中发送数据库IP的消息");
-                    Thread t = new Thread(new ThreadStart(msgThread));
-                    t.IsBackground = true;
-                    t.Start();
-                }
+                //if (isLocalIp)
+                //{
+                //    //createSendUDPClient();
+                //    Console.WriteLine(">>>>>>>>>>>>>.往局域网中发送数据库IP的消息");
+               //     Thread t = new Thread(new ThreadStart(msgThread));
+               //     t.IsBackground = true;
+               //     t.Start();
+               // }
             }
 
             //判断下是否局域网中已经有老师存在
@@ -337,6 +357,7 @@ namespace LoginFrame
             mainFrame.panel6.Controls.Add(bodyMain);
             bodyMain.Show();
             mainFrame.Show();
+
 
             this.Visible = false;//登录框消失
 
@@ -398,8 +419,7 @@ namespace LoginFrame
         System.Timers.Timer timer;
         private void searchIp()
         {
-            //创建搜索需要的UDP
-            createReceUDPClient();
+            
 
             //创建定时器控制搜索异步进程的时间
             timer = createTimer(2000);
@@ -407,23 +427,44 @@ namespace LoginFrame
 
             Console.WriteLine("====开始搜寻局域网数据库IP====");
 
+
+            if ((searchServerIpRecv == null))
+            {
+                searchServerIpRecv = new Thread(new ThreadStart(RecvThread));
+                searchServerIpRecv.IsBackground = true;
+                searchServerIpRecv.Start();
+            }
+
             do
             {
-                if ((searchServerIpthr == null))
-                {
-                    //搜索异步线程
-                    searchServerIpthr = new Thread(new ThreadStart(RecvThread));
-                    searchServerIpthr.IsBackground = true;
-                    searchServerIpthr.Start();
-                }
+
+                //发送指令
+                byte[] buf = Encoding.Default.GetBytes("getIp^^##");
+                LoginRoler.UDPSend.Send(buf, buf.Length, LoginRoler.SendMulticast);
+                Console.WriteLine("发送指令");
+
+
             } while (RunDoWhile);
+
             Console.WriteLine("====结束搜寻局域网数据库IP====");
 
         }
 
-        Socket s;
-        private void recv(string mcastGroup, string port)
+        private void SendThread()
         {
+            while (true)
+            {
+                //发送指令
+                byte[] buf = Encoding.Default.GetBytes("getIp^^##");
+                LoginRoler.UDPSend.Send(buf, buf.Length, LoginRoler.SendMulticast);
+                Console.WriteLine("发送指令");
+            }
+        }
+
+        private Socket recv(string mcastGroup, string port)
+        {
+            Socket s = null;
+
             if (s == null)
             {
                 s = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
@@ -434,6 +475,7 @@ namespace LoginFrame
 
                 s.SetSocketOption(SocketOptionLevel.IP, SocketOptionName.AddMembership, new MulticastOption(ip, IPAddress.Any));
             }
+            return s;
         }
 
         private System.Timers.Timer createTimer(int time)
@@ -460,11 +502,9 @@ namespace LoginFrame
             }
         }
 
-        private void createReceUDPClient()
+        private Socket createReceUDPClient()
         {
-            recv("224.5.6.7", "5000");
-            //recv("224.224.224.224", "5000");
-            //recv广播("5000");
+            return recv(System.Configuration.ConfigurationManager.AppSettings["UDPAddress"], System.Configuration.ConfigurationManager.AppSettings["UDPPort"]);
         }
 
         UdpClient recvclient;
@@ -498,7 +538,7 @@ namespace LoginFrame
             sendclient.Send(buf, buf.Length, sendendpoint);
         }
 
-        private void send(string mcastGroup, string port, string ttl, byte[] data)
+        public void send(string mcastGroup, string port, string ttl, byte[] data)
         {
 
             IPAddress ip;
@@ -531,7 +571,7 @@ namespace LoginFrame
             catch (System.Exception e) { Console.Error.WriteLine(e.Message); }
         }
 
-        Thread searchServerIpthr;
+        Thread searchServerIpRecv;
 
         private void theout(object sender, ElapsedEventArgs e)
         {
@@ -558,11 +598,11 @@ namespace LoginFrame
                     LoginRoler.serverIp = "";
                     LoginRoler.serverType = Constant.RoleStudent;
                 }
-
-                //Console.WriteLine("搜索线程终止且终止定时器,IP:" + LoginRoler.serverIp);
                 RunDoWhile = false;
-                searchServerIpthr.Abort();
-
+                if (searchServerIpRecv != null)
+                {
+                    searchServerIpRecv.Abort();
+                }
             }
         }
 
@@ -570,57 +610,22 @@ namespace LoginFrame
         {
             while (true)
             {
-                byte[] b = new byte[1024];
-                s.Receive(b);
-                string msg = System.Text.Encoding.ASCII.GetString(b, 0, b.Length);
-                string[] splitString = msg.Split('^');
-                switch (splitString[0])
-                {
-                    case "ServerIp"://服务器IP指令
-                        Console.WriteLine("接收到局域网中某台机器传送来的IP:" + splitString[1]);
-                        LoginRoler.serverIp = splitString[1];
-                        LoginRoler.serverType = splitString[2];
-                        //Console.WriteLine("^^^^^^^^^^^^^^^^" + LoginRoler.serverIp);
-                        //搜索进程结束 且将定时器取消
-                        RunDoWhile = false;
-                        searchServerIpthr.Abort();
-                        break;
-                    default:
-                        //Console.WriteLine("进入默认了...");
-                        break;
-                }
-
-            }
-            //s.Close();
-        }
-
-
-
-        void RecvThread广播()
-        {
-            while (true)
-            {
-                byte[] buf = recvclient.Receive(ref recvendpoint);
+                byte[] buf = LoginRoler.UDPRecv.Receive(ref LoginRoler.recvMulticast);
                 string msg = Encoding.Default.GetString(buf);
                 string[] splitString = msg.Split('^');
+                string swfName = splitString[1];
                 switch (splitString[0])
                 {
                     case "ServerIp"://服务器IP指令
-                        Console.WriteLine("接收到局域网中某台机器传送来的IP:" + splitString[1]);
+ Console.WriteLine("接收到局域网中某台机器传送来的IP:" + splitString[1]);
                         LoginRoler.serverIp = splitString[1];
                         LoginRoler.serverType = splitString[2];
-                        //Console.WriteLine("^^^^^^^^^^^^^^^^" + LoginRoler.serverIp);
-                        //搜索进程结束 且将定时器取消
                         RunDoWhile = false;
-                        searchServerIpthr.Abort();
-                        break;
-                    default:
-                        //Console.WriteLine("进入默认了...");
+                        searchServerIpRecv.Abort();
                         break;
                 }
             }
         }
-
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {

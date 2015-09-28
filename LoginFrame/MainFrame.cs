@@ -127,16 +127,11 @@ namespace LoginFrame
         /// <param name="e"></param>
         private void MainFrame_Load(object sender, EventArgs e)
         {
-
-            if (LoginRoler.roleid == Constant.RoleStudent)
-            {
-                //MessageBox.Show("开启自动监听....");
-
+           
                 Thread t = new Thread(new ThreadStart(RecvThread));
                 t.IsBackground = true;
                 t.Start();
-
-            }
+            
 
 
             p = new Process();
@@ -1238,53 +1233,76 @@ namespace LoginFrame
         /// </summary>
         void RecvThread()
         {
-            UdpClient client = new UdpClient(7788);
-            client.JoinMulticastGroup(IPAddress.Parse("234.5.6.7"));
-            IPEndPoint multicast = new IPEndPoint(IPAddress.Parse("234.5.6.7"), 5566);
             while (true)
             {
-                //Console.WriteLine("学生端监听中......");
-                byte[] buf = client.Receive(ref multicast);
+                byte[] buf = LoginRoler.UDPRecv.Receive(ref LoginRoler.recvMulticast);
                 string msg = Encoding.Default.GetString(buf);
-                //MessageBox.Show("接收到..." + msg + "...的指令");
                 string[] splitString = msg.Split('^');
                 string swfName = splitString[1];
                 switch (splitString[0])
                 {
+
                     case "PlayFlash"://播放Flash指令
-                        if (isTitleFrmAndMainFrm())
+                        if (LoginRoler.roleid == Constant.RoleStudent)
                         {
-                            //MessageBox.Show("接收到播放Flash:" + swfName + "的指令");
-                            //初始化播放器并且进行播放
-                            string filpath = Application.StartupPath + @"/../../lessons/" + swfName + ".swf";
-                            FlashPlayerInit();
-                            playFlash(filpath);
+                            if (isTitleFrmAndMainFrm())
+                            {
+                                //MessageBox.Show("接收到播放Flash:" + swfName + "的指令");
+                                //初始化播放器并且进行播放
+                                string filpath = Application.StartupPath + @"/../../lessons/" + swfName + ".swf";
+                                FlashPlayerInit();
+                                playFlash(filpath);
+                            }
                         }
                         break;
                     case "StopFlash"://停止播放Flash指令
-                        if (isTitleFrmAndMainFrm())
+                        if (LoginRoler.roleid == Constant.RoleStudent)
                         {
-                            stopFlash();
+                            if (isTitleFrmAndMainFrm())
+                            {
+                                stopFlash();
+                            }
                         }
                         break;
                     case "PlayAudio"://开始扩音
-                        audioPlayer(swfName);
+                        if (LoginRoler.roleid == Constant.RoleStudent)
+                        {
+                            audioPlayer(swfName);
+                        }
                         break;
                     case "StopAudio"://停止扩音
-                        stopPlayer();
+                        if (LoginRoler.roleid == Constant.RoleStudent)
+                        {
+                            stopPlayer();
+                        }
                         break;
                     case "isBroadcasting"://同步中，屏蔽被同步机器按钮  
-                        Broadcast("isBroadcasting");
+                        if (LoginRoler.roleid == Constant.RoleStudent)
+                        {
+                            Broadcast("isBroadcasting");
+                        }
                         break;
                     case "notBroadcasting"://不在同步，屏蔽被同步机器按钮  
-                        Broadcast("notBroadcasting");
+                        if (LoginRoler.roleid == Constant.RoleStudent)
+                        {
+                            Broadcast("notBroadcasting");
+                        }
+                        break;
+                    case "getIp":
+                        if (LoginRoler.isLocalIp)
+                        {
+                            //如果   是本地创建数据库    则发送回去该IP信息 
+                            buf = Encoding.Default.GetBytes("ServerIp^" + LoginRoler.serverIp + "^" + LoginRoler.serverType + "^");
+                            LoginRoler.UDPSend.Send(buf, buf.Length, LoginRoler.SendMulticast);
+                        }
                         break;
                     default: break;
                 }
-
-                //MessageBox.Show(msg);
             }
         }
+
+        
+
 
         private void Broadcast(string state)
         {

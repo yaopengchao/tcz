@@ -573,7 +573,7 @@ namespace LoginFrame
         public void Broadcast(string code)
         {
             byte[] buf = Encoding.Default.GetBytes(code);
-            client.Send(buf, buf.Length, multicast);
+            LoginRoler.UDPSend.Send(buf, buf.Length, LoginRoler.SendMulticast);
         }
 
         public bool isBroadcasting = false;//是否广播中

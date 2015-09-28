@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.IO.Ports;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Text;
 
 namespace Model
@@ -36,6 +38,38 @@ namespace Model
 
 
         public static Dictionary<string, AgreeMent> agreeMents = new Dictionary<string, AgreeMent>();//模拟人协议
+
+        public static UdpClient uDPRecv;//UDP接收对象
+
+        public static IPEndPoint recvMulticast;
+
+        public static UdpClient uDPSend;//UDP发送端
+
+        public static IPEndPoint sendMulticast;//UDP发送所需对象
+
+        public static UdpClient UDPRecv
+        {
+            get { return uDPRecv; }
+            set { uDPRecv = value; }
+        }
+
+        public static UdpClient UDPSend
+        {
+            get { return uDPSend; }
+            set { uDPSend = value; }
+        }
+
+        public static IPEndPoint SendMulticast
+        {
+            get { return sendMulticast; }
+            set { sendMulticast = value; }
+        }
+
+        public static IPEndPoint RecvMulticast
+        {
+            get { return recvMulticast; }
+            set { recvMulticast = value; }
+        }
 
         public static Dictionary<string, AgreeMent> AgreeMents
         {

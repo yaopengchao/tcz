@@ -224,7 +224,6 @@
     <Compile Include="BodySimulation.Designer.cs">
       <DependentUpon>BodySimulation.cs</DependentUpon>
     </Compile>
-    <Compile Include="TestSerialClass.cs" />
     <Compile Include="TitleExam.cs">
       <SubType>Form</SubType>
     </Compile>
