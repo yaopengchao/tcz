@@ -287,10 +287,7 @@ namespace LoginFrame
             //登陆首先获取角色选择的index，因为写在后面会发生些错误 提前先获取
             comboBox3selectIndex = this.comboBox3.SelectedIndex;
 
-            //this.label6.Text = "搜索局域网内是否已有教师机或管理员登录";
-
             searchIp();
-            
 
             Console.WriteLine("******最终获取的IP:" + LoginRoler.serverIp + "/来源:" + (isLocalIp ? "本地创建" : "来自局域网"));
 
@@ -303,14 +300,7 @@ namespace LoginFrame
             }
             else//获取到IP了   且   isLocalIp  为true 就要给大家发消息了
             {
-                //if (isLocalIp)
-                //{
-                //    //createSendUDPClient();
-                //    Console.WriteLine(">>>>>>>>>>>>>.往局域网中发送数据库IP的消息");
-               //     Thread t = new Thread(new ThreadStart(msgThread));
-               //     t.IsBackground = true;
-               //     t.Start();
-               // }
+              
             }
 
             //判断下是否局域网中已经有老师存在
@@ -330,18 +320,7 @@ namespace LoginFrame
             }
 
             LoginRoler.isLocalIp = isLocalIp;
-
-            //if (isLocalIp)
-            // {
-            //     openLocalDb();
-            //}
-
-
-            Console.WriteLine("开启数据库操作.......");
-            //this.label6.Text = "开启数据库操作";
-
-            Console.WriteLine("开始登录操作.......");
-            //this.label6.Text = "开始登录操作";
+           
 
             //登录代码
             bool isLogined = login();
@@ -375,6 +354,13 @@ namespace LoginFrame
 
         }
 
+        private void messageThread1()
+        {
+           
+            this.label6.Image = null;
+            this.label6.Text = "搜索局域网数据库信息...";
+          
+        }
 
         private Process p;
 
