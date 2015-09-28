@@ -91,7 +91,8 @@
             // label6
             // 
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Image = global::LoginFrame.Properties.Resources.loading11;
+            this.label6.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label6.Image = global::LoginFrame.Properties.Resources.loadinf_blue;
             resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
             // 
@@ -120,6 +121,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::LoginFrame.Properties.Resources.登录界面;
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";

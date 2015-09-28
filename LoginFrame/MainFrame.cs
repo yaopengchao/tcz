@@ -726,6 +726,9 @@ namespace LoginFrame
         private Vocoder vocoder;
         private byte[] byteData = new byte[1024];   //Buffer to store the data received.
         private volatile int nUdpClientFlag;                 //Flag used to close the udpClient socket.
+
+        EndPoint ourEP;
+        EndPoint remoteEP;
         /*
          * Initializes all the data members.
          */
@@ -733,14 +736,20 @@ namespace LoginFrame
         {
             try
             {
-                device = new Device();
+                if (device == null)
+                {
+                    device = new Device();
+                }
                 device.SetCooperativeLevel(this, CooperativeLevel.Normal);
 
                 CaptureDevicesCollection captureDeviceCollection = new CaptureDevicesCollection();
 
                 DeviceInformation deviceInfo = captureDeviceCollection[0];
 
-                capture = new Microsoft.DirectX.DirectSound.Capture(deviceInfo.DriverGuid);
+                if (capture == null)
+                {
+                    capture = new Microsoft.DirectX.DirectSound.Capture(deviceInfo.DriverGuid);
+                }
 
                 short channels = 1; //Stereo.
                 short bitsPerSample = 16; //16Bit, alternatively use 8Bits.
@@ -770,13 +779,22 @@ namespace LoginFrame
                 nUdpClientFlag = 0;
 
                 //Using UDP sockets
-                clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-                EndPoint ourEP = new IPEndPoint(IPAddress.Any, 1450);
+                if (clientSocket == null)
+                {
+                    clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+                }
+                if (ourEP == null)
+                {
+                    ourEP = new IPEndPoint(IPAddress.Any, 1450);
+                }
                 //Listen asynchronously on port 1450 for coming messages (Invite, Bye, etc).
                 clientSocket.Bind(ourEP);
 
                 //Receive data from any IP.
-                EndPoint remoteEP = (EndPoint)(new IPEndPoint(IPAddress.Any, 0));
+                if (remoteEP==null)
+                {
+                    remoteEP = (EndPoint)(new IPEndPoint(IPAddress.Any, 0));
+                }
 
                 byteData = new byte[1024];
                 //Receive data asynchornously.
@@ -1053,7 +1071,7 @@ namespace LoginFrame
                 nUdpClientFlag = 0;
 
                 //Close the socket.
-                udpClient.Close();
+                //udpClient.Close();
             }
         }
 
@@ -1108,20 +1126,38 @@ namespace LoginFrame
                 nUdpClientFlag += 1;
             }
         }
+
+        Thread senderThread;
+        Thread receiverThread;
+
+
         private void InitializeCall()
         {
             try
             {
                 //Start listening on port 1500.
-                udpClient = new UdpClient(1550);
+                if (udpClient==null)
+                {
+                    udpClient = new UdpClient(1550);
+                }
 
-                Thread senderThread = new Thread(new ThreadStart(Send));
-                Thread receiverThread = new Thread(new ThreadStart(Receive));
-                bIsCallActive = true;
 
-                //Start the receiver and sender thread.
+                if (senderThread == null)
+                {
+                    senderThread = new Thread(new ThreadStart(Send));
+                    //Start the receiver and sender thread.
+                }
+                if (receiverThread == null)
+                {
+                    receiverThread = new Thread(new ThreadStart(Receive));
+                    
+                }
                 receiverThread.Start();
                 senderThread.Start();
+                bIsCallActive = true;
+
+               
+                
                 //btnCall.Enabled = false;
                 //btnEndCall.Enabled = true;
 
@@ -1737,7 +1773,9 @@ namespace LoginFrame
             Console.WriteLine("关闭数据库,卸载服务");
 
             CloseDB();
-            
+
+            closeApp();
+
         }
 
         private void CloseDB()

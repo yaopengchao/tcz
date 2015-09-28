@@ -65,7 +65,7 @@ namespace LoginFrame
             //取消跨线程访问空间
             Control.CheckForIllegalCrossThreadCalls = false;
 
-            if (LoginRoler.roleid == Constant.RoleStudent)
+            if (LoginRoler.roleid == Constant.RoleTeacher)
             {
                 Initialize();
             }
@@ -74,6 +74,7 @@ namespace LoginFrame
         private void VoiceChat_Load(object sender, EventArgs e)
         {
             this.cmbCodecs.SelectedIndex = 1;
+
             loadOnlineUses();
 
             Util.setLanguage();
@@ -141,14 +142,22 @@ namespace LoginFrame
         {
             try
             {
-                device = new Device();
+                if (device==null)
+                {
+                    device = new Device();
+                }
+                
                 device.SetCooperativeLevel(this, CooperativeLevel.Normal);
 
                 CaptureDevicesCollection captureDeviceCollection = new CaptureDevicesCollection();
 
                 DeviceInformation deviceInfo = captureDeviceCollection[0];
 
-                capture = new Capture(deviceInfo.DriverGuid);
+                if (capture==null)
+                {
+                    capture = new Capture(deviceInfo.DriverGuid);
+                }
+                
 
                 short channels = 1; //Stereo.
                 short bitsPerSample = 16; //16Bit, alternatively use 8Bits.
@@ -156,6 +165,7 @@ namespace LoginFrame
 
                 //Set up the wave format to be captured.
                 waveFormat = new WaveFormat();
+                    
                 waveFormat.Channels = channels;
                 waveFormat.FormatTag = WaveFormatTag.Pcm;
                 waveFormat.SamplesPerSecond = samplesPerSecond;
@@ -276,8 +286,9 @@ namespace LoginFrame
                             string ip = receivedFromEP.ToString().Split(':')[0];
                             //将远程同意邀请的用户IP写到教师机的  聊天室列表中
                             addChatRoom(ip, ((OnlineUser)(LoginRoler.OnlineUserDic[ip])).ChatName);
+
                             //更新在线用户的  isChating 值改成true
-                            updateOnlineUser(ip);
+                            updateOnlineUser(ip,true);
                             //同时需要通知其他学生机更新目前最新的聊天室用户IP列表  而这个操作需要由一开始登录的Socket来做
                             updateNetNewChatRoomUsersToStudent();
                             loadOnlineUses();
@@ -324,6 +335,8 @@ namespace LoginFrame
             bIsCallActive = false;
             btnCall.Enabled = true;
             btnEndCall.Enabled = false;
+
+           
         }
 
         /// <summary>
@@ -354,25 +367,21 @@ namespace LoginFrame
                 //socketSend.Close();
             }
         }
-        private void updateOnlineUser(string ip)
+        private void updateOnlineUser(string ip,bool isChating)
         {
             Dictionary<string, OnlineUser> onlineUserDic = LoginRoler.OnlineUserDic;
             //循环添加到onlineusers列表控件
-
-           
                 foreach (var dic in onlineUserDic)
                 {
                     if (dic.Key.Equals(ip) == true)
                     {
                         //Console.WriteLine("Output Key : {0}, Value : {1} ", dic.Key, dic.Value);
                         OnlineUser onlineUser = (OnlineUser)dic.Value;
-                        onlineUser.isChating = true;
+                        onlineUser.isChating = isChating;
                         //onlineUserDic.Remove(ip);
                         //onlineUserDic.Add(ip, onlineUser);
                     }
                 }
-           
-            
         }
 
 
@@ -453,20 +462,16 @@ namespace LoginFrame
                         if (vocoder == Vocoder.ALaw)
                         {
                             byte[] dataToWrite = ALawEncoder.ALawEncode(memStream.GetBuffer());
-                            //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
                             udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
                         }
                         else if (vocoder == Vocoder.uLaw)
                         {
                             byte[] dataToWrite = MuLawEncoder.MuLawEncode(memStream.GetBuffer());
-                            //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
                             udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
-                            //udpClient.Send(dataToWrite, dataToWrite.Length, "192.168.0.104", 1550);
                         }
                         else
                         {
                             byte[] dataToWrite = memStream.GetBuffer();
-                            //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
                             udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
                         }
                     }
@@ -492,7 +497,7 @@ namespace LoginFrame
                 nUdpClientFlag = 0;
 
                 //Close the socket.
-                udpClient.Close();
+                //udpClient.Close();
             }
         }
 
@@ -560,20 +565,36 @@ namespace LoginFrame
             }
         }
 
+        Thread senderThread;
+        Thread receiverThread;
+
         private void InitializeCall()
         {
             try
             {
-                udpClient = new UdpClient(1550);
+                if (udpClient == null)
+                {
+                    udpClient = new UdpClient(1550);
+                }
 
-              
-                    Thread senderThread = new Thread(new ThreadStart(Send));
-                    Thread receiverThread = new Thread(new ThreadStart(Receive));
-                    bIsCallActive = true;
-
+                if (senderThread==null)
+                {
+                    senderThread = new Thread(new ThreadStart(Send));
                     //Start the receiver and sender thread.
-                    receiverThread.Start();
-                    senderThread.Start();
+                    
+                }
+                if (receiverThread == null)
+                {
+                    receiverThread = new Thread(new ThreadStart(Receive));
+                   
+                }
+                receiverThread.Start();
+                senderThread.Start();
+
+                bIsCallActive = true;
+
+                   
+                   
                     //btnCall.Enabled = false;
                     //btnEndCall.Enabled = true;
 
@@ -661,13 +682,13 @@ namespace LoginFrame
 
         private void btnEndCall_Click(object sender, EventArgs e)
         {
+            //将再现用户数据以及处于聊天用户数据重置到默认
+            resetOnlineUsers();
+
             if (bIsCallActive)
             {
                 DropCall();
             }
-
-            this.Close();
-            
 
             MainFrame mainFrame = MainFrame.createForm();
             mainFrame.titlename.Text = "主 界 面";
@@ -691,6 +712,23 @@ namespace LoginFrame
 
         }
 
+        private void resetOnlineUsers()
+        {
+            Dictionary<string, OnlineUser> onlineUserDic = LoginRoler.OnlineUserDic;
+            //循环添加到onlineusers列表控件
+            foreach (var dic in onlineUserDic)
+            {
+                OnlineUser onlineUser = (OnlineUser)dic.Value;
+                onlineUser.isChating = false ;
+            }
+
+            updateNetNewChatRoomUsersToStudent();
+            loadOnlineUses();
+
+            //清空聊天用户列表
+
+            this.chatroomusers.Items.Clear();
+        }
 
         private void DropCall()
         {
