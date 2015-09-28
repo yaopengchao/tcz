@@ -611,12 +611,15 @@ namespace LoginFrame
             mStream.Position = 0;
             while (true)
             {
-
                 Socket sokConnection = socketServer.Accept();//返回一个 负责和该客户端通信的 套接字
                                                              //将返回的新的套接字 存储到 字典序列中
 
                 string ip = sokConnection.RemoteEndPoint.ToString().Split(':')[0];
 
+                if (socketDic.ContainsKey(ip))
+                {
+                    socketDic.Remove(ip);
+                }
                 socketDic.Add(ip, sokConnection);
 
 
@@ -646,6 +649,11 @@ namespace LoginFrame
                     OnlineUser onlineUser = (OnlineUser)bFormatter.Deserialize(mStream);//将接收到的内存流反序列化为对象  
 
                     Dictionary<string, OnlineUser> onlineUserDic = LoginRoler.OnlineUserDic;
+
+                    if (onlineUserDic.ContainsKey(onlineUser.ChatIp.ToString()))
+                    {
+                        onlineUserDic.Remove(onlineUser.ChatIp.ToString());
+                    }
 
                     onlineUserDic.Add(onlineUser.ChatIp.ToString(), onlineUser);
 
