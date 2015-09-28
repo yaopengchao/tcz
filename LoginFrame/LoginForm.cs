@@ -78,15 +78,15 @@ namespace LoginFrame
         {
             //创建搜索需要的UDP接收对象
 
-            LoginRoler.UDPRecv = new UdpClient(7788);
+            LoginRoler.UDPRecv = new UdpClient(Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["UDPPortRecv"]));
             LoginRoler.UDPRecv.JoinMulticastGroup(IPAddress.Parse(System.Configuration.ConfigurationManager.AppSettings["UDPAddress"]));
-            LoginRoler.RecvMulticast = new IPEndPoint(IPAddress.Parse(System.Configuration.ConfigurationManager.AppSettings["UDPAddress"]), 5566);
+            LoginRoler.RecvMulticast = new IPEndPoint(IPAddress.Parse(System.Configuration.ConfigurationManager.AppSettings["UDPAddress"]), Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["UDPPortSend"]));
 
 
             //创建UDP需要的UDP发送对象
-            LoginRoler.UDPSend = new UdpClient(5566);
+            LoginRoler.UDPSend = new UdpClient(Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["UDPPortSend"]));
             LoginRoler.UDPSend.JoinMulticastGroup(IPAddress.Parse(System.Configuration.ConfigurationManager.AppSettings["UDPAddress"]));
-            LoginRoler.SendMulticast = new IPEndPoint(IPAddress.Parse(System.Configuration.ConfigurationManager.AppSettings["UDPAddress"]), 7788);
+            LoginRoler.SendMulticast = new IPEndPoint(IPAddress.Parse(System.Configuration.ConfigurationManager.AppSettings["UDPAddress"]), Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["UDPPortRecv"]));
         }
 
         private void messageThread()

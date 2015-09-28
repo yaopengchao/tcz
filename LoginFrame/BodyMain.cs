@@ -652,23 +652,10 @@ namespace LoginFrame
             }
             else
             {
-                if (client==null)
-                {
-                    client = new UdpClient(5566);
-                    client.JoinMulticastGroup(IPAddress.Parse("234.5.6.7"));
-                }
-                if (multicast==null)
-                {
-                    multicast = new IPEndPoint(IPAddress.Parse("234.5.6.7"), 7788);
-                }
-
-
                 Broadcast("isBroadcasting^" + "" + "^##");
 
                 isBroadcasting = true;
                 btn_async.BackgroundImage = global::LoginFrame.Properties.Resources.stopsysnc;
-
-
 
             }
         }
