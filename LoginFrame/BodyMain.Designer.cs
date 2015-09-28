@@ -77,8 +77,8 @@
             // 
             // leftPanel
             // 
-            resources.ApplyResources(this.leftPanel, "leftPanel");
             this.leftPanel.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.leftPanel, "leftPanel");
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.leftPanel_Paint);
             // 

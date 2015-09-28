@@ -224,7 +224,7 @@ namespace LoginFrame
                     flowLayoutPanel.Width = 190;
                     //flowLayoutPanel.AutoSize = true;
                     //flowLayoutPanel.AutoScroll = true;
-                    flowLayoutPanel.AutoSize = true;
+                    flowLayoutPanel.AutoSize = false;
                     DataTable classes = Bll.getCourses(type_id).Tables[0];
                     int height = 5;
                     for (int j = 0; j < classes.Rows.Count; j++)
@@ -324,10 +324,7 @@ namespace LoginFrame
             }
         }
 
-        private void btnLessonType_Click_Close(Button chooseButton1)
-        {
-            throw new NotImplementedException();
-        }
+        
 
 
         /// <summary>
@@ -345,6 +342,8 @@ namespace LoginFrame
                 string type_id = btn.Tag.ToString().Split('#')[1];
                 //父控件
                 FlowLayoutPanel parentPanel = (FlowLayoutPanel)btn.Parent;
+
+               
                 //获取按钮索引
                 int btn_index = parentPanel.Controls.IndexOf(btn);
                 //MessageBox.Show("章节索引"+btn_index);
@@ -354,8 +353,9 @@ namespace LoginFrame
                     FlowLayoutPanel flowLayoutPanel = new FlowLayoutPanel();
                     flowLayoutPanel.HorizontalScroll.Visible = false;
                     flowLayoutPanel.Width = 175;
-                    flowLayoutPanel.AutoScroll = true;
-                   
+                    //flowLayoutPanel.AutoScroll = true;
+                    flowLayoutPanel.AutoSize = true;
+
                     DataTable lessons = Bll.getLessons(type_id).Tables[0];
                     for (int j = 0; j < lessons.Rows.Count; j++)
                     {
@@ -439,7 +439,9 @@ namespace LoginFrame
                 }
 
 
-                if (chooseButton2 != null)
+                
+
+                if (chooseButton2 != null && chooseButton2.Tag.ToString().Split('#')[1] != btn.Tag.ToString().Split('#')[1])
                 {
 
                     state = chooseButton2.Tag.ToString().Split('#')[0];
@@ -447,10 +449,12 @@ namespace LoginFrame
                     if (state == "OPEN")
                     {
                         parentPanel = (FlowLayoutPanel)chooseButton2.Parent;
+                        parentPanel.AutoSize = false;
                         //获取按钮索引
                         btn_index = parentPanel.Controls.IndexOf(chooseButton2);
 
                         FlowLayoutPanel flowLayoutPanel = (FlowLayoutPanel)parentPanel.Controls[btn_index + 1];
+                        flowLayoutPanel.AutoSize=false;
                         type_id = chooseButton2.Tag.ToString().Split('#')[1];
 
                         flowLayoutPanel = (FlowLayoutPanel)parentPanel.Controls[btn_index + 1];

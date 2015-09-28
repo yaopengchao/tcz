@@ -147,9 +147,6 @@
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="leftPanel.AutoScroll" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="leftPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
