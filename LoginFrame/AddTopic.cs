@@ -13,7 +13,7 @@ namespace LoginFrame
     public partial class AddTopic : Form
     {
 
-        ImplCourses Bll = new ImplCourses();
+        ImplCourses Bll = ImplCourses.getInstance();
 
         private static TopicService topicService = new TopicService();
 

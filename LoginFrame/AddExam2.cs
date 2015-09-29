@@ -19,7 +19,7 @@ namespace LoginFrame
 
         private static Dictionary<string, string> strWheres;
 
-        ImplCourses Bll = new ImplCourses();
+        ImplCourses Bll = ImplCourses.getInstance();
 
         public AddExam addExam;
 

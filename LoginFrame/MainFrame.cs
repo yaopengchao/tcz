@@ -110,7 +110,7 @@ namespace LoginFrame
 
         Thread threadWatchInfo = null;
 
-        Thread threadWatch = null;
+        //Thread threadWatch = null;
 
         Thread recvthreadWatch = null;
 

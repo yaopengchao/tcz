@@ -305,6 +305,15 @@ namespace LoginFrame
             this.label6.Text = "结束搜寻局域网数据库IP";
             Application.DoEvents();
 
+
+            //如果是测试的则会改变实际的IP结果   这样就能开启本地数据库进行测试修改
+            if ("true".Equals(System.Configuration.ConfigurationManager.AppSettings["isTest"]))
+            {
+                LoginRoler.serverIp = GetAddressIP();
+                isLocalIp = true;
+            }
+
+
             Console.WriteLine("******最终获取的IP:" + LoginRoler.serverIp + "/来源:" + (isLocalIp ? "本地创建" : "来自局域网"));
 
             //搜索操作完毕后  不管获取到和获取不到都要将IP保存在LoginRoler.serverIp字段

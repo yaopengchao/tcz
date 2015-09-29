@@ -199,7 +199,7 @@ namespace LoginFrame
 
         }
 
-        ImplCourses Bll = new ImplCourses();
+        ImplCourses Bll = ImplCourses.getInstance();
         /// <summary>
         /// 初始化左侧课件列表
         /// </summary>

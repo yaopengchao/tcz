@@ -13,7 +13,7 @@ namespace LoginFrame
     public partial class BodyTopic : Form
     {
 
-        ImplCourses Bll = new ImplCourses();
+        ImplCourses Bll = ImplCourses.getInstance();
 
         public BodyTopic()
         {

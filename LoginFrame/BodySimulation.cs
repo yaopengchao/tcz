@@ -911,6 +911,13 @@ namespace LoginFrame
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            searchSound sSound = searchSound.createForm();
+            sSound.bodySimulation = this;
+            sSound.ShowDialog();
+        }
     }
 
     

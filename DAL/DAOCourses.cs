@@ -2,10 +2,11 @@
 using System.Data;
 using MySql.Data.MySqlClient;
 using System.Text;
+using System.Collections.Generic;
 
 namespace DAL
 {
-    public class DAOCourses
+    public class DAOCourses : CommonDao
     {
         public DataSet getAllCourses()
         {
@@ -60,9 +61,14 @@ namespace DAL
             return ds;
         }
 
+        public int countSounds(Dictionary<string, string> strWheres)
+        {
+            string strSql = "select count(1) from  tcz_lessons where 1 = 1 ";
+            return countEntity(strSql, strWheres);
+        }
+      
 
-
-        public DataSet getSounds(string filter)
+        public DataSet getSounds(Dictionary<string, string> strWheres, int startIndex, int pageSize)
         {
             StringBuilder strSql = new StringBuilder();
 
@@ -73,7 +79,7 @@ namespace DAL
             MySqlParameter[] parameters = {
                     new MySqlParameter("?parentid", MySqlDbType.VarChar)};
 
-            parameters[0].Value = filter;
+            //parameters[0].Value = filter;
 
             DataSet ds = MySqlHelper.DateSet(strSql.ToString(), parameters);
 
