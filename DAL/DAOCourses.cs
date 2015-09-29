@@ -12,7 +12,7 @@ namespace DAL
         {
             StringBuilder strSql = new StringBuilder();
 
-            strSql.Append(" select TCZ_ID,TCZ_NAME,TCZ_ENAME from  tcz_type ");
+            strSql.Append("select '' as TCZ_ID, '' as TCZ_NAME, '' as TCZ_ENAME union select TCZ_ID,TCZ_NAME,TCZ_ENAME from  tcz_type ");
 
             MySqlParameter[] parameters = {};
 
