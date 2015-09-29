@@ -105,6 +105,7 @@ namespace LoginFrame
             exam2.FormBorderStyle = FormBorderStyle.None;
             exam2.Dock = System.Windows.Forms.DockStyle.Fill;
             mainFrame.panel6.Controls.Add(exam2);
+            mainFrame.panel6.Controls.AddRange(mainFrame.items.ToArray());
             exam2.Show();
 
             //mainFrame.panel1.Controls.Clear();
