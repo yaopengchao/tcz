@@ -176,9 +176,9 @@ namespace LoginFrame
 
 
                 //创建线程 负责监听
-                threadWatch = new Thread(WatchConnection);
+               // threadWatch = new Thread(WatchConnection);
                 //设置为后台线程
-                threadWatch.IsBackground = true;
+               // threadWatch.IsBackground = true;
                 //开启线程
                 //threadWatch.Start();
 

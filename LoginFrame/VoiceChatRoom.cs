@@ -118,6 +118,13 @@ namespace LoginFrame
             {
                 OnlineUser onlineUser = (OnlineUser)dic.Value;
 
+                {
+                    //检查用户是否还在线
+                    //获取IP
+                    string userIp = onlineUser.ChatIp;
+                    //从连接对象中拿出连接
+
+                }
                 bool isChating = onlineUser.IsChating;
 
                 if (!isChating)
