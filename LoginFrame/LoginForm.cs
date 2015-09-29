@@ -289,6 +289,10 @@ namespace LoginFrame
 
             searchIp();
 
+            Thread.Sleep(500);
+            this.label6.Text = "结束搜寻局域网数据库IP";
+            Application.DoEvents();
+
             Console.WriteLine("******最终获取的IP:" + LoginRoler.serverIp + "/来源:" + (isLocalIp ? "本地创建" : "来自局域网"));
 
             //搜索操作完毕后  不管获取到和获取不到都要将IP保存在LoginRoler.serverIp字段
@@ -320,7 +324,11 @@ namespace LoginFrame
             }
 
             LoginRoler.isLocalIp = isLocalIp;
-           
+
+
+            Thread.Sleep(500);
+            this.label6.Text = "开始登录操作";
+            Application.DoEvents();
 
             //登录代码
             bool isLogined = login();
@@ -417,8 +425,9 @@ namespace LoginFrame
             timer = createTimer(2000);
             timer.Start();
 
-            Console.WriteLine("====开始搜寻局域网数据库IP====");
-          
+            this.label6.Text = "开始搜寻局域网数据库IP";
+            Application.DoEvents();
+
             searchServerIpRecv = new Thread(new ThreadStart(RecvThread));
             searchServerIpRecv.IsBackground = true;
             searchServerIpRecv.Start();
