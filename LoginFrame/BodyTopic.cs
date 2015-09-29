@@ -43,7 +43,6 @@ namespace LoginFrame
             topicCategory.ValueMember = "TCZ_ID";
 
             topicType.Items.Clear();
-            topicType.Items.Clear();
             topicType.DataSource = Constant.getTopicType();
             topicType.DisplayMember = "name";
             topicType.ValueMember = "id";

@@ -208,34 +208,37 @@ namespace LoginFrame
             DataTable dt = Bll.getAllCourses().Tables[0];
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                //从数据库获取课件分类  然后遍历产生 按钮 动态添加到动态leftPanel中
-                Button btnLessonType = new Button();
-                btnLessonType.Width = 188;
-                btnLessonType.Height = 25;
-                btnLessonType.Margin = Padding.Empty;
-                btnLessonType.BackgroundImage = global::LoginFrame.Properties.Resources.课件分类;
-                btnLessonType.FlatStyle = FlatStyle.Flat;
-                btnLessonType.FlatAppearance.BorderSize = 0;
-                btnLessonType.Cursor = System.Windows.Forms.Cursors.Hand;
-                //btnLessonType.Font = new Font("微软雅黑", 9);
-                //btnLessonType.ForeColor = Color.White;
-                btnLessonType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                if (language == Constant.zhCN)
+                if (!("").Equals(dt.Rows[i]["TCZ_NAME"].ToString()))
                 {
-                    btnLessonType.Text = dt.Rows[i]["TCZ_NAME"].ToString();
-                }
-                else if (language == Constant.En)
-                {
-                    btnLessonType.Text = dt.Rows[i]["TCZ_ENAME"].ToString();
-                }
-                btnLessonType.Tag = "NOTOPEN#" + dt.Rows[i]["TCZ_ID"].ToString();
+                    //从数据库获取课件分类  然后遍历产生 按钮 动态添加到动态leftPanel中
+                    Button btnLessonType = new Button();
+                    btnLessonType.Width = 188;
+                    btnLessonType.Height = 25;
+                    btnLessonType.Margin = Padding.Empty;
+                    btnLessonType.BackgroundImage = global::LoginFrame.Properties.Resources.课件分类;
+                    btnLessonType.FlatStyle = FlatStyle.Flat;
+                    btnLessonType.FlatAppearance.BorderSize = 0;
+                    btnLessonType.Cursor = System.Windows.Forms.Cursors.Hand;
+                    //btnLessonType.Font = new Font("微软雅黑", 9);
+                    //btnLessonType.ForeColor = Color.White;
+                    btnLessonType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                    if (language == Constant.zhCN)
+                    {
+                        btnLessonType.Text = dt.Rows[i]["TCZ_NAME"].ToString();
+                    }
+                    else if (language == Constant.En)
+                    {
+                        btnLessonType.Text = dt.Rows[i]["TCZ_ENAME"].ToString();
+                    }
+                    btnLessonType.Tag = "NOTOPEN#" + dt.Rows[i]["TCZ_ID"].ToString();
 
-                //btnLessonType.Font
-                //绑定按钮点击事件
-                btnLessonType.Click += new EventHandler(btnLessonType_Click);
+                    //btnLessonType.Font
+                    //绑定按钮点击事件
+                    btnLessonType.Click += new EventHandler(btnLessonType_Click);
 
-                this.leftPanel.Controls.Add(btnLessonType);
-                Console.WriteLine("添加类型");
+                    this.leftPanel.Controls.Add(btnLessonType);
+                    Console.WriteLine("添加类型");
+                }     
             }
 
         }
