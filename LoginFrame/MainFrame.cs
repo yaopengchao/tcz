@@ -885,6 +885,10 @@ namespace LoginFrame
                             {
                                 //End the call.
                                 UninitializeCall();
+
+                                senderThread.Suspend();
+                                receiverThread.Suspend();
+
                             }
                             break;
                         }
@@ -1018,38 +1022,43 @@ namespace LoginFrame
 
                     List<ChatUser> chatUserlist = LoginRoler.chatUserlist;
 
-                    //chatroomusers
-                    for (int a = 0; a < chatUserlist.Count; a++)
+                    if (chatUserlist!=null && chatUserlist.Count>0)
                     {
-
-                        //Console.WriteLine("ip=" + chatroomusers.Items[a].Text.ToString() + "进入聊天");
-
-                        string ip = (((ChatUser)chatUserlist[a]).ChatIp).ToString();
-
-                        if (ip.Equals(LoginRoler.ip)) continue;
-
-                        //Console.WriteLine("发送音频数据到:" + ip);
-
-                        if (vocoder == Vocoder.ALaw)
+                        //chatroomusers
+                        for (int a = 0; a < chatUserlist.Count; a++)
                         {
-                            byte[] dataToWrite = ALawEncoder.ALawEncode(memStream.GetBuffer());
-                            //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
-                            udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
-                        }
-                        else if (vocoder == Vocoder.uLaw)
-                        {
-                            byte[] dataToWrite = MuLawEncoder.MuLawEncode(memStream.GetBuffer());
-                            //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
-                            udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
-                            //udpClient.Send(dataToWrite, dataToWrite.Length, "192.168.0.104", 1550);
-                        }
-                        else
-                        {
-                            byte[] dataToWrite = memStream.GetBuffer();
-                            //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
-                            udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
+
+                            //Console.WriteLine("ip=" + chatroomusers.Items[a].Text.ToString() + "进入聊天");
+
+                            string ip = (((ChatUser)chatUserlist[a]).ChatIp).ToString();
+
+                            if (ip.Equals(LoginRoler.ip)) continue;
+
+                            //Console.WriteLine("发送音频数据到:" + ip);
+
+                            if (vocoder == Vocoder.ALaw)
+                            {
+                                byte[] dataToWrite = ALawEncoder.ALawEncode(memStream.GetBuffer());
+                                //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
+                                udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
+                            }
+                            else if (vocoder == Vocoder.uLaw)
+                            {
+                                byte[] dataToWrite = MuLawEncoder.MuLawEncode(memStream.GetBuffer());
+                                //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
+                                udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
+                                //udpClient.Send(dataToWrite, dataToWrite.Length, "192.168.0.104", 1550);
+                            }
+                            else
+                            {
+                                byte[] dataToWrite = memStream.GetBuffer();
+                                //udpClient.Send(dataToWrite, dataToWrite.Length, otherPartyIP.Address.ToString(), 1550);
+                                udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
+                            }
                         }
                     }
+
+                    
                 }
             }
             catch (Exception ex)
@@ -1146,14 +1155,27 @@ namespace LoginFrame
                 {
                     senderThread = new Thread(new ThreadStart(Send));
                     //Start the receiver and sender thread.
+                    senderThread.Start();
                 }
+                else
+                {
+                    senderThread.Resume();
+                }
+
                 if (receiverThread == null)
                 {
                     receiverThread = new Thread(new ThreadStart(Receive));
-                    
+                    receiverThread.Start();
                 }
-                receiverThread.Start();
-                senderThread.Start();
+                else
+                {
+                    receiverThread.Resume();
+                }
+
+
+
+
+                bStop = false;
                 bIsCallActive = true;
 
                

@@ -333,8 +333,7 @@ namespace LoginFrame
             bStop = true;
 
             bIsCallActive = false;
-            btnCall.Enabled = true;
-            btnEndCall.Enabled = false;
+         
 
            
         }
@@ -444,6 +443,11 @@ namespace LoginFrame
 
                     //循环聊天室里面的用户发送语音数据
 
+                    if (chatroomusers!=null && chatroomusers.Items.Count > 0) 
+                    {
+
+                   
+
                     //chatroomusers
                     for (int a = 0; a < chatroomusers.Items.Count; a++)
                     {
@@ -475,7 +479,7 @@ namespace LoginFrame
                             udpClient.Send(dataToWrite, dataToWrite.Length, ip, 1550);
                         }
                     }
-
+                    }
                 }
             }
             catch (Exception ex)
@@ -577,20 +581,29 @@ namespace LoginFrame
                     udpClient = new UdpClient(1550);
                 }
 
-                if (senderThread==null)
+                if (senderThread == null)
                 {
                     senderThread = new Thread(new ThreadStart(Send));
                     //Start the receiver and sender thread.
-                    
+                    senderThread.Start();
                 }
+                else
+                {
+                    senderThread.Resume();
+                }
+
+
                 if (receiverThread == null)
                 {
                     receiverThread = new Thread(new ThreadStart(Receive));
-                   
+                    receiverThread.Start();
                 }
-                receiverThread.Start();
-                senderThread.Start();
+                else
+                {
+                    receiverThread.Resume();
+                }
 
+                bStop = false;
                 bIsCallActive = true;
 
                    
@@ -682,13 +695,19 @@ namespace LoginFrame
 
         private void btnEndCall_Click(object sender, EventArgs e)
         {
-            //将再现用户数据以及处于聊天用户数据重置到默认
-            resetOnlineUsers();
 
             if (bIsCallActive)
             {
                 DropCall();
             }
+
+            senderThread.Suspend();
+            receiverThread.Suspend();
+
+            //将再现用户数据以及处于聊天用户数据重置到默认
+            resetOnlineUsers();
+
+            
 
             MainFrame mainFrame = MainFrame.createForm();
             mainFrame.titlename.Text = "主 界 面";
