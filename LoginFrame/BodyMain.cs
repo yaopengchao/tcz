@@ -66,9 +66,26 @@ namespace LoginFrame
                     ToolStripMenuItem subItem = AddContextMenu(row["NAME"].ToString(), menuStrip1.Items, null);
                     subItem.Tag = row["FILENAME"].ToString()+"#"+ row["MUSICFILENAME"].ToString()+"#"+ row["LESSON_ID"].ToString();
                     subItem.Click += new EventHandler(subItemClick_playLesson);//绑定方法
-                    subItem.DoubleClick += new EventHandler(subItemClick_deleteLesson);//绑定方法
+                    //subItem.DoubleClick += new EventHandler(subItemClick_deleteLesson);//绑定方法
                     subItem.ToolTipText = "单击播放课件,双击删除收藏";
                     subItem.BackgroundImage = global::LoginFrame.Properties.Resources.收藏条目;
+
+                    //在每项上面增加删除的事件
+
+                    ToolStripMenuItem sub_subItem = new System.Windows.Forms.ToolStripMenuItem();
+                    sub_subItem.Name = "删除";
+                    sub_subItem.Text = "删除";
+                    sub_subItem.ForeColor = Color.Black;
+                    sub_subItem.BackColor = Color.White;
+                    sub_subItem.Size = new System.Drawing.Size(152, 22);
+                    sub_subItem.Tag = row["FILENAME"].ToString() + "#" + row["MUSICFILENAME"].ToString() + "#" + row["LESSON_ID"].ToString();
+                    sub_subItem.Click += new EventHandler(subItemClick_deleteLesson);//绑定方法
+                    sub_subItem.ToolTipText = "单击删除课件收藏";
+
+                    subItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+                                sub_subItem
+                    });
+
                     toolStripMenuItem1.DropDownItems.Add(subItem);
                 }
                 else if (LoginRoler.language == Constant.En)
@@ -76,9 +93,27 @@ namespace LoginFrame
                     ToolStripMenuItem subItem = AddContextMenu(row["ENAME"].ToString(), menuStrip1.Items, null);
                     subItem.Tag = row["FILENAME"].ToString() + "#" + row["MUSICFILENAME"].ToString() + "#" + row["LESSON_ID"].ToString();
                     subItem.Click += new EventHandler(subItemClick_playLesson);//绑定方法
-                    subItem.DoubleClick += new EventHandler(subItemClick_deleteLesson);//绑定方法
                     subItem.ToolTipText = "Click play courseware, double click Delete";
                     subItem.BackgroundImage = global::LoginFrame.Properties.Resources.收藏条目;
+
+                    //在每项上面增加删除的事件
+
+                    ToolStripMenuItem sub_subItem = new System.Windows.Forms.ToolStripMenuItem();
+                    sub_subItem.Name = "删除";
+                    sub_subItem.Text = "删除";
+                    sub_subItem.ForeColor = Color.Black;
+                    sub_subItem.BackColor = Color.White;
+                    sub_subItem.Size = new System.Drawing.Size(152, 22);
+                    sub_subItem.Tag = row["FILENAME"].ToString() + "#" + row["MUSICFILENAME"].ToString() + "#" + row["LESSON_ID"].ToString();
+                    sub_subItem.Click += new EventHandler(subItemClick_deleteLesson);//绑定方法
+                    sub_subItem.ToolTipText = "单击删除课件收藏";
+
+                    subItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+                                sub_subItem
+                    });
+
+
+
                     toolStripMenuItem1.DropDownItems.Add(subItem);
                 }
             }
@@ -105,10 +140,14 @@ namespace LoginFrame
 
         private void subItemClick_deleteLesson(object sender, EventArgs e)
         {
-            ToolStripMenuItem subItem = (ToolStripMenuItem)sender;
-            string lesson_id = subItem.Tag.ToString().Split('#')[2];
+            ToolStripMenuItem currentItem = (ToolStripMenuItem)sender;
+
+            //获取父项
+            ToolStripMenuItem parentItem = (ToolStripMenuItem)currentItem.OwnerItem;
+
+            string lesson_id = parentItem.Tag.ToString().Split('#')[2];
             bool isDelete=IUser.deleteFavorite(LoginRoler.login_id, lesson_id);
-            if (isDelete)
+            if (!isDelete)
             {
                 MessageBox.Show("删除成功!");
             }

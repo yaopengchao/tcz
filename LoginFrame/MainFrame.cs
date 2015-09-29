@@ -1574,11 +1574,7 @@ namespace LoginFrame
             bodyTea.Show();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+       
         /// <summary>
         /// 自我测试
         /// </summary>

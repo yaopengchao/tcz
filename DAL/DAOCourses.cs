@@ -60,5 +60,26 @@ namespace DAL
             return ds;
         }
 
+
+
+        public DataSet getSounds(string filter)
+        {
+            StringBuilder strSql = new StringBuilder();
+
+            strSql.Append(" select LESSON_ID,LESSON_NAME,LESSON_ENAME,LESSON_FILENAME,LESSON_CLASS_ID,LESSON_MUSIC_FILENAME from  tcz_lessons  ");
+            strSql.Append(" where ");
+            strSql.Append(" 1=1 ");
+
+            MySqlParameter[] parameters = {
+                    new MySqlParameter("?parentid", MySqlDbType.VarChar)};
+
+            parameters[0].Value = filter;
+
+            DataSet ds = MySqlHelper.DateSet(strSql.ToString(), parameters);
+
+            return ds;
+        }
+
+
     }
 }

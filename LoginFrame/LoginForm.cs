@@ -145,6 +145,10 @@ namespace LoginFrame
 
         private bool login()
         {
+
+            this.label6.Text = "开始登录操作..";
+            Application.DoEvents();
+
             bool flag = false;
             string username = loginId.Text;
 
@@ -201,6 +205,11 @@ namespace LoginFrame
                     this.textBox2.Text = "";
                 }
             }
+
+            this.label6.Text = "开始登录操作...";
+            Application.DoEvents();
+
+
             return flag;
         }
 
@@ -289,7 +298,10 @@ namespace LoginFrame
 
             searchIp();
 
-            Thread.Sleep(500);
+            this.label6.Text = "开始搜寻局域网数据库IP...";
+            Application.DoEvents();
+
+           
             this.label6.Text = "结束搜寻局域网数据库IP";
             Application.DoEvents();
 
@@ -432,6 +444,9 @@ namespace LoginFrame
             searchServerIpRecv.IsBackground = true;
             searchServerIpRecv.Start();
 
+            this.label6.Text = "开始搜寻局域网数据库IP.";
+            Application.DoEvents();
+
             do
             {
 
@@ -443,7 +458,9 @@ namespace LoginFrame
 
             } while (RunDoWhile);
 
-            Console.WriteLine("====结束搜寻局域网数据库IP====");
+            this.label6.Text = "开始搜寻局域网数据库IP..";
+            Application.DoEvents();
+
 
         }
 

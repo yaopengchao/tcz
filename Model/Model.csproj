@@ -50,6 +50,7 @@
     <Compile Include="ExaminationDetail.cs" />
     <Compile Include="ExamResult.cs" />
     <Compile Include="ExamType.cs" />
+    <Compile Include="Lesson.cs" />
     <Compile Include="LoginRoler.cs" />
     <Compile Include="Message.cs" />
     <Compile Include="OnlineUser.cs" />

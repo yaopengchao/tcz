@@ -224,6 +224,12 @@
     <Compile Include="BodySimulation.Designer.cs">
       <DependentUpon>BodySimulation.cs</DependentUpon>
     </Compile>
+    <Compile Include="searchSound.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchSound.Designer.cs">
+      <DependentUpon>searchSound.cs</DependentUpon>
+    </Compile>
     <Compile Include="TitleExam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -464,6 +470,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PageControl.zh-CN.resx">
       <DependentUpon>PageControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchSound.resx">
+      <DependentUpon>searchSound.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TitleScore.resx">
       <DependentUpon>TitleScore.cs</DependentUpon>
