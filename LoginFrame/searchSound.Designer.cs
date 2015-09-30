@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_close = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnQuery = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.filterText = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_close = new System.Windows.Forms.Button();
             this.pageCtrl = new LoginFrame.PageControl();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,17 @@
             this.panel1.Size = new System.Drawing.Size(550, 400);
             this.panel1.TabIndex = 0;
             // 
+            // btn_close
+            // 
+            this.btn_close.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_close.Location = new System.Drawing.Point(428, 56);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(75, 23);
+            this.btn_close.TabIndex = 7;
+            this.btn_close.Text = "关 闭";
+            this.btn_close.UseVisualStyleBackColor = true;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
             // btnConfirm
             // 
             this.btnConfirm.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -66,6 +77,7 @@
             this.btnConfirm.TabIndex = 6;
             this.btnConfirm.Text = "确认选择";
             this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // btnQuery
             // 
@@ -106,27 +118,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "音频名称:";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(228, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 26);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "选择音频";
-            // 
-            // btn_close
-            // 
-            this.btn_close.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_close.Location = new System.Drawing.Point(428, 56);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(75, 23);
-            this.btn_close.TabIndex = 7;
-            this.btn_close.Text = "关 闭";
-            this.btn_close.UseVisualStyleBackColor = true;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
-            // 
             // pageCtrl
             // 
             this.pageCtrl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -141,6 +132,16 @@
             this.pageCtrl.TotalPage = 1;
             this.pageCtrl.TotalRecord = 0;
             this.pageCtrl.Widths = new int[0];
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(228, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 26);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "选择音频";
             // 
             // searchSound
             // 

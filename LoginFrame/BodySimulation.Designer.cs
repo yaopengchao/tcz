@@ -33,6 +33,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.button20 = new System.Windows.Forms.Button();
             this.label223 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
             this.脉搏 = new System.Windows.Forms.TextBox();
@@ -182,7 +183,9 @@
             this.label52 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.button20 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -255,6 +258,14 @@
             resources.ApplyResources(this.groupBox5, "groupBox5");
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.TabStop = false;
+            // 
+            // button20
+            // 
+            this.button20.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.button20, "button20");
+            this.button20.Name = "button20";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // label223
             // 
@@ -569,6 +580,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button23);
+            this.groupBox2.Controls.Add(this.button22);
+            this.groupBox2.Controls.Add(this.button21);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.label19);
@@ -867,6 +881,7 @@
             resources.ApplyResources(this.button16, "button16");
             this.button16.Name = "button16";
             this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // button15
             // 
@@ -874,6 +889,7 @@
             resources.ApplyResources(this.button15, "button15");
             this.button15.Name = "button15";
             this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button14
             // 
@@ -881,6 +897,7 @@
             resources.ApplyResources(this.button14, "button14");
             this.button14.Name = "button14";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button13
             // 
@@ -888,6 +905,7 @@
             resources.ApplyResources(this.button13, "button13");
             this.button13.Name = "button13";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button12
             // 
@@ -895,6 +913,7 @@
             resources.ApplyResources(this.button12, "button12");
             this.button12.Name = "button12";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button11
             // 
@@ -902,6 +921,7 @@
             resources.ApplyResources(this.button11, "button11");
             this.button11.Name = "button11";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button10
             // 
@@ -909,6 +929,7 @@
             resources.ApplyResources(this.button10, "button10");
             this.button10.Name = "button10";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -916,6 +937,7 @@
             resources.ApplyResources(this.button9, "button9");
             this.button9.Name = "button9";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
@@ -923,6 +945,7 @@
             resources.ApplyResources(this.button8, "button8");
             this.button8.Name = "button8";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -930,6 +953,7 @@
             resources.ApplyResources(this.button7, "button7");
             this.button7.Name = "button7";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -937,6 +961,7 @@
             resources.ApplyResources(this.button6, "button6");
             this.button6.Name = "button6";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // 右肺上
             // 
@@ -1247,13 +1272,29 @@
             resources.ApplyResources(this.label24, "label24");
             this.label24.Name = "label24";
             // 
-            // button20
+            // button21
             // 
-            this.button20.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.button20, "button20");
-            this.button20.Name = "button20";
-            this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
+            this.button21.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.button21, "button21");
+            this.button21.Name = "button21";
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
+            // 
+            // button22
+            // 
+            this.button22.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.button22, "button22");
+            this.button22.Name = "button22";
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
+            // 
+            // button23
+            // 
+            this.button23.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.button23, "button23");
+            this.button23.Name = "button23";
+            this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
             // BodySimulation
             // 
@@ -1476,5 +1517,8 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button button21;
     }
 }

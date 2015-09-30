@@ -71,6 +71,15 @@ namespace LoginFrame
             button20.BackColor = Color.FromArgb(255, 80, 151, 228);
             button20.ForeColor = Color.White;
 
+            button21.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button21.ForeColor = Color.White;
+
+            button22.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button22.ForeColor = Color.White;
+
+            button23.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button23.ForeColor = Color.White;
+
         }
 
        
@@ -948,7 +957,7 @@ namespace LoginFrame
 
         private void button5_Click(object sender, EventArgs e)
         {
-            searchSound sSound = searchSound.createForm();
+            searchSound sSound = searchSound.createForm(二尖瓣听诊区);
             sSound.bodySimulation = this;
             sSound.ShowDialog();
         }
@@ -957,6 +966,104 @@ namespace LoginFrame
         {
             AdjustPressure adjustPressure = AdjustPressure.createForm();
             adjustPressure.ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            searchSound sSound = searchSound.createForm(肺动脉瓣听诊区);
+            sSound.bodySimulation = this;
+            sSound.ShowDialog();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            searchSound sSound = searchSound.createForm(主动脉瓣区);
+            sSound.bodySimulation = this;
+            sSound.ShowDialog();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            searchSound sSound = searchSound.createForm(主动脉瓣第二听诊区);
+            sSound.bodySimulation = this;
+            sSound.ShowDialog();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            searchSound sSound = searchSound.createForm(三尖瓣区);
+            sSound.bodySimulation = this;
+            sSound.ShowDialog();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            searchSound sSound = searchSound.createForm(气管);
+            sSound.bodySimulation = this;
+            sSound.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            searchSound sSound = searchSound.createForm(左肺上);
+            sSound.bodySimulation = this;
+            sSound.ShowDialog();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            searchSound sSound = searchSound.createForm(左肺中);
+            sSound.bodySimulation = this;
+            sSound.ShowDialog();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            searchSound sSound = searchSound.createForm(左肺下);
+            sSound.bodySimulation = this;
+            sSound.ShowDialog();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            searchSound sSound = searchSound.createForm(右肺上);
+            sSound.bodySimulation = this;
+            sSound.ShowDialog();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            searchSound sSound = searchSound.createForm(右肺中);
+            sSound.bodySimulation = this;
+            sSound.ShowDialog();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            searchSound sSound = searchSound.createForm(右肺下);
+            sSound.bodySimulation = this;
+            sSound.ShowDialog();
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            searchSound sSound = searchSound.createForm(肠鸣音);
+            sSound.bodySimulation = this;
+            sSound.ShowDialog();
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            searchSound sSound = searchSound.createForm(肾动脉听诊音);
+            sSound.bodySimulation = this;
+            sSound.ShowDialog();
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            searchSound sSound = searchSound.createForm(股动脉听诊音);
+            sSound.bodySimulation = this;
+            sSound.ShowDialog();
         }
     }
 
