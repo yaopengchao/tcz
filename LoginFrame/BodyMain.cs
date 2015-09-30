@@ -266,7 +266,7 @@ namespace LoginFrame
                     flowLayoutPanel.Width = 190;
                     //flowLayoutPanel.AutoSize = true;
                     //flowLayoutPanel.AutoScroll = true;
-                    flowLayoutPanel.AutoSize = false;
+                    flowLayoutPanel.AutoSize = true;
                     DataTable classes = Bll.getCourses(type_id).Tables[0];
                     int height = 5;
                     for (int j = 0; j < classes.Rows.Count; j++)
@@ -385,6 +385,7 @@ namespace LoginFrame
                 //父控件
                 FlowLayoutPanel parentPanel = (FlowLayoutPanel)btn.Parent;
 
+                //MessageBox.Show("原先"+parentPanel.Height);
                
                 //获取按钮索引
                 int btn_index = parentPanel.Controls.IndexOf(btn);
@@ -458,7 +459,7 @@ namespace LoginFrame
                             }
                             else if (i == btn_index + 1)
                             {
-                                parentPanel.Height = parentPanel.Height + flowLayoutPanel.Height;
+                                parentPanel.Height = parentPanel.Height + addHeight;
                                 parentPanel.Controls.Add(flowLayoutPanel);
                             }
                             else if (i > btn_index + 1)
@@ -508,7 +509,7 @@ namespace LoginFrame
 
                         flowLayoutPanel = (FlowLayoutPanel)parentPanel.Controls[btn_index + 1];
                         parentPanel.Controls.RemoveAt(btn_index + 1);
-                        parentPanel.Height = parentPanel.Height - flowLayoutPanel.Height;
+                        parentPanel.Height = parentPanel.Height - addHeight;
                         chooseButton2.Tag = "NOTOPEN#" + type_id;
                         chooseButton2.BackgroundImage = global::LoginFrame.Properties.Resources.章节未选中;
                         chooseButton2.ForeColor = Color.White;
@@ -517,7 +518,7 @@ namespace LoginFrame
 
                     
                 }
-
+                //MessageBox.Show("现在" + parentPanel.Height);
                 //记录该BUTTON到ChooseBtn2
 
                 chooseButton2 = btn;
