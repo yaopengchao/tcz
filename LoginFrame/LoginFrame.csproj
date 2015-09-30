@@ -54,6 +54,15 @@
   <PropertyGroup>
     <StartupObject>LoginFrame.Program</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.84.0.0, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
       <SpecificVersion>False</SpecificVersion>
@@ -538,6 +547,7 @@
     <None Include="bin\Debug\LoginFrame.exe.config" />
     <None Include="bin\Debug\LoginFrame.vshost.exe.config" />
     <None Include="bin\Debug\LoginFrame.vshost.exe.manifest" />
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
