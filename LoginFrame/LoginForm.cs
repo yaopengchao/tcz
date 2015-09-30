@@ -29,28 +29,10 @@ namespace LoginFrame
 
         public LoginForm()
         {
-            p = new Process();
-            p.StartInfo.FileName = "cmd.exe";
-            p.StartInfo.UseShellExecute = false;
-            p.StartInfo.RedirectStandardInput = true;
-            p.StartInfo.RedirectStandardOutput = true;
-            p.StartInfo.CreateNoWindow = true;
-
 
             InitializeComponent();
-            button1.Enabled = false;
-
-            openLocalDb();
-
-
-            Thread t = new Thread(new ThreadStart(messageThread));
-            t.IsBackground = true;
-            t.Start();
-
 
             this.BackColor = Color.FromArgb(255, 208, 232, 253);
-
-
 
             Control.CheckForIllegalCrossThreadCalls = false;
 
@@ -66,7 +48,7 @@ namespace LoginFrame
             this.comboBox3.Items.Add(new ComboxItem("管理员", Constant.RoleManager));
             comboBox3.SelectedIndex = 2;
 
-            loadUDP();
+            
 
             
         }
@@ -133,13 +115,18 @@ namespace LoginFrame
             return RandomCode;
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Process[] myProcess = Process.GetProcessesByName("mysqld-nt");
+            if (myProcess.Length > 0)
+            {
+                foreach (Process process in myProcess)
+                {
+                    process.Kill();
+                }
+            }
+            Thread.Sleep(500);
             Application.Exit();
         }
 
@@ -396,31 +383,47 @@ namespace LoginFrame
 
         public void openLocalDb()
         {
-            //string mySql_Version, mySql_Path;
-            //if (CheckMySql.hasInstalledMySql(out mySql_Version, out mySql_Path))
-
-            p.Start();
-
-            exeCmd("net stop MySQL");
-            exeCmd("sc delete MySQL");
-            //进入打包数据库目录
-            cdDiyDBPath();
-            exeCmd("mysqld-nt.exe -install");
-            //安装mysql
-            //exeCmd("mysqld install");
-            //启动mysql服务
-            exeCmd("net start MySQL");
-            //Console.WriteLine("mysql启动完毕等待10秒");
-            Thread.Sleep(3000);
-            p.Close();
-
-
+            //先关闭
+            Process[] myProcess = Process.GetProcessesByName("mysqld-nt");
+            if (myProcess.Length > 0)
+            {
+                foreach (Process process in myProcess)
+                {
+                    process.Kill();
+                }
+            }
+            Thread.Sleep(1000);
+            //再打开
+            Process.Start(getDBPath());
+            
+            Thread.Sleep(2000);
         }
 
 
         private void exeCmd(string cmd)
         {
             p.StandardInput.WriteLine(cmd);
+        }
+
+        private string getDBPath()
+        {
+
+            //return Application.StartupPath + @"/../../../MysqlInstallProj/DB/MySQL5.1/bin/mysqld-nt.exe"
+            p.Start();
+            
+            string curPath = Application.StartupPath;
+            int index = curPath.IndexOf(":");
+            string hardPath = curPath.Substring(0, index + 1);
+            p.StandardInput.WriteLine(hardPath);
+            p.StandardInput.WriteLine("cd " + curPath);
+            //string dMsql = Application.StartupPath + @"/../../../MysqlInstallProj/DB/MySQL5.1/bin/mysqld-nt.exe";
+            string mainPath = curPath.Substring(0, curPath.IndexOf("LoginFrame"));
+            mainPath += "MysqlInstallProj/DB/MySQL5.1/bin/mysqld-nt.exe";
+            Console.WriteLine("==========" + mainPath);
+            //p.StandardInput.WriteLine("cd " + mainPath);
+            p.StandardInput.AutoFlush = true;
+            p.Close();
+            return mainPath;
         }
 
         //进入程序打包好的mysql目录
@@ -689,6 +692,29 @@ namespace LoginFrame
 
             //Caption
             res.ApplyResources(this, "$this");
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+            p = new Process();
+            p.StartInfo.FileName = "cmd.exe";
+            p.StartInfo.UseShellExecute = false;
+            p.StartInfo.RedirectStandardInput = true;
+            p.StartInfo.RedirectStandardOutput = true;
+            p.StartInfo.RedirectStandardError = true;
+            p.StartInfo.CreateNoWindow = true;
+
+            button1.Enabled = false;
+
+            openLocalDb();
+
+
+            Thread t = new Thread(new ThreadStart(messageThread));
+            t.IsBackground = true;
+            t.Start();
+
+            loadUDP();
         }
     }
 }

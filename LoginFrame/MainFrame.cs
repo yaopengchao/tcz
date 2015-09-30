@@ -1799,7 +1799,32 @@ namespace LoginFrame
         private void CloseDB()
         {
             p.Start();
-            exeCmd("net stop MySQL");
+            //exeCmd("net stop MySQL");
+
+            //进入打包数据库目录
+            //cdDiyDBPath();
+            string curPath = Application.StartupPath;
+            int index = curPath.IndexOf(":");
+            string hardPath = curPath.Substring(0, index + 1);
+            p.StandardInput.WriteLine(hardPath);
+            p.StandardInput.WriteLine("cd " + curPath);
+            //string dMsql = Application.StartupPath + @"/../../../MysqlInstallProj/DB/mysql-5.6.24-win32/bin";
+            string mainPath = curPath.Substring(0, curPath.IndexOf("LoginFrame"));
+            mainPath += "MysqlInstallProj/DB/MySQL5.1/bin";
+            Console.WriteLine("==========" + mainPath);
+            //p.StandardInput.WriteLine("cd " + mainPath);
+
+            //先关闭
+            Process[] myProcess = Process.GetProcessesByName("mysqld-nt");
+            if (myProcess.Length>0)
+            {
+                foreach (Process process in myProcess)
+                {
+                    process.Kill();
+                }
+            }
+            
+
             p.Close();
         }
 
@@ -1886,6 +1911,11 @@ namespace LoginFrame
         private void panel6_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void MainFrame_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            CloseDB();
         }
     }
 }
