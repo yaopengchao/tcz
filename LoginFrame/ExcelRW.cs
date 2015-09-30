@@ -63,18 +63,30 @@ namespace Excel2007ReadWrite
                 string type;
                 int val;
 
+                int index = 0;
+
                 for (reader.MoveToContent(); reader.Read();)
+
+                    
+
                     if (reader.NodeType == XmlNodeType.Element)
                         switch (reader.Name)
                         {
                             case "row":
+
+                                //Console.WriteLine("index="+ index);
+
                                 dr = data.NewRow();
 
-                               
-
-                                data.Rows.Add(dr);
+                                if (index!=0)
+                                {
+                                    data.Rows.Add(dr);
+                                }
 
                                 colIndex = 0;
+
+                                index++;
+
                                 break;
 
                             case "c":
@@ -95,21 +107,26 @@ namespace Excel2007ReadWrite
                                 {
                                     if (user_type== Constant.RoleStudent)
                                     {
-                                        //加入数据库中
-                                        if (addUser(dr, classid))
+                                        Console.WriteLine("index====" + index);
+                                        if (index != 1)
                                         {
-                                            dr[3] = "导入成功";
-                                        }
-                                        else
-                                        {
-                                            dr[3] = "导入失败";
+                                            //加入数据库中
+                                            if (addUser(dr, classid))
+                                            {
+                                                dr[3] = "导入成功";
+                                            }
+                                            else
+                                            {
+                                                dr[3] = "导入失败";
+                                            }
                                         }
                                     }
                                 }
                                 break;
                         }
+               
             }
-
+           
         }
 
         private static bool addUser(DataRow dr,int classid)

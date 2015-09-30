@@ -41,14 +41,12 @@ namespace LoginFrame
         {
             InitializeComponent();
 
-
             this.data.Columns.Add("学生名称", Type.GetType("System.String"));
             this.data.Columns.Add("登录名", Type.GetType("System.String"));
             this.data.Columns.Add("密码", Type.GetType("System.String"));
             this.data.Columns.Add("结果", Type.GetType("System.String"));
 
             this.dataGridView1.DataSource = data;
-
 
         }
 
@@ -104,11 +102,7 @@ namespace LoginFrame
             // ..and call helper method that parses that XML and fills DataTable with values.
             ExcelRW.ReadWorksheet(fs, stringTable, this.data, bodyStu.classId,Constant.RoleStudent);
         }
-
-        private void labUserId_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         /// <summary>
         /// 浏览按钮
