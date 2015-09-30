@@ -22,20 +22,54 @@ namespace LoginFrame
         {
             InitializeComponent();
 
-            //this.BackColor = Color.FromArgb(255, 208, 232, 253);
-
             button1.BackColor = Color.FromArgb(255, 80, 151, 228);
             button1.ForeColor = Color.White;
 
             button2.BackColor = Color.FromArgb(255, 80, 151, 228);
-            button1.ForeColor = Color.White;
+            button2.ForeColor = Color.White;
 
+            
 
             button3.BackColor = Color.FromArgb(255, 80, 151, 228);
             button3.ForeColor = Color.White;
 
             button4.BackColor = Color.FromArgb(255, 80, 151, 228);
             button4.ForeColor = Color.White;
+
+            button5.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button5.ForeColor = Color.White;
+            button6.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button6.ForeColor = Color.White;
+            button7.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button7.ForeColor = Color.White;
+            button8.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button8.ForeColor = Color.White;
+            button9.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button9.ForeColor = Color.White;
+            button10.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button10.ForeColor = Color.White;
+            button11.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button11.ForeColor = Color.White;
+            button12.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button12.ForeColor = Color.White;
+            button13.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button13.ForeColor = Color.White;
+            button14.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button14.ForeColor = Color.White;
+            button15.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button15.ForeColor = Color.White;
+            button16.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button16.ForeColor = Color.White;
+            button17.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button17.ForeColor = Color.White;
+            button18.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button18.ForeColor = Color.White;
+            button19.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button19.ForeColor = Color.White;
+
+
+            button20.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button20.ForeColor = Color.White;
 
         }
 
@@ -917,6 +951,12 @@ namespace LoginFrame
             searchSound sSound = searchSound.createForm();
             sSound.bodySimulation = this;
             sSound.ShowDialog();
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            AdjustPressure adjustPressure = AdjustPressure.createForm();
+            adjustPressure.ShowDialog();
         }
     }
 

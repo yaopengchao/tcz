@@ -41,7 +41,6 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.血压舒张压 = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
             this.血压收缩压 = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -183,6 +182,7 @@
             this.label52 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.button20 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -244,13 +244,13 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.button20);
             this.groupBox5.Controls.Add(this.label223);
             this.groupBox5.Controls.Add(this.panel18);
             this.groupBox5.Controls.Add(this.label26);
             this.groupBox5.Controls.Add(this.label27);
             this.groupBox5.Controls.Add(this.label28);
             this.groupBox5.Controls.Add(this.血压舒张压);
-            this.groupBox5.Controls.Add(this.label29);
             this.groupBox5.Controls.Add(this.血压收缩压);
             resources.ApplyResources(this.groupBox5, "groupBox5");
             this.groupBox5.Name = "groupBox5";
@@ -297,12 +297,6 @@
             // 
             resources.ApplyResources(this.血压舒张压, "血压舒张压");
             this.血压舒张压.Name = "血压舒张压";
-            // 
-            // label29
-            // 
-            resources.ApplyResources(this.label29, "label29");
-            this.label29.Name = "label29";
-            this.label29.Click += new System.EventHandler(this.label29_Click);
             // 
             // 血压收缩压
             // 
@@ -869,66 +863,77 @@
             // 
             // button16
             // 
+            this.button16.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.button16, "button16");
             this.button16.Name = "button16";
             this.button16.UseVisualStyleBackColor = true;
             // 
             // button15
             // 
+            this.button15.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.button15, "button15");
             this.button15.Name = "button15";
             this.button15.UseVisualStyleBackColor = true;
             // 
             // button14
             // 
+            this.button14.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.button14, "button14");
             this.button14.Name = "button14";
             this.button14.UseVisualStyleBackColor = true;
             // 
             // button13
             // 
+            this.button13.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.button13, "button13");
             this.button13.Name = "button13";
             this.button13.UseVisualStyleBackColor = true;
             // 
             // button12
             // 
+            this.button12.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.button12, "button12");
             this.button12.Name = "button12";
             this.button12.UseVisualStyleBackColor = true;
             // 
             // button11
             // 
+            this.button11.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.button11, "button11");
             this.button11.Name = "button11";
             this.button11.UseVisualStyleBackColor = true;
             // 
             // button10
             // 
+            this.button10.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.button10, "button10");
             this.button10.Name = "button10";
             this.button10.UseVisualStyleBackColor = true;
             // 
             // button9
             // 
+            this.button9.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.button9, "button9");
             this.button9.Name = "button9";
             this.button9.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
+            this.button8.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.button8, "button8");
             this.button8.Name = "button8";
             this.button8.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
+            this.button7.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.button7, "button7");
             this.button7.Name = "button7";
             this.button7.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
+            this.button6.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.button6, "button6");
             this.button6.Name = "button6";
             this.button6.UseVisualStyleBackColor = true;
@@ -940,6 +945,7 @@
             // 
             // button5
             // 
+            this.button5.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.button5, "button5");
             this.button5.Name = "button5";
             this.button5.UseVisualStyleBackColor = true;
@@ -1184,6 +1190,7 @@
             // 
             // button19
             // 
+            this.button19.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.button19, "button19");
             this.button19.Name = "button19";
             this.button19.UseVisualStyleBackColor = true;
@@ -1191,6 +1198,7 @@
             // 
             // button18
             // 
+            this.button18.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.button18, "button18");
             this.button18.Name = "button18";
             this.button18.UseVisualStyleBackColor = true;
@@ -1198,6 +1206,7 @@
             // 
             // button17
             // 
+            this.button17.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.button17, "button17");
             this.button17.Name = "button17";
             this.button17.UseVisualStyleBackColor = true;
@@ -1237,6 +1246,14 @@
             // 
             resources.ApplyResources(this.label24, "label24");
             this.label24.Name = "label24";
+            // 
+            // button20
+            // 
+            this.button20.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.button20, "button20");
+            this.button20.Name = "button20";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // BodySimulation
             // 
@@ -1382,7 +1399,6 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.RadioButton 心前区震颤无;
@@ -1459,5 +1475,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button button20;
     }
 }

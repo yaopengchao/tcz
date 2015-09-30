@@ -14,6 +14,10 @@ namespace LoginFrame
         public AdjustPressure()
         {
             InitializeComponent();
+
+            button1.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button1.ForeColor = Color.White;
+
         }
 
         private static AdjustPressure instance;
