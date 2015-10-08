@@ -215,7 +215,7 @@ namespace LoginFrame
                     btnLessonType.Width = 188;
                     btnLessonType.Height = 25;
                     btnLessonType.Margin = Padding.Empty;
-                    btnLessonType.BackgroundImage = global::LoginFrame.Properties.Resources.课件分类;
+                    btnLessonType.BackgroundImage = global::LoginFrame.Properties.Resources.菜单条_1;
                     btnLessonType.FlatStyle = FlatStyle.Flat;
                     btnLessonType.FlatAppearance.BorderSize = 0;
                     btnLessonType.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -274,7 +274,7 @@ namespace LoginFrame
                         Button btnClassType = new Button();
                         btnClassType.Width = 170;
                         btnClassType.Height = 20;
-                        btnClassType.BackgroundImage = global::LoginFrame.Properties.Resources.章节未选中;
+                        btnClassType.BackgroundImage = global::LoginFrame.Properties.Resources.子菜单_1;
                         btnClassType.FlatStyle = FlatStyle.Flat;
                         btnClassType.FlatAppearance.BorderSize = 0;
                         btnClassType.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -333,11 +333,15 @@ namespace LoginFrame
 
                     Console.WriteLine("章节");
                     btn.Tag = "OPEN#" + type_id;
+                    btn.BackgroundImage = global::LoginFrame.Properties.Resources.菜单条_;
+
                 }
                 else
                 {
                     this.leftPanel.Controls.RemoveAt(btn_index + 1);
                     btn.Tag = "NOTOPEN#" + type_id;
+                    btn.BackgroundImage = global::LoginFrame.Properties.Resources.菜单条_1;
+
                 }
 
                 if (chooseButton1!=null && chooseButton1.Tag.ToString().Split('#')[1] != btn.Tag.ToString().Split('#')[1])
@@ -355,8 +359,10 @@ namespace LoginFrame
                         //将之前按钮的展现去除掉
                         this.leftPanel.Controls.RemoveAt(btn_index + 1);
                         chooseButton1.Tag = "NOTOPEN#" + type_id;
+                        chooseButton1.BackgroundImage = global::LoginFrame.Properties.Resources.菜单条_1;
+
                     }
-                    
+
                 }
                
                 //记录该BUTTON到ChooseBtn1
@@ -472,10 +478,11 @@ namespace LoginFrame
                     Console.WriteLine("课件");
 
                     btn.Tag = "OPEN#" + type_id;
-                    btn.BackgroundImage = global::LoginFrame.Properties.Resources.章节选中;
-                    btn.ForeColor = Color.FromArgb(255, 78, 148, 226);
+                    //btn.BackgroundImage = global::LoginFrame.Properties.Resources.菜单条_22;
+                    btn.BackgroundImage = global::LoginFrame.Properties.Resources.子菜单_;
+                    //btn.ForeColor = Color.FromArgb(255, 78, 148, 226);
 
-                    
+
                 }
                 else
                 {
@@ -484,8 +491,9 @@ namespace LoginFrame
                     parentPanel.Height = parentPanel.Height - addHeight;
                     //addHeight = 0;
                     btn.Tag = "NOTOPEN#" + type_id;
-                    btn.BackgroundImage = global::LoginFrame.Properties.Resources.章节未选中;
-                    btn.ForeColor = Color.White;
+                    btn.BackgroundImage = global::LoginFrame.Properties.Resources.子菜单_1;
+                    //btn.BackgroundImage = global::LoginFrame.Properties.Resources.菜单条__2;
+                    //btn.ForeColor = Color.White;
                 }
 
 
@@ -511,12 +519,14 @@ namespace LoginFrame
                         parentPanel.Controls.RemoveAt(btn_index + 1);
                         parentPanel.Height = parentPanel.Height - addHeight;
                         chooseButton2.Tag = "NOTOPEN#" + type_id;
-                        chooseButton2.BackgroundImage = global::LoginFrame.Properties.Resources.章节未选中;
-                        chooseButton2.ForeColor = Color.White;
+                        //chooseButton2.BackgroundImage = global::LoginFrame.Properties.Resources.菜单条__2;
+                        chooseButton2.BackgroundImage = global::LoginFrame.Properties.Resources.子菜单_1;
+
+                        //chooseButton2.ForeColor = Color.White;
                     }
 
 
-                    
+
                 }
                 //MessageBox.Show("现在" + parentPanel.Height);
                 //记录该BUTTON到ChooseBtn2
@@ -716,7 +726,7 @@ namespace LoginFrame
 
             btn_play.Enabled = false;
             btn_stop.Enabled = true;
-            btn_play.BackgroundImage = global::LoginFrame.Properties.Resources.播放中;
+            btn_play.BackgroundImage = global::LoginFrame.Properties.Resources.播放_灰;
             btn_stop.BackgroundImage = global::LoginFrame.Properties.Resources.暂停;
         }
 
@@ -747,7 +757,7 @@ namespace LoginFrame
             if (isBroadcasting)
             {
                 isBroadcasting = false;
-                btn_async.BackgroundImage = global::LoginFrame.Properties.Resources.sysnc;
+                btn_async.BackgroundImage = global::LoginFrame.Properties.Resources.同步;
 
                 Broadcast("notBroadcasting^" + "" + "^##");
             }
@@ -756,7 +766,7 @@ namespace LoginFrame
                 Broadcast("isBroadcasting^" + "" + "^##");
 
                 isBroadcasting = true;
-                btn_async.BackgroundImage = global::LoginFrame.Properties.Resources.stopsysnc;
+                btn_async.BackgroundImage = global::LoginFrame.Properties.Resources.同步_灰;
 
             }
         }
@@ -816,7 +826,7 @@ namespace LoginFrame
                     this.btn_stop_Click(null, null);
                 }
 
-                btn_music.BackgroundImage = global::LoginFrame.Properties.Resources.扩音中;
+                btn_music.BackgroundImage = global::LoginFrame.Properties.Resources.对讲_灰;
             }
 
 
@@ -833,7 +843,7 @@ namespace LoginFrame
             }
             this.axShockwaveFlashPlayer.Stop();
 
-            btn_stop.BackgroundImage = global::LoginFrame.Properties.Resources.暂停中;
+            btn_stop.BackgroundImage = global::LoginFrame.Properties.Resources.暂停_灰;
             btn_play.BackgroundImage = global::LoginFrame.Properties.Resources.播放;
             btn_stop.Enabled = false;
             btn_play.Enabled = true;

@@ -93,36 +93,6 @@ namespace LoginFrame.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap loading11 {
-            get {
-                object obj = ResourceManager.GetObject("loading11", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap stopsysnc {
-            get {
-                object obj = ResourceManager.GetObject("stopsysnc", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap sysnc {
-            get {
-                object obj = ResourceManager.GetObject("sysnc", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
         internal static System.Drawing.Bitmap 上一个 {
             get {
                 object obj = ResourceManager.GetObject("上一个", resourceCulture);
@@ -133,9 +103,9 @@ namespace LoginFrame.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap 上一个中 {
+        internal static System.Drawing.Bitmap 上一个_灰 {
             get {
-                object obj = ResourceManager.GetObject("上一个中", resourceCulture);
+                object obj = ResourceManager.GetObject("上一个_灰", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +123,69 @@ namespace LoginFrame.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap 下一个中 {
+        internal static System.Drawing.Bitmap 下一个_灰 {
             get {
-                object obj = ResourceManager.GetObject("下一个中", resourceCulture);
+                object obj = ResourceManager.GetObject("下一个_灰", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 同步 {
+            get {
+                object obj = ResourceManager.GetObject("同步", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 同步_灰 {
+            get {
+                object obj = ResourceManager.GetObject("同步_灰", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 子菜单_ {
+            get {
+                object obj = ResourceManager.GetObject("子菜单_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 子菜单_1 {
+            get {
+                object obj = ResourceManager.GetObject("子菜单_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 对讲 {
+            get {
+                object obj = ResourceManager.GetObject("对讲", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 对讲_灰 {
+            get {
+                object obj = ResourceManager.GetObject("对讲_灰", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +203,9 @@ namespace LoginFrame.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap 扩音中 {
+        internal static System.Drawing.Bitmap 扩音_灰 {
             get {
-                object obj = ResourceManager.GetObject("扩音中", resourceCulture);
+                object obj = ResourceManager.GetObject("扩音_灰", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +223,9 @@ namespace LoginFrame.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap 播放中 {
+        internal static System.Drawing.Bitmap 播放_灰 {
             get {
-                object obj = ResourceManager.GetObject("播放中", resourceCulture);
+                object obj = ResourceManager.GetObject("播放_灰", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +243,9 @@ namespace LoginFrame.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap 收藏夹中 {
+        internal static System.Drawing.Bitmap 收藏夹_灰 {
             get {
-                object obj = ResourceManager.GetObject("收藏夹中", resourceCulture);
+                object obj = ResourceManager.GetObject("收藏夹_灰", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +273,9 @@ namespace LoginFrame.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap 暂停中 {
+        internal static System.Drawing.Bitmap 暂停_灰 {
             get {
-                object obj = ResourceManager.GetObject("暂停中", resourceCulture);
+                object obj = ResourceManager.GetObject("暂停_灰", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,9 +303,9 @@ namespace LoginFrame.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap 章节未选中 {
+        internal static System.Drawing.Bitmap 菜单条_ {
             get {
-                object obj = ResourceManager.GetObject("章节未选中", resourceCulture);
+                object obj = ResourceManager.GetObject("菜单条_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,9 +313,29 @@ namespace LoginFrame.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap 章节选中 {
+        internal static System.Drawing.Bitmap 菜单条__2 {
             get {
-                object obj = ResourceManager.GetObject("章节选中", resourceCulture);
+                object obj = ResourceManager.GetObject("菜单条__2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 菜单条_1 {
+            get {
+                object obj = ResourceManager.GetObject("菜单条_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 菜单条_22 {
+            get {
+                object obj = ResourceManager.GetObject("菜单条_22", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -296,26 +346,6 @@ namespace LoginFrame.Properties {
         internal static System.Drawing.Bitmap 语音 {
             get {
                 object obj = ResourceManager.GetObject("语音", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 语音中 {
-            get {
-                object obj = ResourceManager.GetObject("语音中", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap 课件分类 {
-            get {
-                object obj = ResourceManager.GetObject("课件分类", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

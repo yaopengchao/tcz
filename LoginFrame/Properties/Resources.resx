@@ -148,52 +148,61 @@
   <data name="语音" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\语音.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="章节未选中" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\章节未选中.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="章节选中" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\章节选中.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="课件分类" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\课件分类.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="收藏条目" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\收藏条目.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="loading11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loading11.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="登录界面" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\登录界面.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="stopsysnc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stopsysnc.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sysnc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sysnc.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="上一个中" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\上一个中.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="下一个中" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\下一个中.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="扩音中" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\扩音中.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="播放中" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\播放中.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="暂停中" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\暂停中.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="语音中" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\语音中.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="收藏夹中" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\收藏夹中.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="loadinf_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loadinf_blue.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="上一个_灰" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\上一个-灰.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="下一个_灰" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\下一个-灰.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="同步" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\同步.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="同步_灰" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\同步-灰.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="子菜单_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\子菜单-.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="子菜单_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\子菜单+.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="对讲" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\对讲.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="对讲_灰" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\对讲-灰.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="扩音_灰" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\扩音-灰.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="播放_灰" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\播放-灰.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="收藏夹_灰" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\收藏夹-灰.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="暂停_灰" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\暂停-灰.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="菜单条_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\菜单条-.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="菜单条_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\菜单条+.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="菜单条_22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\菜单条_22.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="菜单条__2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\菜单条__2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

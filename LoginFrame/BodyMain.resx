@@ -252,46 +252,6 @@
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="axShockwaveFlashPlayer.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="axShockwaveFlashPlayer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 1</value>
-  </data>
-  <data name="axShockwaveFlashPlayer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="axShockwaveFlashPlayer.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
-        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACFTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5BeEhvc3QrU3RhdGUBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAUwEAAAIB
-        AAAAAQAAAAAAAAAAAAAAAD4BAABnVWZVAAwAAK9SAAADPgAACAACAAAAAAAIAAAAAAAIAAAAAAAIAA4A
-        AABXAGkAbgBkAG8AdwAAAAgABgAAAC0AMQAAAAgABgAAAC0AMQAAAAgACgAAAEgAaQBnAGgAAAAIAAIA
-        AAAAAAgABgAAAC0AMQAAAAgAAAAAAAgAAgAAAAAACAAQAAAAUwBoAG8AdwBBAGwAbAAAAAgABAAAADAA
-        AAAIAAQAAAAwAAAACAACAAAAAAAIAAAAAAAIAAIAAAAAAA0AAAAAAAAAAAAAAAAAAAAAAAgABAAAADEA
-        AAAIAAQAAAAwAAAACAAAAAAACAAEAAAAMAAAAAgACAAAAGEAbABsAAAACAAMAAAAZgBhAGwAcwBlAAAA
-        CAAMAAAAZgBhAGwAcwBlAAAACAAOAAAALQAyADUANwAzADUAAAAL
-</value>
-  </data>
-  <data name="axShockwaveFlashPlayer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>800, 600</value>
-  </data>
-  <data name="axShockwaveFlashPlayer.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;axShockwaveFlashPlayer.Name" xml:space="preserve">
-    <value>axShockwaveFlashPlayer</value>
-  </data>
-  <data name="&gt;&gt;axShockwaveFlashPlayer.Type" xml:space="preserve">
-    <value>AxShockwaveFlashObjects.AxShockwaveFlash, AxInterop.ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;axShockwaveFlashPlayer.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;axShockwaveFlashPlayer.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="colorDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -299,7 +259,7 @@
     <value>NoControl</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>487, 5</value>
+    <value>495, 5</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>2, 30</value>
@@ -326,19 +286,19 @@
     <value>None</value>
   </data>
   <data name="btn_async.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Popup</value>
+    <value>Flat</value>
   </data>
   <data name="btn_async.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="btn_async.Location" type="System.Drawing.Point, System.Drawing">
-    <value>445, 5</value>
+    <value>445, 1</value>
   </data>
   <data name="btn_async.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="btn_async.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 30</value>
+    <value>41, 38</value>
   </data>
   <data name="btn_async.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -368,19 +328,16 @@
     <value>微软雅黑, 9pt, style=Bold</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 19</value>
-  </data>
-  <data name="toolStripMenuItem1.Text" xml:space="preserve">
-    <value>收  藏  夹</value>
+    <value>71, 26</value>
   </data>
   <data name="toolStripMenuItem1.ToolTipText" xml:space="preserve">
     <value>收藏夹</value>
   </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>279, 9</value>
+    <value>276, 6</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 23</value>
+    <value>74, 30</value>
   </data>
   <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -485,7 +442,7 @@
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 5</value>
+    <value>198, 5</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>2, 30</value>
@@ -512,7 +469,7 @@
     <value>NoControl</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 5</value>
+    <value>265, 5</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>2, 30</value>
@@ -539,7 +496,7 @@
     <value>NoControl</value>
   </data>
   <data name="分隔线.Location" type="System.Drawing.Point, System.Drawing">
-    <value>367, 5</value>
+    <value>365, 5</value>
   </data>
   <data name="分隔线.Size" type="System.Drawing.Size, System.Drawing">
     <value>2, 30</value>
@@ -572,13 +529,13 @@
     <value>NoControl</value>
   </data>
   <data name="btn_play.Location" type="System.Drawing.Point, System.Drawing">
-    <value>386, 5</value>
+    <value>379, 1</value>
   </data>
   <data name="btn_play.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="btn_play.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 30</value>
+    <value>41, 38</value>
   </data>
   <data name="btn_play.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -605,13 +562,13 @@
     <value>NoControl</value>
   </data>
   <data name="btn_stop.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 6</value>
+    <value>12, 1</value>
   </data>
   <data name="btn_stop.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="btn_stop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 30</value>
+    <value>41, 38</value>
   </data>
   <data name="btn_stop.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -638,13 +595,13 @@
     <value>NoControl</value>
   </data>
   <data name="btn_music.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 6</value>
+    <value>78, 1</value>
   </data>
   <data name="btn_music.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="btn_music.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 30</value>
+    <value>41, 38</value>
   </data>
   <data name="btn_music.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -671,13 +628,13 @@
     <value>NoControl</value>
   </data>
   <data name="btn_pre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 6</value>
+    <value>144, 1</value>
   </data>
   <data name="btn_pre.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="btn_pre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 30</value>
+    <value>41, 38</value>
   </data>
   <data name="btn_pre.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -704,13 +661,13 @@
     <value>NoControl</value>
   </data>
   <data name="btn_next.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 6</value>
+    <value>213, 1</value>
   </data>
   <data name="btn_next.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="btn_next.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 30</value>
+    <value>41, 38</value>
   </data>
   <data name="btn_next.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -737,13 +694,13 @@
     <value>NoControl</value>
   </data>
   <data name="btn_voice.Location" type="System.Drawing.Point, System.Drawing">
-    <value>504, 6</value>
+    <value>508, 1</value>
   </data>
   <data name="btn_voice.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="btn_voice.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 30</value>
+    <value>41, 38</value>
   </data>
   <data name="btn_voice.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -789,6 +746,46 @@
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 6</value>
+  </data>
+  <data name="axShockwaveFlashPlayer.Enabled" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="axShockwaveFlashPlayer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 1</value>
+  </data>
+  <data name="axShockwaveFlashPlayer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="axShockwaveFlashPlayer.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACFTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5BeEhvc3QrU3RhdGUBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAUwEAAAIB
+        AAAAAQAAAAAAAAAAAAAAAD4BAABnVWZVAAwAAK9SAAADPgAACAACAAAAAAAIAAAAAAAIAAAAAAAIAA4A
+        AABXAGkAbgBkAG8AdwAAAAgABgAAAC0AMQAAAAgABgAAAC0AMQAAAAgACgAAAEgAaQBnAGgAAAAIAAIA
+        AAAAAAgABgAAAC0AMQAAAAgAAAAAAAgAAgAAAAAACAAQAAAAUwBoAG8AdwBBAGwAbAAAAAgABAAAADAA
+        AAAIAAQAAAAwAAAACAACAAAAAAAIAAAAAAAIAAIAAAAAAA0AAAAAAAAAAAAAAAAAAAAAAAgABAAAADEA
+        AAAIAAQAAAAwAAAACAAAAAAACAAEAAAAMAAAAAgACAAAAGEAbABsAAAACAAMAAAAZgBhAGwAcwBlAAAA
+        CAAMAAAAZgBhAGwAcwBlAAAACAAOAAAALQAyADUANwAzADUAAAAL
+</value>
+  </data>
+  <data name="axShockwaveFlashPlayer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>800, 600</value>
+  </data>
+  <data name="axShockwaveFlashPlayer.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;axShockwaveFlashPlayer.Name" xml:space="preserve">
+    <value>axShockwaveFlashPlayer</value>
+  </data>
+  <data name="&gt;&gt;axShockwaveFlashPlayer.Type" xml:space="preserve">
+    <value>AxShockwaveFlashObjects.AxShockwaveFlash, AxInterop.ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;axShockwaveFlashPlayer.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;axShockwaveFlashPlayer.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

@@ -1413,13 +1413,13 @@ namespace LoginFrame
         {
             if (state.Equals("isBroadcasting"))
             {
-                this.bodyMain.btn_stop.BackgroundImage= global::LoginFrame.Properties.Resources.暂停中;
-                this.bodyMain.btn_voice.BackgroundImage = global::LoginFrame.Properties.Resources.语音中;
-                this.bodyMain.btn_play.BackgroundImage = global::LoginFrame.Properties.Resources.播放中;
-                this.bodyMain.btn_music.BackgroundImage = global::LoginFrame.Properties.Resources.扩音中;
-                this.bodyMain.btn_pre.BackgroundImage = global::LoginFrame.Properties.Resources.上一个中;
-                this.bodyMain.btn_next.BackgroundImage = global::LoginFrame.Properties.Resources.下一个中;
-                this.bodyMain.toolStripMenuItem1.BackgroundImage = global::LoginFrame.Properties.Resources.收藏夹中;
+                this.bodyMain.btn_stop.BackgroundImage= global::LoginFrame.Properties.Resources.暂停_灰;
+                this.bodyMain.btn_voice.BackgroundImage = global::LoginFrame.Properties.Resources.对讲_灰;
+                this.bodyMain.btn_play.BackgroundImage = global::LoginFrame.Properties.Resources.扩音_灰;
+                this.bodyMain.btn_music.BackgroundImage = global::LoginFrame.Properties.Resources.扩音_灰;
+                this.bodyMain.btn_pre.BackgroundImage = global::LoginFrame.Properties.Resources.上一个_灰;
+                this.bodyMain.btn_next.BackgroundImage = global::LoginFrame.Properties.Resources.下一个_灰;
+                this.bodyMain.toolStripMenuItem1.BackgroundImage = global::LoginFrame.Properties.Resources.收藏夹_灰;
 
 
 
