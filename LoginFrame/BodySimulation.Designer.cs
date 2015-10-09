@@ -82,6 +82,9 @@
             this.压痛胰腺无 = new System.Windows.Forms.RadioButton();
             this.压痛胰腺有 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button23 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -183,9 +186,6 @@
             this.label52 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -592,6 +592,30 @@
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
+            // 
+            // button23
+            // 
+            this.button23.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.button23, "button23");
+            this.button23.Name = "button23";
+            this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
+            // 
+            // button22
+            // 
+            this.button22.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.button22, "button22");
+            this.button22.Name = "button22";
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
+            // 
+            // button21
+            // 
+            this.button21.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.button21, "button21");
+            this.button21.Name = "button21";
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // label17
             // 
@@ -1271,30 +1295,6 @@
             // 
             resources.ApplyResources(this.label24, "label24");
             this.label24.Name = "label24";
-            // 
-            // button21
-            // 
-            this.button21.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.button21, "button21");
-            this.button21.Name = "button21";
-            this.button21.UseVisualStyleBackColor = true;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
-            // 
-            // button22
-            // 
-            this.button22.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.button22, "button22");
-            this.button22.Name = "button22";
-            this.button22.UseVisualStyleBackColor = true;
-            this.button22.Click += new System.EventHandler(this.button22_Click);
-            // 
-            // button23
-            // 
-            this.button23.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.button23, "button23");
-            this.button23.Name = "button23";
-            this.button23.UseVisualStyleBackColor = true;
-            this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
             // BodySimulation
             // 

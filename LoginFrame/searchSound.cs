@@ -33,10 +33,10 @@ namespace LoginFrame
 
         public static searchSound createForm(TextBox tBox)
         {
-            if (instance == null || instance.IsDisposed)
-            {
+            //if (instance == null || instance.IsDisposed)
+            //{
                 instance = new searchSound();
-            }
+            //}
             if (implCourses == null)
             {
                 implCourses = ImplCourses.getInstance();

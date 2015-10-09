@@ -33,32 +33,32 @@
             this.label6 = new System.Windows.Forms.Label();
             this.leftPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.axShockwaveFlashPlayer = new AxShockwaveFlashObjects.AxShockwaveFlash();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.btn_async = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.分隔线 = new System.Windows.Forms.Label();
-            this.btn_async = new System.Windows.Forms.Button();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_play = new System.Windows.Forms.Button();
             this.btn_stop = new System.Windows.Forms.Button();
             this.btn_music = new System.Windows.Forms.Button();
             this.btn_pre = new System.Windows.Forms.Button();
             this.btn_next = new System.Windows.Forms.Button();
             this.btn_voice = new System.Windows.Forms.Button();
-            this.axShockwaveFlashPlayer = new AxShockwaveFlashObjects.AxShockwaveFlash();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axShockwaveFlashPlayer)).BeginInit();
             this.panel3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axShockwaveFlashPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -89,6 +89,12 @@
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
+            // axShockwaveFlashPlayer
+            // 
+            resources.ApplyResources(this.axShockwaveFlashPlayer, "axShockwaveFlashPlayer");
+            this.axShockwaveFlashPlayer.Name = "axShockwaveFlashPlayer";
+            this.axShockwaveFlashPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axShockwaveFlashPlayer.OcxState")));
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label7);
@@ -115,6 +121,17 @@
             resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
             // 
+            // btn_async
+            // 
+            this.btn_async.BackgroundImage = global::LoginFrame.Properties.Resources.同步;
+            resources.ApplyResources(this.btn_async, "btn_async");
+            this.btn_async.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_async.FlatAppearance.BorderSize = 0;
+            this.btn_async.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.btn_async.Name = "btn_async";
+            this.btn_async.UseVisualStyleBackColor = true;
+            this.btn_async.Click += new System.EventHandler(this.btn_async_Click);
+            // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
@@ -124,6 +141,33 @@
             this.toolStripMenuItem1});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.menuStrip1.Name = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
+            this.toolStripMenuItem1.BackColor = System.Drawing.Color.Transparent;
+            this.toolStripMenuItem1.BackgroundImage = global::LoginFrame.Properties.Resources.收藏夹;
+            this.toolStripMenuItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem3,
+            this.toolStripSeparator1});
+            this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.BackColor = System.Drawing.Color.Transparent;
+            this.toolStripMenuItem3.BackgroundImage = global::LoginFrame.Properties.Resources.收藏条目;
+            this.toolStripMenuItem3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            resources.ApplyResources(this.toolStripMenuItem3, "toolStripMenuItem3");
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             // 
             // label5
             // 
@@ -160,43 +204,6 @@
             this.分隔线.BackColor = System.Drawing.SystemColors.MenuHighlight;
             resources.ApplyResources(this.分隔线, "分隔线");
             this.分隔线.Name = "分隔线";
-            // 
-            // btn_async
-            // 
-            this.btn_async.BackgroundImage = global::LoginFrame.Properties.Resources.同步;
-            resources.ApplyResources(this.btn_async, "btn_async");
-            this.btn_async.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_async.FlatAppearance.BorderSize = 0;
-            this.btn_async.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.btn_async.Name = "btn_async";
-            this.btn_async.UseVisualStyleBackColor = true;
-            this.btn_async.Click += new System.EventHandler(this.btn_async_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
-            this.toolStripMenuItem1.BackColor = System.Drawing.Color.Transparent;
-            this.toolStripMenuItem1.BackgroundImage = global::LoginFrame.Properties.Resources.收藏夹;
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem3,
-            this.toolStripSeparator1});
-            this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.BackColor = System.Drawing.Color.Transparent;
-            this.toolStripMenuItem3.BackgroundImage = global::LoginFrame.Properties.Resources.收藏条目;
-            this.toolStripMenuItem3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            resources.ApplyResources(this.toolStripMenuItem3, "toolStripMenuItem3");
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             // 
             // btn_play
             // 
@@ -260,12 +267,6 @@
             this.btn_voice.UseVisualStyleBackColor = false;
             this.btn_voice.Click += new System.EventHandler(this.btn_voice_Click);
             // 
-            // axShockwaveFlashPlayer
-            // 
-            resources.ApplyResources(this.axShockwaveFlashPlayer, "axShockwaveFlashPlayer");
-            this.axShockwaveFlashPlayer.Name = "axShockwaveFlashPlayer";
-            this.axShockwaveFlashPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axShockwaveFlashPlayer.OcxState")));
-            // 
             // BodyMain
             // 
             resources.ApplyResources(this, "$this");
@@ -279,11 +280,11 @@
             this.Load += new System.EventHandler(this.BodyMain_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.axShockwaveFlashPlayer)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axShockwaveFlashPlayer)).EndInit();
             this.ResumeLayout(false);
 
         }
