@@ -192,12 +192,21 @@ namespace LoginFrame
 
         public void BodyMain_Load(object sender, EventArgs e)
         {
+
+            axShockwaveFlashPlayer.FlashCall += new AxShockwaveFlashObjects._IShockwaveFlashEvents_FlashCallEventHandler(axShockwaveFlash1_FlashCall);
+
             refreshFavorites();
 
             //初始化左侧课件列表
             initFlashLessons(LoginRoler.language);
 
         }
+
+        private void axShockwaveFlash1_FlashCall(object sender, AxShockwaveFlashObjects._IShockwaveFlashEvents_FlashCallEvent e)//向as发送请求
+        {
+            //没有任何代码也可以；
+        }
+
 
         ImplCourses Bll = ImplCourses.getInstance();
         /// <summary>
@@ -699,9 +708,26 @@ namespace LoginFrame
         public bool isAudioPlaying = false;//是否扩音中
 
 
-        private void btn_play_Click(object sender, EventArgs e)
+        public void btn_play_Click(object sender, EventArgs e)
         {
+            if (this.isAudioPlaying)
+            {
+                //判断是否在扩音  在扩音的就暂停
+                if (isBroadcasting)
+                {
+                    Broadcast("StopAudio^NoFileName^##");
+                }
 
+                this.isAudioPlaying = false;
+                this.mainFrame.stopPlayer();
+
+                if (!this.axShockwaveFlashPlayer.IsPlaying())
+                {
+                    this.btn_play_Click(null, null);
+                }
+                btn_music.BackgroundImage = global::LoginFrame.Properties.Resources.扩音;
+
+            }
             //判断是否已经单机选择或者双击选择了swf课件
             if (chooseButton == null)
                 {
@@ -741,7 +767,12 @@ namespace LoginFrame
         {
             this.axShockwaveFlashPlayer.Loop = false;//不循环播放
             this.axShockwaveFlashPlayer.Movie = filpath;
-            this.axShockwaveFlashPlayer.Play();
+            //this.axShockwaveFlashPlayer.Play();
+            if (!this.axShockwaveFlashPlayer.Playing)
+            {
+               callFunction("startFun", null);//调用as中的output()函数，null为参数
+            }
+            this.axShockwaveFlashPlayer.Playing = true;
         }
 
         /// <summary>
@@ -803,12 +834,10 @@ namespace LoginFrame
 
                 this.isAudioPlaying = false;
                 this.mainFrame.stopPlayer();
-
-                if (!this.axShockwaveFlashPlayer.IsPlaying())
-                {
-                    this.btn_play_Click(null, null);
-                }
+               
                 btn_music.BackgroundImage = global::LoginFrame.Properties.Resources.扩音;
+
+                btn_play_Click(null, null);
             }
             else
             {
@@ -820,17 +849,10 @@ namespace LoginFrame
                 this.isAudioPlaying = true;
                 this.mainFrame.audioPlayer(audioFilename);
 
-                //暂停播放Flash
-                if (this.axShockwaveFlashPlayer.IsPlaying())
-                {
-                    this.btn_stop_Click(null, null);
-                }
-
                 btn_music.BackgroundImage = global::LoginFrame.Properties.Resources.对讲_灰;
+
+                btn_stop_Click(null,null);
             }
-
-
-           
         }
 
 
@@ -841,12 +863,22 @@ namespace LoginFrame
             {
                 Broadcast("StopFlash^NoFileName^##");
             }
-            this.axShockwaveFlashPlayer.Stop();
+            
+            callFunction("pauseFun", null);//调用as中的output()函数，null为参数
+           
+            //this.axShockwaveFlashPlayer.StopPlay();
+            this.axShockwaveFlashPlayer.Playing = false;
 
             btn_stop.BackgroundImage = global::LoginFrame.Properties.Resources.暂停_灰;
             btn_play.BackgroundImage = global::LoginFrame.Properties.Resources.播放;
             btn_stop.Enabled = false;
             btn_play.Enabled = true;
+        }
+
+        private void callFunction(string funName, string arg)
+        {
+            //C#传给Flash的值
+            axShockwaveFlashPlayer.CallFunction("<invoke name=\"" + funName + "\" returntype=\"xml\"></invoke>");
         }
 
         private void btn_next_Click(object sender, EventArgs e)

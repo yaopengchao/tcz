@@ -1343,6 +1343,23 @@ namespace LoginFrame
                         {
                             if (isTitleFrmAndMainFrm())
                             {
+
+                                if (this.bodyMain.isAudioPlaying)
+                                {
+                                    //判断是否在扩音  在扩音的就暂停
+
+                                    this.bodyMain.isAudioPlaying = false;
+                                    this.stopPlayer();
+
+                                    if (!this.bodyMain.axShockwaveFlashPlayer.IsPlaying())
+                                    {
+                                        this.bodyMain.btn_play_Click(null, null);
+                                    }
+                                    this.bodyMain.btn_music.BackgroundImage = global::LoginFrame.Properties.Resources.扩音;
+
+                                }
+
+
                                 //MessageBox.Show("接收到播放Flash:" + swfName + "的指令");
                                 //初始化播放器并且进行播放
                                 string filpath = Application.StartupPath + @"/../../lessons/" + swfName + ".swf";
@@ -1471,7 +1488,15 @@ namespace LoginFrame
         {
             this.bodyMain.axShockwaveFlashPlayer.Loop = false;//不循环播放
             this.bodyMain.axShockwaveFlashPlayer.Movie = filpath;
-            this.bodyMain.axShockwaveFlashPlayer.Play();
+            //this.bodyMain.axShockwaveFlashPlayer.Play();
+
+            if (!this.bodyMain.axShockwaveFlashPlayer.Playing)
+            {
+                this.bodyMain.axShockwaveFlashPlayer.CallFunction("<invoke name=\"startFun\" returntype=\"xml\"></invoke>");
+
+            }
+
+            this.bodyMain.axShockwaveFlashPlayer.Playing = true;
         }
 
         /// <summary>
@@ -1479,7 +1504,11 @@ namespace LoginFrame
         /// </summary>
         private void stopFlash()
         {
-            this.bodyMain.axShockwaveFlashPlayer.Stop();
+
+            this.bodyMain.axShockwaveFlashPlayer.CallFunction("<invoke name=\"pauseFun\" returntype=\"xml\"></invoke>");
+
+            this.bodyMain.axShockwaveFlashPlayer.Playing = false;
+
         }
 
 
