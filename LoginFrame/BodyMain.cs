@@ -721,10 +721,7 @@ namespace LoginFrame
                 this.isAudioPlaying = false;
                 this.mainFrame.stopPlayer();
 
-                if (!this.axShockwaveFlashPlayer.IsPlaying())
-                {
-                    this.btn_play_Click(null, null);
-                }
+                
                 btn_music.BackgroundImage = global::LoginFrame.Properties.Resources.扩音;
 
             }

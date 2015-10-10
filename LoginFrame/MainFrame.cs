@@ -1350,11 +1350,7 @@ namespace LoginFrame
 
                                     this.bodyMain.isAudioPlaying = false;
                                     this.stopPlayer();
-
-                                    if (!this.bodyMain.axShockwaveFlashPlayer.IsPlaying())
-                                    {
-                                        this.bodyMain.btn_play_Click(null, null);
-                                    }
+                                    
                                     this.bodyMain.btn_music.BackgroundImage = global::LoginFrame.Properties.Resources.扩音;
 
                                 }

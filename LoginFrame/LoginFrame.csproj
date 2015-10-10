@@ -578,6 +578,7 @@
     <Content Include="DLLS\MySql.Web.dll" />
     <Content Include="DLLS\System.ServiceProcess.dll" />
     <Content Include="icon\favicon.ico" />
+    <Content Include="lessons\1001.wav" />
     <Content Include="lessons\YouAreMySunshine.wav" />
     <Content Include="lessons\正常呼吸音.swf" />
     <Content Include="pic\登录按钮.png" />
