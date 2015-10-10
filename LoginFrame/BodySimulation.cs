@@ -2,9 +2,7 @@
 using Model;
 using System.Windows.Forms;
 using BLL;
-using InTheHand.Net.Bluetooth;
-using InTheHand.Windows.Forms;
-using InTheHand.Net;
+
 using System.ComponentModel;
 using System.Collections.Generic;
 using System.IO.Ports;
@@ -558,17 +556,9 @@ namespace LoginFrame
             res.ApplyResources(this, "$this");
         }
 
-        BluetoothRadio radio = null;//蓝牙适配器
+        
 
-        private void checkBluetooth()
-        {
-            radio = BluetoothRadio.PrimaryRadio;//获取当前PC的蓝牙适配器
-            CheckForIllegalCrossThreadCalls = false;//不检查跨线程调用
-            if (radio == null)//检查该电脑蓝牙是否可用
-            {
-                MessageBox.Show("这个电脑蓝牙不可用！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
+        
 
         private void load听诊人Data2Frm(听诊模拟人 _听诊模拟人)
         {
@@ -850,30 +840,8 @@ namespace LoginFrame
 
         }
 
-        BluetoothAddress sendAddress = null;//发送目的地址
-        private void chooseBluetooth(Label label,Button button,string type)
-        {
-            SelectBluetoothDeviceDialog dialog = new SelectBluetoothDeviceDialog();
-            dialog.ShowRemembered = true;//显示已经记住的蓝牙设备
-            dialog.ShowAuthenticated = true;//显示认证过的蓝牙设备
-            dialog.ShowUnknown = true;//显示位置蓝牙设备
-            if (dialog.ShowDialog() == DialogResult.OK)
-            {
-                sendAddress = dialog.SelectedDevice.DeviceAddress;//获取选择的远程蓝牙地址
-                //判别是否对应的模拟人类型  
-                if (checkMonitor(type))
-                {
-                    label.Text = "地址:" + sendAddress.ToString() + "    设备名:" + dialog.SelectedDevice.DeviceName;
-                    button.Text = "已连接";
-                }
-                else
-                {
-                    label.Text = "所连接的设备不是模拟人";
-                }
-               
-            }
-
-        }
+        
+        
 
         private bool checkMonitor(string type)
         {
@@ -897,7 +865,6 @@ namespace LoginFrame
             }
             else
             {
-                chooseBluetooth(this.label57, this.button17,"tzmnr1");
                 tzmonitor1 = true;
             }
             
@@ -921,7 +888,6 @@ namespace LoginFrame
             }
             else
             {
-                chooseBluetooth(this.label58, this.button18, "tzmnr2");
                 tzmonitor2 = true;
             }
         }
@@ -944,7 +910,6 @@ namespace LoginFrame
             }
             else
             {
-                chooseBluetooth(this.label59, this.button19, "czmnr1");
                 czmonitor1 = true;
             }
             
