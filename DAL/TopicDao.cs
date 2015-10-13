@@ -36,6 +36,19 @@ namespace DAL
             return countEntity(strSql, strWheres);
         }
 
+        public DataSet listChooseTopics(Dictionary<string, string> strWheres, int startIndex, int pageSize)
+        {
+            string strSql = "select topic_id, content, if (topic_type='1','理论类','操作类'), b.TCZ_NAME, answers, create_time, topic_type, topic_category from ex_topic a, tcz_type b where a.TOPIC_CATEGORY = b.TCZ_ID ";
+            return listEntity(strSql, strWheres, startIndex, pageSize);
+        }
+
+
+        public int countChooseTopics(Dictionary<string, string> strWheres)
+        {
+            string strSql = "select count(1) from ex_topic a, tcz_type b where a.TOPIC_CATEGORY = b.TCZ_ID ";
+            return countEntity(strSql, strWheres);
+        }
+
         public int addTopic(Topic topic)
         {
             string strSql = "insert into ex_topic(content, topic_type, topic_category, answers, create_time) values(?content, ?topicType, ?topicCategory, ?answers, ?createDate); select last_insert_id();";

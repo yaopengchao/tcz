@@ -57,23 +57,37 @@ namespace LoginFrame
             }
             else
             {
-                string exTypeValue = Convert.ToString(exType.SelectedValue);
-                if (exTypeValue == "1")
+
+                if (1==2)
+                {//此处为原先代码
+                    string exTypeValue = Convert.ToString(exType.SelectedValue);
+                    if (exTypeValue == "1")
+                    {
+                        this.Hide();
+                        AddExam3 addExam3 = new AddExam3();
+                        addExam3.addExam = this;
+                        addExam3.bodyExam = this.bodyExam;
+                        addExam3.ShowDialog();
+                    }
+                    else if (exTypeValue == "2")
+                    {
+
+                        this.Hide();
+                        AddExam2 addExam2 = new AddExam2();
+                        addExam2.addExam = this;
+                        addExam2.bodyExam = this.bodyExam;
+                        addExam2.ShowDialog();
+                    }
+                }
+                else//修改处
                 {
                     this.Hide();
-                    AddExam3 addExam3 = new AddExam3();
-                    addExam3.addExam = this;
-                    addExam3.bodyExam = this.bodyExam;
-                    addExam3.ShowDialog();
+                    //跳转到  考题列表进行选择
+                    chooseTopics cTopics = chooseTopics.createForm();
+                    cTopics.ShowDialog();
+
                 }
-                else if (exTypeValue == "2")
-                {
-                    this.Hide();
-                    AddExam2 addExam2 = new AddExam2();
-                    addExam2.addExam = this;
-                    addExam2.bodyExam = this.bodyExam;
-                    addExam2.ShowDialog();
-                }
+                
             }
             
         }
@@ -87,6 +101,15 @@ namespace LoginFrame
         {
             Util.setLanguage();
             ApplyResource();
+
+            this.questionsNum.Items.Add(10);
+            this.questionsNum.Items.Add(20);
+            this.questionsNum.Items.Add(30);
+            this.questionsNum.Items.Add(40);
+            this.questionsNum.Items.Add(50);
+            this.questionsNum.Items.Add("全部");
+
+            this.questionsNum.SelectedIndex = 0;
         }
 
         /// <summary>

@@ -51,6 +51,16 @@ namespace BLL
             return topicDao.countTopics(strWheres);
         }
 
+        public DataSet listChooseTopics(Dictionary<string, string> strWheres, int startIndex, int pageSize)
+        {
+            return topicDao.listChooseTopics(strWheres, startIndex, pageSize);
+        }
+
+        public int countChooseTopics(Dictionary<string, string> strWheres)
+        {
+            return topicDao.countChooseTopics(strWheres);
+        }
+
         public int addTopic(string topicContent)
         {
             Topic topic = new Topic();

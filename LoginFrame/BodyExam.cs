@@ -45,12 +45,16 @@ namespace LoginFrame
             button6.BackColor = Color.FromArgb(255, 80, 151, 228);
             button5.BackColor = Color.FromArgb(255, 80, 151, 228);
             button4.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button1.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button2.BackColor = Color.FromArgb(255, 80, 151, 228);
 
             btnQuery.ForeColor = Color.White;
             btnClear.ForeColor = Color.White;
             button6.ForeColor = Color.White;
             button5.ForeColor = Color.White;
             button4.ForeColor = Color.White;
+            button1.ForeColor = Color.White;
+            button2.ForeColor = Color.White;
 
             topicType.Items.Clear();
             topicType.Items.Clear();
@@ -187,6 +191,13 @@ namespace LoginFrame
                     }
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddExam addExam = new AddExam();
+            addExam.bodyExam = this;
+            addExam.ShowDialog();
         }
     }
 }

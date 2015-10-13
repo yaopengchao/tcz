@@ -43,6 +43,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.labExamId = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.questionsNum = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // labTitle
@@ -127,10 +129,23 @@
             resources.ApplyResources(this.labExamId, "labExamId");
             this.labExamId.Name = "labExamId";
             // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // questionsNum
+            // 
+            this.questionsNum.FormattingEnabled = true;
+            resources.ApplyResources(this.questionsNum, "questionsNum");
+            this.questionsNum.Name = "questionsNum";
+            // 
             // AddExam
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.questionsNum);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.labExamId);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -169,5 +184,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.Label labExamId;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox questionsNum;
     }
 }
