@@ -416,9 +416,10 @@ namespace LoginFrame
             string hardPath = curPath.Substring(0, index + 1);
             p.StandardInput.WriteLine(hardPath);
             p.StandardInput.WriteLine("cd " + curPath);
+            //Console.WriteLine("=====curPath=====" + curPath);
             //string dMsql = Application.StartupPath + @"/../../../MysqlInstallProj/DB/MySQL5.1/bin/mysqld-nt.exe";
-            string mainPath = curPath.Substring(0, curPath.IndexOf("LoginFrame"));
-            mainPath += "MysqlInstallProj/DB/MySQL5.1/bin/mysqld-nt.exe";
+            string mainPath = curPath.Substring(0, curPath.IndexOf("bin"));
+            mainPath += "DB/MySQL5.1/bin/mysqld-nt.exe";
             Console.WriteLine("==========" + mainPath);
             //p.StandardInput.WriteLine("cd " + mainPath);
             p.StandardInput.AutoFlush = true;
