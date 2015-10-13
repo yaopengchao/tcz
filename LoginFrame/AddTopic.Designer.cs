@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddTopic));
             this.labTitle = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -43,22 +42,21 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.topicCategory = new System.Windows.Forms.ComboBox();
             this.topicType = new System.Windows.Forms.ComboBox();
-            this.txtAnswers = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtContent = new System.Windows.Forms.TextBox();
             this.labTopicId = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtAnswers = new System.Windows.Forms.ComboBox();
+            this.txtContent = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // labTitle
             // 
             resources.ApplyResources(this.labTitle, "labTitle");
             this.labTitle.Name = "labTitle";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
             // 
             // label2
             // 
@@ -143,49 +141,67 @@
             this.topicType.Name = "topicType";
             this.topicType.SelectedIndexChanged += new System.EventHandler(this.topicType_SelectedIndexChanged);
             // 
-            // txtAnswers
-            // 
-            resources.ApplyResources(this.txtAnswers, "txtAnswers");
-            this.txtAnswers.Name = "txtAnswers";
-            // 
             // label4
             // 
             resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            // 
-            // txtContent
-            // 
-            resources.ApplyResources(this.txtContent, "txtContent");
-            this.txtContent.Name = "txtContent";
             // 
             // labTopicId
             // 
             resources.ApplyResources(this.labTopicId, "labTopicId");
             this.labTopicId.Name = "labTopicId";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtContent);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtAnswers);
+            this.groupBox2.Controls.Add(this.dg);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.labTopicId);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.addDetail);
+            this.groupBox2.Controls.Add(this.delDetail);
+            this.groupBox2.Controls.Add(this.topicType);
+            this.groupBox2.Controls.Add(this.topicCategory);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.TabStop = false;
+            // 
+            // txtAnswers
+            // 
+            this.txtAnswers.FormattingEnabled = true;
+            resources.ApplyResources(this.txtAnswers, "txtAnswers");
+            this.txtAnswers.Name = "txtAnswers";
+            // 
+            // txtContent
+            // 
+            resources.ApplyResources(this.txtContent, "txtContent");
+            this.txtContent.Name = "txtContent";
+            // 
             // AddTopic
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.labTopicId);
-            this.Controls.Add(this.txtAnswers);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.topicType);
-            this.Controls.Add(this.topicCategory);
-            this.Controls.Add(this.dg);
-            this.Controls.Add(this.delDetail);
-            this.Controls.Add(this.addDetail);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtContent);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.labTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddTopic";
             this.Load += new System.EventHandler(this.AddTopic_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dg)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,7 +210,6 @@
         #endregion
 
         public System.Windows.Forms.Label labTitle;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
@@ -204,12 +219,14 @@
         public System.Windows.Forms.DataGridView dg;
         public System.Windows.Forms.ComboBox topicCategory;
         public System.Windows.Forms.ComboBox topicType;
-        public System.Windows.Forms.TextBox txtAnswers;
         private System.Windows.Forms.Label label4;
-        public System.Windows.Forms.TextBox txtContent;
         public System.Windows.Forms.Label labTopicId;
         private System.Windows.Forms.DataGridViewTextBoxColumn 选项字符;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        public System.Windows.Forms.ComboBox txtAnswers;
+        public System.Windows.Forms.TextBox txtContent;
     }
 }

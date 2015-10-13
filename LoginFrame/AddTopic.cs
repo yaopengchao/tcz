@@ -57,7 +57,7 @@ namespace LoginFrame
             string type = Convert.ToString(topicType.SelectedValue);
             if (type == "")
             {
-                MessageBox.Show("种类不能为空!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("分类不能为空!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             else
             {
@@ -212,6 +212,14 @@ namespace LoginFrame
         {
             Util.setLanguage();
             ApplyResource();
+
+            this.txtAnswers.Items.Add("A");
+            this.txtAnswers.Items.Add("B");
+            this.txtAnswers.Items.Add("C");
+            this.txtAnswers.Items.Add("D");
+
+            
+
         }
 
         /// <summary>
