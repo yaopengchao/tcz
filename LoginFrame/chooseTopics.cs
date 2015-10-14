@@ -49,6 +49,9 @@ namespace LoginFrame
         {
             this.label4.Text = totalNum;
             this.label5.Text = chooseNum+"";
+
+            
+
             pageCtrl.loadData = new PageControl.loadDataEventHandler(loadData);
             btnQuery_Click(sender, e);
         }
@@ -76,12 +79,23 @@ namespace LoginFrame
             loadCount(strWheres);
             loadData(strWheres);
 
-            string[] cols = new string[] { "题目编号", "题干", "题目种类", "题目分类", "正确答案", "创建时间","是否选择" };
+            string[] cols = new string[] { "题目编号", "题干", "题目种类", "题目分类", "正确答案", "创建时间" };
             pageCtrl.Cols = cols;
             pageCtrl.dg.Columns[0].Visible = false;
             pageCtrl.dg.Columns[6].Visible = false;
             pageCtrl.dg.Columns[7].Visible = false;
-            int[] widths = new int[] { 230, 150, 150, 150, 150, 150 ,50 };
+
+
+            System.Windows.Forms.DataGridViewCheckBoxColumn isSelected;
+            isSelected = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            isSelected.HeaderText = "是否选择";
+            isSelected.Name = "是否选择";
+            isSelected.ReadOnly = false;
+            isSelected.DataPropertyName = "isSelected";
+            pageCtrl.dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { isSelected });
+
+
+            int[] widths = new int[] { 230, 150, 150, 150, 150, 150,50  };
         }
 
         private void loadCount(Dictionary<string, string> strWheres)
@@ -101,6 +115,11 @@ namespace LoginFrame
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -38,7 +38,7 @@ namespace DAL
 
         public DataSet listChooseTopics(Dictionary<string, string> strWheres, int startIndex, int pageSize)
         {
-            string strSql = "select topic_id, content, if (topic_type='1','理论类','操作类'), b.TCZ_NAME, answers, create_time, topic_type, topic_category from ex_topic a, tcz_type b where a.TOPIC_CATEGORY = b.TCZ_ID ";
+            string strSql = "select topic_id, content, if (topic_type='1','理论类','操作类'), b.TCZ_NAME, answers, create_time, topic_type, topic_category,'1' as isSelected  from ex_topic a, tcz_type b where a.TOPIC_CATEGORY = b.TCZ_ID ";
             return listEntity(strSql, strWheres, startIndex, pageSize);
         }
 
