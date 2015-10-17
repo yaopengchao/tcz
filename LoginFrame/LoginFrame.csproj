@@ -165,6 +165,12 @@
     <Compile Include="BodySelfTest2.Designer.cs">
       <DependentUpon>BodySelfTest2.cs</DependentUpon>
     </Compile>
+    <Compile Include="BodySelfTest4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BodySelfTest4.Designer.cs">
+      <DependentUpon>BodySelfTest4.cs</DependentUpon>
+    </Compile>
     <Compile Include="ButtonEx.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -406,6 +412,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BodySelfTest2.zh-CN.resx">
       <DependentUpon>BodySelfTest2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BodySelfTest4.resx">
+      <DependentUpon>BodySelfTest4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CheckBodySelfTest.resx">
       <DependentUpon>CheckBodySelfTest.cs</DependentUpon>

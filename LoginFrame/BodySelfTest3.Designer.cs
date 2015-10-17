@@ -37,6 +37,8 @@
             this.btnPre = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.label3_rightanswer = new System.Windows.Forms.Label();
+            this.labRightResult = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -88,11 +90,24 @@
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
+            // label3_rightanswer
+            // 
+            resources.ApplyResources(this.label3_rightanswer, "label3_rightanswer");
+            this.label3_rightanswer.Name = "label3_rightanswer";
+            this.label3_rightanswer.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // labRightResult
+            // 
+            resources.ApplyResources(this.labRightResult, "labRightResult");
+            this.labRightResult.Name = "labRightResult";
+            // 
             // BodySelfTest3
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Controls.Add(this.labRightResult);
+            this.Controls.Add(this.label3_rightanswer);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnPre);
@@ -119,5 +134,7 @@
         private System.Windows.Forms.Button btnPre;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Label label3_rightanswer;
+        private System.Windows.Forms.Label labRightResult;
     }
 }

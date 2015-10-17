@@ -14,6 +14,8 @@ namespace LoginFrame
     public partial class BodySelfTest3 : Form
     {
 
+        public MainFrame mainFrame;
+
         public int examId;
 
         private ExamService examService;
@@ -124,7 +126,24 @@ namespace LoginFrame
             {
                 results.Clear();
                 labResult.Text = getResults(results);
-            }       
+            }
+
+
+            //正确答案  显示
+            strWheres.Clear();
+            strWheres.Add("topic_id", " = " + topicId);
+            DataTable examRightResultDt = examResultService.listExamRightResult(strWheres);
+            if (examRightResultDt != null && examRightResultDt.Rows.Count > 0)
+            {
+                answer = Convert.ToString(examRightResultDt.Rows[0].ItemArray[0]);
+                parseAnswers(answer);
+                labRightResult.Text = getResults(results);
+            }
+            else
+            {
+                results.Clear();
+                labRightResult.Text = getResults(results);
+            }
 
             labTopicOrder.Text = cur + 1 + ".";
             labContent.Text = Convert.ToString(dt.Rows[cur].ItemArray[3]);            
@@ -260,13 +279,6 @@ namespace LoginFrame
         private void btnSubmit_Click(object sender, EventArgs e)
         {
 
-            //TitleMain titleMain = TitleMain.createForm();
-            //titleMain.TopLevel = false;
-            //titleMain.FormBorderStyle = FormBorderStyle.None;
-            //titleMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            //selfTest2.self.mainFrame.panel1.Controls.Add(titleMain);
-            //titleMain.Show();
-
             ExamResult examResult = new ExamResult();
             examResult.ExamResultId = examResultId;
             examResult.ExaminationId = examId;
@@ -276,15 +288,26 @@ namespace LoginFrame
             examResult.UserId = LoginRoler.userId;
             examResultService.addOrUpdateExamResult(examResult);
 
-            //加载主体栏
-            selfTest2.mainFrame.panel6.Controls.Clear();
-            selfTest2.mainFrame.panel6.Controls.AddRange(selfTest2.mainFrame.items.ToArray());
-            BodyMain bodyMain = BodyMain.createForm();
-            bodyMain.TopLevel = false;
-            bodyMain.FormBorderStyle = FormBorderStyle.None;
-            bodyMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            selfTest2.mainFrame.panel6.Controls.Add(bodyMain);
-            bodyMain.Show();
+            //弹出该次考试的成绩  
+
+            BodySelfTest4 bodySelfTest4 = BodySelfTest4.createForm(examId+"");
+            bodySelfTest4.selfTest2 = this.selfTest2;
+            bodySelfTest4.ShowDialog();
+
+
+            
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            if (this.labRightResult.Visible)
+            {
+                this.labRightResult.Visible = false;
+            }
+            else
+            {
+                this.labRightResult.Visible = true;
+            }
         }
     }
 }

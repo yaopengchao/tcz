@@ -27,6 +27,26 @@ namespace LoginFrame
             button7.BackColor = Color.FromArgb(255, 80, 151, 228);
             button7.ForeColor = Color.White;
 
+            this.comboBox1.Items.Add("10");
+            this.comboBox1.Items.Add("15");
+            this.comboBox1.Items.Add("20");
+            this.comboBox1.Items.Add("25");
+            this.comboBox1.Items.Add("30");
+
+            this.comboBox2.Items.Add("10");
+            this.comboBox2.Items.Add("15");
+            this.comboBox2.Items.Add("20");
+            this.comboBox2.Items.Add("25");
+            this.comboBox2.Items.Add("30");
+
+            this.comboBox3.Items.Add("10");
+            this.comboBox3.Items.Add("15");
+            this.comboBox3.Items.Add("20");
+            this.comboBox3.Items.Add("25");
+            this.comboBox3.Items.Add("30");
+
+
+
             if (strWheres == null)
             {
                 strWheres = new Dictionary<string, string>();
@@ -200,90 +220,23 @@ namespace LoginFrame
             return result;
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            xz = Convert.ToInt32(linkLabel1.Text);
-        }
+        
 
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            xz = Convert.ToInt32(linkLabel2.Text);
-        }
-
-        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            xz = Convert.ToInt32(linkLabel3.Text);
-        }
-
-        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            xz = Convert.ToInt32(linkLabel4.Text);
-        }
-
-        private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            xz = Convert.ToInt32(linkLabel5.Text);
-        }
+        
 
         private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             xz = totalXz;
         }
 
-        private void linkLabel12_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            feib = Convert.ToInt32(linkLabel12.Text);
-        }
-
-        private void linkLabel11_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            feib = Convert.ToInt32(linkLabel11.Text);
-        }
-
-        private void linkLabel10_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            feib = Convert.ToInt32(linkLabel10.Text);
-        }
-
-        private void linkLabel9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            feib = Convert.ToInt32(linkLabel9.Text);
-        }
-
-        private void linkLabel8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            feib = Convert.ToInt32(linkLabel8.Text);
-        }
+        
 
         private void linkLabel7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             feib = totalFeib;
         }
 
-        private void linkLabel18_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            fub = Convert.ToInt32(linkLabel18.Text);
-        }
-
-        private void linkLabel17_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            fub = Convert.ToInt32(linkLabel17.Text);
-        }
-
-        private void linkLabel16_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            fub = Convert.ToInt32(linkLabel16.Text);
-        }
-
-        private void linkLabel15_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            fub = Convert.ToInt32(linkLabel15.Text);
-        }
-
-        private void linkLabel14_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            fub = Convert.ToInt32(linkLabel14.Text);
-        }
+        
 
         private void linkLabel13_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -316,6 +269,21 @@ namespace LoginFrame
         {
             topicType = "2";
             getTopicNum(topicType);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            xz = Convert.ToInt32(this.comboBox1.Text);
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            xz = Convert.ToInt32(this.comboBox2.Text);
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            xz = Convert.ToInt32(this.comboBox3.Text);
         }
     }
 }
