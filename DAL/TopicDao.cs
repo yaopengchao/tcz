@@ -42,6 +42,11 @@ namespace DAL
             return listEntity(strSql, null, startIndex, pageSize);
         }
 
+        public int countChooseedTopics(Dictionary<string, string> strWheres)
+        {
+            string strSql = "select count(1) from ex_topic a, tcz_type b where a.TOPIC_CATEGORY = b.TCZ_ID and getIsChoose(" + strWheres[" exam_id "] + ",topic_id)='true'";
+            return countEntity(strSql, null);
+        }
 
         public int countChooseTopics(Dictionary<string, string> strWheres)
         {

@@ -56,6 +56,11 @@ namespace BLL
             return topicDao.listChooseTopics(strWheres, startIndex, pageSize);
         }
 
+        public int countChooseedTopics(Dictionary<string, string> strWheres)
+        {
+            return topicDao.countChooseedTopics(strWheres);
+        }
+
         public int countChooseTopics(Dictionary<string, string> strWheres)
         {
             return topicDao.countChooseTopics(strWheres);

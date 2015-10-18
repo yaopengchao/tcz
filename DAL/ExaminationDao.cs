@@ -67,10 +67,10 @@ namespace DAL
                 for (int i = 0; i < Dt.Rows.Count; i++)
                 {
                     DataRow currRow = rows[i];
-                    string topic_id=(string)currRow["topic_id"];
+                    string topic_id=currRow["topic_id"]+"";
 
                     //获取TOPIC_ORDER
-                    strSql = " select MAX(TOPIC_ORDER) from ex_examination_detail where  EXAMINATION_ID="+ exam_id;
+                    strSql = " select IFNULL(MAX(TOPIC_ORDER),0) from ex_examination_detail where  EXAMINATION_ID=" + exam_id;
                     DataSet ds = listEntity(strSql);
                     int order_id = Convert.ToInt32(ds.Tables[0].Rows[0][0]) + 1;
 
@@ -107,7 +107,7 @@ namespace DAL
                         //hashtable.Add(nValue, nValue);
                         //Console.WriteLine(nValue.ToString());
                         //获取TOPIC_ORDER
-                        strSql = " select MAX(TOPIC_ORDER) from ex_examination_detail where  EXAMINATION_ID="+ exam_id;
+                        strSql = " select IFNULL(MAX(TOPIC_ORDER),0) from ex_examination_detail where  EXAMINATION_ID=" + exam_id;
                         DataSet ds = listEntity(strSql);
                         int order_id = Convert.ToInt32(ds.Tables[0].Rows[0][0]) + 1;
 
@@ -170,7 +170,7 @@ namespace DAL
             {
 
                 //获取TOPIC_ORDER
-                strSql = " select MAX(TOPIC_ORDER) from ex_examination_detail where  EXAMINATION_ID=?examination_id and TOPIC_ID=?topic_id ";
+                strSql = " select IFNULL(MAX(TOPIC_ORDER),0) from ex_examination_detail where  EXAMINATION_ID=" + exam_id;
                 DataSet ds= listEntity(strSql);
                 int order_id=Convert.ToInt32(ds.Tables[0].Rows[0][0])+1;
 

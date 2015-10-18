@@ -38,7 +38,16 @@ namespace DAL
 
         public int addExamResult(ExamResult examResult)
         {
-            string strSql = "insert into ex_exam_result(user_id, examination_id, examination_detail_id, topic_id, answers) values(?userId, ?examId, ?examDetailId, ?topicId, ?answer); select last_insert_id();";
+
+            //新增检查是否已经存在
+            string strSql = " select EXAM_RESULT_ID from ex_exam_result where examination_id=" + examResult.ExaminationId + " and topic_id="+ examResult.TopicId;
+            DataTable Dt = listEntity(strSql, null).Tables[0];
+            if (Dt.Rows.Count>0)
+            {
+                return 0;
+            }
+
+            strSql = "insert into ex_exam_result(user_id, examination_id, examination_detail_id, topic_id, answers) values(?userId, ?examId, ?examDetailId, ?topicId, ?answer); select last_insert_id();";
             MySqlParameter[] parames = new MySqlParameter[] {
                 new MySqlParameter("?userId", MySqlDbType.Int32),
                 new MySqlParameter("?examId", MySqlDbType.Int32),

@@ -16,6 +16,12 @@ namespace LoginFrame
         public chooseTopics()
         {
             InitializeComponent();
+
+            button1.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button1.ForeColor = Color.White;
+
+            
+
         }
 
         private static string totalNum;
@@ -57,12 +63,16 @@ namespace LoginFrame
 
         private void chooseTopics_Load(object sender, EventArgs e)
         {
-            this.label4.Text = totalNum;
+
+            this.label4.Text = exam.Num+"";
+
             this.label5.Text = chooseNum+"";
 
             
 
             pageCtrl.loadData = new PageControl.loadDataEventHandler(loadData);
+            pageCtrl.dg.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellClick);
+
             btnQuery_Click(sender, e);
         }
 
@@ -93,6 +103,8 @@ namespace LoginFrame
 
             loadCount(strWheres);
             loadData(strWheres);
+            loadChooseCount(strWheres);
+
 
             string[] cols = new string[] { "题目编号", "题干", "题目种类", "题目分类", "正确答案", "创建时间", };
             pageCtrl.Cols = cols;
@@ -120,7 +132,6 @@ namespace LoginFrame
             int[] widths = new int[] { 230, 150, 150, 150, 150, 150,50  };
 
 
-            pageCtrl.dg.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellClick);
 
         }
 
@@ -133,6 +144,15 @@ namespace LoginFrame
                 string exam_id= Convert.ToString(exam.ExaminationId);
                 string topic_id= tempGdv.Rows[e.RowIndex].Cells[0].Value.ToString();
                 string topic_state= tempGdv.Rows[e.RowIndex].Cells[7].Value.ToString();
+
+                if (!topic_state.Equals('1'))
+                {
+                    if (Convert.ToInt32(this.label5.Text)>= Convert.ToInt32(this.label4.Text))
+                    {
+                        MessageBox.Show("已经满足题目数量，无法再选择，请确定结束选题操作!");
+                        return;
+                    }
+                }
 
                 if (examService.updateChooseTopic( exam_id,  topic_id,  topic_state))
                 {
@@ -157,6 +177,23 @@ namespace LoginFrame
                 }
             }
         }
+
+        private void loadChooseCount(Dictionary<string, string> strWheres)
+        {
+            int userChooseCount = topicService.countChooseedTopics(strWheres);
+            this.label5.Text = userChooseCount + "";
+
+            if (this.label5.Text.Equals(this.label4.Text))
+            {
+                this.label3.Text = "题";
+            }
+            else
+            {
+                this.label3.Text = "题，请继续";
+            }
+
+        }
+
         private void loadCount(Dictionary<string, string> strWheres)
         {
             int userCount = topicService.countChooseTopics(strWheres);
@@ -178,7 +215,7 @@ namespace LoginFrame
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

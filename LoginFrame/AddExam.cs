@@ -129,10 +129,7 @@ namespace LoginFrame
                                     //bodyExam.btnQuery_Click(sender, e);
                                     //this.Close();
 
-                                    this.Hide();
-                                    //跳转到  考题列表进行选择
-                                    chooseTopics cTopics = chooseTopics.createForm(exam);
-                                    cTopics.ShowDialog();
+                                    
                                 }
                                 else
                                 {
@@ -140,7 +137,14 @@ namespace LoginFrame
                                     MessageBox.Show("随机选题发生系统问题，请联系管理员");
                                 }
                             }
-                        }
+                        //刷新数据
+                        bodyExam.btnQueryClick();
+
+                        this.Hide();
+                        //跳转到  考题列表进行选择
+                        chooseTopics cTopics = chooseTopics.createForm(exam);
+                        cTopics.ShowDialog();
+                    }
                         else
                         {
                             MessageBox.Show("保存失败，请联系管理员");
