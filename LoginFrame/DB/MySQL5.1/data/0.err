@@ -590,3 +590,94 @@ Version: '5.1.28-rc-community'  socket: ''  port: 3306  MySQL Community Server (
 151013  8:20:16 [Note] Event Scheduler: Loaded 0 events
 151013  8:20:16 [Note] F:\Ìý´¥Õï\2\LoginFrame\DB\MySQL5.1\bin\mysqld-nt.exe: ready for connections.
 Version: '5.1.28-rc-community'  socket: ''  port: 3306  MySQL Community Server (GPL)
+151018  6:29:25 [Note] Plugin 'InnoDB' disabled by command line option
+151018  6:30:26 [Note] Plugin 'InnoDB' disabled by command line option
+151018  6:31:04 [Note] Plugin 'InnoDB' disabled by command line option
+151018  6:31:43 [Note] Plugin 'InnoDB' disabled by command line option
+151018  6:39:17 [Note] Plugin 'InnoDB' disabled by command line option
+151018  6:42:16 [Note] Plugin 'InnoDB' disabled by command line option
+151018  7:11:02 [Note] Plugin 'InnoDB' disabled by command line option
+151018  7:13:13 [Note] Plugin 'InnoDB' disabled by command line option
+151018  7:15:25 [Note] Plugin 'InnoDB' disabled by command line option
+151018  7:20:02 [Note] Plugin 'InnoDB' disabled by command line option
+151018  7:21:10 [Note] Plugin 'InnoDB' disabled by command line option
+151018  7:24:47 [Note] Plugin 'InnoDB' disabled by command line option
+151018  7:29:12 [Note] Plugin 'InnoDB' disabled by command line option
+151018  7:41:44 [Note] Plugin 'InnoDB' disabled by command line option
+151018  7:54:47 [Note] Plugin 'InnoDB' disabled by command line option
+151018  7:55:32 [Note] Plugin 'InnoDB' disabled by command line option
+151018  7:59:50 [Note] Plugin 'InnoDB' disabled by command line option
+151018  8:01:52 [Note] Plugin 'InnoDB' disabled by command line option
+151018  8:09:02 [Note] Plugin 'InnoDB' disabled by command line option
+151018  8:28:25 [Note] Plugin 'InnoDB' disabled by command line option
+151018 10:37:52 [Note] Plugin 'InnoDB' disabled by command line option
+151018 10:39:39 [Note] Plugin 'InnoDB' disabled by command line option
+151018 10:45:36 [Note] Plugin 'InnoDB' disabled by command line option
+151018 11:06:19 [Note] Plugin 'InnoDB' disabled by command line option
+151018 11:10:59 [Note] Plugin 'InnoDB' disabled by command line option
+151018 11:11:49 [Note] Plugin 'InnoDB' disabled by command line option
+151018 11:13:19 [Note] Plugin 'InnoDB' disabled by command line option
+151018 11:18:43 [Note] Plugin 'InnoDB' disabled by command line option
+151018 12:48:11 [Note] Plugin 'InnoDB' disabled by command line option
+151018 12:53:03 [Note] Plugin 'InnoDB' disabled by command line option
+151018 13:01:28 [Note] Plugin 'InnoDB' disabled by command line option
+151018 13:04:41 [Note] Plugin 'InnoDB' disabled by command line option
+151018 13:28:52 [Note] Plugin 'InnoDB' disabled by command line option
+151018 13:34:58 [Note] Plugin 'InnoDB' disabled by command line option
+151018 13:34:58 [Note] Event Scheduler: Loaded 0 events
+151018 13:34:58 [Note] E:\Ìý´¥ÕïÏîÄ¿\2\LoginFrame\DB\MySQL5.1\bin\mysqld-nt.exe: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 3306  MySQL Community Server (GPL)
+151018 13:38:01 [Note] Plugin 'InnoDB' disabled by command line option
+151018 13:56:45 [Note] Plugin 'InnoDB' disabled by command line option
+151018 14:13:51 [Note] Plugin 'InnoDB' disabled by command line option
+151018 17:51:03 [Note] Plugin 'InnoDB' disabled by command line option
+151018 17:54:50 [Note] Plugin 'InnoDB' disabled by command line option
+151018 17:57:22 [Note] Plugin 'InnoDB' disabled by command line option
+151018 18:42:04 [Note] Plugin 'InnoDB' disabled by command line option
+151018 19:28:47 [Note] Plugin 'InnoDB' disabled by command line option
+151018 19:30:59 [Note] Plugin 'InnoDB' disabled by command line option
+151018 19:34:44 [Note] Plugin 'InnoDB' disabled by command line option
+151018 19:35:57 [Note] Plugin 'InnoDB' disabled by command line option
+151018 19:36:48 [Note] Plugin 'InnoDB' disabled by command line option
+151018 19:37:50 [Note] Plugin 'InnoDB' disabled by command line option
+151018 19:38:53 [Note] Plugin 'InnoDB' disabled by command line option
+151019  4:53:31 [Note] Plugin 'InnoDB' disabled by command line option
+151019  4:55:22 [Note] Plugin 'InnoDB' disabled by command line option
+151019  5:01:20 [Note] Plugin 'InnoDB' disabled by command line option
+151019  5:04:27 [Note] Plugin 'InnoDB' disabled by command line option
+151019  5:06:16 [Note] Plugin 'InnoDB' disabled by command line option
+151019  5:09:22 [Note] Plugin 'InnoDB' disabled by command line option
+151019  5:12:11 [Note] Plugin 'InnoDB' disabled by command line option
+151019  5:15:21 [Note] Plugin 'InnoDB' disabled by command line option
+151019  5:23:24 [Note] Plugin 'InnoDB' disabled by command line option
+151019  5:26:21 [Note] Plugin 'InnoDB' disabled by command line option
+151019  5:27:00 [Note] Plugin 'InnoDB' disabled by command line option
+151019  5:28:52 [Note] Plugin 'InnoDB' disabled by command line option
+151019  5:30:24 [Note] Plugin 'InnoDB' disabled by command line option
+151019  5:35:09 [Note] Plugin 'InnoDB' disabled by command line option
+151019  5:42:36 [Note] Plugin 'InnoDB' disabled by command line option
+151019  5:43:21 [Note] Plugin 'InnoDB' disabled by command line option
+151019  5:59:34 [Note] Plugin 'InnoDB' disabled by command line option
+Can't start server: Bind on TCP/IP port: No such file or directory
+151019  5:59:34 [ERROR] Do you already have another mysqld server running on port: 3306 ?
+151019  5:59:34 [ERROR] Aborting
+
+151019  5:59:34 [Note] E:\Ìý´¥ÕïÏîÄ¿\2\LoginFrame\DB\MySQL5.1\bin\mysqld-nt.exe: Shutdown complete
+
+151019  6:00:12 [Note] Plugin 'InnoDB' disabled by command line option
+151019  6:05:15 [Note] Plugin 'InnoDB' disabled by command line option
+151019  6:08:10 [Note] Plugin 'InnoDB' disabled by command line option
+151019  6:10:47 [Note] Plugin 'InnoDB' disabled by command line option
+151019  6:14:01 [Note] Plugin 'InnoDB' disabled by command line option
+151019  6:14:48 [Note] Plugin 'InnoDB' disabled by command line option
+151019  6:15:40 [Note] Plugin 'InnoDB' disabled by command line option
+151019  6:20:50 [Note] Plugin 'InnoDB' disabled by command line option
+151019  6:30:06 [Note] Plugin 'InnoDB' disabled by command line option
+151019  6:34:02 [Note] Plugin 'InnoDB' disabled by command line option
+151019  6:36:42 [Note] Plugin 'InnoDB' disabled by command line option
+151019  6:36:42 [Note] Event Scheduler: Loaded 0 events
+151019  6:36:42 [Note] E:\Ìý´¥ÕïÏîÄ¿\2\LoginFrame\DB\MySQL5.1\bin\mysqld-nt.exe: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 3306  MySQL Community Server (GPL)
+151019  6:39:49 [Note] Plugin 'InnoDB' disabled by command line option
+151019  6:40:20 [Note] Plugin 'InnoDB' disabled by command line option
+151019  7:05:50 [Note] Plugin 'InnoDB' disabled by command line option
