@@ -223,9 +223,11 @@ namespace LoginFrame
                 exam.TotalMins = Convert.ToInt32(addExam.totalMins.Text);
                 exam.ExType = "1";
                 exam.ExaminationId = Convert.ToInt32(addExam.labExamId.Text == "" ? "0" : addExam.labExamId.Text);
+
                 string topicIds = getRandomTopicIds(xz, xzList);
                 topicIds += getRandomTopicIds(feib, feibList);
                 topicIds += getRandomTopicIds(fub, fubList);
+
                 int result = examService.addExam(exam, topicIds);
                 if (result > 0)
                 {

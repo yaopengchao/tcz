@@ -57,5 +57,13 @@ namespace Model
             set { examCat = value; }
         }
 
+
+        private int num;
+        public int Num
+        {
+            get { return num; }
+            set { num = value; }
+        }
+
     }
 }

@@ -108,6 +108,8 @@ namespace LoginFrame
                 }
             }
 
+            strWheres.Add(" t2.EXAM_NAME ", " not like '%的自我测试%' ");
+
             string userName = this.userName.Text;
             if (userName!= null && !userName.Equals(""))
             {

@@ -1,4 +1,5 @@
 ﻿using BLL;
+using Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,10 +26,15 @@ namespace LoginFrame
 
         private static TopicService topicService;
 
+        private static ExamService examService;
+
         private static Dictionary<string, string> strWheres;
 
-        public static chooseTopics createForm()
+        private static Examination exam;
+
+        public static chooseTopics createForm(Examination exam_in)
         {
+            exam = exam_in;
             //if (instance == null || instance.IsDisposed)
             //{
             instance = new chooseTopics();
@@ -36,6 +42,10 @@ namespace LoginFrame
             if (topicService == null)
             {
                 topicService = TopicService.getInstance();
+            }
+            if (examService == null)
+            {
+                examService = ExamService.getInstance();
             }
             if (strWheres == null)
             {
@@ -66,6 +76,11 @@ namespace LoginFrame
             strWheres.Clear();
 
             pageCtrl.strWheres = strWheres;
+
+
+            strWheres.Add(" exam_id ", "" + exam.ExaminationId + "");
+
+
             //string filter = filterText.Text;
 
             //if (filter != null && !filter.Equals(""))
@@ -79,25 +94,69 @@ namespace LoginFrame
             loadCount(strWheres);
             loadData(strWheres);
 
-            string[] cols = new string[] { "题目编号", "题干", "题目种类", "题目分类", "正确答案", "创建时间" };
+            string[] cols = new string[] { "题目编号", "题干", "题目种类", "题目分类", "正确答案", "创建时间", };
             pageCtrl.Cols = cols;
             pageCtrl.dg.Columns[0].Visible = false;
             pageCtrl.dg.Columns[6].Visible = false;
             pageCtrl.dg.Columns[7].Visible = false;
+            //pageCtrl.dg.Columns[8].Visible = false;
 
 
-            System.Windows.Forms.DataGridViewCheckBoxColumn isSelected;
-            isSelected = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            isSelected.HeaderText = "是否选择";
-            isSelected.Name = "是否选择";
-            isSelected.ReadOnly = false;
-            isSelected.DataPropertyName = "isSelected";
-            pageCtrl.dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { isSelected });
+
+            //System.Windows.Forms.DataGridViewCheckBoxColumn isSelected;
+            //isSelected = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            //isSelected.TrueValue = "true";
+            //isSelected.FalseValue = "false";
+            //isSelected.HeaderText = "是否选择";
+            //isSelected.Name = "是否选择";
+            //isSelected.ReadOnly = false;
+            //isSelected.DataPropertyName = "是否选择";//将CHECKBOX显示数据绑定到SQL中的列上
+            //pageCtrl.dg.ReadOnly = false;
+            //pageCtrl.dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { isSelected });
+
+            //pageCtrl.dg.CellValueChanged += new DataGridViewCellEventHandler(CellValueChanged);
 
 
             int[] widths = new int[] { 230, 150, 150, 150, 150, 150,50  };
+
+
+            pageCtrl.dg.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellClick);
+
         }
 
+
+        private void dgvData_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView tempGdv = sender as DataGridView;//获取事件发送者
+            if (e.RowIndex > -1 && e.ColumnIndex > -1)//防止 Index 出错
+            {
+                string exam_id= Convert.ToString(exam.ExaminationId);
+                string topic_id= tempGdv.Rows[e.RowIndex].Cells[0].Value.ToString();
+                string topic_state= tempGdv.Rows[e.RowIndex].Cells[7].Value.ToString();
+
+                if (examService.updateChooseTopic( exam_id,  topic_id,  topic_state))
+                {
+                    //刷新 选择列表  定位当前页
+                    btnQueryClick();
+                }
+            }
+        }
+
+        void CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (pageCtrl.dg.Rows.Count > 0)
+            {
+                for (int i = 0; i < pageCtrl.dg.Rows.Count; i++)
+                {
+                    string _selectValue = pageCtrl.dg.Rows[i].Cells["是否选择"].EditedFormattedValue.ToString();
+                    if (_selectValue == "true")
+                    {
+                        MessageBox.Show("选中...");
+                        //如果CheckBox已选中，则在此处继续编写代码
+                    }
+                }
+            }
+        }
         private void loadCount(Dictionary<string, string> strWheres)
         {
             int userCount = topicService.countChooseTopics(strWheres);

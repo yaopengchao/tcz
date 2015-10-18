@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using BLL;
+using Model;
 
 namespace LoginFrame
 {
@@ -42,16 +43,16 @@ namespace LoginFrame
             //this.BackColor = Color.FromArgb(255, 208, 232, 253);
             btnQuery.BackColor= Color.FromArgb(255, 80, 151, 228);
             btnClear.BackColor = Color.FromArgb(255, 80, 151, 228);
-            button6.BackColor = Color.FromArgb(255, 80, 151, 228);
-            button5.BackColor = Color.FromArgb(255, 80, 151, 228);
+            //button6.BackColor = Color.FromArgb(255, 80, 151, 228);
+            //button5.BackColor = Color.FromArgb(255, 80, 151, 228);
             button4.BackColor = Color.FromArgb(255, 80, 151, 228);
             button1.BackColor = Color.FromArgb(255, 80, 151, 228);
             button2.BackColor = Color.FromArgb(255, 80, 151, 228);
 
             btnQuery.ForeColor = Color.White;
             btnClear.ForeColor = Color.White;
-            button6.ForeColor = Color.White;
-            button5.ForeColor = Color.White;
+            //button6.ForeColor = Color.White;
+            //button5.ForeColor = Color.White;
             button4.ForeColor = Color.White;
             button1.ForeColor = Color.White;
             button2.ForeColor = Color.White;
@@ -63,12 +64,7 @@ namespace LoginFrame
             topicType.ValueMember = "id";
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            AddExam addExam = new AddExam();
-            addExam.bodyExam = this;
-            addExam.ShowDialog();
-        }
+        
 
         public void btnQuery_Click(object sender, EventArgs e)
         {
@@ -90,6 +86,9 @@ namespace LoginFrame
             {
                 strWheres.Add("exam_cat", " = '" + type + "' ");
             }
+
+            strWheres.Add(" exam_name ", " not like '%的自我测试%' ");
+
             loadCount(strWheres);
             loadData(strWheres);
 
@@ -97,6 +96,8 @@ namespace LoginFrame
             pageCtrl.Cols = cols;
             pageCtrl.dg.Columns[0].Visible = false;
             pageCtrl.dg.Columns[5].Visible = false;
+            pageCtrl.dg.Columns[6].Visible = false;
+
             int[] widths = new int[] { 30, 250, 150, 150, 150};
             pageCtrl.Widths = widths;
         }
@@ -128,26 +129,7 @@ namespace LoginFrame
             btnQueryClick();
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            if (pageCtrl.dg.CurrentRow == null)
-            {
-                MessageBox.Show("请选择一条记录");
-            }
-            else
-            {
-                AddExam addExam = new AddExam();
-                addExam.bodyExam = this;
-                addExam.labExamId.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[0].Value);
-                int exCat = Convert.ToInt32(pageCtrl.dg.CurrentRow.Cells[5].Value);
-                addExam.topicCategory.SelectedIndex = exCat;
-                addExam.txtExamName.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[1].Value);
-                addExam.startTime.Value = Convert.ToDateTime(pageCtrl.dg.CurrentRow.Cells[3].Value);
-                addExam.totalMins.Text = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[4].Value);
-                addExam.exType.SelectedIndex = 1;
-                addExam.ShowDialog();
-            }
-        }
+        
 
         private void BodyExam_Load(object sender, EventArgs e)
         {
@@ -195,9 +177,38 @@ namespace LoginFrame
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AddExam addExam = new AddExam();
+            AddExam addExam = new AddExam(null);
             addExam.bodyExam = this;
             addExam.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //必须选中一行 
+            if (pageCtrl.dg.CurrentRow == null)
+            {
+                MessageBox.Show("请选择一条记录");
+            }
+            else
+            {
+
+                //获取选中行的信息 填充到对象中
+
+                Examination exam = new Examination();
+                exam.ExamCat = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[2].Value.ToString());
+                exam.ExamName = pageCtrl.dg.CurrentRow.Cells[1].Value.ToString();
+                exam.StartTime = pageCtrl.dg.CurrentRow.Cells[3].Value.ToString();
+                exam.TotalMins = Convert.ToInt32(pageCtrl.dg.CurrentRow.Cells[4].Value.ToString());
+                //exam.ExType = "1";
+                exam.ExaminationId = Convert.ToInt32(pageCtrl.dg.CurrentRow.Cells[0].Value.ToString());
+                exam.Num = Convert.ToInt32(pageCtrl.dg.CurrentRow.Cells[6].Value.ToString());
+
+
+                AddExam addExam = new AddExam(exam);
+                addExam.bodyExam = this;
+                addExam.ShowDialog();
+                
+            }
         }
     }
 }

@@ -183,6 +183,8 @@ namespace LoginFrame
             {
                 this.Controls.Remove(ctrl);
             }
+
+            this.labRightResult.Visible=false;
         }
 
         private void preClick(object sender, EventArgs e)

@@ -68,6 +68,31 @@ namespace BLL
             return examDao.getTopicCount(type);
         }
 
+        public bool randomTopic(int Num,int exam_id)
+        {
+            return examDao.randomTopic(Num, exam_id);
+        }
+        public bool updateChooseTopic(string exam_id, string topic_id, string topic_state)
+        {
+            return examDao.updateChooseTopic(exam_id, topic_id, topic_state);
+        }
+
+        public int addOnlyExam(Examination exam)
+        {
+            int examId = exam.ExaminationId;
+            int flag = 0;
+            if (examId < 1)
+            {
+                flag = examDao.addOnlyExam(exam);
+                examId = exam.ExaminationId;
+            }
+            else
+            {
+                flag = examDao.updateOnlyExam(exam);
+                examDetailDao.deleteExamDetail(exam.ExaminationId);
+            }
+            return flag;
+        }
         public int addExam(Examination exam, string topicIds)
         {
             int examId = exam.ExaminationId;
@@ -83,6 +108,7 @@ namespace BLL
                 examDetailDao.deleteExamDetail(exam.ExaminationId);
             }
             
+
             if (topicIds.IndexOf(",") > -1)                  //多个题目时
             {
                 topicIds = topicIds.Substring(0, topicIds.Length - 1);
