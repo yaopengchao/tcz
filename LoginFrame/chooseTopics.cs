@@ -109,6 +109,12 @@ namespace LoginFrame
             string[] cols = new string[] { "题目编号", "题干", "题目种类", "题目分类", "正确答案", "创建时间", };
             pageCtrl.Cols = cols;
             pageCtrl.dg.Columns[0].Visible = false;
+
+            pageCtrl.dg.Columns[2].Visible = false;
+            pageCtrl.dg.Columns[3].Visible = false;
+            pageCtrl.dg.Columns[4].Visible = false;
+            pageCtrl.dg.Columns[5].Visible = false;
+
             pageCtrl.dg.Columns[6].Visible = false;
             pageCtrl.dg.Columns[7].Visible = false;
             //pageCtrl.dg.Columns[8].Visible = false;
@@ -129,7 +135,7 @@ namespace LoginFrame
             //pageCtrl.dg.CellValueChanged += new DataGridViewCellEventHandler(CellValueChanged);
 
 
-            int[] widths = new int[] { 230, 150, 150, 150, 150, 150,50  };
+            int[] widths = new int[] {800,50};
 
 
 
