@@ -87,6 +87,10 @@ namespace LoginFrame
                     btnBegin.Click += new EventHandler(enterExam);
                     this.Controls.Add(btnBegin);
                 }
+                else
+                {
+                    this.label1.Text = "暂时无开始可以进行!";
+                }
             }
         }
 

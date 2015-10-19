@@ -97,6 +97,7 @@ namespace LoginFrame
             pageCtrl.dg.Columns[0].Visible = false;
             pageCtrl.dg.Columns[5].Visible = false;
             pageCtrl.dg.Columns[6].Visible = false;
+            pageCtrl.dg.Columns[7].Visible = false;
 
             int[] widths = new int[] { 30, 250, 150, 150, 150};
             pageCtrl.Widths = widths;
@@ -199,10 +200,10 @@ namespace LoginFrame
                 exam.ExamName = pageCtrl.dg.CurrentRow.Cells[1].Value.ToString();
                 exam.StartTime = pageCtrl.dg.CurrentRow.Cells[3].Value.ToString();
                 exam.TotalMins = Convert.ToInt32(pageCtrl.dg.CurrentRow.Cells[4].Value.ToString());
-                //exam.ExType = "1";
+                exam.ExType = "1";
                 exam.ExaminationId = Convert.ToInt32(pageCtrl.dg.CurrentRow.Cells[0].Value.ToString());
                 exam.Num = Convert.ToInt32(pageCtrl.dg.CurrentRow.Cells[6].Value.ToString());
-
+                exam.ExType_lx = Convert.ToString(pageCtrl.dg.CurrentRow.Cells[7].Value.ToString());
 
                 AddExam addExam = new AddExam(exam);
                 addExam.bodyExam = this;

@@ -22,7 +22,7 @@ namespace DAL
         //根据条件进行分页查询
         public DataSet listExams(Dictionary<string, string> strWheres, int startIndex, int pageSize)
         {
-            string strSql = "select examination_id, exam_name, if (exam_cat='1','理论类','操作类'), start_time, total_mins, exam_cat ,num from ex_examination where 1 = 1 ";
+            string strSql = "select examination_id, exam_name, if (exam_cat='1','理论类','操作类'), start_time, total_mins, exam_cat ,num,ex_type_lx from ex_examination where 1 = 1 ";
             return listEntity(strSql, strWheres, startIndex, pageSize);
         }
 
@@ -200,7 +200,7 @@ namespace DAL
         }
         public int addOnlyExam(Examination exam)
         {
-            string strSql = "insert into ex_examination(EXAM_CAT, EXAM_NAME, START_TIME, TOTAL_MINS, SCORES, EX_TYPE,NUM) values(?examCat, ?examName, ?startTime, ?totalMins, ?scores, ?exType, ?Num); select last_insert_id();";
+            string strSql = "insert into ex_examination(EXAM_CAT, EXAM_NAME, START_TIME, TOTAL_MINS, SCORES, EX_TYPE,NUM,EX_TYPE_LX) values(?examCat, ?examName, ?startTime, ?totalMins, ?scores, ?exType, ?Num,?exType_lx); select last_insert_id();";
             MySqlParameter[] parames = new MySqlParameter[] {
                 new MySqlParameter("?examCat", MySqlDbType.VarChar),
                 new MySqlParameter("?examName", MySqlDbType.VarChar),
@@ -208,15 +208,18 @@ namespace DAL
                 new MySqlParameter("?totalMins", MySqlDbType.Int32),
                 new MySqlParameter("?scores", MySqlDbType.VarChar),
                 new MySqlParameter("?exType", MySqlDbType.VarChar),
-                new MySqlParameter("?Num", MySqlDbType.Int32)
+                new MySqlParameter("?Num", MySqlDbType.Int32),
+                new MySqlParameter("?exType_lx", MySqlDbType.VarChar)
             };
             parames[0].Value = exam.ExamCat;
             parames[1].Value = exam.ExamName;
             parames[2].Value = exam.StartTime;
             parames[3].Value = exam.TotalMins;
             parames[4].Value = exam.Scores;
-            parames[5].Value = exam.ExType;
+            parames[5].Value = "1";
             parames[6].Value = exam.Num;
+            parames[7].Value = exam.ExType_lx;//选题方式
+            
             int examId = Convert.ToInt32(MySqlHelper.ExecuteScalar(strSql, parames));
             exam.ExaminationId = examId;
             return examId;

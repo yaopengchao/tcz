@@ -110,7 +110,7 @@ namespace LoginFrame
                         }
                         else
                         {
-                            exam.ExType = this.exType.Text;
+                            exam.ExType_lx = this.exType.Text;
                             exam.ExaminationId = Convert.ToInt32(this.labExamId.Text == "" ? "0" : this.labExamId.Text);
                         }
                         exam.Num = Convert.ToInt32(this.questionsNum.Text);

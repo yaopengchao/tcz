@@ -65,5 +65,12 @@ namespace Model
             set { num = value; }
         }
 
+
+        private string exType_lx;
+        public string ExType_lx
+        {
+            get { return exType_lx; }
+            set { exType_lx = value; }
+        }
     }
 }
