@@ -183,6 +183,7 @@ namespace LoginFrame
             string[] cols = new string[] { "学员编号", "学员名称", "登录名", "密码", "创建时间" };
             pageCtrl.Cols = cols;
             pageCtrl.dg.Columns[0].Visible = false;
+            pageCtrl.dg.Columns[3].Visible = false;
             int[] widths = new int[] { 100, 150, 150, 200 };
             pageCtrl.Widths = widths;
         }

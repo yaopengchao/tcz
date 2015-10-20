@@ -132,17 +132,8 @@
   <data name="labFbCount.Text" xml:space="preserve">
     <value>腹部听触诊</value>
   </data>
-  <data name="labFeibCount.Text" xml:space="preserve">
-    <value>222</value>
-  </data>
-  <data name="labFubCount.Text" xml:space="preserve">
-    <value>222</value>
-  </data>
   <data name="labTitle.Text" xml:space="preserve">
     <value>随机添加考试题目</value>
-  </data>
-  <data name="labTzCount.Text" xml:space="preserve">
-    <value>222</value>
   </data>
   <data name="linkLabel1.Text" xml:space="preserve">
     <value>10</value>

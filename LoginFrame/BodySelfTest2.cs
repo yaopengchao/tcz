@@ -32,18 +32,21 @@ namespace LoginFrame
             this.comboBox1.Items.Add("20");
             this.comboBox1.Items.Add("25");
             this.comboBox1.Items.Add("30");
+            this.comboBox1.Items.Add(totalXz);
 
             this.comboBox2.Items.Add("10");
             this.comboBox2.Items.Add("15");
             this.comboBox2.Items.Add("20");
             this.comboBox2.Items.Add("25");
             this.comboBox2.Items.Add("30");
+            this.comboBox2.Items.Add(totalXz);
 
             this.comboBox3.Items.Add("10");
             this.comboBox3.Items.Add("15");
             this.comboBox3.Items.Add("20");
             this.comboBox3.Items.Add("25");
             this.comboBox3.Items.Add("30");
+            this.comboBox3.Items.Add(totalXz);
 
 
 

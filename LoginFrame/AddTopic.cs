@@ -124,11 +124,11 @@ namespace LoginFrame
             }
             else if (type == "")
             {
-                MessageBox.Show("种类不能为空!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("题目种类不能为空!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             else if (category == "")
             {
-                MessageBox.Show("分类不能为空!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("题目分类不能为空!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             else if(answers == "")
             {

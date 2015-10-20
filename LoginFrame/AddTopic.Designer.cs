@@ -45,9 +45,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.labTopicId = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtContent = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtAnswers = new System.Windows.Forms.ComboBox();
-            this.txtContent = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -158,6 +158,11 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
+            // txtContent
+            // 
+            resources.ApplyResources(this.txtContent, "txtContent");
+            this.txtContent.Name = "txtContent";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtAnswers);
@@ -179,11 +184,6 @@
             this.txtAnswers.FormattingEnabled = true;
             resources.ApplyResources(this.txtAnswers, "txtAnswers");
             this.txtAnswers.Name = "txtAnswers";
-            // 
-            // txtContent
-            // 
-            resources.ApplyResources(this.txtContent, "txtContent");
-            this.txtContent.Name = "txtContent";
             // 
             // AddTopic
             // 
