@@ -681,3 +681,86 @@ Version: '5.1.28-rc-community'  socket: ''  port: 3306  MySQL Community Server (
 151019  6:39:49 [Note] Plugin 'InnoDB' disabled by command line option
 151019  6:40:20 [Note] Plugin 'InnoDB' disabled by command line option
 151019  7:05:50 [Note] Plugin 'InnoDB' disabled by command line option
+151020 18:15:18 [Note] Plugin 'InnoDB' disabled by command line option
+Can't start server: Bind on TCP/IP port: No such file or directory
+151020 18:15:18 [ERROR] Do you already have another mysqld server running on port: 3306 ?
+151020 18:15:18 [ERROR] Aborting
+
+151020 18:15:18 [Note] E:\听触诊项目\3\LoginFrame\DB\MySQL5.1\bin\mysqld-nt.exe: Shutdown complete
+
+151020 18:16:04 [Note] Plugin 'InnoDB' disabled by command line option
+Can't start server: Bind on TCP/IP port: No such file or directory
+151020 18:16:04 [ERROR] Do you already have another mysqld server running on port: 3306 ?
+151020 18:16:04 [ERROR] Aborting
+
+151020 18:16:04 [Note] E:\听触诊项目\3\LoginFrame\DB\MySQL5.1\bin\mysqld-nt.exe: Shutdown complete
+
+151020 18:17:19 [Note] Plugin 'InnoDB' disabled by command line option
+Can't start server: Bind on TCP/IP port: No such file or directory
+151020 18:17:19 [ERROR] Do you already have another mysqld server running on port: 3306 ?
+151020 18:17:19 [ERROR] Aborting
+
+151020 18:17:19 [Note] E:\听触诊项目\3\LoginFrame\DB\MySQL5.1\bin\mysqld-nt.exe: Shutdown complete
+
+151020 18:17:54 [Note] Plugin 'InnoDB' disabled by command line option
+Can't start server: Bind on TCP/IP port: No such file or directory
+151020 18:17:54 [ERROR] Do you already have another mysqld server running on port: 3306 ?
+151020 18:17:54 [ERROR] Aborting
+
+151020 18:17:54 [Note] E:\听触诊项目\3\LoginFrame\DB\MySQL5.1\bin\mysqld-nt.exe: Shutdown complete
+
+151020 18:18:47 [Note] Plugin 'InnoDB' disabled by command line option
+151020 18:31:23 [Note] Plugin 'InnoDB' disabled by command line option
+151020 18:36:32 [Note] Plugin 'InnoDB' disabled by command line option
+151020 18:38:01 [Note] Plugin 'InnoDB' disabled by command line option
+151020 18:39:18 [Note] Plugin 'InnoDB' disabled by command line option
+151020 18:49:07 [Note] Plugin 'InnoDB' disabled by command line option
+151020 18:53:40 [Note] Plugin 'InnoDB' disabled by command line option
+151020 18:59:37 [Note] Plugin 'InnoDB' disabled by command line option
+151020 19:11:05 [Note] Plugin 'InnoDB' disabled by command line option
+151020 19:13:22 [Note] Plugin 'InnoDB' disabled by command line option
+151020 19:17:16 [Note] Plugin 'InnoDB' disabled by command line option
+151020 19:23:51 [Note] Plugin 'InnoDB' disabled by command line option
+151020 19:28:46 [Note] Plugin 'InnoDB' disabled by command line option
+151020 19:37:34 [Note] Plugin 'InnoDB' disabled by command line option
+151020 19:40:18 [Note] Plugin 'InnoDB' disabled by command line option
+151020 19:40:40 [Note] Plugin 'InnoDB' disabled by command line option
+151020 19:42:28 [Note] Plugin 'InnoDB' disabled by command line option
+151020 19:46:22 [Note] Plugin 'InnoDB' disabled by command line option
+151020 19:48:29 [Note] Plugin 'InnoDB' disabled by command line option
+151020 19:49:38 [Note] Plugin 'InnoDB' disabled by command line option
+151020 19:51:49 [Note] Plugin 'InnoDB' disabled by command line option
+151020 19:54:58 [Note] Plugin 'InnoDB' disabled by command line option
+151020 20:03:45 [Note] Plugin 'InnoDB' disabled by command line option
+151020 20:04:07 [Note] Plugin 'InnoDB' disabled by command line option
+151020 20:06:21 [Note] Plugin 'InnoDB' disabled by command line option
+151020 20:08:46 [Note] Plugin 'InnoDB' disabled by command line option
+151021  4:22:44 [Note] Plugin 'InnoDB' disabled by command line option
+151021  4:23:24 [Note] Plugin 'InnoDB' disabled by command line option
+151021  4:25:55 [Note] Plugin 'InnoDB' disabled by command line option
+151021  4:26:58 [Note] Plugin 'InnoDB' disabled by command line option
+151021  4:30:22 [Note] Plugin 'InnoDB' disabled by command line option
+151021  4:33:04 [Note] Plugin 'InnoDB' disabled by command line option
+151021  4:49:40 [Note] Plugin 'InnoDB' disabled by command line option
+151021  4:50:14 [Note] Plugin 'InnoDB' disabled by command line option
+151021  4:51:55 [Note] Plugin 'InnoDB' disabled by command line option
+151021  4:57:17 [Note] Plugin 'InnoDB' disabled by command line option
+151021  4:58:16 [Note] Plugin 'InnoDB' disabled by command line option
+151021  4:59:52 [Note] Plugin 'InnoDB' disabled by command line option
+151021  5:01:44 [Note] Plugin 'InnoDB' disabled by command line option
+151021  5:03:51 [Note] Plugin 'InnoDB' disabled by command line option
+151021  5:09:04 [Note] Plugin 'InnoDB' disabled by command line option
+151021  5:19:52 [Note] Plugin 'InnoDB' disabled by command line option
+151021  5:22:09 [Note] Plugin 'InnoDB' disabled by command line option
+151021  5:30:59 [Note] Plugin 'InnoDB' disabled by command line option
+151021  5:33:42 [Note] Plugin 'InnoDB' disabled by command line option
+151021  5:41:47 [Note] Plugin 'InnoDB' disabled by command line option
+151021  5:42:32 [Note] Plugin 'InnoDB' disabled by command line option
+151021  5:44:30 [Note] Plugin 'InnoDB' disabled by command line option
+151021  5:46:43 [Note] Plugin 'InnoDB' disabled by command line option
+151021  5:51:34 [Note] Plugin 'InnoDB' disabled by command line option
+151021  5:56:51 [Note] Plugin 'InnoDB' disabled by command line option
+151021  5:58:55 [Note] Plugin 'InnoDB' disabled by command line option
+151021  6:02:03 [Note] Plugin 'InnoDB' disabled by command line option
+151021  6:05:47 [Note] Plugin 'InnoDB' disabled by command line option
+151021  6:06:28 [Note] Plugin 'InnoDB' disabled by command line option

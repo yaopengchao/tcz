@@ -89,7 +89,7 @@ namespace BLL
             else
             {
                 flag = examDao.updateOnlyExam(exam);
-                examDetailDao.deleteExamDetail(exam.ExaminationId);
+                //examDetailDao.deleteExamDetail(exam.ExaminationId);
             }
             return flag;
         }
@@ -139,5 +139,8 @@ namespace BLL
             examDetailDao.deleteExamDetail(examId);
             return examDao.deleteExam(examId);
         }
+
+
+        
     }
 }

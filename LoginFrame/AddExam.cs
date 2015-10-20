@@ -117,19 +117,22 @@ namespace LoginFrame
                         int result = examService.addOnlyExam(exam);
                         if (result > 0)
                         {
+
+                        if (examination == null)
+                        {
                             string exTypeValue = Convert.ToString(exType.SelectedValue);
                             if (exTypeValue == "1")
                             {
                                 //随机题目保存数据到表ex_examination_detail 
                                 //获取题目数量  确定随机题目数量
-                                int Num= Convert.ToInt32(this.questionsNum.Text);
+                                int Num = Convert.ToInt32(this.questionsNum.Text);
                                 if (examService.randomTopic(Num, exam.ExaminationId))
                                 {
                                     //MessageBox.Show("保存成功");
                                     //bodyExam.btnQuery_Click(sender, e);
                                     //this.Close();
 
-                                    
+
                                 }
                                 else
                                 {
@@ -137,6 +140,7 @@ namespace LoginFrame
                                     MessageBox.Show("随机选题发生系统问题，请联系管理员");
                                 }
                             }
+                        }
                         //刷新数据
                         bodyExam.btnQueryClick();
 

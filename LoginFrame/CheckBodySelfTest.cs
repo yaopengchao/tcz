@@ -171,6 +171,7 @@ namespace LoginFrame
                 lab.Name = "labItemDetail" + i;
                 items.Add(lab);                
             }
+
             this.Controls.AddRange(items.ToArray());
             
             isRightAnswers(labResult.Text, labRightResult.Text);

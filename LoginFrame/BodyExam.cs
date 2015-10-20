@@ -16,6 +16,7 @@ namespace LoginFrame
 
         private static ExamService examService;
 
+
         private static BodyExam instance;
 
         private static Dictionary<string, string> strWheres;

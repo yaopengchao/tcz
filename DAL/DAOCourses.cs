@@ -81,7 +81,8 @@ namespace DAL
 
             //parameters[0].Value = filter;
 
-            DataSet ds = MySqlHelper.DateSet(strSql.ToString(), parameters);
+            DataSet ds = listEntity(strSql.ToString(), strWheres, startIndex, pageSize);
+                //MySqlHelper.DateSet(strSql.ToString(), parameters);
 
             return ds;
         }

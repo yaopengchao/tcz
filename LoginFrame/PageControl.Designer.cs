@@ -201,6 +201,7 @@ namespace LoginFrame
             resources.GetString("dropPageSize.Items2")});
             this.dropPageSize.Name = "dropPageSize";
             resources.ApplyResources(this.dropPageSize, "dropPageSize");
+            this.dropPageSize.SelectedIndexChanged += new System.EventHandler(this.dropPageSize_SelectedIndexChanged);
             this.dropPageSize.Click += new System.EventHandler(this.dropPageSize_Click);
             // 
             // toolStripLabel5

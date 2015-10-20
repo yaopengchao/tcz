@@ -27,26 +27,7 @@ namespace LoginFrame
             button7.BackColor = Color.FromArgb(255, 80, 151, 228);
             button7.ForeColor = Color.White;
 
-            this.comboBox1.Items.Add("10");
-            this.comboBox1.Items.Add("15");
-            this.comboBox1.Items.Add("20");
-            this.comboBox1.Items.Add("25");
-            this.comboBox1.Items.Add("30");
-            this.comboBox1.Items.Add(totalXz);
-
-            this.comboBox2.Items.Add("10");
-            this.comboBox2.Items.Add("15");
-            this.comboBox2.Items.Add("20");
-            this.comboBox2.Items.Add("25");
-            this.comboBox2.Items.Add("30");
-            this.comboBox2.Items.Add(totalXz);
-
-            this.comboBox3.Items.Add("10");
-            this.comboBox3.Items.Add("15");
-            this.comboBox3.Items.Add("20");
-            this.comboBox3.Items.Add("25");
-            this.comboBox3.Items.Add("30");
-            this.comboBox3.Items.Add(totalXz);
+            
 
 
 
@@ -174,6 +155,7 @@ namespace LoginFrame
                 exam.ExamName = dt.ToString("yyyy-MM-dd HH:mm:ss") + LoginRoler.username + "的自我测试";
                 exam.ExType = "2";
                 exam.StartTime = dt.ToString("yyyy-MM-dd HH:mm:ss");
+                exam.Num = Convert.ToInt32(xz) + Convert.ToInt32(feib) + Convert.ToInt32(fub);
                 string topicIds = getRandomTopicIds(xz, xzList);
                 topicIds += getRandomTopicIds(feib, feibList);
                 topicIds += getRandomTopicIds(fub, fubList);
@@ -264,29 +246,95 @@ namespace LoginFrame
 
         private void linkLabel19_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            topicType = "1";
-            getTopicNum(topicType);
+            // topicType = "1";
+            //getTopicNum(topicType);
+            //radioButton1_CheckedChanged(radioButton1, null);
         }
 
         private void linkLabel20_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            topicType = "2";
-            getTopicNum(topicType);
+            //topicType = "2";
+            //getTopicNum(topicType);
+            //radioButton2_CheckedChanged(radioButton2, null);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            xz = Convert.ToInt32(this.comboBox1.Text);
+            xz = Convert.ToInt32(((ComboxItem)this.comboBox1.Items[this.comboBox1.SelectedIndex]).Value);
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            xz = Convert.ToInt32(this.comboBox2.Text);
+            feib = Convert.ToInt32(((ComboxItem)this.comboBox2.Items[this.comboBox2.SelectedIndex]).Value);
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            xz = Convert.ToInt32(this.comboBox3.Text);
+            fub = Convert.ToInt32(((ComboxItem)this.comboBox3.Items[this.comboBox3.SelectedIndex]).Value);
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            topicType = "1";
+            getTopicNum(topicType);
+
+            this.comboBox1.Items.Clear();
+            this.comboBox1.Items.Add(new ComboxItem("10", "10"));
+            this.comboBox1.Items.Add(new ComboxItem("15", "15"));
+            this.comboBox1.Items.Add(new ComboxItem("20", "20"));
+            this.comboBox1.Items.Add(new ComboxItem("25", "25"));
+            this.comboBox1.Items.Add(new ComboxItem("30", "30"));
+            this.comboBox1.Items.Add(new ComboxItem("全部", totalXz + ""));
+
+            this.comboBox2.Items.Clear();
+            this.comboBox2.Items.Add(new ComboxItem("10", "10"));
+            this.comboBox2.Items.Add(new ComboxItem("15", "15"));
+            this.comboBox2.Items.Add(new ComboxItem("20", "20"));
+            this.comboBox2.Items.Add(new ComboxItem("25", "25"));
+            this.comboBox2.Items.Add(new ComboxItem("30", "30"));
+            this.comboBox2.Items.Add(new ComboxItem("全部", totalFeib + ""));
+
+
+            this.comboBox3.Items.Clear();
+            this.comboBox3.Items.Add(new ComboxItem("10", "10"));
+            this.comboBox3.Items.Add(new ComboxItem("15", "15"));
+            this.comboBox3.Items.Add(new ComboxItem("20", "20"));
+            this.comboBox3.Items.Add(new ComboxItem("25", "25"));
+            this.comboBox3.Items.Add(new ComboxItem("30", "30"));
+            this.comboBox3.Items.Add(new ComboxItem("全部", totalFub + ""));
+
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            topicType = "2";
+            getTopicNum(topicType);
+
+            this.comboBox1.Items.Clear();
+            this.comboBox1.Items.Add(new ComboxItem("10", "10"));
+            this.comboBox1.Items.Add(new ComboxItem("15", "15"));
+            this.comboBox1.Items.Add(new ComboxItem("20", "20"));
+            this.comboBox1.Items.Add(new ComboxItem("25", "25"));
+            this.comboBox1.Items.Add(new ComboxItem("30", "30"));
+            this.comboBox1.Items.Add(new ComboxItem("全部", totalXz + ""));
+
+            this.comboBox2.Items.Clear();
+            this.comboBox2.Items.Add(new ComboxItem("10", "10"));
+            this.comboBox2.Items.Add(new ComboxItem("15", "15"));
+            this.comboBox2.Items.Add(new ComboxItem("20", "20"));
+            this.comboBox2.Items.Add(new ComboxItem("25", "25"));
+            this.comboBox2.Items.Add(new ComboxItem("30", "30"));
+            this.comboBox2.Items.Add(new ComboxItem("全部", totalFeib + ""));
+
+
+            this.comboBox3.Items.Clear();
+            this.comboBox3.Items.Add(new ComboxItem("10", "10"));
+            this.comboBox3.Items.Add(new ComboxItem("15", "15"));
+            this.comboBox3.Items.Add(new ComboxItem("20", "20"));
+            this.comboBox3.Items.Add(new ComboxItem("25", "25"));
+            this.comboBox3.Items.Add(new ComboxItem("30", "30"));
+            this.comboBox3.Items.Add(new ComboxItem("全部", totalFub + ""));
         }
     }
 }

@@ -149,9 +149,9 @@ namespace LoginFrame
             {
                 string exam_id= Convert.ToString(exam.ExaminationId);
                 string topic_id= tempGdv.Rows[e.RowIndex].Cells[0].Value.ToString();
-                string topic_state= tempGdv.Rows[e.RowIndex].Cells[7].Value.ToString();
+                string topic_state= tempGdv.Rows[e.RowIndex].Cells[8].Value.ToString();
 
-                if (!topic_state.Equals('1'))
+                if (!("已选择").Equals(topic_state))
                 {
                     if (Convert.ToInt32(this.label5.Text)>= Convert.ToInt32(this.label4.Text))
                     {

@@ -12,10 +12,10 @@ namespace DAL
     public class ExaminationDao : CommonDao
     {
 
-        //查询考试列表
+        //查询考试列表  修改成可进入考试数据  过滤那些已经参加过得考试
         public DataSet listExams()
         {
-            string strSql = "SELECT EXAMINATION_ID, EXAM_NAME, START_TIME, TOTAL_MINS from ex_examination where EX_TYPE = '1' ORDER BY START_TIME desc";
+            string strSql = "SELECT EXAMINATION_ID, EXAM_NAME, START_TIME, TOTAL_MINS from ex_examination where EX_TYPE = '1' and getAvailableExam(EXAMINATION_ID,"+LoginRoler.userId+")='false' ORDER BY START_TIME desc";
             return listEntity(strSql);
         }
 
@@ -53,8 +53,10 @@ namespace DAL
 
         public bool randomTopic(int Num,int exam_id)
         {
+
+            
             //先获取题目总数
-            string strSql = " select count(*) from ex_topic ";
+            string strSql = " select topic_id from ex_topic ";
             int totleNum= listEntity(strSql, null).Tables[0].Rows.Count;
 
             //判定 需要数量和总数  如果 总数小于 题目数量 则将所有考题选入该考试中
@@ -91,17 +93,50 @@ namespace DAL
             }
             else
             {
+
+               
+
+
+
                 //全部考题
                 strSql = "select topic_id from ex_topic ";
                 DataTable Dt = listEntity(strSql, null).Tables[0];
                 DataRowCollection rows = Dt.Rows;
 
-                Hashtable hashtable = new Hashtable();
+                List<int> topic_ids = new List<int>();
+                //因为TIPIC_ID不一定是连续的所以我们必须将TIOPIC_ID放入一个集合中然后按照随机数字从集合获取该ID
+                for (int i = 0; i < Dt.Rows.Count; i++)
+                {
+                    DataRow currRow = rows[i];
+                    string topic_id = currRow["topic_id"] + "";
+                    topic_ids.Add(Convert.ToInt32(topic_id));
+                }
+
+
+
+
+                    Hashtable hashtable = new Hashtable();
                 Random rm = new Random();
                 int RmNum = Num;
-                for (int i = 0; hashtable.Count < RmNum; i++)
+                int MaxNum = rows.Count;
+
+                bool doRandom = true;
+                int ChooseNum = 0;
+
+                do
                 {
-                    int nValue = rm.Next(rows.Count);
+
+                    int nValue = topic_ids[rm.Next(MaxNum)];
+
+                    //检查该数值是否已经存在该次考试中
+                    strSql = "select topic_id from ex_examination_detail where topic_id=" + nValue+ " and EXAMINATION_ID="+exam_id;
+                    Dt = listEntity(strSql, null).Tables[0];
+                    rows = Dt.Rows;
+                    if (rows.Count>0)
+                    {
+                        continue;
+                    }
+
                     if (!hashtable.ContainsValue(nValue) && nValue != 0)
                     {
                         //hashtable.Add(nValue, nValue);
@@ -127,9 +162,14 @@ namespace DAL
                         int EXAMINATION_DETAIL_ID = Convert.ToInt32(MySqlHelper.ExecuteScalar(strSql, parames));
 
                     }
-                }
 
+                    ChooseNum = ChooseNum + 1;
 
+                    if (ChooseNum== RmNum)
+                    {
+                        doRandom = false;
+                    }
+                } while (doRandom);
             }
 
             //如果总数大于所需数量 则随机添加
@@ -249,14 +289,16 @@ namespace DAL
 
         public int addExam(Examination exam)
         {
-            string strSql = "insert into ex_examination(EXAM_CAT, EXAM_NAME, START_TIME, TOTAL_MINS, SCORES, EX_TYPE) values(?examCat, ?examName, ?startTime, ?totalMins, ?scores, ?exType); select last_insert_id();";
+            string strSql = "insert into ex_examination(EXAM_CAT, EXAM_NAME, START_TIME, TOTAL_MINS, SCORES, EX_TYPE,NUM,EX_TYPE_LX) values(?examCat, ?examName, ?startTime, ?totalMins, ?scores, ?exType,?num,?exType_lx); select last_insert_id();";
             MySqlParameter[] parames = new MySqlParameter[] {
                 new MySqlParameter("?examCat", MySqlDbType.VarChar),
                 new MySqlParameter("?examName", MySqlDbType.VarChar),
                 new MySqlParameter("?startTime", MySqlDbType.VarChar),
                 new MySqlParameter("?totalMins", MySqlDbType.Int32),
                 new MySqlParameter("?scores", MySqlDbType.VarChar),
-                new MySqlParameter("?exType", MySqlDbType.VarChar)
+                new MySqlParameter("?exType", MySqlDbType.VarChar),
+                new MySqlParameter("?num", MySqlDbType.VarChar),
+                new MySqlParameter("?exType_lx", MySqlDbType.VarChar)
             };
             parames[0].Value = exam.ExamCat;
             parames[1].Value = exam.ExamName;
@@ -264,6 +306,8 @@ namespace DAL
             parames[3].Value = exam.TotalMins;
             parames[4].Value = exam.Scores;
             parames[5].Value = exam.ExType;
+            parames[6].Value = exam.Num;
+            parames[7].Value = "随机选题";
             int examId = Convert.ToInt32(MySqlHelper.ExecuteScalar(strSql, parames));
             exam.ExaminationId = examId;
             return examId;

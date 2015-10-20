@@ -62,7 +62,7 @@ namespace LoginFrame
             //加载成绩
             DataSet ds = examResultService.listExams(strWheres, 0, 1);
 
-            this.label2.Text= (string)(ds.Tables[0].Rows[0][6]);
+            this.label2.Text= "共 "+ (string)(ds.Tables[0].Rows[0][7]) + " 题，答对 "+ (string)(ds.Tables[0].Rows[0][8]) + " 题，答错 "+(Convert.ToInt32((string)(ds.Tables[0].Rows[0][7]))- Convert.ToInt32((string)(ds.Tables[0].Rows[0][8]))) + " 题，得分率:"+(string)(ds.Tables[0].Rows[0][6]);
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -189,8 +189,14 @@ namespace LoginFrame
 
         private void preClick(object sender, EventArgs e)
         {
+            labResult.Text = "";
+            
+
             string preText = ((LinkLabel)sender).Text;
             preText = preText.Substring(0, preText.Length - 1);
+
+            results.Clear();
+
             if (results.Contains(preText))
             {
                 results.Remove(preText);

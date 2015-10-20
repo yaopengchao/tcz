@@ -226,7 +226,7 @@ namespace LoginFrame
 
         private void dropPageSize_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void dg_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
@@ -276,6 +276,14 @@ namespace LoginFrame
             cellClick();
         }
 
-        
+        private void dropPageSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (loadData != null)
+            {
+                pageSize = Convert.ToInt32(dropPageSize.SelectedItem);
+                CurPage = 1;
+                loadData(strWheres);
+            }
+        }
     }
 }
