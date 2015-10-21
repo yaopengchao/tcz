@@ -35,7 +35,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtExamName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.startTime = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.totalMins = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@
             this.labExamId = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.questionsNum = new System.Windows.Forms.ComboBox();
+            this.startTime = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // labTitle
@@ -77,16 +77,6 @@
             // 
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            // 
-            // startTime
-            // 
-            resources.ApplyResources(this.startTime, "startTime");
-            this.startTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.startTime.MinDate = new System.DateTime(2015, 1, 1, 0, 0, 0, 0);
-            this.startTime.Name = "startTime";
-            this.startTime.ShowUpDown = true;
-            this.startTime.Value = new System.DateTime(2015, 9, 5, 11, 15, 9, 0);
-            this.startTime.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label4
             // 
@@ -140,6 +130,16 @@
             resources.ApplyResources(this.questionsNum, "questionsNum");
             this.questionsNum.Name = "questionsNum";
             // 
+            // startTime
+            // 
+            resources.ApplyResources(this.startTime, "startTime");
+            this.startTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.startTime.MinDate = new System.DateTime(2015, 1, 1, 0, 0, 0, 0);
+            this.startTime.Name = "startTime";
+            this.startTime.ShowUpDown = true;
+            this.startTime.Value = new System.DateTime(2015, 9, 5, 11, 15, 9, 0);
+            this.startTime.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
             // AddExam
             // 
             resources.ApplyResources(this, "$this");
@@ -176,7 +176,6 @@
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox txtExamName;
         private System.Windows.Forms.Label label3;
-        public System.Windows.Forms.DateTimePicker startTime;
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox totalMins;
         private System.Windows.Forms.Label label5;
@@ -186,5 +185,6 @@
         public System.Windows.Forms.Label labExamId;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox questionsNum;
+        public System.Windows.Forms.DateTimePicker startTime;
     }
 }

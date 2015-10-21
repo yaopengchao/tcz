@@ -302,33 +302,6 @@
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="startTime.CustomFormat" xml:space="preserve">
-    <value>yyyy-MM-dd HH:mm</value>
-  </data>
-  <data name="startTime.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 12pt</value>
-  </data>
-  <data name="startTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>284, 193</value>
-  </data>
-  <data name="startTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 26</value>
-  </data>
-  <data name="startTime.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;startTime.Name" xml:space="preserve">
-    <value>startTime</value>
-  </data>
-  <data name="&gt;&gt;startTime.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;startTime.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;startTime.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -581,6 +554,33 @@
   </data>
   <data name="&gt;&gt;questionsNum.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="startTime.CustomFormat" xml:space="preserve">
+    <value>yyyy-MM-dd HH:mm</value>
+  </data>
+  <data name="startTime.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 12pt</value>
+  </data>
+  <data name="startTime.Location" type="System.Drawing.Point, System.Drawing">
+    <value>284, 193</value>
+  </data>
+  <data name="startTime.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 26</value>
+  </data>
+  <data name="startTime.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;startTime.Name" xml:space="preserve">
+    <value>startTime</value>
+  </data>
+  <data name="&gt;&gt;startTime.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;startTime.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;startTime.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
