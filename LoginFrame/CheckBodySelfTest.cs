@@ -47,8 +47,6 @@ namespace LoginFrame
         {
             InitializeComponent();
 
-            //this.BackColor = Color.FromArgb(255, 208, 232, 253);
-
             btnPre.BackColor = Color.FromArgb(255, 80, 151, 228);
             btnPre.ForeColor = Color.White;
 
@@ -142,7 +140,8 @@ namespace LoginFrame
             }
 
 
-            
+            isRightAnswers(labResult.Text, labRightResult.Text);
+
 
             labTopicOrder.Text = cur + 1 + ".";
             labContent.Text = Convert.ToString(dt.Rows[cur].ItemArray[3]);            
@@ -174,7 +173,7 @@ namespace LoginFrame
 
             this.Controls.AddRange(items.ToArray());
             
-            isRightAnswers(labResult.Text, labRightResult.Text);
+            
         }
 
         private void isRightAnswers(string result, string rightResult)

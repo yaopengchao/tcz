@@ -116,14 +116,14 @@ namespace LoginFrame
                 strWheres.Add(" u.user_name", " like '%" + userName + "%' ");
             }
 
-            string dateTimePicker1 = this.dateTimePicker1.Value.ToString("yyyy-MM-dd");
+            string dateTimePicker1 = this.dateTimePicker1.Text;
             if (dateTimePicker1 != null && !dateTimePicker1.Equals(""))
             {
                 strWheres.Add(" t2.start_time", " >= '" + dateTimePicker1 + " 00:00:00' ");
             }
 
             //
-            string dateTimePicker2 = this.dateTimePicker2.Value.ToString("yyyy-MM-dd");
+            string dateTimePicker2 = this.dateTimePicker2.Text;
             if (dateTimePicker2 != null && !dateTimePicker2.Equals(""))
             {
                 strWheres.Add(" t2.start_time    ", " <= '" + dateTimePicker2 + " 23:59:59' ");
@@ -271,21 +271,16 @@ namespace LoginFrame
             btnQuery_Click(sender, e);
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void userName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
        
+
+        private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
+        {
+            this.dateTimePicker1.Text = this.dateTimePicker3.Value.ToString("yyyy-MM-dd");
+        }
+
+        private void dateTimePicker4_ValueChanged(object sender, EventArgs e)
+        {
+            this.dateTimePicker2.Text = this.dateTimePicker4.Value.ToString("yyyy-MM-dd");
+        }
     }
 }

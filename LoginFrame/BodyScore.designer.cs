@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BodyScore));
             this.查询条件 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.userName = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,12 +40,18 @@
             this.btnQuery = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pageCtrl = new LoginFrame.PageControl2();
+            this.dateTimePicker1 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker2 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             this.查询条件.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // 查询条件
             // 
+            this.查询条件.Controls.Add(this.dateTimePicker4);
+            this.查询条件.Controls.Add(this.dateTimePicker3);
             this.查询条件.Controls.Add(this.dateTimePicker2);
             this.查询条件.Controls.Add(this.dateTimePicker1);
             this.查询条件.Controls.Add(this.userName);
@@ -62,22 +66,10 @@
             this.查询条件.Name = "查询条件";
             this.查询条件.TabStop = false;
             // 
-            // dateTimePicker2
-            // 
-            resources.ApplyResources(this.dateTimePicker2, "dateTimePicker2");
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            // 
-            // dateTimePicker1
-            // 
-            resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Value = new System.DateTime(2015, 9, 12, 10, 37, 59, 0);
-            // 
             // userName
             // 
             resources.ApplyResources(this.userName, "userName");
             this.userName.Name = "userName";
-            this.userName.TextChanged += new System.EventHandler(this.userName_TextChanged);
             // 
             // comboBox1
             // 
@@ -141,6 +133,28 @@
             this.pageCtrl.Widths = new int[0];
             this.pageCtrl.Load += new System.EventHandler(this.pageControl2_Load);
             // 
+            // dateTimePicker1
+            // 
+            resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            // 
+            // dateTimePicker2
+            // 
+            resources.ApplyResources(this.dateTimePicker2, "dateTimePicker2");
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            // 
+            // dateTimePicker3
+            // 
+            resources.ApplyResources(this.dateTimePicker3, "dateTimePicker3");
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
+            // 
+            // dateTimePicker4
+            // 
+            resources.ApplyResources(this.dateTimePicker4, "dateTimePicker4");
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            this.dateTimePicker4.ValueChanged += new System.EventHandler(this.dateTimePicker4_ValueChanged);
+            // 
             // BodyScore
             // 
             resources.ApplyResources(this, "$this");
@@ -170,7 +184,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox userName;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox dateTimePicker2;
+        private System.Windows.Forms.TextBox dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
     }
 }

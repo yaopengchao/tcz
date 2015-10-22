@@ -186,7 +186,7 @@
     <value>微软雅黑, 14.25pt</value>
   </data>
   <data name="labContent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>132, 54</value>
+    <value>146, 54</value>
   </data>
   <data name="labContent.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 25</value>
@@ -266,6 +266,10 @@
   <data name="&gt;&gt;labResult.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnPre.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
   <data name="btnPre.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt</value>
   </data>
@@ -293,6 +297,9 @@
   <data name="&gt;&gt;btnPre.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="btnNext.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
   <data name="btnNext.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt</value>
   </data>
@@ -319,6 +326,9 @@
   </data>
   <data name="&gt;&gt;btnNext.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="btnSubmit.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
   <data name="btnSubmit.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt</value>
@@ -353,7 +363,6 @@
   <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 15.75pt</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>

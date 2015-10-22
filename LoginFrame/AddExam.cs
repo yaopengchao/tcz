@@ -222,5 +222,10 @@ namespace LoginFrame
             //Caption
             res.ApplyResources(this, "$this");
         }
+
+        private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
+        {
+            this.startTime.Text = this.dateTimePicker1.Text;
+        }
     }
 }

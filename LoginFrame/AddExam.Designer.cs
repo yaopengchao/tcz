@@ -44,7 +44,8 @@
             this.labExamId = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.questionsNum = new System.Windows.Forms.ComboBox();
-            this.startTime = new System.Windows.Forms.DateTimePicker();
+            this.startTime = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // labTitle
@@ -133,17 +134,21 @@
             // startTime
             // 
             resources.ApplyResources(this.startTime, "startTime");
-            this.startTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.startTime.MinDate = new System.DateTime(2015, 1, 1, 0, 0, 0, 0);
             this.startTime.Name = "startTime";
-            this.startTime.ShowUpDown = true;
-            this.startTime.Value = new System.DateTime(2015, 9, 5, 11, 15, 9, 0);
-            this.startTime.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // dateTimePicker1
+            // 
+            resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged_1);
             // 
             // AddExam
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.startTime);
             this.Controls.Add(this.questionsNum);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.labExamId);
@@ -153,7 +158,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.totalMins);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.startTime);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtExamName);
             this.Controls.Add(this.label1);
@@ -185,6 +189,7 @@
         public System.Windows.Forms.Label labExamId;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox questionsNum;
-        public System.Windows.Forms.DateTimePicker startTime;
+        public System.Windows.Forms.TextBox startTime;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
