@@ -832,3 +832,7 @@ Version: '5.1.28-rc-community'  socket: ''  port: 3306  MySQL Community Server (
 151022  9:19:57 [Note] Event Scheduler: Loaded 0 events
 151022  9:19:57 [Note] F:\Ь§ДЅея\5\LoginFrame\DB\MySQL5.1\bin\mysqld-nt.exe: ready for connections.
 Version: '5.1.28-rc-community'  socket: ''  port: 3306  MySQL Community Server (GPL)
+151022 10:37:47 [Note] Plugin 'InnoDB' disabled by command line option
+151022 10:37:47 [Note] Event Scheduler: Loaded 0 events
+151022 10:37:47 [Note] F:\Ь§ДЅея\5\LoginFrame\DB\MySQL5.1\bin\mysqld-nt.exe: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 3306  MySQL Community Server (GPL)

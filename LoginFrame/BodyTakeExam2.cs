@@ -118,6 +118,7 @@ namespace LoginFrame
                 linLab.Name = "labPre" + i;
                 linLab.LinkBehavior = LinkBehavior.NeverUnderline;
                 linLab.Click += new EventHandler(preClick);
+                linLab.Cursor = Cursors.Hand;
                 linLab.LinkColor = System.Drawing.Color.Black;
                 this.Controls.Add(linLab);
 

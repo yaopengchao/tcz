@@ -160,6 +160,7 @@ namespace LoginFrame
                 linLab.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
                 linLab.Name = "labPre" + i;
                 linLab.LinkBehavior = LinkBehavior.NeverUnderline;
+                linLab.Cursor = Cursors.Hand;
                 linLab.Click += new EventHandler(preClick);
                 linLab.LinkColor = System.Drawing.Color.Black;
                 this.Controls.Add(linLab);

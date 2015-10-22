@@ -98,16 +98,18 @@ namespace LoginFrame
             }
         }
 
+
         private void showTopic(DataTable dt, int cur)
         {
             items = new List<Control>();
+            examId = Convert.ToInt32(dt.Rows[cur].ItemArray[0]);
             examDetailId = Convert.ToInt32(dt.Rows[cur].ItemArray[1]);
             topicId = Convert.ToInt32(dt.Rows[cur].ItemArray[2]);
             strWheres.Clear();
             strWheres.Add("examination_id", " = " + examId);
             strWheres.Add("examination_detail_id", " = " + examDetailId);
             strWheres.Add("topic_id", " = " + topicId);
-            strWheres.Add("user_id", " = " + user_id);
+            strWheres.Add("user_id", " = " + LoginRoler.userId);
             DataTable examResultDt = examResultService.listExamResult(strWheres);
             if (examResultDt != null && examResultDt.Rows.Count > 0)
             {
@@ -139,12 +141,8 @@ namespace LoginFrame
                 labRightResult.Text = getResults(results);
             }
 
-
-            isRightAnswers(labResult.Text, labRightResult.Text);
-
-
             labTopicOrder.Text = cur + 1 + ".";
-            labContent.Text = Convert.ToString(dt.Rows[cur].ItemArray[3]);            
+            labContent.Text = Convert.ToString(dt.Rows[cur].ItemArray[3]);
             totalTopic = dt.Rows.Count;
             btnVisible(cur, totalTopic);
             DataSet ds = topicService.getTopicDetail(topicId);
@@ -158,7 +156,9 @@ namespace LoginFrame
                 linLab.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
                 linLab.Name = "labPre" + i;
                 linLab.LinkBehavior = LinkBehavior.NeverUnderline;
-                linLab.Click += new EventHandler(preClick);
+                linLab.Cursor = Cursors.Hand;
+                //linLab.Click += new EventHandler(preClick);
+                linLab.LinkColor = System.Drawing.Color.Black;
                 this.Controls.Add(linLab);
 
                 Label lab = new Label();
@@ -168,13 +168,16 @@ namespace LoginFrame
                 lab.AutoSize = true;
                 lab.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
                 lab.Name = "labItemDetail" + i;
-                items.Add(lab);                
+                items.Add(lab);
             }
-
             this.Controls.AddRange(items.ToArray());
-            
-            
+
+            isRightAnswers(labResult.Text, labRightResult.Text);
         }
+
+
+
+        
 
         private void isRightAnswers(string result, string rightResult)
         {
