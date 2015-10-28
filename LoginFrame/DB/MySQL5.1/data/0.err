@@ -836,3 +836,19 @@ Version: '5.1.28-rc-community'  socket: ''  port: 3306  MySQL Community Server (
 151022 10:37:47 [Note] Event Scheduler: Loaded 0 events
 151022 10:37:47 [Note] F:\Ь§ДЅея\5\LoginFrame\DB\MySQL5.1\bin\mysqld-nt.exe: ready for connections.
 Version: '5.1.28-rc-community'  socket: ''  port: 3306  MySQL Community Server (GPL)
+151028 14:48:41 [Note] Plugin 'InnoDB' disabled by command line option
+151028 14:48:41 [Note] Event Scheduler: Loaded 0 events
+151028 14:48:41 [Note] F:\Ь§ДЅея\5\LoginFrame\DB\MySQL5.1\bin\mysqld-nt.exe: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 13306  MySQL Community Server (GPL)
+151028 14:49:14 [Note] Plugin 'InnoDB' disabled by command line option
+151028 14:49:14 [Note] Event Scheduler: Loaded 0 events
+151028 14:49:14 [Note] F:\Ь§ДЅея\5\LoginFrame\DB\MySQL5.1\bin\mysqld-nt.exe: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 13306  MySQL Community Server (GPL)
+151028 14:50:40 [Note] Plugin 'InnoDB' disabled by command line option
+151028 14:50:40 [Note] Event Scheduler: Loaded 0 events
+151028 14:50:40 [Note] F:\Ь§ДЅея\5\LoginFrame\DB\MySQL5.1\bin\mysqld-nt.exe: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 13306  MySQL Community Server (GPL)
+151028 14:52:33 [Note] Plugin 'InnoDB' disabled by command line option
+151028 14:52:33 [Note] Event Scheduler: Loaded 0 events
+151028 14:52:33 [Note] F:\Ь§ДЅея\5\LoginFrame\DB\MySQL5.1\bin\mysqld-nt.exe: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 13306  MySQL Community Server (GPL)

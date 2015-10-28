@@ -14,7 +14,7 @@ namespace DAL
         {
             get
             {
-                string strConn = "server="+ LoginRoler.serverIp + "; user id="+ ConfigurationManager.AppSettings["username"].ToString() + "; password="+ ConfigurationManager.AppSettings["password"].ToString() + "; database="+ ConfigurationManager.AppSettings["database"].ToString() + "; pooling=false;charset=utf8";
+                string strConn = "server="+ LoginRoler.serverIp + ";Port="+ ConfigurationManager.AppSettings["databaseport"].ToString() + "; user id="+ ConfigurationManager.AppSettings["username"].ToString() + "; password="+ ConfigurationManager.AppSettings["password"].ToString() + "; database="+ ConfigurationManager.AppSettings["database"].ToString() + "; pooling=false;charset=utf8";
                 if (mysqlconnection == null)
                 {
                     mysqlconnection = new MySqlConnection(strConn);
