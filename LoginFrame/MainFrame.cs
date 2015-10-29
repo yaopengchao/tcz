@@ -17,6 +17,7 @@ using System.IO.Ports;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
 using System.Drawing;
+using System.Configuration;
 
 namespace LoginFrame
 {
@@ -1804,8 +1805,8 @@ namespace LoginFrame
             p.StandardInput.WriteLine(hardPath);
             p.StandardInput.WriteLine("cd " + curPath);
             //string dMsql = Application.StartupPath + @"/../../../MysqlInstallProj/DB/mysql-5.6.24-win32/bin";
-            string mainPath = curPath.Substring(0, curPath.IndexOf("LoginFrame"));
-            mainPath += "MysqlInstallProj/DB/mysql-5.6.24-win32/bin";
+            string mainPath = curPath.Substring(0, curPath.IndexOf("bin"));
+            mainPath += "DB/MySQL5.1/bin";
             Console.WriteLine("==========" + mainPath);
             p.StandardInput.WriteLine("cd " + mainPath);
 
@@ -1823,34 +1824,52 @@ namespace LoginFrame
 
         private void CloseDB()
         {
-            p.Start();
+
+
+            {
+                string DbserviceName = ConfigurationManager.AppSettings["mysqlServiceName"].ToString();
+                p.Start();
+
+                cdDiyDBPath();
+                //停止mysql服务
+                exeCmd("net stop " + DbserviceName);
+                exeCmd("mysqld-nt remove");
+
+
+                p.Close();
+
+            }
+
+
+
+            //p.Start();
             //exeCmd("net stop MySQL");
 
             //进入打包数据库目录
             //cdDiyDBPath();
-            string curPath = Application.StartupPath;
-            int index = curPath.IndexOf(":");
-            string hardPath = curPath.Substring(0, index + 1);
-            p.StandardInput.WriteLine(hardPath);
-            p.StandardInput.WriteLine("cd " + curPath);
+            //string curPath = Application.StartupPath;
+            //int index = curPath.IndexOf(":");
+            //string hardPath = curPath.Substring(0, index + 1);
+            //p.StandardInput.WriteLine(hardPath);
+            //p.StandardInput.WriteLine("cd " + curPath);
             //string dMsql = Application.StartupPath + @"/../../../MysqlInstallProj/DB/mysql-5.6.24-win32/bin";
-            string mainPath = curPath.Substring(0, curPath.IndexOf("bin"));
-            mainPath += "DB/MySQL5.1/bin/mysqld-nt.exe";
-            Console.WriteLine("==========" + mainPath);
+            //string mainPath = curPath.Substring(0, curPath.IndexOf("bin"));
+            //mainPath += "DB/MySQL5.1/bin/mysqld-nt.exe";
+            //Console.WriteLine("==========" + mainPath);
             //p.StandardInput.WriteLine("cd " + mainPath);
 
             //先关闭
-            Process[] myProcess = Process.GetProcessesByName("mysqld-nt");
-            if (myProcess.Length>0)
-            {
-                foreach (Process process in myProcess)
-                {
-                    process.Kill();
-                }
-            }
+            //Process[] myProcess = Process.GetProcessesByName("mysqld-nt");
+            //if (myProcess.Length>0)
+            //{
+             //   foreach (Process process in myProcess)
+            //    {
+            //        process.Kill();
+            //    }
+           // }
             
 
-            p.Close();
+            //p.Close();
         }
 
         private void exMenu4_Click(object sender, EventArgs e)

@@ -852,3 +852,108 @@ Version: '5.1.28-rc-community'  socket: ''  port: 13306  MySQL Community Server 
 151028 14:52:33 [Note] Event Scheduler: Loaded 0 events
 151028 14:52:33 [Note] F:\Ь§ДЅея\5\LoginFrame\DB\MySQL5.1\bin\mysqld-nt.exe: ready for connections.
 Version: '5.1.28-rc-community'  socket: ''  port: 13306  MySQL Community Server (GPL)
+151029 19:08:07 [Note] Plugin 'InnoDB' disabled by command line option
+151029 19:08:07 [Note] Event Scheduler: Loaded 0 events
+151029 19:08:07 [Note] TingzhenMysql: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 13306  MySQL Community Server (GPL)
+151029 19:09:11 [Note] Plugin 'InnoDB' disabled by command line option
+151029 19:09:11 [Note] Event Scheduler: Loaded 0 events
+151029 19:09:11 [Note] TingzhenMysql: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 13306  MySQL Community Server (GPL)
+151029 19:10:47 [Note] TingzhenMysql: Normal shutdown
+
+151029 19:10:47 [Note] Event Scheduler: Purging the queue. 0 events
+151029 19:10:47 [Note] TingzhenMysql: Shutdown complete
+
+151029 19:10:50 [Note] Plugin 'InnoDB' disabled by command line option
+151029 19:10:50 [Note] Event Scheduler: Loaded 0 events
+151029 19:10:50 [Note] TingzhenMysql: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 13306  MySQL Community Server (GPL)
+151029 19:11:01 [Note] TingzhenMysql: Normal shutdown
+
+151029 19:11:01 [Note] Event Scheduler: Purging the queue. 0 events
+151029 19:11:01 [Note] TingzhenMysql: Shutdown complete
+
+151029 19:11:26 [Note] Plugin 'InnoDB' disabled by command line option
+151029 19:11:26 [Note] Event Scheduler: Loaded 0 events
+151029 19:11:26 [Note] TingzhenMysql: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 13306  MySQL Community Server (GPL)
+151029 19:14:34 [Note] TingzhenMysql: Normal shutdown
+
+151029 19:14:34 [Note] Event Scheduler: Purging the queue. 0 events
+151029 19:14:34 [Note] TingzhenMysql: Shutdown complete
+
+151029 19:14:37 [Note] Plugin 'InnoDB' disabled by command line option
+151029 19:14:37 [Note] Event Scheduler: Loaded 0 events
+151029 19:14:37 [Note] TingzhenMysql: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 13306  MySQL Community Server (GPL)
+151029 19:14:45 [Note] TingzhenMysql: Normal shutdown
+
+151029 19:14:45 [Note] Event Scheduler: Purging the queue. 0 events
+151029 19:14:45 [Note] TingzhenMysql: Shutdown complete
+
+151029 19:17:06 [Note] Plugin 'InnoDB' disabled by command line option
+151029 19:17:06 [Note] Event Scheduler: Loaded 0 events
+151029 19:17:06 [Note] TingzhenMysql: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 13306  MySQL Community Server (GPL)
+151029 19:17:16 [Note] TingzhenMysql: Normal shutdown
+
+151029 19:17:16 [Note] Event Scheduler: Purging the queue. 0 events
+151029 19:17:16 [Note] TingzhenMysql: Shutdown complete
+
+151029 19:18:52 [Note] Plugin 'InnoDB' disabled by command line option
+151029 19:18:52 [Note] Event Scheduler: Loaded 0 events
+151029 19:18:52 [Note] TingzhenMysql: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 13306  MySQL Community Server (GPL)
+151029 19:19:00 [Note] TingzhenMysql: Normal shutdown
+
+151029 19:19:00 [Note] Event Scheduler: Purging the queue. 0 events
+151029 19:19:02 [Warning] TingzhenMysql: Forcing close of thread 1  user: 'root'
+
+151029 19:19:02 [Note] TingzhenMysql: Shutdown complete
+
+151029 19:19:19 [Note] Plugin 'InnoDB' disabled by command line option
+151029 19:19:19 [Note] Event Scheduler: Loaded 0 events
+151029 19:19:19 [Note] TingzhenMysql: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 13306  MySQL Community Server (GPL)
+151029 19:19:46 [Note] TingzhenMysql: Normal shutdown
+
+151029 19:19:46 [Note] Event Scheduler: Purging the queue. 0 events
+151029 19:19:48 [Note] TingzhenMysql: Shutdown complete
+
+151029 19:25:22 [Note] Plugin 'InnoDB' disabled by command line option
+151029 19:25:22 [Note] Event Scheduler: Loaded 0 events
+151029 19:25:22 [Note] TingzhenMysql: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 13306  MySQL Community Server (GPL)
+151029 19:27:56 [Note] TingzhenMysql: Normal shutdown
+
+151029 19:27:56 [Note] Event Scheduler: Purging the queue. 0 events
+151029 19:27:56 [Note] TingzhenMysql: Shutdown complete
+
+151029 19:27:59 [Note] Plugin 'InnoDB' disabled by command line option
+151029 19:27:59 [Note] Event Scheduler: Loaded 0 events
+151029 19:27:59 [Note] TingzhenMysql: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 13306  MySQL Community Server (GPL)
+151029 19:28:16 [Note] TingzhenMysql: Normal shutdown
+
+151029 19:28:16 [Note] Event Scheduler: Purging the queue. 0 events
+151029 19:28:18 [Note] TingzhenMysql: Shutdown complete
+
+151029 19:28:22 [Note] Plugin 'InnoDB' disabled by command line option
+151029 19:28:22 [Note] Event Scheduler: Loaded 0 events
+151029 19:28:22 [Note] TingzhenMysql: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 13306  MySQL Community Server (GPL)
+151029 19:28:51 [Note] TingzhenMysql: Normal shutdown
+
+151029 19:28:51 [Note] Event Scheduler: Purging the queue. 0 events
+151029 19:28:53 [Note] TingzhenMysql: Shutdown complete
+
+151029 19:33:58 [Note] Plugin 'InnoDB' disabled by command line option
+151029 19:33:58 [Note] Event Scheduler: Loaded 0 events
+151029 19:33:58 [Note] TingzhenMysql: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 13306  MySQL Community Server (GPL)
+151029 19:34:23 [Note] TingzhenMysql: Normal shutdown
+
+151029 19:34:23 [Note] Event Scheduler: Purging the queue. 0 events
+151029 19:34:25 [Note] TingzhenMysql: Shutdown complete
+

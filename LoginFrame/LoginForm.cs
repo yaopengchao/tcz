@@ -118,15 +118,30 @@ namespace LoginFrame
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Process[] myProcess = Process.GetProcessesByName("mysqld-nt");
-            if (myProcess.Length > 0)
+            //Process[] myProcess = Process.GetProcessesByName("mysqld-nt");
+            //if (myProcess.Length > 0)
+            //{
+            //    foreach (Process process in myProcess)
+            //    {
+            //        process.Kill();
+            //    }
+            //}
+            //Thread.Sleep(500);
+
             {
-                foreach (Process process in myProcess)
-                {
-                    process.Kill();
-                }
+                string DbserviceName = ConfigurationManager.AppSettings["mysqlServiceName"].ToString();
+                p.Start();
+
+                cdDiyDBPath();
+                //停止mysql服务
+                exeCmd("net stop " + DbserviceName);
+                exeCmd("mysqld-nt remove");
+                
+
+                p.Close();
+
             }
-            Thread.Sleep(500);
+
             Application.Exit();
         }
 
@@ -436,8 +451,8 @@ namespace LoginFrame
             p.StandardInput.WriteLine(hardPath);
             p.StandardInput.WriteLine("cd " + curPath);
             //string dMsql = Application.StartupPath + @"/../../../MysqlInstallProj/DB/mysql-5.6.24-win32/bin";
-            string mainPath = curPath.Substring(0, curPath.IndexOf("LoginFrame"));
-            mainPath += "MysqlInstallProj/DB/MySQL5.1/bin";
+            string mainPath = curPath.Substring(0, curPath.IndexOf("bin"));
+            mainPath += "DB/MySQL5.1/bin";
             Console.WriteLine("==========" + mainPath);
             p.StandardInput.WriteLine("cd " + mainPath);
 
@@ -708,7 +723,27 @@ namespace LoginFrame
 
             button1.Enabled = false;
 
-            openLocalDb();
+
+            {
+                string DbserviceName = ConfigurationManager.AppSettings["mysqlServiceName"].ToString();
+                p.Start();
+
+                cdDiyDBPath();
+                //停止mysql服务
+                exeCmd("net stop "+ DbserviceName);
+                exeCmd("mysqld-nt remove");
+
+                exeCmd("mysqld-nt -install "+ DbserviceName);
+                //启动mysql服务
+                exeCmd("net start "+ DbserviceName);
+                Thread.Sleep(3000);
+
+                p.Close();
+
+            }
+            //installAndStartDBService();
+
+            //openLocalDb();
 
 
             Thread t = new Thread(new ThreadStart(messageThread));
@@ -716,6 +751,29 @@ namespace LoginFrame
             t.Start();
 
             loadUDP();
+        }
+
+        private void installAndStartDBService()
+        {
+            string DbserviceName = ConfigurationManager.AppSettings["mysqlServiceName"].ToString();
+            //检测 是否存在服务
+            if (WinServiceUtil.IsServiceIsExisted(DbserviceName))
+            {
+                //判断是否在运行
+                if (!WinServiceUtil.IsServiceStart(DbserviceName))
+                {
+                    //运行执行
+                    if (!WinServiceUtil.StartService(DbserviceName))
+                    {
+                        MessageBox.Show("听触诊数据库无法启动，请联系管理员!");
+                    }
+                }
+            }
+            else
+            {
+                //安装服务
+
+            }
         }
     }
 }
