@@ -1833,7 +1833,7 @@ namespace LoginFrame
                 cdDiyDBPath();
                 //停止mysql服务
                 exeCmd("net stop " + DbserviceName);
-                exeCmd("mysqld-nt remove");
+                //exeCmd("sc delete " + DbserviceName);
 
 
                 p.Close();
@@ -1952,10 +1952,7 @@ namespace LoginFrame
 
         }
 
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+  
 
         private void MainFrame_FormClosed(object sender, FormClosedEventArgs e)
         {

@@ -731,7 +731,7 @@ namespace LoginFrame
                 cdDiyDBPath();
                 //停止mysql服务
                 exeCmd("net stop "+ DbserviceName);
-                exeCmd("mysqld-nt remove");
+                exeCmd("sc delete \"" + DbserviceName+"\"");
 
                 exeCmd("mysqld-nt -install "+ DbserviceName);
                 //启动mysql服务
