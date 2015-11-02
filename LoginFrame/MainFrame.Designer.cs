@@ -289,7 +289,6 @@
             this.KeyPreview = true;
             this.Name = "MainFrame";
             this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainFrame_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainFrame_FormClosed);
             this.Load += new System.EventHandler(this.MainFrame_Load);

@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // 有关程序集的常规信息通过以下
 // 特性集控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("LoginFrame")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("听触诊体格检查网络教学系统")]
+[assembly: AssemblyDescription("听触诊体格检查网络教学系统")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("LoginFrame")]
-[assembly: AssemblyCopyright("Copyright ©  2012")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("广州新传媒软件开发有限公司")]
+[assembly: AssemblyProduct("听触诊体格检查网络教学系统")]
+[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyTrademark("听触诊体格检查网络教学系统")]
 [assembly: AssemblyCulture("")]
 
 // 将 ComVisible 设置为 false 使此程序集中的类型

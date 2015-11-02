@@ -20,14 +20,14 @@ using System.IO;
 
 namespace LoginFrame
 {
-    public partial class LoginForm : Form
+    public partial class 听触诊登录 : Form
     {
 
         public static bool isLocalIp = false;//最终获取的Ip来源是本地的IP还是局域网中发送过来的IP标识
         //只有在定时器终止时候还没搜寻到IP且用户角色为  非 学生时候 才能设置为true 
         public static bool RunDoWhile = true;
 
-        public LoginForm()
+        public 听触诊登录()
         {
 
             InitializeComponent();
@@ -700,7 +700,7 @@ namespace LoginFrame
         /// </summary>
         private void ApplyResource()
         {
-            System.ComponentModel.ComponentResourceManager res = new ComponentResourceManager(typeof(LoginForm));
+            System.ComponentModel.ComponentResourceManager res = new ComponentResourceManager(typeof(听触诊登录));
             foreach (Control ctl in Controls)
             {
                 res.ApplyResources(ctl, ctl.Name);

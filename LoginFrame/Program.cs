@@ -19,7 +19,7 @@ namespace LoginFrame
             //LoginForm loginForm = new LoginForm();
             //loginForm.openLocalDb();
             //Application.Run(loginForm);
-            Application.Run(new LoginForm());
+            Application.Run(new 听触诊登录());
         }
 
     }
