@@ -27,6 +27,20 @@ namespace LoginFrame
         {
             InitializeComponent();
 
+            button1.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button2.BackColor = Color.FromArgb(255, 80, 151, 228);
+            addDetail.BackColor = Color.FromArgb(255, 80, 151, 228);
+            delDetail.BackColor = Color.FromArgb(255, 80, 151, 228);
+
+
+            button1.ForeColor = Color.White;
+            button2.ForeColor = Color.White;
+            addDetail.ForeColor = Color.White;
+            delDetail.ForeColor = Color.White;
+
+
+
+
             if (agreementService == null)
             {
                 agreementService = AgreementService.getInstance();
@@ -73,6 +87,8 @@ namespace LoginFrame
                     DataGridViewTextBoxCell cell2 = new DataGridViewTextBoxCell();
                     row.Cells.Add(cell2);
                     dg.Rows.Add(row);
+
+                    this.txtAnswers.Items.Add(cell1.Value.ToString());
                 }
                 else                             //操作类
                 {
@@ -94,6 +110,8 @@ namespace LoginFrame
                     cell3.ValueMember = "AGREEMENT_ID";
                     row.Cells.Add(cell3);
                     dg.Rows.Add(row);
+
+                    this.txtAnswers.Items.Add(cell1.Value.ToString());
                 }
             }
             
@@ -107,6 +125,10 @@ namespace LoginFrame
                 MessageBox.Show("请选择一行数据");
             } else
             {
+                //MessageBox.Show(selectedRow.Cells[0].Value+"");
+
+                this.txtAnswers.Items.Remove(selectedRow.Cells[0].Value);
+
                 dg.Rows.Remove(selectedRow);            
             }
         }
@@ -213,10 +235,7 @@ namespace LoginFrame
             Util.setLanguage();
             ApplyResource();
 
-            this.txtAnswers.Items.Add("A");
-            this.txtAnswers.Items.Add("B");
-            this.txtAnswers.Items.Add("C");
-            this.txtAnswers.Items.Add("D");
+            
 
             
 

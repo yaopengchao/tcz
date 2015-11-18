@@ -1958,5 +1958,18 @@ namespace LoginFrame
         {
             CloseDB();
         }
+
+        private void panel5_MouseLeave(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void panel5_Leave(object sender, EventArgs e)
+        {
+            if (panel5.Visible)
+            {
+                panel5.Hide();
+            }
+        }
     }
 }

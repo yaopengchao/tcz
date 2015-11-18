@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BodyMain));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -47,13 +48,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.分隔线 = new System.Windows.Forms.Label();
             this.btn_play = new System.Windows.Forms.Button();
             this.btn_stop = new System.Windows.Forms.Button();
             this.btn_music = new System.Windows.Forms.Button();
             this.btn_pre = new System.Windows.Forms.Button();
             this.btn_next = new System.Windows.Forms.Button();
             this.btn_voice = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axShockwaveFlashPlayer)).BeginInit();
@@ -105,7 +106,6 @@
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.分隔线);
             this.panel3.Controls.Add(this.btn_play);
             this.panel3.Controls.Add(this.btn_stop);
             this.panel3.Controls.Add(this.btn_music);
@@ -129,6 +129,7 @@
             this.btn_async.FlatAppearance.BorderSize = 0;
             this.btn_async.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.btn_async.Name = "btn_async";
+            this.toolTip1.SetToolTip(this.btn_async, resources.GetString("btn_async.ToolTip"));
             this.btn_async.UseVisualStyleBackColor = true;
             this.btn_async.Click += new System.EventHandler(this.btn_async_Click);
             // 
@@ -199,12 +200,6 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // 分隔线
-            // 
-            this.分隔线.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            resources.ApplyResources(this.分隔线, "分隔线");
-            this.分隔线.Name = "分隔线";
-            // 
             // btn_play
             // 
             this.btn_play.BackgroundImage = global::LoginFrame.Properties.Resources.播放;
@@ -213,6 +208,7 @@
             this.btn_play.FlatAppearance.BorderSize = 0;
             this.btn_play.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.btn_play.Name = "btn_play";
+            this.toolTip1.SetToolTip(this.btn_play, resources.GetString("btn_play.ToolTip"));
             this.btn_play.UseVisualStyleBackColor = true;
             this.btn_play.Click += new System.EventHandler(this.btn_play_Click);
             // 
@@ -223,6 +219,7 @@
             this.btn_stop.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_stop.FlatAppearance.BorderSize = 0;
             this.btn_stop.Name = "btn_stop";
+            this.toolTip1.SetToolTip(this.btn_stop, resources.GetString("btn_stop.ToolTip"));
             this.btn_stop.UseVisualStyleBackColor = true;
             this.btn_stop.Click += new System.EventHandler(this.btn_stop_Click);
             // 
@@ -233,6 +230,7 @@
             this.btn_music.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_music.FlatAppearance.BorderSize = 0;
             this.btn_music.Name = "btn_music";
+            this.toolTip1.SetToolTip(this.btn_music, resources.GetString("btn_music.ToolTip"));
             this.btn_music.UseVisualStyleBackColor = true;
             this.btn_music.Click += new System.EventHandler(this.btn_music_Click);
             // 
@@ -243,6 +241,7 @@
             this.btn_pre.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_pre.FlatAppearance.BorderSize = 0;
             this.btn_pre.Name = "btn_pre";
+            this.toolTip1.SetToolTip(this.btn_pre, resources.GetString("btn_pre.ToolTip"));
             this.btn_pre.UseVisualStyleBackColor = true;
             this.btn_pre.Click += new System.EventHandler(this.btn_pre_Click);
             // 
@@ -253,6 +252,7 @@
             this.btn_next.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_next.FlatAppearance.BorderSize = 0;
             this.btn_next.Name = "btn_next";
+            this.toolTip1.SetToolTip(this.btn_next, resources.GetString("btn_next.ToolTip"));
             this.btn_next.UseVisualStyleBackColor = true;
             this.btn_next.Click += new System.EventHandler(this.btn_next_Click);
             // 
@@ -264,6 +264,7 @@
             this.btn_voice.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_voice.FlatAppearance.BorderSize = 0;
             this.btn_voice.Name = "btn_voice";
+            this.toolTip1.SetToolTip(this.btn_voice, resources.GetString("btn_voice.ToolTip"));
             this.btn_voice.UseVisualStyleBackColor = false;
             this.btn_voice.Click += new System.EventHandler(this.btn_voice_Click);
             // 
@@ -302,7 +303,6 @@
         public System.Windows.Forms.Button btn_music;
         public System.Windows.Forms.Button btn_pre;
         public System.Windows.Forms.Button btn_next;
-        private System.Windows.Forms.Label 分隔线;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -316,5 +316,6 @@
         public System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btn_async;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

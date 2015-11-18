@@ -299,7 +299,7 @@
     <value>NoControl</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>495, 5</value>
+    <value>425, 5</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>2, 30</value>
@@ -322,6 +322,9 @@
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>252, 17</value>
+  </metadata>
   <data name="btn_async.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -332,7 +335,7 @@
     <value>NoControl</value>
   </data>
   <data name="btn_async.Location" type="System.Drawing.Point, System.Drawing">
-    <value>445, 1</value>
+    <value>375, 1</value>
   </data>
   <data name="btn_async.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -342,6 +345,9 @@
   </data>
   <data name="btn_async.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
+  </data>
+  <data name="btn_async.ToolTip" xml:space="preserve">
+    <value>同步教学</value>
   </data>
   <data name="&gt;&gt;btn_async.Name" xml:space="preserve">
     <value>btn_async</value>
@@ -360,27 +366,6 @@
   </metadata>
   <data name="menuStrip1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>None</value>
-  </data>
-  <data name="toolStripMenuItem1.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="toolStripMenuItem3.Text" xml:space="preserve">
-    <value>收藏当前课件</value>
-  </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 6</value>
-  </data>
-  <data name="toolStripMenuItem1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微软雅黑, 9pt, style=Bold</value>
-  </data>
-  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 26</value>
-  </data>
-  <data name="toolStripMenuItem1.ToolTipText" xml:space="preserve">
-    <value>收藏夹</value>
   </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>276, 6</value>
@@ -464,7 +449,7 @@
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>431, 5</value>
+    <value>361, 5</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>2, 30</value>
@@ -541,33 +526,6 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="分隔线.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="分隔线.Location" type="System.Drawing.Point, System.Drawing">
-    <value>365, 5</value>
-  </data>
-  <data name="分隔线.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2, 30</value>
-  </data>
-  <data name="分隔线.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="分隔线.Text" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;分隔线.Name" xml:space="preserve">
-    <value>分隔线</value>
-  </data>
-  <data name="&gt;&gt;分隔线.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;分隔线.Parent" xml:space="preserve">
-    <value>panel3</value>
-  </data>
-  <data name="&gt;&gt;分隔线.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
   <data name="btn_play.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -578,7 +536,7 @@
     <value>NoControl</value>
   </data>
   <data name="btn_play.Location" type="System.Drawing.Point, System.Drawing">
-    <value>379, 1</value>
+    <value>12, 1</value>
   </data>
   <data name="btn_play.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -588,6 +546,12 @@
   </data>
   <data name="btn_play.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
+  </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>252, 17</value>
+  </metadata>
+  <data name="btn_play.ToolTip" xml:space="preserve">
+    <value>暂停/播放</value>
   </data>
   <data name="&gt;&gt;btn_play.Name" xml:space="preserve">
     <value>btn_play</value>
@@ -599,8 +563,11 @@
     <value>panel3</value>
   </data>
   <data name="&gt;&gt;btn_play.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>252, 17</value>
+  </metadata>
   <data name="btn_stop.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -622,6 +589,9 @@
   <data name="btn_stop.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
+  <data name="btn_stop.ToolTip" xml:space="preserve">
+    <value>暂停/播放</value>
+  </data>
   <data name="&gt;&gt;btn_stop.Name" xml:space="preserve">
     <value>btn_stop</value>
   </data>
@@ -632,8 +602,11 @@
     <value>panel3</value>
   </data>
   <data name="&gt;&gt;btn_stop.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>252, 17</value>
+  </metadata>
   <data name="btn_music.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -655,6 +628,9 @@
   <data name="btn_music.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
+  <data name="btn_music.ToolTip" xml:space="preserve">
+    <value>扩音</value>
+  </data>
   <data name="&gt;&gt;btn_music.Name" xml:space="preserve">
     <value>btn_music</value>
   </data>
@@ -665,8 +641,11 @@
     <value>panel3</value>
   </data>
   <data name="&gt;&gt;btn_music.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>10</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>252, 17</value>
+  </metadata>
   <data name="btn_pre.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -688,6 +667,9 @@
   <data name="btn_pre.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
+  <data name="btn_pre.ToolTip" xml:space="preserve">
+    <value>上一个</value>
+  </data>
   <data name="&gt;&gt;btn_pre.Name" xml:space="preserve">
     <value>btn_pre</value>
   </data>
@@ -698,8 +680,11 @@
     <value>panel3</value>
   </data>
   <data name="&gt;&gt;btn_pre.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>11</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>252, 17</value>
+  </metadata>
   <data name="btn_next.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -721,6 +706,9 @@
   <data name="btn_next.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
+  <data name="btn_next.ToolTip" xml:space="preserve">
+    <value>下一个</value>
+  </data>
   <data name="&gt;&gt;btn_next.Name" xml:space="preserve">
     <value>btn_next</value>
   </data>
@@ -731,8 +719,11 @@
     <value>panel3</value>
   </data>
   <data name="&gt;&gt;btn_next.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>12</value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>252, 17</value>
+  </metadata>
   <data name="btn_voice.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -743,7 +734,7 @@
     <value>NoControl</value>
   </data>
   <data name="btn_voice.Location" type="System.Drawing.Point, System.Drawing">
-    <value>508, 1</value>
+    <value>438, 1</value>
   </data>
   <data name="btn_voice.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -753,6 +744,9 @@
   </data>
   <data name="btn_voice.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="btn_voice.ToolTip" xml:space="preserve">
+    <value>语音教学</value>
   </data>
   <data name="&gt;&gt;btn_voice.Name" xml:space="preserve">
     <value>btn_voice</value>
@@ -764,7 +758,7 @@
     <value>panel3</value>
   </data>
   <data name="&gt;&gt;btn_voice.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>13</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
     <value>205, 1</value>
@@ -786,6 +780,27 @@
   </data>
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="toolStripMenuItem1.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolStripMenuItem1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微软雅黑, 9pt, style=Bold</value>
+  </data>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 26</value>
+  </data>
+  <data name="toolStripMenuItem1.ToolTipText" xml:space="preserve">
+    <value>收藏夹</value>
+  </data>
+  <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 22</value>
+  </data>
+  <data name="toolStripMenuItem3.Text" xml:space="preserve">
+    <value>收藏当前课件</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 6</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -822,6 +837,12 @@
   </data>
   <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
+    <value>toolTip1</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>BodyMain</value>

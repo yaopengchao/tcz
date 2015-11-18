@@ -34,7 +34,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.topicType = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnClear = new System.Windows.Forms.Button();
             this.btnQuery = new System.Windows.Forms.Button();
             this.txtContent = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,11 +46,13 @@
             // 
             // 查询条件
             // 
+            this.查询条件.Controls.Add(this.button4);
             this.查询条件.Controls.Add(this.topicCategory);
+            this.查询条件.Controls.Add(this.button5);
             this.查询条件.Controls.Add(this.label3);
+            this.查询条件.Controls.Add(this.button6);
             this.查询条件.Controls.Add(this.topicType);
             this.查询条件.Controls.Add(this.label2);
-            this.查询条件.Controls.Add(this.btnClear);
             this.查询条件.Controls.Add(this.btnQuery);
             this.查询条件.Controls.Add(this.txtContent);
             this.查询条件.Controls.Add(this.label1);
@@ -80,14 +81,6 @@
             // 
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            // 
-            // btnClear
-            // 
-            this.btnClear.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.btnClear, "btnClear");
-            this.btnClear.Name = "btnClear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnQuery
             // 
@@ -150,9 +143,6 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.查询条件);
             this.Controls.Add(this.pageCtrl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -168,7 +158,6 @@
 
         private PageControl pageCtrl;
         private System.Windows.Forms.GroupBox 查询条件;
-        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnQuery;
         private System.Windows.Forms.TextBox txtContent;
         private System.Windows.Forms.Label label1;

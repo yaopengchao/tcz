@@ -37,16 +37,17 @@ namespace DAL
             StringBuilder strSql = new StringBuilder();
             strSql.Append("select login_id,user_name,user_type, user_id from sys_user");
             strSql.Append(" where ");
-            strSql.Append(" login_id = ?loginId and pwd=?pwd and user_type=?user_type ");
+            strSql.Append(" login_id = ?loginId and pwd=?pwd  ");
+            //strSql.Append(" login_id = ?loginId and pwd=?pwd and user_type=?user_type ");
             MySqlParameter[] parameters = {
                     new MySqlParameter("?loginId", MySqlDbType.VarChar),
-                    new MySqlParameter("?pwd", MySqlDbType.VarChar),
-                    new MySqlParameter("?user_type", MySqlDbType.VarChar)
+                    new MySqlParameter("?pwd", MySqlDbType.VarChar)
+                    //,new MySqlParameter("?user_type", MySqlDbType.VarChar)
             };
 
             parameters[0].Value = loginId;
             parameters[1].Value = pwd;
-            parameters[2].Value = user_type;
+            //parameters[2].Value = user_type;
 
             DataSet ds = MySqlHelper.DateSet(strSql.ToString(), parameters);
 

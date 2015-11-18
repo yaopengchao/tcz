@@ -292,10 +292,10 @@
     <value>删除</value>
   </data>
   <data name="button5.Text" xml:space="preserve">
-    <value>修改</value>
+    <value>编辑</value>
   </data>
   <data name="button6.Text" xml:space="preserve">
-    <value>添加</value>
+    <value>新建</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>题干</value>

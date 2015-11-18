@@ -43,10 +43,10 @@ namespace LoginFrame
             this.loginId.Text = "admin";
             this.textBox2.Text = "admin";
 
-            this.comboBox3.Items.Add(new ComboxItem("学生", Constant.RoleStudent));
-            this.comboBox3.Items.Add(new ComboxItem("教师", Constant.RoleTeacher));
-            this.comboBox3.Items.Add(new ComboxItem("管理员", Constant.RoleManager));
-            comboBox3.SelectedIndex = 2;
+            //this.comboBox3.Items.Add(new ComboxItem("学生", Constant.RoleStudent));
+            //this.comboBox3.Items.Add(new ComboxItem("教师", Constant.RoleTeacher));
+            //this.comboBox3.Items.Add(new ComboxItem("管理员", Constant.RoleManager));
+            //comboBox3.SelectedIndex = 2;
 
             
 
@@ -173,7 +173,9 @@ namespace LoginFrame
                 if (a != 0)
                 {
 
-                    DataSet ds = Bll.ExistsPwd(username, password, ((ComboxItem)this.comboBox3.Items[comboBox3selectIndex]).Value);
+                    //DataSet ds = Bll.ExistsPwd(username, password, ((ComboxItem)this.comboBox3.Items[comboBox3selectIndex]).Value);
+
+                    DataSet ds = Bll.ExistsPwd(username, password, "");
 
                     if (ds.Tables[0].Rows.Count > 0)
                     {
@@ -190,6 +192,39 @@ namespace LoginFrame
 
                         Console.WriteLine("模拟人协议加载数量" + LoginRoler.AgreeMents.Count);
 
+                        if (LoginRoler.isLocalIp)
+                        {
+                            LoginRoler.serverType = LoginRoler.roleid;
+                        }
+
+
+
+                        if (LoginRoler.roleid==Constant.RoleStudent && LoginRoler.isLocalIp)
+                        {
+                            MessageBox.Show("目前该用户登录在本地数据库", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        }
+
+                        //判断下是否局域网中已经有老师存在
+
+                        //string user_type = ((ComboxItem)this.comboBox3.Items[comboBox3selectIndex]).Value;
+
+                        string user_type = LoginRoler.serverType;
+
+
+                        if (user_type == Constant.RoleTeacher && Constant.RoleTeacher == LoginRoler.serverType && !isLocalIp)
+                        {
+                            MessageBox.Show("局域网中已经有教师登录!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            button1.Enabled = true;
+                            return flag;
+                        }
+
+                        if (user_type == Constant.RoleManager && Constant.RoleManager == LoginRoler.serverType && !isLocalIp)
+                        {
+                            MessageBox.Show("局域网中已经有管理员登录!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            button1.Enabled = true;
+                            return flag;
+                        }
+
                         checkCode = "";
                         flag = true;
                     }
@@ -202,7 +237,7 @@ namespace LoginFrame
                 }
                 else
                 {
-                    MessageBox.Show("用户名不存在,请重新输入用户名", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("用户名不存在,请确认教师是否已经登录系统", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     this.loginId.Text = "";
                     this.textBox2.Text = "";
                 }
@@ -296,7 +331,7 @@ namespace LoginFrame
             //假如没有搜索到 限定时间到  对于 学生  则为LoginRole.serverip空
             //================================================================================
             //登陆首先获取角色选择的index，因为写在后面会发生些错误 提前先获取
-            comboBox3selectIndex = this.comboBox3.SelectedIndex;
+            //comboBox3selectIndex = this.comboBox3.SelectedIndex;
 
             searchIp();
 
@@ -315,7 +350,6 @@ namespace LoginFrame
                 isLocalIp = true;
             }
 
-
             Console.WriteLine("******最终获取的IP:" + LoginRoler.serverIp + "/来源:" + (isLocalIp ? "本地创建" : "来自局域网"));
 
             //搜索操作完毕后  不管获取到和获取不到都要将IP保存在LoginRoler.serverIp字段
@@ -328,22 +362,6 @@ namespace LoginFrame
             else//获取到IP了   且   isLocalIp  为true 就要给大家发消息了
             {
               
-            }
-
-            //判断下是否局域网中已经有老师存在
-            string user_type = ((ComboxItem)this.comboBox3.Items[comboBox3selectIndex]).Value;
-            if (user_type == Constant.RoleTeacher && Constant.RoleTeacher == LoginRoler.serverType && !isLocalIp)
-            {
-                MessageBox.Show("局域网中已经有教师登录!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                button1.Enabled = true;
-                return;
-            }
-
-            if (user_type == Constant.RoleManager && Constant.RoleManager == LoginRoler.serverType && !isLocalIp)
-            {
-                MessageBox.Show("局域网中已经有管理员登录!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                button1.Enabled = true;
-                return;
             }
 
             LoginRoler.isLocalIp = isLocalIp;
@@ -360,6 +378,8 @@ namespace LoginFrame
                 button1.Enabled = true;
                 return;
             }
+
+
 
             //跳转代码
             MainFrame mainFrame = MainFrame.createForm();
@@ -617,28 +637,63 @@ namespace LoginFrame
 
         private void theout(object sender, ElapsedEventArgs e)
         {
+
+            Console.Write("..超时调用方法..");
+
             if (RunDoWhile)
             {
                 //超时之后假如是老师或者管理员(非学生登录)则将Ip设定为该机器IP
 
-                string user_type = ((ComboxItem)this.comboBox3.Items[comboBox3selectIndex]).Value;
-                if (user_type == Constant.RoleManager)//管理员
-                {
-                    LoginRoler.serverIp = GetAddressIP();
-                    LoginRoler.serverType = Constant.RoleManager;
-                    isLocalIp = true;
-                }
-                else
-                if (user_type == Constant.RoleTeacher)//老师
-                {
-                    LoginRoler.serverIp = GetAddressIP();
-                    LoginRoler.serverType = Constant.RoleTeacher;
-                    isLocalIp = true;
-                }
-                else
-                {
-                    LoginRoler.serverIp = "";
-                    LoginRoler.serverType = Constant.RoleStudent;
+                LoginRoler.serverIp = GetAddressIP();
+                isLocalIp = true;
+
+                if (1==2) {
+                    //从本地库获取角色  获取不到说明不是 正式库  
+
+                    ImplUser Bll = new ImplUser();
+
+                    string username = loginId.Text;
+
+                    string password = this.textBox2.Text;
+
+                    int a = Bll.ExistsName(username);
+
+                    if (a != 0)
+                    {
+                        //DataSet ds = Bll.ExistsPwd(username, password, ((ComboxItem)this.comboBox3.Items[comboBox3selectIndex]).Value);
+
+                        DataSet ds = Bll.ExistsPwd(username, password, "");
+
+                        if (ds.Tables[0].Rows.Count > 0)
+                        {
+                            LoginRoler.roleid = Convert.ToString(ds.Tables[0].Rows[0][2].ToString());
+                        }
+                    }
+
+                    string user_type = LoginRoler.roleid;
+
+
+                    if (user_type == Constant.RoleManager)//管理员
+                    {
+
+                        LoginRoler.serverType = Constant.RoleManager;
+
+                    }
+                    else
+                    if (user_type == Constant.RoleTeacher)//老师
+                    {
+                        LoginRoler.serverType = Constant.RoleTeacher;
+                    }
+                    else//学生
+                    if (user_type == Constant.RoleStudent)
+                    {
+                        LoginRoler.serverType = Constant.RoleStudent;
+                    }
+                    else
+                    {
+                        LoginRoler.serverType = "unknown";
+                    }
+
                 }
                 RunDoWhile = false;
                 if (searchServerIpRecv != null)

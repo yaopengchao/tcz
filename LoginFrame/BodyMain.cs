@@ -39,7 +39,11 @@ namespace LoginFrame
             leftPanel.HorizontalScroll.Visible = false;
             leftPanel.BackColor = Color.FromArgb(255, 208, 232, 253);
 
+
             btn_stop.Enabled = false;
+            btn_stop.Visible = false;
+
+
 
         }
 
@@ -748,7 +752,9 @@ namespace LoginFrame
 
 
             btn_play.Enabled = false;
+            btn_play.Visible = false;
             btn_stop.Enabled = true;
+            btn_play.Visible = true;
             btn_play.BackgroundImage = global::LoginFrame.Properties.Resources.播放_灰;
             btn_stop.BackgroundImage = global::LoginFrame.Properties.Resources.暂停;
         }
@@ -869,7 +875,12 @@ namespace LoginFrame
             btn_stop.BackgroundImage = global::LoginFrame.Properties.Resources.暂停_灰;
             btn_play.BackgroundImage = global::LoginFrame.Properties.Resources.播放;
             btn_stop.Enabled = false;
+            btn_stop.Visible = false;
             btn_play.Enabled = true;
+            btn_play.Visible = true;
+
+
+
         }
 
         private void callFunction(string funName, string arg)

@@ -96,6 +96,8 @@
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.Controls.Add(this.menuStrip1);
             this.panel5.Name = "panel5";
+            this.panel5.Leave += new System.EventHandler(this.panel5_Leave);
+            this.panel5.MouseLeave += new System.EventHandler(this.panel5_MouseLeave);
             // 
             // menuStrip1
             // 

@@ -107,7 +107,21 @@ namespace LoginFrame
         private void pageCtrl_Load(object sender, EventArgs e)
         {
             pageCtrl.loadData = new PageControl.loadDataEventHandler(loadData);
+
+            pageCtrl.dg.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
+
+
             btnQuery_Click(sender, e);
+        }
+
+
+        private void dgvData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView tempGdv = sender as DataGridView;//获取事件发送者
+            if (e.RowIndex > -1 && e.ColumnIndex > -1)//防止 Index 出错
+            {
+                button2_Click(null,null);
+            }
         }
 
         public void loadData(Dictionary<string, string> strWheres)

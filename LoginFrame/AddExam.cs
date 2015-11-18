@@ -38,6 +38,13 @@ namespace LoginFrame
             exType.DisplayMember = "name";
             exType.ValueMember = "id";
             exType.SelectedIndex = 0;
+
+
+            button1.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button2.BackColor = Color.FromArgb(255, 80, 151, 228);
+
+            button1.ForeColor = Color.White;
+            button2.ForeColor = Color.White;
         }
 
         private void button2_Click(object sender, EventArgs e)

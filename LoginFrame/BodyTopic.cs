@@ -22,7 +22,7 @@ namespace LoginFrame
             //this.BackColor = Color.FromArgb(255, 208, 232, 253);
 
             btnQuery.BackColor = Color.FromArgb(255, 80, 151, 228);
-            btnClear.BackColor = Color.FromArgb(255, 80, 151, 228);
+            //btnClear.BackColor = Color.FromArgb(255, 80, 151, 228);
 
             button6.BackColor = Color.FromArgb(255, 80, 151, 228);
             button5.BackColor = Color.FromArgb(255, 80, 151, 228);
@@ -30,7 +30,7 @@ namespace LoginFrame
 
 
             btnQuery.ForeColor = Color.White;
-            btnClear.ForeColor = Color.White;
+           // btnClear.ForeColor = Color.White;
 
             button6.ForeColor = Color.White;
             button5.ForeColor = Color.White;
@@ -74,7 +74,21 @@ namespace LoginFrame
         private void pageControl1_Load(object sender, EventArgs e)
         {
             pageCtrl.loadData = new PageControl.loadDataEventHandler(loadData);
+
+            pageCtrl.dg.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
+
+
             btnQuery_Click(sender, e);
+        }
+
+
+        private void dgvData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView tempGdv = sender as DataGridView;//获取事件发送者
+            if (e.RowIndex > -1 && e.ColumnIndex > -1)//防止 Index 出错
+            {
+                button5_Click(null,null);
+            }
         }
 
         public void loadData(Dictionary<string, string> strWheres)
@@ -123,6 +137,13 @@ namespace LoginFrame
             string[] cols = new string[] { "题目编号", "题干", "题目种类", "题目分类", "正确答案", "创建时间" };
             pageCtrl.Cols = cols;
             pageCtrl.dg.Columns[0].Visible = false;
+
+
+
+            pageCtrl.dg.Columns[2].Visible = false;
+
+            pageCtrl.dg.Columns[3].Visible = false;
+
             pageCtrl.dg.Columns[4].Visible = false;
             pageCtrl.dg.Columns[6].Visible = false;
             pageCtrl.dg.Columns[7].Visible = false;
