@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using DAL;
+
 using Model;
 using System.Data;
+using DAL;
 
 namespace BLL
 {
@@ -28,6 +27,10 @@ namespace BLL
 
             return instance;
         }
+
+        
+
+        
 
         public DataTable listExamResult(Dictionary<string, string> strWheres) {
             return examResultDao.listExamResults(strWheres).Tables[0];

@@ -10,6 +10,13 @@ namespace DAL
 {
     public class ClassDao : CommonDao
     {
+
+        public DataSet getAllClasses()
+        {
+            string strSql = " select CLASS_ID as CLASS_ID,CLASS_NAME as CLASS_NAME from sys_class where 1 = 1  ";
+            return listEntity(strSql, null);
+        }
+
         //查询所有班级不进行分页
         public DataSet listClass(Dictionary<string, string> strWheres)
         {

@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Model;
 using MySql.Data.MySqlClient;
 using System.Data;
@@ -10,6 +8,9 @@ namespace DAL
 {
     public class ExamResultDao : CommonDao
     {
+
+        
+        
 
         public DataSet listExamResults(Dictionary<string, string> strWheres)
         {
@@ -86,7 +87,7 @@ namespace DAL
 
         public DataSet listExams(Dictionary<string, string> strWheres, int startIndex, int pageSize)
         {
-            string strSql = " select t1.exam_result_id,t2.EXAMINATION_ID as EXAMINATION_ID,u.user_id,t2.EXAM_NAME as 考试名称,u.user_name as 考生姓名,t2.TOTAL_MINS as 考试时长,getScore(t2.EXAMINATION_ID,u.user_id) as 得分率,getAllTopicNum(t2.EXAMINATION_ID,u.user_id) as 题目总数,getRightTopicNum(t2.EXAMINATION_ID,u.user_id) as 答对题目数  from ex_exam_result t1,ex_examination t2,sys_user u where t1.EXAMINATION_ID=t2.EXAMINATION_ID and t1.user_id=u.user_id ";
+            string strSql = " select t1.exam_result_id,t2.EXAMINATION_ID as EXAMINATION_ID,u.user_id,t2.EXAM_NAME as 考试名称,u.user_name as 考生姓名,t2.TOTAL_MINS as 考试时长,getScore(t2.EXAMINATION_ID,u.user_id) as 得分率,getAllTopicNum(t2.EXAMINATION_ID,u.user_id) as 题目总数,getRightTopicNum(t2.EXAMINATION_ID,u.user_id) as 答对题目数  from ex_exam_result t1,ex_examination t2,sys_user u,sys_user_class t3 where t1.EXAMINATION_ID=t2.EXAMINATION_ID and t1.user_id=u.user_id and t1.user_id=t3.user_id ";
             return listEntityGroup(strSql, strWheres, startIndex, pageSize, " group by t1.EXAMINATION_ID,t1.USER_ID ");
         }
 
@@ -98,7 +99,7 @@ namespace DAL
 
         public int countExams(Dictionary<string, string> strWheres)
         {
-            string strSql = " select t1.EXAMINATION_ID,t1.USER_ID  from ex_exam_result t1,ex_examination t2,sys_user u where t1.EXAMINATION_ID=t2.EXAMINATION_ID and t1.user_id=u.user_id ";
+            string strSql = " select t1.EXAMINATION_ID,t1.USER_ID  from ex_exam_result t1,ex_examination t2,sys_user u,sys_user_class t3 where t1.EXAMINATION_ID=t2.EXAMINATION_ID and t1.user_id=u.user_id and t1.user_id=t3.user_id";
             return countEntityGroup(strSql, strWheres, " group by t1.EXAMINATION_ID,t1.USER_ID ");
         }
     }

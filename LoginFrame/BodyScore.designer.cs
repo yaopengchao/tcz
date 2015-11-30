@@ -45,20 +45,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pageCtrl = new LoginFrame.PageControl2();
             this.label5 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.查询条件.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // 查询条件
             // 
-            this.查询条件.Controls.Add(this.dateTimePicker4);
-            this.查询条件.Controls.Add(this.dateTimePicker3);
-            this.查询条件.Controls.Add(this.dateTimePicker2);
-            this.查询条件.Controls.Add(this.dateTimePicker1);
+            this.查询条件.Controls.Add(this.comboBox2);
+            this.查询条件.Controls.Add(this.label6);
             this.查询条件.Controls.Add(this.userName);
             this.查询条件.Controls.Add(this.comboBox1);
-            this.查询条件.Controls.Add(this.label4);
-            this.查询条件.Controls.Add(this.label3);
             this.查询条件.Controls.Add(this.label2);
             this.查询条件.Controls.Add(this.label1);
             this.查询条件.Controls.Add(this.btnClear);
@@ -161,14 +159,31 @@
             resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBox2, "comboBox2");
+            this.comboBox2.Name = "comboBox2";
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
             // BodyScore
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Controls.Add(this.dateTimePicker4);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.dateTimePicker3);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.查询条件);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BodyScore";
             this.Load += new System.EventHandler(this.BodyScore_Load);
@@ -197,5 +212,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker4;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label6;
     }
 }

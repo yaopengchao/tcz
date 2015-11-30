@@ -32,6 +32,42 @@ namespace LoginFrame
 
             btnQuery.ForeColor = Color.White;
             btnClear.ForeColor = Color.White;
+
+
+            this.label3.Visible = false;
+            this.dateTimePicker1.Visible = false;
+            this.dateTimePicker3.Visible = false;
+            this.label4.Visible = false;
+            this.dateTimePicker2.Visible = false;
+            this.dateTimePicker4.Visible = false;
+
+            // 学生   考试名称选择框     、    考试名称，成绩列
+
+            if (LoginRoler.roleid==Constant.RoleStudent)
+            {
+                this.label2.Visible = false;
+                this.userName.Visible = false;
+
+                this.label6.Visible = false;
+                this.comboBox2.Visible = false;
+            }
+
+            comboBox2.Items.Clear();
+
+
+            DataTable dt= ClassService.getInstance().getAllClasses();
+            DataRow dr = dt.NewRow();
+            dr["CLASS_ID"] = -1;
+            dr["CLASS_NAME"] = "";
+            dt.Rows.InsertAt(dr, 0);
+
+            comboBox2.DataSource = dt;
+
+
+            comboBox2.DisplayMember = "CLASS_NAME";
+            comboBox2.ValueMember = "CLASS_ID";
+
+            
         }
 
         private static BodyScore instance;
@@ -116,6 +152,13 @@ namespace LoginFrame
                 strWheres.Add(" u.user_name", " like '%" + userName + "%' ");
             }
 
+            string classid = this.comboBox2.SelectedValue+"";
+            if (classid != null && !classid.Equals("-1"))
+            {
+                strWheres.Add(" t3.class_id", " = '" + classid + "' ");
+            }
+
+
             string dateTimePicker1 = this.dateTimePicker1.Text;
             if (dateTimePicker1 != null && !dateTimePicker1.Equals(""))
             {
@@ -137,9 +180,15 @@ namespace LoginFrame
             pageCtrl.dg.Columns[0].Visible = false;
             pageCtrl.dg.Columns[1].Visible = false;
             pageCtrl.dg.Columns[2].Visible = false;
-
+            pageCtrl.dg.Columns[5].Visible = false;
             pageCtrl.dg.Columns[7].Visible = false;
             pageCtrl.dg.Columns[8].Visible = false;
+
+
+            if (LoginRoler.roleid == Constant.RoleStudent)
+            {
+                pageCtrl.dg.Columns[4].Visible = false;
+            }
 
             int[] widths = new int[] { 100,100,200,200,200,100,50,10 };
             pageCtrl.Widths = widths;

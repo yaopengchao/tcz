@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using DAL;
 using Model;
 using System.Data;
@@ -30,6 +28,12 @@ namespace BLL
             if (userClassDao == null)
                 userClassDao = new UserClassDao();
             return instance;
+        }
+
+
+        public DataTable getAllClasses()
+        {
+            return classDao.getAllClasses().Tables[0];
         }
 
         //查询班级列表
