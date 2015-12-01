@@ -123,7 +123,7 @@ namespace LoginFrame
             //{
             //    foreach (Process process in myProcess)
             //    {
-            //        process.Kill();
+            //        process.Kill()  ;
             //    }
             //}
             //Thread.Sleep(500);
