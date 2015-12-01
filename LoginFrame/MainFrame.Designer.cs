@@ -53,6 +53,7 @@
             this.lbl_mian = new System.Windows.Forms.Label();
             this.titlename = new System.Windows.Forms.Label();
             this.user_name = new System.Windows.Forms.Label();
+            this.主界面ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -96,8 +97,9 @@
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.Controls.Add(this.menuStrip1);
             this.panel5.Name = "panel5";
-            this.panel5.Leave += new System.EventHandler(this.panel5_Leave);
             this.panel5.MouseLeave += new System.EventHandler(this.panel5_MouseLeave);
+            this.panel5.MouseHover += new System.EventHandler(this.panel5_MouseHover);
+            this.panel5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseUp);
             // 
             // menuStrip1
             // 
@@ -106,6 +108,7 @@
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.主界面ToolStripMenuItem,
             this.toolStripMenuItem1,
             this.toolStripMenuItem2,
             this.考试成绩ToolStripMenuItem,
@@ -229,6 +232,7 @@
             resources.ApplyResources(this.toolStripMenuItem7, "toolStripMenuItem7");
             this.toolStripMenuItem7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
+            this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
             // 
             // panel4
             // 
@@ -259,9 +263,11 @@
             // 
             // lbl_mian
             // 
-            this.lbl_mian.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_mian.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(148)))), ((int)(((byte)(226)))));
             this.lbl_mian.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_mian.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             resources.ApplyResources(this.lbl_mian, "lbl_mian");
+            this.lbl_mian.ForeColor = System.Drawing.SystemColors.Control;
             this.lbl_mian.Name = "lbl_mian";
             this.lbl_mian.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -279,6 +285,14 @@
             this.user_name.ForeColor = System.Drawing.Color.Yellow;
             this.user_name.Name = "user_name";
             this.user_name.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // 主界面ToolStripMenuItem
+            // 
+            this.主界面ToolStripMenuItem.BackgroundImage = global::LoginFrame.Properties.Resources.收藏条目;
+            this.主界面ToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.主界面ToolStripMenuItem.Name = "主界面ToolStripMenuItem";
+            resources.ApplyResources(this.主界面ToolStripMenuItem, "主界面ToolStripMenuItem");
+            this.主界面ToolStripMenuItem.Click += new System.EventHandler(this.主界面ToolStripMenuItem_Click);
             // 
             // MainFrame
             // 
@@ -332,5 +346,6 @@
         private System.Windows.Forms.Label lbl_mian;
         public System.Windows.Forms.Label titlename;
         private System.Windows.Forms.Label user_name;
+        private System.Windows.Forms.ToolStripMenuItem 主界面ToolStripMenuItem;
     }
 }

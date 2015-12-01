@@ -1590,6 +1590,9 @@ namespace LoginFrame
 
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
         {
+
+            this.lbl_mian.Text = "学员管理";
+
             panel5.Hide();
             
             this.titlename.Text = ((ToolStripMenuItem)sender).Text;
@@ -1607,6 +1610,8 @@ namespace LoginFrame
 
         private void toolStripMenuItem5_Click(object sender, EventArgs e)
         {
+            this.lbl_mian.Text = "教师管理";
+
             panel5.Hide();
 
             this.titlename.Text = ((ToolStripMenuItem)sender).Text;
@@ -1630,6 +1635,7 @@ namespace LoginFrame
         /// <param name="e"></param>
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            this.lbl_mian.Text = "自我测试";
 
             panel5.Hide();
 
@@ -1672,6 +1678,7 @@ namespace LoginFrame
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
+
             panel5.Hide();
 
             ModifyPassword modifyPassword = new ModifyPassword();
@@ -1700,6 +1707,8 @@ namespace LoginFrame
 
         private void toolStripMenuItem6_Click(object sender, EventArgs e)
         {
+            this.lbl_mian.Text = "设置模拟人";
+
             panel5.Hide();
 
             this.titlename.Text = ((ToolStripMenuItem)sender).Text;
@@ -1718,6 +1727,9 @@ namespace LoginFrame
 
         private void exMenu1_Click(object sender, EventArgs e)
         {
+
+            this.lbl_mian.Text = "题库管理";
+
             panel5.Hide();
 
             this.titlename.Text = ((ToolStripMenuItem)sender).Text;
@@ -1735,6 +1747,7 @@ namespace LoginFrame
 
         private void exMenu2_Click(object sender, EventArgs e)
         {
+            this.lbl_mian.Text = "试卷管理";
             panel5.Hide();
 
             this.titlename.Text = ((ToolStripMenuItem)sender).Text;
@@ -1757,6 +1770,9 @@ namespace LoginFrame
 
         private void exMenu3_Click(object sender, EventArgs e)
         {
+            this.lbl_mian.Text = "考试管理";
+
+
             panel5.Hide();
 
             this.titlename.Text = ((ToolStripMenuItem)sender).Text;
@@ -1775,6 +1791,9 @@ namespace LoginFrame
 
         private void 考试成绩ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+            this.lbl_mian.Text = "考试成绩";
+
             panel5.Hide();
 
             this.titlename.Text = ((ToolStripMenuItem)sender).Text;
@@ -1874,6 +1893,8 @@ namespace LoginFrame
 
         private void exMenu4_Click(object sender, EventArgs e)
         {
+            this.lbl_mian.Text = "考试成绩管理";
+
             panel5.Hide();
 
             this.titlename.Text = ((ToolStripMenuItem)sender).Text;
@@ -1945,10 +1966,17 @@ namespace LoginFrame
         private void label1_Click(object sender, EventArgs e)
         {
 
-            panel5.Hide();
+            if (panel5.Visible)
+            {
+                panel5.Hide();
+            }
+            else
+            {
+                panel5.Show();
+            }
 
 
-            frm2BodyMain();
+
 
         }
 
@@ -1959,17 +1987,40 @@ namespace LoginFrame
             CloseDB();
         }
 
-        private void panel5_MouseLeave(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void panel5_Leave(object sender, EventArgs e)
+        private void panel5_MouseUp(object sender, MouseEventArgs e)
         {
             if (panel5.Visible)
             {
                 panel5.Hide();
             }
+        }
+
+        private void panel5_MouseHover(object sender, EventArgs e)
+        {
+            if (panel5.Visible)
+            {
+                panel5.Hide();
+            }
+        }
+
+        private void panel5_MouseLeave(object sender, EventArgs e)
+        {
+            if (panel5.Visible)
+            {
+                panel5.Hide();
+            }
+        }
+
+        private void 主界面ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.lbl_mian.Text = "主界面";
+            frm2BodyMain();
+
+        }
+
+        private void toolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+            this.lbl_mian.Text = "云服务";
         }
     }
 }
