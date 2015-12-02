@@ -192,7 +192,7 @@ namespace LoginFrame
 
                         Console.WriteLine("模拟人协议加载数量" + LoginRoler.AgreeMents.Count);
 
-                        if (LoginRoler.isLocalIp)
+                        if (!LoginRoler.isLocalIp)
                         {
                             LoginRoler.serverType = LoginRoler.roleid;
                         }
@@ -264,6 +264,7 @@ namespace LoginFrame
                 strWheres = new Dictionary<string, string>();
             }
             Dictionary<string, AgreeMent> AgreeMents = LoginRoler.AgreeMents;
+            AgreeMents.Clear();
             strWheres.Clear();
             DataTable dataTable = agreementService.listAgreements(strWheres).Tables[0];
             for (int i = 0; i < dataTable.Rows.Count; i++)
