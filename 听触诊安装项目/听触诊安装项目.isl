@@ -348,6 +348,7 @@
 		<row><td>Component.exe</td><td>{BCB985A0-ED51-4C13-A361-55B11BEF1633}</td><td>BIN1</td><td>2</td><td/><td>File.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Component.exe1</td><td>{84525223-B444-410E-9811-E8A655DFF778}</td><td>BIN1</td><td>2</td><td/><td>File.exe1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>DAL.dll</td><td>{BF21DB73-C029-42BC-A585-161E8E7F24BF}</td><td>BIN1</td><td>2</td><td/><td>dal.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Flash.ocx</td><td>{4284E6A9-E960-49AA-9591-2D94E122F177}</td><td>DLLS</td><td>2</td><td/><td>flash.ocx</td><td>49</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ICSharpCode.SharpZipLib.dll</td><td>{E82F53E7-3311-437D-B1B0-5DA2D04AC0AE}</td><td>BIN1</td><td>2</td><td/><td>icsharpcode.sharpziplib.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ICSharpCode.SharpZipLib.dll1</td><td>{3B9D2F89-E339-4567-9913-1BEBAE060AFB}</td><td>DLLS</td><td>2</td><td/><td>icsharpcode.sharpziplib.dll1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{D761686F-4ADA-4293-9AE6-243FE4E54AAF}</td><td>BIN1</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -1124,6 +1125,7 @@
 		<row><td>DATA</td><td>ISX_DEFAULTCOMPONENT6</td></row>
 		<row><td>DB</td><td>ISX_DEFAULTCOMPONENT3</td></row>
 		<row><td>DLLS</td><td>AxInterop.ShockwaveFlashObjects.dll1</td></row>
+		<row><td>DLLS</td><td>Flash.ocx</td></row>
 		<row><td>DLLS</td><td>ICSharpCode.SharpZipLib.dll1</td></row>
 		<row><td>DLLS</td><td>ISX_DEFAULTCOMPONENT12</td></row>
 		<row><td>DLLS</td><td>InTheHand.Net.Personal.dll</td></row>
@@ -1148,6 +1150,7 @@
 		<row><td>INSTALLDIR</td><td>Component.exe</td></row>
 		<row><td>INSTALLDIR</td><td>Component.exe1</td></row>
 		<row><td>INSTALLDIR</td><td>DAL.dll</td></row>
+		<row><td>INSTALLDIR</td><td>Flash.ocx</td></row>
 		<row><td>INSTALLDIR</td><td>ICSharpCode.SharpZipLib.dll</td></row>
 		<row><td>INSTALLDIR</td><td>ICSharpCode.SharpZipLib.dll1</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
@@ -2044,6 +2047,7 @@
 		<row><td>AlwaysInstall</td><td>Component.exe</td></row>
 		<row><td>AlwaysInstall</td><td>Component.exe1</td></row>
 		<row><td>AlwaysInstall</td><td>DAL.dll</td></row>
+		<row><td>AlwaysInstall</td><td>Flash.ocx</td></row>
 		<row><td>AlwaysInstall</td><td>ICSharpCode.SharpZipLib.dll</td></row>
 		<row><td>AlwaysInstall</td><td>ICSharpCode.SharpZipLib.dll1</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
@@ -2190,6 +2194,7 @@
 		<row><td>ex_topic_detail.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>EX_TOP~1.MYD|ex_topic_detail.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\8\LoginFrame\DB\MySQL5.1\data\tcz\ex_topic_detail.MYD</td><td>1</td><td/></row>
 		<row><td>ex_topic_detail.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>EX_TOP~1.MYI|ex_topic_detail.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\8\LoginFrame\DB\MySQL5.1\data\tcz\ex_topic_detail.MYI</td><td>1</td><td/></row>
 		<row><td>favicon.ico</td><td>ISX_DEFAULTCOMPONENT13</td><td>favicon.ico</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\8\LoginFrame\icon\favicon.ico</td><td>1</td><td/></row>
+		<row><td>flash.ocx</td><td>Flash.ocx</td><td>Flash.ocx</td><td>0</td><td/><td/><td>0</td><td>1</td><td>F:\听触诊\8\LoginFrame\DLLS\Flash.ocx</td><td>1</td><td/></row>
 		<row><td>foot.jpg</td><td>ISX_DEFAULTCOMPONENT17</td><td>foot.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\8\LoginFrame\Resources\foot.jpg</td><td>1</td><td/></row>
 		<row><td>func.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>func.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\8\LoginFrame\DB\MySQL5.1\data\mysql\func.frm</td><td>1</td><td/></row>
 		<row><td>func.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>func.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\8\LoginFrame\DB\MySQL5.1\data\mysql\func.MYD</td><td>1</td><td/></row>
@@ -2492,6 +2497,7 @@
 		<row><td>Component.exe</td><td/><td/><td>_77382D4B_BB25_4503_9DB0_156E7BD72633_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Component.exe1</td><td/><td/><td>_7188271D_3B41_4D9D_A77D_415296CC0D5A_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>DAL.dll</td><td/><td/><td>_2104FC7C_E77D_47BF_8F5F_D54B3A3C319E_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Flash.ocx</td><td/><td/><td>_D1C4D24D_394A_4F77_96F6_AE821AB2C3BE_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ICSharpCode.SharpZipLib.dll</td><td/><td/><td>_957C4F7A_E873_4FC0_B760_3C1C3E415FB2_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ICSharpCode.SharpZipLib.dll1</td><td/><td/><td>_C8E34D9F_E41E_47A4_923B_8868FCED987E_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_140777CF_FFEE_4799_B501_658DD6B9BB91_FILTER</td><td/><td/><td/><td/></row>
@@ -3074,6 +3080,7 @@
 		<col def="I2">Cost</col>
 		<col def="I2">Order</col>
 		<col def="S50">CmdLine</col>
+		<row><td>flash.ocx</td><td>1</td><td/><td/></row>
 	</table>
 
 	<table name="ISSetupFile">
@@ -4883,7 +4890,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKAPPPOOLS</td><td>##IDS_PROGMSG_IIS_ROLLBACKAPPPOOLS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
-		<row><td>ProductCode</td><td>{84FB659C-B089-4265-A0F6-597CFF7CFB0D}</td><td/></row>
+		<row><td>ProductCode</td><td>{516B6FA6-2790-4BE4-85AF-4403972D9A85}</td><td/></row>
 		<row><td>ProductName</td><td>听触诊</td><td/></row>
 		<row><td>ProductVersion</td><td>1.00.0000</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>

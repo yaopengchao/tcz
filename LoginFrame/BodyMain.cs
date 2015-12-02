@@ -754,7 +754,7 @@ namespace LoginFrame
             btn_play.Enabled = false;
             btn_play.Visible = false;
             btn_stop.Enabled = true;
-            btn_play.Visible = true;
+            btn_stop.Visible = true;
             btn_play.BackgroundImage = global::LoginFrame.Properties.Resources.播放_灰;
             btn_stop.BackgroundImage = global::LoginFrame.Properties.Resources.暂停;
         }
@@ -885,8 +885,15 @@ namespace LoginFrame
 
         private void callFunction(string funName, string arg)
         {
-            //C#传给Flash的值
-            axShockwaveFlashPlayer.CallFunction("<invoke name=\"" + funName + "\" returntype=\"xml\"></invoke>");
+            try {
+                //C#传给Flash的值
+                axShockwaveFlashPlayer.CallFunction("<invoke name=\"" + funName + "\" returntype=\"xml\"></invoke>");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("调用Flash函数发生错误,请检查SWF文件函数是否没问题,或者调用函数名已经变更");
+            }
+
         }
 
         private void btn_next_Click(object sender, EventArgs e)

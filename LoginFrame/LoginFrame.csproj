@@ -595,6 +595,7 @@
     <Content Include="bin\Debug\LoginFrame.exe" />
     <Content Include="bin\Debug\LoginFrame.pdb" />
     <Content Include="bin\Debug\LoginFrame.vshost.exe" />
+    <Content Include="DLLS\Flash.ocx" />
     <Content Include="DLLS\ICSharpCode.SharpZipLib.dll" />
     <Content Include="DLLS\InTheHand.Net.Personal.dll" />
     <Content Include="DLLS\Microsoft.DirectX.DirectSound.dll" />

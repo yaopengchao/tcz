@@ -1489,9 +1489,14 @@ namespace LoginFrame
 
             if (!this.bodyMain.axShockwaveFlashPlayer.Playing)
             {
+                try { 
                 this.bodyMain.axShockwaveFlashPlayer.CallFunction("<invoke name=\"startFun\" returntype=\"xml\"></invoke>");
-
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("调用Flash函数发生错误,请检查SWF文件函数是否没问题,或者调用函数名已经变更");
+            }
+        }
 
             this.bodyMain.axShockwaveFlashPlayer.Playing = true;
         }
@@ -1501,9 +1506,13 @@ namespace LoginFrame
         /// </summary>
         private void stopFlash()
         {
-
+            try { 
             this.bodyMain.axShockwaveFlashPlayer.CallFunction("<invoke name=\"pauseFun\" returntype=\"xml\"></invoke>");
-
+        }
+            catch(Exception ex)
+            {
+                MessageBox.Show("调用Flash函数发生错误,请检查SWF文件函数是否没问题,或者调用函数名已经变更");
+            }
             this.bodyMain.axShockwaveFlashPlayer.Playing = false;
 
         }
