@@ -1,0 +1,29 @@
+REGEDIT4
+
+[HKEY_CLASSES_ROOT\AxShockwaveFlashObjects.AxShockwaveFlash]
+@="AxShockwaveFlashObjects.AxShockwaveFlash"
+
+[HKEY_CLASSES_ROOT\AxShockwaveFlashObjects.AxShockwaveFlash\CLSID]
+@="{11331948-AA5D-337A-AF49-8B7452B24F1D}"
+
+[HKEY_CLASSES_ROOT\CLSID\{11331948-AA5D-337A-AF49-8B7452B24F1D}]
+@="AxShockwaveFlashObjects.AxShockwaveFlash"
+
+[HKEY_CLASSES_ROOT\CLSID\{11331948-AA5D-337A-AF49-8B7452B24F1D}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="AxShockwaveFlashObjects.AxShockwaveFlash"
+"Assembly"="AxInterop.ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v2.0.50727"
+"CodeBase"="file:///E:/听触诊项目/6/LoginFrame/DLLS/AxInterop.ShockwaveFlashObjects.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{11331948-AA5D-337A-AF49-8B7452B24F1D}\InprocServer32\1.0.0.0]
+"Class"="AxShockwaveFlashObjects.AxShockwaveFlash"
+"Assembly"="AxInterop.ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v2.0.50727"
+"CodeBase"="file:///E:/听触诊项目/6/LoginFrame/DLLS/AxInterop.ShockwaveFlashObjects.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{11331948-AA5D-337A-AF49-8B7452B24F1D}\ProgId]
+@="AxShockwaveFlashObjects.AxShockwaveFlash"
+
+[HKEY_CLASSES_ROOT\CLSID\{11331948-AA5D-337A-AF49-8B7452B24F1D}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
