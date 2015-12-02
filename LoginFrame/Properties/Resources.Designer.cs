@@ -83,6 +83,16 @@ namespace LoginFrame.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap head1 {
+            get {
+                object obj = ResourceManager.GetObject("head1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap loadinf_blue {
             get {
                 object obj = ResourceManager.GetObject("loadinf_blue", resourceCulture);

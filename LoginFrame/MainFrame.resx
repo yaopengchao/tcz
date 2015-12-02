@@ -192,20 +192,68 @@
   <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="welcome.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="welcome.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
+  <data name="welcome.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="welcome.Location" type="System.Drawing.Point, System.Drawing">
+    <value>668, 53</value>
+  </data>
+  <data name="welcome.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>82, 22</value>
+  </data>
+  <data name="welcome.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 22</value>
+  </data>
+  <data name="welcome.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="welcome.Text" xml:space="preserve">
+    <value>欢 迎 您,</value>
+  </data>
+  <data name="welcome.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;welcome.Name" xml:space="preserve">
+    <value>welcome</value>
+  </data>
+  <data name="&gt;&gt;welcome.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;welcome.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;welcome.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbl_exit.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt, style=Bold</value>
+  </data>
   <data name="lbl_exit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lbl_exit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>964, 54</value>
+    <value>970, 54</value>
   </data>
   <data name="lbl_exit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="lbl_exit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 23</value>
+    <value>39, 23</value>
   </data>
   <data name="lbl_exit.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
+  </data>
+  <data name="lbl_exit.Text" xml:space="preserve">
+    <value>退 出</value>
+  </data>
+  <data name="lbl_exit.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
   </data>
   <data name="&gt;&gt;lbl_exit.Name" xml:space="preserve">
     <value>lbl_exit</value>
@@ -217,7 +265,7 @@
     <value>panel4</value>
   </data>
   <data name="&gt;&gt;lbl_exit.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="lbl_menu.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -244,7 +292,7 @@
     <value>panel4</value>
   </data>
   <data name="&gt;&gt;lbl_menu.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="lbl_mian.Font" type="System.Drawing.Font, System.Drawing">
     <value>宋体, 9pt, style=Bold</value>
@@ -253,13 +301,13 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_mian.Location" type="System.Drawing.Point, System.Drawing">
-    <value>860, 51</value>
+    <value>840, 52</value>
   </data>
   <data name="lbl_mian.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="lbl_mian.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 24</value>
+    <value>106, 24</value>
   </data>
   <data name="lbl_mian.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -280,7 +328,7 @@
     <value>panel4</value>
   </data>
   <data name="&gt;&gt;lbl_mian.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="titlename.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -313,7 +361,7 @@
     <value>panel4</value>
   </data>
   <data name="&gt;&gt;titlename.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="user_name.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -325,7 +373,7 @@
     <value>NoControl</value>
   </data>
   <data name="user_name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>790, 53</value>
+    <value>760, 53</value>
   </data>
   <data name="user_name.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>82, 22</value>
@@ -349,7 +397,7 @@
     <value>panel4</value>
   </data>
   <data name="&gt;&gt;user_name.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -429,35 +477,11 @@
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="panel5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>43, 15</value>
   </metadata>
-  <data name="menuStrip1.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="menuStrip1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="menuStrip1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="menuStrip1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 293</value>
-  </data>
-  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="menuStrip1.Text" xml:space="preserve">
-    <value>menuStrip1</value>
+  <data name="panel5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
     <value>menuStrip1</value>
@@ -498,6 +522,51 @@
   <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>43, 15</value>
+  </metadata>
+  <data name="menuStrip1.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="menuStrip1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="menuStrip1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="menuStrip1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 293</value>
+  </data>
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>panel5</value>
+  </data>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="主界面ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 21</value>
+  </data>
+  <data name="主界面ToolStripMenuItem.Text" xml:space="preserve">
+    <value>主界面</value>
+  </data>
   <data name="toolStripMenuItem1.Font" type="System.Drawing.Font, System.Drawing">
     <value>微软雅黑, 9pt</value>
   </data>
@@ -517,13 +586,13 @@
     <value>考试</value>
   </data>
   <data name="exMenu1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>148, 22</value>
   </data>
   <data name="exMenu1.Text" xml:space="preserve">
     <value>题库管理</value>
   </data>
   <data name="exMenu2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>148, 22</value>
   </data>
   <data name="exMenu2.Text" xml:space="preserve">
     <value>试卷管理</value>
@@ -532,13 +601,13 @@
     <value>微软雅黑, 9pt</value>
   </data>
   <data name="exMenu3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>148, 22</value>
   </data>
   <data name="exMenu3.Text" xml:space="preserve">
     <value>考试管理</value>
   </data>
   <data name="exMenu4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>148, 22</value>
   </data>
   <data name="exMenu4.Text" xml:space="preserve">
     <value>考试成绩管理</value>
@@ -600,12 +669,6 @@
   <data name="toolStripMenuItem7.Text" xml:space="preserve">
     <value>云服务</value>
   </data>
-  <data name="主界面ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 21</value>
-  </data>
-  <data name="主界面ToolStripMenuItem.Text" xml:space="preserve">
-    <value>主界面</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -647,6 +710,12 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>听触诊</value>
+  </data>
+  <data name="&gt;&gt;主界面ToolStripMenuItem.Name" xml:space="preserve">
+    <value>主界面ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;主界面ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
     <value>toolStripMenuItem1</value>
@@ -718,12 +787,6 @@
     <value>toolStripMenuItem7</value>
   </data>
   <data name="&gt;&gt;toolStripMenuItem7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;主界面ToolStripMenuItem.Name" xml:space="preserve">
-    <value>主界面ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;主界面ToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

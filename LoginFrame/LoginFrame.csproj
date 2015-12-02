@@ -635,6 +635,7 @@
     <None Include="Resources\菜单条_22.png" />
     <None Include="Resources\子菜单-.png" />
     <None Include="Resources\子菜单+.png" />
+    <None Include="Resources\head1.jpg" />
     <Content Include="TEMP\tcz.sql" />
     <None Include="Resources\loadinf_blue.gif" />
     <None Include="Resources\登录界面.png" />
