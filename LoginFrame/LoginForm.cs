@@ -317,7 +317,7 @@ namespace LoginFrame
             return AddressIP;
         }
 
-        int comboBox3selectIndex;
+       // int comboBox3selectIndex;
         private void button1_Click(object sender, EventArgs e)
         {
             //重置默认

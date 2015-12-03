@@ -225,7 +225,7 @@
 	<table name="AppSearch">
 		<col key="yes" def="s72">Property</col>
 		<col key="yes" def="s72">Signature_</col>
-		<row><td>DOTNETVERSION35</td><td>DotNet35</td></row>
+		<row><td>DOTNETVERSION35SP1</td><td>DotNet35SP1</td></row>
 	</table>
 
 	<table name="BBControl">
@@ -340,49 +340,46 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>AxInterop.ShockwaveFlashObjects.dll</td><td>{383B866A-A6CF-4C0D-8E15-F993B38BE76D}</td><td>BIN1</td><td>2</td><td/><td>axinterop.shockwaveflashobje</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>BLL.dll</td><td>{2BA84116-B497-4AE3-809F-D19739A53B10}</td><td>BIN1</td><td>2</td><td/><td>bll.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Component.dll</td><td>{3CF66366-7DD0-4082-91F2-475189FCE002}</td><td>EN</td><td>2</td><td/><td>File.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Component.dll1</td><td>{45BF24EB-D57A-4A9D-A4C5-C386F0E27E45}</td><td>ZH_CN</td><td>2</td><td/><td>File.dll1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Component.exe</td><td>{1BFA8AD8-68B9-4A28-B5CB-146933FCEB5B}</td><td>BIN1</td><td>2</td><td/><td>File.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Component.exe1</td><td>{A3B87F22-3160-42C6-9CC1-EF9144D810CE}</td><td>BIN1</td><td>2</td><td/><td>File.exe1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>DAL.dll</td><td>{4C46B141-D90E-4E89-BA1D-0D9B892EDA12}</td><td>BIN1</td><td>2</td><td/><td>dal.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ICSharpCode.SharpZipLib.dll</td><td>{19E269DB-D491-4F8C-87EB-2F38F76804B5}</td><td>BIN1</td><td>2</td><td/><td>icsharpcode.sharpziplib.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT</td><td>{9185BB03-E4EA-4AC7-A4CE-B63348DDC173}</td><td>BIN1</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{A0E3FF06-6661-4973-A76A-42BFC7368D14}</td><td>EN</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT10</td><td>{BE2D8744-96B3-4A13-827A-E1642A22C103}</td><td>CHARSETS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT11</td><td>{51477BC4-29E7-40B8-BD91-8BCCD4297592}</td><td>ENGLISH</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT13</td><td>{72891340-1C68-45C8-81A2-B23035810024}</td><td>ICON</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT14</td><td>{1AE699A3-2DDF-4203-BBA0-AA3691FB26F9}</td><td>PIC</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT15</td><td>{06AC7F60-1C78-4FCA-8318-2FF0D12F7EB2}</td><td>PROPERTIES</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT16</td><td>{06AAFD7C-E2B4-4776-B6CE-1FA5560C7C37}</td><td>RESOURCES</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT17</td><td>{B7A96DCF-8F6A-4F59-89ED-94E4C4283DBF}</td><td>TEMP</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT18</td><td>{152D2853-7340-4D48-B0CB-45961F4DE282}</td><td>LESSONS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT19</td><td>{9EB9849A-AB1D-4F8B-8629-A0951885322A}</td><td>_</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{BD772FDC-07E5-4D38-BEF2-B090D59F2203}</td><td>ZH_CN</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>AxInterop.ShockwaveFlashObjects.dll</td><td>{AD1D87EB-E1CA-4086-8F7A-568A74D2E843}</td><td>BIN1</td><td>2</td><td/><td>axinterop.shockwaveflashobje</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>BLL.dll</td><td>{9F37997F-E7CA-4346-BD31-EF23F15B3DCD}</td><td>BIN1</td><td>2</td><td/><td>bll.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Component.dll</td><td>{28427CB8-3B71-4FB8-B665-8D0B26520F82}</td><td>EN</td><td>2</td><td/><td>File.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Component.dll1</td><td>{6E6A87C5-C8FD-486B-9B98-92BF41CA8155}</td><td>ZH_CN</td><td>2</td><td/><td>File.dll1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Component.exe</td><td>{E045D44A-2FF9-45D3-95F6-FEAE32CED523}</td><td>BIN1</td><td>2</td><td/><td>File.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Component.exe1</td><td>{89424B58-F0B7-40A0-AE4F-1946FF5F7783}</td><td>BIN1</td><td>2</td><td/><td>File.exe1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DAL.dll</td><td>{3970865D-D347-4318-AD9E-8E115B484B1E}</td><td>BIN1</td><td>2</td><td/><td>dal.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ICSharpCode.SharpZipLib.dll</td><td>{28B6CC6F-C770-442A-A7BD-0C20E15F9B74}</td><td>BIN1</td><td>2</td><td/><td>icsharpcode.sharpziplib.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT</td><td>{8E245EAE-96F5-4996-ABFE-9B3CD6459F0E}</td><td>BIN1</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{C6DD333C-AB0B-4973-8530-5F25AB727B75}</td><td>EN</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT10</td><td>{DD9FDE5E-7C98-45F4-9ADE-FB8D0D47C786}</td><td>CHARSETS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT11</td><td>{16E17AFE-CD91-450C-8705-4BC7151EEE87}</td><td>ENGLISH</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT12</td><td>{E3F0154E-46B0-42C2-8170-77247DB9262D}</td><td>ICON</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT13</td><td>{9FEB1908-3D71-463E-915C-74834CD80646}</td><td>PIC</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT14</td><td>{EF44C4A9-68AC-4F35-905D-9CEEA1B84799}</td><td>PROPERTIES</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT15</td><td>{8F3CCC72-AD3D-46C0-B1B7-BFE7C46DA9B8}</td><td>RESOURCES</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT16</td><td>{6BC0C8A9-86DD-4CA1-9D04-DA9C1D090CA3}</td><td>TEMP</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT17</td><td>{4F764C21-BF53-40DD-9F43-DE1A093BCC59}</td><td>LESSONS</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT2</td><td>{660F634C-FAFD-4CA5-88F3-1D1D7B29A42B}</td><td>ZH_CN</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT20</td><td>{CEFC4289-9FE9-4853-A6FF-390331480D64}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT21</td><td>{16770A7C-FAE8-4858-90B6-5417A6DBDC3B}</td><td>_1</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT22</td><td>{21BAFE9F-ECE1-48B0-B0D5-0224E7C7971A}</td><td>_2</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT23</td><td>{93093130-D53A-4897-941F-565B604504A7}</td><td>ProgramFilesFolder</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT3</td><td>{C83DE4A5-653B-4E99-AA90-3F562CA72FF9}</td><td>DB</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT4</td><td>{7BC12DDB-C311-4F01-8ED0-923DB365C34B}</td><td>MYSQL5.1</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT5</td><td>{B56F4DF6-C173-4D07-99F3-D4133529283A}</td><td>BIN2</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT6</td><td>{D54F3CFD-159B-484D-B973-05AE5CB1644B}</td><td>DATA</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT7</td><td>{FB87AE93-5FEA-4D31-9125-072C7ECFA0E2}</td><td>MYSQL</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT8</td><td>{49C8A9B4-C2EF-4777-95E2-D0F0D5A8F3D6}</td><td>TCZ</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT9</td><td>{C87746E1-B132-49D5-909E-395600E2F55F}</td><td>SHARE</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Interop.ShockwaveFlashObjects.dll</td><td>{5D8379EA-1098-4368-B49D-1B54B9DDDA9E}</td><td>BIN1</td><td>2</td><td/><td>interop.shockwaveflashobject</td><td>49</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.DirectX.DirectSound.dll</td><td>{1529DEC6-25BE-4EC6-A218-1AEE37C5AFCF}</td><td>BIN1</td><td>2</td><td/><td>microsoft.directx.directsoun</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.DirectX.dll</td><td>{35FA4754-978D-4B95-9F76-91920210556D}</td><td>BIN1</td><td>2</td><td/><td>microsoft.directx.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.QualityTools.Testing.Fakes.dll</td><td>{654C4459-537E-4ED5-AFB4-BA81DF87E4CD}</td><td>BIN1</td><td>2</td><td/><td>microsoft.qualitytools.testi</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Model.dll</td><td>{E0A7E5B3-4AC5-4B16-BB82-08E8E9748F8C}</td><td>BIN1</td><td>2</td><td/><td>model.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>MySql.Data.dll</td><td>{F79F7410-14C6-418E-BC9F-907F493ECE7D}</td><td>BIN1</td><td>2</td><td/><td>mysql.data.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>mysql.exe</td><td>{3C7BFFC3-D30B-4B80-824E-8A41D77801B8}</td><td>BIN2</td><td>2</td><td/><td>mysql.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>mysqladmin.exe</td><td>{4111DD11-F327-4422-8168-05BC5FDBFEB5}</td><td>BIN2</td><td>2</td><td/><td>mysqladmin.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>mysqld_nt.exe</td><td>{C4EBCAF3-F0D4-4018-A748-828F6DAD70F0}</td><td>BIN2</td><td>2</td><td/><td>mysqld_nt.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>mysqldump.exe</td><td>{94752AF5-5CBD-4235-B882-869527518E71}</td><td>BIN2</td><td>2</td><td/><td>mysqldump.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>mysqlimport.exe</td><td>{C1BC9A58-9AD7-436D-81B8-16877BF2989D}</td><td>BIN2</td><td>2</td><td/><td>mysqlimport.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>stdole.dll</td><td>{BD9291B6-C081-48EA-ACE5-3EE85E47D4F5}</td><td>BIN1</td><td>2</td><td/><td>stdole.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT3</td><td>{D45E24A9-9292-4160-B516-D6CE8556842D}</td><td>DB</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT4</td><td>{F4C7DC0D-B53A-4BCF-8FD5-0439BD1C89DD}</td><td>MYSQL5.1</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT5</td><td>{F4C52422-3BA1-493A-BCA0-3E33CE66A04C}</td><td>BIN2</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT6</td><td>{7F012A02-3611-4014-9AF4-39CDC6906EF1}</td><td>DATA</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT7</td><td>{9127636E-EE89-4D1B-A564-F01D23C1377C}</td><td>MYSQL</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT8</td><td>{AD627D79-1730-4069-886D-EDF1B384CEAD}</td><td>TCZ</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT9</td><td>{57B426A2-E03A-47CE-AE22-C37CD3FDD430}</td><td>SHARE</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Interop.ShockwaveFlashObjects.dll</td><td>{705284E7-1418-4EB8-83C3-EFC0BFC9AC91}</td><td>BIN1</td><td>2</td><td/><td>interop.shockwaveflashobject</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.DirectX.DirectSound.dll</td><td>{2983DEA5-EC70-42AA-AD46-E456C5ACF68C}</td><td>BIN1</td><td>2</td><td/><td>microsoft.directx.directsoun</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.DirectX.dll</td><td>{7C0647E8-5272-4794-BFF1-4D80BE3B3CA7}</td><td>BIN1</td><td>2</td><td/><td>microsoft.directx.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.QualityTools.Testing.Fakes.dll</td><td>{17C5840E-AAB7-4963-8CBB-17E45F4F7F43}</td><td>BIN1</td><td>2</td><td/><td>microsoft.qualitytools.testi</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Model.dll</td><td>{60ED9C24-A30A-4D5D-928D-F0B9EF5437D5}</td><td>BIN1</td><td>2</td><td/><td>model.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>MySql.Data.dll</td><td>{D9598879-A155-4747-809A-A8F69357CDD1}</td><td>BIN1</td><td>2</td><td/><td>mysql.data.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>mysql.exe</td><td>{250EBCEB-ED77-44CE-B4F9-CD61873D1C4F}</td><td>BIN2</td><td>2</td><td/><td>mysql.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>mysqladmin.exe</td><td>{417864F2-0654-4453-8BDC-B76F7265B443}</td><td>BIN2</td><td>2</td><td/><td>mysqladmin.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>mysqld_nt.exe</td><td>{3DE90F60-33E2-4C3D-8BBD-EF4B6342C901}</td><td>BIN2</td><td>2</td><td/><td>mysqld_nt.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>mysqldump.exe</td><td>{1713E0EA-CEC1-437B-B411-68DE8CBFF936}</td><td>BIN2</td><td>2</td><td/><td>mysqldump.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>mysqlimport.exe</td><td>{1622911E-4456-4754-9C44-9088CECB26CB}</td><td>BIN2</td><td>2</td><td/><td>mysqlimport.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>stdole.dll</td><td>{48E245E8-0EAB-45F8-B283-84FEB1B64BFC}</td><td>BIN1</td><td>2</td><td/><td>stdole.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -574,7 +571,7 @@
 		<row><td>InstallChangeFolder</td><td>Tail</td><td>PathEdit</td><td>21</td><td>207</td><td>332</td><td>17</td><td>15</td><td>_BrowseProperty</td><td>##IDS__IsBrowseFolderDlg_11##</td><td>OK</td><td/><td>0</td><td/><td/><td/></row>
 		<row><td>InstallChangeFolder</td><td>TailText</td><td>Text</td><td>21</td><td>193</td><td>99</td><td>13</td><td>3</td><td/><td>##IDS__IsBrowseFolderDlg_FolderName##</td><td>Tail</td><td/><td>0</td><td/><td/><td/></row>
 		<row><td>InstallChangeFolder</td><td>Up</td><td>PushButton</td><td>310</td><td>66</td><td>19</td><td>19</td><td>3670019</td><td/><td/><td>NewFolder</td><td>##IDS__IsBrowseFolderDlg_UpOneLevel##</td><td>0</td><td/><td/><td>NewBinary3</td></row>
-		<row><td>InstallWelcome</td><td>Back</td><td>PushButton</td><td>164</td><td>243</td><td>66</td><td>17</td><td>1</td><td/><td>##IDS_BACK##</td><td>Copyright</td><td/><td>0</td><td/><td/><td/></row>
+		<row><td>InstallWelcome</td><td>Back</td><td>PushButton</td><td>164</td><td>243</td><td>66</td><td>17</td><td>3</td><td/><td>##IDS_BACK##</td><td>Copyright</td><td/><td>0</td><td/><td/><td/></row>
 		<row><td>InstallWelcome</td><td>Cancel</td><td>PushButton</td><td>301</td><td>243</td><td>66</td><td>17</td><td>3</td><td/><td>##IDS_CANCEL##</td><td>Back</td><td/><td>0</td><td/><td/><td/></row>
 		<row><td>InstallWelcome</td><td>Copyright</td><td>Text</td><td>135</td><td>144</td><td>228</td><td>73</td><td>65539</td><td/><td>##IDS__IsWelcomeDlg_WarningCopyright##</td><td>Next</td><td/><td>0</td><td/><td/><td/></row>
 		<row><td>InstallWelcome</td><td>DlgLine</td><td>Line</td><td>0</td><td>234</td><td>374</td><td>0</td><td>1</td><td/><td/><td/><td/><td>0</td><td/><td/><td/></row>
@@ -951,10 +948,10 @@
 		<row><td>CustomSetup</td><td>Next</td><td>NewDialog</td><td>ReadyToInstall</td><td>OutOfNoRbDiskSpace &lt;&gt; 1</td><td>0</td></row>
 		<row><td>CustomSetup</td><td>Next</td><td>[_IsSetupTypeMin]</td><td>Custom</td><td>1</td><td>0</td></row>
 		<row><td>CustomSetupTips</td><td>OK</td><td>EndDialog</td><td>Return</td><td>1</td><td>1</td></row>
-		<row><td>CustomerInformation</td><td>Back</td><td>NewDialog</td><td>LicenseAgreement</td><td>1</td><td>1</td></row>
+		<row><td>CustomerInformation</td><td>Back</td><td>NewDialog</td><td>ReadmeInformation</td><td>NOT Installed</td><td>1</td></row>
 		<row><td>CustomerInformation</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>0</td></row>
 		<row><td>CustomerInformation</td><td>Next</td><td>EndDialog</td><td>Exit</td><td>(SERIALNUMVALRETRYLIMIT) And (SERIALNUMVALRETRYLIMIT&lt;0) And (SERIALNUMVALRETURN&lt;&gt;SERIALNUMVALSUCCESSRETVAL)</td><td>2</td></row>
-		<row><td>CustomerInformation</td><td>Next</td><td>NewDialog</td><td>ReadyToInstall</td><td>(Not SERIALNUMVALRETURN) OR (SERIALNUMVALRETURN=SERIALNUMVALSUCCESSRETVAL)</td><td>3</td></row>
+		<row><td>CustomerInformation</td><td>Next</td><td>NewDialog</td><td>DestinationFolder</td><td>(Not SERIALNUMVALRETURN) OR (SERIALNUMVALRETURN=SERIALNUMVALSUCCESSRETVAL)</td><td>3</td></row>
 		<row><td>CustomerInformation</td><td>Next</td><td>[ALLUSERS]</td><td>1</td><td>ApplicationUsers = "AllUsers" And Privileged</td><td>1</td></row>
 		<row><td>CustomerInformation</td><td>Next</td><td>[ALLUSERS]</td><td>{}</td><td>ApplicationUsers = "OnlyCurrentUser" And Privileged</td><td>2</td></row>
 		<row><td>DatabaseFolder</td><td>Back</td><td>NewDialog</td><td>CustomerInformation</td><td>1</td><td>1</td></row>
@@ -962,7 +959,7 @@
 		<row><td>DatabaseFolder</td><td>ChangeFolder</td><td>SpawnDialog</td><td>InstallChangeFolder</td><td>1</td><td>1</td></row>
 		<row><td>DatabaseFolder</td><td>ChangeFolder</td><td>[_BrowseProperty]</td><td>DATABASEDIR</td><td>1</td><td>2</td></row>
 		<row><td>DatabaseFolder</td><td>Next</td><td>NewDialog</td><td>SetupType</td><td>1</td><td>1</td></row>
-		<row><td>DestinationFolder</td><td>Back</td><td>NewDialog</td><td>CustomerInformation</td><td>1</td><td>0</td></row>
+		<row><td>DestinationFolder</td><td>Back</td><td>NewDialog</td><td>CustomerInformation</td><td>NOT Installed</td><td>0</td></row>
 		<row><td>DestinationFolder</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>1</td></row>
 		<row><td>DestinationFolder</td><td>ChangeFolder</td><td>SpawnDialog</td><td>InstallChangeFolder</td><td>1</td><td>1</td></row>
 		<row><td>DestinationFolder</td><td>ChangeFolder</td><td>[_BrowseProperty]</td><td>INSTALLDIR</td><td>1</td><td>2</td></row>
@@ -977,13 +974,13 @@
 		<row><td>InstallChangeFolder</td><td>OK</td><td>EndDialog</td><td>Return</td><td>1</td><td>3</td></row>
 		<row><td>InstallChangeFolder</td><td>OK</td><td>SetTargetPath</td><td>[_BrowseProperty]</td><td>1</td><td>2</td></row>
 		<row><td>InstallChangeFolder</td><td>Up</td><td>DirectoryListUp</td><td>0</td><td>1</td><td>0</td></row>
-		<row><td>InstallWelcome</td><td>Back</td><td>NewDialog</td><td>SplashBitmap</td><td>Display_IsBitmapDlg</td><td>0</td></row>
+		<row><td>InstallWelcome</td><td>Back</td><td>NewDialog</td><td>SplashBitmap</td><td>NOT Installed</td><td>0</td></row>
 		<row><td>InstallWelcome</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>0</td></row>
 		<row><td>InstallWelcome</td><td>Next</td><td>NewDialog</td><td>LicenseAgreement</td><td>1</td><td>0</td></row>
 		<row><td>LicenseAgreement</td><td>Back</td><td>NewDialog</td><td>InstallWelcome</td><td>1</td><td>0</td></row>
 		<row><td>LicenseAgreement</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>0</td></row>
 		<row><td>LicenseAgreement</td><td>ISPrintButton</td><td>DoAction</td><td>ISPrint</td><td>1</td><td>0</td></row>
-		<row><td>LicenseAgreement</td><td>Next</td><td>NewDialog</td><td>CustomerInformation</td><td>AgreeToLicense = "Yes"</td><td>0</td></row>
+		<row><td>LicenseAgreement</td><td>Next</td><td>NewDialog</td><td>ReadmeInformation</td><td>AgreeToLicense = "Yes"</td><td>0</td></row>
 		<row><td>MaintenanceType</td><td>Back</td><td>NewDialog</td><td>MaintenanceWelcome</td><td>1</td><td>0</td></row>
 		<row><td>MaintenanceType</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>0</td></row>
 		<row><td>MaintenanceType</td><td>Next</td><td>NewDialog</td><td>CustomSetup</td><td>_IsMaintenance = "Change"</td><td>12</td></row>
@@ -1010,11 +1007,11 @@
 		<row><td>PatchWelcome</td><td>Next</td><td>EndDialog</td><td>Return</td><td>1</td><td>3</td></row>
 		<row><td>PatchWelcome</td><td>Next</td><td>Reinstall</td><td>ALL</td><td>PATCH And REINSTALL=""</td><td>1</td></row>
 		<row><td>PatchWelcome</td><td>Next</td><td>ReinstallMode</td><td>omus</td><td>PATCH And REINSTALLMODE=""</td><td>2</td></row>
-		<row><td>ReadmeInformation</td><td>Back</td><td>NewDialog</td><td>LicenseAgreement</td><td>1</td><td>1</td></row>
+		<row><td>ReadmeInformation</td><td>Back</td><td>NewDialog</td><td>LicenseAgreement</td><td>NOT Installed</td><td>1</td></row>
 		<row><td>ReadmeInformation</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>1</td></row>
 		<row><td>ReadmeInformation</td><td>Next</td><td>NewDialog</td><td>CustomerInformation</td><td>1</td><td>1</td></row>
 		<row><td>ReadyToInstall</td><td>Back</td><td>NewDialog</td><td>CustomSetup</td><td>Installed OR _IsSetupTypeMin = "Custom"</td><td>2</td></row>
-		<row><td>ReadyToInstall</td><td>Back</td><td>NewDialog</td><td>CustomerInformation</td><td>NOT Installed</td><td>1</td></row>
+		<row><td>ReadyToInstall</td><td>Back</td><td>NewDialog</td><td>DestinationFolder</td><td>NOT Installed</td><td>1</td></row>
 		<row><td>ReadyToInstall</td><td>Back</td><td>NewDialog</td><td>MaintenanceType</td><td>Installed AND _IsMaintenance = "Reinstall"</td><td>3</td></row>
 		<row><td>ReadyToInstall</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>0</td></row>
 		<row><td>ReadyToInstall</td><td>InstallNow</td><td>EndDialog</td><td>Return</td><td>OutOfNoRbDiskSpace &lt;&gt; 1</td><td>0</td></row>
@@ -1117,7 +1114,7 @@
 		<row><td>EN</td><td>Component.dll</td></row>
 		<row><td>EN</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>ENGLISH</td><td>ISX_DEFAULTCOMPONENT11</td></row>
-		<row><td>ICON</td><td>ISX_DEFAULTCOMPONENT13</td></row>
+		<row><td>ICON</td><td>ISX_DEFAULTCOMPONENT12</td></row>
 		<row><td>INSTALLDIR</td><td>AxInterop.ShockwaveFlashObjects.dll</td></row>
 		<row><td>INSTALLDIR</td><td>BLL.dll</td></row>
 		<row><td>INSTALLDIR</td><td>Component.dll</td></row>
@@ -1130,17 +1127,14 @@
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT10</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT11</td></row>
+		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT12</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT13</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT14</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT15</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT16</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT17</td></row>
-		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT18</td></row>
-		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT19</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT2</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT20</td></row>
-		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT21</td></row>
-		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT22</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT23</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT3</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT4</td></row>
@@ -1161,21 +1155,18 @@
 		<row><td>INSTALLDIR</td><td>mysqldump.exe</td></row>
 		<row><td>INSTALLDIR</td><td>mysqlimport.exe</td></row>
 		<row><td>INSTALLDIR</td><td>stdole.dll</td></row>
-		<row><td>LESSONS</td><td>ISX_DEFAULTCOMPONENT18</td></row>
+		<row><td>LESSONS</td><td>ISX_DEFAULTCOMPONENT17</td></row>
 		<row><td>MYSQL</td><td>ISX_DEFAULTCOMPONENT7</td></row>
 		<row><td>MYSQL5.1</td><td>ISX_DEFAULTCOMPONENT4</td></row>
-		<row><td>PIC</td><td>ISX_DEFAULTCOMPONENT14</td></row>
-		<row><td>PROPERTIES</td><td>ISX_DEFAULTCOMPONENT15</td></row>
+		<row><td>PIC</td><td>ISX_DEFAULTCOMPONENT13</td></row>
+		<row><td>PROPERTIES</td><td>ISX_DEFAULTCOMPONENT14</td></row>
 		<row><td>ProgramFilesFolder</td><td>ISX_DEFAULTCOMPONENT23</td></row>
-		<row><td>RESOURCES</td><td>ISX_DEFAULTCOMPONENT16</td></row>
+		<row><td>RESOURCES</td><td>ISX_DEFAULTCOMPONENT15</td></row>
 		<row><td>SHARE</td><td>ISX_DEFAULTCOMPONENT9</td></row>
 		<row><td>TCZ</td><td>ISX_DEFAULTCOMPONENT8</td></row>
-		<row><td>TEMP</td><td>ISX_DEFAULTCOMPONENT17</td></row>
+		<row><td>TEMP</td><td>ISX_DEFAULTCOMPONENT16</td></row>
 		<row><td>ZH_CN</td><td>Component.dll1</td></row>
 		<row><td>ZH_CN</td><td>ISX_DEFAULTCOMPONENT2</td></row>
-		<row><td>_</td><td>ISX_DEFAULTCOMPONENT19</td></row>
-		<row><td>_1</td><td>ISX_DEFAULTCOMPONENT21</td></row>
-		<row><td>_2</td><td>ISX_DEFAULTCOMPONENT22</td></row>
 	</table>
 
 	<table name="CustomAction">
@@ -1313,9 +1304,6 @@
 		<row><td>WindowsFolder</td><td>TARGETDIR</td><td>.:Windows</td><td/><td>0</td><td/></row>
 		<row><td>WindowsVolume</td><td>TARGETDIR</td><td>.:WinRoot</td><td/><td>0</td><td/></row>
 		<row><td>ZH_CN</td><td>BIN1</td><td>zh-CN</td><td/><td>0</td><td/></row>
-		<row><td>_</td><td>LESSONS</td><td>1</td><td/><td>0</td><td/></row>
-		<row><td>_1</td><td>LESSONS</td><td>2</td><td/><td>0</td><td/></row>
-		<row><td>_2</td><td>LESSONS</td><td>3</td><td/><td>0</td><td/></row>
 		<row><td>company_name</td><td>ProgramMenuFolder</td><td>公司名称</td><td/><td>1</td><td/></row>
 		<row><td>company_name1</td><td>ProgramMenuFolder</td><td>广州新~1|广州新传媒软件开发有限公司</td><td/><td>1</td><td/></row>
 		<row><td>product_name</td><td>company_name</td><td>听触诊~1|听触诊安装项目</td><td/><td>1</td><td/></row>
@@ -2023,17 +2011,14 @@
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT10</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT11</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT12</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT13</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT14</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT15</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT16</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT17</td></row>
-		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT18</td></row>
-		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT19</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT2</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT20</td></row>
-		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT21</td></row>
-		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT22</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT23</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT3</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT4</td></row>
@@ -2068,380 +2053,230 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>File.con</td><td>ISX_DEFAULTCOMPONENT</td><td>听触诊~1.CON|听触诊体格检查网络教学系统.vshost.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\bin\Debug\听触诊体格检查网络教学系统.vshost.exe.config</td><td>1</td><td/></row>
-		<row><td>File.config</td><td>ISX_DEFAULTCOMPONENT</td><td>听触诊~1.CON|听触诊体格检查网络教学系统.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\bin\Debug\听触诊体格检查网络教学系统.exe.config</td><td>1</td><td/></row>
-		<row><td>File.dll</td><td>Component.dll</td><td>听触诊~1.DLL|听触诊体格检查网络教学系统.resources.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\bin\Debug\en\听触诊体格检查网络教学系统.resources.dll</td><td>1</td><td/></row>
-		<row><td>File.dll1</td><td>Component.dll1</td><td>听触诊~1.DLL|听触诊体格检查网络教学系统.resources.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\bin\Debug\zh-CN\听触诊体格检查网络教学系统.resources.dll</td><td>1</td><td/></row>
-		<row><td>File.exe</td><td>Component.exe</td><td>听触诊~1.EXE|听触诊体格检查网络教学系统.exe</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\bin\Debug\听触诊体格检查网络教学系统.exe</td><td>1</td><td/></row>
-		<row><td>File.exe1</td><td>Component.exe1</td><td>听触诊~1.EXE|听触诊体格检查网络教学系统.vshost.exe</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\bin\Debug\听触诊体格检查网络教学系统.vshost.exe</td><td>1</td><td/></row>
-		<row><td>File.man</td><td>ISX_DEFAULTCOMPONENT</td><td>听触诊~1.MAN|听触诊体格检查网络教学系统.vshost.exe.manifest</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\bin\Debug\听触诊体格检查网络教学系统.vshost.exe.manifest</td><td>1</td><td/></row>
-		<row><td>File.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>听触诊~1.PDB|听触诊体格检查网络教学系统.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\bin\Debug\听触诊体格检查网络教学系统.pdb</td><td>1</td><td/></row>
-		<row><td>File.png</td><td>ISX_DEFAULTCOMPONENT14</td><td>登录按钮.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\pic\登录按钮.png</td><td>1</td><td/></row>
-		<row><td>File.png1</td><td>ISX_DEFAULTCOMPONENT14</td><td>登录框.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\pic\登录框.png</td><td>1</td><td/></row>
-		<row><td>File.png10</td><td>ISX_DEFAULTCOMPONENT16</td><td>对讲-灰.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\对讲-灰.png</td><td>1</td><td/></row>
-		<row><td>File.png11</td><td>ISX_DEFAULTCOMPONENT16</td><td>对讲.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\对讲.png</td><td>1</td><td/></row>
-		<row><td>File.png12</td><td>ISX_DEFAULTCOMPONENT16</td><td>扩音-灰.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\扩音-灰.png</td><td>1</td><td/></row>
-		<row><td>File.png13</td><td>ISX_DEFAULTCOMPONENT16</td><td>扩音.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\扩音.png</td><td>1</td><td/></row>
-		<row><td>File.png14</td><td>ISX_DEFAULTCOMPONENT16</td><td>播放-灰.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\播放-灰.png</td><td>1</td><td/></row>
-		<row><td>File.png15</td><td>ISX_DEFAULTCOMPONENT16</td><td>播放.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\播放.png</td><td>1</td><td/></row>
-		<row><td>File.png16</td><td>ISX_DEFAULTCOMPONENT16</td><td>收藏夹~1.PNG|收藏夹-灰.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\收藏夹-灰.png</td><td>1</td><td/></row>
-		<row><td>File.png17</td><td>ISX_DEFAULTCOMPONENT16</td><td>收藏夹.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\收藏夹.png</td><td>1</td><td/></row>
-		<row><td>File.png18</td><td>ISX_DEFAULTCOMPONENT16</td><td>收藏条目.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\收藏条目.png</td><td>1</td><td/></row>
-		<row><td>File.png19</td><td>ISX_DEFAULTCOMPONENT16</td><td>暂停-灰.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\暂停-灰.png</td><td>1</td><td/></row>
-		<row><td>File.png2</td><td>ISX_DEFAULTCOMPONENT16</td><td>上一个~1.PNG|上一个-灰.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\上一个-灰.png</td><td>1</td><td/></row>
-		<row><td>File.png20</td><td>ISX_DEFAULTCOMPONENT16</td><td>暂停.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\暂停.png</td><td>1</td><td/></row>
-		<row><td>File.png21</td><td>ISX_DEFAULTCOMPONENT16</td><td>登录界面.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\登录界面.png</td><td>1</td><td/></row>
-		<row><td>File.png22</td><td>ISX_DEFAULTCOMPONENT16</td><td>章节未~1.PNG|章节未选中.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\章节未选中.png</td><td>1</td><td/></row>
-		<row><td>File.png23</td><td>ISX_DEFAULTCOMPONENT16</td><td>章节选中.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\章节选中.png</td><td>1</td><td/></row>
-		<row><td>File.png24</td><td>ISX_DEFAULTCOMPONENT16</td><td>菜单条~1.PNG|菜单条+.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\菜单条+.png</td><td>1</td><td/></row>
-		<row><td>File.png25</td><td>ISX_DEFAULTCOMPONENT16</td><td>菜单条-.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\菜单条-.png</td><td>1</td><td/></row>
-		<row><td>File.png26</td><td>ISX_DEFAULTCOMPONENT16</td><td>菜单条~1.PNG|菜单条_22.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\菜单条_22.png</td><td>1</td><td/></row>
-		<row><td>File.png27</td><td>ISX_DEFAULTCOMPONENT16</td><td>菜单条~1.PNG|菜单条__2.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\菜单条__2.png</td><td>1</td><td/></row>
-		<row><td>File.png28</td><td>ISX_DEFAULTCOMPONENT16</td><td>语音.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\语音.png</td><td>1</td><td/></row>
-		<row><td>File.png29</td><td>ISX_DEFAULTCOMPONENT16</td><td>课件分类.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\课件分类.png</td><td>1</td><td/></row>
-		<row><td>File.png3</td><td>ISX_DEFAULTCOMPONENT16</td><td>上一个.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\上一个.png</td><td>1</td><td/></row>
-		<row><td>File.png4</td><td>ISX_DEFAULTCOMPONENT16</td><td>下一个~1.PNG|下一个-灰.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\下一个-灰.png</td><td>1</td><td/></row>
-		<row><td>File.png5</td><td>ISX_DEFAULTCOMPONENT16</td><td>下一个.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\下一个.png</td><td>1</td><td/></row>
-		<row><td>File.png6</td><td>ISX_DEFAULTCOMPONENT16</td><td>同步-灰.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\同步-灰.png</td><td>1</td><td/></row>
-		<row><td>File.png7</td><td>ISX_DEFAULTCOMPONENT16</td><td>同步.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\同步.png</td><td>1</td><td/></row>
-		<row><td>File.png8</td><td>ISX_DEFAULTCOMPONENT16</td><td>子菜单~1.PNG|子菜单+.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\子菜单+.png</td><td>1</td><td/></row>
-		<row><td>File.png9</td><td>ISX_DEFAULTCOMPONENT16</td><td>子菜单-.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\子菜单-.png</td><td>1</td><td/></row>
-		<row><td>File.swf</td><td>ISX_DEFAULTCOMPONENT18</td><td>(乳房)~1.SWF|(乳房)触诊内容.swf</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\(乳房)触诊内容.swf</td><td>1</td><td/></row>
-		<row><td>File.swf1</td><td>ISX_DEFAULTCOMPONENT18</td><td>MURPHY~1.SWF|Murphy征与胆囊触痛检查方法.swf</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\Murphy征与胆囊触痛检查方法.swf</td><td>1</td><td/></row>
-		<row><td>File.xls</td><td>ISX_DEFAULTCOMPONENT18</td><td>(乳房)~1.XLS|(乳房)触诊内容.xls</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\(乳房)触诊内容.xls</td><td>1</td><td/></row>
-		<row><td>File.xlsx</td><td>ISX_DEFAULTCOMPONENT23</td><td>批量导~1.XLS|批量导入学生.xlsx</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\批量导入学生.xlsx</td><td>1</td><td/></row>
-		<row><td>_.err</td><td>ISX_DEFAULTCOMPONENT6</td><td>0.err</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\0.err</td><td>1</td><td/></row>
-		<row><td>_001.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2001.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2001.wav</td><td>1</td><td/></row>
-		<row><td>_001.wav1</td><td>ISX_DEFAULTCOMPONENT18</td><td>1001.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1001.wav</td><td>1</td><td/></row>
-		<row><td>_001.wav2</td><td>ISX_DEFAULTCOMPONENT21</td><td>1001.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1001.wav</td><td>1</td><td/></row>
-		<row><td>_001.wav3</td><td>ISX_DEFAULTCOMPONENT22</td><td>3001.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\3\3001.wav</td><td>1</td><td/></row>
-		<row><td>_002.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2002.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2002.wav</td><td>1</td><td/></row>
-		<row><td>_002.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1002.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1002.wav</td><td>1</td><td/></row>
-		<row><td>_002.wav2</td><td>ISX_DEFAULTCOMPONENT22</td><td>3002.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\3\3002.wav</td><td>1</td><td/></row>
-		<row><td>_003.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2003.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2003.wav</td><td>1</td><td/></row>
-		<row><td>_003.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1003.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1003.wav</td><td>1</td><td/></row>
-		<row><td>_003.wav2</td><td>ISX_DEFAULTCOMPONENT22</td><td>3003.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\3\3003.wav</td><td>1</td><td/></row>
-		<row><td>_004.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2004.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2004.wav</td><td>1</td><td/></row>
-		<row><td>_004.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1004.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1004.wav</td><td>1</td><td/></row>
-		<row><td>_004.wav2</td><td>ISX_DEFAULTCOMPONENT22</td><td>3004.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\3\3004.wav</td><td>1</td><td/></row>
-		<row><td>_005.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2005.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2005.wav</td><td>1</td><td/></row>
-		<row><td>_005.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1005.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1005.wav</td><td>1</td><td/></row>
-		<row><td>_006.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2006.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2006.wav</td><td>1</td><td/></row>
-		<row><td>_006.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1006.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1006.wav</td><td>1</td><td/></row>
-		<row><td>_007.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2007.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2007.wav</td><td>1</td><td/></row>
-		<row><td>_007.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1007.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1007.wav</td><td>1</td><td/></row>
-		<row><td>_008.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2008.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2008.wav</td><td>1</td><td/></row>
-		<row><td>_008.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1008.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1008.wav</td><td>1</td><td/></row>
-		<row><td>_009.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2009.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2009.wav</td><td>1</td><td/></row>
-		<row><td>_009.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1009.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1009.wav</td><td>1</td><td/></row>
-		<row><td>_010.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2010.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2010.wav</td><td>1</td><td/></row>
-		<row><td>_010.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1010.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1010.wav</td><td>1</td><td/></row>
-		<row><td>_011.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2011.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2011.wav</td><td>1</td><td/></row>
-		<row><td>_011.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1011.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1011.wav</td><td>1</td><td/></row>
-		<row><td>_012.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2012.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2012.wav</td><td>1</td><td/></row>
-		<row><td>_012.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1012.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1012.wav</td><td>1</td><td/></row>
-		<row><td>_013.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2013.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2013.wav</td><td>1</td><td/></row>
-		<row><td>_013.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1013.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1013.wav</td><td>1</td><td/></row>
-		<row><td>_014.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2014.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2014.wav</td><td>1</td><td/></row>
-		<row><td>_014.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1014.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1014.wav</td><td>1</td><td/></row>
-		<row><td>_015.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2015.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2015.wav</td><td>1</td><td/></row>
-		<row><td>_015.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1015.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1015.wav</td><td>1</td><td/></row>
-		<row><td>_016.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2016.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2016.wav</td><td>1</td><td/></row>
-		<row><td>_016.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1016.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1016.wav</td><td>1</td><td/></row>
-		<row><td>_017.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2017.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2017.wav</td><td>1</td><td/></row>
-		<row><td>_017.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1017.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1017.wav</td><td>1</td><td/></row>
-		<row><td>_018.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2018.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2018.wav</td><td>1</td><td/></row>
-		<row><td>_018.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1018.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1018.wav</td><td>1</td><td/></row>
-		<row><td>_019.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2019.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2019.wav</td><td>1</td><td/></row>
-		<row><td>_019.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1019.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1019.wav</td><td>1</td><td/></row>
-		<row><td>_020.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2020.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2020.wav</td><td>1</td><td/></row>
-		<row><td>_020.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1020.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1020.wav</td><td>1</td><td/></row>
-		<row><td>_021.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2021.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2021.wav</td><td>1</td><td/></row>
-		<row><td>_021.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1021.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1021.wav</td><td>1</td><td/></row>
-		<row><td>_022.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2022.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2022.wav</td><td>1</td><td/></row>
-		<row><td>_022.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1022.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1022.wav</td><td>1</td><td/></row>
-		<row><td>_023.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2023.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2023.wav</td><td>1</td><td/></row>
-		<row><td>_023.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1023.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1023.wav</td><td>1</td><td/></row>
-		<row><td>_024.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2024.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2024.wav</td><td>1</td><td/></row>
-		<row><td>_024.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1024.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1024.wav</td><td>1</td><td/></row>
-		<row><td>_025.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2025.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2025.wav</td><td>1</td><td/></row>
-		<row><td>_025.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1025.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1025.wav</td><td>1</td><td/></row>
-		<row><td>_026.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2026.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2026.wav</td><td>1</td><td/></row>
-		<row><td>_026.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1026.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1026.wav</td><td>1</td><td/></row>
-		<row><td>_027.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2027.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2027.wav</td><td>1</td><td/></row>
-		<row><td>_027.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1027.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1027.wav</td><td>1</td><td/></row>
-		<row><td>_028.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2028.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2028.wav</td><td>1</td><td/></row>
-		<row><td>_028.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1028.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1028.wav</td><td>1</td><td/></row>
-		<row><td>_029.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2029.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2029.wav</td><td>1</td><td/></row>
-		<row><td>_029.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1029.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1029.wav</td><td>1</td><td/></row>
-		<row><td>_030.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2030.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2030.wav</td><td>1</td><td/></row>
-		<row><td>_030.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1030.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1030.wav</td><td>1</td><td/></row>
-		<row><td>_031.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2031.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2031.wav</td><td>1</td><td/></row>
-		<row><td>_031.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1031.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1031.wav</td><td>1</td><td/></row>
-		<row><td>_032.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2032.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2032.wav</td><td>1</td><td/></row>
-		<row><td>_032.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1032.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1032.wav</td><td>1</td><td/></row>
-		<row><td>_033.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2033.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2033.wav</td><td>1</td><td/></row>
-		<row><td>_033.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1033.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1033.wav</td><td>1</td><td/></row>
-		<row><td>_034.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2034.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2034.wav</td><td>1</td><td/></row>
-		<row><td>_034.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1034.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1034.wav</td><td>1</td><td/></row>
-		<row><td>_035.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2035.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2035.wav</td><td>1</td><td/></row>
-		<row><td>_035.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1035.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1035.wav</td><td>1</td><td/></row>
-		<row><td>_036.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2036.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2036.wav</td><td>1</td><td/></row>
-		<row><td>_036.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1036.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1036.wav</td><td>1</td><td/></row>
-		<row><td>_037.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2037.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2037.wav</td><td>1</td><td/></row>
-		<row><td>_037.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1037.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1037.wav</td><td>1</td><td/></row>
-		<row><td>_038.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2038.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2038.wav</td><td>1</td><td/></row>
-		<row><td>_038.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1038.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1038.wav</td><td>1</td><td/></row>
-		<row><td>_039.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2039.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2039.wav</td><td>1</td><td/></row>
-		<row><td>_039.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1039.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1039.wav</td><td>1</td><td/></row>
-		<row><td>_040.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2040.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2040.wav</td><td>1</td><td/></row>
-		<row><td>_040.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1040.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1040.wav</td><td>1</td><td/></row>
-		<row><td>_041.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2041.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2041.wav</td><td>1</td><td/></row>
-		<row><td>_041.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1041.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1041.wav</td><td>1</td><td/></row>
-		<row><td>_042.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2042.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2042.wav</td><td>1</td><td/></row>
-		<row><td>_042.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1042.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1042.wav</td><td>1</td><td/></row>
-		<row><td>_043.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2043.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2043.wav</td><td>1</td><td/></row>
-		<row><td>_043.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1043.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1043.wav</td><td>1</td><td/></row>
-		<row><td>_044.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2044.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2044.wav</td><td>1</td><td/></row>
-		<row><td>_044.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1044.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1044.wav</td><td>1</td><td/></row>
-		<row><td>_045.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2045.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2045.wav</td><td>1</td><td/></row>
-		<row><td>_045.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1045.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1045.wav</td><td>1</td><td/></row>
-		<row><td>_046.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2046.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2046.wav</td><td>1</td><td/></row>
-		<row><td>_046.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1046.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1046.wav</td><td>1</td><td/></row>
-		<row><td>_047.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2047.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2047.wav</td><td>1</td><td/></row>
-		<row><td>_047.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1047.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1047.wav</td><td>1</td><td/></row>
-		<row><td>_048.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2048.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2048.wav</td><td>1</td><td/></row>
-		<row><td>_048.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1048.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1048.wav</td><td>1</td><td/></row>
-		<row><td>_049.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2049.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2049.wav</td><td>1</td><td/></row>
-		<row><td>_049.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1049.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1049.wav</td><td>1</td><td/></row>
-		<row><td>_050.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2050.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2050.wav</td><td>1</td><td/></row>
-		<row><td>_050.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1050.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1050.wav</td><td>1</td><td/></row>
-		<row><td>_051.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2051.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2051.wav</td><td>1</td><td/></row>
-		<row><td>_051.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1051.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1051.wav</td><td>1</td><td/></row>
-		<row><td>_052.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2052.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2052.wav</td><td>1</td><td/></row>
-		<row><td>_052.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1052.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1052.wav</td><td>1</td><td/></row>
-		<row><td>_053.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2053.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2053.wav</td><td>1</td><td/></row>
-		<row><td>_053.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1053.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1053.wav</td><td>1</td><td/></row>
-		<row><td>_054.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2054.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2054.wav</td><td>1</td><td/></row>
-		<row><td>_054.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1054.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1054.wav</td><td>1</td><td/></row>
-		<row><td>_055.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2055.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2055.wav</td><td>1</td><td/></row>
-		<row><td>_055.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1055.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1055.wav</td><td>1</td><td/></row>
-		<row><td>_056.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2056.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2056.wav</td><td>1</td><td/></row>
-		<row><td>_056.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1056.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1056.wav</td><td>1</td><td/></row>
-		<row><td>_057.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2057.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2057.wav</td><td>1</td><td/></row>
-		<row><td>_057.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1057.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1057.wav</td><td>1</td><td/></row>
-		<row><td>_058.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2058.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2058.wav</td><td>1</td><td/></row>
-		<row><td>_058.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1058.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1058.wav</td><td>1</td><td/></row>
-		<row><td>_059.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2059.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2059.wav</td><td>1</td><td/></row>
-		<row><td>_059.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1059.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1059.wav</td><td>1</td><td/></row>
-		<row><td>_060.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2060.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2060.wav</td><td>1</td><td/></row>
-		<row><td>_060.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1060.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1060.wav</td><td>1</td><td/></row>
-		<row><td>_061.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2061.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2061.wav</td><td>1</td><td/></row>
-		<row><td>_061.wav1</td><td>ISX_DEFAULTCOMPONENT21</td><td>1061.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\2\1061.wav</td><td>1</td><td/></row>
-		<row><td>_062.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2062.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2062.wav</td><td>1</td><td/></row>
-		<row><td>_063.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2063.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2063.wav</td><td>1</td><td/></row>
-		<row><td>_064.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2064.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2064.wav</td><td>1</td><td/></row>
-		<row><td>_065.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2065.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2065.wav</td><td>1</td><td/></row>
-		<row><td>_066.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2066.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2066.wav</td><td>1</td><td/></row>
-		<row><td>_067.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2067.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2067.wav</td><td>1</td><td/></row>
-		<row><td>_068.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2068.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2068.wav</td><td>1</td><td/></row>
-		<row><td>_069.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2069.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2069.wav</td><td>1</td><td/></row>
-		<row><td>_070.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2070.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2070.wav</td><td>1</td><td/></row>
-		<row><td>_071.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2071.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2071.wav</td><td>1</td><td/></row>
-		<row><td>_072.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2072.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2072.wav</td><td>1</td><td/></row>
-		<row><td>_073.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2073.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2073.wav</td><td>1</td><td/></row>
-		<row><td>_074.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2074.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2074.wav</td><td>1</td><td/></row>
-		<row><td>_075.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2075.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2075.wav</td><td>1</td><td/></row>
-		<row><td>_076.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2076.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2076.wav</td><td>1</td><td/></row>
-		<row><td>_077.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2077.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2077.wav</td><td>1</td><td/></row>
-		<row><td>_078.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2078.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2078.wav</td><td>1</td><td/></row>
-		<row><td>_079.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2079.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2079.wav</td><td>1</td><td/></row>
-		<row><td>_080.wav</td><td>ISX_DEFAULTCOMPONENT19</td><td>2080.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\1\2080.wav</td><td>1</td><td/></row>
-		<row><td>app.config</td><td>ISX_DEFAULTCOMPONENT20</td><td>APP~1.CON|app.config</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\app.config</td><td>1</td><td/></row>
-		<row><td>app.manifest</td><td>ISX_DEFAULTCOMPONENT15</td><td>APP~1.MAN|app.manifest</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Properties\app.manifest</td><td>1</td><td/></row>
-		<row><td>armscii8.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>armscii8.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\armscii8.xml</td><td>1</td><td/></row>
-		<row><td>ascii.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>ascii.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\ascii.xml</td><td>1</td><td/></row>
-		<row><td>assemblyinfo.cs</td><td>ISX_DEFAULTCOMPONENT15</td><td>ASSEMB~1.CS|AssemblyInfo.cs</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Properties\AssemblyInfo.cs</td><td>1</td><td/></row>
-		<row><td>axinterop.shockwaveflashobje</td><td>AxInterop.ShockwaveFlashObjects.dll</td><td>AXINTE~1.DLL|AxInterop.ShockwaveFlashObjects.dll</td><td>0</td><td/><td/><td>0</td><td>1</td><td>E:\听触诊项目\6\LoginFrame\bin\Debug\AxInterop.ShockwaveFlashObjects.dll</td><td>1</td><td/></row>
-		<row><td>bll.dll</td><td>BLL.dll</td><td>BLL.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\bin\Debug\BLL.dll</td><td>1</td><td/></row>
-		<row><td>bll.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>BLL.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\bin\Debug\BLL.pdb</td><td>1</td><td/></row>
-		<row><td>columns_priv.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>COLUMN~1.FRM|columns_priv.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\columns_priv.frm</td><td>1</td><td/></row>
-		<row><td>columns_priv.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>COLUMN~1.MYD|columns_priv.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\columns_priv.MYD</td><td>1</td><td/></row>
-		<row><td>columns_priv.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>COLUMN~1.MYI|columns_priv.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\columns_priv.MYI</td><td>1</td><td/></row>
-		<row><td>cp1250.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>cp1250.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\cp1250.xml</td><td>1</td><td/></row>
-		<row><td>cp1251.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>cp1251.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\cp1251.xml</td><td>1</td><td/></row>
-		<row><td>cp1256.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>cp1256.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\cp1256.xml</td><td>1</td><td/></row>
-		<row><td>cp1257.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>cp1257.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\cp1257.xml</td><td>1</td><td/></row>
-		<row><td>cp850.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>cp850.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\cp850.xml</td><td>1</td><td/></row>
-		<row><td>cp852.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>cp852.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\cp852.xml</td><td>1</td><td/></row>
-		<row><td>cp866.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>cp866.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\cp866.xml</td><td>1</td><td/></row>
-		<row><td>dal.dll</td><td>DAL.dll</td><td>DAL.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\bin\Debug\DAL.dll</td><td>1</td><td/></row>
-		<row><td>dal.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>DAL.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\bin\Debug\DAL.pdb</td><td>1</td><td/></row>
-		<row><td>db.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>db.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\db.frm</td><td>1</td><td/></row>
-		<row><td>db.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>db.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\db.MYD</td><td>1</td><td/></row>
-		<row><td>db.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>db.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\db.MYI</td><td>1</td><td/></row>
-		<row><td>dec8.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>dec8.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\dec8.xml</td><td>1</td><td/></row>
-		<row><td>errmsg.sys</td><td>ISX_DEFAULTCOMPONENT11</td><td>errmsg.sys</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\english\errmsg.sys</td><td>1</td><td/></row>
-		<row><td>errmsg.txt</td><td>ISX_DEFAULTCOMPONENT9</td><td>errmsg.txt</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\errmsg.txt</td><td>1</td><td/></row>
-		<row><td>event.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>event.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\event.frm</td><td>1</td><td/></row>
-		<row><td>event.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>event.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\event.MYD</td><td>1</td><td/></row>
-		<row><td>event.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>event.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\event.MYI</td><td>1</td><td/></row>
-		<row><td>ex_exam_result.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>EX_EXA~1.FRM|ex_exam_result.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\ex_exam_result.frm</td><td>1</td><td/></row>
-		<row><td>ex_exam_result.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>EX_EXA~1.MYD|ex_exam_result.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\ex_exam_result.MYD</td><td>1</td><td/></row>
-		<row><td>ex_exam_result.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>EX_EXA~1.MYI|ex_exam_result.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\ex_exam_result.MYI</td><td>1</td><td/></row>
-		<row><td>ex_examination.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>EX_EXA~1.FRM|ex_examination.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\ex_examination.frm</td><td>1</td><td/></row>
-		<row><td>ex_examination.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>EX_EXA~1.MYD|ex_examination.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\ex_examination.MYD</td><td>1</td><td/></row>
-		<row><td>ex_examination.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>EX_EXA~1.MYI|ex_examination.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\ex_examination.MYI</td><td>1</td><td/></row>
-		<row><td>ex_examination_detail.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>EX_EXA~1.FRM|ex_examination_detail.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\ex_examination_detail.frm</td><td>1</td><td/></row>
-		<row><td>ex_examination_detail.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>EX_EXA~1.MYD|ex_examination_detail.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\ex_examination_detail.MYD</td><td>1</td><td/></row>
-		<row><td>ex_examination_detail.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>EX_EXA~1.MYI|ex_examination_detail.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\ex_examination_detail.MYI</td><td>1</td><td/></row>
-		<row><td>ex_topic.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>ex_topic.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\ex_topic.frm</td><td>1</td><td/></row>
-		<row><td>ex_topic.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>ex_topic.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\ex_topic.MYD</td><td>1</td><td/></row>
-		<row><td>ex_topic.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>ex_topic.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\ex_topic.MYI</td><td>1</td><td/></row>
-		<row><td>ex_topic_detail.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>EX_TOP~1.FRM|ex_topic_detail.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\ex_topic_detail.frm</td><td>1</td><td/></row>
-		<row><td>ex_topic_detail.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>EX_TOP~1.MYD|ex_topic_detail.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\ex_topic_detail.MYD</td><td>1</td><td/></row>
-		<row><td>ex_topic_detail.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>EX_TOP~1.MYI|ex_topic_detail.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\ex_topic_detail.MYI</td><td>1</td><td/></row>
-		<row><td>favicon.ico</td><td>ISX_DEFAULTCOMPONENT13</td><td>favicon.ico</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\icon\favicon.ico</td><td>1</td><td/></row>
-		<row><td>foot.jpg</td><td>ISX_DEFAULTCOMPONENT16</td><td>foot.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\foot.jpg</td><td>1</td><td/></row>
-		<row><td>func.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>func.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\func.frm</td><td>1</td><td/></row>
-		<row><td>func.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>func.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\func.MYD</td><td>1</td><td/></row>
-		<row><td>func.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>func.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\func.MYI</td><td>1</td><td/></row>
-		<row><td>general_log.csm</td><td>ISX_DEFAULTCOMPONENT7</td><td>GENERA~1.CSM|general_log.CSM</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\general_log.CSM</td><td>1</td><td/></row>
-		<row><td>general_log.csv</td><td>ISX_DEFAULTCOMPONENT7</td><td>GENERA~1.CSV|general_log.CSV</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\general_log.CSV</td><td>1</td><td/></row>
-		<row><td>general_log.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>GENERA~1.FRM|general_log.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\general_log.frm</td><td>1</td><td/></row>
-		<row><td>geostd8.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>geostd8.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\geostd8.xml</td><td>1</td><td/></row>
-		<row><td>greek.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>greek.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\greek.xml</td><td>1</td><td/></row>
-		<row><td>head.png</td><td>ISX_DEFAULTCOMPONENT16</td><td>head.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\head.png</td><td>1</td><td/></row>
-		<row><td>head1.jpg</td><td>ISX_DEFAULTCOMPONENT16</td><td>head1.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\head1.jpg</td><td>1</td><td/></row>
-		<row><td>hebrew.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>hebrew.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\hebrew.xml</td><td>1</td><td/></row>
-		<row><td>help_category.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>HELP_C~1.FRM|help_category.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\help_category.frm</td><td>1</td><td/></row>
-		<row><td>help_category.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>HELP_C~1.MYD|help_category.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\help_category.MYD</td><td>1</td><td/></row>
-		<row><td>help_category.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>HELP_C~1.MYI|help_category.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\help_category.MYI</td><td>1</td><td/></row>
-		<row><td>help_keyword.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>HELP_K~1.FRM|help_keyword.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\help_keyword.frm</td><td>1</td><td/></row>
-		<row><td>help_keyword.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>HELP_K~1.MYD|help_keyword.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\help_keyword.MYD</td><td>1</td><td/></row>
-		<row><td>help_keyword.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>HELP_K~1.MYI|help_keyword.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\help_keyword.MYI</td><td>1</td><td/></row>
-		<row><td>help_relation.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>HELP_R~1.FRM|help_relation.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\help_relation.frm</td><td>1</td><td/></row>
-		<row><td>help_relation.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>HELP_R~1.MYD|help_relation.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\help_relation.MYD</td><td>1</td><td/></row>
-		<row><td>help_relation.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>HELP_R~1.MYI|help_relation.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\help_relation.MYI</td><td>1</td><td/></row>
-		<row><td>help_topic.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>HELP_T~1.FRM|help_topic.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\help_topic.frm</td><td>1</td><td/></row>
-		<row><td>help_topic.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>HELP_T~1.MYD|help_topic.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\help_topic.MYD</td><td>1</td><td/></row>
-		<row><td>help_topic.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>HELP_T~1.MYI|help_topic.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\help_topic.MYI</td><td>1</td><td/></row>
-		<row><td>host.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>host.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\host.frm</td><td>1</td><td/></row>
-		<row><td>host.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>host.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\host.MYD</td><td>1</td><td/></row>
-		<row><td>host.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>host.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\host.MYI</td><td>1</td><td/></row>
-		<row><td>hp8.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>hp8.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\hp8.xml</td><td>1</td><td/></row>
-		<row><td>icsharpcode.sharpziplib.dll</td><td>ICSharpCode.SharpZipLib.dll</td><td>ICSHAR~1.DLL|ICSharpCode.SharpZipLib.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\bin\Debug\ICSharpCode.SharpZipLib.dll</td><td>1</td><td/></row>
-		<row><td>index.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>Index.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\Index.xml</td><td>1</td><td/></row>
-		<row><td>install.bat</td><td>ISX_DEFAULTCOMPONENT4</td><td>install.bat</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\install.bat</td><td>1</td><td/></row>
-		<row><td>interop.shockwaveflashobject</td><td>Interop.ShockwaveFlashObjects.dll</td><td>INTERO~1.DLL|Interop.ShockwaveFlashObjects.dll</td><td>0</td><td/><td/><td>0</td><td>1</td><td>E:\听触诊项目\6\LoginFrame\bin\Debug\Interop.ShockwaveFlashObjects.dll</td><td>1</td><td/></row>
-		<row><td>keybcs2.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>keybcs2.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\keybcs2.xml</td><td>1</td><td/></row>
-		<row><td>koi8r.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>koi8r.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\koi8r.xml</td><td>1</td><td/></row>
-		<row><td>koi8u.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>koi8u.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\koi8u.xml</td><td>1</td><td/></row>
-		<row><td>languages.html</td><td>ISX_DEFAULTCOMPONENT10</td><td>LANGUA~1.HTM|languages.html</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\languages.html</td><td>1</td><td/></row>
-		<row><td>latin1.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>latin1.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\latin1.xml</td><td>1</td><td/></row>
-		<row><td>latin2.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>latin2.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\latin2.xml</td><td>1</td><td/></row>
-		<row><td>latin5.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>latin5.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\latin5.xml</td><td>1</td><td/></row>
-		<row><td>latin7.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>latin7.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\latin7.xml</td><td>1</td><td/></row>
-		<row><td>loadinf_blue.gif</td><td>ISX_DEFAULTCOMPONENT16</td><td>LOADIN~1.GIF|loadinf_blue.gif</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\loadinf_blue.gif</td><td>1</td><td/></row>
-		<row><td>macce.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>macce.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\macce.xml</td><td>1</td><td/></row>
-		<row><td>macroman.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>macroman.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\macroman.xml</td><td>1</td><td/></row>
-		<row><td>microsoft.directx.directsoun</td><td>Microsoft.DirectX.DirectSound.dll</td><td>MICROS~1.DLL|Microsoft.DirectX.DirectSound.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\bin\Debug\Microsoft.DirectX.DirectSound.dll</td><td>1</td><td/></row>
-		<row><td>microsoft.directx.dll</td><td>Microsoft.DirectX.dll</td><td>MICROS~1.DLL|Microsoft.DirectX.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\bin\Debug\Microsoft.DirectX.dll</td><td>1</td><td/></row>
-		<row><td>microsoft.qualitytools.testi</td><td>Microsoft.QualityTools.Testing.Fakes.dll</td><td>MICROS~1.DLL|Microsoft.QualityTools.Testing.Fakes.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll</td><td>1</td><td/></row>
-		<row><td>model.dll</td><td>Model.dll</td><td>Model.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\bin\Debug\Model.dll</td><td>1</td><td/></row>
-		<row><td>model.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>Model.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\bin\Debug\Model.pdb</td><td>1</td><td/></row>
-		<row><td>my.ini</td><td>ISX_DEFAULTCOMPONENT4</td><td>my.ini</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\my.ini</td><td>1</td><td/></row>
-		<row><td>my_large.ini</td><td>ISX_DEFAULTCOMPONENT4</td><td>my_large.ini</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\my_large.ini</td><td>1</td><td/></row>
-		<row><td>my_small.ini</td><td>ISX_DEFAULTCOMPONENT4</td><td>my_small.ini</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\my_small.ini</td><td>1</td><td/></row>
-		<row><td>mysql.data.dll</td><td>MySql.Data.dll</td><td>MYSQLD~1.DLL|MySql.Data.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\bin\Debug\MySql.Data.dll</td><td>1</td><td/></row>
-		<row><td>mysql.exe</td><td>mysql.exe</td><td>mysql.exe</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\bin\mysql.exe</td><td>1</td><td/></row>
-		<row><td>mysqladmin.exe</td><td>mysqladmin.exe</td><td>MYSQLA~1.EXE|mysqladmin.exe</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\bin\mysqladmin.exe</td><td>1</td><td/></row>
-		<row><td>mysqld_nt.exe</td><td>mysqld_nt.exe</td><td>MYSQLD~1.EXE|mysqld-nt.exe</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\bin\mysqld-nt.exe</td><td>1</td><td/></row>
-		<row><td>mysqldump.exe</td><td>mysqldump.exe</td><td>MYSQLD~1.EXE|mysqldump.exe</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\bin\mysqldump.exe</td><td>1</td><td/></row>
-		<row><td>mysqlimport.exe</td><td>mysqlimport.exe</td><td>MYSQLI~1.EXE|mysqlimport.exe</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\bin\mysqlimport.exe</td><td>1</td><td/></row>
-		<row><td>ndb_binlog_index.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>NDB_BI~1.FRM|ndb_binlog_index.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\ndb_binlog_index.frm</td><td>1</td><td/></row>
-		<row><td>ndb_binlog_index.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>NDB_BI~1.MYD|ndb_binlog_index.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\ndb_binlog_index.MYD</td><td>1</td><td/></row>
-		<row><td>ndb_binlog_index.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>NDB_BI~1.MYI|ndb_binlog_index.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\ndb_binlog_index.MYI</td><td>1</td><td/></row>
-		<row><td>plugin.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>plugin.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\plugin.frm</td><td>1</td><td/></row>
-		<row><td>plugin.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>plugin.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\plugin.MYD</td><td>1</td><td/></row>
-		<row><td>plugin.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>plugin.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\plugin.MYI</td><td>1</td><td/></row>
-		<row><td>proc.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>proc.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\proc.frm</td><td>1</td><td/></row>
-		<row><td>proc.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>proc.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\proc.MYD</td><td>1</td><td/></row>
-		<row><td>proc.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>proc.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\proc.MYI</td><td>1</td><td/></row>
-		<row><td>procs_priv.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>PROCS_~1.FRM|procs_priv.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\procs_priv.frm</td><td>1</td><td/></row>
-		<row><td>procs_priv.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>PROCS_~1.MYD|procs_priv.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\procs_priv.MYD</td><td>1</td><td/></row>
-		<row><td>procs_priv.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>PROCS_~1.MYI|procs_priv.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\procs_priv.MYI</td><td>1</td><td/></row>
-		<row><td>readme</td><td>ISX_DEFAULTCOMPONENT10</td><td>README</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\README</td><td>1</td><td/></row>
-		<row><td>resources.designer.cs</td><td>ISX_DEFAULTCOMPONENT15</td><td>RESOUR~1.CS|Resources.Designer.cs</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Properties\Resources.Designer.cs</td><td>1</td><td/></row>
-		<row><td>resources.resx</td><td>ISX_DEFAULTCOMPONENT15</td><td>RESOUR~1.RES|Resources.resx</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Properties\Resources.resx</td><td>1</td><td/></row>
-		<row><td>restart.bat</td><td>ISX_DEFAULTCOMPONENT4</td><td>restart.bat</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\restart.bat</td><td>1</td><td/></row>
-		<row><td>servers.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>servers.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\servers.frm</td><td>1</td><td/></row>
-		<row><td>servers.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>servers.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\servers.MYD</td><td>1</td><td/></row>
-		<row><td>servers.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>servers.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\servers.MYI</td><td>1</td><td/></row>
-		<row><td>settings.designer.cs</td><td>ISX_DEFAULTCOMPONENT15</td><td>SETTIN~1.CS|Settings.Designer.cs</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Properties\Settings.Designer.cs</td><td>1</td><td/></row>
-		<row><td>settings.settings</td><td>ISX_DEFAULTCOMPONENT15</td><td>SETTIN~1.SET|Settings.settings</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Properties\Settings.settings</td><td>1</td><td/></row>
-		<row><td>slow_log.csm</td><td>ISX_DEFAULTCOMPONENT7</td><td>slow_log.CSM</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\slow_log.CSM</td><td>1</td><td/></row>
-		<row><td>slow_log.csv</td><td>ISX_DEFAULTCOMPONENT7</td><td>slow_log.CSV</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\slow_log.CSV</td><td>1</td><td/></row>
-		<row><td>slow_log.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>slow_log.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\slow_log.frm</td><td>1</td><td/></row>
-		<row><td>stdole.dll</td><td>stdole.dll</td><td>stdole.dll</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\bin\Debug\stdole.dll</td><td>1</td><td/></row>
-		<row><td>swe7.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>swe7.xml</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\share\charsets\swe7.xml</td><td>1</td><td/></row>
-		<row><td>sys_class.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>SYS_CL~1.FRM|sys_class.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\sys_class.frm</td><td>1</td><td/></row>
-		<row><td>sys_class.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>SYS_CL~1.MYD|sys_class.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\sys_class.MYD</td><td>1</td><td/></row>
-		<row><td>sys_class.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>SYS_CL~1.MYI|sys_class.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\sys_class.MYI</td><td>1</td><td/></row>
-		<row><td>sys_user.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>sys_user.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\sys_user.frm</td><td>1</td><td/></row>
-		<row><td>sys_user.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>sys_user.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\sys_user.MYD</td><td>1</td><td/></row>
-		<row><td>sys_user.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>sys_user.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\sys_user.MYI</td><td>1</td><td/></row>
-		<row><td>sys_user_class.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>SYS_US~1.FRM|sys_user_class.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\sys_user_class.frm</td><td>1</td><td/></row>
-		<row><td>sys_user_class.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>SYS_US~1.MYD|sys_user_class.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\sys_user_class.MYD</td><td>1</td><td/></row>
-		<row><td>sys_user_class.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>SYS_US~1.MYI|sys_user_class.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\sys_user_class.MYI</td><td>1</td><td/></row>
-		<row><td>sys_user_favorites.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>SYS_US~1.FRM|sys_user_favorites.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\sys_user_favorites.frm</td><td>1</td><td/></row>
-		<row><td>sys_user_favorites.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>SYS_US~1.MYD|sys_user_favorites.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\sys_user_favorites.MYD</td><td>1</td><td/></row>
-		<row><td>sys_user_favorites.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>SYS_US~1.MYI|sys_user_favorites.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\sys_user_favorites.MYI</td><td>1</td><td/></row>
-		<row><td>sys_user_type.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>SYS_US~1.FRM|sys_user_type.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\sys_user_type.frm</td><td>1</td><td/></row>
-		<row><td>sys_user_type.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>SYS_US~1.MYD|sys_user_type.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\sys_user_type.MYD</td><td>1</td><td/></row>
-		<row><td>sys_user_type.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>SYS_US~1.MYI|sys_user_type.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\sys_user_type.MYI</td><td>1</td><td/></row>
-		<row><td>tables_priv.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>TABLES~1.FRM|tables_priv.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\tables_priv.frm</td><td>1</td><td/></row>
-		<row><td>tables_priv.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>TABLES~1.MYD|tables_priv.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\tables_priv.MYD</td><td>1</td><td/></row>
-		<row><td>tables_priv.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>TABLES~1.MYI|tables_priv.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\tables_priv.MYI</td><td>1</td><td/></row>
-		<row><td>tcz_agreement.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_AG~1.FRM|tcz_agreement.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\tcz_agreement.frm</td><td>1</td><td/></row>
-		<row><td>tcz_agreement.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_AG~1.MYD|tcz_agreement.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\tcz_agreement.MYD</td><td>1</td><td/></row>
-		<row><td>tcz_agreement.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_AG~1.MYI|tcz_agreement.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\tcz_agreement.MYI</td><td>1</td><td/></row>
-		<row><td>tcz_classes.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_CL~1.FRM|tcz_classes.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\tcz_classes.frm</td><td>1</td><td/></row>
-		<row><td>tcz_classes.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_CL~1.MYD|tcz_classes.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\tcz_classes.MYD</td><td>1</td><td/></row>
-		<row><td>tcz_classes.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_CL~1.MYI|tcz_classes.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\tcz_classes.MYI</td><td>1</td><td/></row>
-		<row><td>tcz_czmnr.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_CZ~1.FRM|tcz_czmnr.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\tcz_czmnr.frm</td><td>1</td><td/></row>
-		<row><td>tcz_czmnr.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_CZ~1.MYD|tcz_czmnr.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\tcz_czmnr.MYD</td><td>1</td><td/></row>
-		<row><td>tcz_czmnr.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_CZ~1.MYI|tcz_czmnr.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\tcz_czmnr.MYI</td><td>1</td><td/></row>
-		<row><td>tcz_lessons.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_LE~1.FRM|tcz_lessons.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\tcz_lessons.frm</td><td>1</td><td/></row>
-		<row><td>tcz_lessons.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_LE~1.MYD|tcz_lessons.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\tcz_lessons.MYD</td><td>1</td><td/></row>
-		<row><td>tcz_lessons.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_LE~1.MYI|tcz_lessons.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\tcz_lessons.MYI</td><td>1</td><td/></row>
-		<row><td>tcz_type.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>tcz_type.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\tcz_type.frm</td><td>1</td><td/></row>
-		<row><td>tcz_type.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>tcz_type.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\tcz_type.MYD</td><td>1</td><td/></row>
-		<row><td>tcz_type.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>tcz_type.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\tcz_type.MYI</td><td>1</td><td/></row>
-		<row><td>tcz_tzmnr.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_TZ~1.FRM|tcz_tzmnr.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\tcz_tzmnr.frm</td><td>1</td><td/></row>
-		<row><td>tcz_tzmnr.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_TZ~1.MYD|tcz_tzmnr.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\tcz_tzmnr.MYD</td><td>1</td><td/></row>
-		<row><td>tcz_tzmnr.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_TZ~1.MYI|tcz_tzmnr.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\tcz\tcz_tzmnr.MYI</td><td>1</td><td/></row>
-		<row><td>time_zone.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.FRM|time_zone.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\time_zone.frm</td><td>1</td><td/></row>
-		<row><td>time_zone.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.MYD|time_zone.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\time_zone.MYD</td><td>1</td><td/></row>
-		<row><td>time_zone.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.MYI|time_zone.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\time_zone.MYI</td><td>1</td><td/></row>
-		<row><td>time_zone_leap_second.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.FRM|time_zone_leap_second.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\time_zone_leap_second.frm</td><td>1</td><td/></row>
-		<row><td>time_zone_leap_second.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.MYD|time_zone_leap_second.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\time_zone_leap_second.MYD</td><td>1</td><td/></row>
-		<row><td>time_zone_leap_second.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.MYI|time_zone_leap_second.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\time_zone_leap_second.MYI</td><td>1</td><td/></row>
-		<row><td>time_zone_name.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.FRM|time_zone_name.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\time_zone_name.frm</td><td>1</td><td/></row>
-		<row><td>time_zone_name.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.MYD|time_zone_name.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\time_zone_name.MYD</td><td>1</td><td/></row>
-		<row><td>time_zone_name.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.MYI|time_zone_name.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\time_zone_name.MYI</td><td>1</td><td/></row>
-		<row><td>time_zone_transition.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.FRM|time_zone_transition.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\time_zone_transition.frm</td><td>1</td><td/></row>
-		<row><td>time_zone_transition.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.MYD|time_zone_transition.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\time_zone_transition.MYD</td><td>1</td><td/></row>
-		<row><td>time_zone_transition.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.MYI|time_zone_transition.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\time_zone_transition.MYI</td><td>1</td><td/></row>
-		<row><td>time_zone_transition_type.fr</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.FRM|time_zone_transition_type.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\time_zone_transition_type.frm</td><td>1</td><td/></row>
-		<row><td>time_zone_transition_type.my</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.MYD|time_zone_transition_type.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\time_zone_transition_type.MYD</td><td>1</td><td/></row>
-		<row><td>time_zone_transition_type.my1</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.MYI|time_zone_transition_type.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\time_zone_transition_type.MYI</td><td>1</td><td/></row>
-		<row><td>uninstall.bat</td><td>ISX_DEFAULTCOMPONENT4</td><td>UNINST~1.BAT|uninstall.bat</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\uninstall.bat</td><td>1</td><td/></row>
-		<row><td>user.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>user.frm</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\user.frm</td><td>1</td><td/></row>
-		<row><td>user.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>user.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\user.MYD</td><td>1</td><td/></row>
-		<row><td>user.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>user.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\DB\MySQL5.1\data\mysql\user.MYI</td><td>1</td><td/></row>
-		<row><td>youaremysunshine.wav</td><td>ISX_DEFAULTCOMPONENT16</td><td>YOUARE~1.WAV|YouAreMySunshine.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\Resources\YouAreMySunshine.wav</td><td>1</td><td/></row>
-		<row><td>youaremysunshine.wav1</td><td>ISX_DEFAULTCOMPONENT18</td><td>YOUARE~1.WAV|YouAreMySunshine.wav</td><td>0</td><td/><td/><td/><td>1</td><td>E:\听触诊项目\6\LoginFrame\lessons\YouAreMySunshine.wav</td><td>1</td><td/></row>
+		<row><td>File.con</td><td>ISX_DEFAULTCOMPONENT</td><td>听触诊~1.CON|听触诊体格检查网络教学系统.vshost.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\bin\Debug\听触诊体格检查网络教学系统.vshost.exe.config</td><td>1</td><td/></row>
+		<row><td>File.config</td><td>ISX_DEFAULTCOMPONENT</td><td>听触诊~1.CON|听触诊体格检查网络教学系统.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\bin\Debug\听触诊体格检查网络教学系统.exe.config</td><td>1</td><td/></row>
+		<row><td>File.dll</td><td>Component.dll</td><td>听触诊~1.DLL|听触诊体格检查网络教学系统.resources.dll</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\bin\Debug\en\听触诊体格检查网络教学系统.resources.dll</td><td>1</td><td/></row>
+		<row><td>File.dll1</td><td>Component.dll1</td><td>听触诊~1.DLL|听触诊体格检查网络教学系统.resources.dll</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\bin\Debug\zh-CN\听触诊体格检查网络教学系统.resources.dll</td><td>1</td><td/></row>
+		<row><td>File.exe</td><td>Component.exe</td><td>听触诊~1.EXE|听触诊体格检查网络教学系统.exe</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\bin\Debug\听触诊体格检查网络教学系统.exe</td><td>1</td><td/></row>
+		<row><td>File.exe1</td><td>Component.exe1</td><td>听触诊~1.EXE|听触诊体格检查网络教学系统.vshost.exe</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\bin\Debug\听触诊体格检查网络教学系统.vshost.exe</td><td>1</td><td/></row>
+		<row><td>File.man</td><td>ISX_DEFAULTCOMPONENT</td><td>听触诊~1.MAN|听触诊体格检查网络教学系统.vshost.exe.manifest</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\bin\Debug\听触诊体格检查网络教学系统.vshost.exe.manifest</td><td>1</td><td/></row>
+		<row><td>File.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>听触诊~1.PDB|听触诊体格检查网络教学系统.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\bin\Debug\听触诊体格检查网络教学系统.pdb</td><td>1</td><td/></row>
+		<row><td>File.png</td><td>ISX_DEFAULTCOMPONENT13</td><td>登录按钮.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\pic\登录按钮.png</td><td>1</td><td/></row>
+		<row><td>File.png1</td><td>ISX_DEFAULTCOMPONENT13</td><td>登录框.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\pic\登录框.png</td><td>1</td><td/></row>
+		<row><td>File.png10</td><td>ISX_DEFAULTCOMPONENT15</td><td>对讲-灰.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\对讲-灰.png</td><td>1</td><td/></row>
+		<row><td>File.png11</td><td>ISX_DEFAULTCOMPONENT15</td><td>对讲.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\对讲.png</td><td>1</td><td/></row>
+		<row><td>File.png12</td><td>ISX_DEFAULTCOMPONENT15</td><td>扩音-灰.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\扩音-灰.png</td><td>1</td><td/></row>
+		<row><td>File.png13</td><td>ISX_DEFAULTCOMPONENT15</td><td>扩音.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\扩音.png</td><td>1</td><td/></row>
+		<row><td>File.png14</td><td>ISX_DEFAULTCOMPONENT15</td><td>播放-灰.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\播放-灰.png</td><td>1</td><td/></row>
+		<row><td>File.png15</td><td>ISX_DEFAULTCOMPONENT15</td><td>播放.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\播放.png</td><td>1</td><td/></row>
+		<row><td>File.png16</td><td>ISX_DEFAULTCOMPONENT15</td><td>收藏夹~1.PNG|收藏夹-灰.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\收藏夹-灰.png</td><td>1</td><td/></row>
+		<row><td>File.png17</td><td>ISX_DEFAULTCOMPONENT15</td><td>收藏夹.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\收藏夹.png</td><td>1</td><td/></row>
+		<row><td>File.png18</td><td>ISX_DEFAULTCOMPONENT15</td><td>收藏条目.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\收藏条目.png</td><td>1</td><td/></row>
+		<row><td>File.png19</td><td>ISX_DEFAULTCOMPONENT15</td><td>暂停-灰.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\暂停-灰.png</td><td>1</td><td/></row>
+		<row><td>File.png2</td><td>ISX_DEFAULTCOMPONENT15</td><td>上一个~1.PNG|上一个-灰.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\上一个-灰.png</td><td>1</td><td/></row>
+		<row><td>File.png20</td><td>ISX_DEFAULTCOMPONENT15</td><td>暂停.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\暂停.png</td><td>1</td><td/></row>
+		<row><td>File.png21</td><td>ISX_DEFAULTCOMPONENT15</td><td>登录界面.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\登录界面.png</td><td>1</td><td/></row>
+		<row><td>File.png22</td><td>ISX_DEFAULTCOMPONENT15</td><td>章节未~1.PNG|章节未选中.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\章节未选中.png</td><td>1</td><td/></row>
+		<row><td>File.png23</td><td>ISX_DEFAULTCOMPONENT15</td><td>章节选中.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\章节选中.png</td><td>1</td><td/></row>
+		<row><td>File.png24</td><td>ISX_DEFAULTCOMPONENT15</td><td>菜单条~1.PNG|菜单条+.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\菜单条+.png</td><td>1</td><td/></row>
+		<row><td>File.png25</td><td>ISX_DEFAULTCOMPONENT15</td><td>菜单条-.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\菜单条-.png</td><td>1</td><td/></row>
+		<row><td>File.png26</td><td>ISX_DEFAULTCOMPONENT15</td><td>菜单条~1.PNG|菜单条_22.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\菜单条_22.png</td><td>1</td><td/></row>
+		<row><td>File.png27</td><td>ISX_DEFAULTCOMPONENT15</td><td>菜单条~1.PNG|菜单条__2.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\菜单条__2.png</td><td>1</td><td/></row>
+		<row><td>File.png28</td><td>ISX_DEFAULTCOMPONENT15</td><td>语音.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\语音.png</td><td>1</td><td/></row>
+		<row><td>File.png29</td><td>ISX_DEFAULTCOMPONENT15</td><td>课件分类.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\课件分类.png</td><td>1</td><td/></row>
+		<row><td>File.png3</td><td>ISX_DEFAULTCOMPONENT15</td><td>上一个.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\上一个.png</td><td>1</td><td/></row>
+		<row><td>File.png4</td><td>ISX_DEFAULTCOMPONENT15</td><td>下一个~1.PNG|下一个-灰.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\下一个-灰.png</td><td>1</td><td/></row>
+		<row><td>File.png5</td><td>ISX_DEFAULTCOMPONENT15</td><td>下一个.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\下一个.png</td><td>1</td><td/></row>
+		<row><td>File.png6</td><td>ISX_DEFAULTCOMPONENT15</td><td>同步-灰.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\同步-灰.png</td><td>1</td><td/></row>
+		<row><td>File.png7</td><td>ISX_DEFAULTCOMPONENT15</td><td>同步.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\同步.png</td><td>1</td><td/></row>
+		<row><td>File.png8</td><td>ISX_DEFAULTCOMPONENT15</td><td>子菜单~1.PNG|子菜单+.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\子菜单+.png</td><td>1</td><td/></row>
+		<row><td>File.png9</td><td>ISX_DEFAULTCOMPONENT15</td><td>子菜单-.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\子菜单-.png</td><td>1</td><td/></row>
+		<row><td>File.xlsx</td><td>ISX_DEFAULTCOMPONENT20</td><td>批量导~1.XLS|批量导入学生.xlsx</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\批量导入学生.xlsx</td><td>1</td><td/></row>
+		<row><td>_.err</td><td>ISX_DEFAULTCOMPONENT6</td><td>0.err</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\0.err</td><td>1</td><td/></row>
+		<row><td>app.config</td><td>ISX_DEFAULTCOMPONENT20</td><td>APP~1.CON|app.config</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\app.config</td><td>1</td><td/></row>
+		<row><td>app.manifest</td><td>ISX_DEFAULTCOMPONENT14</td><td>APP~1.MAN|app.manifest</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Properties\app.manifest</td><td>1</td><td/></row>
+		<row><td>armscii8.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>armscii8.xml</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\armscii8.xml</td><td>1</td><td/></row>
+		<row><td>ascii.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>ascii.xml</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\ascii.xml</td><td>1</td><td/></row>
+		<row><td>assemblyinfo.cs</td><td>ISX_DEFAULTCOMPONENT14</td><td>ASSEMB~1.CS|AssemblyInfo.cs</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Properties\AssemblyInfo.cs</td><td>1</td><td/></row>
+		<row><td>axinterop.shockwaveflashobje</td><td>AxInterop.ShockwaveFlashObjects.dll</td><td>AXINTE~1.DLL|AxInterop.ShockwaveFlashObjects.dll</td><td>0</td><td/><td/><td>0</td><td>1</td><td>F:\听触诊\9\LoginFrame\bin\Debug\AxInterop.ShockwaveFlashObjects.dll</td><td>1</td><td/></row>
+		<row><td>bll.dll</td><td>BLL.dll</td><td>BLL.dll</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\bin\Debug\BLL.dll</td><td>1</td><td/></row>
+		<row><td>bll.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>BLL.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\bin\Debug\BLL.pdb</td><td>1</td><td/></row>
+		<row><td>columns_priv.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>COLUMN~1.FRM|columns_priv.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\columns_priv.frm</td><td>1</td><td/></row>
+		<row><td>columns_priv.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>COLUMN~1.MYD|columns_priv.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\columns_priv.MYD</td><td>1</td><td/></row>
+		<row><td>columns_priv.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>COLUMN~1.MYI|columns_priv.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\columns_priv.MYI</td><td>1</td><td/></row>
+		<row><td>cp1250.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>cp1250.xml</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\cp1250.xml</td><td>1</td><td/></row>
+		<row><td>cp1251.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>cp1251.xml</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\cp1251.xml</td><td>1</td><td/></row>
+		<row><td>cp1256.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>cp1256.xml</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\cp1256.xml</td><td>1</td><td/></row>
+		<row><td>cp1257.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>cp1257.xml</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\cp1257.xml</td><td>1</td><td/></row>
+		<row><td>cp850.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>cp850.xml</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\cp850.xml</td><td>1</td><td/></row>
+		<row><td>cp852.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>cp852.xml</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\cp852.xml</td><td>1</td><td/></row>
+		<row><td>cp866.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>cp866.xml</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\cp866.xml</td><td>1</td><td/></row>
+		<row><td>dal.dll</td><td>DAL.dll</td><td>DAL.dll</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\bin\Debug\DAL.dll</td><td>1</td><td/></row>
+		<row><td>dal.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>DAL.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\bin\Debug\DAL.pdb</td><td>1</td><td/></row>
+		<row><td>db.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>db.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\db.frm</td><td>1</td><td/></row>
+		<row><td>db.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>db.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\db.MYD</td><td>1</td><td/></row>
+		<row><td>db.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>db.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\db.MYI</td><td>1</td><td/></row>
+		<row><td>dec8.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>dec8.xml</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\dec8.xml</td><td>1</td><td/></row>
+		<row><td>errmsg.sys</td><td>ISX_DEFAULTCOMPONENT11</td><td>errmsg.sys</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\english\errmsg.sys</td><td>1</td><td/></row>
+		<row><td>errmsg.txt</td><td>ISX_DEFAULTCOMPONENT9</td><td>errmsg.txt</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\errmsg.txt</td><td>1</td><td/></row>
+		<row><td>event.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>event.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\event.frm</td><td>1</td><td/></row>
+		<row><td>event.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>event.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\event.MYD</td><td>1</td><td/></row>
+		<row><td>event.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>event.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\event.MYI</td><td>1</td><td/></row>
+		<row><td>ex_exam_result.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>EX_EXA~1.FRM|ex_exam_result.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\ex_exam_result.frm</td><td>1</td><td/></row>
+		<row><td>ex_exam_result.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>EX_EXA~1.MYD|ex_exam_result.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\ex_exam_result.MYD</td><td>1</td><td/></row>
+		<row><td>ex_exam_result.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>EX_EXA~1.MYI|ex_exam_result.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\ex_exam_result.MYI</td><td>1</td><td/></row>
+		<row><td>ex_examination.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>EX_EXA~1.FRM|ex_examination.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\ex_examination.frm</td><td>1</td><td/></row>
+		<row><td>ex_examination.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>EX_EXA~1.MYD|ex_examination.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\ex_examination.MYD</td><td>1</td><td/></row>
+		<row><td>ex_examination.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>EX_EXA~1.MYI|ex_examination.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\ex_examination.MYI</td><td>1</td><td/></row>
+		<row><td>ex_examination_detail.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>EX_EXA~1.FRM|ex_examination_detail.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\ex_examination_detail.frm</td><td>1</td><td/></row>
+		<row><td>ex_examination_detail.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>EX_EXA~1.MYD|ex_examination_detail.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\ex_examination_detail.MYD</td><td>1</td><td/></row>
+		<row><td>ex_examination_detail.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>EX_EXA~1.MYI|ex_examination_detail.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\ex_examination_detail.MYI</td><td>1</td><td/></row>
+		<row><td>ex_topic.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>ex_topic.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\ex_topic.frm</td><td>1</td><td/></row>
+		<row><td>ex_topic.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>ex_topic.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\ex_topic.MYD</td><td>1</td><td/></row>
+		<row><td>ex_topic.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>ex_topic.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\ex_topic.MYI</td><td>1</td><td/></row>
+		<row><td>ex_topic_detail.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>EX_TOP~1.FRM|ex_topic_detail.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\ex_topic_detail.frm</td><td>1</td><td/></row>
+		<row><td>ex_topic_detail.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>EX_TOP~1.MYD|ex_topic_detail.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\ex_topic_detail.MYD</td><td>1</td><td/></row>
+		<row><td>ex_topic_detail.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>EX_TOP~1.MYI|ex_topic_detail.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\ex_topic_detail.MYI</td><td>1</td><td/></row>
+		<row><td>favicon.ico</td><td>ISX_DEFAULTCOMPONENT12</td><td>favicon.ico</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\icon\favicon.ico</td><td>1</td><td/></row>
+		<row><td>foot.jpg</td><td>ISX_DEFAULTCOMPONENT15</td><td>foot.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\foot.jpg</td><td>1</td><td/></row>
+		<row><td>func.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>func.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\func.frm</td><td>1</td><td/></row>
+		<row><td>func.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>func.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\func.MYD</td><td>1</td><td/></row>
+		<row><td>func.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>func.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\func.MYI</td><td>1</td><td/></row>
+		<row><td>general_log.csm</td><td>ISX_DEFAULTCOMPONENT7</td><td>GENERA~1.CSM|general_log.CSM</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\general_log.CSM</td><td>1</td><td/></row>
+		<row><td>general_log.csv</td><td>ISX_DEFAULTCOMPONENT7</td><td>GENERA~1.CSV|general_log.CSV</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\general_log.CSV</td><td>1</td><td/></row>
+		<row><td>general_log.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>GENERA~1.FRM|general_log.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\general_log.frm</td><td>1</td><td/></row>
+		<row><td>geostd8.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>geostd8.xml</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\geostd8.xml</td><td>1</td><td/></row>
+		<row><td>greek.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>greek.xml</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\greek.xml</td><td>1</td><td/></row>
+		<row><td>head.png</td><td>ISX_DEFAULTCOMPONENT15</td><td>head.png</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\head.png</td><td>1</td><td/></row>
+		<row><td>head1.jpg</td><td>ISX_DEFAULTCOMPONENT15</td><td>head1.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\head1.jpg</td><td>1</td><td/></row>
+		<row><td>hebrew.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>hebrew.xml</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\hebrew.xml</td><td>1</td><td/></row>
+		<row><td>help_category.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>HELP_C~1.FRM|help_category.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\help_category.frm</td><td>1</td><td/></row>
+		<row><td>help_category.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>HELP_C~1.MYD|help_category.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\help_category.MYD</td><td>1</td><td/></row>
+		<row><td>help_category.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>HELP_C~1.MYI|help_category.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\help_category.MYI</td><td>1</td><td/></row>
+		<row><td>help_keyword.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>HELP_K~1.FRM|help_keyword.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\help_keyword.frm</td><td>1</td><td/></row>
+		<row><td>help_keyword.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>HELP_K~1.MYD|help_keyword.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\help_keyword.MYD</td><td>1</td><td/></row>
+		<row><td>help_keyword.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>HELP_K~1.MYI|help_keyword.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\help_keyword.MYI</td><td>1</td><td/></row>
+		<row><td>help_relation.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>HELP_R~1.FRM|help_relation.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\help_relation.frm</td><td>1</td><td/></row>
+		<row><td>help_relation.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>HELP_R~1.MYD|help_relation.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\help_relation.MYD</td><td>1</td><td/></row>
+		<row><td>help_relation.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>HELP_R~1.MYI|help_relation.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\help_relation.MYI</td><td>1</td><td/></row>
+		<row><td>help_topic.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>HELP_T~1.FRM|help_topic.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\help_topic.frm</td><td>1</td><td/></row>
+		<row><td>help_topic.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>HELP_T~1.MYD|help_topic.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\help_topic.MYD</td><td>1</td><td/></row>
+		<row><td>help_topic.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>HELP_T~1.MYI|help_topic.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\help_topic.MYI</td><td>1</td><td/></row>
+		<row><td>host.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>host.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\host.frm</td><td>1</td><td/></row>
+		<row><td>host.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>host.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\host.MYD</td><td>1</td><td/></row>
+		<row><td>host.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>host.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\host.MYI</td><td>1</td><td/></row>
+		<row><td>hp8.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>hp8.xml</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\hp8.xml</td><td>1</td><td/></row>
+		<row><td>icsharpcode.sharpziplib.dll</td><td>ICSharpCode.SharpZipLib.dll</td><td>ICSHAR~1.DLL|ICSharpCode.SharpZipLib.dll</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\bin\Debug\ICSharpCode.SharpZipLib.dll</td><td>1</td><td/></row>
+		<row><td>index.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>Index.xml</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\Index.xml</td><td>1</td><td/></row>
+		<row><td>install.bat</td><td>ISX_DEFAULTCOMPONENT4</td><td>install.bat</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\install.bat</td><td>1</td><td/></row>
+		<row><td>interop.shockwaveflashobject</td><td>Interop.ShockwaveFlashObjects.dll</td><td>INTERO~1.DLL|Interop.ShockwaveFlashObjects.dll</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\bin\Debug\Interop.ShockwaveFlashObjects.dll</td><td>1</td><td/></row>
+		<row><td>keybcs2.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>keybcs2.xml</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\keybcs2.xml</td><td>1</td><td/></row>
+		<row><td>koi8r.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>koi8r.xml</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\koi8r.xml</td><td>1</td><td/></row>
+		<row><td>koi8u.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>koi8u.xml</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\koi8u.xml</td><td>1</td><td/></row>
+		<row><td>languages.html</td><td>ISX_DEFAULTCOMPONENT10</td><td>LANGUA~1.HTM|languages.html</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\languages.html</td><td>1</td><td/></row>
+		<row><td>latin1.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>latin1.xml</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\latin1.xml</td><td>1</td><td/></row>
+		<row><td>latin2.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>latin2.xml</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\latin2.xml</td><td>1</td><td/></row>
+		<row><td>latin5.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>latin5.xml</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\latin5.xml</td><td>1</td><td/></row>
+		<row><td>latin7.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>latin7.xml</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\latin7.xml</td><td>1</td><td/></row>
+		<row><td>loadinf_blue.gif</td><td>ISX_DEFAULTCOMPONENT15</td><td>LOADIN~1.GIF|loadinf_blue.gif</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\loadinf_blue.gif</td><td>1</td><td/></row>
+		<row><td>macce.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>macce.xml</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\macce.xml</td><td>1</td><td/></row>
+		<row><td>macroman.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>macroman.xml</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\macroman.xml</td><td>1</td><td/></row>
+		<row><td>microsoft.directx.directsoun</td><td>Microsoft.DirectX.DirectSound.dll</td><td>MICROS~1.DLL|Microsoft.DirectX.DirectSound.dll</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\bin\Debug\Microsoft.DirectX.DirectSound.dll</td><td>1</td><td/></row>
+		<row><td>microsoft.directx.dll</td><td>Microsoft.DirectX.dll</td><td>MICROS~1.DLL|Microsoft.DirectX.dll</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\bin\Debug\Microsoft.DirectX.dll</td><td>1</td><td/></row>
+		<row><td>microsoft.qualitytools.testi</td><td>Microsoft.QualityTools.Testing.Fakes.dll</td><td>MICROS~1.DLL|Microsoft.QualityTools.Testing.Fakes.dll</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll</td><td>1</td><td/></row>
+		<row><td>model.dll</td><td>Model.dll</td><td>Model.dll</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\bin\Debug\Model.dll</td><td>1</td><td/></row>
+		<row><td>model.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>Model.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\bin\Debug\Model.pdb</td><td>1</td><td/></row>
+		<row><td>my.ini</td><td>ISX_DEFAULTCOMPONENT4</td><td>my.ini</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\my.ini</td><td>1</td><td/></row>
+		<row><td>my_large.ini</td><td>ISX_DEFAULTCOMPONENT4</td><td>my_large.ini</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\my_large.ini</td><td>1</td><td/></row>
+		<row><td>my_small.ini</td><td>ISX_DEFAULTCOMPONENT4</td><td>my_small.ini</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\my_small.ini</td><td>1</td><td/></row>
+		<row><td>mysql.data.dll</td><td>MySql.Data.dll</td><td>MYSQLD~1.DLL|MySql.Data.dll</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\bin\Debug\MySql.Data.dll</td><td>1</td><td/></row>
+		<row><td>mysql.exe</td><td>mysql.exe</td><td>mysql.exe</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\bin\mysql.exe</td><td>1</td><td/></row>
+		<row><td>mysqladmin.exe</td><td>mysqladmin.exe</td><td>MYSQLA~1.EXE|mysqladmin.exe</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\bin\mysqladmin.exe</td><td>1</td><td/></row>
+		<row><td>mysqld_nt.exe</td><td>mysqld_nt.exe</td><td>MYSQLD~1.EXE|mysqld-nt.exe</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\bin\mysqld-nt.exe</td><td>1</td><td/></row>
+		<row><td>mysqldump.exe</td><td>mysqldump.exe</td><td>MYSQLD~1.EXE|mysqldump.exe</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\bin\mysqldump.exe</td><td>1</td><td/></row>
+		<row><td>mysqlimport.exe</td><td>mysqlimport.exe</td><td>MYSQLI~1.EXE|mysqlimport.exe</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\bin\mysqlimport.exe</td><td>1</td><td/></row>
+		<row><td>ndb_binlog_index.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>NDB_BI~1.FRM|ndb_binlog_index.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\ndb_binlog_index.frm</td><td>1</td><td/></row>
+		<row><td>ndb_binlog_index.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>NDB_BI~1.MYD|ndb_binlog_index.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\ndb_binlog_index.MYD</td><td>1</td><td/></row>
+		<row><td>ndb_binlog_index.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>NDB_BI~1.MYI|ndb_binlog_index.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\ndb_binlog_index.MYI</td><td>1</td><td/></row>
+		<row><td>plugin.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>plugin.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\plugin.frm</td><td>1</td><td/></row>
+		<row><td>plugin.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>plugin.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\plugin.MYD</td><td>1</td><td/></row>
+		<row><td>plugin.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>plugin.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\plugin.MYI</td><td>1</td><td/></row>
+		<row><td>proc.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>proc.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\proc.frm</td><td>1</td><td/></row>
+		<row><td>proc.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>proc.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\proc.MYD</td><td>1</td><td/></row>
+		<row><td>proc.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>proc.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\proc.MYI</td><td>1</td><td/></row>
+		<row><td>procs_priv.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>PROCS_~1.FRM|procs_priv.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\procs_priv.frm</td><td>1</td><td/></row>
+		<row><td>procs_priv.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>PROCS_~1.MYD|procs_priv.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\procs_priv.MYD</td><td>1</td><td/></row>
+		<row><td>procs_priv.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>PROCS_~1.MYI|procs_priv.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\procs_priv.MYI</td><td>1</td><td/></row>
+		<row><td>readme</td><td>ISX_DEFAULTCOMPONENT10</td><td>README</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\README</td><td>1</td><td/></row>
+		<row><td>resources.designer.cs</td><td>ISX_DEFAULTCOMPONENT14</td><td>RESOUR~1.CS|Resources.Designer.cs</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Properties\Resources.Designer.cs</td><td>1</td><td/></row>
+		<row><td>resources.resx</td><td>ISX_DEFAULTCOMPONENT14</td><td>RESOUR~1.RES|Resources.resx</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Properties\Resources.resx</td><td>1</td><td/></row>
+		<row><td>restart.bat</td><td>ISX_DEFAULTCOMPONENT4</td><td>restart.bat</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\restart.bat</td><td>1</td><td/></row>
+		<row><td>servers.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>servers.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\servers.frm</td><td>1</td><td/></row>
+		<row><td>servers.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>servers.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\servers.MYD</td><td>1</td><td/></row>
+		<row><td>servers.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>servers.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\servers.MYI</td><td>1</td><td/></row>
+		<row><td>settings.designer.cs</td><td>ISX_DEFAULTCOMPONENT14</td><td>SETTIN~1.CS|Settings.Designer.cs</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Properties\Settings.Designer.cs</td><td>1</td><td/></row>
+		<row><td>settings.settings</td><td>ISX_DEFAULTCOMPONENT14</td><td>SETTIN~1.SET|Settings.settings</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Properties\Settings.settings</td><td>1</td><td/></row>
+		<row><td>slow_log.csm</td><td>ISX_DEFAULTCOMPONENT7</td><td>slow_log.CSM</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\slow_log.CSM</td><td>1</td><td/></row>
+		<row><td>slow_log.csv</td><td>ISX_DEFAULTCOMPONENT7</td><td>slow_log.CSV</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\slow_log.CSV</td><td>1</td><td/></row>
+		<row><td>slow_log.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>slow_log.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\slow_log.frm</td><td>1</td><td/></row>
+		<row><td>stdole.dll</td><td>stdole.dll</td><td>stdole.dll</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\bin\Debug\stdole.dll</td><td>1</td><td/></row>
+		<row><td>swe7.xml</td><td>ISX_DEFAULTCOMPONENT10</td><td>swe7.xml</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\share\charsets\swe7.xml</td><td>1</td><td/></row>
+		<row><td>sys_class.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>SYS_CL~1.FRM|sys_class.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\sys_class.frm</td><td>1</td><td/></row>
+		<row><td>sys_class.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>SYS_CL~1.MYD|sys_class.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\sys_class.MYD</td><td>1</td><td/></row>
+		<row><td>sys_class.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>SYS_CL~1.MYI|sys_class.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\sys_class.MYI</td><td>1</td><td/></row>
+		<row><td>sys_user.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>sys_user.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\sys_user.frm</td><td>1</td><td/></row>
+		<row><td>sys_user.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>sys_user.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\sys_user.MYD</td><td>1</td><td/></row>
+		<row><td>sys_user.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>sys_user.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\sys_user.MYI</td><td>1</td><td/></row>
+		<row><td>sys_user_class.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>SYS_US~1.FRM|sys_user_class.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\sys_user_class.frm</td><td>1</td><td/></row>
+		<row><td>sys_user_class.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>SYS_US~1.MYD|sys_user_class.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\sys_user_class.MYD</td><td>1</td><td/></row>
+		<row><td>sys_user_class.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>SYS_US~1.MYI|sys_user_class.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\sys_user_class.MYI</td><td>1</td><td/></row>
+		<row><td>sys_user_favorites.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>SYS_US~1.FRM|sys_user_favorites.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\sys_user_favorites.frm</td><td>1</td><td/></row>
+		<row><td>sys_user_favorites.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>SYS_US~1.MYD|sys_user_favorites.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\sys_user_favorites.MYD</td><td>1</td><td/></row>
+		<row><td>sys_user_favorites.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>SYS_US~1.MYI|sys_user_favorites.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\sys_user_favorites.MYI</td><td>1</td><td/></row>
+		<row><td>sys_user_type.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>SYS_US~1.FRM|sys_user_type.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\sys_user_type.frm</td><td>1</td><td/></row>
+		<row><td>sys_user_type.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>SYS_US~1.MYD|sys_user_type.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\sys_user_type.MYD</td><td>1</td><td/></row>
+		<row><td>sys_user_type.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>SYS_US~1.MYI|sys_user_type.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\sys_user_type.MYI</td><td>1</td><td/></row>
+		<row><td>tables_priv.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>TABLES~1.FRM|tables_priv.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\tables_priv.frm</td><td>1</td><td/></row>
+		<row><td>tables_priv.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>TABLES~1.MYD|tables_priv.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\tables_priv.MYD</td><td>1</td><td/></row>
+		<row><td>tables_priv.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>TABLES~1.MYI|tables_priv.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\tables_priv.MYI</td><td>1</td><td/></row>
+		<row><td>tcz_agreement.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_AG~1.FRM|tcz_agreement.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\tcz_agreement.frm</td><td>1</td><td/></row>
+		<row><td>tcz_agreement.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_AG~1.MYD|tcz_agreement.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\tcz_agreement.MYD</td><td>1</td><td/></row>
+		<row><td>tcz_agreement.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_AG~1.MYI|tcz_agreement.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\tcz_agreement.MYI</td><td>1</td><td/></row>
+		<row><td>tcz_classes.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_CL~1.FRM|tcz_classes.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\tcz_classes.frm</td><td>1</td><td/></row>
+		<row><td>tcz_classes.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_CL~1.MYD|tcz_classes.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\tcz_classes.MYD</td><td>1</td><td/></row>
+		<row><td>tcz_classes.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_CL~1.MYI|tcz_classes.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\tcz_classes.MYI</td><td>1</td><td/></row>
+		<row><td>tcz_czmnr.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_CZ~1.FRM|tcz_czmnr.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\tcz_czmnr.frm</td><td>1</td><td/></row>
+		<row><td>tcz_czmnr.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_CZ~1.MYD|tcz_czmnr.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\tcz_czmnr.MYD</td><td>1</td><td/></row>
+		<row><td>tcz_czmnr.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_CZ~1.MYI|tcz_czmnr.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\tcz_czmnr.MYI</td><td>1</td><td/></row>
+		<row><td>tcz_lessons.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_LE~1.FRM|tcz_lessons.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\tcz_lessons.frm</td><td>1</td><td/></row>
+		<row><td>tcz_lessons.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_LE~1.MYD|tcz_lessons.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\tcz_lessons.MYD</td><td>1</td><td/></row>
+		<row><td>tcz_lessons.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_LE~1.MYI|tcz_lessons.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\tcz_lessons.MYI</td><td>1</td><td/></row>
+		<row><td>tcz_type.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>tcz_type.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\tcz_type.frm</td><td>1</td><td/></row>
+		<row><td>tcz_type.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>tcz_type.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\tcz_type.MYD</td><td>1</td><td/></row>
+		<row><td>tcz_type.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>tcz_type.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\tcz_type.MYI</td><td>1</td><td/></row>
+		<row><td>tcz_tzmnr.frm</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_TZ~1.FRM|tcz_tzmnr.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\tcz_tzmnr.frm</td><td>1</td><td/></row>
+		<row><td>tcz_tzmnr.myd</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_TZ~1.MYD|tcz_tzmnr.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\tcz_tzmnr.MYD</td><td>1</td><td/></row>
+		<row><td>tcz_tzmnr.myi</td><td>ISX_DEFAULTCOMPONENT8</td><td>TCZ_TZ~1.MYI|tcz_tzmnr.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\tcz\tcz_tzmnr.MYI</td><td>1</td><td/></row>
+		<row><td>time_zone.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.FRM|time_zone.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\time_zone.frm</td><td>1</td><td/></row>
+		<row><td>time_zone.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.MYD|time_zone.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\time_zone.MYD</td><td>1</td><td/></row>
+		<row><td>time_zone.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.MYI|time_zone.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\time_zone.MYI</td><td>1</td><td/></row>
+		<row><td>time_zone_leap_second.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.FRM|time_zone_leap_second.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\time_zone_leap_second.frm</td><td>1</td><td/></row>
+		<row><td>time_zone_leap_second.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.MYD|time_zone_leap_second.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\time_zone_leap_second.MYD</td><td>1</td><td/></row>
+		<row><td>time_zone_leap_second.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.MYI|time_zone_leap_second.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\time_zone_leap_second.MYI</td><td>1</td><td/></row>
+		<row><td>time_zone_name.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.FRM|time_zone_name.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\time_zone_name.frm</td><td>1</td><td/></row>
+		<row><td>time_zone_name.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.MYD|time_zone_name.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\time_zone_name.MYD</td><td>1</td><td/></row>
+		<row><td>time_zone_name.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.MYI|time_zone_name.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\time_zone_name.MYI</td><td>1</td><td/></row>
+		<row><td>time_zone_transition.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.FRM|time_zone_transition.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\time_zone_transition.frm</td><td>1</td><td/></row>
+		<row><td>time_zone_transition.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.MYD|time_zone_transition.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\time_zone_transition.MYD</td><td>1</td><td/></row>
+		<row><td>time_zone_transition.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.MYI|time_zone_transition.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\time_zone_transition.MYI</td><td>1</td><td/></row>
+		<row><td>time_zone_transition_type.fr</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.FRM|time_zone_transition_type.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\time_zone_transition_type.frm</td><td>1</td><td/></row>
+		<row><td>time_zone_transition_type.my</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.MYD|time_zone_transition_type.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\time_zone_transition_type.MYD</td><td>1</td><td/></row>
+		<row><td>time_zone_transition_type.my1</td><td>ISX_DEFAULTCOMPONENT7</td><td>TIME_Z~1.MYI|time_zone_transition_type.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\time_zone_transition_type.MYI</td><td>1</td><td/></row>
+		<row><td>uninstall.bat</td><td>ISX_DEFAULTCOMPONENT4</td><td>UNINST~1.BAT|uninstall.bat</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\uninstall.bat</td><td>1</td><td/></row>
+		<row><td>user.frm</td><td>ISX_DEFAULTCOMPONENT7</td><td>user.frm</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\user.frm</td><td>1</td><td/></row>
+		<row><td>user.myd</td><td>ISX_DEFAULTCOMPONENT7</td><td>user.MYD</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\user.MYD</td><td>1</td><td/></row>
+		<row><td>user.myi</td><td>ISX_DEFAULTCOMPONENT7</td><td>user.MYI</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\DB\MySQL5.1\data\mysql\user.MYI</td><td>1</td><td/></row>
+		<row><td>youaremysunshine.wav</td><td>ISX_DEFAULTCOMPONENT15</td><td>YOUARE~1.WAV|YouAreMySunshine.wav</td><td>0</td><td/><td/><td/><td>1</td><td>F:\听触诊\9\LoginFrame\Resources\YouAreMySunshine.wav</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2458,6 +2293,7 @@
 		<col key="yes" def="s72">Tag</col>
 		<col def="S255">Data</col>
 		<row><td>LoginFrame.exe</td><td/></row>
+		<row><td>RegistryPageEnabled</td><td>No</td></row>
 		<row><td>Shortcut.exe</td><td/></row>
 	</table>
 
@@ -2585,49 +2421,46 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>AxInterop.ShockwaveFlashObjects.dll</td><td/><td/><td>_A192BB12_210D_461C_9912_DBD417605678_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>BLL.dll</td><td/><td/><td>_F8C740CD_840B_4F01_AC09_A775F8B360BD_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Component.dll</td><td/><td/><td>_6593ED38_EDF8_4652_BA97_45414AA59AE4_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Component.dll1</td><td/><td/><td>_BE378446_AB39_4F52_9C61_129ED306F567_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Component.exe</td><td/><td/><td>_95756F59_102E_4EFF_8B28_8B457B66A091_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Component.exe1</td><td/><td/><td>_9FCA7457_93A7_4D7C_A97E_D01FE8C8651C_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>DAL.dll</td><td/><td/><td>_94650C7E_CC2C_40A3_AD78_08754DBD6543_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ICSharpCode.SharpZipLib.dll</td><td/><td/><td>_A1F1B8AF_C8E7_4D08_8AD2_691C501EFD79_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_5D7083AE_9AE1_4EAE_92CF_FD0CAE90E73A_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_A8BDB7B8_C7D5_426E_85C4_87F915723D07_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT10</td><td/><td/><td>_4A9E8667_B897_4F5A_8ABA_5C2F83099CC0_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT11</td><td/><td/><td>_FE5DAC4D_840D_4CE1_8B01_E05AEA214F60_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT13</td><td/><td/><td>_98151BC7_8698_4527_BC15_6C301A7BE4ED_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT14</td><td/><td/><td>_21EAACFF_B3F9_4368_8A2B_7D88F736A5B1_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT15</td><td/><td/><td>_8DA38ACE_B6DD_4781_A41D_231E5CC76221_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT16</td><td/><td/><td>_B3AEF3E9_DCC1_4FA4_8FF9_BCCFE497B262_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT17</td><td/><td/><td>_9E6E0E61_74FE_43F2_ACE1_B453368CF6FF_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT18</td><td/><td/><td>_E0C17478_9313_4701_9BB0_5F34AC492AAF_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT19</td><td/><td/><td>_045C3F7D_817E_4DEB_A4EB_7FA883559F04_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_852AEB17_90E0_49F7_B48B_742152BB9F43_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>AxInterop.ShockwaveFlashObjects.dll</td><td/><td/><td>_A7FDC665_E1D7_417A_AAEA_63DAFB1C825A_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>BLL.dll</td><td/><td/><td>_0D0E8709_B450_4811_AD8C_5C38A19F0194_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Component.dll</td><td/><td/><td>_3F78F0DB_95A3_4895_93C1_D1B8DC4B860F_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Component.dll1</td><td/><td/><td>_2D142EFE_8B4A_4D56_9AF2_CA10DDA5012D_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Component.exe</td><td/><td/><td>_D17ED61B_A00A_408A_97BB_99593F78D2EB_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Component.exe1</td><td/><td/><td>_605A3C00_6125_47A7_B45F_1B605409BE9C_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DAL.dll</td><td/><td/><td>_02765452_2524_4861_B22D_163980BACF89_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ICSharpCode.SharpZipLib.dll</td><td/><td/><td>_613557AC_BC07_448C_AEAF_8C35409AA782_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_7325A3D3_4437_43D8_B479_C5F962F41B37_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_7540E75A_AF10_4E9E_853D_D9E80EE3486B_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT10</td><td/><td/><td>_5C449C93_8579_4CFB_8E57_43CDE23510B0_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT11</td><td/><td/><td>_EDAFA9C2_6B8D_47F7_85F4_14650A80184D_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT12</td><td/><td/><td>_7107FF07_D38E_43F9_A6D6_F66069F91471_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT13</td><td/><td/><td>_F54A6B55_0697_4C89_8979_E40F38B3503F_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT14</td><td/><td/><td>_DD10C076_530C_41EC_8D8D_300C148D86A6_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT15</td><td/><td/><td>_5F122484_89CB_49A1_A942_71F1B2B63438_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT16</td><td/><td/><td>_815E6781_2E54_453C_A2EB_08599BD7C430_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT17</td><td/><td/><td>_9E486375_C6F4_4D97_814A_0144010F5A8D_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT2</td><td/><td/><td>_D8DBF6C9_BA58_4F5C_BAD1_80A546EF40C8_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT20</td><td/><td/><td>_6867C00A_8E46_4E40_927D_8D3E78467628_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT21</td><td/><td/><td>_138124D8_B269_4038_85E7_0DF760EB3B8F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT22</td><td/><td/><td>_9E140B42_C27F_43AD_B30D_1E6C77394045_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT23</td><td/><td/><td>_81CAF469_DBDE_4909_955E_E2329850783E_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT3</td><td/><td/><td>_A4C51C98_D00D_41F6_B426_80694D9F4B7F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT4</td><td/><td/><td>_CDE93C0A_69F7_4089_9D14_E6DA9EA32A7F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT5</td><td/><td/><td>_4CAB3018_585D_45A6_9CDA_5FA6EAA82545_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT6</td><td/><td/><td>_4CB49BA7_2EA9_42AF_9886_C5D5CF9BA2C1_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT7</td><td/><td/><td>_021E223E_F369_4ACF_A7DC_45083EA03B79_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT8</td><td/><td/><td>_90703561_0BDA_4F43_A53E_24E2CE504433_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT9</td><td/><td/><td>_8589D640_8304_4274_BC4E_70F1AA9AA609_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Interop.ShockwaveFlashObjects.dll</td><td/><td/><td>_61FCB7E7_8C29_450C_A678_594321578C91_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.DirectX.DirectSound.dll</td><td/><td/><td>_CADD9186_A648_45C6_81C6_0818653DFD31_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.DirectX.dll</td><td/><td/><td>_34A298CC_677D_40CD_8F3C_2435EB4486A5_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.QualityTools.Testing.Fakes.dll</td><td/><td/><td>_E90DCD2B_8133_4FA1_93BF_1AF6B28B6F72_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Model.dll</td><td/><td/><td>_6CB0E899_7815_4D87_962B_248AC8F1753C_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>MySql.Data.dll</td><td/><td/><td>_C7C4DA1C_96C6_4C35_AE22_FF903214D854_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>mysql.exe</td><td/><td/><td>_D6239B2F_EF17_46F5_824E_D1591FB58724_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>mysqladmin.exe</td><td/><td/><td>_BFB1706E_8D4B_4FB4_99BD_A500B99CFABD_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>mysqld_nt.exe</td><td/><td/><td>_B563A458_3DD4_4775_A7BD_DDABFDFCB80A_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>mysqldump.exe</td><td/><td/><td>_55264D71_B89F_4B22_B414_BE0F821DDC82_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>mysqlimport.exe</td><td/><td/><td>_798752CD_4CD0_4EBA_B7EB_E945BF00C9A3_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>stdole.dll</td><td/><td/><td>_8B0FF613_6368_4EEF_AC6F_52E3E779BD30_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT3</td><td/><td/><td>_B83641D4_F9FD_4AB8_9B88_7364F9562F88_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT4</td><td/><td/><td>_E7A163B3_CA46_4C74_9DA8_082857DE5E47_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT5</td><td/><td/><td>_B237700F_82B1_426C_9413_B5746D00CEDB_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT6</td><td/><td/><td>_D2F9E8A2_A559_42D3_A20E_ADB572BD231E_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT7</td><td/><td/><td>_9C2A56E9_6435_4342_A3EB_26AAD68B4652_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT8</td><td/><td/><td>_BF0CAEA5_19E5_4408_9BBF_5CFA2598727E_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT9</td><td/><td/><td>_F720BF69_DD68_4AFC_851A_6FADAF591E21_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Interop.ShockwaveFlashObjects.dll</td><td/><td/><td>_E777EFE2_E9E8_4D12_8837_2D35A69076EA_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.DirectX.DirectSound.dll</td><td/><td/><td>_E5DA9132_A244_446D_AF03_4269A54C6F3F_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.DirectX.dll</td><td/><td/><td>_ADD5A346_84AC_47DD_8361_0E478226936B_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.QualityTools.Testing.Fakes.dll</td><td/><td/><td>_4EEC649F_77FA_4D87_B100_65302776E4D7_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Model.dll</td><td/><td/><td>_06902B16_46D2_4F10_A491_8EDCAEB518B9_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>MySql.Data.dll</td><td/><td/><td>_B7EFE59B_8FE2_40E8_809F_219180FF8C2D_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>mysql.exe</td><td/><td/><td>_F932145A_B7E9_4331_A7CC_E3A7EDD47524_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>mysqladmin.exe</td><td/><td/><td>_1E493372_5790_4BA0_9356_B25F960C64C9_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>mysqld_nt.exe</td><td/><td/><td>_21E0395E_12F0_42BB_9A8D_27985CECD14C_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>mysqldump.exe</td><td/><td/><td>_72A68158_0496_4DC8_A721_159692FDD5CB_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>mysqlimport.exe</td><td/><td/><td>_F0A337CB_BB3F_4778_A7D6_FB9FBE5BE9B9_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>stdole.dll</td><td/><td/><td>_15A38E83_F128_482A_AD2B_A0D6531F0933_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -3166,7 +2999,6 @@
 		<col def="I2">Cost</col>
 		<col def="I2">Order</col>
 		<col def="S50">CmdLine</col>
-		<row><td>interop.shockwaveflashobject</td><td>1</td><td/><td/></row>
 	</table>
 
 	<table name="ISSetupFile">
@@ -3218,11 +3050,13 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>2052</td><td>广州新传媒软件开发有限公司</td><td>0</td><td/><td>371393364</td></row>
+		<row><td>COMPANY_NAME</td><td>2052</td><td>广州新传媒软件开发有限公司</td><td>0</td><td/><td>505643630</td></row>
 		<row><td>DN_AlwaysInstall</td><td>2052</td><td>始终安装</td><td>0</td><td/><td>1294188402</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>2052</td><td>系统颜色设置不足以运行 [ProductName]。</td><td>0</td><td/><td>1294188402</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION35</td><td>1033</td><td>Microsoft .NET Framework 3.5 needs to be installed for this installation to continue.</td><td>0</td><td/><td>1294145555</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION35</td><td>2052</td><td>Microsoft .NET Framework 3.5 needs to be installed for this installation to continue.</td><td>0</td><td/><td>1294145555</td></row>
+		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION35SP1</td><td>1033</td><td>Microsoft .NET Framework 3.5 SP1 needs to be installed for this installation to continue.</td><td>0</td><td/><td>505623628</td></row>
+		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION35SP1</td><td>2052</td><td>Microsoft .NET Framework 3.5 SP1 needs to be installed for this installation to continue.</td><td>0</td><td/><td>505623628</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_OS</td><td>2052</td><td>操作系统不足以运行 [ProductName]。</td><td>0</td><td/><td>1294188402</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_PROCESSOR</td><td>2052</td><td>处理器不足以运行 [ProductName]。</td><td>0</td><td/><td>1294188402</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_RAM</td><td>2052</td><td>RAM 量不足以运行 [ProductName]。</td><td>0</td><td/><td>1294188402</td></row>
@@ -4036,6 +3870,10 @@
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME1</td><td>2052</td><td>LAUNCH~1.EXE|Launch LoginFrame.exe</td><td>0</td><td/><td>1294170163</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME10</td><td>1033</td><td/><td>0</td><td/><td>371433107</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME10</td><td>2052</td><td>听触诊</td><td>0</td><td/><td>371445395</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME11</td><td>1033</td><td/><td>0</td><td/><td>505625740</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME11</td><td>2052</td><td>听触诊.exe</td><td>0</td><td/><td>505635980</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME12</td><td>1033</td><td/><td>0</td><td/><td>505618221</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME12</td><td>2052</td><td>听触诊.exe</td><td>0</td><td/><td>505628461</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td/><td>0</td><td/><td>1294170163</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>2052</td><td>LAUNCH~1.EXE|Launch LoginFrame.vshost.exe</td><td>0</td><td/><td>1294170163</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td/><td>0</td><td/><td>1294182451</td></row>
@@ -4340,8 +4178,8 @@
 		<row><td>IDS__TargetReq_DESC_PROCESSOR</td><td>2052</td><td>对于运行 [ProductName] 处理器不足。</td><td>0</td><td/><td>1294188402</td></row>
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>2052</td><td>对于运行 [ProductName] 内存量不足。</td><td>0</td><td/><td>1294188402</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>2052</td><td>对于运行 [ProductName] 屏幕分辨率不足。</td><td>0</td><td/><td>1294188402</td></row>
-		<row><td>ID_STRING1</td><td>2052</td><td>http://www.广州新传媒软件开发有限公司.com</td><td>0</td><td/><td>371393364</td></row>
-		<row><td>ID_STRING2</td><td>2052</td><td>广州新传媒软件开发有限公司</td><td>0</td><td/><td>371393364</td></row>
+		<row><td>ID_STRING1</td><td>2052</td><td>http://www.广州新传媒软件开发有限公司.com</td><td>0</td><td/><td>505643630</td></row>
+		<row><td>ID_STRING2</td><td>2052</td><td>广州新传媒软件开发有限公司</td><td>0</td><td/><td>505643630</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td>LAUNCH~1.EXE|Launch LoginFrame.exe</td><td>0</td><td/><td>1294194739</td></row>
 		<row><td>ID_STRING3</td><td>2052</td><td>LAUNCH~1.EXE|Launch LoginFrame.exe</td><td>0</td><td/><td>1294194739</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>听触诊</td><td>0</td><td/><td>-1390171418</td></row>
@@ -4350,6 +4188,10 @@
 		<row><td>ID_STRING5</td><td>2052</td><td>听触诊</td><td>0</td><td/><td>371414349</td></row>
 		<row><td>ID_STRING6</td><td>1033</td><td>听触诊</td><td>0</td><td/><td>371447443</td></row>
 		<row><td>ID_STRING6</td><td>2052</td><td>听触诊</td><td>0</td><td/><td>371447443</td></row>
+		<row><td>ID_STRING7</td><td>1033</td><td>听触诊.exe</td><td>0</td><td/><td>505638028</td></row>
+		<row><td>ID_STRING7</td><td>2052</td><td>听触诊.exe</td><td>0</td><td/><td>505638028</td></row>
+		<row><td>ID_STRING8</td><td>1033</td><td>听触诊.exe</td><td>0</td><td/><td>505628461</td></row>
+		<row><td>ID_STRING8</td><td>2052</td><td>听触诊.exe</td><td>0</td><td/><td>505628461</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>2052</td><td>系统将不安装此功能。</td><td>0</td><td/><td>1294188402</td></row>
 	</table>
 
@@ -4470,9 +4312,13 @@
 		<row><td>LoginFrame.exe_FADE9137D32B4F6DB8AED590CCEC9361.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>LoginFrame.vshost._7B2572497FD543A1ADA6F03EB47FF7B6.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>Shortcut.exe1_424ED8729E1848BCABF087AD5A18F03A.exe</td><td/><td>F:\听触诊\8\LoginFrame\bin\Debug\听触诊体格检查网络教学系统.exe</td><td>0</td></row>
+		<row><td>Shortcut.exe1_6DEE3D20BA5549B686A161AE6CD2F661.exe</td><td/><td>F:\听触诊\9\LoginFrame\bin\Debug\听触诊体格检查网络教学系统.exe</td><td>0</td></row>
 		<row><td>Shortcut.exe1_9504D0ECC90748138A8FB757A0F29A85.exe</td><td/><td>E:\听触诊项目\6\LoginFrame\bin\Debug\听触诊体格检查网络教学系统.exe</td><td>0</td></row>
+		<row><td>Shortcut.exe1_DA8848081A664416822CE2E66E94E557.exe</td><td/><td>F:\听触诊\9\LoginFrame\bin\Debug\听触诊体格检查网络教学系统.exe</td><td>0</td></row>
 		<row><td>Shortcut.exe_00ED5E2604BE427BAB5096EA0834A6B7.exe</td><td/><td>E:\听触诊项目\6\LoginFrame\bin\Debug\听触诊体格检查网络教学系统.exe</td><td>0</td></row>
 		<row><td>Shortcut.exe_31338ED075E541689FEDE055B3E47570.exe</td><td/><td>F:\听触诊\8\LoginFrame\bin\Debug\听触诊体格检查网络教学系统.exe</td><td>0</td></row>
+		<row><td>Shortcut.exe_647E7F93DCBE4BBE8A73DEC1BF969CF1.exe</td><td/><td>F:\听触诊\9\LoginFrame\bin\Debug\听触诊体格检查网络教学系统.exe</td><td>0</td></row>
+		<row><td>Shortcut.exe_DEEB3EECBCF244DE8BC0485B53F7732A.exe</td><td/><td>F:\听触诊\9\LoginFrame\bin\Debug\听触诊体格检查网络教学系统.exe</td><td>0</td></row>
 		<row><td>mysql.exe_076DD92CBD5C495EBD39A2821B5AEAD5.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>mysqladmin.exe_66E14D477F4D40A0A678A805B44E846D.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>mysqld_nt.exe_11090BF543974469A860375446633260.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
@@ -4596,7 +4442,7 @@
 UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 			</td></row>
 		<row><td>DefaultProductConfiguration</td><td>Express</td></row>
-		<row><td>EnableSwidtag</td><td>1</td></row>
+		<row><td>EnableSwidtag</td><td>0</td></row>
 		<row><td>ISCompilerOption_CompileBeforeBuild</td><td>1</td></row>
 		<row><td>ISCompilerOption_Debug</td><td>0</td></row>
 		<row><td>ISCompilerOption_IncludePath</td><td/></row>
@@ -4610,7 +4456,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{42203238-02B6-4F44-9EE3-E4AD9EB27271}</td></row>
 		<row><td>ISUSSignature</td><td>{DFDC39A3-FC48-4448-B819-E9FA100C0AE8}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewProject,viewRelease,viewAppFiles,viewObjects</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewProject,viewRelease,viewAppFiles,viewObjects,viewUI,viewUpgradePaths,viewUpdateService</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
@@ -4640,7 +4486,6 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>FileCost</td><td/><td>900</td><td>FileCost</td><td/></row>
 		<row><td>FindRelatedProducts</td><td/><td>430</td><td>FindRelatedProducts</td><td/></row>
 		<row><td>ISPreventDowngrade</td><td>ISFOUNDNEWERPRODUCTVERSION</td><td>450</td><td>ISPreventDowngrade</td><td/></row>
-		<row><td>InstallWelcome</td><td>Not Installed</td><td>1210</td><td>InstallWelcome</td><td/></row>
 		<row><td>IsolateComponents</td><td/><td>950</td><td>IsolateComponents</td><td/></row>
 		<row><td>LaunchConditions</td><td>Not Installed</td><td>410</td><td>LaunchConditions</td><td/></row>
 		<row><td>MaintenanceWelcome</td><td>Installed And Not RESUME And Not Preselected And Not PATCH</td><td>1230</td><td>MaintenanceWelcome</td><td/></row>
@@ -4655,6 +4500,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>SetupInterrupted</td><td/><td>-2</td><td>SetupInterrupted</td><td/></row>
 		<row><td>SetupProgress</td><td/><td>1240</td><td>SetupProgress</td><td/></row>
 		<row><td>SetupResume</td><td>Installed And (RESUME Or Preselected) And Not PATCH</td><td>1220</td><td>SetupResume</td><td/></row>
+		<row><td>SplashBitmap</td><td>Not UITEST And Not Installed</td><td>1110</td><td/><td/></row>
 		<row><td>ValidateProductID</td><td/><td>700</td><td>ValidateProductID</td><td/></row>
 		<row><td>setAllUsersProfile2K</td><td>VersionNT &gt;= 500</td><td>980</td><td/><td/></row>
 		<row><td>setUserProfileNT</td><td>VersionNT</td><td>960</td><td/><td/></row>
@@ -4668,7 +4514,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 	<table name="LaunchCondition">
 		<col key="yes" def="s255">Condition</col>
 		<col def="l255">Description</col>
-		<row><td>DOTNETVERSION35&lt;&gt;""</td><td>##IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION35##</td></row>
+		<row><td>DOTNETVERSION35SP1&gt;="#1"</td><td>##IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION35SP1##</td></row>
 	</table>
 
 	<table name="ListBox">
@@ -4983,7 +4829,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKAPPPOOLS</td><td>##IDS_PROGMSG_IIS_ROLLBACKAPPPOOLS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
-		<row><td>ProductCode</td><td>{6A27D10D-C86A-4882-AA0E-E98C6B5207BE}</td><td/></row>
+		<row><td>ProductCode</td><td>{D1A3043B-9F7F-40BF-958E-2B462AC064E9}</td><td/></row>
 		<row><td>ProductName</td><td>听触诊</td><td/></row>
 		<row><td>ProductVersion</td><td>1.00.0000</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
@@ -4997,7 +4843,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>RestartManagerOption</td><td>CloseRestart</td><td/></row>
 		<row><td>SERIALNUMBER</td><td/><td/></row>
 		<row><td>SERIALNUMVALSUCCESSRETVAL</td><td>1</td><td/></row>
-		<row><td>SecureCustomProperties</td><td>ISFOUNDNEWERPRODUCTVERSION;USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR;DOTNETVERSION35</td><td/></row>
+		<row><td>SecureCustomProperties</td><td>ISFOUNDNEWERPRODUCTVERSION;USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR;DOTNETVERSION35SP1</td><td/></row>
 		<row><td>SelectedSetupType</td><td>##IDS__DisplayName_Typical##</td><td/></row>
 		<row><td>SetupType</td><td>Typical</td><td/></row>
 		<row><td>UpgradeCode</td><td>{65E737EA-BA91-4475-A05E-FE8B9B7C244C}</td><td/></row>
@@ -5042,7 +4888,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="s255">Key</col>
 		<col def="S255">Name</col>
 		<col def="I2">Type</col>
-		<row><td>DotNet35</td><td>2</td><td>SOFTWARE\Microsoft\NET Framework Setup\NDP\v3.5</td><td>Version</td><td>2</td></row>
+		<row><td>DotNet35SP1</td><td>2</td><td>SOFTWARE\Microsoft\NET Framework Setup\NDP\v3.5</td><td>SP</td><td>2</td></row>
 	</table>
 
 	<table name="Registry">
@@ -5147,8 +4993,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>Shortcut.exe</td><td>product_name1</td><td>##IDS_SHORTCUT_DISPLAY_NAME10##</td><td>Component.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>Shortcut.exe_00ED5E2604BE427BAB5096EA0834A6B7.exe</td><td>1</td><td>1</td><td>BIN</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>Shortcut.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME10##</td><td>Component.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>Shortcut.exe1_9504D0ECC90748138A8FB757A0F29A85.exe</td><td>1</td><td>1</td><td>BIN</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>Shortcut.exe</td><td>product_name1</td><td>##IDS_SHORTCUT_DISPLAY_NAME12##</td><td>Component.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>Shortcut.exe_647E7F93DCBE4BBE8A73DEC1BF969CF1.exe</td><td>1</td><td>1</td><td>BIN</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>Shortcut.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME12##</td><td>Component.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>Shortcut.exe1_6DEE3D20BA5549B686A161AE6CD2F661.exe</td><td>1</td><td>1</td><td>BIN</td><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">

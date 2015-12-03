@@ -26,7 +26,7 @@ namespace LoginFrame
 
         private static string totalNum;
 
-        private static int chooseNum;
+        private static int chooseNum=0;
 
         private static chooseTopics instance;
 
