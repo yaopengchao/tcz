@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BodyTopic));
             this.查询条件 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.topicCategory = new System.Windows.Forms.ComboBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             this.topicType = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnQuery = new System.Windows.Forms.Button();
             this.txtContent = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.pageCtrl = new LoginFrame.PageControl();
             this.查询条件.SuspendLayout();
             this.SuspendLayout();
@@ -60,16 +60,40 @@
             this.查询条件.Name = "查询条件";
             this.查询条件.TabStop = false;
             // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.button4, "button4");
+            this.button4.Name = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // topicCategory
             // 
             resources.ApplyResources(this.topicCategory, "topicCategory");
             this.topicCategory.FormattingEnabled = true;
             this.topicCategory.Name = "topicCategory";
             // 
+            // button5
+            // 
+            this.button5.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.button5, "button5");
+            this.button5.Name = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // label3
             // 
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
+            // 
+            // button6
+            // 
+            this.button6.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.button6, "button6");
+            this.button6.Name = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // topicType
             // 
@@ -99,30 +123,6 @@
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.button4, "button4");
-            this.button4.Name = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.button5, "button5");
-            this.button5.Name = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.button6, "button6");
-            this.button6.Name = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // pageCtrl
             // 
