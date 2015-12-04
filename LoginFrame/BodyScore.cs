@@ -138,7 +138,7 @@ namespace LoginFrame
             if (this.comboBox1.Text.Length>0)
             {
                 string exam_id = this.comboBox1.SelectedValue.ToString();
-                if (exam_id != null && !exam_id.Equals(""))
+                if (exam_id != null && !exam_id.Equals("-1"))
                 {
                     strWheres.Add(" t1.EXAMINATION_ID", " = '" + exam_id + "' ");
                 }
@@ -278,7 +278,14 @@ namespace LoginFrame
                 strWheres.Clear();
                 strWheres.Add("result.USER_ID", " = " + LoginRoler.userId);
                 this.comboBox1.Items.Clear();
-                this.comboBox1.DataSource = Bll.getUserExams(strWheres);
+
+                DataTable dt = Bll.getUserExams(strWheres);
+                DataRow dr = dt.NewRow();
+                dr["ExamId"] = -1;
+                dr["ExamName"] = "";
+                dt.Rows.InsertAt(dr, 0);
+
+                this.comboBox1.DataSource = dt;
                 this.comboBox1.DisplayMember = "ExamName";
                 this.comboBox1.ValueMember = "ExamId";
             }
@@ -286,7 +293,14 @@ namespace LoginFrame
             {
                 strWheres.Clear();
                 this.comboBox1.Items.Clear();
-                this.comboBox1.DataSource = Bll.getAllUserExams(strWheres);
+
+                DataTable dt = Bll.getUserExams(strWheres);
+                DataRow dr = dt.NewRow();
+                dr["ExamId"] = -1;
+                dr["ExamName"] = "";
+                dt.Rows.InsertAt(dr, 0);
+
+                this.comboBox1.DataSource = dt;
                 this.comboBox1.DisplayMember = "ExamName";
                 this.comboBox1.ValueMember = "ExamId";
             }
