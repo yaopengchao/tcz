@@ -2067,3 +2067,39 @@ Version: '5.1.28-rc-community'  socket: ''  port: 13306  MySQL Community Server 
 151202 16:05:13 [Note] Event Scheduler: Purging the queue. 0 events
 151202 16:05:15 [Note] TingzhenMysql: Shutdown complete
 
+151204 12:51:07 [Note] Plugin 'InnoDB' disabled by command line option
+151204 12:51:07 [Note] Event Scheduler: Loaded 0 events
+151204 12:51:07 [Note] TingzhenMysql: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 13306  MySQL Community Server (GPL)
+151204 12:52:02 [Note] TingzhenMysql: Normal shutdown
+
+151204 12:52:02 [Note] Event Scheduler: Purging the queue. 0 events
+151204 12:52:04 [Note] TingzhenMysql: Shutdown complete
+
+151204 12:53:03 [Note] Plugin 'InnoDB' disabled by command line option
+151204 12:53:03 [Note] Event Scheduler: Loaded 0 events
+151204 12:53:03 [Note] TingzhenMysql: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 13306  MySQL Community Server (GPL)
+151204 12:53:24 [Note] TingzhenMysql: Normal shutdown
+
+151204 12:53:24 [Note] Event Scheduler: Purging the queue. 0 events
+151204 12:53:26 [Note] TingzhenMysql: Shutdown complete
+
+151204 12:53:45 [Note] Plugin 'InnoDB' disabled by command line option
+151204 12:53:45 [Note] Event Scheduler: Loaded 0 events
+151204 12:53:45 [Note] TingzhenMysql: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 13306  MySQL Community Server (GPL)
+151204 12:54:01 [Note] TingzhenMysql: Normal shutdown
+
+151204 12:54:01 [Note] Event Scheduler: Purging the queue. 0 events
+151204 12:54:04 [Note] TingzhenMysql: Shutdown complete
+
+151204 12:54:07 [Note] Plugin 'InnoDB' disabled by command line option
+151204 12:54:07 [Note] Event Scheduler: Loaded 0 events
+151204 12:54:07 [Note] TingzhenMysql: ready for connections.
+Version: '5.1.28-rc-community'  socket: ''  port: 13306  MySQL Community Server (GPL)
+151204 12:54:35 [Note] TingzhenMysql: Normal shutdown
+
+151204 12:54:35 [Note] Event Scheduler: Purging the queue. 0 events
+151204 12:54:37 [Note] TingzhenMysql: Shutdown complete
+

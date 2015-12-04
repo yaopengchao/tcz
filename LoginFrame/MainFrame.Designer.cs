@@ -49,12 +49,12 @@
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.welcome = new System.Windows.Forms.Label();
             this.lbl_exit = new System.Windows.Forms.Label();
             this.lbl_menu = new System.Windows.Forms.Label();
             this.lbl_mian = new System.Windows.Forms.Label();
             this.titlename = new System.Windows.Forms.Label();
             this.user_name = new System.Windows.Forms.Label();
-            this.welcome = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -98,6 +98,7 @@
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.Controls.Add(this.menuStrip1);
             this.panel5.Name = "panel5";
+            this.panel5.Leave += new System.EventHandler(this.panel5_Leave);
             this.panel5.MouseLeave += new System.EventHandler(this.panel5_MouseLeave);
             this.panel5.MouseHover += new System.EventHandler(this.panel5_MouseHover);
             this.panel5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseUp);
@@ -255,6 +256,13 @@
             resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             // 
+            // welcome
+            // 
+            resources.ApplyResources(this.welcome, "welcome");
+            this.welcome.BackColor = System.Drawing.Color.Transparent;
+            this.welcome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.welcome.Name = "welcome";
+            // 
             // lbl_exit
             // 
             this.lbl_exit.BackColor = System.Drawing.Color.Transparent;
@@ -296,13 +304,6 @@
             this.user_name.ForeColor = System.Drawing.Color.Yellow;
             this.user_name.Name = "user_name";
             this.user_name.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // welcome
-            // 
-            resources.ApplyResources(this.welcome, "welcome");
-            this.welcome.BackColor = System.Drawing.Color.Transparent;
-            this.welcome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.welcome.Name = "welcome";
             // 
             // MainFrame
             // 
