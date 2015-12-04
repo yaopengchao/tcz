@@ -31,7 +31,7 @@ namespace LoginFrame
 
         private static Dictionary<string, string> strWheres;
 
-        private static string totalNum;
+        //private static string totalNum;
 
         public static BodySelfTest4 createForm(string exam_id_in)
         {

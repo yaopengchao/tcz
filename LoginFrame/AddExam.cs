@@ -58,7 +58,7 @@ namespace LoginFrame
         }
 
 
-        private int xz;
+       // private int xz;
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -79,10 +79,11 @@ namespace LoginFrame
             }
             else
             {
-
+                
                 if (1==2)
                 {//此处为原先代码
-                    string exTypeValue = Convert.ToString(exType.SelectedValue);
+                    string exTypeValue = "";
+                    exTypeValue = Convert.ToString(exType.SelectedValue);
                     if (exTypeValue == "1")
                     {
                         //随机

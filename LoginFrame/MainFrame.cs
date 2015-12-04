@@ -1494,7 +1494,7 @@ namespace LoginFrame
             }
             catch (Exception ex)
             {
-                MessageBox.Show("调用Flash函数发生错误,请检查SWF文件函数是否没问题,或者调用函数名已经变更");
+                MessageBox.Show("调用Flash函数发生错误,请检查SWF文件函数是否没问题,或者调用函数名已经变更"+ex.Message);
             }
         }
 
@@ -1511,7 +1511,7 @@ namespace LoginFrame
         }
             catch(Exception ex)
             {
-                MessageBox.Show("调用Flash函数发生错误,请检查SWF文件函数是否没问题,或者调用函数名已经变更");
+                MessageBox.Show("调用Flash函数发生错误,请检查SWF文件函数是否没问题,或者调用函数名已经变更"+ex.Message);
             }
             this.bodyMain.axShockwaveFlashPlayer.Playing = false;
 

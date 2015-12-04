@@ -24,7 +24,7 @@ namespace LoginFrame
 
         }
 
-        private static string totalNum;
+        //private static string totalNum;
 
         private static int chooseNum=0;
 
