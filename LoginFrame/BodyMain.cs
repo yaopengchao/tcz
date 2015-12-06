@@ -71,7 +71,7 @@ namespace LoginFrame
                     subItem.Tag = row["FILENAME"].ToString()+"#"+ row["MUSICFILENAME"].ToString()+"#"+ row["LESSON_ID"].ToString();
                     subItem.Click += new EventHandler(subItemClick_playLesson);//绑定方法
                     //subItem.DoubleClick += new EventHandler(subItemClick_deleteLesson);//绑定方法
-                    subItem.ToolTipText = "单击播放课件,双击删除收藏";
+                    subItem.ToolTipText = "单击播放课件,删除请点击该项删除按钮";
                     subItem.BackgroundImage = global::LoginFrame.Properties.Resources.收藏条目;
 
                     //在每项上面增加删除的事件
@@ -97,7 +97,7 @@ namespace LoginFrame
                     ToolStripMenuItem subItem = AddContextMenu(row["ENAME"].ToString(), menuStrip1.Items, null);
                     subItem.Tag = row["FILENAME"].ToString() + "#" + row["MUSICFILENAME"].ToString() + "#" + row["LESSON_ID"].ToString();
                     subItem.Click += new EventHandler(subItemClick_playLesson);//绑定方法
-                    subItem.ToolTipText = "Click play courseware, double click Delete";
+                    subItem.ToolTipText = "Click play courseware, delete the delete button, click the delete button";
                     subItem.BackgroundImage = global::LoginFrame.Properties.Resources.收藏条目;
 
                     //在每项上面增加删除的事件
