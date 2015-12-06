@@ -40,6 +40,14 @@ namespace LoginFrame
         public AddUser()
         {
             InitializeComponent();
+
+            button1.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button1.ForeColor = Color.White;
+
+            button2.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button2.ForeColor = Color.White;
+
+
             if (userService == null)
             {
                 userService = new UserService();
@@ -112,7 +120,7 @@ namespace LoginFrame
             }
             else
             {
-                MessageBox.Show("保存失败，请联系管理员");
+                MessageBox.Show("保存失败，可能是登录名已经存在,修改下登录名重试或请联系管理员");
             }
         }
 

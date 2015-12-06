@@ -1843,10 +1843,12 @@ namespace LoginFrame
         private void MainFrame_FormClosing(object sender, FormClosingEventArgs e)
         {
             Console.WriteLine("关闭数据库,卸载服务");
-
+           
             CloseDB();
 
             closeApp();
+
+            ReleaseUDP();
 
         }
 
@@ -1955,7 +1957,29 @@ namespace LoginFrame
 
                 closeApp();
 
+                ReleaseUDP();
+
                 Application.ExitThread();
+            }
+        }
+
+        private void ReleaseUDP()
+        {
+            if (LoginRoler.UDPRecv != null)
+            {
+                LoginRoler.UDPRecv = null;
+            }
+            if (LoginRoler.RecvMulticast != null)
+            {
+                LoginRoler.RecvMulticast = null;
+            }
+            if (LoginRoler.UDPSend != null)
+            {
+                LoginRoler.UDPSend = null;
+            }
+            if (LoginRoler.SendMulticast != null)
+            {
+                LoginRoler.SendMulticast = null;
             }
         }
 
@@ -1993,6 +2017,7 @@ namespace LoginFrame
 
         private void MainFrame_FormClosed(object sender, FormClosedEventArgs e)
         {
+            ReleaseUDP();
             CloseDB();
         }
 

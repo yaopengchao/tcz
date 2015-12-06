@@ -11,6 +11,12 @@ namespace BLL
     public class UserService
     {
 
+
+        private static ImplUser Bll ;
+
+        
+
+
         private static UserDao userDao;
         private static UserClassDao userClassDao;
 
@@ -18,6 +24,10 @@ namespace BLL
 
         public static UserService getInstance()
         {
+            if (Bll==null)
+            {
+                Bll = new ImplUser();
+            }
             if (instance == null)
             {
                 instance = new UserService();
@@ -61,14 +71,17 @@ namespace BLL
         public int addUser(User user, int classId)
         {
             int result = 0;
-            result = userDao.addUser(user);
-            string userType = user.UserType;
-            if ("3".Equals(userType))               //如果是学生的话
+            if (Bll.ExistsName(user.LoginId)<=0)
             {
-                UserClass userClass = new UserClass();
-                userClass.UserId = user.UserId;
-                userClass.ClassId = classId;
-                userClassDao.addUserClass(userClass);
+                result = userDao.addUser(user);
+                string userType = user.UserType;
+                if ("3".Equals(userType))               //如果是学生的话
+                {
+                    UserClass userClass = new UserClass();
+                    userClass.UserId = user.UserId;
+                    userClass.ClassId = classId;
+                    userClassDao.addUserClass(userClass);
+                }
             }
             return result;
         }
@@ -76,7 +89,12 @@ namespace BLL
         //修改用户
         public int updateUser(User user)
         {
-            return userDao.updateUser(user);
+            int result = 0;
+            if (Bll.ExistsName(user.LoginId) <= 0)
+            {
+                return userDao.updateUser(user);
+            }
+            return result;
         }
 
         //修改密码

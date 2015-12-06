@@ -78,6 +78,8 @@ namespace DAL
 
         public int modifyPwd(int userId, string pwd)
         {
+           
+
             string strSql = "update sys_user set pwd = ?pwd where user_id = ?userId";
             MySqlParameter[] parames = new MySqlParameter[] {
                 new MySqlParameter("?pwd", MySqlDbType.VarChar),
@@ -97,5 +99,7 @@ namespace DAL
             parames[0].Value = userId;
             return MySqlHelper.ExecuteNonQuery(strSql, parames);
         }
+
+        
     }
 }

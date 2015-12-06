@@ -40,8 +40,8 @@ namespace LoginFrame
             comboBox1.Items.Add("English");
             comboBox1.SelectedIndex = 0;
 
-            this.loginId.Text = "admin";
-            this.textBox2.Text = "admin";
+            //this.loginId.Text = "admin";
+            //this.textBox2.Text = "admin";
 
             //this.comboBox3.Items.Add(new ComboxItem("学生", Constant.RoleStudent));
             //this.comboBox3.Items.Add(new ComboxItem("教师", Constant.RoleTeacher));
@@ -59,16 +59,29 @@ namespace LoginFrame
         private void loadUDP()
         {
             //创建搜索需要的UDP接收对象
+            if (LoginRoler.UDPRecv==null)
+            {
+                LoginRoler.UDPRecv = new UdpClient(Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["UDPPortRecv"]));
+                LoginRoler.UDPRecv.JoinMulticastGroup(IPAddress.Parse(System.Configuration.ConfigurationManager.AppSettings["UDPAddress"]));
+            }
 
-            LoginRoler.UDPRecv = new UdpClient(Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["UDPPortRecv"]));
-            LoginRoler.UDPRecv.JoinMulticastGroup(IPAddress.Parse(System.Configuration.ConfigurationManager.AppSettings["UDPAddress"]));
-            LoginRoler.RecvMulticast = new IPEndPoint(IPAddress.Parse(System.Configuration.ConfigurationManager.AppSettings["UDPAddress"]), Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["UDPPortSend"]));
+            if (LoginRoler.RecvMulticast==null)
+            {
+                LoginRoler.RecvMulticast = new IPEndPoint(IPAddress.Parse(System.Configuration.ConfigurationManager.AppSettings["UDPAddress"]), Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["UDPPortSend"]));
+            }
 
 
             //创建UDP需要的UDP发送对象
-            LoginRoler.UDPSend = new UdpClient(Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["UDPPortSend"]));
-            LoginRoler.UDPSend.JoinMulticastGroup(IPAddress.Parse(System.Configuration.ConfigurationManager.AppSettings["UDPAddress"]));
-            LoginRoler.SendMulticast = new IPEndPoint(IPAddress.Parse(System.Configuration.ConfigurationManager.AppSettings["UDPAddress"]), Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["UDPPortRecv"]));
+            if (LoginRoler.UDPSend==null)
+            {
+                LoginRoler.UDPSend = new UdpClient(Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["UDPPortSend"]));
+                LoginRoler.UDPSend.JoinMulticastGroup(IPAddress.Parse(System.Configuration.ConfigurationManager.AppSettings["UDPAddress"]));
+            }
+            if (LoginRoler.SendMulticast==null)
+            {
+                LoginRoler.SendMulticast = new IPEndPoint(IPAddress.Parse(System.Configuration.ConfigurationManager.AppSettings["UDPAddress"]), Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["UDPPortRecv"]));
+
+            }
         }
 
         private void messageThread()

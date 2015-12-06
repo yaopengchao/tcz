@@ -12,9 +12,9 @@ namespace LoginFrame
     public partial class AddUsers : Form
     {
 
-        private const string tempDir = @"..\..\TEMP";
+        private const string tempDir = @"..\TEMP";
 
-        private const string templateFile = @"..\..\Template.xlsx";
+        private const string templateFile = @"..\Template.xlsx";
 
         private DataTable data = new DataTable();
 

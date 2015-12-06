@@ -3,6 +3,7 @@ using MySql.Data.MySqlClient;
 using System.Configuration;
 using Model;
 using System.IO;
+using System;
 
 namespace DAL
 {
@@ -15,20 +16,27 @@ namespace DAL
             get
             {
                 string strConn = "server="+ LoginRoler.serverIp + ";Port="+ ConfigurationManager.AppSettings["databaseport"].ToString() + "; user id="+ ConfigurationManager.AppSettings["username"].ToString() + "; password="+ ConfigurationManager.AppSettings["password"].ToString() + "; database="+ ConfigurationManager.AppSettings["database"].ToString() + "; pooling=false;charset=utf8";
-                if (mysqlconnection == null)
-                {
-                    mysqlconnection = new MySqlConnection(strConn);
-                    mysqlconnection.Open();
+
+                try {
+                    if (mysqlconnection == null)
+                    {
+                        mysqlconnection = new MySqlConnection(strConn);
+                        mysqlconnection.Open();
+                    }
+                    else if (mysqlconnection.State == ConnectionState.Closed)
+                    {
+                        mysqlconnection = new MySqlConnection(strConn);
+                        mysqlconnection.Open();
+                    }
+                    else if (mysqlconnection.State == ConnectionState.Broken)
+                    {
+                        mysqlconnection.Close();
+                        mysqlconnection.Open();
+                    }
                 }
-                else if (mysqlconnection.State == ConnectionState.Closed)
+                catch (Exception ex)
                 {
-                    mysqlconnection = new MySqlConnection(strConn);
-                    mysqlconnection.Open();
-                }
-                else if (mysqlconnection.State == ConnectionState.Broken)
-                {
-                    mysqlconnection.Close();
-                    mysqlconnection.Open();
+                    Console.Write("数据库连接发生错误:"+ex.Message+"数据库连接地址"+ strConn);
                 }
                 return mysqlconnection;
             }

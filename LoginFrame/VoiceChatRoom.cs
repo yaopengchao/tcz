@@ -707,9 +707,15 @@ namespace LoginFrame
             {
                 DropCall();
             }
-
-            senderThread.Suspend();
-            receiverThread.Suspend();
+            if (senderThread!=null)
+            {
+                senderThread.Suspend();
+            }
+            if (receiverThread!=null)
+            {
+                receiverThread.Suspend();
+            }
+            
 
             //将再现用户数据以及处于聊天用户数据重置到默认
             resetOnlineUsers();
@@ -724,7 +730,7 @@ namespace LoginFrame
             BodyMain bodyMain = BodyMain.createForm();
             bodyMain.TopLevel = false;
             bodyMain.isTalking = false;
-            bodyMain.btn_voice.BackgroundImage= global::LoginFrame.Properties.Resources.语音;
+            bodyMain.btn_voice.BackgroundImage= global::LoginFrame.Properties.Resources.对讲;
             bodyMain.FormBorderStyle = FormBorderStyle.None;
             bodyMain.Dock = System.Windows.Forms.DockStyle.Fill;
             mainFrame.panel6.Controls.Add(bodyMain);
