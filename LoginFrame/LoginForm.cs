@@ -198,7 +198,6 @@ namespace LoginFrame
                         }
 
 
-
                         if (LoginRoler.roleid==Constant.RoleStudent && LoginRoler.isLocalIp)
                         {
                             MessageBox.Show("目前该用户登录在本地数据库", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);

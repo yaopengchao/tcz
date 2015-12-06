@@ -735,12 +735,14 @@ namespace LoginFrame
                     MessageBox.Show("请先选择课件再点击播放!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     return;
                 }
-                string swfName = chooseButton.Tag.ToString().Split('#')[0].ToString(); ;
-                string filpath = Application.StartupPath + @"/../../lessons/" + swfName + ".swf";
+                string swfName = chooseButton.Tag.ToString().Split('#')[0].ToString();
+                string curPath = Application.StartupPath;
+                string filpath = curPath.Substring(0, curPath.IndexOf("bin"))+ "/lessons/" + swfName + ".swf";
+           // Application.StartupPath + @"/../../lessons/" + swfName + ".swf";
                 //检测文件是否存在
                 if (!File.Exists(filpath))
                 {
-                    MessageBox.Show("课件对应的Flash文件不存在!", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show("课件对应的Flash文件不存在!"+ filpath, "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     return;
                 }
 
