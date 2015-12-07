@@ -189,7 +189,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CheckExamDetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "BodyTakeExam2";
+            this.Text = "考试详情";
             this.Load += new System.EventHandler(this.BodyTakeExam2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

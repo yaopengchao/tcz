@@ -6,15 +6,14 @@ using System.IO;
 using Excel2007ReadWrite;
 using System.Collections;
 using System.ComponentModel;
+using System.Drawing;
 
 namespace LoginFrame
 {
     public partial class AddUsers : Form
     {
 
-        private const string tempDir = @"..\TEMP";
-
-        private const string templateFile = @"..\Template.xlsx";
+        
 
         private DataTable data = new DataTable();
 
@@ -47,6 +46,15 @@ namespace LoginFrame
             this.data.Columns.Add("结果", Type.GetType("System.String"));
 
             this.dataGridView1.DataSource = data;
+
+            button1.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button1.ForeColor = Color.White;
+
+            button2.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button2.ForeColor = Color.White;
+
+            button3.BackColor = Color.FromArgb(255, 80, 151, 228);
+            button3.ForeColor = Color.White;
 
         }
 
@@ -85,19 +93,34 @@ namespace LoginFrame
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
+
+
             // Get the input file name from the text box.
             string fileName = this.textBoxInput.Text;
+
+            if (("").Equals(fileName) || fileName==null)
+            {
+                MessageBox.Show("请先选择文件");
+                return;
+            }
+
+            string tempDir = Application.StartupPath.Substring(0, Application.StartupPath.IndexOf("bin")) + @"/TEMP";
+
+            string templateFile = Application.StartupPath.Substring(0, Application.StartupPath.IndexOf("bin")) + @"/Template.xlsx";
+
+
+            
             // Delete contents of the temporary directory.
-            ExcelRW.DeleteDirectoryContents(AddUsers.tempDir);
+            ExcelRW.DeleteDirectoryContents(tempDir);
             // Unzip input XLSX file to the temporary directory.
-            ExcelRW.UnzipFile(fileName, AddUsers.tempDir);
+            ExcelRW.UnzipFile(fileName, tempDir);
             // Open XML file with table of all unique strings used in the workbook..
-            FileStream fs = new FileStream(AddUsers.tempDir + @"\xl\sharedStrings.xml",
+            FileStream fs = new FileStream(tempDir + @"\xl\sharedStrings.xml",
                 FileMode.Open, FileAccess.Read);
             // ..and call helper method that parses that XML and returns an array of strings.
             ArrayList stringTable = ExcelRW.ReadStringTable(fs);
             // Open XML file with worksheet data..
-            fs = new FileStream(AddUsers.tempDir + @"\xl\worksheets\sheet1.xml",
+            fs = new FileStream(tempDir + @"\xl\worksheets\sheet1.xml",
                 FileMode.Open, FileAccess.Read);
             // ..and call helper method that parses that XML and fills DataTable with values.
             ExcelRW.ReadWorksheet(fs, stringTable, this.data, bodyStu.classId,Constant.RoleStudent);
@@ -119,7 +142,7 @@ namespace LoginFrame
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start(Application.StartupPath + @"/../../批量导入学生.xlsx");
+            System.Diagnostics.Process.Start(Application.StartupPath.Substring(0, Application.StartupPath.IndexOf("bin")) + @"/批量导入学生.xlsx");
         }
     }
 }

@@ -430,7 +430,7 @@
     <value>CenterParent</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>AddUser</value>
+    <value>添加用户</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AddUser</value>
