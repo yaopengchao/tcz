@@ -48,9 +48,9 @@ namespace LoginFrame
             //this.comboBox3.Items.Add(new ComboxItem("管理员", Constant.RoleManager));
             //comboBox3.SelectedIndex = 2;
 
-            
 
-            
+
+
         }
 
         /// <summary>
@@ -59,25 +59,25 @@ namespace LoginFrame
         private void loadUDP()
         {
             //创建搜索需要的UDP接收对象
-            if (LoginRoler.UDPRecv==null)
+            if (LoginRoler.UDPRecv == null)
             {
                 LoginRoler.UDPRecv = new UdpClient(Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["UDPPortRecv"]));
                 LoginRoler.UDPRecv.JoinMulticastGroup(IPAddress.Parse(System.Configuration.ConfigurationManager.AppSettings["UDPAddress"]));
             }
 
-            if (LoginRoler.RecvMulticast==null)
+            if (LoginRoler.RecvMulticast == null)
             {
                 LoginRoler.RecvMulticast = new IPEndPoint(IPAddress.Parse(System.Configuration.ConfigurationManager.AppSettings["UDPAddress"]), Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["UDPPortSend"]));
             }
 
 
             //创建UDP需要的UDP发送对象
-            if (LoginRoler.UDPSend==null)
+            if (LoginRoler.UDPSend == null)
             {
                 LoginRoler.UDPSend = new UdpClient(Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["UDPPortSend"]));
                 LoginRoler.UDPSend.JoinMulticastGroup(IPAddress.Parse(System.Configuration.ConfigurationManager.AppSettings["UDPAddress"]));
             }
-            if (LoginRoler.SendMulticast==null)
+            if (LoginRoler.SendMulticast == null)
             {
                 LoginRoler.SendMulticast = new IPEndPoint(IPAddress.Parse(System.Configuration.ConfigurationManager.AppSettings["UDPAddress"]), Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["UDPPortRecv"]));
 
@@ -149,7 +149,7 @@ namespace LoginFrame
                 //停止mysql服务
                 exeCmd("net stop " + DbserviceName);
                 exeCmd("mysqld-nt remove");
-                
+
 
                 p.Close();
 
@@ -161,7 +161,7 @@ namespace LoginFrame
         private bool login()
         {
 
-            this.label6.Text = "开始登录操作..";
+            this.label6.Text = "开始登录操作";
             Application.DoEvents();
 
             bool flag = false;
@@ -179,6 +179,10 @@ namespace LoginFrame
             }
             else
             {
+
+                this.label6.Text = "开始登录操作【检查用户是否存在】";
+                Application.DoEvents();
+
                 ImplUser Bll = new ImplUser();
 
                 int a = Bll.ExistsName(username);
@@ -187,11 +191,15 @@ namespace LoginFrame
                 {
 
                     //DataSet ds = Bll.ExistsPwd(username, password, ((ComboxItem)this.comboBox3.Items[comboBox3selectIndex]).Value);
+                    this.label6.Text = "开始登录操作【用户信息验证】";
+                    Application.DoEvents();
 
                     DataSet ds = Bll.ExistsPwd(username, password, "");
 
                     if (ds.Tables[0].Rows.Count > 0)
                     {
+
+
 
                         LoginRoler.login_id = Convert.ToString(ds.Tables[0].Rows[0][0].ToString());
                         LoginRoler.username = Convert.ToString(ds.Tables[0].Rows[0][1].ToString());
@@ -200,6 +208,10 @@ namespace LoginFrame
                         LoginRoler.ip = GetAddressIP();
                         LoginRoler.userId = Convert.ToInt32(ds.Tables[0].Rows[0][3].ToString());
                         LoginRoler.pwd = password;
+
+                        this.label6.Text = "开始登录操作【加载协议指令】";
+                        Application.DoEvents();
+
 
                         loadAgreeMent();
 
@@ -211,7 +223,7 @@ namespace LoginFrame
                         }
 
 
-                        if (LoginRoler.roleid==Constant.RoleStudent && LoginRoler.isLocalIp)
+                        if (LoginRoler.roleid == Constant.RoleStudent && LoginRoler.isLocalIp)
                         {
                             MessageBox.Show("目前该用户登录在本地数据库", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         }
@@ -255,7 +267,7 @@ namespace LoginFrame
                 }
             }
 
-            this.label6.Text = "开始登录操作...";
+            this.label6.Text = "登录结束进入主界面";
             Application.DoEvents();
 
 
@@ -329,7 +341,7 @@ namespace LoginFrame
             return AddressIP;
         }
 
-       // int comboBox3selectIndex;
+        // int comboBox3selectIndex;
         private void button1_Click(object sender, EventArgs e)
         {
             //重置默认
@@ -351,7 +363,7 @@ namespace LoginFrame
             this.label6.Text = "开始搜寻局域网数据库IP...";
             Application.DoEvents();
 
-           
+
             this.label6.Text = "结束搜寻局域网数据库IP";
             Application.DoEvents();
 
@@ -374,7 +386,7 @@ namespace LoginFrame
             }
             else//获取到IP了   且   isLocalIp  为true 就要给大家发消息了
             {
-              
+
             }
 
             LoginRoler.isLocalIp = isLocalIp;
@@ -384,12 +396,24 @@ namespace LoginFrame
             this.label6.Text = "开始登录操作";
             Application.DoEvents();
 
-            //登录代码
-            bool isLogined = login();
-            if (!isLogined)
+            try
             {
+                //登录代码
+                bool isLogined = login();
+                if (!isLogined)
+                {
+                    button1.Enabled = true;
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("数据库连接发生错误:" + ex.Message);
+                ReleaseUDP();
+                CloseDB();
                 button1.Enabled = true;
                 return;
+                Application.Exit();
             }
 
 
@@ -418,12 +442,80 @@ namespace LoginFrame
 
         }
 
+        private void CloseDB()
+        {
+
+
+            {
+                string DbserviceName = ConfigurationManager.AppSettings["mysqlServiceName"].ToString();
+                p.Start();
+
+                cdDiyDBPath();
+                //停止mysql服务
+                exeCmd("net stop " + DbserviceName);
+                //exeCmd("sc delete " + DbserviceName);
+
+
+                p.Close();
+
+            }
+
+
+
+            //p.Start();
+            //exeCmd("net stop MySQL");
+
+            //进入打包数据库目录
+            //cdDiyDBPath();
+            //string curPath = Application.StartupPath;
+            //int index = curPath.IndexOf(":");
+            //string hardPath = curPath.Substring(0, index + 1);
+            //p.StandardInput.WriteLine(hardPath);
+            //p.StandardInput.WriteLine("cd " + curPath);
+            //string dMsql = Application.StartupPath + @"/../../../MysqlInstallProj/DB/mysql-5.6.24-win32/bin";
+            //string mainPath = curPath.Substring(0, curPath.IndexOf("bin"));
+            //mainPath += "DB/MySQL5.1/bin/mysqld-nt.exe";
+            //Console.WriteLine("==========" + mainPath);
+            //p.StandardInput.WriteLine("cd " + mainPath);
+
+            //先关闭
+            //Process[] myProcess = Process.GetProcessesByName("mysqld-nt");
+            //if (myProcess.Length>0)
+            //{
+            //   foreach (Process process in myProcess)
+            //    {
+            //        process.Kill();
+            //    }
+            // }
+
+
+            //p.Close();
+        }
+        private void ReleaseUDP()
+        {
+            if (LoginRoler.UDPRecv != null)
+            {
+                LoginRoler.UDPRecv = null;
+            }
+            if (LoginRoler.RecvMulticast != null)
+            {
+                LoginRoler.RecvMulticast = null;
+            }
+            if (LoginRoler.UDPSend != null)
+            {
+                LoginRoler.UDPSend = null;
+            }
+            if (LoginRoler.SendMulticast != null)
+            {
+                LoginRoler.SendMulticast = null;
+            }
+        }
         private void messageThread1()
         {
-           
+
             this.label6.Image = null;
             this.label6.Text = "搜索局域网数据库信息...";
-          
+
         }
 
         private Process p;
@@ -443,7 +535,7 @@ namespace LoginFrame
             Thread.Sleep(1000);
             //再打开
             Process.Start(getDBPath());
-            
+
             Thread.Sleep(2000);
         }
 
@@ -458,7 +550,7 @@ namespace LoginFrame
 
             //return Application.StartupPath + @"/../../../MysqlInstallProj/DB/MySQL5.1/bin/mysqld-nt.exe"
             p.Start();
-            
+
             string curPath = Application.StartupPath;
             int index = curPath.IndexOf(":");
             string hardPath = curPath.Substring(0, index + 1);
@@ -513,7 +605,10 @@ namespace LoginFrame
 
                 //发送指令
                 byte[] buf = Encoding.Default.GetBytes("getIp^^##");
-                LoginRoler.UDPSend.Send(buf, buf.Length, LoginRoler.SendMulticast);
+                if (LoginRoler.UDPSend != null)
+                {
+                    LoginRoler.UDPSend.Send(buf, buf.Length, LoginRoler.SendMulticast);
+                }
                 Console.WriteLine("发送指令");
 
 
@@ -660,7 +755,8 @@ namespace LoginFrame
                 LoginRoler.serverIp = GetAddressIP();
                 isLocalIp = true;
 
-                if (1==2) {
+                if (1 == 2)
+                {
                     //从本地库获取角色  获取不到说明不是 正式库  
 
                     ImplUser Bll = new ImplUser();
@@ -720,20 +816,24 @@ namespace LoginFrame
         {
             while (true)
             {
-                byte[] buf = LoginRoler.UDPRecv.Receive(ref LoginRoler.recvMulticast);
-                string msg = Encoding.Default.GetString(buf);
-                string[] splitString = msg.Split('^');
-                string swfName = splitString[1];
-                switch (splitString[0])
+                if (LoginRoler.UDPRecv != null)
                 {
-                    case "ServerIp"://服务器IP指令
- Console.WriteLine("接收到局域网中某台机器传送来的IP:" + splitString[1]);
-                        LoginRoler.serverIp = splitString[1];
-                        LoginRoler.serverType = splitString[2];
-                        RunDoWhile = false;
-                        searchServerIpRecv.Abort();
-                        break;
+                    byte[] buf = LoginRoler.UDPRecv.Receive(ref LoginRoler.recvMulticast);
+                    string msg = Encoding.Default.GetString(buf);
+                    string[] splitString = msg.Split('^');
+                    string swfName = splitString[1];
+                    switch (splitString[0])
+                    {
+                        case "ServerIp"://服务器IP指令
+                            Console.WriteLine("接收到局域网中某台机器传送来的IP:" + splitString[1]);
+                            LoginRoler.serverIp = splitString[1];
+                            LoginRoler.serverType = splitString[2];
+                            RunDoWhile = false;
+                            searchServerIpRecv.Abort();
+                            break;
+                    }
                 }
+
             }
         }
 
@@ -798,12 +898,12 @@ namespace LoginFrame
 
                 cdDiyDBPath();
                 //停止mysql服务
-                exeCmd("net stop "+ DbserviceName);
-                exeCmd("sc delete \"" + DbserviceName+"\"");
+                exeCmd("net stop " + DbserviceName);
+                exeCmd("sc delete \"" + DbserviceName + "\"");
 
-                exeCmd("mysqld-nt -install "+ DbserviceName);
+                exeCmd("mysqld-nt -install " + DbserviceName);
                 //启动mysql服务
-                exeCmd("net start "+ DbserviceName);
+                exeCmd("net start " + DbserviceName);
                 Thread.Sleep(3000);
 
                 p.Close();
