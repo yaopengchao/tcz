@@ -106,13 +106,22 @@ namespace LoginFrame
             DataGridView tempGdv = sender as DataGridView;//获取事件发送者
             if (e.RowIndex > -1 && e.ColumnIndex > -1)//防止 Index 出错
             {
-                CheckBodySelfTest checkBodySelfTest = new CheckBodySelfTest();
-                checkBodySelfTest.TopLevel = true;
-                checkBodySelfTest.user_id = tempGdv.Rows[e.RowIndex].Cells[2].Value.ToString();
-                checkBodySelfTest.examId = Convert.ToInt32(tempGdv.Rows[e.RowIndex].Cells[1].Value.ToString()); 
-                checkBodySelfTest.FormBorderStyle = FormBorderStyle.None;
-                checkBodySelfTest.Dock = System.Windows.Forms.DockStyle.Fill;
-                checkBodySelfTest.ShowDialog();
+                //CheckBodySelfTest checkBodySelfTest = new CheckBodySelfTest();
+                //checkBodySelfTest.TopLevel = true;
+                //checkBodySelfTest.user_id = tempGdv.Rows[e.RowIndex].Cells[2].Value.ToString();
+                //checkBodySelfTest.examId = Convert.ToInt32(tempGdv.Rows[e.RowIndex].Cells[1].Value.ToString());
+                //checkBodySelfTest.FormBorderStyle = FormBorderStyle.None;
+                //checkBodySelfTest.Dock = System.Windows.Forms.DockStyle.Fill;
+                //checkBodySelfTest.ShowDialog();
+
+
+                CheckExamDetail checkExamDetail = new CheckExamDetail();
+                checkExamDetail.TopLevel = true;
+                checkExamDetail.user_id = tempGdv.Rows[e.RowIndex].Cells[2].Value.ToString();
+                checkExamDetail.examId = Convert.ToInt32(tempGdv.Rows[e.RowIndex].Cells[1].Value.ToString());
+                checkExamDetail.FormBorderStyle = FormBorderStyle.None;
+                checkExamDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+                checkExamDetail.ShowDialog();
             }
         }
         public void loadData(Dictionary<string, string> strWheres)
